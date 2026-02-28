@@ -1,0 +1,184 @@
+{
+    "npcs": [
+        {
+            "name": "Eilif Stonefist",
+            "race_and_class": "Dwarf Cleric",
+            "current_location": "The Temple of Moradin",
+            "core_motivation": "Protecting the city from an impending earthquake.",
+            "hidden_secret": "He has been having visions of his own demise.",
+            "knowledge_state": "Unaware of the players' presence in the city.",
+            "dialogue_quirks": "Speaks in a low, rumbling voice and often invokes the name of Moradin."
+        },
+        {
+            "name": "Lila Earthsong",
+            "race_and_class": "Halfling Ranger",
+            "current_location": "The Whispering Woods",
+            "core_motivation": "Avenging her family's death at the hands of loggers.",
+            "hidden_secret": "She is actually a princess in disguise.",
+            "knowledge_state": "Knows the players are looking for a guide through the woods.",
+            "dialogue_quirks": "Often talks to animals and has a habit of whistling."
+        },
+        {
+            "name": "Thrain Blackbeard",
+            "race_and_class": "Human Barbarian",
+            "current_location": "The Black Boar Tavern",
+            "core_motivation": "Seeking the strongest drink in the land.",
+            "hidden_secret": "He is actually a retired pirate captain.",
+            "knowledge_state": "Has heard rumors of the players' prowess in battle.",
+            "dialogue_quirks": "Often breaks into sea shanties and uses nautical slang."
+        },
+        {
+            "name": "Elara Moonwhisper",
+            "race_and_class": "Half-Elf Bard",
+            "current_location": "The Moonstone Theater",
+            "core_motivation": "Becoming the most famous performer in the land.",
+            "hidden_secret": "She has a magical voice that can charm creatures.",
+            "knowledge_state": "Knows the players are looking for a performance to attend.",
+            "dialogue_quirks": "Often speaks in rhyming couplets and uses dramatic flair."
+        },
+        {
+            "name": "Gorin the Unyielding",
+            "race_and_class": "Goliath Fighter",
+            "current_location": "The Arena of the Red Griffin",
+            "core_motivation": "Becoming the champion of the arena.",
+            "hidden_secret": "He is actually a slave fighting for his freedom.",
+            "knowledge_state": "Has heard rumors of the players' skill in combat.",
+            "dialogue_quirks": "Often grunts and growls, and has a tendency to ignore authority."
+        },
+        {
+            "name": "Arin the Bold",
+            "race_and_class": "Human Rogue",
+            "current_location": "The Shadowhand Guild",
+            "core_motivation": "Pulling off the heist of the century.",
+            "hidden_secret": "He is actually a noble in disguise.",
+            "knowledge_state": "Knows the players are looking for a job to do.",
+            "dialogue_quirks": "Often uses slang and has a tendency to boast about his skills."
+        },
+        {
+            "name": "Mira Shadowglow",
+            "race_and_class": "Tiefling Warlock",
+            "current_location": "The Shadowfell",
+            "core_motivation": "Seeking power from the darkness.",
+            "hidden_secret": "She has a pact with a powerful demon.",
+            "knowledge_state": "Knows the players are looking for a way to defeat a powerful foe.",
+            "dialogue_quirks": "Often speaks in a dark, mysterious tone and has a tendency to manipulate others."
+        },
+        {
+            "name": "Keir Starseeker",
+            "race_and_class": "Dragonborn Sorcerer",
+            "current_location": "The Observatory of the Stars",
+            "core_motivation": "Unlocking the secrets of the universe.",
+            "hidden_secret": "He is actually an alien from another world.",
+            "knowledge_state": "Knows the players are looking for a way to reach the stars.",
+            "dialogue_quirks": "Often uses astronomical terms and has a tendency to get lost in thought."
+        },
+        {
+            "name": "Niamh Greenhaven",
+            "race_and_class": "Half-Elf Druid",
+            "current_location": "The Heartwood Tree",
+            "core_motivation": "Protecting the natural balance of the world.",
+            "hidden_secret": "She has the ability to communicate with plants.",
+            "knowledge_state": "Knows the players are looking for a way to heal the land.",
+            "dialogue_quirks": "Often speaks in a soothing tone and has a tendency to use botanical terms."
+        },
+        {
+            "name": "Cormac Nightshade",
+            "race_and_class": "Human Assassin",
+            "current_location": "The Nightshade Guild",
+            "core_motivation": "Eliminating his targets with precision and stealth.",
+            "hidden_secret": "He has a personal vendetta against the players.",
+            "knowledge_state": "Knows the players are looking for a way to take out a target.",
+            "dialogue_quirks": "Often speaks in a monotone voice and has a tendency to be blunt."
+        },
+        {
+            "name": "Xanthe Sunblaze",
+            "race_and_class": "Tiefling Paladin",
+            "current_location": "The Temple of Sarenrae",
+            "core_motivation": "Spreading the light of her deity to all corners of the world.",
+            "hidden_secret": "She has a dark past as a former demon worshiper.",
+            "knowledge_state": "Knows the players are looking for a holy symbol.",
+            "dialogue_quirks": "Often speaks in a fiery tone and has a tendency to invoke the name of Sarenrae."
+        },
+        {
+            "name": "Finnley Swiftfoot",
+            "race_and_class": "Halfling Monk",
+            "current_location": "The Swiftfoot Dojo",
+            "core_motivation": "Mastering the art of speed and agility.",
+            "hidden_secret": "He has a magical amulet that enhances his speed.",
+            "knowledge_state": "Knows the players are looking for a way to increase their speed.",
+            "dialogue_quirks": "Often speaks in a rapid, high-pitched voice and has a tendency to use martial arts terminology."
+        },
+        {
+            "name": "Rowan Windsong",
+            "race_and_class": "Half-Elf Ranger",
+            "current_location": "The Windsong Ranch",
+            "core_motivation": "Protecting the land and its creatures from those who would harm them.",
+            "hidden_secret": "She has the ability to shape shift into a wolf.",
+            "knowledge_state": "Knows the players are looking for a way to track down a fugitive.",
+            "dialogue_quirks": "Often speaks in a gentle tone and has a tendency to use animal metaphors."
+        },
+        {
+            "name": "Gundrik Ironfist",
+            "race_and_class": "Dwarf Paladin",
+            "current_location": "The Temple of Moradin",
+            "core_motivation": "Defending the innocent and vanquishing evil.",
+            "hidden_secret": "He has a magical warhammer that can smite his enemies.",
+            "knowledge_state": "Knows the players are looking for a way to defeat a powerful foe.",
+            "dialogue_quirks": "Often speaks in a bold, authoritative tone and has a tendency to invoke the name of Moradin."
+        },
+        {
+            "name": "Lysander Darkfire",
+            "race_and_class": "Human Warlock",
+            "current_location": "The Darkfire Manor",
+            "core_motivation": "Seeking power and knowledge from the shadows.",
+            "hidden_secret": "He has a pact with a powerful being from another realm.",
+            "knowledge_state": "Knows the players are looking for a way to gain dark magic.",
+            "dialogue_quirks": "Often speaks in a dark, mysterious tone and has a tendency to use arcane terminology."
+        },
+        {
+            "name": "Piper Redhand",
+            "race_and_class": "Halfling Bard",
+            "current_location": "The Redhand Tavern",
+            "core_motivation": "Entertaining the masses and bringing joy to all.",
+            "hidden_secret": "She has a magical lute that can charm creatures.",
+            "knowledge_state": "Knows the players are looking for a way to lift the spirits of a depressed town.",
+            "dialogue_quirks": "Often speaks in a cheerful tone and has a tendency to use musical metaphors."
+        },
+        {
+            "name": "Caspian Nightingale",
+            "race_and_class": "Tiefling Sorcerer",
+            "current_location": "The Nightingale Estate",
+            "core_motivation": "Unlocking the secrets of the universe and mastering the arcane arts.",
+            "hidden_secret": "He has a magical staff that can manipulate reality.",
+            "knowledge_state": "Knows the players are looking for a way to gain ultimate knowledge.",
+            "dialogue_quirks": "Often speaks in a poetic tone and has a tendency to use celestial terminology."
+        },
+        {
+            "name": "Brynhild Stoneheart",
+            "race_and_class": "Dwarf Cleric",
+            "current_location": "The Stoneheart Temple",
+            "core_motivation": "Healing the wounds of the land and its creatures.",
+            "hidden_secret": "She has the ability to communicate with the spirits of the land.",
+            "knowledge_state": "Knows the players are looking for a way to heal a wounded ally.",
+            "dialogue_quirks": "Often speaks in a gentle tone and has a tendency to use geological terminology."
+        },
+        {
+            "name": "Kaida Moonwhisper",
+            "race_and_class": "Half-Elf Druid",
+            "current_location": "The Moonwhisper Glen",
+            "core_motivation": "Protecting the natural balance of the world and preserving the beauty of nature.",
+            "hidden_secret": "She has the ability to control the weather.",
+            "knowledge_state": "Knows the players are looking for a way to stop a natural disaster.",
+            "dialogue_quirks": "Often speaks in a soothing tone and has a tendency to use botanical terms."
+        },
+        {
+            "name": "Thoric Stonebeard",
+            "race_and_class": "Dwarf Barbarian",
+            "current_location": "The Stonebeard Clanhold",
+            "core_motivation": "Defending his clan and his people from harm.",
+            "hidden_secret": "He has a magical axe that can smite his enemies.",
+            "knowledge_state": "Knows the players are looking for a way to defeat a powerful foe.",
+            "dialogue_quirks": "Often speaks in a bold, gruff tone and has a tendency to invoke the name of his ancestors."
+        }
+    ]
+}
