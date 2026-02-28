@@ -1,15 +1,28 @@
 # RAGnarok
 
-```
-# Create the environment from the yaml
-conda env create -f environment.yaml
+## Configuration & API Setup
 
-# Activate the environment
-conda activate ragnarok
-
-# Fix for the Groq/HTTPX telemetry bug (Mandatory)
-pip install httpx==0.27.2
+Before running the orchestrator, you must set up your local environment variables.  
+* ## Groq API Key: * Create a free account from https://console.groq.com/home.  
+  - Generate a new API key and copy it.  
+* ## Environment File:  
+  - Create a file named .env in the root directory (this is hidden by .gitignore).  
+  - Add the following lines:  
 ```
+GROQ_API_KEY=your_key_here
+ANONYMIZED_TELEMETRY=False
+```  
+### What is ANONYMIZED_TELEMETRY=False?  
+We use this environment variable to disable ChromaDB's built-in usage tracking.  
+* The Problem: By default, ChromaDB tries to send anonymous usage data to its servers. However, a version mismatch in its telemetry dependency (posthog) causes a "capture() error" that spams the console every time the Rules Arbiter queries the database.  
+* The Fix: Setting this to False tells the database to skip the tracking attempt entirely. This stops the error messages and keeps our game logs clean and readable.
+
+### Quick Start for Contributors
+
+If you just cloned this repo, follow these steps to get the system running:  
+* Setup Conda: `conda env create -f environment.yaml` followed by `conda activate ragnarok`  
+* Initialize Database: Run `python scripts/build_rules_rag.py` to build your local ChromaDB vector store from the SRD.  
+* Launch: Run python orchestrator.py to start the session.
 
 # Progress & Architecture
 
