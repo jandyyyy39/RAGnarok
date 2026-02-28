@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+# RAGnarok
+
 ```
 # Create the environment from the yaml
 conda env create -f environment.yaml
@@ -26,6 +27,3 @@ Current Features:
 * Rule Retrieval → Query RAG for mechanical DC and rolls.  
 * Narrative Generation → DM Agent weaves story and mechanics.  
 * Flavor Pass → NPC Consistency Agent applies dialogue quirks.  
-=======
-# RAGnarok
->>>>>>> fe10a08e6a4eb1ae7eea9042f76790c45a8700dd
