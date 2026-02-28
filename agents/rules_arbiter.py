@@ -17,11 +17,11 @@ class RulesArbiter:
         """
         Determines if an action is valid and what rolls are required.
         """
-        # 1. Retrieve the most relevant rules from the RAG database
+        # Retrieve the most relevant rules from the RAG database
         relevant_rules = self.vectorstore.similarity_search(player_action, k=3)
         context_text = "\n".join([doc.page_content for doc in relevant_rules])
 
-        # 2. Construct the prompt for the Arbiter
+        # Construct the prompt for the Arbiter
         prompt = f"""
         SYSTEM: You are the Rules Arbiter for a D&D 5e game. 
         Your job is to interpret the player's intent based on the official rules.
@@ -39,7 +39,7 @@ class RulesArbiter:
         4. Be concise. Do not describe the narrative outcome; only provide the mechanical ruling.
         """
 
-        # 3. Get the mechanical decision from the LLM
+        # Get the mechanical decision from the LLM
         response = self.client.chat.completions.create(
             messages=[
                 {"role": "system", "content": "You are a precise D&D 5e rules engine."},
@@ -50,13 +50,3 @@ class RulesArbiter:
         )
 
         return response.choices[0].message.content
-
-# Quick Test
-if __name__ == "__main__":
-    arbiter = RulesArbiter()
-    # Mocking a scenario where a player tries to do something complex
-    test_context = "The party is in a crumbling stone tower. Rain is making the floors slick."
-    test_action = "I want to run up the wall, backflip over the guard, and stab him in the neck."
-    
-    ruling = arbiter.get_ruling(test_action, test_context)
-    print(f"RULE ARBITER RULING:\n{ruling}")

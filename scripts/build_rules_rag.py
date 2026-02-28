@@ -4,12 +4,13 @@ from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import MarkdownHeaderTextSplitter, RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
+from pathlib import Path
 
-# NEW STABLE URL (oznogon's CC-BY-4.0 SRD 5.1)
+BASE_DIR = Path(__file__).resolve().parent
+DATA_DIR = BASE_DIR / "data"
+CHROMA_DIR = DATA_DIR / "chroma_db"
+SRD_FILE = DATA_DIR / "srd_rules.md"
 SRD_URL = "https://raw.githubusercontent.com/oznogon/cc-srd5/main/cc-srd5.md"
-DATA_DIR = "data"
-SRD_FILE = os.path.join(DATA_DIR, "srd_rules.md")
-CHROMA_DIR = "data/chroma_db"
 
 def download_srd():
     os.makedirs(DATA_DIR, exist_ok=True)
@@ -25,7 +26,7 @@ def download_srd():
         exit(1)
 
 def build_vector_store():
-    # Split by Markdown headers (Advanced RAG requirement)
+    # Split by Markdown headers
     headers_to_split_on = [("#", "Header 1"), ("##", "Header 2"), ("###", "Header 3")]
     markdown_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=headers_to_split_on)
     

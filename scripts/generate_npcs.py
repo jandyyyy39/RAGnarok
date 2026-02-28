@@ -8,7 +8,7 @@ from pydantic import BaseModel, Field
 load_dotenv()
 client = Groq(api_key="")
 
-# 1. Define the strict JSON schema using Pydantic
+# Define the strict JSON schema using Pydantic
 class NPCProfile(BaseModel):
     name: str = Field(description="The NPC's full name")
     race_and_class: str = Field(description="e.g., Dwarf Blacksmith, Elf Rogue")
@@ -46,7 +46,7 @@ def generate_npcs():
     Do not add any other keys like 'attitude' or 'alignment'. Stick STRICTLY to the keys above.
     """
 
-    # 2. Call the Groq API, forcing it to return our exact JSON schema
+    # Call the Groq API, forcing it to return our exact JSON schema
     chat_completion = client.chat.completions.create(
         messages=[
             {"role": "system", "content": "You are a helpful JSON data generator."},
@@ -58,7 +58,7 @@ def generate_npcs():
         response_format={"type": "json_object"}, 
     )
 
-    # 3. Parse and save
+    # Parse and save
     response_content = chat_completion.choices[0].message.content
     
     # We load it into our Pydantic model to ensure it is 100% valid
