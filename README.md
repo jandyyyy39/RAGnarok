@@ -19,10 +19,27 @@ We use this environment variable to disable ChromaDB's built-in usage tracking.
 
 ### Quick Start for Contributors
 
-If you just cloned this repo, follow these steps to get the system running:  
-* Setup Conda: `conda env create -f environment.yaml` followed by `conda activate ragnarok`  
-* Initialize Database: Run `python scripts/build_rules_rag.py` to build your local ChromaDB vector store from the SRD.  
-* Launch: Run python orchestrator.py to start the session.
+If you just cloned this repo, follow these steps to get the system running:
+* Setup Conda: `conda env create -f environment.yaml` followed by `conda activate ragnarok`
+* Initialize Database: Run `python scripts/build_rules_rag.py` to build your local ChromaDB vector store from the SRD.
+
+#### Running the Application
+
+**Backend (API Server):**
+```bash
+python orchestrator.py
+```
+This starts the Flask API server on `http://localhost:5000`.
+
+**Frontend (React UI):**
+```bash
+cd frontend
+npm install    # First time only
+npm run dev
+```
+This starts the Vite dev server (typically on `http://localhost:5173`).
+
+Open the frontend URL in your browser to begin.
 
 # Progress & Architecture
 
