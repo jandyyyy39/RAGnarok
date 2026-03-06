@@ -37,4 +37,6 @@ dependencies:
       - python-dotenv==1.0.1
       
       # Serving 
+      - flask==3.0.3
+      - flask-cors==4.0.1
       - vllm==0.4.3
