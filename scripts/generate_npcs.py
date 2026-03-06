@@ -54,14 +54,14 @@ def generate_npcs():
         ],
         model="llama-3.3-70b-versatile", # Using Llama 3 70B for high-quality creative writing
         temperature=0.7,
-        # This is the magic line that guarantees perfect JSON parsing
+        # Guarantees perfect JSON parsing
         response_format={"type": "json_object"}, 
     )
 
     # Parse and save
     response_content = chat_completion.choices[0].message.content
     
-    # We load it into our Pydantic model to ensure it is 100% valid
+    # Load into Pydantic model to ensure it is 100% valid
     parsed_data = NPCList.model_validate_json(response_content)
     
     with open("data/npc_profiles.json", "w") as f:

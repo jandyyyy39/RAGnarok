@@ -1,3 +1,5 @@
+from flask import Flask, request, jsonify
+from flask_cors import CORS
 from config import Config
 from agents.safety import SafetyAgent
 from agents.memory import MemoryAgent
@@ -50,23 +52,25 @@ class RAGnarokOrchestrator:
         print("="*50 + "\n")
         return final_output
 
+app = Flask(__name__)
+CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}})
+game = RAGnarokOrchestrator()
+
+@app.route('/api/game', methods=['POST'])
+def handle_game_turn():
+    data = request.json
+    player_input = data.get('input')
+    if not player_input:
+        return jsonify({'error': 'No input provided'}), 400
+
+    response = game.process_turn(player_input)
+    game_state = game.memory.get_current_state()
+    return jsonify({'response': response, 'game_state': game_state})
+
 if __name__ == "__main__":
-    game = RAGnarokOrchestrator()
-    
-    # Initialize starting scenario
     game.memory.update_state({
         "current_location": "The Yawning Portal Tavern",
         "active_npcs": ["Durnan the Barkeep"],
         "recent_events": ["The party just walked into the crowded tavern."]
     })
-
-    print("Welcome to RAGnarok. Type 'quit' to exit.")
-    print("DM: You step into the bustling Yawning Portal tavern. Durnan wipes a glass behind the bar. What do you do?")
-    
-    while True:
-        user_input = input("\nPlayer: ")
-        if user_input.lower() in ['quit', 'exit']:
-            break
-            
-        response = game.process_turn(user_input)
-        print(f"\nDM: {response}")
+    app.run(port=5000, debug=True)
