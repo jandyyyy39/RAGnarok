@@ -118,8 +118,8 @@ function App() {
     return (
       <div className="loading-overlay">
         <div className="loading-content">
-          <h2>Preparing Your Adventure...</h2>
-          <div className="loading-dice">🎲</div>
+          <h2>Preparing Your Adventure</h2>
+          <div className="loading-dice">⚔️</div>
         </div>
       </div>
     );
@@ -135,14 +135,14 @@ function App() {
       <main className="main-content">
         <aside className="side-panel">
           <div className="state-card">
-            <h3>📍 Location</h3>
+            <h3>Location</h3>
             <div className="state-item">
               <span className="state-value">{gameState.current_location}</span>
             </div>
           </div>
 
           <div className="state-card">
-            <h3>👥 Active NPCs</h3>
+            <h3>Active NPCs</h3>
             {gameState.active_npcs.length > 0 ? (
               <ul className="npc-list">
                 {gameState.active_npcs.map((npc, index) => (
@@ -150,21 +150,21 @@ function App() {
                 ))}
               </ul>
             ) : (
-              <p style={{ fontStyle: 'italic', color: 'var(--stone-gray)' }}>
+              <p style={{ fontStyle: 'italic', color: 'var(--text-muted)' }}>
                 No one nearby...
               </p>
             )}
           </div>
 
           <div className="state-card">
-            <h3>❤️ Party Status</h3>
+            <h3>Party Status</h3>
             <div className="state-item">
               <span className="state-value">{gameState.party_status}</span>
             </div>
           </div>
 
           <div className="state-card">
-            <h3>📜 Recent Events</h3>
+            <h3>Recent Events</h3>
             {gameState.recent_events.length > 0 ? (
               <ul className="npc-list">
                 {gameState.recent_events.slice(-3).map((event, index) => (
@@ -174,7 +174,7 @@ function App() {
                 ))}
               </ul>
             ) : (
-              <p style={{ fontStyle: 'italic', color: 'var(--stone-gray)' }}>
+              <p style={{ fontStyle: 'italic', color: 'var(--text-muted)' }}>
                 Your story begins...
               </p>
             )}
@@ -190,7 +190,7 @@ function App() {
               >
                 <span className="timestamp">{formatTime(message.timestamp)}</span>
                 <span className="sender">
-                  {message.type === 'player' ? '🗡️ You' : '📖 Dungeon Master'}
+                  {message.type === 'player' ? 'You' : 'Dungeon Master'}
                 </span>
                 <div className={`content ${message.type === 'dm' ? 'dm-response' : ''}`}>
                   {message.content}
@@ -209,7 +209,7 @@ function App() {
             {error && (
               <div className="message">
                 <div className="error-message">
-                  ⚠️ {error} - Make sure the server is running on port 5000
+                  {error} — Make sure the server is running on port 5000
                 </div>
               </div>
             )}
