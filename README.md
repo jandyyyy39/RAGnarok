@@ -57,3 +57,15 @@ Current Features:
 * Rule Retrieval → Query RAG for mechanical DC and rolls.  
 * Narrative Generation → DM Agent weaves story and mechanics.  
 * Flavor Pass → NPC Consistency Agent applies dialogue quirks.  
+
+## TO DO:  
+- [Shwe] D20 Dice rolling system (If AI responds with 'Roll a d20', we trigger a 'Roll dice' system)  
+DM outputs dc15 -> DA -> True/False
+"Rolled 15", "15"  
+- [Andres] Campaign end + character progression + moving on to a different story (need Peimin)  
+- [Shwe] Message clarity (At the moment the reply is quite tedious, and feels 'boring' without someone else reading it out loud. How to make it better?)  
+- [Andy] Clearer orchestration (thinking?visual?)  
+- [Aditya] Better inference/deployment  
+- [Peimin+Lope] Quantitative evaluation  
+- [Aditya] Fine-tuning and text-to-speech & speech-to-text  
+- [Andres] History viewer  
