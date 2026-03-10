@@ -1,0 +1,21 @@
+# --- RAGnarok App Logic ---
+langchain>=0.3.0
+langchain-groq>=1.0.0
+langchain-chroma>=0.2.0
+langchain-ollama>=0.1.0
+chromadb>=0.6.0
+python-dotenv>=1.0.1
+
+# --- Local Embeddings  ---
+sentence-transformers>=3.0.1
+langchain-huggingface>=0.0.3
+
+# --- Web & API Layer ---
+flask>=3.0.3
+flask-cors>=4.0.1
+httpx>=0.27.2
+requests>=2.32.0
+
+# --- Productivity ---
+tqdm
+ipykernel
