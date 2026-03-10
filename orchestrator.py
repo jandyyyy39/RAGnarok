@@ -15,8 +15,9 @@ from groq import Groq
 from openai import OpenAI
 
 class RAGnarokOrchestrator:
-    def __init__(self, client, model_profile: str):
+    def __init__(self, client, model_profile: str, args):
         print(f"Initializing RAGnarok Multi-Agent System with [{model_profile}] settings...")
+        self.args = args
         self.safety = SafetyAgent()
         self.memory = MemoryAgent()
         self.arbiter = RulesArbiter(client=client, model_profile=model_profile)
@@ -41,7 +42,7 @@ class RAGnarokOrchestrator:
             print(message)
             turn_log.append(message)
 
-        print ("\n" + "="*50)
+        trace("\n" + "="*50)
 
         # --- INTERCEPTOR ---
         is_system_roll = player_input.startswith("[SYSTEM: ROLL_RESOLUTION")
@@ -77,21 +78,29 @@ class RAGnarokOrchestrator:
                 return {"response": "Safety Agent Intercept: That action violates the table's safety tools.", "pending_action": None}
             
             # Retrieve world state
-            print("[Memory Agent] Fetching recap...")
-            world_state = self.memory.format_for_dm()
+            if self.args.no_memory:
+                trace("[Orchestrator] --no-memory: Skipping world state injection.")
+                world_state = "No world state provided by the Memory agent."
+            else:
+                trace("[Memory Agent] Fetching recap...")
+                world_state = self.memory.format_for_dm()
 
             # Rules arbiter assessment
-            print("[Rules Arbiter] Consulting the SRD...")
-            ruling = self.arbiter.get_ruling(player_input, world_state)
-            print(f"[Rules Arbiter] Ruling: {ruling}")
+            if self.args.no_rag:
+                trace("[Orchestrator] --no-rag: Skipping RAG lookup.")
+                ruling = "The Rules Arbiter was not consulted."
+            else:
+                trace("[Rules Arbiter] Consulting the SRD...")
+                ruling = self.arbiter.get_ruling(player_input, world_state)
+                trace(f"[Rules Arbiter] Ruling: {ruling}")
         
         # DM generates response
-        print("[DM Agent] Weaving the narrative...")
+        trace("[DM Agent] Weaving the narrative...")
         dm_result = self.dm.generate_response(player_input, world_state, ruling)
 
         # --- FORK ---
         if dm_result["type"] == "tool_call":
-            print(f"[DM Agent] Halting narrative. Requesting {dm_result['action']['skill']} check.")
+            trace(f"[DM Agent] Halting narrative. Requesting {dm_result['action']['skill']} check.")
             result = {
                 "response": dm_result["narrative"],
                 "pending_action": dm_result["action"]
@@ -104,8 +113,12 @@ class RAGnarokOrchestrator:
             })
             return result
 
-        print("[NPC Agent] Checking character sheets...")
-        final_output = self.npc_agent.refine_dialogue(dm_result["narrative"])
+        if self.args.no_npc_const:
+            trace("[Orchestrator] --no-npc-const: Skipping NPC consistency check.")
+            final_output = dm_result["narrative"]
+        else:
+            trace("[NPC Agent] Checking character sheets...")
+            final_output = self.npc_agent.refine_dialogue(dm_result["narrative"])
         
         # Memory update
         current_events = self.memory.get_current_state()["recent_events"]
@@ -115,7 +128,7 @@ class RAGnarokOrchestrator:
         
         self.memory.update_state({"recent_events": current_events + [new_event]})
 
-        print("="*50 + "\n")
+        trace("="*50 + "\n")
         result = {
             "response": final_output,
             "pending_action": None
@@ -177,6 +190,9 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="RAGnarok Orchestrator")
     parser.add_argument('--local', action='store_true', help="Use a local LLM model instead of Groq.")
+    parser.add_argument('--no-rag', action='store_true', help="Skip Rules Arbiter entirely.")
+    parser.add_argument('--no-memory', action='store_true', help="Don't inject world state.")
+    parser.add_argument('--no-npc-const', action='store_true', help="Skip NPC Consistency step.")
     args = parser.parse_args()
 
     if args.local:
@@ -188,7 +204,7 @@ if __name__ == "__main__":
         client = Groq(api_key=Config.GROQ_API_KEY)
         model_profile = "GROQ"
 
-    game = RAGnarokOrchestrator(client=client, model_profile=model_profile)
+    game = RAGnarokOrchestrator(client=client, model_profile=model_profile, args=args)
     
     # Initialize the world with NPCs
     game.memory.update_state({
