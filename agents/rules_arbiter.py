@@ -1,17 +1,26 @@
 import os
+import torch
 from dotenv import load_dotenv
-from groq import Groq
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
+from config import Config
 
 load_dotenv()
 
 class RulesArbiter:
-    def __init__(self, db_path="chroma_db"):
-        self.client = Groq(api_key=os.getenv("GROQ_API_KEY"))
-        self.embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    def __init__(self, client, model_profile: str, db_path="chroma_db"):
+        self.client = client
+        self.model = getattr(Config, model_profile)['LLM_MODEL']
+        
+        # --- GPU-aware Embeddings ---
+        device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        print(f"[Rules Arbiter] Using {device.upper()} for sentence embeddings.")
+        
+        self.embeddings = HuggingFaceEmbeddings(
+            model_name=getattr(Config, model_profile)['EMBEDDING_MODEL'],
+            model_kwargs={'device': device}
+        )
         self.vectorstore = Chroma(persist_directory=db_path, embedding_function=self.embeddings)
-        self.model = "llama-3.3-70b-versatile"
 
     def get_ruling(self, player_action: str, world_context: str):
         """
@@ -47,6 +56,7 @@ class RulesArbiter:
             ],
             model=self.model,
             temperature=0.1, # Low temperature for consistency
+            max_tokens=150,
         )
 
         return response.choices[0].message.content

@@ -21,6 +21,7 @@ interface PendingAction {
   stat: string;
   skill: string;
   dc: number;
+  original_input: string;
 }
 
 const formatTime = (date: Date): string => {
@@ -29,20 +30,13 @@ const formatTime = (date: Date): string => {
 
 function App() {
   const [input, setInput] = useState('');
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: "",
-      type: 'dm',
-      content: 'Welcome, adventurer! You find yourself in The Yawning Portal Tavern. The air is thick with smoke and the murmur of whispered rumors. Durnan, the grizzled barkeep, polishes a tankard behind the counter. What do you do?',
-      timestamp: new Date(),
-    },
-  ]);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [gameState, setGameState] = useState<GameState>({
-    current_location: 'The Yawning Portal Tavern',
-    active_npcs: ['Durnan the Barkeep'],
-    party_status: 'Healthy',
+    current_location: '',
+    active_npcs: [],
+    party_status: '',
     recent_events: [],
   });
   const [isConnecting, setIsConnecting] = useState(true);
@@ -50,11 +44,31 @@ function App() {
   const [pendingAction, setPendingAction] = useState<PendingAction | null>(null);
 
   useEffect(() => {
-    // Simulate initial connection
-    const timer = setTimeout(() => {
-      setIsConnecting(false);
-    }, 1000);
-    return () => clearTimeout(timer);
+    const fetchInitialState = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/api/game/state');
+        if (!response.ok) {
+          throw new Error(`Server responded with ${response.status}`);
+        }
+        const data = await response.json();
+        setGameState(data);
+        setMessages([
+          {
+            id: crypto.randomUUID(),
+            type: 'dm',
+            content: data.recent_events[0] || 'Your adventure begins!',
+            timestamp: new Date(),
+          },
+        ]);
+      } catch (err) {
+        console.error('Error fetching initial state:', err);
+        setError(err instanceof Error ? err.message : 'Could not connect to the server');
+      } finally {
+        setIsConnecting(false);
+      }
+    };
+
+    fetchInitialState();
   }, []);
 
   useEffect(() => {
@@ -112,7 +126,10 @@ function App() {
 
       // Check for tool calls
       if (data.pending_action) {
-        setPendingAction(data.pending_action);
+        setPendingAction({
+          ...data.pending_action,
+          original_input: playerInput
+        });
       }
     } catch (err) {
       console.error('Error sending message:', err);
@@ -125,18 +142,19 @@ function App() {
   const handleDiceRoll = async () => {
     if (!pendingAction) return;
 
-    // 1. Calculate the roll (Standard 1d20 for now. You can add character modifiers later)
-    const roll = Math.floor(Math.random() * 20) + 1;
+    // Calculate the roll (Standard 1d20 for now. You can add character modifiers later)
+    // const roll = Math.floor(Math.random() * 20) + 1;
+    const roll = 20;
     const isSuccess = roll >= pendingAction.dc;
 
-    // 2. Build the System Prompt
-    const systemPayload = `[SYSTEM: ROLL_RESOLUTION | SKILL: ${pendingAction.skill} | ROLL: ${roll} | DC: ${pendingAction.dc} | RESULT: ${isSuccess ? 'SUCCESS' : 'FAILURE'}]`;
+    // Build the System Prompt
+    const systemPayload = `[SYSTEM: ROLL_RESOLUTION | INTENT: ${pendingAction.original_input} | RESULT: ${isSuccess ? 'SUCCESS' : 'FAILURE'} | ROLL: ${roll}]`;
 
-    // 3. Clear the pending action so the UI resets
+    // Clear the pending action so the UI resets
     setPendingAction(null);
     setIsLoading(true);
 
-    // 4. Send the resolution to the backend invisibly (don't show the system tag in the UI)
+    // Send the resolution to the backend invisibly (don't show the system tag in the UI)
     const playerMessage: Message = {
       id: crypto.randomUUID(),
       type: 'player',

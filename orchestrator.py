@@ -6,28 +6,70 @@ from agents.memory import MemoryAgent
 from agents.rules_arbiter import RulesArbiter
 from agents.dungeon_master import DMAgent
 from agents.npc_consistency import NPCConsistencyAgent
+import os
+import json
+from datetime import datetime
+import torch
+import argparse
+from groq import Groq
+from openai import OpenAI
 
 class RAGnarokOrchestrator:
-    def __init__(self):
-        print("Initializing RAGnarok Multi-Agent System...")
+    def __init__(self, client, model_profile: str):
+        print(f"Initializing RAGnarok Multi-Agent System with [{model_profile}] settings...")
         self.safety = SafetyAgent()
         self.memory = MemoryAgent()
-        self.arbiter = RulesArbiter()
-        self.dm = DMAgent()
-        self.npc_agent = NPCConsistencyAgent()
+        self.arbiter = RulesArbiter(client=client, model_profile=model_profile)
+        self.dm = DMAgent(client=client, model_profile=model_profile)
+        self.npc_agent = NPCConsistencyAgent(client=client, model_profile=model_profile)
+        
+        # --- SESSION GENERATOR ---
+        os.makedirs("data/history", exist_ok=True) 
+        
+        session_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+        self.log_file = f"data/history/session_{session_id}.json" 
+        
+        with open(self.log_file, "w", encoding="utf-8") as f:
+            json.dump([], f)
+            
+        print(f"Session telemetry initialized: {self.log_file}")
         print("All agents online. Ready to play.\n")
 
     def process_turn(self, player_input: str):
+        turn_log = []
+        def trace(message: str):
+            print(message)
+            turn_log.append(message)
+
         print ("\n" + "="*50)
 
         # --- INTERCEPTOR ---
         is_system_roll = player_input.startswith("[SYSTEM: ROLL_RESOLUTION")
 
         if is_system_roll:
-            print("[Orchestrator] Dice Roll detected. Bypassing Arbiter.")
+            trace("[Orchestrator] 🎲 Dice Roll detected. Bypassing Arbiter.")
             world_state = self.memory.format_for_dm()
+            
+            # --- Look at the last REAL player action in memory ---
+            recent_history = self.memory.get_current_state()["recent_events"]
+            # Get the last event that starts with "Player:"
+            last_action = "unknown action"
+            for event in reversed(recent_history):
+                if event.startswith("Player:"):
+                    last_action = event.split("Player: ")[1].split(" | ")[0]
+                    break
 
-            ruling = f"SYSTEM OVERRIDE: The player has rolled the dice. Data: {player_input}. You must narrate the exact outcome of this result based on whether it is a SUCCESS or FAILURE. Do not ask for another roll."
+            # Force the DM to tie the roll result to that specific action
+            ruling = f"""
+            SYSTEM OVERRIDE: 
+            The player was trying to: "{last_action}"
+            The roll result is: {player_input}
+            
+            NARRATION RULE: You MUST narrate the outcome of "{last_action}". 
+            - If SUCCESS: Describe how the player achieves their goal, what they learn, or how the environment reacts favorably.
+            - If FAILURE: Describe the negative consequences, the NPC's refusal, or the mechanical setback.
+            Do NOT mention the underlying math in the narrative.
+            """
         else: 
             # --- NORMAL TURN ---
             # Safety Check
@@ -50,10 +92,17 @@ class RAGnarokOrchestrator:
         # --- FORK ---
         if dm_result["type"] == "tool_call":
             print(f"[DM Agent] Halting narrative. Requesting {dm_result['action']['skill']} check.")
-            return {
+            result = {
                 "response": dm_result["narrative"],
                 "pending_action": dm_result["action"]
             }
+            self._save_history({
+                "timestamp": datetime.now().isoformat(),
+                "user_input": player_input,
+                "backend_log": "\n".join(turn_log),
+                "final_output": result
+            })
+            return result
 
         print("[NPC Agent] Checking character sheets...")
         final_output = self.npc_agent.refine_dialogue(dm_result["narrative"])
@@ -67,17 +116,46 @@ class RAGnarokOrchestrator:
         self.memory.update_state({"recent_events": current_events + [new_event]})
 
         print("="*50 + "\n")
-        return {
+        result = {
             "response": final_output,
             "pending_action": None
         }
+
+        self._save_history({
+            "timestamp": datetime.now().isoformat(),
+            "user_input": player_input,
+            "backend_log": "\n".join(turn_log),
+            "final_output": result
+        })
+
+        return result
     
+    def _save_history(self, turn_data: dict):
+        """Appends a structured turn record to the JSON flight recorder."""
+        with open(self.log_file, "r", encoding="utf-8") as f:
+            history = json.load(f)
+
+        # Append new turn
+        history.append(turn_data)
+        
+        # Save it back
+        with open(self.log_file, "w", encoding="utf-8") as f:
+            json.dump(history, f, indent=4)
+
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}})
-game = RAGnarokOrchestrator()
+game = None # Will be initialized in main
+
+@app.route('/api/game/state', methods=['GET'])
+def get_game_state():
+    if not game:
+        return jsonify({"error": "Game not initialized"}), 500
+    return jsonify(game.memory.get_current_state())
 
 @app.route('/api/game', methods=['POST'])
 def handle_game_turn():
+    if not game:
+        return jsonify({"error": "Game not initialized"}), 500
     data = request.json
     player_input = data.get('input')
     if not player_input:
@@ -91,10 +169,35 @@ def handle_game_turn():
         'game_state': game.memory.get_current_state()
     })
 
+
 if __name__ == "__main__":
+    # Check for GPU
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    print(f"SYSTEM: Activating on **{device.upper()}**.")
+
+    parser = argparse.ArgumentParser(description="RAGnarok Orchestrator")
+    parser.add_argument('--local', action='store_true', help="Use a local LLM model instead of Groq.")
+    args = parser.parse_args()
+
+    if args.local:
+        print("Using local model...")
+        client = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
+        model_profile = "LOCAL"
+    else:
+        print("Using Groq API...")
+        client = Groq(api_key=Config.GROQ_API_KEY)
+        model_profile = "GROQ"
+
+    game = RAGnarokOrchestrator(client=client, model_profile=model_profile)
+    
+    # Initialize the world with NPCs
     game.memory.update_state({
-        "current_location": "The Yawning Portal Tavern",
-        "active_npcs": ["Durnan the Barkeep"],
-        "recent_events": ["The party just walked into the crowded tavern."]
+        "current_location": "The Black Boar Tavern",
+        "active_npcs": [
+            "Thrain Blackbeard (Human Barbarian)", 
+            "Piper Redhand (Halfling Bard)",
+            "Arin the Bold (Human Rogue)"
+        ],
+        "recent_events": ["The party just walked into the loud, sea-shanty-filled Black Boar Tavern. Thrain is yelling for stronger ale, while Piper tunes her lute in the corner. What would you like to do?"]
     })
-    app.run(port=5000, debug=True)
+    app.run(port=5000, debug=True, use_reloader=False)
