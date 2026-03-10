@@ -1,13 +1,13 @@
+import json
 from groq import Groq
 from config import Config
 
 class DMAgent:
     def __init__(self):
         self.client = Groq(api_key=Config.GROQ_API_KEY)
-        # Eventually, swap this with fine-tuned FIREBALL model via vLLM
         self.model = Config.LLM_MODEL 
 
-    def generate_response(self, player_input: str, world_state: str, ruling: str) -> str:
+    def generate_response(self, player_input: str, world_state: str, ruling: str) -> dict:
         prompt = f"""
         You are an expert Dungeon Master. Respond to the player's action.
         
@@ -20,16 +20,56 @@ class DMAgent:
         "{player_input}"
         
         INSTRUCTIONS:
-        1. Describe the scene and the outcome of the player's action.
-        2. Incorporate the mechanical requirements from the Rules Arbiter.
-        3. Keep the tone immersive and engaging.
+        1. If the Arbiter's ruling requires a dice roll, DO NOT describe the outcome. Use the 'request_skill_check' tool immediately.
+        2. If no roll is required, describe the scene and the outcome. Keep it immersive.
         """
+        
+        # 1. Define the Tool
+        tools = [
+            {
+                "type": "function",
+                "function": {
+                    "name": "request_skill_check",
+                    "description": "Triggers a UI event for the player to roll dice.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "stat": {"type": "string", "description": "e.g., Charisma, Strength"},
+                            "skill": {"type": "string", "description": "e.g., Intimidation, Athletics"},
+                            "dc": {"type": "integer", "description": "The Difficulty Class (e.g., 18)"},
+                            "dice_type": {"type": "string", "description": "Usually 'd20'"}
+                        },
+                        "required": ["stat", "skill", "dc", "dice_type"]
+                    }
+                }
+            }
+        ]
+
         response = self.client.chat.completions.create(
             messages=[
-                {"role": "system", "content": "You are a master storyteller."},
+                {"role": "system", "content": "You are a ruthless, Monty-Python-esque Dungeon Master."},
                 {"role": "user", "content": prompt}
             ],
             model=self.model,
-            temperature=Config.DM_TEMPERATURE
+            temperature=Config.DM_TEMPERATURE,
+            tools=tools,
+            tool_choice="auto"
         )
-        return response.choices[0].message.content
+        
+        message = response.choices[0].message
+        
+        # 2. Check if the model decided to call the tool
+        if message.tool_calls:
+            tool_call = message.tool_calls[0]
+            args = json.loads(tool_call.function.arguments)
+            return {
+                "type": "tool_call", 
+                "action": args,
+                "narrative": f"The room holds its breath... (Roll {args['stat']} - {args['skill']})"
+            }
+        
+        # 3. Otherwise, return normal text
+        return {
+            "type": "text", 
+            "narrative": message.content
+        }
