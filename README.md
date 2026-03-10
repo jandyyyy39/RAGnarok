@@ -63,9 +63,26 @@ Current Features:
 DM outputs dc15 -> DA -> True/False
 "Rolled 15", "15"  
 - [Andres] Campaign end + character progression + moving on to a different story (need Peimin)  
-- [Shwe] Message clarity (At the moment the reply is quite tedious, and feels 'boring' without someone else reading it out loud. How to make it better?)  
-- [Andy] Clearer orchestration (thinking?visual?)  
-- [Aditya] Better inference/deployment  
+- [Andy] Clearer orchestration (thinking? visual?)  
 - [Peimin+Lope] Quantitative evaluation  
 - [Aditya] Fine-tuning and text-to-speech & speech-to-text  
 - [Andres] History viewer  
+
+Baseline:  
+* Simple RAG  
+* No finetuning for DM Agent  
+* Simple Orchestration  
+
+Eval metrics:  
+* Perplexity  
+* 
+
+- [Peimin+Lope] Fine Tune -> Each person try different dataset  
+- [Andres+Shwe] RAG -> Try more advanced shit  
+- [Andy+Aditya] Architecture  -> Dig deeper into how it works  
+- [Aditya] Input -> get clarity  
+- [Everyone] Compare performance against baseline  
+- [Andy] Research on GROQ with Adapters 
+- [Andy] Message clarity (At the moment the reply is quite tedious, and feels 'boring' without someone else reading it out loud. How to make it better?)
+- [Andy] Ablation study enabler  
+Need to build an input -> output 'ground truth' database  
