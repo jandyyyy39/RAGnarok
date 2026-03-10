@@ -1,11 +1,10 @@
 import json
-from groq import Groq
 from config import Config
 
 class DMAgent:
-    def __init__(self):
-        self.client = Groq(api_key=Config.GROQ_API_KEY)
-        self.model = Config.LLM_MODEL 
+    def __init__(self, client, model_profile: str):
+        self.client = client
+        self.model = getattr(Config, model_profile)['LLM_MODEL']
 
     def generate_response(self, player_input: str, world_state: str, ruling: str) -> dict:
         prompt = f"""
@@ -21,7 +20,7 @@ class DMAgent:
         
         INSTRUCTIONS:
         1. If the Arbiter's ruling requires a dice roll, DO NOT describe the outcome. Use the 'request_skill_check' tool immediately.
-        2. If no roll is required, describe the scene and the outcome. Keep it immersive.
+        2. If no roll is required, describe the scene and the outcome. Keep it immersive and engaging.
         """
         
         # 1. Define the Tool
@@ -37,9 +36,10 @@ class DMAgent:
                             "stat": {"type": "string", "description": "e.g., Charisma, Strength"},
                             "skill": {"type": "string", "description": "e.g., Intimidation, Athletics"},
                             "dc": {"type": "integer", "description": "The Difficulty Class (e.g., 18)"},
-                            "dice_type": {"type": "string", "description": "Usually 'd20'"}
+                            "dice_type": {"type": "string", "description": "Usually 'd20'"},
+                            "original_input": {"type": "string", "description": "The player's original request that triggered this roll."}
                         },
-                        "required": ["stat", "skill", "dc", "dice_type"]
+                        "required": ["stat", "skill", "dc", "dice_type", "original_input"]
                     }
                 }
             }

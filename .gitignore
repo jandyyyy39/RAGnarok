@@ -1,6 +1,7 @@
 .env
 frontend/.vite/
 chroma_db/*
+data/history/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
