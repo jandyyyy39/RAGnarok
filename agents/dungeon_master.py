@@ -4,7 +4,7 @@ from config import Config
 class DMAgent:
     def __init__(self, client, model_profile: str):
         self.client = client
-        self.model = getattr(Config, model_profile)['LLM_MODEL']
+        self.model = Config.LLM_MODEL[model_profile]
 
     def generate_response(self, player_input: str, world_state: str, ruling: str) -> dict:
         prompt = f"""

@@ -10,14 +10,14 @@ load_dotenv()
 class RulesArbiter:
     def __init__(self, client, model_profile: str, db_path="chroma_db"):
         self.client = client
-        self.model = getattr(Config, model_profile)['LLM_MODEL']
+        self.model = Config.LLM_MODEL[model_profile]
         
         # --- GPU-aware Embeddings ---
         device = 'cuda' if torch.cuda.is_available() else 'cpu'
         print(f"[Rules Arbiter] Using {device.upper()} for sentence embeddings.")
         
         self.embeddings = HuggingFaceEmbeddings(
-            model_name=getattr(Config, model_profile)['EMBEDDING_MODEL'],
+            model_name=Config.EMBEDDING_MODEL,
             model_kwargs={'device': device}
         )
         self.vectorstore = Chroma(persist_directory=db_path, embedding_function=self.embeddings)
@@ -42,10 +42,11 @@ class RulesArbiter:
         {context_text}
         
         INSTRUCTIONS:
-        1. Determine if the action is possible.
-        2. If possible, specify the required Ability Check, Saving Throw, or Attack Roll.
-        3. Set a Difficulty Class (DC) based on the world context and rules.
-        4. Be concise. Do not describe the narrative outcome; only provide the mechanical ruling.
+        1. Determine if the immediate action is possible.
+        2. Identify EXACTLY ONE primary Ability Check, Saving Throw, or Attack Roll required to attempt the action.
+        3. Do NOT provide secondary checks, conditional logic, or "social fallout" rolls. Pick the single most important check.
+        4. Set a single Difficulty Class (DC).
+        5. Output strict, concise mechanics only. No conversational text.
         """
 
         # Get the mechanical decision from the LLM

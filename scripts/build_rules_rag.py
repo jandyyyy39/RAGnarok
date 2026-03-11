@@ -5,6 +5,8 @@ from langchain_text_splitters import MarkdownHeaderTextSplitter, RecursiveCharac
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from pathlib import Path
+from config import Config
+import torch
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
@@ -41,7 +43,11 @@ def build_vector_store():
     final_splits = text_splitter.split_documents(md_header_splits)
 
     print(f"Building local database with {len(final_splits)} chunks...")
-    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    embeddings = HuggingFaceEmbeddings(
+        model_name=Config.EMBEDDING_MODEL,
+        model_kwargs={'device': device}
+    )
     
     vectorstore = Chroma.from_documents(
         documents=final_splits,

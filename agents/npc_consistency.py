@@ -6,7 +6,7 @@ class NPCConsistencyAgent:
     def __init__(self, client, model_profile: str, npc_db_path="data/npc_profiles.json"):
         self.npc_db_path = npc_db_path
         self.client = client
-        self.model = getattr(Config, model_profile)['LLM_MODEL']
+        self.model = Config.LLM_MODEL[model_profile]
         
         # Load the database into memory immediately on startup
         self.npcs = self._load_npcs()
