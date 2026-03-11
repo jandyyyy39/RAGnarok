@@ -15,9 +15,8 @@ from groq import Groq
 from openai import OpenAI
 
 class RAGnarokOrchestrator:
-    def __init__(self, client, model_profile: str, args):
+    def __init__(self, client, model_profile: str):
         print(f"Initializing RAGnarok Multi-Agent System with [{model_profile}] settings...")
-        self.args = args
         self.safety = SafetyAgent()
         self.memory = MemoryAgent()
         self.arbiter = RulesArbiter(client=client, model_profile=model_profile)
@@ -36,7 +35,7 @@ class RAGnarokOrchestrator:
         print(f"Session telemetry initialized: {self.log_file}")
         print("All agents online. Ready to play.\n")
 
-    def process_turn(self, player_input: str):
+    def process_turn(self, player_input: str, args):
         turn_log = []
         def trace(message: str):
             print(message)
@@ -78,7 +77,7 @@ class RAGnarokOrchestrator:
                 return {"response": "Safety Agent Intercept: That action violates the table's safety tools.", "pending_action": None}
             
             # Retrieve world state
-            if self.args.no_memory:
+            if args.no_memory:
                 trace("[Orchestrator] --no-memory: Skipping world state injection.")
                 world_state = "No world state provided by the Memory agent."
             else:
@@ -86,7 +85,7 @@ class RAGnarokOrchestrator:
                 world_state = self.memory.format_for_dm()
 
             # Rules arbiter assessment
-            if self.args.no_rag:
+            if args.no_rag:
                 trace("[Orchestrator] --no-rag: Skipping RAG lookup.")
                 ruling = "The Rules Arbiter was not consulted."
             else:
@@ -113,7 +112,7 @@ class RAGnarokOrchestrator:
             })
             return result
 
-        if self.args.no_npc_const:
+        if args.no_npc_const:
             trace("[Orchestrator] --no-npc-const: Skipping NPC consistency check.")
             final_output = dm_result["narrative"]
         else:
@@ -156,7 +155,7 @@ class RAGnarokOrchestrator:
             json.dump(history, f, indent=4)
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}})
+CORS(app, resources={r"/api/*": {"origins": "*"}}) # Allow all origins for development
 game = None # Will be initialized in main
 
 @app.route('/api/game/state', methods=['GET'])
@@ -174,7 +173,8 @@ def handle_game_turn():
     if not player_input:
         return jsonify({'error': 'No input provided'}), 400
 
-    turn_result = game.process_turn(player_input)
+    args = app.config['args']
+    turn_result = game.process_turn(player_input, args)
     
     return jsonify({
         'response': turn_result["response"],
@@ -194,6 +194,7 @@ if __name__ == "__main__":
     parser.add_argument('--no-memory', action='store_true', help="Don't inject world state.")
     parser.add_argument('--no-npc-const', action='store_true', help="Skip NPC Consistency step.")
     args = parser.parse_args()
+    app.config['args'] = args
 
     if args.local:
         print("Using local model...")
@@ -204,7 +205,7 @@ if __name__ == "__main__":
         client = Groq(api_key=Config.GROQ_API_KEY)
         model_profile = "GROQ"
 
-    game = RAGnarokOrchestrator(client=client, model_profile=model_profile, args=args)
+    game = RAGnarokOrchestrator(client=client, model_profile=model_profile)
     
     # Initialize the world with NPCs
     game.memory.update_state({
