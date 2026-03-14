@@ -2,6 +2,10 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from sentence_transformers import CrossEncoder
 
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
 from build_rules_rag import build_bm25_index
 
 CHROMA_DIR = "data/chroma_db"
@@ -40,7 +44,11 @@ def test_bm25(bm25, final_splits, query):
 
     results = [final_splits[i] for i in top_k_indices]
 
-    return results
+    for i, doc in enumerate(results):
+        print(f"\n[Result {i+1}]")
+        print(f"Score: {scores[top_k_indices[i]]}")
+        print(f"Headers: {doc.metadata}")
+        print(f"Content snippet: {doc.page_content[:200]}...\n")
 
 def retrieve_with_rerank(query, candidate_k=20, final_k=5):
     print(f"\n--- Testing Two Stage Retrieval with Reranker: '{query}' ---")
@@ -56,7 +64,7 @@ def retrieve_with_rerank(query, candidate_k=20, final_k=5):
         reverse=True
     )
 
-    return [
+    results = [
         {
             "doc": doc,
             "text": doc.page_content,
@@ -65,6 +73,12 @@ def retrieve_with_rerank(query, candidate_k=20, final_k=5):
         }
         for doc, score in reranked[:final_k]
     ]
+
+    for i, r in enumerate(results):
+        print(f"\n[Result {i+1}]")
+        print(f"Rerank Score: {r['rerank_score']}")
+        print(f"Headers: {r['metadata']}")
+        print(f"Content snippet: {r['text'][:200]}...\n")
 
 if __name__ == "__main__":
     # Cosine Sim
