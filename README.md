@@ -22,6 +22,8 @@ We use this environment variable to disable ChromaDB's built-in usage tracking.
 If you just cloned this repo, follow these steps to get the system running:
 * Setup Conda: `conda env create -f environment.yaml` followed by `conda activate ragnarok`
 * Initialize Database: Run `python scripts/build_rules_rag.py` to build your local ChromaDB vector store from the SRD.
+  - The script automatically uses `data/5esrd.md` (already included in the repo).
+  - No internet connection or HuggingFace token required for this step.
 
 #### Running the Application
 

@@ -1,12 +1,15 @@
 import os
+import sys
+import shutil
 import requests
-from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import MarkdownHeaderTextSplitter, RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
 from pathlib import Path
-from config import Config
 import torch
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from config import Config
 
 BASE_DIR   = Path(__file__).resolve().parent.parent
 DATA_DIR   = Config.DATA_DIR
@@ -40,6 +43,13 @@ def download_srd() -> Path:
 
 
 def build_vector_store(srd_path: Path):
+    # Always wipe the existing DB before rebuilding to avoid SQLite format
+    # mismatches when switching between platforms (Windows ↔ WSL2) or
+    # ChromaDB versions.
+    if CHROMA_DIR.exists():
+        print(f"Removing stale vector store at {CHROMA_DIR}...")
+        shutil.rmtree(CHROMA_DIR)
+
     headers_to_split_on = [("#", "Header 1"), ("##", "Header 2"), ("###", "Header 3")]
     markdown_splitter   = MarkdownHeaderTextSplitter(headers_to_split_on=headers_to_split_on)
 

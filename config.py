@@ -10,7 +10,7 @@ warnings.filterwarnings("ignore")
 class Config:
     # --- API Keys ---
     GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-    HF_TOKEN     = os.getenv("HF_TOKEN")
+    HF_TOKEN     = os.getenv("HF_TOKEN", None)  # optional — only needed if downloading FIREBALL from HuggingFace
 
     # --- Models ---
     LLM_MODELS = {

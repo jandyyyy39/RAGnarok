@@ -2,11 +2,15 @@ import argparse
 import gc
 import json
 import itertools
+import sys
 from pathlib import Path
 
-DATA_DIR    = Path(__file__).resolve().parent.parent / "data"
-TRAIN_FILE  = DATA_DIR / "fireball_train.jsonl"
-EVAL_FILE   = DATA_DIR / "fireball_eval.jsonl"
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from config import Config
+
+DATA_DIR     = Config.DATA_DIR
+TRAIN_FILE   = Config.TRAIN_FILE
+EVAL_FILE    = Config.EVAL_FILE
 RESULTS_FILE = DATA_DIR / "hparam_results.json"
 
 TRAIN_SUBSET = 300
