@@ -5,34 +5,42 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Silence warnings 
 warnings.filterwarnings("ignore")
 
 class Config:
     # --- API Keys ---
     GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+    HF_TOKEN     = os.getenv("HF_TOKEN")
 
-    # --- Models & Parameters ---
-    LLM_MODEL = {
-        'GROQ': "llama-3.3-70b-versatile",
-        'LOCAL': "mistral-small3.2"
+    # --- Models ---
+    LLM_MODELS = {
+        "default": "llama-3.3-70b-versatile",
+        "fast":    "llama-3.1-8b-instant",
+        "local":   "ragnarok-dm",
     }
+    LLM_MODEL = LLM_MODELS["default"]
 
-    EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
+    # --- Inference ---
+    OLLAMA_BASE_URL = "http://localhost:11434/v1"
 
-    DM_TEMPERATURE = 0.7
+    # --- Embedding & Generation Parameters ---
+    EMBEDDING_MODEL     = "all-MiniLM-L6-v2"
+    DM_TEMPERATURE      = 0.7
     ARBITER_TEMPERATURE = 0.1
 
     # --- Cross-Platform Paths ---
-    BASE_DIR = Path(__file__).resolve().parent
-    DATA_DIR = BASE_DIR / "data"
+    BASE_DIR   = Path(__file__).resolve().parent
+    DATA_DIR   = BASE_DIR / "data"
     CHROMA_DIR = DATA_DIR / "chroma_db"
 
-    # Specific File Paths
-    NPC_DB_PATH = DATA_DIR / "npc_profiles.json"
-    STATE_FILE  = DATA_DIR / "world_state.json"
-    SRD_FILE    = DATA_DIR / "srd_rules.md"
+    NPC_DB_PATH  = DATA_DIR / "npc_profiles.json"
+    STATE_FILE   = DATA_DIR / "world_state.json"
+    SRD_FILE     = DATA_DIR / "srd_rules.md"
+    ESRD_FILE    = DATA_DIR / "5esrd.md"
 
-    # Ensure data directory exists
+    # FIREBALL fine-tuning data
+    FIREBALL_DIR   = DATA_DIR / "fireball"
+    TRAIN_FILE     = DATA_DIR / "fireball_train.jsonl"
+    EVAL_FILE      = DATA_DIR / "fireball_eval.jsonl"
+
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    

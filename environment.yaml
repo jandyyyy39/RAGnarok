@@ -1,10 +1,42 @@
 name: ragnarok
 channels:
+  - pytorch
+  - nvidia
   - conda-forge
   - defaults
 dependencies:
-  - python=3.11
+  - python=3.10
   - pip
   - jupyterlab
+  - pytorch::pytorch
+  - pytorch::torchvision
+  - pytorch::torchaudio
+  - pytorch::pytorch-cuda=12.1
   - pip:
-      - -r requirements.txt
+      # Pinned to fix the FIREBALL custom script security block
+      - datasets==2.19.2 
+      
+      # Core ML & Fine-Tuning Stack
+      - transformers==4.41.2
+      - peft==0.11.1
+      - trl==0.9.4
+      - accelerate==0.31.0
+      - bitsandbytes==0.43.1
+      
+      # Multi-Agent & RAG Stack
+      - langchain==0.2.6
+      - langchain-community==0.2.6
+      - langchain-chroma==0.1.1
+      - langchain-huggingface==0.0.3
+      - chromadb==0.5.3
+      - sentence-transformers==3.0.1
+      
+      # APIs & Utilities  
+      - groq==0.9.0
+      - httpx==0.27.2
+      - python-dotenv==1.0.1
+      
+      # Serving 
+      - flask==3.0.3
+      - flask-cors==4.0.1
+      - vllm==0.4.3

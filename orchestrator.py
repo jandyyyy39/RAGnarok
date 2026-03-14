@@ -1,220 +1,224 @@
+import argparse
+import time
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+
 from config import Config
 from agents.safety import SafetyAgent
 from agents.memory import MemoryAgent
 from agents.rules_arbiter import RulesArbiter
 from agents.dungeon_master import DMAgent
 from agents.npc_consistency import NPCConsistencyAgent
-import os
-import json
-from datetime import datetime
-import torch
-import argparse
-from groq import Groq
-from openai import OpenAI
+from agents.input_classifier import InputClassifier
+
+
+try:
+    import asyncio
+    import edge_tts
+    TTS_AVAILABLE = True
+except ImportError:
+    TTS_AVAILABLE = False
+
+
+async def _speak_async(text: str, voice: str = "en-US-GuyNeural"):
+    communicate = edge_tts.Communicate(text, voice)
+    await communicate.save("dm_output.mp3")
+    import subprocess, sys
+    if sys.platform == "win32":
+        subprocess.Popen(["start", "dm_output.mp3"], shell=True)
+
+
+def speak(text: str):
+    if TTS_AVAILABLE:
+        asyncio.run(_speak_async(text))
+    else:
+        print("[TTS] edge-tts not installed. Run: pip install edge-tts")
+
+
+def transcribe_audio(audio_file_path: str) -> str:
+    from groq import Groq
+    client = Groq(api_key=Config.GROQ_API_KEY)
+    with open(audio_file_path, "rb") as f:
+        transcription = client.audio.transcriptions.create(
+            file=f,
+            model="whisper-large-v3",
+            language="en",
+        )
+    return transcription.text
+
 
 class RAGnarokOrchestrator:
-    def __init__(self, client, model_profile: str):
-        print(f"Initializing RAGnarok Multi-Agent System with [{model_profile}] settings...")
-        self.safety = SafetyAgent()
-        self.memory = MemoryAgent()
-        self.arbiter = RulesArbiter(client=client, model_profile=model_profile)
-        self.dm = DMAgent(client=client, model_profile=model_profile)
-        self.npc_agent = NPCConsistencyAgent(client=client, model_profile=model_profile)
-        
-        # --- SESSION GENERATOR ---
-        os.makedirs("data/history", exist_ok=True) 
-        
-        session_id = datetime.now().strftime("%Y%m%d_%H%M%S")
-        self.log_file = f"data/history/session_{session_id}.json" 
-        
-        with open(self.log_file, "w", encoding="utf-8") as f:
-            json.dump([], f)
-            
-        print(f"Session telemetry initialized: {self.log_file}")
+    def __init__(
+        self,
+        use_local:     bool = False,
+        use_rag:       bool = True,
+        use_memory:    bool = True,
+        use_npc:       bool = True,
+        use_voice:     bool = False,
+        smart_routing: bool = True,
+    ):
+        self.use_rag       = use_rag
+        self.use_memory    = use_memory
+        self.use_npc       = use_npc
+        self.use_voice     = use_voice
+        self.smart_routing = smart_routing
+
+        print("Initializing RAGnarok Multi-Agent System...")
+        print(f"  Backend  : {'Ollama (local)' if use_local else 'Groq API'}")
+        print(f"  RAG      : {'ON' if use_rag else 'OFF (ablation)'}")
+        print(f"  Memory   : {'ON' if use_memory else 'OFF (ablation)'}")
+        print(f"  NPC Pass : {'ON' if use_npc else 'OFF (ablation)'}")
+        print(f"  Voice TTS: {'ON' if use_voice else 'OFF'}")
+
+        self.safety     = SafetyAgent()
+        self.classifier = InputClassifier()
+        self.memory     = MemoryAgent()          if use_memory else None
+        self.arbiter    = RulesArbiter()         if use_rag    else None
+        self.dm         = DMAgent(use_local=use_local)
+        self.npc_agent  = NPCConsistencyAgent()  if use_npc    else None
+
         print("All agents online. Ready to play.\n")
 
-    def process_turn(self, player_input: str, args):
-        turn_log = []
-        def trace(message: str):
-            print(message)
-            turn_log.append(message)
-
-        trace("\n" + "="*50)
-
-        # --- INTERCEPTOR ---
-        is_system_roll = player_input.startswith("[SYSTEM: ROLL_RESOLUTION")
-
-        if is_system_roll:
-            trace("[Orchestrator] 🎲 Dice Roll detected. Bypassing Arbiter.")
-            world_state = self.memory.format_for_dm()
-            
-            # --- Look at the last REAL player action in memory ---
-            recent_history = self.memory.get_current_state()["recent_events"]
-            # Get the last event that starts with "Player:"
-            last_action = "unknown action"
-            for event in reversed(recent_history):
-                if event.startswith("Player:"):
-                    last_action = event.split("Player: ")[1].split(" | ")[0]
-                    break
-
-            # Force the DM to tie the roll result to that specific action
-            ruling = f"""
-            SYSTEM OVERRIDE: 
-            The player was trying to: "{last_action}"
-            The roll result is: {player_input}
-            
-            NARRATION RULE: You MUST narrate the outcome of "{last_action}". 
-            - If SUCCESS: Describe how the player achieves their goal, what they learn, or how the environment reacts favorably.
-            - If FAILURE: Describe the negative consequences, the NPC's refusal, or the mechanical setback.
-            Do NOT mention the underlying math in the narrative.
-            """
-        else: 
-            # --- NORMAL TURN ---
-            # Safety Check
-            if not self.safety.check(player_input):
-                return {"response": "Safety Agent Intercept: That action violates the table's safety tools.", "pending_action": None}
-            
-            # Retrieve world state
-            if args.no_memory:
-                trace("[Orchestrator] --no-memory: Skipping world state injection.")
-                world_state = "No world state provided by the Memory agent."
-            else:
-                trace("[Memory Agent] Fetching recap...")
-                world_state = self.memory.format_for_dm()
-
-            # Rules arbiter assessment
-            if args.no_rag:
-                trace("[Orchestrator] --no-rag: Skipping RAG lookup.")
-                ruling = "The Rules Arbiter was not consulted."
-            else:
-                trace("[Rules Arbiter] Consulting the SRD...")
-                ruling = self.arbiter.get_ruling(player_input, world_state)
-                trace(f"[Rules Arbiter] Ruling: {ruling}")
-        
-        # DM generates response
-        trace("[DM Agent] Weaving the narrative...")
-        dm_result = self.dm.generate_response(player_input, world_state, ruling)
-
-        # --- FORK ---
-        if dm_result["type"] == "tool_call":
-            trace(f"[DM Agent] Halting narrative. Requesting {dm_result['action']['skill']} check.")
-            result = {
-                "response": dm_result["narrative"],
-                "pending_action": dm_result["action"]
-            }
-            self._save_history({
-                "timestamp": datetime.now().isoformat(),
-                "user_input": player_input,
-                "backend_log": "\n".join(turn_log),
-                "final_output": result
-            })
-            return result
-
-        if args.no_npc_const:
-            trace("[Orchestrator] --no-npc-const: Skipping NPC consistency check.")
-            final_output = dm_result["narrative"]
-        else:
-            trace("[NPC Agent] Checking character sheets...")
-            final_output = self.npc_agent.refine_dialogue(dm_result["narrative"])
-        
-        # Memory update
-        current_events = self.memory.get_current_state()["recent_events"]
-        
-        event_text = player_input if not is_system_roll else f"The player rolled dice. {player_input}"
-        new_event = f"Action: {event_text} | Outcome: {final_output[:100]}..." 
-        
-        self.memory.update_state({"recent_events": current_events + [new_event]})
-
-        trace("="*50 + "\n")
+    def process_turn(self, player_input: str) -> dict:
+        start  = time.time()
         result = {
-            "response": final_output,
-            "pending_action": None
+            "input":       player_input,
+            "input_type":  None,
+            "safety_pass": None,
+            "ruling":      None,
+            "dm_raw":      None,
+            "response":    None,
+            "latency_ms":  None,
+            "skipped":     [],
         }
 
-        self._save_history({
-            "timestamp": datetime.now().isoformat(),
-            "user_input": player_input,
-            "backend_log": "\n".join(turn_log),
-            "final_output": result
-        })
+        print("\n" + "=" * 50)
 
+        input_type = self.classifier.classify(player_input)
+        result["input_type"] = input_type
+        print(f"[Classifier] Input type: {input_type}")
+
+        if not self.safety.check(player_input):
+            result["safety_pass"] = False
+            result["response"]    = "Safety Agent Intercept: That action violates the table's safety tools."
+            result["latency_ms"]  = int((time.time() - start) * 1000)
+            return result
+        result["safety_pass"] = True
+
+        world_state = ""
+        if self.memory:
+            print("[Memory Agent] Fetching recap...")
+            world_state = self.memory.format_for_dm()
+        else:
+            result["skipped"].append("memory")
+
+        ruling             = "No mechanical ruling — DM has full discretion."
+        rag_skipped_reason = None
+        if not self.arbiter:
+            rag_skipped_reason = "ablation flag"
+        elif self.smart_routing and self.classifier.should_skip_rag(input_type):
+            rag_skipped_reason = f"smart routing ({input_type})"
+
+        if rag_skipped_reason:
+            print(f"[Rules Arbiter] Skipped ({rag_skipped_reason})")
+            result["skipped"].append("rag")
+        else:
+            print("[Rules Arbiter] Consulting the SRD...")
+            ruling = self.arbiter.get_ruling(player_input, world_state)
+            print(f"  -> Ruling: {ruling[:100]}...")
+        result["ruling"] = ruling
+
+        print("[DM Agent] Weaving the narrative...")
+        dm_response    = self.dm.generate_response(player_input, world_state, ruling)
+        result["dm_raw"] = dm_response
+
+        npc_skipped_reason = None
+        if not self.npc_agent:
+            npc_skipped_reason = "ablation flag"
+        elif self.smart_routing and self.classifier.should_skip_npc(input_type):
+            npc_skipped_reason = f"smart routing ({input_type})"
+
+        if npc_skipped_reason:
+            print(f"[NPC Agent] Skipped ({npc_skipped_reason})")
+            result["skipped"].append("npc")
+            final_output = dm_response
+        else:
+            print("[NPC Agent] Checking character sheets...")
+            final_output = self.npc_agent.refine_dialogue(dm_response)
+
+        result["response"] = final_output
+
+        if self.memory:
+            current_events = self.memory.get_current_state()["recent_events"]
+            self.memory.update_state({
+                "recent_events": current_events + [
+                    f"Player: {player_input} | Outcome: {final_output[:100]}..."
+                ]
+            })
+
+        if self.use_voice:
+            speak(final_output)
+
+        result["latency_ms"] = int((time.time() - start) * 1000)
+        print(f"[Orchestrator] Turn complete in {result['latency_ms']}ms")
+        print("=" * 50 + "\n")
         return result
-    
-    def _save_history(self, turn_data: dict):
-        """Appends a structured turn record to the JSON flight recorder."""
-        with open(self.log_file, "r", encoding="utf-8") as f:
-            history = json.load(f)
 
-        # Append new turn
-        history.append(turn_data)
-        
-        # Save it back
-        with open(self.log_file, "w", encoding="utf-8") as f:
-            json.dump(history, f, indent=4)
 
-app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "*"}}) # Allow all origins for development
-game = None # Will be initialized in main
+app  = Flask(__name__)
+CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}})
+game: RAGnarokOrchestrator | None = None
 
-@app.route('/api/game/state', methods=['GET'])
-def get_game_state():
-    if not game:
-        return jsonify({"error": "Game not initialized"}), 500
-    return jsonify(game.memory.get_current_state())
 
 @app.route('/api/game', methods=['POST'])
 def handle_game_turn():
-    if not game:
-        return jsonify({"error": "Game not initialized"}), 500
-    data = request.json
-    player_input = data.get('input')
+    data         = request.json
+    player_input = data.get('input', '').strip()
     if not player_input:
         return jsonify({'error': 'No input provided'}), 400
+    turn       = game.process_turn(player_input)
+    game_state = game.memory.get_current_state() if game.memory else {}
+    return jsonify({'response': turn["response"], 'game_state': game_state, 'meta': turn})
 
-    args = app.config['args']
-    turn_result = game.process_turn(player_input, args)
-    
-    return jsonify({
-        'response': turn_result["response"],
-        'pending_action': turn_result["pending_action"],
-        'game_state': game.memory.get_current_state()
-    })
+
+@app.route('/api/transcribe', methods=['POST'])
+def handle_transcribe():
+    if 'audio' not in request.files:
+        return jsonify({'error': 'No audio file provided'}), 400
+    audio    = request.files['audio']
+    tmp_path = "tmp_audio.wav"
+    audio.save(tmp_path)
+    try:
+        text = transcribe_audio(tmp_path)
+        return jsonify({'text': text})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 
 if __name__ == "__main__":
-    # Check for GPU
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-    print(f"SYSTEM: Activating on **{device.upper()}**.")
-
-    parser = argparse.ArgumentParser(description="RAGnarok Orchestrator")
-    parser.add_argument('--local', action='store_true', help="Use a local LLM model instead of Groq.")
-    parser.add_argument('--no-rag', action='store_true', help="Skip Rules Arbiter entirely.")
-    parser.add_argument('--no-memory', action='store_true', help="Don't inject world state.")
-    parser.add_argument('--no-npc-const', action='store_true', help="Skip NPC Consistency step.")
+    parser = argparse.ArgumentParser(description="RAGnarok — AI Dungeon Master")
+    parser.add_argument("--local",            action="store_true")
+    parser.add_argument("--no-rag",           action="store_true")
+    parser.add_argument("--no-memory",        action="store_true")
+    parser.add_argument("--no-npc-const",     action="store_true")
+    parser.add_argument("--voice",            action="store_true")
+    parser.add_argument("--no-smart-routing", action="store_true")
     args = parser.parse_args()
-    app.config['args'] = args
 
-    if args.local:
-        print("Using local model...")
-        client = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
-        model_profile = "LOCAL"
-    else:
-        print("Using Groq API...")
-        client = Groq(api_key=Config.GROQ_API_KEY)
-        model_profile = "GROQ"
+    game = RAGnarokOrchestrator(
+        use_local     = args.local,
+        use_rag       = not args.no_rag,
+        use_memory    = not args.no_memory,
+        use_npc       = not args.no_npc_const,
+        use_voice     = args.voice,
+        smart_routing = not args.no_smart_routing,
+    )
 
-    game = RAGnarokOrchestrator(client=client, model_profile=model_profile)
-    
-    # Initialize the world with NPCs
-    game.memory.update_state({
-        "current_location": "The Black Boar Tavern",
-        "active_npcs": [
-            "Thrain Blackbeard (Human Barbarian)", 
-            "Piper Redhand (Halfling Bard)",
-            "Arin the Bold (Human Rogue)"
-        ],
-        "recent_events": ["The party just walked into the loud, sea-shanty-filled Black Boar Tavern. Thrain is yelling for stronger ale, while Piper tunes her lute in the corner. What would you like to do?"]
-    })
+    if game.memory:
+        game.memory.update_state({
+            "current_location": "The Yawning Portal Tavern",
+            "active_npcs":      ["Durnan the Barkeep"],
+            "recent_events":    ["The party just walked into the crowded tavern."],
+        })
+
     app.run(port=5000, debug=True, use_reloader=False)
