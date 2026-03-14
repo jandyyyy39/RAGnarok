@@ -1,22 +1,24 @@
 import os
 import requests
-from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import MarkdownHeaderTextSplitter, RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from pathlib import Path
+
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
 from config import Config
 import torch
-from sentence_transformers import SentenceTransformer, CrossEncoder
 
 # BM25 specific
 from rank_bm25 import BM25Okapi
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = BASE_DIR / "data"
-CHROMA_DIR = DATA_DIR / "chroma_db"
+CHROMA_DIR = str(DATA_DIR / "chroma_db")
 SRD_FILE = DATA_DIR / "srd_rules.md"
-SRD_URL = "https://raw.githubusercontent.com/oznogon/cc-srd5/main/cc-srd5.md"
+SRD_URL = "https://raw.githubusercontent.com/oznogon/cc-srd5/main/cc-srd5.md" # doesn't work
 
 def download_srd():
     os.makedirs(DATA_DIR, exist_ok=True)
@@ -81,5 +83,5 @@ def build_bm25_index():
     return bm25, final_splits
 
 if __name__ == "__main__":
-    download_srd()
+    # download_srd()
     build_vector_store()
