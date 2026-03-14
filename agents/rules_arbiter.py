@@ -1,36 +1,20 @@
-<<<<<<< Updated upstream
-import os
-from dotenv import load_dotenv
-=======
->>>>>>> Stashed changes
 from groq import Groq
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
+from config import Config
 
 
 class RulesArbiter:
-<<<<<<< Updated upstream
-    def __init__(self, db_path="chroma_db"):
-        self.client = Groq(api_key=os.getenv("GROQ_API_KEY"))
-        self.embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-        self.vectorstore = Chroma(persist_directory=db_path, embedding_function=self.embeddings)
-        self.model = "llama-3.3-70b-versatile"
-=======
     def __init__(self):
-        self.client     = Groq(api_key=Config.GROQ_API_KEY)
-        self.model      = Config.LLM_MODEL
-        self.embeddings = HuggingFaceEmbeddings(model_name=Config.EMBEDDING_MODEL)
+        self.client      = Groq(api_key=Config.GROQ_API_KEY)
+        self.model       = Config.LLM_MODEL
+        self.embeddings  = HuggingFaceEmbeddings(model_name=Config.EMBEDDING_MODEL)
         self.vectorstore = Chroma(
-            persist_directory=str(Config.CHROMA_DIR),
-            embedding_function=self.embeddings,
+            persist_directory  = str(Config.CHROMA_DIR),
+            embedding_function = self.embeddings,
         )
->>>>>>> Stashed changes
 
     def get_ruling(self, player_action: str, world_context: str) -> str:
-        """
-        Retrieves relevant SRD rules and returns a concise mechanical ruling
-        (ability check type, DC, roll required) — no narrative output.
-        """
         relevant_rules = self.vectorstore.similarity_search(player_action, k=3)
         context_text   = "\n".join([doc.page_content for doc in relevant_rules])
 
@@ -56,11 +40,7 @@ class RulesArbiter:
                 {"role": "system", "content": "You are a precise D&D 5e rules engine."},
                 {"role": "user",   "content": prompt}
             ],
-            model=self.model,
-<<<<<<< Updated upstream
-            temperature=0.1, # Low temperature for consistency
-=======
-            temperature=Config.ARBITER_TEMPERATURE,
->>>>>>> Stashed changes
+            model       = self.model,
+            temperature = Config.ARBITER_TEMPERATURE,
         )
         return response.choices[0].message.content

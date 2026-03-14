@@ -1,16 +1,3 @@
-<<<<<<< Updated upstream
-class NPCConsistencyAgent:
-    def __init__(self, npc_db_path="data/npc_profiles.json"):
-        self.npc_db_path = npc_db_path
-        # Load the JSON here to reference their actual quirks
-
-    def refine_dialogue(self, dm_output: str) -> str:
-        """
-        Intercepts DM output and ensures NPC dialogue matches their JSON profile.
-        (Placeholder for RAG/JSON lookup logic)
-        """
-        return dm_output
-=======
 import json
 import os
 from groq import Groq
@@ -19,11 +6,10 @@ from config import Config
 
 class NPCConsistencyAgent:
     def __init__(self, client=None, npc_db_path=None):
-        # Accept an injected client (e.g. Ollama-compatible) or default to Groq
-        self.client = client or Groq(api_key=Config.GROQ_API_KEY)
-        self.model  = Config.LLM_MODEL
+        self.client      = client or Groq(api_key=Config.GROQ_API_KEY)
+        self.model       = Config.LLM_MODEL
         self.npc_db_path = npc_db_path or str(Config.NPC_DB_PATH)
-        self.npcs = self._load_npcs()
+        self.npcs        = self._load_npcs()
 
     def _load_npcs(self):
         if not os.path.exists(self.npc_db_path):
@@ -38,10 +24,6 @@ class NPCConsistencyAgent:
                 return {}
 
     def refine_dialogue(self, dm_output: str) -> str:
-        """
-        Intercepts DM output, detects active NPCs, and rewrites their
-        dialogue to match their defined personality profiles.
-        """
         active_npcs = [
             profile for name, profile in self.npcs.items()
             if name in dm_output or name.split()[0] in dm_output
@@ -78,11 +60,10 @@ class NPCConsistencyAgent:
                     {"role": "system", "content": "You are a precise narrative editor. Output only the final revised text."},
                     {"role": "user",   "content": prompt}
                 ],
-                model=self.model,
-                temperature=0.6,
+                model       = self.model,
+                temperature = 0.6,
             )
             return response.choices[0].message.content.strip()
         except Exception as e:
             print(f"[NPC Agent] Rewrite failed: {e}. Falling back to original DM output.")
             return dm_output
->>>>>>> Stashed changes
