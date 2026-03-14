@@ -7,6 +7,10 @@ from langchain_community.vectorstores import Chroma
 from pathlib import Path
 from config import Config
 import torch
+from sentence_transformers import SentenceTransformer, CrossEncoder
+
+# BM25 specific
+from rank_bm25 import BM25Okapi
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
@@ -55,6 +59,26 @@ def build_vector_store():
         persist_directory=CHROMA_DIR
     )
     print("Success! The Rules Arbiter now has a working brain.")
+
+def build_bm25_index():
+    # Split by Markdown Headers
+    headers_to_split_on = [("#", "Header 1"), ("##", "Header 2"), ("###", "Header 3")]
+    markdown_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=headers_to_split_on)
+
+    with open(SRD_FILE, "r", encoding="utf-8") as f:
+        md_text = f.read()
+
+    print("Chunking rules logically...")
+    md_header_splits = markdown_splitter.split_text(md_text)
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
+    final_splits = text_splitter.split_documents(md_header_splits)
+
+    print(f"Building BM25 index with {len(final_splits)} chunks...")
+    corpus = [doc.page_content for doc in final_splits]
+    tokenized_corpus = [doc.split() for doc in corpus]
+    bm25 = BM25Okapi(tokenized_corpus)
+
+    return bm25, final_splits
 
 if __name__ == "__main__":
     download_srd()
