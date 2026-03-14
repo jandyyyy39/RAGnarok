@@ -1,66 +1,63 @@
-<<<<<<< Updated upstream
 import os
+import torch
 from dotenv import load_dotenv
-=======
->>>>>>> Stashed changes
-from groq import Groq
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
+from config import Config
 
+load_dotenv()
 
 class RulesArbiter:
-<<<<<<< Updated upstream
-    def __init__(self, db_path="chroma_db"):
-        self.client = Groq(api_key=os.getenv("GROQ_API_KEY"))
-        self.embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-        self.vectorstore = Chroma(persist_directory=db_path, embedding_function=self.embeddings)
-        self.model = "llama-3.3-70b-versatile"
-=======
-    def __init__(self):
-        self.client     = Groq(api_key=Config.GROQ_API_KEY)
-        self.model      = Config.LLM_MODEL
-        self.embeddings = HuggingFaceEmbeddings(model_name=Config.EMBEDDING_MODEL)
-        self.vectorstore = Chroma(
-            persist_directory=str(Config.CHROMA_DIR),
-            embedding_function=self.embeddings,
+    def __init__(self, client, model_profile: str, db_path="chroma_db"):
+        self.client = client
+        self.model = Config.LLM_MODEL[model_profile]
+        
+        # --- GPU-aware Embeddings ---
+        device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        print(f"[Rules Arbiter] Using {device.upper()} for sentence embeddings.")
+        
+        self.embeddings = HuggingFaceEmbeddings(
+            model_name=Config.EMBEDDING_MODEL,
+            model_kwargs={'device': device}
         )
->>>>>>> Stashed changes
+        self.vectorstore = Chroma(persist_directory=db_path, embedding_function=self.embeddings)
 
-    def get_ruling(self, player_action: str, world_context: str) -> str:
+    def get_ruling(self, player_action: str, world_context: str):
         """
-        Retrieves relevant SRD rules and returns a concise mechanical ruling
-        (ability check type, DC, roll required) — no narrative output.
+        Determines if an action is valid and what rolls are required.
         """
+        # Retrieve the most relevant rules from the RAG database
         relevant_rules = self.vectorstore.similarity_search(player_action, k=3)
-        context_text   = "\n".join([doc.page_content for doc in relevant_rules])
+        context_text = "\n".join([doc.page_content for doc in relevant_rules])
 
+        # Construct the prompt for the Arbiter
         prompt = f"""
-        SYSTEM: You are the Rules Arbiter for a D&D 5e game.
+        SYSTEM: You are the Rules Arbiter for a D&D 5e game. 
         Your job is to interpret the player's intent based on the official rules.
-
+        
         WORLD CONTEXT: {world_context}
         PLAYER ACTION: "{player_action}"
-
+        
         RELEVANT RULES FROM SRD:
         {context_text}
-
+        
         INSTRUCTIONS:
-        1. Determine if the action is possible.
-        2. If possible, specify the required Ability Check, Saving Throw, or Attack Roll.
-        3. Set a Difficulty Class (DC) based on the world context and rules.
-        4. Be concise. Do not describe the narrative outcome; only provide the mechanical ruling.
+        1. Determine if the immediate action is possible.
+        2. Identify EXACTLY ONE primary Ability Check, Saving Throw, or Attack Roll required to attempt the action.
+        3. Do NOT provide secondary checks, conditional logic, or "social fallout" rolls. Pick the single most important check.
+        4. Set a single Difficulty Class (DC).
+        5. Output strict, concise mechanics only. No conversational text.
         """
 
+        # Get the mechanical decision from the LLM
         response = self.client.chat.completions.create(
             messages=[
                 {"role": "system", "content": "You are a precise D&D 5e rules engine."},
-                {"role": "user",   "content": prompt}
+                {"role": "user", "content": prompt}
             ],
             model=self.model,
-<<<<<<< Updated upstream
             temperature=0.1, # Low temperature for consistency
-=======
-            temperature=Config.ARBITER_TEMPERATURE,
->>>>>>> Stashed changes
+            max_tokens=150,
         )
+
         return response.choices[0].message.content

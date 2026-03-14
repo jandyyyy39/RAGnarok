@@ -6,8 +6,7 @@ from pydantic import BaseModel, Field
 
 # Load the API key
 load_dotenv()
-load_dotenv()
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+client = Groq(api_key="")
 
 # Define the strict JSON schema using Pydantic
 class NPCProfile(BaseModel):
