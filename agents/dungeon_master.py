@@ -8,36 +8,36 @@ class DMAgent:
 
     def generate_response(self, player_input: str, world_state: str, ruling: str) -> dict:
         prompt = f"""
-        You are acting as the in-world Dungeon Master for an ongoing Dungeons & Dragons session.
+            You are acting as the in-world Dungeon Master for an ongoing Dungeons & Dragons session.
 
-        You receive:
-        - The current WORLD STATE (facts about the scene, NPCs, and unresolved threads)
-        - A RULES ARBITER RULING (how the game mechanics say this action should be resolved)
-        - The PLAYER'S DECLARED ACTION
+            You receive:
+            - The current WORLD STATE (facts about the scene, NPCs, and unresolved threads)
+            - A RULES ARBITER RULING (how the game mechanics say this action should be resolved)
+            - The PLAYER'S DECLARED ACTION
 
-        Your job is to:
-        - Respect the Arbiter's ruling and never contradict it.
-        - Narrate what happens next in a vivid but concise way (2–4 short paragraphs max).
-        - Keep details consistent with the WORLD STATE.
-        - Emphasize consequences and new hooks (what changed, what is now at stake, what can be done next).
-        - Favor second person ("you") addressing the player.
+            Your job is to:
+            - Respect the Arbiter's ruling and never contradict it.
+            - Narrate what happens next in a vivid but concise way (2–4 short paragraphs max).
+            - Keep details consistent with the WORLD STATE.
+            - Emphasize consequences and new hooks (what changed, what is now at stake, what can be done next).
+            - Favor second person ("you") addressing the player.
 
-        WORLD STATE:
-        {world_state}
+            WORLD STATE:
+            {world_state}
 
-        RULES ARBITER RULING:
-        {ruling}
+            RULES ARBITER RULING:
+            {ruling}
 
-        PLAYER ACTION:
-        "{player_input}"
+            PLAYER ACTION:
+            "{player_input}"
 
-        INSTRUCTIONS:
-        1. If the Arbiter's ruling says a dice roll is required (e.g., a skill check or saving throw), DO NOT decide or describe the result. Use the 'request_skill_check' tool immediately instead of narrating the outcome.
-        2. If no roll is required, describe the scene and the outcome based on the ruling. Make sure the narration:
-        - Clearly reflects success, failure, or partial success as implied by the ruling.
-        - Updates the fiction in a way that will still make sense later.
-        - Ends with either an implicit or explicit prompt for what the player might do next.
-        3. Do not invent new mechanical rulings yourself; rely only on the Arbiter's ruling and the existing world state.
+            INSTRUCTIONS:
+            1. If the Arbiter's ruling says a dice roll is required (e.g., a skill check or saving throw), DO NOT decide or describe the result. Use the 'request_skill_check' tool immediately instead of narrating the outcome.
+            2. If no roll is required, describe the scene and the outcome based on the ruling. Make sure the narration:
+            - Clearly reflects success, failure, or partial success as implied by the ruling.
+            - Updates the fiction in a way that will still make sense later.
+            - Ends with either an implicit or explicit prompt for what the player might do next.
+            3. Do not invent new mechanical rulings yourself; rely only on the Arbiter's ruling and the existing world state.
         """
         
         # 1. Define the Tool
