@@ -9,6 +9,7 @@ from agents.npc_consistency import NPCConsistencyAgent
 import os
 import json
 from datetime import datetime
+import time
 import torch
 import argparse
 from groq import Groq
@@ -25,17 +26,18 @@ class RAGnarokOrchestrator:
         
         # --- SESSION GENERATOR ---
         os.makedirs("data/history", exist_ok=True) 
+        self.log_file = "data/history/baseline_architecture_log.json"
         
-        session_id = datetime.now().strftime("%Y%m%d_%H%M%S")
-        self.log_file = f"data/history/session_{session_id}.json" 
-        
-        with open(self.log_file, "w", encoding="utf-8") as f:
-            json.dump([], f)
-            
+        # Ensure log file exists without overwriting previous test runs
+        if not os.path.exists(self.log_file):
+            with open(self.log_file, "w", encoding="utf-8") as f:
+                json.dump([], f)
+                
         print(f"Session telemetry initialized: {self.log_file}")
         print("All agents online. Ready to play.\n")
 
     def process_turn(self, player_input: str, args):
+        start_time = time.time()
         turn_log = []
         def trace(message: str):
             print(message)
@@ -104,10 +106,15 @@ class RAGnarokOrchestrator:
                 "response": dm_result["narrative"],
                 "pending_action": dm_result["action"]
             }
+            latency_ms = (time.time() - start_time) * 1000
             self._save_history({
-                "timestamp": datetime.now().isoformat(),
-                "user_input": player_input,
-                "backend_log": "\n".join(turn_log),
+                "timestamp_utc": datetime.utcnow().isoformat() + "Z",
+                "architecture": "baseline",
+                "latency_ms": round(latency_ms),
+                "total_tokens": 0,
+                "route_taken": "N/A - Linear Pipeline",
+                "critic_rejections": 0,
+                "player_intent": player_input,
                 "final_output": result
             })
             return result
@@ -133,10 +140,15 @@ class RAGnarokOrchestrator:
             "pending_action": None
         }
 
+        latency_ms = (time.time() - start_time) * 1000
         self._save_history({
-            "timestamp": datetime.now().isoformat(),
-            "user_input": player_input,
-            "backend_log": "\n".join(turn_log),
+            "timestamp_utc": datetime.utcnow().isoformat() + "Z",
+            "architecture": "baseline",
+            "latency_ms": round(latency_ms),
+            "total_tokens": 0,
+            "route_taken": "N/A - Linear Pipeline",
+            "critic_rejections": 0,
+            "player_intent": player_input,
             "final_output": result
         })
 
@@ -212,9 +224,9 @@ if __name__ == "__main__":
         "current_location": "The Black Boar Tavern",
         "active_npcs": [
             "Thrain Blackbeard (Human Barbarian)", 
-            "Piper Redhand (Halfling Bard)",
+            "Elara Moonwhisper (Half-Elf Bard)",
             "Arin the Bold (Human Rogue)"
         ],
-        "recent_events": ["The party just walked into the loud, sea-shanty-filled Black Boar Tavern. Thrain is yelling for stronger ale, while Piper tunes her lute in the corner. What would you like to do?"]
+        "recent_events": ["The party just walked into the loud, sea-shanty-filled Black Boar Tavern. Thrain is yelling for stronger ale, while Elara sings a haunting yet beautiful melody in the corner. What would you like to do?"]
     })
     app.run(port=5000, debug=True, use_reloader=False)
