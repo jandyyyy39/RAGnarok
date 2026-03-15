@@ -1,33 +1,27 @@
 import os
-import requests
+import sys
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import MarkdownHeaderTextSplitter, RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from pathlib import Path
-from config import Config
 import torch
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 CHROMA_DIR = DATA_DIR / "chroma_db"
-SRD_FILE = DATA_DIR / "srd_rules.md"
-SRD_URL = "https://raw.githubusercontent.com/oznogon/cc-srd5/main/cc-srd5.md"
+SRD_FILE = DATA_DIR / "5esrd.md"
 
-def download_srd():
-    os.makedirs(DATA_DIR, exist_ok=True)
-    print("Downloading D&D 5e Markdown Rules (CC Version)...")
-    try:
-        response = requests.get(SRD_URL, timeout=10)
-        response.raise_for_status() # This stops the script if it gets a 404
-        with open(SRD_FILE, "w", encoding="utf-8") as f:
-            f.write(response.text)
-        print("Download complete!")
-    except Exception as e:
-        print(f"FATAL ERROR: Could not download SRD. {e}")
-        exit(1)
+sys.path.append(str(BASE_DIR))
+from config import Config
 
 def build_vector_store():
+    # Check if the file actually exists locally
+    if not os.path.exists(SRD_FILE):
+        print(f"FATAL ERROR: {SRD_FILE} not found!")
+        print("Please download a D&D 5e SRD Markdown file manually and place it in the 'data' folder.")
+        exit(1)
+
     # Split by Markdown headers
     headers_to_split_on = [("#", "Header 1"), ("##", "Header 2"), ("###", "Header 3")]
     markdown_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=headers_to_split_on)
@@ -44,18 +38,20 @@ def build_vector_store():
 
     print(f"Building local database with {len(final_splits)} chunks...")
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    
     embeddings = HuggingFaceEmbeddings(
         model_name=Config.EMBEDDING_MODEL,
         model_kwargs={'device': device}
     )
     
+    # Save to ChromaDB
     vectorstore = Chroma.from_documents(
         documents=final_splits,
         embedding=embeddings,
-        persist_directory=CHROMA_DIR
+        persist_directory=str(CHROMA_DIR) # Cast to string to prevent Pathlib errors
     )
     print("Success! The Rules Arbiter now has a working brain.")
 
 if __name__ == "__main__":
-    download_srd()
+    # Bypassing the volatile internet download step entirely
     build_vector_store()
