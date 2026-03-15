@@ -1,0 +1,137 @@
+{
+  "best": {
+    "rank": 8,
+    "lora_alpha": 8,
+    "learning_rate": 5e-05,
+    "eval_loss": 99.0,
+    "status": "error"
+  },
+  "all": [
+    {
+      "rank": 8,
+      "lora_alpha": 8,
+      "learning_rate": 5e-05,
+      "eval_loss": 99.0,
+      "status": "error"
+    },
+    {
+      "rank": 8,
+      "lora_alpha": 8,
+      "learning_rate": 0.0001,
+      "eval_loss": 99.0,
+      "status": "error"
+    },
+    {
+      "rank": 8,
+      "lora_alpha": 8,
+      "learning_rate": 0.0002,
+      "eval_loss": 99.0,
+      "status": "error"
+    },
+    {
+      "rank": 8,
+      "lora_alpha": 16,
+      "learning_rate": 5e-05,
+      "eval_loss": 99.0,
+      "status": "error"
+    },
+    {
+      "rank": 8,
+      "lora_alpha": 16,
+      "learning_rate": 0.0001,
+      "eval_loss": 99.0,
+      "status": "error"
+    },
+    {
+      "rank": 8,
+      "lora_alpha": 16,
+      "learning_rate": 0.0002,
+      "eval_loss": 99.0,
+      "status": "error"
+    },
+    {
+      "rank": 8,
+      "lora_alpha": 32,
+      "learning_rate": 5e-05,
+      "eval_loss": 99.0,
+      "status": "error"
+    },
+    {
+      "rank": 8,
+      "lora_alpha": 32,
+      "learning_rate": 0.0001,
+      "eval_loss": 99.0,
+      "status": "error"
+    },
+    {
+      "rank": 8,
+      "lora_alpha": 32,
+      "learning_rate": 0.0002,
+      "eval_loss": 99.0,
+      "status": "error"
+    },
+    {
+      "rank": 16,
+      "lora_alpha": 8,
+      "learning_rate": 5e-05,
+      "eval_loss": 99.0,
+      "status": "error"
+    },
+    {
+      "rank": 16,
+      "lora_alpha": 8,
+      "learning_rate": 0.0001,
+      "eval_loss": 99.0,
+      "status": "error"
+    },
+    {
+      "rank": 16,
+      "lora_alpha": 8,
+      "learning_rate": 0.0002,
+      "eval_loss": 99.0,
+      "status": "error"
+    },
+    {
+      "rank": 16,
+      "lora_alpha": 16,
+      "learning_rate": 5e-05,
+      "eval_loss": 99.0,
+      "status": "error"
+    },
+    {
+      "rank": 16,
+      "lora_alpha": 16,
+      "learning_rate": 0.0001,
+      "eval_loss": 99.0,
+      "status": "error"
+    },
+    {
+      "rank": 16,
+      "lora_alpha": 16,
+      "learning_rate": 0.0002,
+      "eval_loss": 99.0,
+      "status": "error"
+    },
+    {
+      "rank": 16,
+      "lora_alpha": 32,
+      "learning_rate": 5e-05,
+      "eval_loss": 99.0,
+      "status": "error"
+    },
+    {
+      "rank": 16,
+      "lora_alpha": 32,
+      "learning_rate": 0.0001,
+      "eval_loss": 99.0,
+      "status": "error"
+    },
+    {
+      "rank": 16,
+      "lora_alpha": 32,
+      "learning_rate": 0.0002,
+      "eval_loss": 99.0,
+      "status": "error"
+    }
+  ]
+}

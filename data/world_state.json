@@ -5,11 +5,11 @@
     ],
     "party_status": "Healthy",
     "recent_events": [
-        "Player: I shoot my crossbow at the bandit on the rooftop. | Outcome: As you raise your crossbow, the warm glow of the Yawning Portal Tavern's fire pit casts a golden lig...",
-        "Player: I dodge behind a pillar to avoid the dragon's fire breath. | Outcome: As you swiftly move to dodge behind a pillar, the warm glow of the Yawning Portal Tavern's fire pit ...",
-        "Player: I tell Durnan I'm looking for information about the Undermountain. | Outcome: As you approach Durnan, the warm glow of the Yawning Portal Tavern's fire pit casts a golden light o...",
-        "Player: I try to persuade the guard to let us through without paying. | Outcome: As you approach the guard, the warm glow of the Yawning Portal Tavern's fire pit casts a golden ligh...",
-        "Player: I intimidate the merchant into giving us a discount. | Outcome: As you fix the merchant with a stern gaze, the warm glow of the Yawning Portal Tavern's fire pit cas..."
+        "Player: \"Fel the Voice speaks to you, no no no no get out!\" | Outcome: As Fel the Voice speaks to you, the warm ambiance of the Yawning Portal Tavern seems to falter, like...",
+        "Player: still here or you staying back? *The room is small, 25 by 15 ft* | Outcome: As you pose the question, \"still here or you staying back?\" the warm glow of the Yawning Portal Tave...",
+        "Player: // Sure, but flat na | Outcome: The warm glow of the Yawning Portal Tavern's lanterns seems to dim slightly, as if the very atmosphe...",
+        "Player: **Looks down at Erevan and swings** | Outcome: As you swing your arm, the warm glow of the Yawning Portal Tavern's lanterns seems to hold its breat...",
+        "Player: *Calder runs forward 30 ft. A red mist rushes towards Zion.* | Outcome: As Calder sprints forward 30 feet, the warm glow of the Yawning Portal Tavern's lanterns seems to ho..."
     ],
     "inventory_changes": []
 }

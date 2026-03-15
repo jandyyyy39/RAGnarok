@@ -1,10 +1,14 @@
 import argparse
 import json
+import sys
 from pathlib import Path
 
-DATA_DIR   = Path(__file__).resolve().parent.parent / "data"
-TRAIN_FILE = DATA_DIR / "fireball_train.jsonl"
-EVAL_FILE  = DATA_DIR / "fireball_eval.jsonl"
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from config import Config
+
+DATA_DIR   = Config.DATA_DIR
+TRAIN_FILE = Config.TRAIN_FILE
+EVAL_FILE  = Config.EVAL_FILE
 OUTPUT_DIR = DATA_DIR / "ragnarok-dm-lora"
 GGUF_DIR   = DATA_DIR / "ragnarok-dm-gguf"
 
