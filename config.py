@@ -13,16 +13,10 @@ class Config:
     HF_TOKEN     = os.getenv("HF_TOKEN", None)  # optional — only needed if downloading FIREBALL from HuggingFace
 
     # --- Models ---
-    # LLM_MODELS = {
-    #     "default": "llama-3.3-70b-versatile",
-    #     "fast":    "llama-3.1-8b-instant",
-    #     "local":   "ragnarok-dm",
-    # }
-    # LLM_MODEL = LLM_MODELS["default"]
-
     LLM_MODEL = {
         'GROQ': "llama-3.3-70b-versatile",
-        'LOCAL': "mistral-small3.2"
+        'GROQ_FAST': "llama-3.1-8b-instant",
+        'LOCAL': "mistral-small3.2",
     }
 
     # --- Inference ---

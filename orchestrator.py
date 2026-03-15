@@ -201,21 +201,31 @@ if __name__ == "__main__":
     print(f"SYSTEM: Activating on **{device.upper()}**.")
 
     parser = argparse.ArgumentParser(description="RAGnarok Orchestrator")
-    parser.add_argument('--local', action='store_true', help="Use a local LLM model instead of Groq.")
+    parser.add_argument(
+        "-p", "--profile",
+        choices=["local", "fast", "default"],
+        default="default",
+        help="Set the profile"
+    )
     parser.add_argument('--no-rag', action='store_true', help="Skip Rules Arbiter entirely.")
     parser.add_argument('--no-memory', action='store_true', help="Don't inject world state.")
     parser.add_argument('--no-npc-const', action='store_true', help="Skip NPC Consistency step.")
     args = parser.parse_args()
     app.config['args'] = args
+    profile = args.profile
 
-    if args.local:
-        print("Using local model...")
-        client = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
-        model_profile = "LOCAL"
-    else:
+    if profile == "default":
         print("Using Groq API...")
         client = Groq(api_key=Config.GROQ_API_KEY)
         model_profile = "GROQ"
+    elif profile == "local":
+        print("Using local model...")
+        client = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
+        model_profile = "LOCAL"
+    elif profile == "fast":
+        print("Using fast model...")
+        client = Groq(api_key=Config.GROQ_API_KEY)
+        model_profile = "GROQ_FAST"
 
     game = RAGnarokOrchestrator(client=client, model_profile=model_profile)
     
@@ -227,6 +237,6 @@ if __name__ == "__main__":
             "Elara Moonwhisper (Half-Elf Bard)",
             "Arin the Bold (Human Rogue)"
         ],
-        "recent_events": ["The party just walked into the loud, sea-shanty-filled Black Boar Tavern. Thrain is yelling for stronger ale, while Elara sings a haunting yet beautiful melody in the corner. What would you like to do?"]
+        "recent_events": ["The party just walked into the loud, sea-shanty-filled Black Boar Tavern. Thrain is yelling for stronger ale, while Elara sings a haunting melody. What would you like to do?"]
     })
     app.run(port=5000, debug=True, use_reloader=False)
