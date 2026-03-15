@@ -200,18 +200,16 @@ if __name__ == "__main__":
     parser.add_argument('--no-npc-const', action='store_true', help="Skip NPC Consistency step.")
     args = parser.parse_args()
     app.config['args'] = args
-    profile = args.p
+    profile = args.profile
 
     if profile == "default":
         print("Using Groq API...")
         client = Groq(api_key=Config.GROQ_API_KEY)
         model_profile = "GROQ"
-
     elif profile == "local":
         print("Using local model...")
         client = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
         model_profile = "LOCAL"
-
     elif profile == "fast":
         print("Using fast model...")
         client = Groq(api_key=Config.GROQ_API_KEY)
