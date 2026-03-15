@@ -1,0 +1,430 @@
+{
+  "cases": [
+
+    {
+      "id": "roll_01",
+      "category": "pre_roll_check_required",
+      "player_input": "I try to persuade the barkeep to tell me about the dungeon below.",
+      "world_state": "Location: The Black Boar Tavern\nActive NPCs: Thrain Blackbeard\nRecent Events: The party just entered the tavern.",
+      "ruling": "A Charisma (Persuasion) check is required. DC 12.",
+      "expected_mode": "tool_call",
+      "expected_tool_args": {"stat":"Charisma","skill":"Persuasion","dc":12,"dice_type":"d20"}
+    },
+    {
+      "id": "roll_02",
+      "category": "pre_roll_check_required",
+      "player_input": "I try to intimidate Thrain into backing away from our table.",
+      "world_state": "Location: Black Boar Tavern\nActive NPCs: Thrain Blackbeard",
+      "ruling": "A Charisma (Intimidation) check is required. DC 14.",
+      "expected_mode": "tool_call",
+      "expected_tool_args": {"stat":"Charisma","skill":"Intimidation","dc":14,"dice_type":"d20"}
+    },
+    {
+      "id": "roll_03",
+      "category": "pre_roll_check_required",
+      "player_input": "I sneak behind Piper to listen unnoticed.",
+      "world_state": "Location: Black Boar Tavern\nActive NPCs: Piper Redhand",
+      "ruling": "A Dexterity (Stealth) check is required. DC 13.",
+      "expected_mode": "tool_call",
+      "expected_tool_args": {"stat":"Dexterity","skill":"Stealth","dc":13,"dice_type":"d20"}
+    },
+    {
+      "id": "roll_04",
+      "category": "pre_roll_check_required",
+      "player_input": "I scan the room for anyone hiding weapons.",
+      "world_state": "Location: Black Boar Tavern\nActive NPCs: Thrain, Piper, Arin",
+      "ruling": "A Wisdom (Perception) check is required. DC 11.",
+      "expected_mode": "tool_call",
+      "expected_tool_args": {"stat":"Wisdom","skill":"Perception","dc":11,"dice_type":"d20"}
+    },
+    {
+      "id": "roll_05",
+      "category": "pre_roll_check_required",
+      "player_input": "I try to remember if this tavern is known for smugglers.",
+      "world_state": "Location: Black Boar Tavern",
+      "ruling": "An Intelligence (History) check is required. DC 10.",
+      "expected_mode": "tool_call",
+      "expected_tool_args": {"stat":"Intelligence","skill":"History","dc":10,"dice_type":"d20"}
+    },
+    {
+      "id": "roll_06",
+      "category": "pre_roll_check_required",
+      "player_input": "I leap onto the table dramatically.",
+      "world_state": "Location: Black Boar Tavern",
+      "ruling": "A Dexterity (Acrobatics) check is required. DC 12.",
+      "expected_mode": "tool_call",
+      "expected_tool_args": {"stat":"Dexterity","skill":"Acrobatics","dc":12,"dice_type":"d20"}
+    },
+    {
+      "id": "roll_07",
+      "category": "pre_roll_check_required",
+      "player_input": "I shove the door closed before the sailors get in.",
+      "world_state": "Location: Tavern Entrance",
+      "ruling": "A Strength (Athletics) check is required. DC 15.",
+      "expected_mode": "tool_call",
+      "expected_tool_args": {"stat":"Strength","skill":"Athletics","dc":15,"dice_type":"d20"}
+    },
+    {
+      "id": "roll_08",
+      "category": "pre_roll_check_required",
+      "player_input": "I calm the frightened stable boy.",
+      "world_state": "Location: Tavern Stable\nActive NPCs: Tomas",
+      "ruling": "A Charisma (Persuasion) check is required. DC 11.",
+      "expected_mode": "tool_call",
+      "expected_tool_args": {"stat":"Charisma","skill":"Persuasion","dc":11,"dice_type":"d20"}
+    },
+    {
+      "id": "roll_09",
+      "category": "pre_roll_check_required",
+      "player_input": "I examine the glowing rune on the wall.",
+      "world_state": "Location: Tavern Cellar",
+      "ruling": "An Intelligence (Arcana) check is required. DC 14.",
+      "expected_mode": "tool_call",
+      "expected_tool_args": {"stat":"Intelligence","skill":"Arcana","dc":14,"dice_type":"d20"}
+    },
+    {
+      "id": "roll_10",
+      "category": "pre_roll_check_required",
+      "player_input": "I inspect the trapdoor lock carefully.",
+      "world_state": "Location: Tavern Cellar",
+      "ruling": "An Intelligence (Investigation) check is required. DC 13.",
+      "expected_mode": "tool_call",
+      "expected_tool_args": {"stat":"Intelligence","skill":"Investigation","dc":13,"dice_type":"d20"}
+    },
+
+    {
+      "id": "roll_11",
+      "category": "pre_roll_check_required",
+      "player_input": "I try to tell if the merchant is lying.",
+      "world_state": "Location: Tavern Booth\nNPC: Garrick",
+      "ruling": "A Wisdom (Insight) check is required. DC 13.",
+      "expected_mode": "tool_call",
+      "expected_tool_args": {"stat":"Wisdom","skill":"Insight","dc":13,"dice_type":"d20"}
+    },
+    {
+      "id": "roll_12",
+      "category": "pre_roll_check_required",
+      "player_input": "I perform a sea shanty with Piper.",
+      "world_state": "Location: Tavern",
+      "ruling": "A Charisma (Performance) check is required. DC 12.",
+      "expected_mode": "tool_call",
+      "expected_tool_args": {"stat":"Charisma","skill":"Performance","dc":12,"dice_type":"d20"}
+    },
+    {
+      "id": "roll_13",
+      "category": "pre_roll_check_required",
+      "player_input": "I search the shipping ledger for suspicious ships.",
+      "world_state": "Location: Dock Office",
+      "ruling": "An Intelligence (Investigation) check is required. DC 12.",
+      "expected_mode": "tool_call",
+      "expected_tool_args": {"stat":"Intelligence","skill":"Investigation","dc":12,"dice_type":"d20"}
+    },
+    {
+      "id": "roll_14",
+      "category": "pre_roll_check_required",
+      "player_input": "I climb the slippery drainpipe.",
+      "world_state": "Location: Alley",
+      "ruling": "A Strength (Athletics) check is required. DC 13.",
+      "expected_mode": "tool_call",
+      "expected_tool_args": {"stat":"Strength","skill":"Athletics","dc":13,"dice_type":"d20"}
+    },
+    {
+      "id": "roll_15",
+      "category": "pre_roll_check_required",
+      "player_input": "I peer into the fog for movement.",
+      "world_state": "Location: Harbor Road",
+      "ruling": "A Wisdom (Perception) check is required. DC 14.",
+      "expected_mode": "tool_call",
+      "expected_tool_args": {"stat":"Wisdom","skill":"Perception","dc":14,"dice_type":"d20"}
+    },
+    {
+      "id": "roll_16",
+      "category": "pre_roll_check_required",
+      "player_input": "I recall the crest painted on the smuggler's crate.",
+      "world_state": "Location: Warehouse",
+      "ruling": "An Intelligence (History) check is required. DC 11.",
+      "expected_mode": "tool_call",
+      "expected_tool_args": {"stat":"Intelligence","skill":"History","dc":11,"dice_type":"d20"}
+    },
+    {
+      "id": "roll_17",
+      "category": "pre_roll_check_required",
+      "player_input": "I creep along the rafters above the tavern.",
+      "world_state": "Location: Tavern Rafters",
+      "ruling": "A Dexterity (Stealth) check is required. DC 15.",
+      "expected_mode": "tool_call",
+      "expected_tool_args": {"stat":"Dexterity","skill":"Stealth","dc":15,"dice_type":"d20"}
+    },
+    {
+      "id": "roll_18",
+      "category": "pre_roll_check_required",
+      "player_input": "I try to distract the guard with a ridiculous story.",
+      "world_state": "Location: Harbor Gate",
+      "ruling": "A Charisma (Deception) check is required. DC 13.",
+      "expected_mode": "tool_call",
+      "expected_tool_args": {"stat":"Charisma","skill":"Deception","dc":13,"dice_type":"d20"}
+    },
+    {
+      "id": "roll_19",
+      "category": "pre_roll_check_required",
+      "player_input": "I inspect the bones on the shrine floor.",
+      "world_state": "Location: Abandoned Shrine",
+      "ruling": "An Intelligence (Religion) check is required. DC 12.",
+      "expected_mode": "tool_call",
+      "expected_tool_args": {"stat":"Intelligence","skill":"Religion","dc":12,"dice_type":"d20"}
+    },
+    {
+      "id": "roll_20",
+      "category": "pre_roll_check_required",
+      "player_input": "I try to diagnose the sailor's illness.",
+      "world_state": "Location: Tavern Back Room",
+      "ruling": "A Wisdom (Medicine) check is required. DC 14.",
+      "expected_mode": "tool_call",
+      "expected_tool_args": {"stat":"Wisdom","skill":"Medicine","dc":14,"dice_type":"d20"}
+    },
+
+    {
+      "id": "text_01",
+      "category": "direct_narration_no_check",
+      "player_input": "I sit quietly by the fire.",
+      "world_state": "Location: Tavern",
+      "ruling": "No roll required.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "text_02",
+      "category": "direct_narration_no_check",
+      "player_input": "I order a mug of ale.",
+      "world_state": "Location: Tavern",
+      "ruling": "No roll required.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "text_03",
+      "category": "direct_narration_no_check",
+      "player_input": "I look out the window at the harbor.",
+      "world_state": "Location: Tavern Upstairs",
+      "ruling": "No roll required.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "text_04",
+      "category": "direct_narration_no_check",
+      "player_input": "I ask Arin about his plan.",
+      "world_state": "Location: Tavern Booth",
+      "ruling": "No roll required.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "text_05",
+      "category": "direct_narration_no_check",
+      "player_input": "I light a lantern.",
+      "world_state": "Location: Cellar Entrance",
+      "ruling": "No roll required.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "text_06",
+      "category": "direct_narration_no_check",
+      "player_input": "I whisper to the party to stay quiet.",
+      "world_state": "Location: Cellar",
+      "ruling": "No roll required.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "text_07",
+      "category": "direct_narration_no_check",
+      "player_input": "I give the stable boy a blanket.",
+      "world_state": "Location: Stable",
+      "ruling": "No roll required.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "text_08",
+      "category": "direct_narration_no_check",
+      "player_input": "I read the letter aloud.",
+      "world_state": "Location: Tavern Room",
+      "ruling": "No roll required.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "text_09",
+      "category": "direct_narration_no_check",
+      "player_input": "I gently close the trapdoor.",
+      "world_state": "Location: Cellar",
+      "ruling": "No roll required.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "text_10",
+      "category": "direct_narration_no_check",
+      "player_input": "I invite Piper to sit with us.",
+      "world_state": "Location: Tavern",
+      "ruling": "No roll required.",
+      "expected_mode": "text"
+    },
+
+    {
+      "id": "text_11",
+      "category": "direct_narration_no_check",
+      "player_input": "I open the parcel on the table.",
+      "world_state": "Location: Tavern Booth",
+      "ruling": "No roll required.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "text_12",
+      "category": "direct_narration_no_check",
+      "player_input": "I calmly tell Thrain we don't want trouble.",
+      "world_state": "Location: Tavern",
+      "ruling": "No roll required.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "text_13",
+      "category": "direct_narration_no_check",
+      "player_input": "I kneel at the shrine in prayer.",
+      "world_state": "Location: Shrine",
+      "ruling": "No roll required.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "text_14",
+      "category": "direct_narration_no_check",
+      "player_input": "I ask the guard his name.",
+      "world_state": "Location: Harbor Gate",
+      "ruling": "No roll required.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "text_15",
+      "category": "direct_narration_no_check",
+      "player_input": "I study the strange amulet.",
+      "world_state": "Location: Tavern Room",
+      "ruling": "No roll required.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "text_16",
+      "category": "direct_narration_no_check",
+      "player_input": "I keep walking along the harbor road.",
+      "world_state": "Location: Harbor Road",
+      "ruling": "No roll required.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "text_17",
+      "category": "direct_narration_no_check",
+      "player_input": "I tell the group the rune makes me uneasy.",
+      "world_state": "Location: Cellar",
+      "ruling": "No roll required.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "text_18",
+      "category": "direct_narration_no_check",
+      "player_input": "I order the strongest stew available.",
+      "world_state": "Location: Tavern",
+      "ruling": "No roll required.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "text_19",
+      "category": "direct_narration_no_check",
+      "player_input": "I tell Garrick we'll consider his offer.",
+      "world_state": "Location: Tavern Booth",
+      "ruling": "No roll required.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "text_20",
+      "category": "direct_narration_no_check",
+      "player_input": "I wait for Piper to finish her song.",
+      "world_state": "Location: Tavern",
+      "ruling": "No roll required.",
+      "expected_mode": "text"
+    },
+
+    {
+      "id": "resolve_01",
+      "category": "post_roll_resolution",
+      "player_input": "[SYSTEM: ROLL_RESOLUTION] SUCCESS - Persuasion 17 vs DC 12",
+      "world_state": "Location: Tavern",
+      "ruling": "Narrate success.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "resolve_02",
+      "category": "post_roll_resolution",
+      "player_input": "[SYSTEM: ROLL_RESOLUTION] FAILURE - Stealth 8 vs DC 13",
+      "world_state": "Location: Tavern",
+      "ruling": "Narrate failure.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "resolve_03",
+      "category": "post_roll_resolution",
+      "player_input": "[SYSTEM: ROLL_RESOLUTION] SUCCESS - Arcana 19 vs DC 14",
+      "world_state": "Location: Cellar",
+      "ruling": "Narrate success.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "resolve_04",
+      "category": "post_roll_resolution",
+      "player_input": "[SYSTEM: ROLL_RESOLUTION] FAILURE - Medicine 9 vs DC 14",
+      "world_state": "Location: Tavern Back Room",
+      "ruling": "Narrate failure.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "resolve_05",
+      "category": "post_roll_resolution",
+      "player_input": "[SYSTEM: ROLL_RESOLUTION] SUCCESS - Athletics 18 vs DC 15",
+      "world_state": "Location: Alley",
+      "ruling": "Narrate success.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "resolve_06",
+      "category": "post_roll_resolution",
+      "player_input": "[SYSTEM: ROLL_RESOLUTION] FAILURE - Intimidation 10 vs DC 14",
+      "world_state": "Location: Tavern",
+      "ruling": "Narrate failure.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "resolve_07",
+      "category": "post_roll_resolution",
+      "player_input": "[SYSTEM: ROLL_RESOLUTION] SUCCESS - Perception 16 vs DC 11",
+      "world_state": "Location: Tavern",
+      "ruling": "Narrate success.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "resolve_08",
+      "category": "post_roll_resolution",
+      "player_input": "[SYSTEM: ROLL_RESOLUTION] FAILURE - Investigation 9 vs DC 13",
+      "world_state": "Location: Cellar",
+      "ruling": "Narrate failure.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "resolve_09",
+      "category": "post_roll_resolution",
+      "player_input": "[SYSTEM: ROLL_RESOLUTION] SUCCESS - Performance 18 vs DC 12",
+      "world_state": "Location: Tavern",
+      "ruling": "Narrate success.",
+      "expected_mode": "text"
+    },
+    {
+      "id": "resolve_10",
+      "category": "post_roll_resolution",
+      "player_input": "[SYSTEM: ROLL_RESOLUTION] FAILURE - Deception 7 vs DC 13",
+      "world_state": "Location: Harbor Gate",
+      "ruling": "Narrate failure.",
+      "expected_mode": "text"
+    }
+
+  ]
+}

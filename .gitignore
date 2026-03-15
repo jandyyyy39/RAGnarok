@@ -56,6 +56,11 @@ coverage.xml
 .pytest_cache/
 cover/
 
+# evaluation outputs
+evals/*results.json
+evals/*.csv
+evals/runs/
+
 # Translations
 *.mo
 *.pot
