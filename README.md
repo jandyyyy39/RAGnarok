@@ -22,6 +22,8 @@ We use this environment variable to disable ChromaDB's built-in usage tracking.
 If you just cloned this repo, follow these steps to get the system running:
 * Setup Conda: `conda env create -f environment.yaml` followed by `conda activate ragnarok`
 * Initialize Database: Run `python scripts/build_rules_rag.py` to build your local ChromaDB vector store from the SRD.
+  - The script automatically uses `data/5esrd.md` (already included in the repo).
+  - No internet connection or HuggingFace token required for this step.
 
 #### Running the Application
 
@@ -30,15 +32,6 @@ If you just cloned this repo, follow these steps to get the system running:
 python orchestrator.py
 ```
 This starts the Flask API server on `http://localhost:5000`.
-
-### Command-line Arguments
-
-The `orchestrator.py` script accepts the following command-line arguments for controlling its behavior:
-
-*   `--local`: Use a local LLM model (Ollama) instead of the default Groq API.
-*   `--no-rag`: Skip the Rules Arbiter agent. This is useful for ablation studies to see how the system behaves without the RAG component.
-*   `--no-memory`: Prevents the Memory agent from injecting the world state into the prompt. This is for ablation studies to test the system's performance without memory.
-*   `--no-npc-const`: Skips the NPC Consistency agent. This is for ablation studies to evaluate the impact of the consistency agent.
 
 **Frontend (React UI):**
 ```bash
