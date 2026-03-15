@@ -5,7 +5,11 @@
     ],
     "party_status": "Healthy",
     "recent_events": [
-        "The party just walked into the crowded tavern."
+        "Player: I shoot my crossbow at the bandit on the rooftop. | Outcome: As you raise your crossbow, the warm glow of the Yawning Portal Tavern's fire pit casts a golden lig...",
+        "Player: I dodge behind a pillar to avoid the dragon's fire breath. | Outcome: As you swiftly move to dodge behind a pillar, the warm glow of the Yawning Portal Tavern's fire pit ...",
+        "Player: I tell Durnan I'm looking for information about the Undermountain. | Outcome: As you approach Durnan, the warm glow of the Yawning Portal Tavern's fire pit casts a golden light o...",
+        "Player: I try to persuade the guard to let us through without paying. | Outcome: As you approach the guard, the warm glow of the Yawning Portal Tavern's fire pit casts a golden ligh...",
+        "Player: I intimidate the merchant into giving us a discount. | Outcome: As you fix the merchant with a stern gaze, the warm glow of the Yawning Portal Tavern's fire pit cas..."
     ],
     "inventory_changes": []
 }

@@ -1,0 +1,682 @@
+[
+  {
+    "experiment": "Full Pipeline (Groq)",
+    "input": "I draw my sword and attack the goblin chief.",
+    "input_type": "combat",
+    "response": "As you push open the heavy wooden door and step into the warm, golden glow of the Yawning Portal Tavern, the murmur of hushed conversations and the clinking of mugs envelop you. The air is thick with the smell of roasting meat and freshly brewed ale. Patrons of all shapes and sizes crowd the tables, their faces aglow with laughter and camaraderie. Durnan, the barkeep, polishes a mug with a white apron, his eyes twinkling with a warm welcome.\n\nBut, amidst this jovial scene, you suddenly draw your sword, its steel glinting in the firelight. The atmosphere in the tavern freezes, conversations dying on the lips of the patrons. All eyes turn to you, a mix of confusion and alarm etched on their faces. Durnan's expression turns from welcoming to wary, his hand resting on the handle of the large wooden club he keeps beneath the counter.\n\nHowever, there is no goblin chief in sight. No snarling, evil-eyed creature to strike down. The patrons exchange nervous glances, wondering what prompted this sudden, misplaced aggression. The only sound is the soft hum of the tavern's patrons, the creaking of the old wooden sign outside, and the faint clinking of glasses as people set their drinks down, unsure of what to expect next.\n\nMechanically, since there is no goblin chief present, no Ability Check, Saving Throw, or Attack Roll is required. Your action, drawing your sword and preparing to attack, does not have a target, and thus, it does not resolve into any form of combat or skill check. The scene remains tense but frozen, awaiting your next move or a clarification of your intentions.\n\nDurnan, eyeing your drawn sword cautiously, speaks up, his voice firm but controlled, \"Friend, I think there might be some misunderstanding. We don't have any... unpleasantness here at the moment. Why don't you sheathe your sword, and we can talk about what brings you to the Yawning Portal?\" The patrons, sensing the tension, begin to murmur among themselves, some calling for calm, others for the city guard.\n\nThe choice is yours. Will you sheathe your sword, explaining your mistake, or will you continue down a path that could lead to conflict in this otherwise peaceful tavern?",
+    "latency_ms": 3082,
+    "skipped_agents": [],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 3
+    },
+    "composite": 4.25
+  },
+  {
+    "experiment": "Full Pipeline (Groq)",
+    "input": "I cast Fireball at the cluster of skeletons near the doorway.",
+    "input_type": "combat",
+    "response": "As you burst into the Yawning Portal Tavern, the warm glow of the fire pit and the murmur of hushed conversations envelop you, but your attention is fixed on a different scene altogether. However, there's a problem - there's no cluster of skeletons near the doorway. The patrons turn to look at you, their faces a mix of curiosity and concern. Durnan the Barkeep, a stout dwarf with a bushy beard, raises an eyebrow from behind the bar, his hand resting on the haft of a large wooden mallet.\n\nIt seems you've gotten ahead of yourself, and the battle-ready atmosphere you anticipated isn't here. The air is thick with the smell of roasting meat and freshly brewed ale, not the stench of death and decay. The patrons begin to stir, some of them reaching for their own weapons, unsure of what to make of your sudden, aggressive stance.\n\nSince there are no skeletons to target, your planned spell attack can't proceed as intended. However, if you'd like to continue with casting a spell, you could potentially target a different area or wait for a situation that warrants such an action. For now, the scene is tense but not combat-ready.\n\nIf you were to cast Fireball in this crowded tavern without a clear, hostile target, the consequences could be disastrous. The spell's area of effect would likely engulf innocent patrons, causing untold harm and destruction. Durnan, sensing the escalating tension, takes a step forward, his voice firm but controlled, \"Easy there, friend. No need for violence here. What seems to be the trouble?\"\n\nThe mechanical requirements for your intended action are clear: for a Fireball spell, each creature in the area would need to make a Dexterity saving throw with a DC of 15 to avoid the blast. But without a legitimate target, this action cannot proceed in a way that would make sense in the current scenario.\n\nWhat would you like to do next? Will you stand down, explain your actions, or perhaps look for a more appropriate time and place to unleash your magical prowess? The choice is yours, but for now, the Yawning Portal Tavern remains a place of warmth and camaraderie, not a battlefield.",
+    "latency_ms": 2577,
+    "skipped_agents": [],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 5,
+      "relevance": 5
+    },
+    "composite": 5.0
+  },
+  {
+    "experiment": "Full Pipeline (Groq)",
+    "input": "I try to grapple the orc and pin him against the wall.",
+    "input_type": "combat",
+    "response": "As you charge into the bustling Yawning Portal Tavern, the warm glow of the fire pit and the murmur of hushed conversations envelop you. The air is thick with the smell of roasting meat and freshly brewed ale. However, your eyes scan the room, searching for the orc you intend to grapple, but your gaze falls upon the familiar face of Durnan the Barkeep instead. The patrons of the tavern seem oblivious to your martial intentions, too engrossed in their own conversations to notice the tension in your stance.\n\nUndeterred, you decide to redirect your attention to Durnan, perhaps seeking to make a point or assert your dominance in this unexpected manner. You approach the bar, your eyes locked onto the barkeep, and attempt to grapple him. The patrons nearby can't help but stare, their faces a mixture of confusion and concern.\n\nTo successfully grapple Durnan, you'll need to make a Strength (Athletics) check, contested by Durnan's own Strength (Athletics) or Dexterity (Acrobatics) check. The DC for this check is 15, reflecting Durnan's moderate physical prowess. Roll a d20, add your Strength (Athletics) modifier to the result, and compare it to the DC. If you succeed, you'll manage to grab hold of Durnan and pin him against the wall. However, if you fail, Durnan might just slip out of your grasp or even counter your attempt.\n\nThe tavern falls silent, with all eyes on you and Durnan. The barkeep's expression is a mixture of surprise and amusement, as if daring you to try and take him down. The outcome of your action hangs in the balance, waiting for the roll of the dice to determine the fate of this unexpected confrontation.\n\nPlease roll a d20 and add your Strength (Athletics) modifier to the result. The fate of this grapple attempt hangs in the balance.",
+    "latency_ms": 2586,
+    "skipped_agents": [],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 2
+    },
+    "composite": 4.0
+  },
+  {
+    "experiment": "Full Pipeline (Groq)",
+    "input": "I shoot my crossbow at the bandit on the rooftop.",
+    "input_type": "combat",
+    "response": "As you enter the Yawning Portal Tavern, the warm glow of the fire pit and the murmur of hushed conversations envelop you, immediately putting you at ease. The atmosphere is lively, with patrons laughing and clinking mugs together. Durnan the Barkeep, a stout dwarf with a bushy beard, polishes a mug with a white apron, his eyes twinkling with a mixture of curiosity and warmth as he greets you.\n\nHowever, your attention is focused elsewhere. You raise your crossbow, taking aim at... nothing. The tavern's ceiling stretches above you, adorned with the occasional cobweb and the faint scent of old wood. There is no bandit on the rooftop, no sign of any disturbance or danger lurking above. The patrons continue their merriment, oblivious to your action.\n\nDurnan's expression changes from welcome to concern as he notices your crossbow. He sets the mug down, his voice firm but measured, \"Ah, friend, I think there's been a misunderstanding. There's no one on the rooftop, no bandit to speak of. Perhaps you're looking for someone or something else?\"\n\nThe mechanical outcome of your action is straightforward: since there is no bandit on the rooftop, your crossbow shot has no target. No Ability Check, Saving Throw, or Attack Roll is required, as the action is not possible within the current context of the Yawning Portal Tavern.\n\nYou stand there, crossbow at the ready, amidst the bustle of the tavern, with all eyes now on you. The choice of what to do next is yours, whether to lower your weapon, approach the bar, or perhaps ask about any rumors or jobs that might align with your initial intent. The evening is young, and the Yawning Portal Tavern is full of possibilities.",
+    "latency_ms": 1728,
+    "skipped_agents": [],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 5,
+      "relevance": 4
+    },
+    "composite": 4.75
+  },
+  {
+    "experiment": "Full Pipeline (Groq)",
+    "input": "I dodge behind a pillar to avoid the dragon's fire breath.",
+    "input_type": "combat",
+    "response": "As you swiftly move to dodge behind a pillar, the warm glow of the Yawning Portal Tavern's fire pit and the murmur of hushed conversations suddenly seem to fade into the background. The air is electric with tension, and the patrons' faces are filled with a mix of concern and curiosity. However, there is no dragon in sight, and the atmosphere remains lively, with Durnan the Barkeep polishing a mug with a white apron, oblivious to your sudden movement.\n\nYou quickly scan your surroundings, realizing that your action, although swift and decisive, seems out of place in the current scene. The pillar you dodged behind is sturdy, adorned with intricate carvings of mythical creatures, and it provides a sense of security, but it's not clear what you're hiding from.\n\nSince there's no immediate threat, no Ability Check, Saving Throw, or Attack Roll is required for your action. You've successfully moved behind the pillar, and the sounds of the tavern continue uninterrupted. The patrons nearby can't help but glance at you with a mixture of confusion and amusement, wondering what prompted your sudden movement.\n\nAs you catch your breath and assess the situation, you notice Durnan the Barkeep raising an eyebrow, his eyes locked onto yours with a hint of curiosity. The tavern remains a hub of activity, with the fire crackling, and the smell of roasting meat wafting through the air. You realize that your action, although bold, hasn't triggered any significant consequences... yet.\n\nYou're safe behind the pillar, for now. What would you like to do next? Will you emerge from your temporary hiding spot, order a drink, or perhaps engage with the patrons or Durnan the Barkeep? The choice is yours.",
+    "latency_ms": 1870,
+    "skipped_agents": [],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 4
+    },
+    "composite": 4.5
+  },
+  {
+    "experiment": "Full Pipeline (Groq)",
+    "input": "I tell Durnan I'm looking for information about the Undermountain.",
+    "input_type": "roleplay",
+    "response": "As you approach the bar, the warm glow of the fire pit casts a golden light on Durnan's weathered face, his eyes squinting slightly as he polishes a mug with a white apron. The murmur of hushed conversations and the occasional clink of glasses fill the air, creating a sense of cozy camaraderie among the patrons of the Yawning Portal Tavern. You take a seat on one of the worn wooden stools, and Durnan's gaze meets yours, his expression a mixture of curiosity and wariness.\n\n\"I'm looking for information about the Undermountain,\" you say, your voice low and even, as you try to convey a sense of genuine interest and non-threatening intentions. Durnan's eyes narrow, his grip on the mug tightening, as he sets it down on the counter with a soft clink.\n\nTo persuade Durnan to share sensitive information, you'll need to make a Charisma (Persuasion) check. Roll a d20 and add your Charisma modifier, as well as your proficiency bonus if you're proficient in Persuasion. The total result must meet or exceed the DC of 15.\n\nPlease roll the dice and add the relevant modifiers. If the result equals or exceeds 15, Durnan will begin to open up about the Undermountain, sharing tales of its dangers and wonders. If the result is 14 or lower, Durnan's expression will remain guarded, and he'll respond with a cryptic warning or a change of subject, leaving you to wonder if you've missed an opportunity to gain valuable insight.\n\nThe dice are waiting, the tavern's patrons are watching, and Durnan's eyes are fixed on yours, awaiting your next move. What will the roll reveal?",
+    "latency_ms": 1611,
+    "skipped_agents": [],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 5,
+      "relevance": 5
+    },
+    "composite": 5.0
+  },
+  {
+    "experiment": "Full Pipeline (Groq)",
+    "input": "I try to persuade the guard to let us through without paying.",
+    "input_type": "roleplay",
+    "response": "As you approach Durnan, the warm glow of the fire pit casts a golden light on his weathered face, and the murmur of hushed conversations from the patrons of the Yawning Portal Tavern provides a gentle background hum. You decide to try to persuade Durnan to let you in on the information about the Undermountain without requiring payment, a feat that will undoubtedly test your silver tongue.\n\nYou take a deep breath, a confident smile spreading across your face as you begin to weave a persuasive tale. Your words are laced with charm and sincerity, as you appeal to Durnan's sense of curiosity and adventure. \"Durnan, my good fellow,\" you start, \"I'm not just any ordinary seeker of knowledge. I have a thirst for the secrets that lie beneath our feet, and I'm willing to take great risks to uncover them. I'm sure that you, of all people, understand the allure of the unknown and the thrill of discovery. I propose that, in exchange for your guidance, I'll share with you any remarkable findings I might stumble upon in the Undermountain. Who knows? Perhaps together, we can uncover secrets that will change the face of Waterdeep forever!\"\n\nAs you finish your impassioned plea, Durnan's expression remains neutral, his eyes narrowing slightly as he considers your words. The air is thick with anticipation, the patrons of the tavern seemingly holding their collective breath as they await the outcome of your negotiation. The soft crackling of the fire pit and the gentle clinking of glasses provide a soothing background melody, a stark contrast to the tension that hangs in the air.\n\nTo determine the success of your persuasion, you must make a Charisma (Persuasion) check. Roll a d20 and add your Charisma modifier to the result. The DC for this check is 15, reflecting Durnan's experience in dealing with various requests and negotiations. If your total equals or exceeds the DC, your persuasion is successful, and Durnan might be willing to share information about the Undermountain without demanding payment. However, if your total is lower than the DC, your attempt at persuasion falls short, and Durnan's stance on payment remains firm.\n\nThe fate of your inquiry hangs in the balance, as the outcome of your Charisma (Persuasion) check will determine whether Durnan will grant you access to the coveted information about the Undermountain. The dice roll will reveal the success of your persuasive efforts...",
+    "latency_ms": 6150,
+    "skipped_agents": [],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 1,
+      "character_voice": 4,
+      "relevance": 5
+    },
+    "composite": 3.75
+  },
+  {
+    "experiment": "Full Pipeline (Groq)",
+    "input": "I intimidate the merchant into giving us a discount.",
+    "input_type": "roleplay",
+    "response": "As you fix a stern gaze on the merchant, the warm glow of the Yawning Portal Tavern's fire pit casts a golden light on the scene, illuminating the tension in the air. The murmur of hushed conversations and the clinking of glasses seem to fade into the background as you take a step closer to the merchant, your voice firm and commanding. Durnan, the barkeep, looks up from polishing a mug, his eyes narrowing slightly as he senses the shift in atmosphere.\n\nWith a deep breath, you begin to intimidate the merchant, your words laced with a subtle threat. \"Listen, friend, I think you can do better than the price you're offering. We're willing to make a deal, but we expect a discount. A significant one.\" Your voice is low and even, but the undertone of menace is unmistakable.\n\nTo succeed in your intimidation, you'll need to make a Charisma (Intimidation) check. The DC is 15, considering the merchant's potential resistance to intimidation in a public place like the Yawning Portal Tavern. Roll a d20 and add your Charisma modifier and Intimidation skill level to the result. If the total equals or exceeds 15, your intimidation is successful.\n\nAs you await the outcome of your action, the merchant's eyes dart back and forth, weighing the risks and benefits of acquiescing to your demands. The patrons of the tavern seem to sense the tension, their conversations dying down as they watch the scene unfold. Durnan, ever the observant barkeep, continues to polish his mug, his eyes fixed on you with a mixture of curiosity and caution.\n\nThe dice roll will determine the outcome of your intimidation attempt. Will you succeed in extracting a discount from the merchant, or will your efforts fall flat? The fate of your negotiation hangs in the balance, as the Yawning Portal Tavern holds its collective breath in anticipation of the outcome.",
+    "latency_ms": 8105,
+    "skipped_agents": [],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    },
+    "composite": 4.75
+  },
+  {
+    "experiment": "No RAG",
+    "input": "I draw my sword and attack the goblin chief.",
+    "input_type": "combat",
+    "response": "As you draw your sword, the warm glow of the Yawning Portal Tavern's fire pit casts a golden light on the sudden tension in the air. The patrons, once engrossed in their hushed conversations, turn to face you with a mix of surprise and concern. Durnan, the barkeep, raises an eyebrow, his expression a blend of curiosity and warning. However, there is no goblin chief in sight. The tavern is filled with the usual assortment of adventurers, merchants, and travelers, but no apparent goblin threat.\n\nYou stand tall, sword at the ready, as the room falls silent. The only sound is the crackling of the fire pit and the soft murmur of whispers among the patrons. It becomes clear that your action has not been met with the expected resistance, as there is no goblin chief to attack.\n\nDurnan, sensing the awkwardness, clears his throat and speaks in a calm, even tone, \"Ah, friend, I think you may have mistaken the Yawning Portal for a battlefield. We don't often see... unsheathed steel in here. Unless, of course, you're looking to make a rather... dramatic point?\" He eyes your sword, his gaze a mixture of amusement and caution.\n\nThe room remains still, awaiting your next move. The patrons seem unsure whether to be alarmed or amused by your sudden display of martial readiness. The air is thick with anticipation, as the Yawning Portal Tavern holds its collective breath, waiting to see how you will proceed.\n\nWhat will you do next? Will you sheathe your sword, explaining the mistake, or will you press on, perhaps seeking a new target for your attention? The choice is yours, and the tavern waits with bated breath for your response.",
+    "latency_ms": 3501,
+    "skipped_agents": [
+      "rag"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 5,
+      "relevance": 4
+    },
+    "composite": 4.75
+  },
+  {
+    "experiment": "No RAG",
+    "input": "I cast Fireball at the cluster of skeletons near the doorway.",
+    "input_type": "combat",
+    "response": "As you raise your hands, the warm glow of the Yawning Portal Tavern's fire pit flickers in response to the sudden surge of magical energy emanating from you. The air around you seems to vibrate with anticipation, and the patrons of the tavern can't help but pause, sensing the impending release of powerful magic. Durnan, the barkeep, looks up from polishing a mug, his eyes narrowing slightly as he takes in the scene unfolding before him.\n\nWith a swift and precise motion, you cast Fireball, and a blazing orb of flame erupts from your outstretched hand. The blast shoots towards the cluster of skeletons near the doorway, which, surprisingly, have appeared out of nowhere, their bony frames swaying gently in the tavern's atmosphere. The skeletons, seemingly oblivious to the danger approaching, continue to stand motionless, their empty eye sockets fixed on some point beyond the tavern's walls.\n\nAs the Fireball explodes among the skeletons, the tavern is filled with the sound of crackling flames and the acrid smell of burning bone. The blast is so intense that it sends the skeletons flying, their bony limbs shattering and scattering across the floor. The patrons gasp in unison, some shielding their faces from the sudden wave of heat. Durnan, however, remains calm, his eyes fixed intently on you, a hint of a calculating glint in his gaze.\n\nThe Fireball's explosion illuminates the tavern, casting flickering shadows on the walls. The warm glow of the fire pit seems to pale in comparison to the intense, fiery blast you've unleashed. As the flames die down, the skeletons, now nothing more than smoldering piles of ash and bone, come into view. The doorway, once a simple entrance, now lies shrouded in a haze of smoke, as if the very fabric of reality has been scorched by your magical assault.\n\nDurnan's voice cuts through the stunned silence, his tone measured and even. \"Well, well, well. It seems you've made a bit of a statement. I'm not sure what's more impressive, the magic itself or the fact that you've managed to... liven up the evening.\" He pauses, eyeing the smoldering remains of the skeletons. \"I think it's safe to say that you've got everyone's attention now. The question is, what do you plan to do with it?\"\n\nThe tavern's patrons begin to murmur among themselves, their faces a mix of awe, fear, and curiosity. The atmosphere in the Yawning Portal Tavern has shifted, and it's clear that your actions have set events in motion. The choice of how to proceed is yours, and the consequences of your decisions will shape the course of the evening, and perhaps, the fate of the tavern itself.",
+    "latency_ms": 2899,
+    "skipped_agents": [
+      "rag"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 2,
+      "character_voice": 4,
+      "relevance": 5
+    },
+    "composite": 4.0
+  },
+  {
+    "experiment": "No RAG",
+    "input": "I try to grapple the orc and pin him against the wall.",
+    "input_type": "combat",
+    "response": "As you charge towards the orc, the warm glow of the Yawning Portal Tavern's fire pit casts a golden light on the scene, illuminating the dust motes dancing in the air. The patrons of the tavern, once engrossed in their own conversations, turn to watch the commotion unfold. Durnan, the barkeep, raises an eyebrow, his gaze fixed on the unfolding scene with a mix of curiosity and concern.\n\nThe orc, taken aback by your sudden movement, stumbles backward, its eyes widening in surprise. You manage to grab hold of the orc's arm, but it's clear that this is not going to be an easy grapple. The orc is sturdy, and its muscles ripple beneath its skin as it tries to shake you off.\n\nAs you attempt to pin the orc against the wall, the two of you stumble and stagger, crashing into tables and chairs. The sound of clattering wood and shattering glass fills the air, and the patrons gasp in shock. The orc's face twists in a snarl, and it lets out a fierce battle cry, causing the tavern to fall silent.\n\nWith a surge of adrenaline, you manage to slam the orc against the wall, but it's far from subdued. The orc's eyes blaze with fury, and it begins to struggle, its arms flailing wildly as it tries to break free. You feel a surge of exertion as you try to maintain your grip, your muscles straining to keep the orc pinned.\n\nThe outcome of your action is far from certain, as the orc's strength and ferocity make it a formidable opponent. The patrons of the tavern watch with bated breath, unsure of what will happen next. Durnan, meanwhile, seems to be waiting for an opportunity to intervene, his eyes fixed on the scene with a mixture of caution and curiosity.\n\nThe scene is set, and the fate of the grapple hangs in the balance. The orc's struggles grow more intense, and it's clear that this is far from over. What will you do next? Will you try to maintain your grip, or will you attempt to use your surroundings to your advantage? The choice is yours, and the outcome will be decided by the unfolding events.",
+    "latency_ms": 2421,
+    "skipped_agents": [
+      "rag"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 1,
+      "character_voice": 4,
+      "relevance": 5
+    },
+    "composite": 3.75
+  },
+  {
+    "experiment": "No RAG",
+    "input": "I shoot my crossbow at the bandit on the rooftop.",
+    "input_type": "combat",
+    "response": "As you raise your crossbow, the warm glow of the Yawning Portal Tavern's fire pit casts a golden light on the rooftops outside, illuminating the bandit's precarious perch. The bandit, seemingly unaware of the danger lurking below, continues to scan the surrounding streets with a mixture of curiosity and suspicion. The patrons of the tavern, engrossed in their own conversations and revelries, remain oblivious to the potential threat lurking just above.\n\nWith a deep breath, you take aim, your finger tightening around the crossbow's trigger. The mechanism clicks, and the bolt shoots forth, soaring through the night air with a soft whir. Time seems to slow as the bolt hurtles towards its target, the bandit's eyes widening in a mixture of surprise and terror as they finally notice the danger.\n\nThe bolt strikes true, but not quite as intended. Instead of hitting the bandit's chest, it grazes their arm, causing them to cry out in pain and stumble backwards. The bandit's balance falters, and they teeter on the edge of the rooftop, their legs scrambling wildly to regain footing.\n\nDurnan, the barkeep, looks up from his work, a hint of concern etched on his face as he takes in the scene unfolding above. \"Ah, it seems we have a bit of a situation on our hands,\" he mutters, his voice low and even. The patrons, now alerted to the commotion, begin to stir, their faces a mix of curiosity and alarm.\n\nThe bandit, still clinging to the rooftop, glares down at you with a mixture of anger and desperation. They reach for the dagger at their belt, their eyes flashing with a desire for revenge. The night air is filled with tension, the outcome of this encounter hanging precariously in the balance.\n\nThe scene is set, the die has been cast. The bandit's fate, and the fate of those within the tavern, hangs in the balance. What will you do next? Will you press your advantage, or seek to defuse the situation? The choice is yours, and the consequences will be yours to bear.",
+    "latency_ms": 2453,
+    "skipped_agents": [
+      "rag"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 1,
+      "character_voice": 4,
+      "relevance": 5
+    },
+    "composite": 3.75
+  },
+  {
+    "experiment": "No RAG",
+    "input": "I dodge behind a pillar to avoid the dragon's fire breath.",
+    "input_type": "combat",
+    "response": "As you swiftly dodge behind a pillar to avoid the dragon's fire breath, the warm glow of the Yawning Portal Tavern's fire pit casts a golden light on the chaotic scene unfolding before you. The dragon, its scales glinting like polished obsidian, unleashes a stream of flames that would have incinerated you had you not reacted with such haste. The fire crackles and spits, casting flickering shadows on the walls as it engulfs the spot where you stood mere moments before.\n\nBehind the pillar, you find temporary refuge, the stone cool against your back as you press into its solidity. The roar of the dragon and the sound of its flames licking at the air are deafened slightly by the pillar, but you know this respite is short-lived. The dragon will not be deterred for long, and you must think quickly to survive.\n\nDurnan the Barkeep, ever the pragmatic and seasoned veteran of countless adventures that have begun or ended within his tavern, watches the scene with a keen eye. He seems to be sizing up the situation, perhaps contemplating whether to intervene or to ensure the safety of his patrons and his establishment.\n\nGiven the current state of affairs, you notice a few potential avenues for your next move. The dragon, though formidable, seems momentarily distracted by the flames it has unleashed, potentially offering you a window of opportunity. Durnan, with his experience, might have insight or aid to offer, should you choose to involve him. The tavern itself, with its nooks, crannies, and hidden passages, could provide the means for a stealthy escape or a clever ambush.\n\nYour party remains healthy, a testament to your skill and the fortune that has favored you thus far. However, the introduction of a dragon into the Yawning Portal Tavern has significantly altered the dynamics of your situation, demanding swift and strategic thinking to navigate this unexpected turn of events.\n\nAs you catch your breath and ponder your next move, the dragon begins to move, its claws scraping against the stone floor as it readies to strike again. The choice of how to proceed is yours, set against the backdrop of a tavern now transformed into a battleground. Will you seek to outmaneuver the dragon, enlist the aid of Durnan or other patrons, or perhaps uncover a hidden advantage within the tavern's ancient walls? The outcome hangs in the balance, awaiting your decision.",
+    "latency_ms": 3192,
+    "skipped_agents": [
+      "rag"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 1,
+      "character_voice": 4,
+      "relevance": 5
+    },
+    "composite": 3.75
+  },
+  {
+    "experiment": "No RAG",
+    "input": "I tell Durnan I'm looking for information about the Undermountain.",
+    "input_type": "roleplay",
+    "response": "As you approach Durnan, the barkeep, the warm glow of the fire pit casts a golden light on his weathered face, illuminating the deep lines and creases that map out his years of experience. The murmur of hushed conversations and the clinking of mugs fill the air, but Durnan's eyes, a piercing blue, lock onto yours with an air of curiosity. He wipes his meaty hands on a dirty apron, his movements economical and deliberate, before leaning in closer to you.\n\n\"Undermountain, you say?\" Durnan's voice is low and gravelly, like the rumble of stones shifting deep beneath the earth. \"What business do you have in that forsaken place?\" His eyes narrow, as if sizing you up, searching for any hidden motives or weaknesses.\n\nThe tavern's patrons seem to sense the shift in conversation, their gazes drifting toward you like moths drawn to a flame. A hooded figure in the corner, nursing a mug of ale, looks up, their eyes glinting with interest. The air in the tavern grows heavier, as if the very mention of Undermountain has awakened a collective sense of unease.\n\nDurnan's expression remains neutral, but his tone hints at a deeper knowledge, a sense that he's not telling you everything. \"I can provide you with... information,\" he says, his voice dripping with an unspoken caveat. \"But it won't come cheap. What are you willing to pay for it?\"\n\nThe fire pit crackles, casting flickering shadows on the walls as the patrons wait with bated breath for your response. The Rules Arbiter's discretion is clear: the outcome of your inquiry hangs in the balance, dependent on your next move. Will you negotiate with Durnan, offer him a trade, or perhaps try to intimidate him into revealing more? The choice is yours, and the consequences will be yours to bear.",
+    "latency_ms": 2761,
+    "skipped_agents": [
+      "rag"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 5,
+      "relevance": 5
+    },
+    "composite": 5.0
+  },
+  {
+    "experiment": "No RAG",
+    "input": "I try to persuade the guard to let us through without paying.",
+    "input_type": "roleplay",
+    "response": "As you approach the guard standing at the entrance of the Yawning Portal Tavern, the warm glow of the fire pit casts a golden light on the scene, illuminating the determined look on your face. The guard, a stout dwarf with a thick beard, eyes you warily, his hand resting on the hilt of his sword. Durnan, the barkeep, polishes a mug with a dirty apron, watching the exchange with interest.\n\nYou launch into a charming speech, attempting to persuade the guard to let you and your party through without paying the entrance fee. Your words are laced with persuasive flair, and you can see the guard's expression soften ever so slightly. However, his eyes dart towards Durnan, who raises an eyebrow, clearly amused by the spectacle.\n\nThe guard clears his throat, his voice firm but with a hint of hesitation. \"I'm afraid it's not up to me, friend. Durnan's the one who sets the rules around here. You'll need to convince him, not me.\" He nods towards the barkeep, who's now leaning against the counter, a sly grin spreading across his face.\n\nDurnan pushes off from the counter, his eyes glinting with mirth. \"Ah, I think I'll make an exception... this time. But only if you can answer a riddle, adventurer. If you answer correctly, I'll waive the entrance fee. But if you fail... let's just say you'll be buying a round for the whole tavern.\"\n\nThe room falls silent, patrons turning to watch the exchange. Durnan leans in, a mischievous twinkle in his eye, and says, \"Here's the riddle: What can be broken, but never held? What can be given, but never sold?\" He leans back, a self-satisfied smile on his face, awaiting your response.\n\nThe outcome of your action is that you've managed to pique Durnan's interest, and he's willing to make a deal with you. However, the terms of the deal are now in your hands. Will you be able to solve the riddle and gain free passage, or will you fail and be forced to buy a round for the tavern? The choice is yours.",
+    "latency_ms": 3456,
+    "skipped_agents": [
+      "rag"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 4,
+      "character_voice": 5,
+      "relevance": 5
+    },
+    "composite": 4.75
+  },
+  {
+    "experiment": "No RAG",
+    "input": "I intimidate the merchant into giving us a discount.",
+    "input_type": "roleplay",
+    "response": "As you turn your attention to the merchant, the warm glow of the Yawning Portal Tavern's fire pit casts a golden light on the scene, illuminating the intricate details of the merchant's wares. The air is thick with the smell of ale and roasting meat, and the murmur of hushed conversations fills the background. Durnan, the barkeep, polishes a mug with a white apron, his eyes fixed on you with a mix of curiosity and amusement.\n\nYou approach the merchant, a portly man with a well-groomed beard and a keen eye for profit. His stall is a treasure trove of exotic goods, from rare spices to intricately crafted trinkets. As you loom over him, your intention to intimidate clear, the merchant's eyes dart towards Durnan, seeking reassurance or intervention.\n\nWith a deep breath, you begin to speak, your voice low and even, yet laced with a hint of menace. \"I'm looking for a fair deal, merchant. I'm willing to pay a reasonable price, but I won't be taken advantage of. I expect a discount, and I expect it now.\" Your words hang in the air, heavy with the weight of your intent.\n\nThe merchant, sensing the tension, swallows hard, his Adam's apple bobbing up and down. He glances at Durnan once more, then back at you, before responding in a nervous tone, \"A-ah, yes, of course, good sir. I can... uh... offer you a discount. A small one, mind you.\" He fumbles with his calculations, eventually settling on a price that is indeed lower than his initial offer.\n\nAs the merchant speaks, the atmosphere in the tavern remains tense, with patrons casting sideways glances at the scene unfolding before them. Durnan, however, seems unfazed, his attention returning to polishing the mug, a hint of a smile playing on his lips.\n\nThe outcome of your intimidation is a success, with the merchant offering a discounted price for the goods. However, it is clear that your actions have not gone unnoticed, and the seeds of tension have been sown. The merchant, though compliant, seems wary, and the patrons of the tavern are now more alert, their eyes fixed on you with a mixture of curiosity and suspicion.\n\nThe scene is set, the stage is lit, and the players are in position. The question is, what will you do next? Will you accept the merchant's offer, or will you push for a better deal? The choice is yours, and the consequences of your actions will be yours to bear.",
+    "latency_ms": 2890,
+    "skipped_agents": [
+      "rag"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 1,
+      "character_voice": 5,
+      "relevance": 4
+    },
+    "composite": 3.75
+  },
+  {
+    "experiment": "No Memory",
+    "input": "I draw my sword and attack the goblin chief.",
+    "input_type": "combat",
+    "response": "As you draw your sword, the dim torchlight in the cavernous lair dances across the blade, casting eerie shadows on the walls. The air is thick with tension, and the goblin chief's beady eyes gleam with a mix of excitement and wariness. The chief, perched atop a crude throne carved from a massive stone, lets out a cackling laugh, clearly relishing the prospect of battle.\n\nWith a fierce cry, you charge forward, your sword at the ready. The goblin chief, anticipating your attack, readies its own crude spear, its pointed tip glinting with a wicked edge. The two of you clash in a flurry of steel and wood, the outcome hanging precariously in the balance.\n\nTo determine the success of your attack, you must make a Melee Attack roll. The goblin chief's Armor Class is 15, a formidable defense that will require a precise and powerful strike to overcome. Roll a d20 and add your relevant attack bonus to the result. If the total equals or exceeds 15, your attack will hit its mark.\n\nThe dice roll is in your hands. Will your sword bite deep into the goblin chief's defenses, or will its crude spear prove a more formidable obstacle than you anticipated? The fate of this battle hangs in the balance, waiting for the outcome of your roll...",
+    "latency_ms": 5089,
+    "skipped_agents": [
+      "memory"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    },
+    "composite": 4.75
+  },
+  {
+    "experiment": "No Memory",
+    "input": "I cast Fireball at the cluster of skeletons near the doorway.",
+    "input_type": "combat",
+    "response": "As you raise your hands, a brilliant flash of light illuminates the dark chamber, and a blast of fiery energy erupts from your outstretched fingers. The air seems to ripple with heat as a blazing orb of flame, a Fireball, shoots forth from your spellcasting, soaring towards the cluster of skeletons gathered near the doorway. The skeletons, their empty eye sockets fixed on you with an unblinking stare, stand frozen in anticipation of the impending doom.\n\nThe Fireball explodes in a spectacular display of flames, engulfing the skeletons and the surrounding area within a 20-foot-radius sphere. The blast is so intense that it scorches the stone walls, sending waves of heat radiating outward, and filling the air with the acrid smell of charred bone and smoke.\n\nAs the flames dance across the skeletons, they are forced to make a desperate bid for survival. Each skeleton must make a Dexterity saving throw to avoid the worst of the flames. The DC for this saving throw is 15, a formidable challenge even for the most agile of undead creatures.\n\nRolling the dice for each skeleton, we get the following results:\n\n* Skeleton 1: Rolls a 12, failing to meet the DC of 15.\n* Skeleton 2: Rolls a 18, successfully avoiding the worst of the flames.\n* Skeleton 3: Rolls a 6, failing miserably and taking the full brunt of the Fireball's fury.\n* Skeleton 4: Rolls a 14, narrowly missing the mark and taking significant damage.\n* Skeleton 5: Rolls a 10, failing to avoid the flames and suffering the consequences.\n\nThe skeletons that failed their saving throws are engulfed by the flames, their bony bodies crumbling to ashes as the fire rages on. The two skeletons that succeeded in their saving throws, however, manage to avoid the worst of the blast, though they are still scorched and blackened by the intense heat.\n\nThe doorway, once a potential chokepoint, is now a smoldering ruin, the skeletons that guarded it either destroyed or severely weakened. The path ahead, though still treacherous, is now clearer, and you sense that the secrets and dangers that lie beyond the doorway are within your grasp. What will you do next, brave adventurer?",
+    "latency_ms": 6524,
+    "skipped_agents": [
+      "memory"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 1,
+      "relevance": 5
+    },
+    "composite": 4.0
+  },
+  {
+    "experiment": "No Memory",
+    "input": "I try to grapple the orc and pin him against the wall.",
+    "input_type": "combat",
+    "response": "As you charge towards the orc, the dimly lit chamber seems to shrink, the air thickening with tension. The orc, its tusked mouth twisted in a snarl, readies itself for your attack. You can see the muscles in its arms and legs tensing, preparing to resist your attempt to grapple. The sound of dripping water and the faint scent of mold fill your senses, heightening your focus.\n\nWith a fierce battle cry, you lunge at the orc, aiming to wrap your arms around its waist and pin it against the cold, damp stone wall. The orc, anticipating your move, shifts its weight, its eyes locked onto yours with a fierce glint. The two of you clash, your bodies straining against each other as you attempt to establish dominance.\n\nTo succeed in your grapple, you must make a Strength (Athletics) check, contested by the orc's Strength (Athletics) or Dexterity (Acrobatics) check. The DC for this challenge is 15, a moderate test of your physical prowess. Roll a d20, add your Strength modifier and proficiency bonus (if applicable), and compare the total to the DC.\n\nAs you make your check, the outcome hangs in the balance. Will you manage to overpower the orc, or will it slip free from your grasp? The fate of this encounter hangs precariously in the balance, waiting for the result of your roll.\n\nPlease roll a d20 and add the relevant modifiers to determine the success of your grapple attempt. The orc, meanwhile, will roll its own check to resist your attempt, using its Strength (Athletics) or Dexterity (Acrobatics) skill. The result will determine the outcome of this intense, physical confrontation.",
+    "latency_ms": 6431,
+    "skipped_agents": [
+      "memory"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    },
+    "composite": 4.75
+  },
+  {
+    "experiment": "No Memory",
+    "input": "I shoot my crossbow at the bandit on the rooftop.",
+    "input_type": "combat",
+    "response": "As you raise your crossbow, the worn wooden stock creaks softly against your shoulder. Your eyes narrow, focusing on the bandit perched on the rooftop, their figure silhouetted against the moonlit sky. The air is heavy with anticipation, the only sound the distant hum of crickets and the gentle rustle of leaves in the night breeze. You take a deep breath, steady your aim, and squeeze the trigger.\n\nThe crossbow's string snaps taut, releasing the bolt with a sharp twang. It soars through the air, a tiny, deadly projectile hurtling towards its target. Time seems to slow as the bolt arcs towards the bandit, who remains oblivious to the danger hurtling their way.\n\nTo determine the success of your shot, you'll need to make a Ranged Weapon Attack roll. Roll a d20 and add your proficiency bonus, as well as your DEX modifier, to the result. The bandit's Armor Class is 12, so you'll need to meet or exceed this number to hit your mark.\n\nPlease roll a d20 and add the relevant modifiers. Remember, your proficiency bonus and DEX modifier will affect the outcome of this shot. Will your bolt find its mark, or will it sail harmlessly into the night?\n\nThe fate of your attack hangs in the balance, as the bolt continues its trajectory towards the unsuspecting bandit. The outcome is far from certain, and only the roll of the dice will determine the success of your shot.",
+    "latency_ms": 5436,
+    "skipped_agents": [
+      "memory"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 1,
+      "relevance": 5
+    },
+    "composite": 4.0
+  },
+  {
+    "experiment": "No Memory",
+    "input": "I dodge behind a pillar to avoid the dragon's fire breath.",
+    "input_type": "combat",
+    "response": "As the dragon's jaws open wide, unleashing a torrent of flames that threaten to engulf you, you swiftly dash towards the nearest pillar, hoping to find refuge behind its sturdy stone column. The air is filled with the acrid smell of smoke and ozone as the dragon's fire breath illuminates the darkened chamber, casting flickering shadows on the walls. The heat from the flames washes over you, making your skin prickle with sweat as you narrowingly avoid the inferno.\n\nTo successfully dodge the fire breath, you must make a Dexterity saving throw, rolling a d20 and adding your Dexterity saving throw modifier to the result. The dragon's Fire Breath is a formidable attack, and to avoid its full fury, you'll need to meet or exceed a DC of 13. The fate of your character hangs in the balance, as a successful dodge will grant you temporary respite, while failure will leave you scorched and vulnerable to the dragon's subsequent attacks.\n\nAs you move to dodge, the pillar looms before you, its surface etched with ancient carvings that seem to dance in the flickering light. You can feel the warmth of the stone beneath your hand as you brush against it, using it to steady yourself. The dragon's flames are mere inches from your face, and you can feel the heat radiating from them, making your eyes water.\n\nThe roll of the dice will determine your fate. Will you successfully dodge behind the pillar, or will the dragon's fire breath prove too much to evade? The outcome hangs precariously in the balance, as you hold your breath and await the result of your Dexterity saving throw. Please roll a d20 and add your Dexterity saving throw modifier to the result, and we will proceed from there.",
+    "latency_ms": 9498,
+    "skipped_agents": [
+      "memory"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    },
+    "composite": 4.75
+  },
+  {
+    "experiment": "No Memory",
+    "input": "I tell Durnan I'm looking for information about the Undermountain.",
+    "input_type": "roleplay",
+    "response": "As you sit across from Durnan, the proprietor of the Yawning Portal Inn, the warm glow of the fire pit and the soft murmur of hushed conversations envelop you. The air is thick with the smell of roasting meats and freshly brewed ale, but your focus remains fixed on the enigmatic figure before you. Durnan's eyes, a piercing blue, seem to bore into your very soul as you broach the subject of the Undermountain.\n\n\"I'm looking for information about the Undermountain,\" you say, your voice low and even. Durnan's expression remains inscrutable, but a hint of curiosity flickers in his gaze. He leans back in his chair, steepling his fingers together as he regards you with a measured interest.\n\nTo gauge Durnan's willingness to share information, you'll need to make a Charisma (Persuasion) check. Roll a d20 and add your Charisma modifier, as well as your proficiency bonus if you're proficient in Persuasion. The total will need to meet or exceed a DC of 15, considering Durnan's guarded nature.\n\nAs you await the outcome of your check, Durnan's voice takes on a cautious tone. \"The Undermountain, you say? A treacherous place, full of dark secrets and forgotten lore. What is it that you hope to find within its depths?\" His words are laced with a mixture of curiosity and wariness, leaving you to wonder what secrets he might be hiding.\n\nPlease roll a d20 and add the relevant modifiers to determine the success of your Persuasion check. The outcome will dictate how much information Durnan is willing to share, and what, if any, strings might be attached to his revelations.",
+    "latency_ms": 5551,
+    "skipped_agents": [
+      "memory"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 5,
+      "relevance": 5
+    },
+    "composite": 5.0
+  },
+  {
+    "experiment": "No Memory",
+    "input": "I try to persuade the guard to let us through without paying.",
+    "input_type": "roleplay",
+    "response": "As you approach the guard, the sound of clanging swords and murmured conversations from the nearby market stalls fills the air. The guard, a sturdy man with a thick beard and a stern expression, eyes you warily, his hand resting on the hilt of his sword. The gate behind him, adorned with intricate ironwork, remains firmly shut, a physical barrier between you and the exclusive district beyond.\n\nYou take a deep breath, a charming smile spreading across your face as you begin to weave a persuasive tale. Your words are laced with sincerity and conviction, as you explain that you're on a mission of utmost importance, one that requires your presence in the exclusive district without delay. You appeal to the guard's sense of duty, emphasizing that your quest could benefit the entire city, and that a brief bypass of protocol would be a minor concession in the grand scheme.\n\nThe guard raises an eyebrow, clearly intrigued by your words, but his expression remains skeptical. He eyes you up and down, weighing his options, as he considers your request. You sense a glimmer of uncertainty in his demeanor, and you press on, pouring all your charm and persuasive might into the conversation.\n\nTo succeed, you'll need to make a Charisma (Persuasion) check, with a DC of 15. Roll a d20, add your Charisma modifier and your proficiency bonus (if applicable), and compare the total to the DC. If you equal or exceed the DC, your persuasive efforts will have paid off, and the guard might just grant you passage without demanding payment.\n\nThe guard leans in, his voice taking on a conspiratorial tone, \"I'm not sure I can just let you through, friend. What's in it for me?\" The outcome hangs in the balance, as you await the result of your Charisma (Persuasion) check. Will your silver tongue be enough to convince the guard, or will you need to resort to other means to gain entry? The dice are in your hands.",
+    "latency_ms": 5015,
+    "skipped_agents": [
+      "memory"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    },
+    "composite": 4.75
+  },
+  {
+    "experiment": "No Memory",
+    "input": "I intimidate the merchant into giving us a discount.",
+    "input_type": "roleplay",
+    "response": "As you step forward, your eyes lock onto the merchant, who looks up from the array of exotic spices and fine silks laid out before him. The air is thick with the scent of cardamom and the sound of merchants hawking their wares fills the background, but your focus is singular. You take a deep breath, letting your voice drop to a low, menacing tone, and begin to speak.\n\nThe merchant, a stout man with a well-groomed beard and a calculating glint in his eye, looks up at you with a mixture of curiosity and wariness. He has likely dealt with his fair share of tough customers and haggling, but there's something in your demeanor that makes him pause. You can see the faintest flicker of uncertainty dance across his face as he sets down the small, delicate vase he was about to wrap for a customer.\n\nTo see how effective your intimidation is, you'll need to make a Charisma (Intimidation) check. The DC for this check is 15, reflecting the merchant's experience with tough negotiations, but also leaving room for you to potentially unsettle him.\n\nRolling a d20 and adding your Charisma modifier and Intimidation skill level, you get... (please provide the roll result).\n\nAssuming a successful roll, the merchant's eyes dart back and forth, searching for an escape or a way to de-escalate the situation. He clears his throat, his voice taking on a slightly tremulous quality as he speaks. \"A-ah, yes, well, I suppose I could... offer you a discount. A small one, of course. Just for you, my... friend.\" He forces a weak smile, his hands moving nervously as he calculates the new price.\n\nHowever, if the roll result is 14 or lower, the merchant's expression hardens, and he looks at you with a mixture of annoyance and amusement. \"I'm afraid I don't respond well to threats, my friend,\" he says, his voice firm but controlled. \"If you'd like to make a serious offer, I'm happy to listen. Otherwise, I'm afraid the price stands as is.\"\n\nThe crowd around you begins to take notice, their conversations dying down as they sense the tension. The merchant's eyes flicker towards the city guards, stationed at the edge of the market, before returning to you. It's clear that he's not looking to escalate the situation, but he's also not going to back down without a fight.\n\nWhat happens next is up to you, and the outcome of your Intimidation check. Will you succeed in cowing the merchant, or will he stand firm against your attempts to intimidate him? The roll result will determine the course of the negotiation.",
+    "latency_ms": 9320,
+    "skipped_agents": [
+      "memory"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 5,
+      "relevance": 5
+    },
+    "composite": 5.0
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "I draw my sword and attack the goblin chief.",
+    "input_type": "combat",
+    "response": "As you draw your sword, the warm glow of the Yawning Portal Tavern's fire pit casts a golden light on the blade, illuminating the intricate designs etched into its surface. The patrons of the tavern, once engaged in their own conversations, turn to watch the scene unfold. Durnan, the barkeep, wipes his hands on a dirty apron, his eyes fixed on the goblin chief, who stands atop a chair, its beady eyes fixed on you.\n\nWith a fierce battle cry, you charge towards the goblin chief, your sword at the ready. The goblin, anticipating your attack, lets out a high-pitched cackle and readies its crude spear. The air is electric with tension as the two of you clash.\n\nTo determine the success of your attack, you must make an Attack Roll (Melee Weapon Attack) against the goblin chief's Armor Class of 15. Roll a d20 and add your relevant ability score modifier and proficiency bonus to the roll. If the total equals or exceeds 15, your attack hits.\n\nPlease roll a d20 and add your relevant modifiers to the roll. The fate of this battle hangs in the balance.\n\n(Note: As the Dungeon Master, I will guide the scene and provide the outcome based on your roll. Remember to include your character's relevant ability score modifier and proficiency bonus in your roll.)",
+    "latency_ms": 6746,
+    "skipped_agents": [
+      "npc"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    },
+    "composite": 4.75
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "I cast Fireball at the cluster of skeletons near the doorway.",
+    "input_type": "combat",
+    "response": "As you utter the words of the incantation, the warm glow of the Yawning Portal Tavern's fire pit seems to flicker in anticipation. The air is electric with magical energy, and the patrons of the tavern can't help but feel a sense of foreboding. Your eyes are fixed on the cluster of skeletons near the doorway, their empty sockets seeming to stare back at you with a malevolent glare.\n\nWith a swift gesture, you release the pent-up energy, and a blazing orb of fire erupts from your outstretched hand. The fireball shoots towards the skeletons, illuminating the darkening tavern with a fiery glow. The skeletons, caught off guard, are forced to react quickly to avoid the impending inferno.\n\nTo avoid the blast, the skeletons must make a Dexterity saving throw. The DC for this throw is 15, a challenging feat even for the most agile of undead creatures. The skeletons, their bony bodies swaying unsteadily, roll the dice...\n\nThe first skeleton rolls a 10, its bones rattling as it attempts to dodge the fireball. Unfortunately, the roll falls short, and the skeleton is engulfed in the flames.\n\nThe second skeleton rolls a 14, its skeletal frame jerking to the side as it narrowly avoids the blast. However, the heat from the fireball still deals some damage, and the skeleton's bones are scorched and blackened.\n\nThe third skeleton rolls a 17, its undead body moving with a sudden, unnatural speed as it dodges the fireball with ease. The skeleton emerges unscathed, its empty sockets gleaming with a malevolent intent.\n\nThe fireball explodes near the doorway, sending flames licking at the wooden frame and scorching the stone floor. The blast is intense, and the tavern's patrons stumble backward, shielding their faces from the heat. Durnan, the barkeep, shouts a warning, his voice carrying above the din of the explosion.\n\nAs the flames die down, the scene is one of smoldering destruction. The first skeleton lies in a smoldering heap, its bones reduced to ashes. The second skeleton stands, its scorched remains a testament to the fireball's fury. The third skeleton, unscathed and unfazed, begins to move towards you with an unnatural gait, its empty sockets burning with an unholy hunger.\n\nThe tavern is in chaos, the patrons screaming and scrambling to get away from the destruction. Durnan, his face set in a stern expression, approaches you, his eyes blazing with a mixture of concern and warning. \"What have you done, adventurer?\" he growls, his voice low and menacing. \"You've brought danger to my doorstep, and now you must deal with the consequences.\"",
+    "latency_ms": 7702,
+    "skipped_agents": [
+      "npc"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    },
+    "composite": 4.75
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "I try to grapple the orc and pin him against the wall.",
+    "input_type": "combat",
+    "response": "As you charge towards the orc, the warm glow of the fire pit in the Yawning Portal Tavern casts a golden light on the scene, illuminating the tense atmosphere. The patrons of the tavern, once engaged in their own conversations, now turn their attention to the impending confrontation. Durnan, the barkeep, watches with a keen eye, his hand resting on the handle of a sturdy wooden club beneath the counter.\n\nYou lunge at the orc, your arms outstretched, aiming to grapple him. The orc, caught off guard, stumbles backward as you wrap your arms around his torso. The two of you crash into the wall, the sound of scraping wood and grunting effort filling the air. The orc's eyes widen in surprise, and for a moment, he seems stunned.\n\nTo successfully grapple the orc, you must make a Strength (Athletics) check. The DC for this check is 15, taking into account the orc's medium size and average strength. Roll a d20, add your Strength modifier and Athletics skill level, and compare the total to the DC.\n\nAs you struggle to pin the orc against the wall, the outcome hangs in the balance. If you succeed, you will have the orc momentarily subdued, giving you an opportunity to dictate the terms of the confrontation. However, if you fail, the orc may break free, and the situation could escalate further.\n\nThe dice roll will determine the outcome. Please roll a d20 and add your relevant modifiers to the roll. The result will decide the fate of this intense struggle. Will you emerge victorious, or will the orc gain the upper hand? The tavern holds its breath, awaiting the outcome.",
+    "latency_ms": 10178,
+    "skipped_agents": [
+      "npc"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    },
+    "composite": 4.75
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "I shoot my crossbow at the bandit on the rooftop.",
+    "input_type": "combat",
+    "response": "As you raise your crossbow, the warm glow of the Yawning Portal Tavern's fire pit casts a golden light on the rooftops outside, illuminating the bandit's furtive form. The sound of laughter and clinking glasses from within the tavern provides a stark contrast to the tense scene unfolding before you. The bandit, seemingly unaware of the danger lurking below, continues to scan the surrounding rooftops, searching for potential prey.\n\nYou take a deep breath, focusing on your target as you steady your aim. The bandit's position on the rooftop, silhouetted against the night sky, makes for a challenging shot. You're using a Heavy Crossbow, its sturdy frame and powerful spring capable of delivering a significant amount of force. With your proficiency in using the Heavy Crossbow, you add your Dexterity modifier (+2 in your case) and your proficiency bonus (+3) to the roll.\n\nTo hit the bandit, you'll need to roll a d20 and add your total attack bonus (+5) to the result. If the total equals or exceeds the bandit's Armor Class (12), you'll strike true. The dice rolls...\n\nThe result of the roll is: **14**\n\nWith a total of 19 (14 + 5), you easily surpass the bandit's AC of 12. Your bolt soars through the air, flying straight and true, and strikes the bandit with a loud thud. The bandit's eyes widen in surprise as the bolt embeds itself in their shoulder, causing them to cry out in pain and stumble backwards.\n\nThe bandit's companions, alerted by the commotion, begin to stir, their heads peeking out from behind nearby chimneys and rooftops. The situation is about to escalate, and it's unclear how the bandits will respond to their injured companion. Durnan, the barkeep, looks up from his work, a mixture of curiosity and concern etched on his face, as the patrons of the Yawning Portal Tavern begin to take notice of the disturbance outside.\n\nThe outcome of your shot has set events in motion. How will you proceed?",
+    "latency_ms": 9562,
+    "skipped_agents": [
+      "npc"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    },
+    "composite": 4.75
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "I dodge behind a pillar to avoid the dragon's fire breath.",
+    "input_type": "combat",
+    "response": "As you swiftly move to dodge behind a pillar, the warm glow of the Yawning Portal Tavern's fire pit casts a golden light on the chaotic scene unfolding before you. The Bronze Dragon Wyrmling, its scales glinting like polished bronze in the firelight, unleashes a mighty roar as it breathes a stream of fire that threatens to engulf the tavern. The flames dance and flicker, casting eerie shadows on the walls as they hurtle towards you.\n\nWith a burst of adrenaline, you sprint towards the nearest pillar, your heart racing with the urgency of the moment. The air is filled with the acrid smell of smoke and the sound of crackling flames. Your Dexterity is put to the test as you attempt to dodge behind the pillar, and you must make a Dexterity saving throw to succeed.\n\nRolling a d20 and adding your Dexterity modifier, you get a total of... 16. With a DC of 13, your roll exceeds the required threshold, and you successfully dodge behind the pillar just as the dragon's fire breath engulfs the spot where you stood mere moments before.\n\nThe pillar shields you from the worst of the flames, but the heat is still intense, and you can feel the warmth radiating through the stone. The dragon's fire breath illuminates the tavern, casting a fiery glow over the room. Durnan the Barkeep, his face set in a determined expression, readies a large bucket of water to extinguish any flames that might spread.\n\nAs the fire breath dissipates, you peer around the pillar to assess the situation. The tavern is in disarray, with patrons scrambling to escape the danger. The Bronze Dragon Wyrmling, its fire breath spent, begins to circle the room, its eyes fixed on you with a fierce determination. The air is thick with tension, and the outcome of this encounter hangs precariously in the balance. What will you do next?",
+    "latency_ms": 9895,
+    "skipped_agents": [
+      "npc"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    },
+    "composite": 4.75
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "I tell Durnan I'm looking for information about the Undermountain.",
+    "input_type": "roleplay",
+    "response": "As you approach Durnan, the warm glow of the Yawning Portal Tavern's fire pit casts a golden light on the barkeep's rugged features. The air is thick with the smell of roasting meats and freshly brewed ale, and the murmur of hushed conversations fills the room. Durnan, polishing a mug with a dirty apron, looks up at you with a discerning eye, his expression a mix of curiosity and wariness.\n\n\"I'm looking for information about the Undermountain,\" you say, your voice clear and confident.\n\nDurnan's gaze lingers on you for a moment, as if sizing you up. He sets the mug down and leans against the bar, his arms crossed over his chest. \"What makes you think I'd know anything about the Undermountain, friend?\" he asks, his tone neutral, but with a hint of skepticism.\n\nTo persuade Durnan to share information, you'll need to make a Charisma (Persuasion) check. Roll a d20 and add your Charisma modifier to the result. The DC is 15, considering Durnan's experience and potential reluctance to share sensitive information.\n\nPlease roll the dice.\n\n(Note: As the Dungeon Master, I'll guide the outcome based on your roll. If you succeed, Durnan might share valuable information. If you fail, he might become more guarded or even hostile.)\n\nThe room falls silent, with patrons turning to listen in on your conversation. The fire crackles, and the shadows on the walls seem to grow longer, as if the very darkness itself is waiting for Durnan's response. What will you roll?",
+    "latency_ms": 7952,
+    "skipped_agents": [
+      "npc"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 5,
+      "relevance": 5
+    },
+    "composite": 5.0
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "I try to persuade the guard to let us through without paying.",
+    "input_type": "roleplay",
+    "response": "As you approach the guard, the warm glow of the Yawning Portal Tavern's fire pit casts a golden light upon the scene, illuminating the determined look on the guard's face. The murmur of hushed conversations and the clinking of glasses from the tavern's patrons create a soothing background melody, a stark contrast to the tension that hangs in the air like a challenge. Durnan, the barkeep, polishes a mug with a white apron, his eyes fixed on you with interest, as if anticipating the outcome of your attempt to persuade the guard.\n\nYou take a deep breath, and with a charming smile, you begin to weave a convincing tale, aiming to persuade the guard to let you and your party through without paying the required fee. Your words are laced with sincerity, and your tone is confident, as you explain that you're not just any ordinary adventurers, but rather, you're on a mission to uncover the secrets of the Undermountain, a quest that could bring great prosperity to the city.\n\nTo succeed in your persuasion, you'll need to make a Charisma (Persuasion) check. Roll a d20 and add your Charisma modifier, as well as your proficiency bonus, to the result. The total must equal or exceed the DC of 15, set by the guard's firm but reasonable stance.\n\nAs you finish your plea, the guard raises an eyebrow, clearly impressed by your eloquence. He strokes his chin, weighing his options, and for a moment, the only sound is the crackling of the fire pit. The patrons of the tavern seem to be holding their collective breath, awaiting the guard's response.\n\nThe guard's expression remains firm, but a hint of a smile plays on his lips. \"I must admit, you're a silver-tongued devil, aren't you?\" he says, his voice low and gravelly. \"But, I'm afraid it'll take more than just charm to convince me to waive the fee. You'll need to roll a total of 15 or higher on your Charisma (Persuasion) check to persuade me.\"\n\nThe guard leans in, his eyes glinting with amusement. \"So, what's the result of your roll? Will you succeed in persuading me, or will you need to find another way to gain entry to the Undermountain?\"",
+    "latency_ms": 7241,
+    "skipped_agents": [
+      "npc"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    },
+    "composite": 4.75
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "I intimidate the merchant into giving us a discount.",
+    "input_type": "roleplay",
+    "response": "As you fix the merchant with a stern gaze, the warm glow of the Yawning Portal Tavern's fire pit casts a golden light on the scene, illuminating the intricate dance of patrons and tavern staff. The air is thick with the smell of roasting meats and the murmur of hushed conversations. Durnan, the barkeep, polishes a mug with a white apron, his eyes flicking towards you with interest, but he remains neutral, accustomed to the ebb and flow of negotiations within his establishment.\n\nYou take a step closer to the merchant, your voice low and even, as you attempt to intimidate him into giving you a discount. The merchant, a portly man with a well-groomed beard, looks up at you with a mixture of curiosity and caution. He seems to be sizing you up, wondering if you're bluffing or if you're truly a force to be reckoned with.\n\nTo succeed in your intimidation, you'll need to make a Charisma (Intimidation) check. The DC for this check is 15, considering the merchant's likely experience with haggling and negotiations. Roll a d20 and add your Charisma modifier, as well as your proficiency bonus if you're proficient in Intimidation.\n\nAs you make your check, the tavern's patrons begin to take notice of the scene unfolding before them. Some lean in, intrigued by the potential conflict, while others continue their conversations, unfazed by the tension.\n\nPlease roll a d20 and add the relevant modifiers to determine the outcome of your Intimidation check. If the total equals or exceeds 15, your intimidation is successful, and the merchant may be more willing to grant you a discount. However, if the total is lower than 15, your attempt at intimidation may fall flat, or even backfire, leading to unintended consequences.\n\nThe dice are in your hands, and the fate of your negotiation hangs in the balance. What is the result of your Charisma (Intimidation) check?",
+    "latency_ms": 10015,
+    "skipped_agents": [
+      "npc"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    },
+    "composite": 4.75
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "I draw my sword and attack the goblin chief.",
+    "input_type": "combat",
+    "response": "As you draw your sword, the dimly lit cavern is filled with the sound of scraping metal against leather, echoing off the damp stone walls. The air is heavy with tension, and the goblin chief's beady eyes lock onto you with a mixture of surprise and fury. The chief, perched atop a crude throne carved from a massive boulder, lets out a shrill cackle, baring pointed teeth.\n\nWith a swift and deadly motion, you charge towards the goblin chief, your sword at the ready. The chief, anticipating your attack, raises its own crude spear, adorned with jagged bones and feathers. The spear shakes with anticipation, as if eager to taste your blood.\n\nAs you close in, the goblin chief unleashes a vicious jab, aiming for your chest. You dodge to the side, avoiding the attack by mere inches. The spear scrapes against the stone floor, sending sparks flying in all directions. Seizing the opportunity, you swing your sword in a wide arc, aiming for the chief's exposed shoulder.\n\nThe blade bites deep into the chief's scrawny arm, causing it to let out a pained yelp. The chief stumbles backwards, clutching at the wound as dark, viscous blood begins to seep from the gash. The cavern falls silent, except for the sound of the chief's labored breathing and the soft dripping of blood onto the stone floor.\n\nThe goblin chief's eyes blaze with a fierce determination, and it begins to chant in a language that sends shivers down your spine. The air around you seems to grow colder, as if the very darkness itself is responding to the chief's incantation. The shadows appear to twist and writhe, like living tendrils, as the chief's power grows.\n\nThe outcome of your attack is clear: the goblin chief is wounded, but far from defeated. The true challenge has only just begun, as the chief's dark magic begins to take hold. The cavern is now a battleground, where steel and sorcery will clash in a struggle for dominance. What will you do next?",
+    "latency_ms": 2231,
+    "skipped_agents": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 2,
+      "character_voice": 4,
+      "relevance": 5
+    },
+    "composite": 4.0
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "I cast Fireball at the cluster of skeletons near the doorway.",
+    "input_type": "combat",
+    "response": "As you raise your hands, the air around you begins to shimmer with anticipation. The skeletons, their empty eye sockets fixed on you with a malignant glare, seem to sense the impending doom that is about to befall them. The cluster of undead warriors stands frozen, their bony fingers grasping rusted swords, as if momentarily paralyzed by the promise of the inferno that is to come.\n\nWith a swift, decisive motion, you utter the words of the incantation, and a burst of flame erupts from your outstretched hand. The fireball explodes in a blaze of orange and yellow, illuminating the darkened chamber with an intense, fiery glow. The skeletons, unable to escape the fury of the flames, are engulfed by the blast, their brittle bones shattering and splintering as the fire washes over them.\n\nThe sound of crackling flames and the acrid smell of burning bone fill the air, as the skeletons are reduced to smoldering, charred remnants. The doorway, once a threshold to unknown terrors, is now a scene of utter devastation, the skeletons' remains strewn about like macabre, blackened toys. The flames, however, have also illuminated a previously hidden aspect of the chamber: a series of ancient, dusty tapestries, adorned with forgotten symbols and murals, now visible on the walls, seem to whisper secrets to those who would dare to listen.\n\nThe fireball's fury has subsided, leaving behind an eerie, flickering glow, as if the very essence of the flames has imbued the chamber with an otherworldly energy. The air is heavy with the stench of smoke and char, and the silence that follows is oppressive, punctuated only by the faint, mournful creaking of the ancient wooden beams.\n\nAs the last wisps of smoke dissipate, you notice that the doorway, once a simple threshold, now appears to lead into a deeper, darker recess of the dungeon. The shadows beyond the entrance seem to twist and writhe, like living darkness, inviting you to step into the unknown. What will you do next, brave adventurer?",
+    "latency_ms": 1637,
+    "skipped_agents": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 2,
+      "character_voice": 4,
+      "relevance": 5
+    },
+    "composite": 4.0
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "I try to grapple the orc and pin him against the wall.",
+    "input_type": "combat",
+    "response": "As you charge towards the orc, the dimly lit tavern erupts into chaos. The patrons scramble to get out of the way, their faces filled with a mix of excitement and concern. The orc, caught off guard, stumbles backward as you close the distance between you. Your hands reach out, grasping for the orc's muscular arms, and you attempt to wrap your body around him.\n\nThe orc, however, is not one to be easily subdued. He lets out a fierce roar, his eyes blazing with fury, as he tries to shrug you off. The two of you crash into the wooden wall, the sound of splintering wood and scraping metal filling the air. The orc's massive frame makes him a formidable opponent, and you feel his strength as he tries to break free from your grasp.\n\nYour arms strain to maintain the hold, your muscles screaming in protest as the orc thrashes about. For a moment, it seems like the orc is about to overpower you, but you dig deep, drawing upon every last ounce of strength. Slowly, you manage to pin the orc against the wall, his chest heaving with exertion.\n\nThe tavern falls silent, the patrons watching in awe as you struggle to maintain control over the snarling, snapping orc. The air is thick with tension, the only sound the heavy breathing of the two combatants. The orc's eyes burn with hatred, and you can feel his rage coursing through his veins like liquid fire.\n\nAs you stand there, locked in this intense, physical struggle, you sense that the outcome is far from certain. The orc's fury is palpable, and you wonder if you'll be able to maintain your grip, or if he'll manage to break free and turn the tables on you. The moment hangs in the balance, and the fate of this brutal, brutal dance remains to be seen.\n\nThe scene is set, the stage is primed, and the question on everyone's mind is: what happens next? The mechanical aspects of this encounter are but a distant memory, as the true challenge lies in the raw, visceral struggle between you and the orc. The outcome will be decided by the whims of fate, and the choices you make in this moment will shape the course of this epic clash.",
+    "latency_ms": 2327,
+    "skipped_agents": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 2,
+      "character_voice": 4,
+      "relevance": 5
+    },
+    "composite": 4.0
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "I shoot my crossbow at the bandit on the rooftop.",
+    "input_type": "combat",
+    "response": "As you raise your crossbow, the worn wooden stock creaking softly in your hands, the bandit on the rooftop freezes, his eyes locking onto you with a mixture of surprise and desperation. The thatched roof, a deep golden brown from years of weathering, provides a precarious perch for the would-be thief, the wind rustling the dry grasses that sprout from the edges. The sun, now a burning orange orb sinking slowly towards the horizon, casts long shadows across the rooftops, making it seem as though the very buildings themselves are stretching out to snare the bandit.\n\nYou take a deep breath, feeling the familiar weight of the crossbow in your hands, the tension in the string a reminder of the power at your fingertips. Your aim is true, the bolt steady as you squeeze the trigger. The crossbow's mechanism releases with a sharp crack, the bolt shooting forth with deadly precision.\n\nThe bandit, realizing his predicament too late, attempts to dodge to the side, but his movements are clumsy and slow. The bolt, flying straight and true, strikes the bandit with a sickening thud, the sound echoing off the surrounding buildings. The bandit's body jerks violently, his arms flailing wildly as he stumbles backwards, the bolt embedded deep within his shoulder. A pained cry escapes his lips as he teeters on the edge of the roof, his balance precarious.\n\nFor a moment, time seems to stand still, the only sound the bandit's labored breathing and the creaking of the old wooden beams beneath his feet. Then, in a flash of movement, the bandit's body tilts backwards, and he disappears from view, landing with a thud on the ground below. The sound of his fall is followed by an unsettling silence, as if the very city itself is holding its breath, waiting to see what will happen next.\n\nThe mechanical aspects of your action are of little consequence now, for in this moment, it is not the numbers or the rules that matter, but the story unfolding before you. The bandit's fate is sealed, but the consequences of your actions are only just beginning to reveal themselves. The city, once a bustling hub of activity, seems to be growing darker, the shadows deepening as the sun dips below the horizon. What will you do next, now that the die has been cast?",
+    "latency_ms": 2251,
+    "skipped_agents": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 1,
+      "character_voice": 2,
+      "relevance": 5
+    },
+    "composite": 3.25
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "I dodge behind a pillar to avoid the dragon's fire breath.",
+    "input_type": "combat",
+    "response": "As the dragon's fiery gaze fixes upon you, the air seems to thicken with anticipation. The beast's massive chest expands, and a mighty roar echoes through the cavernous space, causing the ground to tremble beneath your feet. You swiftly dart behind a nearby pillar, the cool stone a meager shield against the impending inferno. The pillar, adorned with ancient carvings of long-forgotten battles, casts a slender shadow on the ground, a fragile haven from the flames that are about to engulf the area.\n\nAs you press yourself against the pillar, the dragon unleashes a torrent of fire that would reduce any ordinary obstacle to naught but smoldering ashes. The flames, like a raging storm, sweep across the space before you, casting a hellish glow over the surroundings. The heat is palpable, a living, breathing entity that sears the air and threatens to consume everything in its path.\n\nYour decision to dodge behind the pillar proves timely, as the fire breath, though it engulfs the area around you, does not directly reach your position. The pillar, sturdy and strong, endures the blast, protecting you from the worst of the flames. However, the heat is intense, and you can feel the stone behind you beginning to warm, a stark reminder that even this temporary shelter is not impervious to the dragon's fury.\n\nThe moment the dragon pauses to catch its breath, the cavern falls into an ominous silence, the only sound the crackling of flames and the distant echo of falling debris. It's clear that while your quick thinking has saved you from the immediate danger, the battle is far from over. The dragon, its fire breath spent for the moment, will surely turn its attention to you once more, perhaps seeking a more personal and brutal method to end your quest.\n\nYou find yourself at a crossroads, the outcome of your next move hanging precariously in the balance. Will you seize this brief respite to launch a counterattack, or will you seek another means of evasion, hoping to outmaneuver the beast once more? The choice, much like the fate that awaits you, hangs in the balance, as the dragon's eyes, like two glittering stars in the dark, begin their methodical search for you.",
+    "latency_ms": 2822,
+    "skipped_agents": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 4,
+      "character_voice": 3,
+      "relevance": 5
+    },
+    "composite": 4.25
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "I tell Durnan I'm looking for information about the Undermountain.",
+    "input_type": "roleplay",
+    "response": "As you sit at the bar in the Yawning Portal, the warm glow of the fire pit and the murmur of hushed conversations envelop you. Durnan, the gruff but affable proprietor, polishes a mug with a white apron, his eyes narrowing slightly as he regards you. The air is thick with the smell of roasting meat and freshly brewed ale. You lean in, your voice low, and say, \"I'm looking for information about the Undermountain.\"\n\nDurnan's expression turns thoughtful, and he sets the mug down, his eyes glinting with a mix of curiosity and wariness. He wipes his meaty hands on the apron, the gesture a habitual precursor to a serious conversation. \"Undermountain, eh?\" he says, his voice low and measured. \"That's a topic for the brave, the foolhardy, or those with a death wish.\" He eyes you appraisingly, as if sizing you up for the challenge. \"What is it you want to know?\"\n\nAs Durnan speaks, the atmosphere in the tavern seems to shift, the patrons' conversations dying down, their attention drawn to your exchange. The fire crackles, casting flickering shadows on the walls, and the shadows seem to grow longer, as if the very darkness itself is listening in.\n\nDurnan leans in closer, his voice taking on a conspiratorial tone. \"I can tell you that the Undermountain is a labyrinth of tunnels, caverns, and hidden chambers, full of secrets, treasures, and terrors beyond your wildest imagination. But be warned, friend, the Undermountain is no place for the faint of heart. Many have ventured in, never to return.\" He pauses, studying you intently. \"But if you're determined to delve into the depths, I might know a thing or two to get you started.\"\n\nThe outcome of your action is that Durnan is willing to share information about the Undermountain, but it's clear that he's choosing his words carefully, weighing the risks and benefits of revealing too much. The mechanical requirements of this scene are met by the narrative, as the story unfolds based on your actions and the DM's discretion, rather than any predetermined mechanical outcome. The scene is set, the characters are in play, and the adventure is about to begin. What will you do next?",
+    "latency_ms": 2294,
+    "skipped_agents": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 5,
+      "relevance": 5
+    },
+    "composite": 5.0
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "I try to persuade the guard to let us through without paying.",
+    "input_type": "roleplay",
+    "response": "As you approach the heavily fortified gate, the guard's piercing gaze falls upon you, his hand resting on the hilt of his sword. The sun beats down upon the dusty road, casting a golden glow over the scene. The air is thick with the smell of freshly baked bread wafting from the nearby market, and the sound of merchants hawking their wares fills the air. The guard, a grizzled veteran with a thick beard and a scar above his left eyebrow, eyes you warily.\n\nYou take a deep breath and launch into a charming smile, attempting to persuade the guard to let you through without paying the toll. Your words are smooth as honey, and you weave a tale of woe and hardship, of a noble quest to aid the downtrodden people of the land. The guard's expression remains stoic, but you notice a faint glimmer of curiosity in his eyes.\n\nAs you speak, you notice the guard's gaze darting to your companions, sizing them up before returning to you. You sense a hint of skepticism, but also a spark of interest. The guard leans in, his voice taking on a conspiratorial tone. \"I've heard tales of brave adventurers such as yourselves, seeking to bring hope to a land beset by darkness. But I've also seen many a charlatan and thief try to talk their way past me. What makes you think you're any different?\"\n\nThe guard's words hang in the air, a challenge to your persuasive abilities. You sense that he's not entirely convinced, but he's willing to listen. The outcome of your action hangs in the balance, as the guard's decision will determine whether you'll be allowed to pass without paying the toll.\n\nThe guard's eyes narrow, his expression unreadable. After a moment of tense silence, he responds, \"I'll tell you what, adventurer. I'll let you and your companions through, but not without a... token of your appreciation. I've got a bit of a problem on my hands, and I could use someone with your particular set of skills to help me out. If you're willing to lend a hand, I might just forget about the toll altogether.\"\n\nThe guard leans in closer, a sly grin spreading across his face. \"You see, there's been a string of strange occurrences in the nearby forest. Folks have gone in to gather firewood and never returned. Some say they've seen shadowy figures lurking just beyond the treeline. I've got a feeling that something's amiss, and I could use someone to investigate. What do you say, adventurer? Are you willing to take on this little task for me?\"",
+    "latency_ms": 2470,
+    "skipped_agents": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 4,
+      "character_voice": 5,
+      "relevance": 5
+    },
+    "composite": 4.75
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "I intimidate the merchant into giving us a discount.",
+    "input_type": "roleplay",
+    "response": "As you stand before the merchant, your eyes narrow and your voice takes on a low, menacing tone. The air in the cramped market stall seems to thicken, heavy with the weight of your unspoken threat. The merchant, a portly man with a well-groomed beard, looks up from the intricately carved wooden chest he's been polishing. His eyes, a deep brown that seems to hold a mixture of curiosity and wariness, lock onto yours.\n\nThe sounds of the bustling market – the clang of hammer on anvil, the murmur of haggling customers, and the sweet scent of exotic spices – fade into the background as the merchant's gaze meets yours. His hands, adorned with rings that glint in the flickering torchlight, hesitate in their polishing motion. For a moment, the only sound is the soft creaking of the wooden chest and the heavy breathing of the two of you.\n\nYour intimidation tactic is palpable, and the merchant's demeanor begins to shift. His eyes dart towards the nearby city guards, stationed at the edge of the market, before returning to yours. A faint sheen of sweat appears on his forehead, and his voice, when he speaks, is laced with a hint of nervousness.\n\n\"Ah, good sir, I... I think we can discuss the price,\" he stammers, his eyes never leaving yours. \"Perhaps, for a... a valued customer such as yourself, I can offer a... a small discount.\" He swallows hard, his Adam's apple bobbing up and down. \"Let us say... 10% off the listed price?\"\n\nThe merchant's words hang in the air, a tentative offer that seems to depend on your response. The tension between you is palpable, a delicate balance of power and persuasion. The outcome of your action is far from certain, and the merchant's fate – as well as the success of your negotiation – hangs precariously in the balance.\n\nAs the Rules Arbiter has decreed, the outcome of your action is mine to decide, guided solely by the narrative and the immersive world we're creating together. The mechanical aspects of this encounter will take a backseat, and the story will unfold based on the choices you make and the consequences that follow. The question now is: how will you respond to the merchant's offer? Will you accept his proposal, or will you press for a better deal, risking a potentially volatile outcome? The choice is yours, and the fate of this negotiation hangs in the balance.",
+    "latency_ms": 1824,
+    "skipped_agents": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "scores": {
+      "narrative_quality": 5,
+      "rules_accuracy": 1,
+      "character_voice": 5,
+      "relevance": 5
+    },
+    "composite": 4.0
+  }
+]

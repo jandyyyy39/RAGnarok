@@ -13,12 +13,11 @@ class Config:
     HF_TOKEN     = os.getenv("HF_TOKEN", None)  # optional — only needed if downloading FIREBALL from HuggingFace
 
     # --- Models ---
-    LLM_MODELS = {
-        "default": "llama-3.3-70b-versatile",
-        "fast":    "llama-3.1-8b-instant",
-        "local":   "ragnarok-dm",
+    LLM_MODEL = {
+        'GROQ':       "llama-3.3-70b-versatile",
+        'GROQ_FAST':  "llama-3.1-8b-instant",
+        'LOCAL':      "mistral-small3.2",
     }
-    LLM_MODEL = LLM_MODELS["default"]
 
     # --- Inference ---
     OLLAMA_BASE_URL = "http://localhost:11434/v1"
@@ -39,8 +38,8 @@ class Config:
     ESRD_FILE    = DATA_DIR / "5esrd.md"
 
     # FIREBALL fine-tuning data
-    FIREBALL_DIR   = DATA_DIR / "fireball"
-    TRAIN_FILE     = DATA_DIR / "fireball_train.jsonl"
-    EVAL_FILE      = DATA_DIR / "fireball_eval.jsonl"
+    FIREBALL_DIR = DATA_DIR / "fireball"
+    TRAIN_FILE   = DATA_DIR / "fireball_train.jsonl"
+    EVAL_FILE    = DATA_DIR / "fireball_eval.jsonl"
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)

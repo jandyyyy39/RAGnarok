@@ -7,7 +7,7 @@ from config import Config
 class NPCConsistencyAgent:
     def __init__(self, client=None, npc_db_path=None):
         self.client      = client or Groq(api_key=Config.GROQ_API_KEY)
-        self.model       = Config.LLM_MODEL
+        self.model       = Config.LLM_MODEL['GROQ']
         self.npc_db_path = npc_db_path or str(Config.NPC_DB_PATH)
         self.npcs        = self._load_npcs()
 

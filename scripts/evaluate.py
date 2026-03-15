@@ -158,7 +158,7 @@ def judge_response(client: Groq, player_input: str, dm_response: str) -> dict:
                 {"role": "system", "content": JUDGE_SYSTEM},
                 {"role": "user",   "content": prompt},
             ],
-            model=Config.LLM_MODEL,
+            model=Config.LLM_MODEL['GROQ'],
             temperature=0.0,
             response_format={"type": "json_object"},
         )

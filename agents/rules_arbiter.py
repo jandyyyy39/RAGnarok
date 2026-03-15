@@ -7,7 +7,7 @@ from config import Config
 class RulesArbiter:
     def __init__(self):
         self.client      = Groq(api_key=Config.GROQ_API_KEY)
-        self.model       = Config.LLM_MODEL
+        self.model       = Config.LLM_MODEL['GROQ']
         self.embeddings  = HuggingFaceEmbeddings(model_name=Config.EMBEDDING_MODEL)
         self.vectorstore = Chroma(
             persist_directory  = str(Config.CHROMA_DIR),

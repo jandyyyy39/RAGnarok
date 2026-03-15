@@ -10,11 +10,11 @@ class DMAgent:
                 base_url = Config.OLLAMA_BASE_URL,
                 api_key  = "ollama",
             )
-            self.model = Config.LLM_MODELS["local"]
+            self.model = Config.LLM_MODEL['LOCAL']
             print("[DM Agent] Using LOCAL Ollama model:", self.model)
         else:
             self.client = Groq(api_key=Config.GROQ_API_KEY)
-            self.model  = Config.LLM_MODEL
+            self.model  = Config.LLM_MODEL['GROQ']
             print("[DM Agent] Using GROQ model:", self.model)
 
     def generate_response(self, player_input: str, world_state: str, ruling: str) -> str:
