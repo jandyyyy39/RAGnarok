@@ -3,7 +3,7 @@ import sys
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import MarkdownHeaderTextSplitter, RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_chroma import Chroma
+from langchain_community.vectorstores import Chroma
 from pathlib import Path
 import torch
 
@@ -24,24 +24,24 @@ def build_vector_store():
 
     # Split by Markdown headers
     headers_to_split_on = [("#", "Header 1"), ("##", "Header 2"), ("###", "Header 3")]
-    markdown_splitter   = MarkdownHeaderTextSplitter(headers_to_split_on=headers_to_split_on)
-
-    with open(srd_path, "r", encoding="utf-8") as f:
+    markdown_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=headers_to_split_on)
+    
+    with open(SRD_FILE, "r", encoding="utf-8") as f:
         md_text = f.read()
-
-    print("Chunking rules by Markdown headers...")
+        
+    print("Chunking rules logically...")
     md_header_splits = markdown_splitter.split_text(md_text)
-
+    
+    # Secondary split for very long sections
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
-    final_splits  = text_splitter.split_documents(md_header_splits)
-    print(f"  {len(final_splits)} chunks created from {srd_path.name}")
+    final_splits = text_splitter.split_documents(md_header_splits)
 
     print(f"Building local database with {len(final_splits)} chunks...")
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     
     embeddings = HuggingFaceEmbeddings(
-        model_name   = Config.EMBEDDING_MODEL,
-        model_kwargs = {'device': device},
+        model_name=Config.EMBEDDING_MODEL,
+        model_kwargs={'device': device}
     )
     
     # Save to ChromaDB
@@ -50,8 +50,7 @@ def build_vector_store():
         embedding=embeddings,
         persist_directory=str(CHROMA_DIR) # Cast to string to prevent Pathlib errors
     )
-    print(f"Vector store built at {CHROMA_DIR}")
-
+    print("Success! The Rules Arbiter now has a working brain.")
 
 if __name__ == "__main__":
     # Bypassing the volatile internet download step entirely
