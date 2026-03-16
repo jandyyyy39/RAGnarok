@@ -9,11 +9,11 @@ from agents.npc_consistency import NPCConsistencyAgent
 import os
 import json
 from datetime import datetime
-import time
 import torch
 import argparse
 from groq import Groq
 from openai import OpenAI
+from time import time
 
 class RAGnarokOrchestrator:
     def __init__(self, client, model_profile: str):
@@ -26,18 +26,18 @@ class RAGnarokOrchestrator:
         
         # --- SESSION GENERATOR ---
         os.makedirs("data/history", exist_ok=True) 
-        self.log_file = "data/history/baseline_architecture_log.json"
         
-        # Ensure log file exists without overwriting previous test runs
-        if not os.path.exists(self.log_file):
-            with open(self.log_file, "w", encoding="utf-8") as f:
-                json.dump([], f)
-                
+        # session_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+        self.log_file = f"data/history/baseline_architecture_log.json" 
+        
+        with open(self.log_file, "w", encoding="utf-8") as f:
+            json.dump([], f)
+            
         print(f"Session telemetry initialized: {self.log_file}")
         print("All agents online. Ready to play.\n")
 
     def process_turn(self, player_input: str, args):
-        start_time = time.time()
+        start_time = time()
         turn_log = []
         def trace(message: str):
             print(message)
@@ -47,122 +47,84 @@ class RAGnarokOrchestrator:
 
         # --- INTERCEPTOR ---
         is_system_roll = player_input.startswith("[SYSTEM: ROLL_RESOLUTION")
+        
+        # Standardize Baseline Routes: In this architecture, everything is ALWAYS on.
+        baseline_routes = {
+            "rules_logic": True, 
+            "npc_lore": True, 
+            "world_exploration": True
+        }
 
         if is_system_roll:
             trace("[Orchestrator] 🎲 Dice Roll detected. Bypassing Arbiter.")
             world_state = self.memory.format_for_dm()
-            
-            # --- Look at the last REAL player action in memory ---
             recent_history = self.memory.get_current_state()["recent_events"]
-            # Get the last event that starts with "Player:"
             last_action = "unknown action"
             for event in reversed(recent_history):
                 if event.startswith("Player:"):
                     last_action = event.split("Player: ")[1].split(" | ")[0]
                     break
 
-            # Force the DM to tie the roll result to that specific action
-            ruling = f"""
-            SYSTEM OVERRIDE: 
-            The player was trying to: "{last_action}"
-            The roll result is: {player_input}
-            
-            NARRATION RULE: You MUST narrate the outcome of "{last_action}". 
-            - If SUCCESS: Describe how the player achieves their goal, what they learn, or how the environment reacts favorably.
-            - If FAILURE: Describe the negative consequences, the NPC's refusal, or the mechanical setback.
-            Do NOT mention the underlying math in the narrative.
-            """
+            ruling = f"SYSTEM OVERRIDE: The player was trying to: '{last_action}'. Roll: {player_input}."
         else: 
             # --- NORMAL TURN ---
-            # Safety Check
             if not self.safety.check(player_input):
-                return {"response": "Safety Agent Intercept: That action violates the table's safety tools.", "pending_action": None}
+                return {"response": "Safety Agent Intercept.", "pending_action": None}
             
-            # Retrieve world state
-            if args.no_memory:
-                trace("[Orchestrator] --no-memory: Skipping world state injection.")
-                world_state = "No world state provided by the Memory agent."
-            else:
-                trace("[Memory Agent] Fetching recap...")
-                world_state = self.memory.format_for_dm()
-
-            # Rules arbiter assessment
-            if args.no_rag:
-                trace("[Orchestrator] --no-rag: Skipping RAG lookup.")
-                ruling = "The Rules Arbiter was not consulted."
-            else:
-                trace("[Rules Arbiter] Consulting the SRD...")
-                ruling = self.arbiter.get_ruling(player_input, world_state)
-                trace(f"[Rules Arbiter] Ruling: {ruling}")
+            world_state = self.memory.format_for_dm()
+            trace("[Rules Arbiter] Consulting the SRD...")
+            ruling = self.arbiter.get_ruling(player_input, world_state)
         
         # DM generates response
         trace("[DM Agent] Weaving the narrative...")
         dm_result = self.dm.generate_response(player_input, world_state, ruling)
 
-        # --- FORK ---
+        # Handle Output
         if dm_result["type"] == "tool_call":
-            trace(f"[DM Agent] Halting narrative. Requesting {dm_result['action']['skill']} check.")
-            result = {
-                "response": dm_result["narrative"],
-                "pending_action": dm_result["action"]
-            }
-            latency_ms = (time.time() - start_time) * 1000
-            self._save_history({
-                "timestamp_utc": datetime.utcnow().isoformat() + "Z",
-                "architecture": "baseline",
-                "latency_ms": round(latency_ms),
-                "total_tokens": 0,
-                "route_taken": "N/A - Linear Pipeline",
-                "critic_rejections": 0,
-                "player_intent": player_input,
-                "final_output": result
-            })
-            return result
-
-        if args.no_npc_const:
-            trace("[Orchestrator] --no-npc-const: Skipping NPC consistency check.")
             final_output = dm_result["narrative"]
+            pending_action = dm_result["action"]
         else:
             trace("[NPC Agent] Checking character sheets...")
             final_output = self.npc_agent.refine_dialogue(dm_result["narrative"])
+            pending_action = None
         
         # Memory update
-        current_events = self.memory.get_current_state()["recent_events"]
-        
-        event_text = player_input if not is_system_roll else f"The player rolled dice. {player_input}"
-        new_event = f"Action: {event_text} | Outcome: {final_output[:100]}..." 
-        
-        self.memory.update_state({"recent_events": current_events + [new_event]})
+        new_event = f"Action: {player_input} | Outcome: {final_output[:100]}..." 
+        self.memory.update_state({"recent_events": self.memory.get_current_state()["recent_events"] + [new_event]})
 
-        trace("="*50 + "\n")
-        result = {
-            "response": final_output,
-            "pending_action": None
-        }
-
-        latency_ms = (time.time() - start_time) * 1000
+        # --- TELEMETRY LOGGING (Thesis Metrics) ---
+        latency_ms = (time() - start_time) * 1000
+        
         self._save_history({
             "timestamp_utc": datetime.utcnow().isoformat() + "Z",
             "architecture": "baseline",
             "latency_ms": round(latency_ms),
-            "total_tokens": 0,
-            "route_taken": "N/A - Linear Pipeline",
-            "critic_rejections": 0,
+            "total_tokens": 0,  # Placeholder
+            "routing_hallucination": False,
+            "routes_fired": baseline_routes,
+            "retrieval_types": {
+                "rag_vector": True,
+                "kv_lookup": True
+            },
+            "async_critic_scores": {
+                "rule_accuracy": 0, 
+                "narrative_coherence": 0, 
+                "npc_voice_consistency": 0
+            },
             "player_intent": player_input,
-            "final_output": result
+            "final_output": {"response": final_output, "pending_action": pending_action}
         })
 
-        return result
-    
-    def _save_history(self, turn_data: dict):
-        """Appends a structured turn record to the JSON flight recorder."""
-        with open(self.log_file, "r", encoding="utf-8") as f:
-            history = json.load(f)
+        return {"response": final_output, "pending_action": pending_action}
 
-        # Append new turn
+    def _save_history(self, turn_data: dict):
+        """Standardized JSON log for comparison."""
+        with open(self.log_file, "r", encoding="utf-8") as f:
+            try:
+                history = json.load(f)
+            except:
+                history = []
         history.append(turn_data)
-        
-        # Save it back
         with open(self.log_file, "w", encoding="utf-8") as f:
             json.dump(history, f, indent=4)
 

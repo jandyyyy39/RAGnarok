@@ -1,17 +1,13 @@
 {
     "current_location": "The Black Boar Tavern",
     "active_npcs": [
-        "Thrain Blackbeard (Human Barbarian)",
-        "Elara Moonwhisper (Half-Elf Bard)",
-        "Arin the Bold (Human Rogue)"
+        "Thrain Blackbeard",
+        "Elara Moonwhisper",
+        "Arin the Bold"
     ],
     "party_status": "Healthy",
     "recent_events": [
-        "Action: Throw a fireball at im | Outcome: The room holds its breath... (Roll Intelligence - Fireball)...",
-        "Action: [SYSTEM: ROLL_RESOLUTION | INTENT: Throw a fireball at im | RESULT: SUCCESS | ROLL: 20] | Outcome: The tavern erupts in chaos as a fiery projectile streaks through the air, hurtling directly toward A...",
-        "Action: The player rolled dice. [SYSTEM: ROLL_RESOLUTION | INTENT: Throw a fireball at im | RESULT: SUCCESS | ROLL: 20] | Outcome: The tavern erupts in chaos as a fiery projectile streaks through the air, hurtling directly toward A...",
-        "Action: Ready myself to dodge his attacks | Outcome: You tense your muscles and lower your stance, focusing entirely on avoiding Arin the Bold's attacks....",
-        "Action: Ready myself to dodge his attacks | Outcome: You tense your muscles and lower your stance, focusing entirely on avoiding Arin the Bold's attacks...."
+        "The party just walked into the loud, sea-shanty-filled Black Boar Tavern."
     ],
     "inventory_changes": []
 }
