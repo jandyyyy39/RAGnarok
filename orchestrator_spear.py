@@ -19,6 +19,8 @@ from skills.rules_logic.scripts import fetch_rules
 from skills.npc_lore.scripts import fetch_npc
 from skills.world_exploration.scripts import fetch_exploration
 
+telemetry_lock = threading.Lock()
+
 # --- PROGRAMMATIC GUARDS ---
 def safety_filter(intent: str) -> bool:
     """Zero-LLM latency safety check."""
@@ -56,13 +58,16 @@ def async_critic_evaluation(client, model, turn_data, log_file):
         turn_data["async_critic_scores"] = scores
         
         # Append to telemetry log safely
-        with open(log_file, "r", encoding="utf-8") as f:
-            history = json.load(f)
-        history.append(turn_data)
-        with open(log_file, "w", encoding="utf-8") as f:
-            json.dump(history, f, indent=4)
-            
-        print(f"   [Async Critic] Logged scores: {scores}")
+        with telemetry_lock:
+            if os.path.exists(log_file):
+                with open(log_file, "r", encoding="utf-8") as f:
+                    history = json.load(f)
+            else:
+                history = []
+            history.append(turn_data)
+            with open(log_file, "w", encoding="utf-8") as f:
+                json.dump(history, f, indent=4)
+            print(f"   [Async Critic] Logged scores: {scores}")
     except Exception as e:
         print(f"   [Async Critic] Failed to score turn: {e}")
 
@@ -189,7 +194,7 @@ class SPEAROrchestrator:
             "timestamp_utc": datetime.utcnow().isoformat() + "Z",
             "architecture": "SPEAR",
             "latency_ms": round(latency_ms),
-            "total_tokens": 0, # Placeholder for token counting if you add a wrapper
+            "total_tokens": dm_result.get("usage", 0),
             "routing_hallucination": routing_hallucination,
             "routes_fired": routes,
             "retrieval_types": {

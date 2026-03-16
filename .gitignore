@@ -2,6 +2,7 @@
 frontend/.vite/
 chroma_db/*
 data/chroma_db/*
+data/world_state.json
 data/history/*
 
 # Byte-compiled / optimized / DLL files
