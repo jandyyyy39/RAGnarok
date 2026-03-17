@@ -5,12 +5,12 @@ from sentence_transformers import CrossEncoder
 import os
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-
+from config import Config
 from build_rules_rag import build_bm25_index
 
 CHROMA_DIR = "data/chroma_db"
 
-embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+embeddings = HuggingFaceEmbeddings(model_name=Config.EMBEDDING_MODEL)
 vectorstore = Chroma(
     persist_directory=CHROMA_DIR,
     embedding_function=embeddings

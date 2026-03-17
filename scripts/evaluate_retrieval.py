@@ -40,7 +40,7 @@ def normalise(text: str | None) -> str:
 
 def get_deepest_header(metadata: dict) -> str:
     """Return the most specific non-empty header from a chunk's metadata dict."""
-    for level in ("Header 3", "Header 2", "Header 1"):
+    for level in ("Header 4", "Header 3", "Header 2", "Header 1"):
         value = metadata.get(level)
         if value is not None and str(value).strip():
             return str(value)
@@ -64,7 +64,7 @@ def get_all_headers(metadata: dict) -> list[str]:
     matches a gold section — not just the deepest level.
     """
     headers = []
-    for level in ("Header 1", "Header 2", "Header 3"):
+    for level in ("Header 1", "Header 2", "Header 3", "Header 4"):
         value = metadata.get(level)
         if value is not None and str(value).strip():
             headers.append(normalise(value))
@@ -84,7 +84,7 @@ def get_retrieved_headers(results: list) -> list[str]:
 
 def get_header_chain_for_logging(metadata: dict) -> str:
     parts = []
-    for level in ("Header 1", "Header 2", "Header 3"):
+    for level in ("Header 1", "Header 2", "Header 3", "Header 4"):
         value = metadata.get(level)
         if value is not None and str(value).strip():
             parts.append(normalise(value))
@@ -209,6 +209,21 @@ def run_retrieval(system: str, query: str, bm25=None, final_splits=None) -> list
     else:
         raise ValueError(f"Unknown retrieval system: {system}")
 
+def print_canonical_headers(final_splits, output_path="canonical_headers.txt"):
+    from collections import Counter
+    headers = Counter()
+    for chunk in final_splits:
+        for level in ("Header 1", "Header 2", "Header 3", "Header 4"):
+            val = chunk.metadata.get(level)
+            if val:
+                headers[val.strip()] += 1
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        for header, count in headers.most_common():
+            f.write(f"{count:>4}x  {header}\n")
+
+    print(f"Canonical headers written to {output_path} ({len(headers)} unique headers)")
+        
 def evaluate(eval_path: str, k: int = K) -> tuple[list[dict], dict]:
     """
     Run all retrieval systems over the full eval set.
@@ -282,7 +297,7 @@ def evaluate(eval_path: str, k: int = K) -> tuple[list[dict], dict]:
                 "relevance_list":    str(relevance),
                 "total_relevant":    total_relevant,
                 **{k_: round(v, 4) for k_, v in metrics.items()},
-                "gold_sections": "|".join(normalise(s) for s in gold_sections),
+                "normalised_gold_sections": "|".join(normalise(s) for s in gold_sections),
                 "retrieved_header_chains": "|".join(
                     get_header_chain_for_logging(extract_metadata(r)) for r in results
                 ),
@@ -305,6 +320,7 @@ def evaluate(eval_path: str, k: int = K) -> tuple[list[dict], dict]:
             "n_queries":           n,
         })
 
+    print_canonical_headers(final_splits)
     return per_query_rows, aggregate_rows
 
 # ── CSV output ────────────────────────────────────────────────────────────────
