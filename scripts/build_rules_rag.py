@@ -33,55 +33,157 @@ def download_srd():
         print(f"FATAL ERROR: Could not download SRD. {e}")
         exit(1)
 
-def build_vector_store():
-    # Split by Markdown headers
-    headers_to_split_on = [("#", "Header 1"), ("##", "Header 2"), ("###", "Header 3")]
-    markdown_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=headers_to_split_on)
+def inject_header_chain(documents):
+    """
+    Add hierarchical header chain metadata to each document chunk.
     
-    with open(SRD_FILE, "r", encoding="utf-8") as f:
-        md_text = f.read()
+    Creates a 'header_chain' field like: "Combat > Making an Attack > Attack Rolls"
+    This helps with context-aware retrieval and display.
+    """
+    for doc in documents:
+        chain = []
         
-    print("Chunking rules logically...")
-    md_header_splits = markdown_splitter.split_text(md_text)
+        # Build chain in hierarchical order
+        for header_level in ["Header 1", "Header 2", "Header 3"]:
+            if header_level in doc.metadata and doc.metadata[header_level]:
+                chain.append(doc.metadata[header_level])
+        
+        # Add the chain to metadata
+        if chain:
+            doc.metadata["header_chain"] = " > ".join(chain)
+        
+        # Ensure all header levels exist in metadata (even if None)
+        for header_level in ["Header 1", "Header 2", "Header 3"]:
+            doc.metadata.setdefault(header_level, None)
     
-    # Secondary split for very long sections
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
-    final_splits = text_splitter.split_documents(md_header_splits)
+    return documents
 
-    print(f"Building local database with {len(final_splits)} chunks...")
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
-    embeddings = HuggingFaceEmbeddings(
-        model_name=Config.EMBEDDING_MODEL,
-        model_kwargs={'device': device}
+def build_vector_store():
+    print(f"Reading {SRD_FILE}...")
+    with open(SRD_FILE, "r", encoding="utf-8") as f:
+        raw_md_text = f.read()
+    
+    headers_to_split_on = [
+        ("#", "Header 1"),
+        ("##", "Header 2"),
+        ("###", "Header 3"),
+    ]
+    
+    markdown_splitter = MarkdownHeaderTextSplitter(
+        headers_to_split_on=headers_to_split_on
     )
     
+    print("Splitting by header hierarchy...")
+    md_header_splits = markdown_splitter.split_text(raw_md_text)
+    
+    md_header_splits = inject_header_chain(md_header_splits)
+    
+    final_splits = md_header_splits
+
+    print(f"Created {len(final_splits)} chunks total")
+    
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    print(f"Using device: {device}")
+    
+    embeddings = HuggingFaceEmbeddings(
+        model_name=Config.EMBEDDING_MODEL,
+        model_kwargs={"device": device}
+    )
+    
+    print(f"Building Chroma vector store at {CHROMA_DIR}...")
     vectorstore = Chroma.from_documents(
         documents=final_splits,
         embedding=embeddings,
         persist_directory=CHROMA_DIR
     )
-    print("Success! The Rules Arbiter now has a working brain.")
+    
+    print("Vector store built successfully!")
+    return vectorstore
 
 def build_bm25_index():
-    # Split by Markdown Headers
-    headers_to_split_on = [("#", "Header 1"), ("##", "Header 2"), ("###", "Header 3")]
-    markdown_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=headers_to_split_on)
-
+    print(f"Reading {SRD_FILE}...")
     with open(SRD_FILE, "r", encoding="utf-8") as f:
-        md_text = f.read()
+        raw_md_text = f.read()
+    
+    headers_to_split_on = [
+        ("#", "Header 1"),
+        ("##", "Header 2"),
+        ("###", "Header 3"),
+    ]
+    
+    markdown_splitter = MarkdownHeaderTextSplitter(
+        headers_to_split_on=headers_to_split_on
+    )
+    
+    print("Splitting by header hierarchy...")
+    md_header_splits = markdown_splitter.split_text(raw_md_text)
+    
+    md_header_splits = inject_header_chain(md_header_splits)
 
-    print("Chunking rules logically...")
-    md_header_splits = markdown_splitter.split_text(md_text)
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
-    final_splits = text_splitter.split_documents(md_header_splits)
-
+    final_splits = md_header_splits
+    
     print(f"Building BM25 index with {len(final_splits)} chunks...")
+    
     corpus = [doc.page_content for doc in final_splits]
     tokenized_corpus = [doc.split() for doc in corpus]
     bm25 = BM25Okapi(tokenized_corpus)
-
+    
+    print("BM25 index built")
     return bm25, final_splits
+
+def peek_chunks(chunks, n=20):
+    """
+    Debug method to peek chunks
+    n = number of chunks
+    """
+    for i, chunk in enumerate(chunks[:n]):
+        print(f"\nChunk {i}")
+        print(f"Chain: {chunk.metadata.get('header_chain', 'N/A')}")
+        print(f"Content: {chunk.page_content[:150]}...")
+        print()
+
+def get_parent_header_chunks(retrieved_chunk, all_chunks):
+    h1 = retrieved_chunk.metadata.get("Header 1")
+    h2 = retrieved_chunk.metadata.get("Header 2")
+    
+    parent_chunks = []
+    
+    # Find H1 parent chunk (has H1 but no H2)
+    if h1:
+        h1_chunk = [
+            c for c in all_chunks
+            if c.metadata.get("Header 1") == h1
+            and c.metadata.get("Header 2") is None  # No H2 = it's the H1 intro
+        ]
+        if h1_chunk:
+            print(f"\n H1 parent: {h1}")
+            print(f"   Content: {h1_chunk[0].page_content[:200]}...\n")
+            parent_chunks.extend(h1_chunk)
+    
+    # Find H2 parent chunk (has H1 and H2, but no H3)
+    if h1 and h2:
+        h2_chunk = [
+            c for c in all_chunks
+            if c.metadata.get("Header 1") == h1
+            and c.metadata.get("Header 2") == h2
+            and c.metadata.get("Header 3") is None  # No H3 = it's the H2 intro
+        ]
+        if h2_chunk:
+            print(f"\n H2 parent: {h2}")
+            print(f"   Content: {h2_chunk[0].page_content[:200]}...\n")
+            parent_chunks.extend(h2_chunk)
+    
+    if not parent_chunks:
+        print("No parent header chunks found")
+    
+    return parent_chunks
 
 if __name__ == "__main__":
     # download_srd()
     build_vector_store()
+    # bm25, final_splits = build_bm25_index()
+    # peek_chunks(final_splits)
+
+    # retrieved = final_splits[5]
+    # get_parent_header_chunks(retrieved, final_splits)
+    
