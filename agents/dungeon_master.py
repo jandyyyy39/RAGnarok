@@ -57,6 +57,7 @@ class DMAgent:
         )
         
         message = response.choices[0].message
+        total_tokens = response.usage.total_tokens if getattr(response, 'usage', None) else 0
         
         # 2. Check if the model decided to call the tool
         if message.tool_calls:
@@ -65,11 +66,13 @@ class DMAgent:
             return {
                 "type": "tool_call", 
                 "action": args,
-                "narrative": f"The room holds its breath... (Roll {args['stat']} - {args['skill']})"
+                "narrative": f"The room holds its breath... (Roll {args['stat']} - {args['skill']})",
+                "usage": total_tokens,
             }
         
         # 3. Otherwise, return normal text
         return {
             "type": "text", 
-            "narrative": message.content
+            "narrative": message.content,
+            "usage": total_tokens,
         }

@@ -11,7 +11,7 @@ class DMSpearAgent:
         Executes the narrative pass using a Persona-Preserving 'Sandwich' prompt.
         """
         
-        # 1. THE SANDWICH TOP: Hard-coded Persona
+        # Hard-coded Persona
         system_instructions = (
             "SYSTEM: YOU ARE A RUTHLESS DUNGEON MASTER. ROLEPLAY ONLY.\n"
             "DO NOT refer to yourself as an AI or a language model.\n"
@@ -19,14 +19,14 @@ class DMSpearAgent:
             "CRITICAL: If a dice roll is required, call the tool and STOP. Do not narrate fallout.\n"
         )
         
-        # 2. THE MEAT: Context and Rules
+        # Context and Rules
         context_payload = f"WORLD STATE: {world_state}\n\n"
         if dynamic_instructions:
             context_payload += "SKILL PROCEDURES:\n" + "\n".join(dynamic_instructions) + "\n\n"
         if retrieved_context:
             context_payload += "MECHANICAL DATA:\n" + "\n".join(retrieved_context) + "\n\n"
 
-        # 3. THE SANDWICH BOTTOM: Persona Reminder
+        # Persona Reminder
         messages = [
             {"role": "system", "content": system_instructions},
             {"role": "system", "content": context_payload},
@@ -34,7 +34,7 @@ class DMSpearAgent:
             {"role": "user", "content": player_input}
         ]
 
-        # 4. TOOL DEFINITION
+        # TOOL DEFINITION
         tools = [{
             "type": "function",
             "function": {
@@ -54,7 +54,7 @@ class DMSpearAgent:
             }
         }]
 
-        # 5. EXECUTION (The ONLY LLM call)
+        # EXECUTION
         response = self.client.chat.completions.create(
             messages=messages,
             model=self.model,
@@ -64,18 +64,21 @@ class DMSpearAgent:
         )
 
         message = response.choices[0].message
-        
-        # 6. PARSING
+        total_tokens = response.usage.total_tokens if getattr(response, 'usage', None) else 0
+
+        # PARSING
         if message.tool_calls:
             args = json.loads(message.tool_calls[0].function.arguments)
             return {
                 "type": "tool_call",
                 "response": f"The room holds its breath... (Roll {args.get('stat')} - {args.get('skill')})",
-                "pending_action": args
+                "pending_action": args,
+                "usage": total_tokens,
             }
         
         return {
             "type": "text",
             "response": message.content,
-            "pending_action": None
+            "pending_action": None,
+            "usage": total_tokens,
         }

@@ -91,11 +91,24 @@ class SPEAROrchestrator:
                 json.dump([], f)
 
     def _read_skill_instructions(self, skill_name: str) -> str:
-        """Progressive Disclosure: Only loads instructions if routed."""
+        """
+        Formal 3-Level Extraction:
+        Level 1 (Metadata) is for the Supervisor (Phase 1).
+        Level 2 (Instructions) is for the DM Agent (Phase 3).
+        Level 3 (Resources) is for the System Architecture.
+        """
         path = os.path.join("skills", skill_name, "SKILL.md")
         if os.path.exists(path):
             with open(path, 'r') as f:
-                return f.read().split('---')[-1].strip()
+                content = f.read()
+                # Split based on the Level headers
+                try:
+                    # Extract exactly Level 2 for the DM's dynamic instructions
+                    level_2_section = content.split("# LEVEL 2: INSTRUCTIONS")[1].split("# LEVEL 3")[0]
+                    return level_2_section.strip()
+                except IndexError:
+                    # Fallback if the file isn't strictly formatted yet
+                    return content.split('---')[-1].strip()
         return ""
 
     def process_turn(self, player_input: str):
@@ -120,7 +133,7 @@ class SPEAROrchestrator:
             routes["npc_lore"] = True # Always fetch NPCs for narrative fallout
         else:
             try:
-                # Claude's "Shallow Memory" Justification: Location + Active NPCs are injected here.
+                # Location + Active NPCs are injected here.
                 router_prompt = f"""
                 Analyze intent: "{player_input}"
                 Current Location: {world_state.get('current_location')}
