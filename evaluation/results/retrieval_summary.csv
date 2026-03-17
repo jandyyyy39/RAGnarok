@@ -1,0 +1,5 @@
+method,model_profile,avg_precision_at_k,avg_recall_at_k,avg_mrr,avg_ndcg,avg_f1,avg_hit_at_k,map,n_queries
+naive,LOCAL,0.184,0.45,0.2857,0.3185,0.2355,0.4,0.2873,50
+hyde,LOCAL,0.316,0.63,0.4363,0.4758,0.3863,0.58,0.4332,50
+hybrid,LOCAL,0.116,0.41,0.1897,0.2157,0.1598,0.32,0.1741,50
+crag,LOCAL,0.2827,0.37,0.2973,0.3202,0.3001,0.36,0.3064,50

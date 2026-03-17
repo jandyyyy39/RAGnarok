@@ -1,0 +1,1254 @@
+[
+  {
+    "id": 1,
+    "query": "I try to grapple the guard",
+    "category": "combat",
+    "query_type": "precise",
+    "primary_keywords": [
+      "grapple"
+    ],
+    "supporting_keywords": [
+      "athletics",
+      "contested",
+      "acrobatics"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Prerequisite: Strength 13 or higher*  \nYou've developed the skills necessary to hold your own in close-quarters grappling. You gain the following ben",
+      "#### Grappling  \nWhen you want to grab a creature or wrestle with it, you can use the Attack action to make a special melee attack, a grapple. If you\u2019",
+      "The target of your grapple must be no more than one size larger than you and must be within your reach. Using at least one free hand, you try to seize",
+      "***Beak.*** *Melee Weapon Attack:* +13 to hit, reach 10 ft., one target. *Hit:* 27 (4d8 + 9) piercing damage.  \n***Talons.*** *Melee Weapon Attack:* +",
+      "***Multiattack.*** The chuul makes two pincer attacks. If the chuul is grappling a creature, the chuul can also use its tentacles once.  \n***Pincer.**"
+    ],
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "ndcg": 0.6934,
+    "f1": 0.5714,
+    "hit": 1,
+    "ap": 0.5833,
+    "latency": 1.978
+  },
+  {
+    "id": 2,
+    "query": "I want to sneak past the sleeping guards",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "stealth",
+      "hiding"
+    ],
+    "supporting_keywords": [
+      "dexterity"
+    ],
+    "num_chunks_retrieved": 1,
+    "chunks_preview": [
+      "> #### Hiding\n>\n> The GM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are "
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 1.0,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 4.275
+  },
+  {
+    "id": 3,
+    "query": "I try to intimidate the shopkeeper into giving me a discount",
+    "category": "social",
+    "query_type": "precise",
+    "primary_keywords": [
+      "intimidation"
+    ],
+    "supporting_keywords": [
+      "charisma"
+    ],
+    "num_chunks_retrieved": 2,
+    "chunks_preview": [
+      "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This",
+      "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 1.0,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 1.375
+  },
+  {
+    "id": 4,
+    "query": "I shove the orc off the bridge",
+    "category": "combat",
+    "query_type": "precise",
+    "primary_keywords": [
+      "shove"
+    ],
+    "supporting_keywords": [
+      "prone",
+      "athletics",
+      "contested"
+    ],
+    "num_chunks_retrieved": 1,
+    "chunks_preview": [
+      "do for a Strength (Athletics) check. Similarly, when your half\u2014orc barbarian uses a display of raw strength to intimidate an enemy, your GM might ask "
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.717
+  },
+  {
+    "id": 5,
+    "query": "I persuade the king to lend us his army",
+    "category": "social",
+    "query_type": "precise",
+    "primary_keywords": [
+      "persuasion"
+    ],
+    "supporting_keywords": [
+      "charisma"
+    ],
+    "num_chunks_retrieved": 0,
+    "chunks_preview": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.433
+  },
+  {
+    "id": 6,
+    "query": "I want to climb the castle wall",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "athletics",
+      "climbing"
+    ],
+    "supporting_keywords": [
+      "strength"
+    ],
+    "num_chunks_retrieved": 0,
+    "chunks_preview": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.553
+  },
+  {
+    "id": 7,
+    "query": "I try to lie to the guard about why we're here",
+    "category": "social",
+    "query_type": "precise",
+    "primary_keywords": [
+      "deception"
+    ],
+    "supporting_keywords": [
+      "charisma"
+    ],
+    "num_chunks_retrieved": 4,
+    "chunks_preview": [
+      "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This",
+      "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This",
+      "During your rogue training you learned thieves\u2019 cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal c",
+      "During your rogue training you learned thieves' cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal c"
+    ],
+    "precision": 0.5,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.6667,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 1.521
+  },
+  {
+    "id": 8,
+    "query": "I look around the room for traps",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "perception",
+      "trap"
+    ],
+    "supporting_keywords": [
+      "wisdom"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "#### Detecting and Disabling a Trap  \nUsually, some element of a trap is visible to careful inspection. Characters might notice an uneven flagstone th",
+      "#### Detecting and Disabling a Trap  \nUsually, some element of a trap is visible to careful inspection. Characters might notice an uneven flagstone th",
+      "Traps can be found almost anywhere. One wrong step in an ancient tomb might trigger a series of scything blades, which cleave through armor and bone. ",
+      "Traps\n=====  \nTraps can be found almost anywhere. One wrong step in an ancient tomb might trigger a series of scything blades, which cleave through ar",
+      "A trap\u2019s description specifies the checks and DCs needed to detect it, disable it, or both. A character actively looking for a trap can attempt a Wisd"
+    ],
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 0.2,
+    "ndcg": 0.3869,
+    "f1": 0.3333,
+    "hit": 1,
+    "ap": 0.2,
+    "latency": 1.494
+  },
+  {
+    "id": 9,
+    "query": "I want to see if the merchant is lying to me",
+    "category": "social",
+    "query_type": "precise",
+    "primary_keywords": [
+      "insight"
+    ],
+    "supporting_keywords": [
+      "wisdom",
+      "intentions"
+    ],
+    "num_chunks_retrieved": 2,
+    "chunks_preview": [
+      "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This",
+      "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 1.488
+  },
+  {
+    "id": 10,
+    "query": "I try to balance across the narrow beam",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "acrobatics",
+      "balance"
+    ],
+    "supporting_keywords": [
+      "dexterity"
+    ],
+    "num_chunks_retrieved": 0,
+    "chunks_preview": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 4.288
+  },
+  {
+    "id": 11,
+    "query": "I try to pickpocket the nobleman",
+    "category": "social",
+    "query_type": "precise",
+    "primary_keywords": [
+      "sleight of hand"
+    ],
+    "supporting_keywords": [
+      "dexterity"
+    ],
+    "num_chunks_retrieved": 2,
+    "chunks_preview": [
+      "During your rogue training you learned thieves\u2019 cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal c",
+      "During your rogue training you learned thieves' cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal c"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.825
+  },
+  {
+    "id": 12,
+    "query": "I want to play a song at the tavern to earn coin",
+    "category": "social",
+    "query_type": "precise",
+    "primary_keywords": [
+      "performance"
+    ],
+    "supporting_keywords": [
+      "charisma"
+    ],
+    "num_chunks_retrieved": 3,
+    "chunks_preview": [
+      "***Performance.*** Your Charisma (Performance) check determines how well you can delight an audience with music, dance, acting, storytelling, or some ",
+      "***Performance.*** Your Charisma (Performance) check determines how well you can delight an audience with music, dance, acting, storytelling, or some ",
+      "Charisma measures your ability to interact effectively with others. It includes such factors as confidence and eloquence, and it can represent a charm"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 1.0,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 3.611
+  },
+  {
+    "id": 13,
+    "query": "I try to track the goblins through the forest",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "survival",
+      "tracks"
+    ],
+    "supporting_keywords": [
+      "wisdom"
+    ],
+    "num_chunks_retrieved": 1,
+    "chunks_preview": [
+      "**Range:** Self  \n**Components:** V, S, M (ashes from a burned leaf of mistletoe and a sprig of spruce)  \n**Duration:** Concentration, up to 1 hour  \n"
+    ],
+    "precision": 0.0,
+    "recall": 0.5,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 4.065
+  },
+  {
+    "id": 14,
+    "query": "I try to calm down the angry wolf",
+    "category": "social",
+    "query_type": "precise",
+    "primary_keywords": [
+      "animal handling"
+    ],
+    "supporting_keywords": [
+      "wisdom"
+    ],
+    "num_chunks_retrieved": 0,
+    "chunks_preview": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.196
+  },
+  {
+    "id": 15,
+    "query": "I want to stabilize my dying companion",
+    "category": "combat",
+    "query_type": "precise",
+    "primary_keywords": [
+      "medicine",
+      "stabilize"
+    ],
+    "supporting_keywords": [
+      "wisdom"
+    ],
+    "num_chunks_retrieved": 2,
+    "chunks_preview": [
+      "***Damage at 0 Hit Points.*** If you take any damage while you have 0 hit points, you suffer a death saving throw failure. If the damage is from a cri",
+      "***Damage at 0 Hit Points.*** If you take any damage while you have 0 hit points, you suffer a death saving throw failure. If the damage is from a cri"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 1.0,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 1.751
+  },
+  {
+    "id": 16,
+    "query": "I want to recall what I know about undead",
+    "category": "knowledge",
+    "query_type": "precise",
+    "primary_keywords": [
+      "religion"
+    ],
+    "supporting_keywords": [
+      "intelligence",
+      "undead"
+    ],
+    "num_chunks_retrieved": 2,
+    "chunks_preview": [
+      "***Other Intelligence Checks.*** The GM might call for an Intelligence check when you try to accomplish tasks like the following:  \n-   Communicate wi",
+      "***Other Intelligence Checks.*** The GM might call for an Intelligence check when you try to accomplish tasks like the following:\n- Communicate with a"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.544
+  },
+  {
+    "id": 17,
+    "query": "I examine the wound to determine the weapon",
+    "category": "knowledge",
+    "query_type": "precise",
+    "primary_keywords": [
+      "investigation"
+    ],
+    "supporting_keywords": [
+      "intelligence"
+    ],
+    "num_chunks_retrieved": 1,
+    "chunks_preview": [
+      "*Weapon (any sword), rare (requires [attunement](#section-attunement))*  \nHit points lost to this weapon's damage can be regained only through a short"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 4.337
+  },
+  {
+    "id": 18,
+    "query": "Can I identify what type of plant this is",
+    "category": "knowledge",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "nature"
+    ],
+    "supporting_keywords": [
+      "intelligence"
+    ],
+    "num_chunks_retrieved": 0,
+    "chunks_preview": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 4.289
+  },
+  {
+    "id": 19,
+    "query": "do I recognize this holy symbol on the robe",
+    "category": "knowledge",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "religion"
+    ],
+    "supporting_keywords": [
+      "intelligence",
+      "holy"
+    ],
+    "num_chunks_retrieved": 4,
+    "chunks_preview": [
+      "***Holy Symbol.*** A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same sym",
+      "***Holy Symbol.*** A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same sym",
+      "*Wondrous item, rare (requires [attunement](#section-attunement))*  \nThis robe is adorned with eyelike patterns. While you wear the robe, you gain the",
+      "*Wondrous item, legendary (requires [attunement](#section-attunement) by a creature of good alignment)*  \nThis talisman is a mighty symbol of goodness"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 1.591
+  },
+  {
+    "id": 20,
+    "query": "I want to recall lore about this ancient kingdom",
+    "category": "knowledge",
+    "query_type": "precise",
+    "primary_keywords": [
+      "history"
+    ],
+    "supporting_keywords": [
+      "intelligence"
+    ],
+    "num_chunks_retrieved": 3,
+    "chunks_preview": [
+      "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh",
+      "***Other Intelligence Checks.*** The GM might call for an Intelligence check when you try to accomplish tasks like the following:  \n-   Communicate wi",
+      "***Other Intelligence Checks.*** The GM might call for an Intelligence check when you try to accomplish tasks like the following:\n- Communicate with a"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.403
+  },
+  {
+    "id": 21,
+    "query": "What do I know about this magical artifact",
+    "category": "knowledge",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "arcana"
+    ],
+    "supporting_keywords": [
+      "intelligence"
+    ],
+    "num_chunks_retrieved": 2,
+    "chunks_preview": [
+      "*Wondrous item, legendary*  \nThis 2-foot-diameter black sphere is a hole in the multiverse, hovering in space and stabilized by a magical field surrou",
+      "#### Legend Lore  \n*5th-level divination*  \n**Casting Time:** 10 minutes  \n**Range:** Self  \n**Components:** V, S, M (incense worth at least 250 gp, w"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 1.564
+  },
+  {
+    "id": 22,
+    "query": "I try to wrestle the weapon from the bandit",
+    "category": "combat",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "grapple"
+    ],
+    "supporting_keywords": [
+      "athletics",
+      "contested"
+    ],
+    "num_chunks_retrieved": 0,
+    "chunks_preview": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 4.207
+  },
+  {
+    "id": 23,
+    "query": "do I get a free swing at the goblin running away",
+    "category": "combat",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "opportunity"
+    ],
+    "supporting_keywords": [
+      "reaction"
+    ],
+    "num_chunks_retrieved": 0,
+    "chunks_preview": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 4.612
+  },
+  {
+    "id": 24,
+    "query": "I want to knock the goblin out not kill it",
+    "category": "combat",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "unconscious",
+      "knocking"
+    ],
+    "supporting_keywords": [
+      "melee"
+    ],
+    "num_chunks_retrieved": 0,
+    "chunks_preview": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 4.192
+  },
+  {
+    "id": 25,
+    "query": "I attack with my off-hand dagger as a bonus action",
+    "category": "combat",
+    "query_type": "precise",
+    "primary_keywords": [
+      "two-weapon",
+      "bonus action"
+    ],
+    "supporting_keywords": [
+      "light"
+    ],
+    "num_chunks_retrieved": 1,
+    "chunks_preview": [
+      "*Weapon (scimitar), very rare (requires [attunement](#section-attunement))*  \nYou gain a +2 bonus to attack and damage rolls made with this magic weap"
+    ],
+    "precision": 0.0,
+    "recall": 0.5,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.987
+  },
+  {
+    "id": 26,
+    "query": "I want to trip the enemy",
+    "category": "combat",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "shove",
+      "prone"
+    ],
+    "supporting_keywords": [
+      "athletics"
+    ],
+    "num_chunks_retrieved": 2,
+    "chunks_preview": [
+      "Strength measures bodily power, athletic training, and the extent to which you can exert raw physical force.  \n#### Strength Checks  \nA Strength check",
+      "Strength measures bodily power, athletic training, and the extent to which you can exert raw physical force.  \n#### Strength Checks  \nA Strength check"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.405
+  },
+  {
+    "id": 27,
+    "query": "I try to hide behind the pillar during combat",
+    "category": "combat",
+    "query_type": "precise",
+    "primary_keywords": [
+      "stealth",
+      "hide"
+    ],
+    "supporting_keywords": [
+      "dexterity"
+    ],
+    "num_chunks_retrieved": 3,
+    "chunks_preview": [
+      "#### Hiding  \nThe DM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are disc",
+      "> #### Hiding\n>\n> The GM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are ",
+      "*Ring, legendary (requires [attunement](#section-attunement))*  \nWhile wearing this ring, you can turn [invisible](#invisible) as an action. Anything "
+    ],
+    "precision": 0.6667,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.8,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 1.521
+  },
+  {
+    "id": 28,
+    "query": "I concentrate on maintaining my spell while fighting",
+    "category": "magic",
+    "query_type": "precise",
+    "primary_keywords": [
+      "concentration"
+    ],
+    "supporting_keywords": [
+      "constitution",
+      "saving throw"
+    ],
+    "num_chunks_retrieved": 2,
+    "chunks_preview": [
+      "Normal activity, such as moving and attacking, doesn't interfere with concentration. The following factors can break concentration:  \n-   **Casting an",
+      "Normal activity, such as moving and attacking, doesn\u2019t interfere with concentration. The following factors can break concentration:\n- **Casting anothe"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 1.0,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 1.501
+  },
+  {
+    "id": 29,
+    "query": "can I throw some acid at that guy",
+    "category": "magic",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "acid"
+    ],
+    "supporting_keywords": [
+      "dexterity",
+      "damage"
+    ],
+    "num_chunks_retrieved": 4,
+    "chunks_preview": [
+      "| Longbow         | 50 gp | 1d8 piercing  |  2 lb.  | Ammunition (range 150/600), heavy, two-handed          |\n| Net             | 1 gp  | \u2014          ",
+      "**Range:** 90 feet  \n**Components:** V, S, M (powdered rhubarb leaf and an adder\u2019s stomach)  \n**Duration:** Instantaneous  \nA shimmering green arrow s",
+      "</table>  \n**Senses** darkvision 60 ft., tremorsense 60 ft., passive Perception 11  \n**Languages** \u2014  \n**Challenge** 2 (450 XP)  \n##### Actions  \n***B",
+      "This section describes items that have special rules or require further explanation.  \n***Acid.*** As an action, you can splash the contents of this v"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 1.0,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 1.872
+  },
+  {
+    "id": 30,
+    "query": "I want to eavesdrop on the conversation next door",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "perception"
+    ],
+    "supporting_keywords": [
+      "wisdom",
+      "passive"
+    ],
+    "num_chunks_retrieved": 0,
+    "chunks_preview": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.742
+  },
+  {
+    "id": 31,
+    "query": "I try to wriggle free from the ropes",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "acrobatics",
+      "bonds"
+    ],
+    "supporting_keywords": [
+      "dexterity",
+      "escape"
+    ],
+    "num_chunks_retrieved": 2,
+    "chunks_preview": [
+      "Dexterity measures agility, reflexes, and balance.  \n#### Dexterity Checks  \nA Dexterity check can model any attempt to move nimbly, quickly, or quiet",
+      "Dexterity measures agility, reflexes, and balance.  \n#### Dexterity Checks  \nA Dexterity check can model any attempt to move nimbly, quickly, or quiet"
+    ],
+    "precision": 1.0,
+    "recall": 0.5,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.6667,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 3.965
+  },
+  {
+    "id": 32,
+    "query": "I try to break down the reinforced door",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "strength",
+      "force"
+    ],
+    "supporting_keywords": [
+      "break",
+      "door"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "do for a Strength (Athletics) check. Similarly, when your half-orc barbarian uses a display of raw strength to intimidate an enemy, your GM might ask ",
+      "do for a Strength (Athletics) check. Similarly, when your half\u2014orc barbarian uses a display of raw strength to intimidate an enemy, your GM might ask ",
+      "Strength measures bodily power, athletic training, and the extent to which you can exert raw physical force.  \n#### Strength Checks  \nA Strength check",
+      "Strength measures bodily power, athletic training, and the extent to which you can exert raw physical force.  \n#### Strength Checks  \nA Strength check",
+      "***Other Strength Checks.*** The GM might also call for a Strength check when you try to accomplish tasks like the following:  \n-   Force open a stuck"
+    ],
+    "precision": 0.6,
+    "recall": 1.0,
+    "mrr": 0.3333,
+    "ndcg": 0.6183,
+    "f1": 0.75,
+    "hit": 1,
+    "ap": 0.4778,
+    "latency": 3.979
+  },
+  {
+    "id": 33,
+    "query": "I search the room for hidden compartments",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "investigation",
+      "hidden"
+    ],
+    "supporting_keywords": [
+      "intelligence"
+    ],
+    "num_chunks_retrieved": 2,
+    "chunks_preview": [
+      "When you take the Search action, you devote your attention to finding something. Depending on the nature of your search, the GM might have you make a ",
+      "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 1.0,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 3.496
+  },
+  {
+    "id": 34,
+    "query": "I want to swim across the river",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "athletics",
+      "swimming"
+    ],
+    "supporting_keywords": [
+      "strength"
+    ],
+    "num_chunks_retrieved": 1,
+    "chunks_preview": [
+      "#### Water Walk  \n*3rd-level transmutation (ritual)*  \n**Casting Time:** 1 action  \n**Range:** 30 feet  \n**Components:** V, S, M (a piece of cork)  \n*"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.971
+  },
+  {
+    "id": 35,
+    "query": "can I tell if the prisoner is withholding info",
+    "category": "social",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "insight"
+    ],
+    "supporting_keywords": [
+      "wisdom",
+      "intentions"
+    ],
+    "num_chunks_retrieved": 1,
+    "chunks_preview": [
+      "During your rogue training you learned thieves\u2019 cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal c"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.943
+  },
+  {
+    "id": 36,
+    "query": "I try to fast-talk the guard into letting me through",
+    "category": "social",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "deception"
+    ],
+    "supporting_keywords": [
+      "charisma"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Performance.*** Your Charisma (Performance) check determines how well you can delight an audience with music, dance, acting, storytelling, or some ",
+      "***Performance.*** Your Charisma (Performance) check determines how well you can delight an audience with music, dance, acting, storytelling, or some ",
+      "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This",
+      "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This",
+      "Charisma measures your ability to interact effectively with others. It includes such factors as confidence and eloquence, and it can represent a charm"
+    ],
+    "precision": 0.6,
+    "recall": 1.0,
+    "mrr": 0.3333,
+    "ndcg": 0.6183,
+    "f1": 0.75,
+    "hit": 1,
+    "ap": 0.4778,
+    "latency": 3.501
+  },
+  {
+    "id": 37,
+    "query": "I tell the thugs to back down or else",
+    "category": "social",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "intimidation"
+    ],
+    "supporting_keywords": [
+      "charisma"
+    ],
+    "num_chunks_retrieved": 2,
+    "chunks_preview": [
+      "do for a Strength (Athletics) check. Similarly, when your half-orc barbarian uses a display of raw strength to intimidate an enemy, your GM might ask ",
+      "do for a Strength (Athletics) check. Similarly, when your half\u2014orc barbarian uses a display of raw strength to intimidate an enemy, your GM might ask "
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 1.0,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 3.562
+  },
+  {
+    "id": 38,
+    "query": "I want to inspire the townsfolk to fight",
+    "category": "social",
+    "query_type": "precise",
+    "primary_keywords": [
+      "persuasion"
+    ],
+    "supporting_keywords": [
+      "charisma"
+    ],
+    "num_chunks_retrieved": 0,
+    "chunks_preview": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 4.009
+  },
+  {
+    "id": 39,
+    "query": "I disguise myself as a guard to sneak in",
+    "category": "social",
+    "query_type": "precise",
+    "primary_keywords": [
+      "deception",
+      "disguise"
+    ],
+    "supporting_keywords": [
+      "charisma"
+    ],
+    "num_chunks_retrieved": 0,
+    "chunks_preview": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.321
+  },
+  {
+    "id": 40,
+    "query": "I haggle for a better price on the sword",
+    "category": "social",
+    "query_type": "precise",
+    "primary_keywords": [
+      "persuasion"
+    ],
+    "supporting_keywords": [
+      "charisma"
+    ],
+    "num_chunks_retrieved": 0,
+    "chunks_preview": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.88
+  },
+  {
+    "id": 41,
+    "query": "have I heard of this kingdom before",
+    "category": "knowledge",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "history"
+    ],
+    "supporting_keywords": [
+      "intelligence"
+    ],
+    "num_chunks_retrieved": 1,
+    "chunks_preview": [
+      "of Celestia, Twin Paradises of Bytopia, Blessed Fields of Elysium, Wilderness of the Beastlands, Olympian Glades of Arborea, Concordant Domain of the "
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.772
+  },
+  {
+    "id": 42,
+    "query": "Can I estimate this gemstone's value",
+    "category": "knowledge",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "intelligence"
+    ],
+    "supporting_keywords": [
+      "appraise",
+      "jeweler"
+    ],
+    "num_chunks_retrieved": 0,
+    "chunks_preview": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.532
+  },
+  {
+    "id": 43,
+    "query": "I steer the cart down the steep hill",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "dexterity"
+    ],
+    "supporting_keywords": [
+      "vehicle",
+      "control"
+    ],
+    "num_chunks_retrieved": 0,
+    "chunks_preview": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 4.098
+  },
+  {
+    "id": 44,
+    "query": "I tie up the captured bandit securely",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "dexterity"
+    ],
+    "supporting_keywords": [
+      "knot",
+      "tie"
+    ],
+    "num_chunks_retrieved": 0,
+    "chunks_preview": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 4.247
+  },
+  {
+    "id": 45,
+    "query": "I show forged papers to convince the guard",
+    "category": "social",
+    "query_type": "multi_part",
+    "primary_keywords": [
+      "deception"
+    ],
+    "supporting_keywords": [
+      "charisma",
+      "forgery"
+    ],
+    "num_chunks_retrieved": 2,
+    "chunks_preview": [
+      "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This",
+      "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 1.0,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 1.578
+  },
+  {
+    "id": 46,
+    "query": "I blend into the crowd and listen for rumors",
+    "category": "social",
+    "query_type": "multi_part",
+    "primary_keywords": [
+      "charisma"
+    ],
+    "supporting_keywords": [
+      "gather",
+      "information"
+    ],
+    "num_chunks_retrieved": 0,
+    "chunks_preview": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.785
+  },
+  {
+    "id": 47,
+    "query": "we march through the night without rest",
+    "category": "exploration",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "constitution",
+      "exhaustion"
+    ],
+    "supporting_keywords": [
+      "forced march"
+    ],
+    "num_chunks_retrieved": 1,
+    "chunks_preview": [
+      "Heroic though they might be, adventurers can't spend every hour of the day in the thick of exploration, social interaction, and combat. They need rest"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.555
+  },
+  {
+    "id": 48,
+    "query": "I jump across the wide gap",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "athletics",
+      "jumping"
+    ],
+    "supporting_keywords": [
+      "strength"
+    ],
+    "num_chunks_retrieved": 3,
+    "chunks_preview": [
+      "You can extend your arms half your height above yourself during the jump. Thus, you can reach above you a distance equal to the height of the jump plu",
+      "Movement through dangerous dungeons or wilderness areas often involves more than simply walking. Adventurers might have to climb, crawl, swim, or jump",
+      "Movement through dangerous dungeons or wilderness areas often involves more than simply walking. Adventurers might have to climb, crawl, swim, or jump"
+    ],
+    "precision": 0.6667,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "ndcg": 0.6934,
+    "f1": 0.8,
+    "hit": 1,
+    "ap": 0.5833,
+    "latency": 3.426
+  },
+  {
+    "id": 49,
+    "query": "I disarm the trap carefully",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "trap",
+      "thieves"
+    ],
+    "supporting_keywords": [
+      "dexterity"
+    ],
+    "num_chunks_retrieved": 4,
+    "chunks_preview": [
+      "A trap\u2019s description specifies the checks and DCs needed to detect it, disable it, or both. A character actively looking for a trap can attempt a Wisd",
+      "A trap's description specifies the checks and DCs needed to detect it, disable it, or both. A character actively looking for a trap can attempt a Wisd",
+      "Traps are often designed with mechanisms that allow them to be disarmed or bypassed. Intelligent monsters that place traps in or around their lairs ne",
+      "Traps are often designed with mechanisms that allow them to be disarmed or bypassed. Intelligent monsters that place traps in or around their lairs ne"
+    ],
+    "precision": 0.5,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.6667,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 1.366
+  },
+  {
+    "id": 50,
+    "query": "I pick the lock on the chest",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "thieves",
+      "lock"
+    ],
+    "supporting_keywords": [
+      "dexterity"
+    ],
+    "num_chunks_retrieved": 0,
+    "chunks_preview": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 4.075
+  }
+]

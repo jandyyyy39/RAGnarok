@@ -1,0 +1,1440 @@
+[
+  {
+    "id": 1,
+    "query": "I try to grapple the guard",
+    "category": "combat",
+    "query_type": "precise",
+    "primary_keywords": [
+      "grapple"
+    ],
+    "supporting_keywords": [
+      "athletics",
+      "contested",
+      "acrobatics"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Forceful Hand.*** The hand attempts to push a creature within 5 feet of it in a direction you choose.  \nMake a check with the hand\u2019s Strength conte",
+      "#### Grappling  \nWhen you want to grab a creature or wrestle with it, you can use the Attack action to make a special melee attack, a grapple. If you\u2019",
+      "***Other Intelligence Checks.*** The GM might call for an Intelligence check when you try to accomplish tasks like the following:\n- Communicate with a",
+      "As a bonus action on each of your turns, you can mentally command any creature you animated with this spell if the creature is within 120 feet of you ",
+      "On each of your turns, you can use a bonus action to mentally command any creature you made with this spell if the creature is within 60 feet of you ("
+    ],
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.5714,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.392
+  },
+  {
+    "id": 2,
+    "query": "I want to sneak past the sleeping guards",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "stealth",
+      "hiding"
+    ],
+    "supporting_keywords": [
+      "dexterity"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "#### Hiding  \nThe DM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are disc",
+      "Intelligence measures mental acuity, accuracy of recall, and the ability to reason.  \n#### Intelligence Checks  \nAn Intelligence check comes into play",
+      "The amount of the extra damage increases as you gain levels in this class, as shown in the Sneak Attack column of the Rogue table.",
+      "**Tools:** Thieves\u2019 tools  \n**Saving Throws:** Dexterity, Intelligence  \n**Skills:** Choose four from Acrobatics, Athletics, Deception, Insight, Intim",
+      "**Components:** V, S, M (a handful of sand, a dab of ink, and a writing quill plucked from a sleeping bird)  \n**Duration:** 8 hours  \nThis spell shape"
+    ],
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.8772,
+    "f1": 0.5714,
+    "hit": 1,
+    "ap": 0.75,
+    "latency": 0.218
+  },
+  {
+    "id": 3,
+    "query": "I try to intimidate the shopkeeper into giving me a discount",
+    "category": "social",
+    "query_type": "precise",
+    "primary_keywords": [
+      "intimidation"
+    ],
+    "supporting_keywords": [
+      "charisma"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who pr",
+      "During your rogue training you learned thieves\u2019 cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal c",
+      "You can lend your aid to another creature in the completion of a task. When you take the Help action, the creature you aid gains advantage on the next",
+      "The staff regains 1d8 + 2 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff becomes a nonmagical quartersta",
+      "Guilds, nobles, and royalty regulate trade. Chartered companies are granted rights to conduct trade along certain routes, to send merchant ships to va"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.161
+  },
+  {
+    "id": 4,
+    "query": "I shove the orc off the bridge",
+    "category": "combat",
+    "query_type": "precise",
+    "primary_keywords": [
+      "shove"
+    ],
+    "supporting_keywords": [
+      "prone",
+      "athletics",
+      "contested"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Bite.** Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 22 (4d8 + 4) piercing damage.  \n***Tendril.** Melee Weapon Attack:* +7 to ",
+      "If the wall cuts through a creature\u2019s space when it appears, the creature is pushed to one side of the wall (your choice). If a creature would be surr",
+      "- **Chaotic evil** (CE) creatures act with arbitrary violence, spurred by their greed, hatred, or bloodlust. Demons, red dragons, and orcs are chaotic",
+      "Your half-orc character has certain traits deriving from your orc ancestry.  \n***Ability Score Increase.*** Your Strength score increases by 2, and yo",
+      "(Athletics) check.  \n***Moving a Grappled Creature.*** When you move, you can drag or carry the grappled creature with you, but your speed is halved, "
+    ],
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 0.2,
+    "ndcg": 0.3869,
+    "f1": 0.3333,
+    "hit": 1,
+    "ap": 0.2,
+    "latency": 0.253
+  },
+  {
+    "id": 5,
+    "query": "I persuade the king to lend us his army",
+    "category": "social",
+    "query_type": "precise",
+    "primary_keywords": [
+      "persuasion"
+    ],
+    "supporting_keywords": [
+      "charisma"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Bards of the College of Lore know something about most things, collecting bits of knowledge from sources as diverse as scholarly tomes and peasant tal",
+      "| 1  | I would die to recover an ancient relic of my faith that was lost long ago.              |\n| 2  | I will someday get revenge on the corrupt tem",
+      "Inspiration is a rule the game master can use to reward you for playing your character in a way that's true to his or her personality traits, ideal, b",
+      "**Knights** are warriors who pledge service to rulers, religious orders, and noble causes. A knight\u2019s alignment determines the extent to which a pledg",
+      "The Oath of Devotion binds a paladin to the loftiest ideals of justice, virtue, and order. Sometimes called cavaliers, white knights, or holy warriors"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.19
+  },
+  {
+    "id": 6,
+    "query": "I want to climb the castle wall",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "athletics",
+      "climbing"
+    ],
+    "supporting_keywords": [
+      "strength"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "The fortress is a square tower, 20 feet on a side and 30 feet high, with arrow slits on all sides and a battlement atop it. Its interior is divided in",
+      "Each creature in the area where the fortress appears must make a DC 15 Dexterity saving throw, taking 10d10 bludgeoning damage on a failed save, or ha",
+      "#### Wind Wall  \n*3rd-level evocation*  \n**Casting Time:** 1 action  \n**Range:** 120 feet  \n**Components:** V, S, M (a tiny fan and a feather of exoti",
+      "If the wall cuts through a creature\u2019s space when it appears, the creature is pushed to one side of the wall (your choice). If a creature would be surr",
+      "| 5th         | create food and water, protection from energy |\n| 7th         | blight, hallucinatory terrain                 |\n| 9th         | insect"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.328
+  },
+  {
+    "id": 7,
+    "query": "I try to lie to the guard about why we're here",
+    "category": "social",
+    "query_type": "precise",
+    "primary_keywords": [
+      "deception"
+    ],
+    "supporting_keywords": [
+      "charisma"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass",
+      "<td align=\"left\">&quot;I don't like the way people judge me all the time.&quot;</td>\n</tr>\n<tr class=\"even\">\n<td align=\"center\">56\u201370</td>\n<td align=\"",
+      "***Other Intelligence Checks.*** The GM might call for an Intelligence check when you try to accomplish tasks like the following:\n- Communicate with a",
+      "Various magical effects can inflict madness on an otherwise stable mind. Certain spells, such as *contact other plane* and *symbol*, can cause insanit",
+      "Spells can be versatile tools, weapons, or protective wards. They can deal damage or undo it, impose or remove conditions (see appendix A), drain life"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.265
+  },
+  {
+    "id": 8,
+    "query": "I look around the room for traps",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "perception",
+      "trap"
+    ],
+    "supporting_keywords": [
+      "wisdom"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "A trap's description specifies the checks and DCs needed to detect it, disable it, or both. A character actively looking for a trap can attempt a Wisd",
+      "You should allow a character to discover a trap without making an ability check if an action would clearly reveal the trap\u2019s presence. For example, if",
+      "A trap\u2019s description specifies the checks and DCs needed to detect it, disable it, or both. A character actively looking for a trap can attempt a Wisd",
+      "Traps can be found almost anywhere. One wrong step in an ancient tomb might trigger a series of scything blades, which cleave through armor and bone. ",
+      "#### Detecting and Disabling a Trap  \nUsually, some element of a trap is visible to careful inspection. Characters might notice an uneven flagstone th"
+    ],
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9197,
+    "f1": 0.5714,
+    "hit": 1,
+    "ap": 0.8333,
+    "latency": 0.151
+  },
+  {
+    "id": 9,
+    "query": "I want to see if the merchant is lying to me",
+    "category": "social",
+    "query_type": "precise",
+    "primary_keywords": [
+      "insight"
+    ],
+    "supporting_keywords": [
+      "wisdom",
+      "intentions"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass",
+      "During your rogue training you learned thieves' cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal c",
+      "To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check ",
+      "During your rogue training you learned thieves\u2019 cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal c",
+      "When the creature appears, it is under no compulsion to behave in any particular way. You can ask the creature to perform a service in exchange for pa"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.118
+  },
+  {
+    "id": 10,
+    "query": "I try to balance across the narrow beam",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "acrobatics",
+      "balance"
+    ],
+    "supporting_keywords": [
+      "dexterity"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Illumination.*** The azer sheds bright light in a 10-foot radius and dim light for an additional 10 feet.  \n**Actions**  \n***Warhammer.** Melee Wea",
+      "**Speed** 20 ft., climb 20 ft.  \n| STR     | DEX    | CON     | INT    | WIS    | CHA    |\n|---------|--------|---------|--------|--------|--------|\n|",
+      "Following the road from Baldur\u2019s Gate to Waterdeep, the adventurers spend four uneventful days before a goblin ambush interrupts their journey.  \nIn c",
+      "*2nd-level necromancy*  \n**Casting Time:** 1 action  \n**Range:** 60 feet  \n**Components:** V, S  \n**Duration:** Concentration, up to 1 minute  \nA blac",
+      "**Casting Time:** 1 action  \n**Range:** 120 feet  \n**Components:** V, S, M (several seeds of any moonseed plant and a piece of opalescent feldspar)  \n"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.29
+  },
+  {
+    "id": 11,
+    "query": "I try to pickpocket the nobleman",
+    "category": "social",
+    "query_type": "precise",
+    "primary_keywords": [
+      "sleight of hand"
+    ],
+    "supporting_keywords": [
+      "dexterity"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "During your rogue training you learned thieves\u2019 cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal c",
+      "***Sun.*** You gain 50,000 XP, and a wondrous item (which the GM determines randomly) appears in your hands.  \n***Talons.*** Every magic item you wear",
+      "***Hand Crossbow.*** *Ranged Weapon Attack:* +4 to hit, range 30/120 ft., one target. *Hit:* 5 (1d6 + 2) piercing damage.  \nRulers, nobles, merchants,",
+      "##### Actions  \n***Rapier.*** *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 5 (1d8 + 1) piercing damage.  \n##### Reactions  \n***Pa",
+      "|--------|-----------|---------------------|--------------------------------------|\n| 01\u201340  | Silver    | 2d4 + 2             | None                 "
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.117
+  },
+  {
+    "id": 12,
+    "query": "I want to play a song at the tavern to earn coin",
+    "category": "social",
+    "query_type": "precise",
+    "primary_keywords": [
+      "performance"
+    ],
+    "supporting_keywords": [
+      "charisma"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "<td align=\"center\">+6</td>\n<td align=\"left\">Song of Rest (d12)</td>\n<td align=\"center\">4</td>\n<td align=\"center\">20</td>\n</tr>\n<tr class=\"even\">\n<td a",
+      "When you create a device, choose one of the following options:  \n*Clockwork Toy.* This toy is a clockwork animal, monster, or person, such as a frog, ",
+      "With one gold piece, a character can buy a bedroll, 50 feet of good rope, or a goat. A skilled (but not exceptional) artisan can earn one gold piece a",
+      "**Challenge** 1 (200 XP)  \n**Actions**  \n***Multiattack.*** The harpy makes two attacks: one with its claws and one with its club.  \n***Claws.** Melee",
+      "***Sleight of Hand.*** Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an obje"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.39
+  },
+  {
+    "id": 13,
+    "query": "I try to track the goblins through the forest",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "survival",
+      "tracks"
+    ],
+    "supporting_keywords": [
+      "wisdom"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Swimming across a rushing river, sneaking down a dungeon corridor, scaling a treacherous mountain slope\u2014all sorts of movement play a key role in fanta",
+      "Starting at 14th level, if you are able to hear, you are aware of the location of any hidden or invisible creature within 10 feet of you.",
+      "Following the road from Baldur\u2019s Gate to Waterdeep, the adventurers spend four uneventful days before a goblin ambush interrupts their journey.  \nIn c",
+      "##### Object Hit Points  \n***Huge and Gargantuan Objects.*** Normal weapons are of little use against many Huge and Gargantuan objects, such as a colo",
+      "6.  ***Indigo.*** On a failed save, the creature is restrained. It must then make a Constitution saving throw at the end of each of its turns. If it s"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.257
+  },
+  {
+    "id": 14,
+    "query": "I try to calm down the angry wolf",
+    "category": "social",
+    "query_type": "precise",
+    "primary_keywords": [
+      "animal handling"
+    ],
+    "supporting_keywords": [
+      "wisdom"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Web Walker.*** The spider ignores movement restrictions caused by webbing.  \n##### Actions  \n***Bite.*** *Melee Weapon Attack:* +3 to hit, reach 5 ",
+      "</tr>\n<tr class=\"even\">\n<td align=\"center\">21\u201330</td>\n<td align=\"left\">The character becomes <a href=\"#incapacitated\">incapacitated</a> and spends the",
+      "<th align=\"center\">CHA</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td align=\"center\">18 (+4)</td>\n<td align=\"center\">13 (+1)</td>\n<td align=\"center\"",
+      "Once you have raged the number of times shown for your barbarian level in the Rages column of the Barbarian table, you must finish a long rest before ",
+      "***Snow Camouflage.*** The wolf has advantage on Dexterity (Stealth) checks made to hide in snowy terrain.  \n##### Actions  \n***Bite.*** *Melee Weapon"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.225
+  },
+  {
+    "id": 15,
+    "query": "I want to stabilize my dying companion",
+    "category": "combat",
+    "query_type": "precise",
+    "primary_keywords": [
+      "medicine",
+      "stabilize"
+    ],
+    "supporting_keywords": [
+      "wisdom"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "-   [*Animate Dead*](#animate-dead)\n-   [*Beacon of Hope*](#beacon-of-hope)\n-   [*Bestow Curse*](#bestow-curse)\n-   [*Clairvoyance*](#clairvoyance)\n- ",
+      "-   [*Aid*](#aid)\n-   [*Augury*](#augury)\n-   [*Blindness/Deafness*](#blindnessdeafness)\n-   [*Calm Emotions*](#calm-emotions)\n-   [*Continual Flame*]",
+      "***At Higher Levels.*** When you cast this spell using a spell slot of 4th level or higher, the healing increases by 1d4 for each slot level above 3rd",
+      "**Components:** V, M (a snake's tongue and either a bit of honeycomb or a drop of sweet oil)  \n**Duration:** Concentration, up to 8 hours  \nYou sugges",
+      "**Range:** 60 feet  \n**Components:** V, M (a snake's tongue and either a bit of honeycomb or a drop of sweet oil)  \n**Duration:** 24 hours  \nYou sugge"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.167
+  },
+  {
+    "id": 16,
+    "query": "I want to recall what I know about undead",
+    "category": "knowledge",
+    "query_type": "precise",
+    "primary_keywords": [
+      "religion"
+    ],
+    "supporting_keywords": [
+      "intelligence",
+      "undead"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "**Casting Time:** 1 action  \n**Range:** 10 feet  \n**Components:** V, S, M (burning incense)  \n**Duration:** 10 minutes  \nYou grant the semblance of li",
+      "#### Chill Touch  \n*Necromancy cantrip*  \n**Classes:** [Sorcerer](#section-sorcerer), [Warlock](#section-warlock), [Wizard](#section-wizard)  \n**Casti",
+      "**Undead** are once-living creatures brought to a horrifying state of undeath through the practice of necromantic magic or some unholy curse. Undead i",
+      ">\n> **Necromancy** spells manipulate the energies of life and death. Such spells can grant an extra reserve of life force, drain the life energy from ",
+      "**Necromancy** spells manipulate the energies of life and death. Such spells can grant an extra reserve of life force, drain the life energy from anot"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.183
+  },
+  {
+    "id": 17,
+    "query": "I examine the wound to determine the weapon",
+    "category": "knowledge",
+    "query_type": "precise",
+    "primary_keywords": [
+      "investigation"
+    ],
+    "supporting_keywords": [
+      "intelligence"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***False Appearance.*** While the sword remains motionless and isn't flying, it is indistinguishable from a normal sword.  \n##### Actions  \n***Longswo",
+      "***Claw.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 6 (1d6 + 3) piercing damage.  \n***Tail.*** *Melee Weapon Attack:* +6 to ",
+      "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh",
+      "***Glaive.** Melee Weapon Attack:* +5 to hit, reach 10 ft., one target. *Hit:* 8 (1d10 + 3) slashing damage. If the target is a creature other than an",
+      "You can use your action to cause the image to move to any spot within range. As the image changes location, you can alter its appearance so that its m"
+    ],
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 0.3333,
+    "ndcg": 0.5438,
+    "f1": 0.5714,
+    "hit": 1,
+    "ap": 0.3667,
+    "latency": 0.361
+  },
+  {
+    "id": 18,
+    "query": "Can I identify what type of plant this is",
+    "category": "knowledge",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "nature"
+    ],
+    "supporting_keywords": [
+      "intelligence"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Medium plant, unaligned*  \n**Armor Class** 5  \n**Hit Points** 18 (4d8)  \n**Speed** 5 ft.  \n| STR    | DEX    | CON     | INT    | WIS    | CHA    |\n|",
+      "*3rd-level transmutation*  \n**Casting Time:** 1 action  \n**Range:** Self (30-foot radius)  \n**Components:** V, S  \n**Duration:** 10 minutes  \nYou imbu",
+      "#### Cantrips (0 Level)\n- Dancing Lights\n- Light\n- Mage Hand\n- Mending\n- Message\n- Minor Illusion\n- Prestidigitation\n- True Strike  \n#### 1st Level\n- ",
+      "#### Tongues  \n*3rd-level divination*  \n**Casting Time:** 1 action  \n**Range:** Touch  \n**Components:** V, M (a small clay model of a ziggurat)  \n**Du",
+      "At 2nd level, you choose to identify with a circle of druids: the Circle of the Land or the Circle of the Moon, both detailed at the end of the class "
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.35
+  },
+  {
+    "id": 19,
+    "query": "do I recognize this holy symbol on the robe",
+    "category": "knowledge",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "religion"
+    ],
+    "supporting_keywords": [
+      "intelligence",
+      "holy"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Wondrous item, legendary (requires [attunement](#section-attunement) by a sorcerer, warlock, or wizard)*  \nThis elegant garment is made from exquisit",
+      "#### Talisman of Pure Good  \n*Wondrous item, legendary (requires attunement by a creature of good alignment)*  \nThis talisman is a mighty symbol of go",
+      "**Spell save DC** = 8 + your proficiency bonus + your Charisma modifier  \n**Spell attack modifier** = your proficiency bonus + your Charisma modifier ",
+      "- Your spell save DC and spell attack bonus each increase by 2.  \n#### Robe of Useful Items  \n*Wondrous item, uncommon*  \nThis robe has cloth patches ",
+      "**Spell save DC** = 8 + your proficiency bonus + your Wisdom modifier  \n**Spell attack modifier** = your proficiency bonus + your Wisdom modifier  \n##"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.189
+  },
+  {
+    "id": 20,
+    "query": "I want to recall lore about this ancient kingdom",
+    "category": "knowledge",
+    "query_type": "precise",
+    "primary_keywords": [
+      "history"
+    ],
+    "supporting_keywords": [
+      "intelligence"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "</tr>\n<tr class=\"odd\">\n<td align=\"left\">Sobek, god of water and crocodiles</td>\n<td align=\"center\">LE</td>\n<td align=\"left\">Nature, Tempest</td>\n<td a",
+      "The Celtic, Egyptian, Greek, and Norse pantheons are fantasy interpretations of historical religions from our world's ancient times. They include deit",
+      "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh",
+      "***Other Intelligence Checks.*** The GM might call for an Intelligence check when you try to accomplish tasks like the following:\n- Communicate with a",
+      "#### Legend Lore  \n*5th-level divination*  \n**Casting Time:** 10 minutes  \n**Range:** Self  \n**Components:** V, S, M (incense worth at least 250 gp, w"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.25
+  },
+  {
+    "id": 21,
+    "query": "What do I know about this magical artifact",
+    "category": "knowledge",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "arcana"
+    ],
+    "supporting_keywords": [
+      "intelligence"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "You can also use an action to cast the [*detect magic*](#detect-magic) spell from the orb without using any charges.  \n***Call Dragons.*** While you c",
+      "***At Higher Levels.*** When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d10 for each slot level above 5th",
+      "This 2-foot-diameter black sphere is a hole in the multiverse, hovering in space and stabilized by a magical field surrounding it.  \nThe sphere oblite",
+      "You might be able to achieve something beyond the scope of the above examples. State your wish to the GM as precisely as possible. The GM has great la",
+      "- Make it impossible for its wielder to attune to it.\n- Suppress one or more of its activated properties.\n- Attempt to take control of its wielder.  \n"
+    ],
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 0.3333,
+    "ndcg": 0.5,
+    "f1": 0.3333,
+    "hit": 1,
+    "ap": 0.3333,
+    "latency": 0.205
+  },
+  {
+    "id": 22,
+    "query": "I try to wrestle the weapon from the bandit",
+    "category": "combat",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "grapple"
+    ],
+    "supporting_keywords": [
+      "athletics",
+      "contested"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "| Sling           | 1 sp  | 1d4 bludgeoning | \u2014       | Ammunition (range 30/120)                      |  \n##### Martial Melee Weapons  \n| Name       ",
+      "***Spider Climb.*** The roper can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.  \n##### Actio",
+      "| Nine of diamonds  | Ogre mage                        |\n| Eight of diamonds | Gnoll                            |\n| Two of diamonds   | Kobold        ",
+      "#### Grappling  \nWhen you want to grab a creature or wrestle with it, you can use the Attack action to make a special melee attack, a grapple. If you\u2019",
+      "A band of adventurers sneaks up on a bandit camp, springing from the trees to attack them. A gelatinous cube glides down a dungeon passage, unnoticed "
+    ],
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 0.25,
+    "ndcg": 0.4307,
+    "f1": 0.3333,
+    "hit": 1,
+    "ap": 0.25,
+    "latency": 0.384
+  },
+  {
+    "id": 23,
+    "query": "do I get a free swing at the goblin running away",
+    "category": "combat",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "opportunity"
+    ],
+    "supporting_keywords": [
+      "reaction"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td align=\"center\">13 (+1)</td>\n<td align=\"center\">12 (+1)</td>\n<td align=\"center\">12 (+1)</td>\n<td align=\"cen",
+      "The fortress is a square tower, 20 feet on a side and 30 feet high, with arrow slits on all sides and a battlement atop it. Its interior is divided in",
+      "Sometimes you want to get the jump on a foe or wait for a particular circumstance before you act. To do so, you can take the Ready action on your turn",
+      "*Wondrous item, rare*  \nThis rope is 30 feet long and weighs 3 pounds. If you hold one end of the rope and use an action to speak its command word, th",
+      "***Tree.*** You must be outdoors to use this token. You can use an action to touch it to an unoccupied space on the ground. The token disappears, and "
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.232
+  },
+  {
+    "id": 24,
+    "query": "I want to knock the goblin out not kill it",
+    "category": "combat",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "unconscious",
+      "knocking"
+    ],
+    "supporting_keywords": [
+      "melee"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Sometimes you want to get the jump on a foe or wait for a particular circumstance before you act. To do so, you can take the Ready action on your turn",
+      "| Gnomish  | Gnomes           | Dwarvish |\n| Goblin   | Goblinoids       | Dwarvish |\n| Halfling | Halflings        | Common   |\n| Orc      | Orcs    ",
+      "- Dominate Monster\n- Earthquake\n- Incendiary Cloud\n- Power Word Stun\n- Sunburst  \n#### 9th Level\n- Gate\n- Meteor Swarm\n- Power Word Kill\n- Time Stop\n-",
+      "- Finger of Death\n- Forcecage\n- Plane Shift  \n#### 8th Level\n- Demiplane\n- Dominate Monster\n- Feeblemind\n- Glibness\n- Power Word Stun  \n#### 9th Level",
+      "When you drop to 0 hit points, you either die outright or fall unconscious, as explained in the following sections.  \n#### Instant Death  \nMassive dam"
+    ],
+    "precision": 0.0,
+    "recall": 0.5,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.277
+  },
+  {
+    "id": 25,
+    "query": "I attack with my off-hand dagger as a bonus action",
+    "category": "combat",
+    "query_type": "precise",
+    "primary_keywords": [
+      "two-weapon",
+      "bonus action"
+    ],
+    "supporting_keywords": [
+      "light"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Weapon (any sword), legendary (requires [attunement](#section-attunement))*  \nYou gain a +3 bonus to attack and damage rolls made with this magic wea",
+      "You normally interact with an object while doing something else, such as when you draw a sword as part of an attack. When an object requires your acti",
+      "- Your spell save DC and spell attack bonus each increase by 2.  \n#### Robe of Useful Items  \n*Wondrous item, uncommon*  \nThis robe has cloth patches ",
+      "- Securely tie up a prisoner\n- Wriggle free of bonds\n- Play a stringed instrument\n- Craft a small or detailed object  \n#### Attack Rolls and Damage  \n",
+      "**Ki save DC** = 8 + your proficiency bonus + your Wisdom modifier  \n#### Flurry of Blows  \nImmediately after you take the Attack action on your turn,"
+    ],
+    "precision": 0.0,
+    "recall": 0.5,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.262
+  },
+  {
+    "id": 26,
+    "query": "I want to trip the enemy",
+    "category": "combat",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "shove",
+      "prone"
+    ],
+    "supporting_keywords": [
+      "athletics"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.  \nChoose a type of f",
+      "When adventurers come across a trap, you need to know how the trap is triggered and what it does, as well as the possibility for the characters to det",
+      "#### Falling Net  \n*Mechanical trap*  \nThis trap uses a trip wire to release a net suspended from the ceiling.  \nThe trip wire is 3 inches off the gro",
+      "#### Oathbow  \n*Weapon (longbow), very rare (requires attunement)*  \nWhen you nock an arrow on this bow, it whispers in Elvish, \u201cSwift defeat to my en",
+      "The ceiling above the trip wire is in bad repair, and anyone who can see it can tell that it\u2019s in danger of collapse.  \nWhen the trap is triggered, th"
+    ],
+    "precision": 0.0,
+    "recall": 0.5,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.221
+  },
+  {
+    "id": 27,
+    "query": "I try to hide behind the pillar during combat",
+    "category": "combat",
+    "query_type": "precise",
+    "primary_keywords": [
+      "stealth",
+      "hide"
+    ],
+    "supporting_keywords": [
+      "dexterity"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Starting at 14th level, you can use the Hide action as a bonus action on your turn. Also, you can't be tracked by nonmagical means, unless you choose ",
+      "***Ability Score Increase.*** Your Charisma score increases by 1.  \n***Naturally Stealthy.*** You can attempt to hide even when you are obscured only ",
+      "Cover\n-----  \nWalls, trees, creatures, and other obstacles can provide cover during combat, making a target more difficult to harm. A target can benef",
+      "Initiative determines the order of turns during combat. When combat starts, every participant makes a Dexterity check to determine their place in the ",
+      "When a monster takes its action, it can choose from the options in the Actions section of its stat block or use one of the actions available to all cr"
+    ],
+    "precision": 0.0,
+    "recall": 1.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.156
+  },
+  {
+    "id": 28,
+    "query": "I concentrate on maintaining my spell while fighting",
+    "category": "magic",
+    "query_type": "precise",
+    "primary_keywords": [
+      "concentration"
+    ],
+    "supporting_keywords": [
+      "constitution",
+      "saving throw"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "#### Spellcasting Ability  \nCharisma is your spellcasting ability for your sorcerer spells, since the power of your magic relies on your ability to pr",
+      "#### Longer Casting Times  \nCertain spells (including spells cast as rituals) require more time to cast: minutes or even hours. When you cast a spell ",
+      "Beginning at 14th level, you can use your action to end one spell on yourself or on one willing creature that you touch.  \nYou can use this feature a ",
+      "-   **Being incapacitated or killed.** You lose concentration on a spell if you are [incapacitated](#incapacitated) or if you die.  \nThe GM might also",
+      "- **Being incapacitated or killed.** You lose concentration on a spell if you are incapacitated or if you die.  \nThe GM might also decide that certain"
+    ],
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 0.25,
+    "ndcg": 0.5013,
+    "f1": 0.5714,
+    "hit": 1,
+    "ap": 0.325,
+    "latency": 0.197
+  },
+  {
+    "id": 29,
+    "query": "can I throw some acid at that guy",
+    "category": "magic",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "acid"
+    ],
+    "supporting_keywords": [
+      "dexterity",
+      "damage"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Standing Leap.*** The frog's long jump is up to 20 feet and its high jump is up to 10 feet, with or without a running start.  \n##### Actions  \n***B",
+      "***Bite.** Melee Weapon Attack:* +7 to hit, reach 10 ft., one target. *Hit:* 15 (2d10 + 4) piercing damage plus 4 (1d8) acid damage.  \n***Claw.** Mele",
+      "***Tail.** Melee Weapon Attack:* +15 to hit, reach 20 ft., one target. *Hit:* 17 (2d8 + 8) bludgeoning damage.  \n***Frightful Presence.*** Each creatu",
+      "| Longbow         | 50 gp | 1d8 piercing  |  2 lb.  | Ammunition (range 150/600), heavy, two-handed          |\n| Net             | 1 gp  | \u2014          ",
+      "#### Acid Splash  \n*Conjuration cantrip*  \n**Casting Time:** 1 action  \n**Range:** 60 feet  \n**Components:** V, S  \n**Duration:** Instantaneous  \nYou "
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 1.0,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.272
+  },
+  {
+    "id": 30,
+    "query": "I want to eavesdrop on the conversation next door",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "perception"
+    ],
+    "supporting_keywords": [
+      "wisdom",
+      "passive"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "During your rogue training you learned thieves' cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal c",
+      "#### Stone Shape  \n*4th-level transmutation*  \n**Casting Time:** 1 action  \n**Range:** Touch  \n**Components:** V, S, M (soft clay, which must be worke",
+      "#### Demiplane  \n*8th-level conjuration*  \n**Casting Time:** 1 action  \n**Range:** 60 feet  \n**Components:** S  \n**Duration:** 1 hour  \nYou create a s",
+      "If the contest results in a tie, the situation remains the same as it was before the contest. Thus, one contestant might win the contest by default. I",
+      "The fortress is a square tower, 20 feet on a side and 30 feet high, with arrow slits on all sides and a battlement atop it. Its interior is divided in"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.186
+  },
+  {
+    "id": 31,
+    "query": "I try to wriggle free from the ropes",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "acrobatics",
+      "bonds"
+    ],
+    "supporting_keywords": [
+      "dexterity",
+      "escape"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      ">\n> -   draw or sheathe a sword\n> -   open or close a door\n> -   withdraw a potion from your backpack\n> -   pick up a dropped axe\n> -   take a bauble ",
+      "-   [*Rope Trick*](#rope-trick)\n-   [*Scorching Ray*](#scorching-ray)\n-   [*See Invisibility*](#see-invisibility)\n-   [*Shatter*](#shatter)\n-   [*Spid",
+      "***Sleight of Hand.*** Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an obje",
+      "- **Chaotic evil** (CE) creatures act with arbitrary violence, spurred by their greed, hatred, or bloodlust. Demons, red dragons, and orcs are chaotic",
+      "The diseases here illustrate the variety of ways disease can work in the game. Feel free to alter the saving throw DCs, incubation times, symptoms, an"
+    ],
+    "precision": 0.2,
+    "recall": 0.5,
+    "mrr": 0.3333,
+    "ndcg": 0.5,
+    "f1": 0.2857,
+    "hit": 1,
+    "ap": 0.3333,
+    "latency": 0.262
+  },
+  {
+    "id": 32,
+    "query": "I try to break down the reinforced door",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "strength",
+      "force"
+    ],
+    "supporting_keywords": [
+      "break",
+      "door"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "**Range:** Touch  \n**Components:** V, S, M (gold dust worth at least 25 gp, which the spell consumes)  \n**Duration:** Until dispelled  \nYou touch a cl",
+      "Each pot of paint is sufficient to cover 1,000 square feet of a surface, which lets you create inanimate objects or terrain features\u2014such as a door, a",
+      "***Other Strength Checks.*** The GM might also call for a Strength check when you try to accomplish tasks like the following:\n- Force open a stuck, lo",
+      "If the contest results in a tie, the situation remains the same as it was before the contest. Thus, one contestant might win the contest by default. I",
+      "Ram, Portable. You can use a portable ram to break down doors. When doing so, you gain a +4 bonus on the Strength check. One other character can help "
+    ],
+    "precision": 0.6,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.8855,
+    "f1": 0.75,
+    "hit": 1,
+    "ap": 0.7556,
+    "latency": 0.189
+  },
+  {
+    "id": 33,
+    "query": "I search the room for hidden compartments",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "investigation",
+      "hidden"
+    ],
+    "supporting_keywords": [
+      "intelligence"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "#### Rod of Security  \n*Rod, very rare*  \nWhile holding this rod, you can use an action to activate it. The rod then instantly transports you and up t",
+      "<th align=\"center\">DEX</th>\n<th align=\"center\">CON</th>\n<th align=\"center\">INT</th>\n<th align=\"center\">WIS</th>\n<th align=\"center\">CHA</th>\n</tr>\n</th",
+      "For example, a trap that causes a room to slowly flood works best as a complex trap. On the trap\u2019s turn, the water level rises. After several rounds, ",
+      "***Poor.*** A poor lifestyle means going without the comforts available in a stable community. Simple food and lodgings, threadbare clothing, and unpr",
+      "When you take the Search action, you devote your attention to finding something. Depending on the nature of your search, the GM might have you make a "
+    ],
+    "precision": 0.2,
+    "recall": 0.5,
+    "mrr": 0.2,
+    "ndcg": 0.3869,
+    "f1": 0.2857,
+    "hit": 1,
+    "ap": 0.2,
+    "latency": 0.44
+  },
+  {
+    "id": 34,
+    "query": "I want to swim across the river",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "athletics",
+      "swimming"
+    ],
+    "supporting_keywords": [
+      "strength"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Movement through dangerous dungeons or wilderness areas often involves more than simply walking. Adventurers might have to climb, crawl, swim, or jump",
+      "The most common arcane traditions in the multiverse revolve around the schools of magic. Wizards through the ages have cataloged thousands of spells, ",
+      "Starting at 2nd level, your speed increases by 10 feet while you are not wearing armor or wielding a shield. This bonus increases when you reach certa",
+      "**Casting Time:** 1 action  \n**Range:** 30 feet  \n**Components:** V, S, M (a drop of mercury)  \n**Duration:** 1 hour  \nThis spell creates a circular, ",
+      "At 20th level, when you roll for initiative and have no ki points remaining, you regain 4 ki points.  \nMonastic Traditions\n-------------------  \nThree"
+    ],
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.3333,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.303
+  },
+  {
+    "id": 35,
+    "query": "can I tell if the prisoner is withholding info",
+    "category": "social",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "insight"
+    ],
+    "supporting_keywords": [
+      "wisdom",
+      "intentions"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "During your rogue training you learned thieves\u2019 cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal c",
+      "A trap's description specifies the checks and DCs needed to detect it, disable it, or both. A character actively looking for a trap can attempt a Wisd",
+      "#### Rope of Climbing  \n*Wondrous item, uncommon*  \nThis 60-foot length of silk rope weighs 3 pounds and can hold up to 3,000 pounds. If you hold one ",
+      "Your GM can choose to give you inspiration for a variety of reasons. Typically, GMs award it when you play out your personality traits, give in to the",
+      "Charisma measures your ability to interact effectively with others. It includes such factors as confidence and eloquence, and it can represent a charm"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.246
+  },
+  {
+    "id": 36,
+    "query": "I try to fast-talk the guard into letting me through",
+    "category": "social",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "deception"
+    ],
+    "supporting_keywords": [
+      "charisma"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "During your rogue training you learned thieves\u2019 cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal c",
+      "<td align=\"left\">&quot;I don't like the way people judge me all the time.&quot;</td>\n</tr>\n<tr class=\"even\">\n<td align=\"center\">56\u201370</td>\n<td align=\"",
+      "You can lend your aid to another creature in the completion of a task. When you take the Help action, the creature you aid gains advantage on the next",
+      "Sometimes you want to get the jump on a foe or wait for a particular circumstance before you act. To do so, you can take the Ready action on your turn",
+      "#### Squeezing into a Smaller Space  \nA creature can squeeze through a space that is large enough for a creature one size smaller than it. Thus, a Lar"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.212
+  },
+  {
+    "id": 37,
+    "query": "I tell the thugs to back down or else",
+    "category": "social",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "intimidation"
+    ],
+    "supporting_keywords": [
+      "charisma"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "#### Intimidating Presence  \nBeginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose ",
+      "***Insight.*** Your Wisdom (Insight) check decides whether you can determine the true intentions of a creature, such as when searching out a lie or pr",
+      "#### Rope of Climbing  \n*Wondrous item, uncommon*  \nThis 60-foot length of silk rope weighs 3 pounds and can hold up to 3,000 pounds. If you hold one ",
+      "| 16\u201325  | \u201cI keep whatever I find.\u201d                                                                                                                |\n",
+      "#### Rod of Security  \n*Rod, very rare*  \nWhile holding this rod, you can use an action to activate it. The rod then instantly transports you and up t"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.229
+  },
+  {
+    "id": 38,
+    "query": "I want to inspire the townsfolk to fight",
+    "category": "social",
+    "query_type": "precise",
+    "primary_keywords": [
+      "persuasion"
+    ],
+    "supporting_keywords": [
+      "charisma"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "</tr>\n<tr class=\"odd\">\n<td align=\"left\">Tyr, god of courage and strategy</td>\n<td align=\"center\">LN</td>\n<td align=\"left\">Knowledge, War</td>\n<td alig",
+      ">\n> -   draw or sheathe a sword\n> -   open or close a door\n> -   withdraw a potion from your backpack\n> -   pick up a dropped axe\n> -   take a bauble ",
+      "At 18th level, you gain preternatural senses that help you fight creatures you can\u2019t see. When you attack a creature you can\u2019t see, your inability to ",
+      "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself withi",
+      "Combat rarely takes place in bare rooms or on featureless plains. Boulder-strewn caverns, briar- choked forests, treacherous staircases\u2014the setting of"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.406
+  },
+  {
+    "id": 39,
+    "query": "I disguise myself as a guard to sneak in",
+    "category": "social",
+    "query_type": "precise",
+    "primary_keywords": [
+      "deception",
+      "disguise"
+    ],
+    "supporting_keywords": [
+      "charisma"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "During your rogue training you learned thieves\u2019 cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal c",
+      "The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass",
+      "The amount of the extra damage increases as you gain levels in this class, as shown in the Sneak Attack column of the Rogue table.",
+      "**Tools:** Thieves\u2019 tools  \n**Saving Throws:** Dexterity, Intelligence  \n**Skills:** Choose four from Acrobatics, Athletics, Deception, Insight, Intim",
+      "| 1  | I would die to recover an ancient relic of my faith that was lost long ago.              |\n| 2  | I will someday get revenge on the corrupt tem"
+    ],
+    "precision": 0.0,
+    "recall": 1.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.214
+  },
+  {
+    "id": 40,
+    "query": "I haggle for a better price on the sword",
+    "category": "social",
+    "query_type": "precise",
+    "primary_keywords": [
+      "persuasion"
+    ],
+    "supporting_keywords": [
+      "charisma"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "#### Flame Tongue  \n*Weapon (any sword), rare (requires attunement)*  \nYou can use a bonus action to speak this magic sword\u2019s command word, causing fl",
+      "| Loki, god of thieves and trickery         | CE        | Trickery          | Flame                             |\n| Njord, god of sea and wind        ",
+      "Lifestyle expenses provide you with a simple way to account for the cost of living in a fantasy world. They cover your accommodations, food and drink,",
+      "*Weapon (any sword), very rare (requires attunement)*  \nYou gain a +2 bonus to attack and damage rolls made with this magic weapon.  \nThe sword has 1d",
+      "The sword\u2019s luminous blade emits bright light in a 15-foot radius and dim light for an additional 15 feet. The light is sunlight. While the blade pers"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.231
+  },
+  {
+    "id": 41,
+    "query": "have I heard of this kingdom before",
+    "category": "knowledge",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "history"
+    ],
+    "supporting_keywords": [
+      "intelligence"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "| Anubis, god of judgment and death               | LN        | Death                    | Black jackal                         |\n| Apep, god of evil,",
+      "By 7th level, your instincts are so honed that you have advantage on initiative rolls.  \nAdditionally, if you are surprised at the beginning of combat",
+      "Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your r",
+      "#### Guidance  \n*Divination cantrip*  \n**Casting Time:** 1 action  \n**Range:** Touch  \n**Components:** V, S  \n**Duration:** Concentration, up to 1 min",
+      "At 20th level, you become an unparalleled hunter of your enemies. Once on each of your turns, you can add your Wisdom modifier to the attack roll or t"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.2
+  },
+  {
+    "id": 42,
+    "query": "Can I estimate this gemstone's value",
+    "category": "knowledge",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "intelligence"
+    ],
+    "supporting_keywords": [
+      "appraise",
+      "jeweler"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Once the stone has canceled 50 levels of spells, it burns out and turns dull gray, losing its magic. If you are targeted by a spell whose level is hig",
+      "This spell dispels any darkness in its area that was created by a spell.  \n#### Symbol  \n*7th-level abjuration*  \n**Casting Time:** 1 minute  \n**Range",
+      "#### Crafting  \nYou can craft nonmagical objects, including adventuring equipment and works of art. You must be proficient with tools related to the o",
+      "***Gems, Jewelry, and Art Objects.*** These items retain their full value in the marketplace, and you can either trade them in for coin or use them as",
+      "Each pot of paint is sufficient to cover 1,000 square feet of a surface, which lets you create inanimate objects or terrain features\u2014such as a door, a"
+    ],
+    "precision": 0.0,
+    "recall": 1.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.387
+  },
+  {
+    "id": 43,
+    "query": "I steer the cart down the steep hill",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "dexterity"
+    ],
+    "supporting_keywords": [
+      "vehicle",
+      "control"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "#### Horseshoes of a Zephyr  \n*Wondrous item, very rare*  \nThese iron horseshoes come in a set of four. While all four shoes are affixed to the hooves",
+      "- **Lawful neutral** (LN) individuals act in accordance with law, tradition, or personal codes. Many monks and some wizards are lawful neutral.\n- **Ne",
+      "Combat rarely takes place in bare rooms or on featureless plains. Boulder-strewn caverns, briar- choked forests, treacherous staircases\u2014the setting of",
+      "***Tool Proficiency.*** You gain proficiency with the artisan\u2019s tools of your choice: smith\u2019s tools, brewer\u2019s supplies, or mason\u2019s tools.  \n***Stonecu",
+      "##### Armor, Weapon, and Tool Proficiencies  \nAssume that a creature is proficient with its armor, weapons, and tools. If you swap them out, you decid"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.19
+  },
+  {
+    "id": 44,
+    "query": "I tie up the captured bandit securely",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "dexterity"
+    ],
+    "supporting_keywords": [
+      "knot",
+      "tie"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "| War pick    | 5 gp  | 1d8 piercing    | 2 lb.  | \u2014                                     |\n| Warhammer   | 15 gp | 1d8 bludgeoning | 2 lb.  | Versatil",
+      "#### Rope of Climbing  \n*Wondrous item, uncommon*  \nThis 60-foot length of silk rope weighs 3 pounds and can hold up to 3,000 pounds. If you hold one ",
+      "***Sleight of Hand.*** Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an obje",
+      "If the contest results in a tie, the situation remains the same as it was before the contest. Thus, one contestant might win the contest by default. I",
+      "**Reactions**  \n***Parry.*** The captain adds 2 to its AC against one melee attack that would hit it. To do so, the captain must see the attacker and "
+    ],
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 0.3333,
+    "ndcg": 0.5,
+    "f1": 0.3333,
+    "hit": 1,
+    "ap": 0.3333,
+    "latency": 0.25
+  },
+  {
+    "id": 45,
+    "query": "I show forged papers to convince the guard",
+    "category": "social",
+    "query_type": "multi_part",
+    "primary_keywords": [
+      "deception"
+    ],
+    "supporting_keywords": [
+      "charisma",
+      "forgery"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "| 1  | I would die to recover an ancient relic of my faith that was lost long ago.              |\n| 2  | I will someday get revenge on the corrupt tem",
+      "To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check ",
+      "***Star.*** Increase one of your ability scores by 2. The score can exceed 20 but can't exceed 24.  \n***Sun.*** You gain 50,000 XP, and a wondrous ite",
+      "***Sun.*** You gain 50,000 XP, and a wondrous item (which the GM determines randomly) appears in your hands.  \n***Talons.*** Every magic item you wear",
+      "During your rogue training you learned thieves' cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal c"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.209
+  },
+  {
+    "id": 46,
+    "query": "I blend into the crowd and listen for rumors",
+    "category": "social",
+    "query_type": "multi_part",
+    "primary_keywords": [
+      "charisma"
+    ],
+    "supporting_keywords": [
+      "gather",
+      "information"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.  \nChoose a type of f",
+      "-   Blend into a crowd to get the sense of key topics of conversation  \n#### Spellcasting Ability  \nBards, paladins, sorcerers, and warlocks use Chari",
+      "The college\u2019s members gather in libraries and sometimes in actual colleges, complete with classrooms and dormitories, to share their lore with one ano",
+      "The college's members gather in libraries and sometimes in actual colleges, complete with classrooms and dormitories, to share their lore with one ano",
+      "<td align=\"left\">&quot;I don't like the way people judge me all the time.&quot;</td>\n</tr>\n<tr class=\"even\">\n<td align=\"center\">56\u201370</td>\n<td align=\""
+    ],
+    "precision": 0.0,
+    "recall": 1.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.201
+  },
+  {
+    "id": 47,
+    "query": "we march through the night without rest",
+    "category": "exploration",
+    "query_type": "colloquial",
+    "primary_keywords": [
+      "constitution",
+      "exhaustion"
+    ],
+    "supporting_keywords": [
+      "forced march"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "| 54\u201358  | You cast darkness.                                                                                                                         ",
+      "Made from supple and thin materials, light armor favors agile adventurers since it offers some protection without sacrificing mobility. If you wear li",
+      "Starting at 8th level, moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without be",
+      "**Bright light** lets most creatures see normally.  \nEven gloomy days provide bright light, as do torches, lanterns, fires, and other sources of illum",
+      "You can cast *bane* once using a warlock spell slot. You can\u2019t do so again until you finish a long rest.  \n#### Thirsting Blade  \n*Prerequisite: 5th l"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.179
+  },
+  {
+    "id": 48,
+    "query": "I jump across the wide gap",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "athletics",
+      "jumping"
+    ],
+    "supporting_keywords": [
+      "strength"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Sometimes you want to get the jump on a foe or wait for a particular circumstance before you act. To do so, you can take the Ready action on your turn",
+      "To snare its prey, a **giant spider** spins elaborate webs or shoots sticky strands of webbing from its abdomen. Giant spiders are most commonly found",
+      "**Components:** V, S, M (a bit of tallow, a pinch of brimstone, and a dusting of powdered iron)  \n**Duration:** Concentration, up to 1 minute  \nA 5-fo",
+      "|--------|--------------------------------------------------------------------------------------------------------------------------------------------",
+      "***Fan.*** If you are on a boat or ship, you can use an action to toss the token up to 10 feet in the air. The token disappears, and a giant flapping "
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.27
+  },
+  {
+    "id": 49,
+    "query": "I disarm the trap carefully",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "trap",
+      "thieves"
+    ],
+    "supporting_keywords": [
+      "dexterity"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "(2d10) poison damage, and must succeed on a DC 15 Constitution saving throw or be poisoned for 1 hour.  \nA successful DC 20 Intelligence (Investigatio",
+      "You should allow a character to discover a trap without making an ability check if an action would clearly reveal the trap\u2019s presence. For example, if",
+      "The trap activates when more than 20 pounds of weight is placed on the pressure plate, releasing four darts. Each dart makes a ranged attack with a +8",
+      "Traps are often designed with mechanisms that allow them to be disarmed or bypassed. Intelligent monsters that place traps in or around their lairs ne",
+      "A trap's description specifies the checks and DCs needed to detect it, disable it, or both. A character actively looking for a trap can attempt a Wisd"
+    ],
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.8503,
+    "f1": 0.5714,
+    "hit": 1,
+    "ap": 0.7,
+    "latency": 0.175
+  },
+  {
+    "id": 50,
+    "query": "I pick the lock on the chest",
+    "category": "exploration",
+    "query_type": "precise",
+    "primary_keywords": [
+      "thieves",
+      "lock"
+    ],
+    "supporting_keywords": [
+      "dexterity"
+    ],
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Ring, very rare (requires [attunement](#section-attunement))*  \nWhile wearing this ring, you can cast the [*telekinesis*](#telekinesis) spell at will",
+      "Placing an object in the haversack follows the normal rules for interacting with objects. Retrieving an item from the haversack requires you to use an",
+      "**Duration:** Instantaneous  \nYou hide a chest, and all its contents, on the Ethereal Plane. You must touch the chest and the miniature replica that s",
+      "***Magnifying Glass.*** This lens allows a closer look at small objects. It is also useful as a substitute for flint and steel when starting fires. Li",
+      "***Lamp.*** A lamp casts bright light in a 15-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) "
+    ],
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 0.25,
+    "ndcg": 0.5013,
+    "f1": 0.5714,
+    "hit": 1,
+    "ap": 0.325,
+    "latency": 0.192
+  }
+]
