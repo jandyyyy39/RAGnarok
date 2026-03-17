@@ -7,6 +7,7 @@ langchain-community
 chromadb>=0.6.0
 python-dotenv>=1.0.1
 openai
+rank_bm25
 
 # --- Local Embeddings  ---
 sentence-transformers>=3.0.1
