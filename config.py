@@ -16,7 +16,7 @@ class Config:
     LLM_MODEL = {
         'GROQ': "llama-3.3-70b-versatile",
         'GROQ_FAST': "llama-3.1-8b-instant",
-        'LOCAL': "llama3.2",
+        'LOCAL': "mistral-small3.2",
     }
 
     # --- Inference ---

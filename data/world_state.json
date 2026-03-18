@@ -1,17 +1,11 @@
 {
-    "current_location": "The Black Boar Tavern",
+    "current_location": "The Yawning Portal Tavern",
     "active_npcs": [
-        "Thrain Blackbeard (Human Barbarian)",
-        "Piper Redhand (Halfling Bard)",
-        "Arin the Bold (Human Rogue)"
+        "Durnan the Barkeep"
     ],
     "party_status": "Healthy",
     "recent_events": [
-        "Action: The player rolled dice. [SYSTEM: ROLL_RESOLUTION | INTENT: I will buy a few weapons. The best ones. | RESULT: SUCCESS | ROLL: 20] | Outcome: As you declare your intention to acquire the finest weapons, the atmosphere in the Black Boar Tavern...",
-        "Action: The player rolled dice. [SYSTEM: ROLL_RESOLUTION | INTENT: I showed off sword wielding skills and amazing accuracy. | RESULT: SUCCESS | ROLL: 20] | Outcome: As you draw your sword and begin to showcase your impressive wielding skills, the patrons of the Bla...",
-        "Action: The player rolled dice. [SYSTEM: ROLL_RESOLUTION | INTENT: So do I get to buy the finest weapons after showing off? | RESULT: SUCCESS | ROLL: 20] | Outcome: As you finish showcasing your impressive sword-wielding skills, the patrons of the Black Boar Tavern...",
-        "Action: I buy the best weapon. | Outcome: As you declare your intention to purchase the finest weapon, the patrons of the Black Boar Tavern tu...",
-        "Action: okay. What do I do next? | Outcome: As you ponder your next move, the warm glow of the Black Boar Tavern's fire pit casts a golden light..."
+        "The party just walked into the crowded tavern."
     ],
     "inventory_changes": []
 }
