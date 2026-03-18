@@ -1,0 +1,1023 @@
+[
+    {
+        "id": 1,
+        "player_action": "My fighter wants to grab the cultist and wrestle him to the ground",
+        "category": "combat_mechanical",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Melee Attacks",
+            "Grappling",
+            "Being Prone"
+        ]
+    },
+    {
+        "id": 2,
+        "player_action": "Can I shoot my bow if there's an enemy right in my face?",
+        "category": "combat_mechanical",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Ranged Attacks",
+            "Ranged Attacks in Close Combat",
+            "Disadvantage"
+        ]
+    },
+    {
+        "id": 3,
+        "player_action": "I'm invisible and attacking from hiding. How does that work?",
+        "category": "combat_mechanical",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Unseen Attackers and Targets",
+            "Hide",
+            "Advantage and Disadvantage",
+            "Attack Rolls"
+        ]
+    },
+    {
+        "id": 4,
+        "player_action": "The orc has me pinned. How do I break free?",
+        "category": "combat_mechanical",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Grappling",
+            "Contests",
+            "Strength",
+            "Dexterity"
+        ]
+    },
+    {
+        "id": 5,
+        "player_action": "I want to run up, stab the guard, then keep running to the door",
+        "category": "combat_mechanical",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Breaking Up Your Move",
+            "Melee Attacks",
+            "Opportunity Attacks"
+        ]
+    },
+    {
+        "id": 6,
+        "player_action": "There's a guy behind a barrel. Does that make him harder to hit?",
+        "category": "combat_mechanical",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Cover",
+            "Attack Rolls"
+        ]
+    },
+    {
+        "id": 7,
+        "player_action": "I'm down to 3 HP. If I get hit for 10 damage, what happens?",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Dropping to 0 Hit Points",
+            "Instant Death",
+            "Death Saving Throws"
+        ]
+    },
+    {
+        "id": 8,
+        "player_action": "My wizard is at 0 HP and unconscious. Can enemies just execute her?",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Dropping to 0 Hit Points",
+            "Death Saving Throws",
+            "Instant Death",
+            "Unconscious"
+        ]
+    },
+    {
+        "id": 9,
+        "player_action": "I dash toward the enemy but the floor is covered in rubble and debris",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Dash",
+            "Difficult Terrain",
+            "Movement and Position"
+        ]
+    },
+    {
+        "id": 10,
+        "player_action": "I got knocked flat on my back. What does that do to me in combat?",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Being Prone",
+            "Movement and Position"
+        ]
+    },
+    {
+        "id": 11,
+        "player_action": "I swing my greatsword at the dragon. What do I roll?",
+        "category": "combat_mechanical",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Attack Rolls",
+            "Melee Attacks",
+            "Damage Rolls"
+        ]
+    },
+    {
+        "id": 12,
+        "player_action": "The rogue is helping me attack the troll. Do I get any bonus?",
+        "category": "combat_mechanical",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Help",
+            "Advantage and Disadvantage",
+            "Attack Rolls"
+        ]
+    },
+    {
+        "id": 13,
+        "player_action": "I want to focus purely on defense this turn and avoid getting hit",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Dodge"
+        ]
+    },
+    {
+        "id": 14,
+        "player_action": "Can I move away from the ogre without getting smacked?",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Disengage",
+            "Opportunity Attacks"
+        ]
+    },
+    {
+        "id": 15,
+        "player_action": "I'm waiting by the door to ambush whoever comes through",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Ready",
+            "Reactions"
+        ]
+    },
+    {
+        "id": 16,
+        "player_action": "My paladin got hit by a fireball. What do I roll to try to avoid it?",
+        "category": "combat_mechanical",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Saving Throws",
+            "Dexterity"
+        ]
+    },
+    {
+        "id": 17,
+        "player_action": "I cast Sacred Flame on the cultist. Does he roll to avoid it?",
+        "category": "spellcasting",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Saving Throws",
+            "Attack Rolls",
+            "Casting a Spell"
+        ]
+    },
+    {
+        "id": 18,
+        "player_action": "I'm casting a spell that takes 1 minute. Can I do that in combat?",
+        "category": "spellcasting",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Casting Time",
+            "Longer Casting Times"
+        ]
+    },
+    {
+        "id": 19,
+        "player_action": "I want to cast Shield when the goblin shoots me with an arrow",
+        "category": "spellcasting",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Reactions",
+            "Casting Time"
+        ]
+    },
+    {
+        "id": 20,
+        "player_action": "Can I move while concentrating on Bless or does that break it?",
+        "category": "spellcasting",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Concentration",
+            "Duration"
+        ]
+    },
+    {
+        "id": 21,
+        "player_action": "I got punched while maintaining Fog Cloud. Do I lose the spell?",
+        "category": "spellcasting",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Concentration",
+            "Damage and Healing",
+            "Saving Throws"
+        ]
+    },
+    {
+        "id": 22,
+        "player_action": "I'm trying to Counterspell the enemy wizard. How do I know if it works?",
+        "category": "spellcasting",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Reactions",
+            "Casting a Spell",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 23,
+        "player_action": "I want to cast Mage Armor on myself before we enter the dungeon",
+        "category": "spellcasting",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Casting a Spell",
+            "Duration",
+            "Targets"
+        ]
+    },
+    {
+        "id": 24,
+        "player_action": "The cleric wants to cast Cure Wounds on me during a fight",
+        "category": "spellcasting",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Casting a Spell",
+            "Healing",
+            "Targets"
+        ]
+    },
+    {
+        "id": 25,
+        "player_action": "Can I cast Fireball and Misty Step on the same turn?",
+        "category": "spellcasting",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Bonus Actions",
+            "Casting Time"
+        ]
+    },
+    {
+        "id": 26,
+        "player_action": "I'm a 5th level wizard. How many spell slots do I have?",
+        "category": "spellcasting",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Spell Slots"
+        ]
+    },
+    {
+        "id": 27,
+        "player_action": "Can I upcast Magic Missile using a 3rd level slot?",
+        "category": "spellcasting",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Spell Slots",
+            "Casting a Spell at a Higher Level"
+        ]
+    },
+    {
+        "id": 28,
+        "player_action": "I'm trying to sneak past the guards without being seen",
+        "category": "exploration",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Dexterity",
+            "Ability Checks",
+            "Using Ability Scores"
+        ]
+    },
+    {
+        "id": 29,
+        "player_action": "I want to break down this locked wooden door with my shoulder",
+        "category": "exploration",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Strength",
+            "Breaking Objects",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 30,
+        "player_action": "I'm searching the room for hidden compartments and secret doors",
+        "category": "exploration",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Intelligence",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 31,
+        "player_action": "We're taking a quick breather to bandage wounds and catch our breath",
+        "category": "exploration",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Short Rest",
+            "Hit Dice"
+        ]
+    },
+    {
+        "id": 32,
+        "player_action": "We want to set up camp for the night and get a full sleep",
+        "category": "exploration",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Long Rest",
+            "Hit Points and Hit Dice"
+        ]
+    },
+    {
+        "id": 33,
+        "player_action": "I jump off the 50-foot cliff into the water below",
+        "category": "exploration",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Falling",
+            "Damage and Healing"
+        ]
+    },
+    {
+        "id": 34,
+        "player_action": "I'm underwater and running out of breath. How long can I hold it?",
+        "category": "exploration",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Suffocating",
+            "Constitution"
+        ]
+    },
+    {
+        "id": 35,
+        "player_action": "It's completely dark and I don't have darkvision. Can I see anything?",
+        "category": "exploration",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Vision and Light",
+            "Blinded"
+        ]
+    },
+    {
+        "id": 36,
+        "player_action": "My elf has darkvision. What does that let me do in darkness?",
+        "category": "exploration",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Vision and Light",
+            "Darkvision"
+        ]
+    },
+    {
+        "id": 37,
+        "player_action": "We haven't eaten in three days. Does starvation hurt us mechanically?",
+        "category": "exploration",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Food and Water",
+            "Exhaustion"
+        ]
+    },
+    {
+        "id": 38,
+        "player_action": "I stepped on a pressure plate and triggered a trap. What happens?",
+        "category": "exploration",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Traps",
+            "Saving Throws"
+        ]
+    },
+    {
+        "id": 39,
+        "player_action": "I got bitten by a diseased rat. How do diseases work?",
+        "category": "exploration",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Diseases",
+            "Constitution"
+        ]
+    },
+    {
+        "id": 40,
+        "player_action": "The spider bit me and I think it's poisoned. What does that do?",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Poisoned",
+            "Conditions"
+        ]
+    },
+    {
+        "id": 41,
+        "player_action": "The medusa's gaze turned me to stone. Can I do anything?",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Petrified",
+            "Conditions"
+        ]
+    },
+    {
+        "id": 42,
+        "player_action": "The vampire paralyzed me. Am I completely helpless?",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Paralyzed",
+            "Conditions"
+        ]
+    },
+    {
+        "id": 43,
+        "player_action": "I'm stunned. Can I still move or take actions?",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Stunned",
+            "Conditions"
+        ]
+    },
+    {
+        "id": 44,
+        "player_action": "The banshee frightened me. What happens when I'm scared?",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Frightened",
+            "Conditions"
+        ]
+    },
+    {
+        "id": 45,
+        "player_action": "My barbarian enters a rage and charges into battle",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Rage",
+            "Damage Resistance and Vulnerability"
+        ]
+    },
+    {
+        "id": 46,
+        "player_action": "I want to sneak attack the guard while my ally is next to him",
+        "category": "combat_mechanical",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Sneak Attack",
+            "Advantage and Disadvantage"
+        ]
+    },
+    {
+        "id": 47,
+        "player_action": "I smite the fiend after hitting it with my longsword",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Divine Smite",
+            "Spell Slots"
+        ]
+    },
+    {
+        "id": 48,
+        "player_action": "I transform into a brown bear using Wild Shape",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Wild Shape",
+            "Hit Points and Hit Dice"
+        ]
+    },
+    {
+        "id": 49,
+        "player_action": "I give the bard inspiration to help with her persuasion check",
+        "category": "exploration",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Bardic Inspiration"
+        ]
+    },
+    {
+        "id": 50,
+        "player_action": "I found a flaming sword. How do I attune to magical items?",
+        "category": "rules_clarification",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Attunement",
+            "Magic Items"
+        ]
+    },
+    {
+        "id": 51,
+        "player_action": "How many magic items can I be attuned to at once?",
+        "category": "rules_clarification",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Attunement"
+        ]
+    },
+    {
+        "id": 52,
+        "player_action": "I'm wearing chainmail but I'm not proficient with it",
+        "category": "rules_clarification",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Armor Proficiency",
+            "Medium Armor"
+        ]
+    },
+    {
+        "id": 53,
+        "player_action": "How long does it take to put on my plate armor?",
+        "category": "rules_clarification",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Getting Into and Out of Armor",
+            "Heavy Armor"
+        ]
+    },
+    {
+        "id": 54,
+        "player_action": "I'm trying to use a greatsword but I'm not proficient with martial weapons",
+        "category": "rules_clarification",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Weapon Proficiency",
+            "Attack Rolls"
+        ]
+    },
+    {
+        "id": 55,
+        "player_action": "My monk uses a ki point to dodge as a bonus action",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Ki",
+            "Patient Defense"
+        ]
+    },
+    {
+        "id": 56,
+        "player_action": "After I attack, I want to punch with my off-hand as a bonus action",
+        "category": "combat_mechanical",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Two-Weapon Fighting",
+            "Bonus Actions"
+        ]
+    },
+    {
+        "id": 57,
+        "player_action": "I'm dual wielding shortswords. How does that work?",
+        "category": "combat_mechanical",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Two-Weapon Fighting",
+            "Light"
+        ]
+    },
+    {
+        "id": 58,
+        "player_action": "I attack the skeleton with my warhammer but I'm underwater",
+        "category": "combat_mechanical",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Underwater Combat",
+            "Attack Rolls",
+            "Disadvantage"
+        ]
+    },
+    {
+        "id": 59,
+        "player_action": "I'm mounted on my horse and charging the enemy",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Mounted Combat",
+            "Movement and Position"
+        ]
+    },
+    {
+        "id": 60,
+        "player_action": "My horse got hit by an arrow. What happens to my mount?",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Mounted Combat",
+            "Dropping to 0 Hit Points"
+        ]
+    },
+    {
+        "id": 61,
+        "player_action": "I'm a halfling hiding behind the half-orc fighter",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Cover",
+            "Hide"
+        ]
+    },
+    {
+        "id": 62,
+        "player_action": "I want to squeeze through the narrow tunnel that's too small for me",
+        "category": "exploration",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Squeezing into a Smaller Space",
+            "Movement and Position"
+        ]
+    },
+    {
+        "id": 63,
+        "player_action": "I'm climbing up the cliff face using my hands and feet",
+        "category": "exploration",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Climbing",
+            "Strength",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 64,
+        "player_action": "I jump across the 15-foot gap to the other rooftop",
+        "category": "exploration",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Jumping",
+            "Strength",
+            "Movement and Position"
+        ]
+    },
+    {
+        "id": 65,
+        "player_action": "We're chasing the thief through the crowded market",
+        "category": "exploration",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Travel Pace",
+            "Dash"
+        ]
+    },
+    {
+        "id": 66,
+        "player_action": "The dragon breathes fire on me. What do I do?",
+        "category": "combat_mechanical",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Saving Throws",
+            "Dexterity",
+            "Damage and Healing"
+        ]
+    },
+    {
+        "id": 67,
+        "player_action": "I have resistance to fire damage. How does that work?",
+        "category": "rules_clarification",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Damage Resistance and Vulnerability"
+        ]
+    },
+    {
+        "id": 68,
+        "player_action": "The troll is vulnerable to fire. What does that mean for my fireball?",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Damage Resistance and Vulnerability"
+        ]
+    },
+    {
+        "id": 69,
+        "player_action": "I'm immune to poison damage. Does the poison still hurt me?",
+        "category": "rules_clarification",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Damage Resistance and Vulnerability"
+        ]
+    },
+    {
+        "id": 70,
+        "player_action": "I critically hit the goblin with my axe! What happens?",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Critical Hits",
+            "Damage Rolls"
+        ]
+    },
+    {
+        "id": 71,
+        "player_action": "I rolled a natural 1 on my attack. Did I critically fail?",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Attack Rolls",
+            "Rolling 1 or 20"
+        ]
+    },
+    {
+        "id": 72,
+        "player_action": "I'm exhausted from forced marching. What penalties do I have?",
+        "category": "exploration",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Exhaustion",
+            "Conditions"
+        ]
+    },
+    {
+        "id": 73,
+        "player_action": "I want to shove the enemy off the bridge into the river below",
+        "category": "combat_mechanical",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Shoving a Creature",
+            "Melee Attacks",
+            "Contests"
+        ]
+    },
+    {
+        "id": 74,
+        "player_action": "I'm going to tackle the wizard and pin him down",
+        "category": "combat_mechanical",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Grappling",
+            "Melee Attacks",
+            "Contests",
+            "Being Prone"
+        ]
+    },
+    {
+        "id": 75,
+        "player_action": "Can I walk through my allies' spaces during combat?",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Moving Around Other Creatures"
+        ]
+    },
+    {
+        "id": 76,
+        "player_action": "The enemy is tiny and I'm trying to move through its space",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Moving Around Other Creatures",
+            "Creature Size"
+        ]
+    },
+    {
+        "id": 77,
+        "player_action": "I fly up 30 feet to avoid the melee",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Flying Movement",
+            "Movement and Position"
+        ]
+    },
+    {
+        "id": 78,
+        "player_action": "My flying speed drops to 0 while I'm in the air. Do I fall?",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Flying Movement",
+            "Falling"
+        ]
+    },
+    {
+        "id": 79,
+        "player_action": "I use Action Surge to attack twice in one turn",
+        "category": "combat_mechanical",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Action Surge",
+            "Extra Attack"
+        ]
+    },
+    {
+        "id": 80,
+        "player_action": "I have Extra Attack. Can I attack twice and then move?",
+        "category": "combat_mechanical",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Extra Attack",
+            "Breaking Up Your Move"
+        ]
+    },
+    {
+        "id": 81,
+        "player_action": "There's bright sunlight. Does that affect anything for combat?",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Vision and Light"
+        ]
+    },
+    {
+        "id": 82,
+        "player_action": "I'm in dim light trying to see the enemy",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Vision and Light",
+            "Lightly Obscured"
+        ]
+    },
+    {
+        "id": 83,
+        "player_action": "Heavy fog is everywhere. Can I see through it?",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Vision and Light",
+            "Heavily Obscured",
+            "Blinded"
+        ]
+    },
+    {
+        "id": 84,
+        "player_action": "I'm deafened by the thunderwave. What does that do to me?",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Deafened",
+            "Conditions"
+        ]
+    },
+    {
+        "id": 85,
+        "player_action": "The spell charmed me. What can I and can't I do?",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Charmed",
+            "Conditions"
+        ]
+    },
+    {
+        "id": 86,
+        "player_action": "I'm restrained by vines. Can I still attack?",
+        "category": "combat_mechanical",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Restrained",
+            "Conditions",
+            "Disadvantage"
+        ]
+    },
+    {
+        "id": 87,
+        "player_action": "The beholder's ray incapacitated me. What does that mean?",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Incapacitated",
+            "Conditions"
+        ]
+    },
+    {
+        "id": 88,
+        "player_action": "I want to use my inspiration die the DM gave me on this roll",
+        "category": "rules_clarification",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Inspiration"
+        ]
+    },
+    {
+        "id": 89,
+        "player_action": "What's my carrying capacity? I'm trying to haul this treasure",
+        "category": "exploration",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Lifting and Carrying",
+            "Strength"
+        ]
+    },
+    {
+        "id": 90,
+        "player_action": "I'm carrying way too much equipment. Does that slow me down?",
+        "category": "exploration",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Lifting and Carrying",
+            "Speed"
+        ]
+    },
+    {
+        "id": 91,
+        "player_action": "I want to drag the unconscious paladin to safety",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Lifting and Carrying",
+            "Movement and Position"
+        ]
+    },
+    {
+        "id": 92,
+        "player_action": "I drink a healing potion in the middle of combat",
+        "category": "combat_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": [
+            "Use an Object",
+            "Healing",
+            "Actions in Combat"
+        ]
+    },
+    {
+        "id": 93,
+        "player_action": "I'm trying to pick the lock on the treasure chest",
+        "category": "exploration",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Dexterity",
+            "Ability Checks",
+            "Proficiency Bonus"
+        ]
+    },
+    {
+        "id": 94,
+        "player_action": "I'm trying to recall lore about this ancient ruin",
+        "category": "exploration",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 95,
+        "player_action": "I want to track the bandits through the forest",
+        "category": "exploration",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 96,
+        "player_action": "I'm trying to intimidate the guard into letting us pass",
+        "category": "exploration",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Charisma",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 97,
+        "player_action": "I lie to the merchant about the quality of the gems",
+        "category": "exploration",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Charisma",
+            "Ability Checks",
+            "Contests"
+        ]
+    },
+    {
+        "id": 98,
+        "player_action": "I perform a song to earn coin in the tavern",
+        "category": "exploration",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Charisma",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 99,
+        "player_action": "I'm in a drinking contest with the dwarf. Who wins?",
+        "category": "exploration",
+        "requires_roll": true,
+        "relevant_srd_sections": [
+            "Constitution",
+            "Contests",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 100,
+        "player_action": "hey there!",
+        "category": "non_mechanical",
+        "requires_roll": false,
+        "relevant_srd_sections": []
+    }
+]
