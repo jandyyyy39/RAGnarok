@@ -14,20 +14,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "The target of your grapple must be no more than one size larger than you and must be within your reach. Using at least one free hand, you try to seize",
-      "#### Grappling  \nWhen you want to grab a creature or wrestle with it, you can use the Attack action to make a special melee attack, a grapple. If you\u2019",
       "*Prerequisite: Strength 13 or higher*  \nYou've developed the skills necessary to hold your own in close-quarters grappling. You gain the following ben",
-      "***Recharge after a Short or Long Rest.*** This notation means that a monster can use a special ability once and then must finish a short or long rest",
-      "-   The condition ends if the grappler is [incapacitated](#incapacitated).\n-   The condition also ends if an effect removes the grappled creature from"
+      "#### Grappling  \nWhen you want to grab a creature or wrestle with it, you can use the Attack action to make a special melee attack, a grapple. If you\u2019",
+      "The target of your grapple must be no more than one size larger than you and must be within your reach. Using at least one free hand, you try to seize",
+      "*Prerequisite: Strength 13 or higher*  \nYou\u2019ve developed the skills necessary to hold your own in close-quarters grappling. You gain the following ben",
+      "***Recharge after a Short or Long Rest.*** This notation means that a monster can use a special ability once and then must finish a short or long rest"
     ],
     "precision": 0.6,
     "recall": 1.0,
-    "mrr": 1.0,
-    "ndcg": 0.9675,
+    "mrr": 0.5,
+    "ndcg": 0.7123,
     "f1": 0.75,
     "hit": 1,
-    "ap": 0.9167,
-    "latency": 3.229
+    "ap": 0.5889,
+    "latency": 6.439
   },
   {
     "id": 2,
@@ -43,20 +43,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "#### Hiding  \nThe DM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are disc",
-      "> #### Hiding\n>\n> The GM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are ",
-      ">\n> ***Passive Perception.*** When you hide, there's a chance someone will notice you even if they aren't searching. To determine whether such a creat",
-      "When you take the Hide action, you make a Dexterity (Stealth) check in an attempt to hide, following the rules for hiding. If you succeed, you gain ce",
-      "***Passive Perception.*** When you hide, there\u2019s a chance someone will notice you even if they aren\u2019t searching. To determine whether such a creature "
+      "A trap\u2019s description specifies the checks and DCs needed to detect it, disable it, or both. A character actively looking for a trap can attempt a Wisd",
+      "A trap's description specifies the checks and DCs needed to detect it, disable it, or both. A character actively looking for a trap can attempt a Wisd",
+      "**Classes:** [Bard](#section-bard), [Warlock](#section-warlock), [Wizard](#section-wizard)  \n**Casting Time:** 1 minute  \n**Range:** Special  \n**Compo",
+      "You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who pr",
+      "#### Hiding  \nThe DM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are disc"
     ],
-    "precision": 1.0,
+    "precision": 0.4,
     "recall": 1.0,
-    "mrr": 1.0,
-    "ndcg": 1.0,
-    "f1": 1.0,
+    "mrr": 0.25,
+    "ndcg": 0.5013,
+    "f1": 0.5714,
     "hit": 1,
-    "ap": 1.0,
-    "latency": 1.242
+    "ap": 0.325,
+    "latency": 4.792
   },
   {
     "id": 3,
@@ -71,20 +71,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "do for a Strength (Athletics) check. Similarly, when your half-orc barbarian uses a display of raw strength to intimidate an enemy, your GM might ask ",
       "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This",
-      "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This",
-      "do for a Strength (Athletics) check. Similarly, when your half\u2014orc barbarian uses a display of raw strength to intimidate an enemy, your GM might ask ",
-      "Wisdom reflects how attuned you are to the world around you and represents perceptiveness and intuition.  \n#### Wisdom Checks  \nA Wisdom check might r"
+      "When the creature appears, it is under no compulsion to behave in any particular way. You can ask the creature to perform a service in exchange for pa",
+      "Wisdom reflects how attuned you are to the world around you and represents perceptiveness and intuition.  \n#### Wisdom Checks  \nA Wisdom check might r",
+      "#### Intimidating Presence  \nBeginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose ",
+      "Guilds, nobles, and royalty regulate trade. Chartered companies are granted rights to conduct trade along certain routes, to send merchant ships to va"
     ],
-    "precision": 0.8,
+    "precision": 0.2,
     "recall": 1.0,
     "mrr": 1.0,
     "ndcg": 1.0,
-    "f1": 0.8889,
+    "f1": 0.3333,
     "hit": 1,
     "ap": 1.0,
-    "latency": 1.499
+    "latency": 4.395
   },
   {
     "id": 4,
@@ -102,19 +102,19 @@
     "num_chunks_retrieved": 5,
     "chunks_preview": [
       "(Athletics) check.  \n***Moving a Grappled Creature.*** When you move, you can drag or carry the grappled creature with you, but your speed is halved, ",
-      "***Bite.** Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 22 (4d8 + 4) piercing damage.  \n***Tendril.** Melee Weapon Attack:* +7 to ",
-      "Each creature takes up a different amount of space. The Size Categories table shows how much space a creature of a particular size controls in combat.",
-      "***Spider Climb.*** The roper can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.  \n##### Actio",
-      "| 14 (+2) | 10 (+0) | 13 (+1) | 2 (\u22124) | 10 (+0) | 5 (\u22123) |  \n**Senses** passive Perception 10  \n**Languages** \u2014  \n**Challenge** 1/8 (25 XP)  \n***Beas"
+      "> #### Contests in Combat\n>\n> Battle often involves pitting your prowess against that of your foe. Such a challenge is represented by a contest. This ",
+      "Used in hand-to-hand combat, a melee attack allows you to attack a foe within your reach. A melee attack typically uses a handheld weapon such as a sw",
+      "Sometimes one character's or monster's efforts are directly opposed to another's. This can occur when both of them are trying to do the same thing and",
+      "**Skills** Intimidation +2  \n**Senses** darkvision 60 ft., passive Perception 10  \n**Languages** Common, Orc  \n**Challenge** 1/2 (100 XP)  \n***Aggress"
     ],
-    "precision": 0.2,
+    "precision": 0.4,
     "recall": 1.0,
     "mrr": 1.0,
     "ndcg": 1.0,
-    "f1": 0.3333,
+    "f1": 0.5714,
     "hit": 1,
     "ap": 1.0,
-    "latency": 1.438
+    "latency": 3.827
   },
   {
     "id": 5,
@@ -130,19 +130,19 @@
     "num_chunks_retrieved": 5,
     "chunks_preview": [
       "***Performance.*** Your Charisma (Performance) check determines how well you can delight an audience with music, dance, acting, storytelling, or some ",
-      "***Performance.*** Your Charisma (Performance) check determines how well you can delight an audience with music, dance, acting, storytelling, or some ",
-      "Charisma measures your ability to interact effectively with others. It includes such factors as confidence and eloquence, and it can represent a charm",
-      "Charisma measures your ability to interact effectively with others. It includes such factors as confidence and eloquence, and it can represent a charm",
-      "Wisdom reflects how attuned you are to the world around you and represents perceptiveness and intuition.  \n#### Wisdom Checks  \nA Wisdom check might r"
+      "| 2  | Charity. I always try to help those in need, no matter what the personal cost. (Good)                                  |\n| 3  | Change. We must",
+      "-   Insight\n-   Medicine\n-   Perception\n-   Survival  \n#### Charisma  \n-   Deception\n-   Intimidation\n-   Performance\n-   Persuasion  \nSometimes, the ",
+      "Sometimes one character's or monster's efforts are directly opposed to another's. This can occur when both of them are trying to do the same thing and",
+      "Sometimes one character\u2019s or monster\u2019s efforts are directly opposed to another\u2019s. This can occur when both of them are trying to do the same thing and"
     ],
-    "precision": 0.8,
+    "precision": 0.4,
     "recall": 1.0,
     "mrr": 1.0,
-    "ndcg": 1.0,
-    "f1": 0.8889,
+    "ndcg": 0.9197,
+    "f1": 0.5714,
     "hit": 1,
-    "ap": 1.0,
-    "latency": 1.337
+    "ap": 0.8333,
+    "latency": 4.533
   },
   {
     "id": 6,
@@ -158,11 +158,11 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "The wall is an object made of stone that can be damaged and thus breached. Each panel has AC 15 and 30 hit points per inch of thickness. Reducing a pa",
-      "The wall is an object made of stone that can be damaged and thus breached. Each panel has AC 15 and 30 hit points per inch of thickness. Reducing a pa",
-      "The wall can be destroyed, also one layer at a time, in order from red to violet, by means specific to each layer. Once a layer is destroyed, it remai",
-      "Once during your move, you can mount a creature that is within 5 feet of you or dismount. Doing so costs an amount of movement equal to half your spee",
-      "If the wall cuts through a creature's space when it appears, the creature is pushed to one side of the wall (your choice). If a creature would be surr"
+      "The wall sheds bright light out to a range of 100 feet and dim light for an additional 100 feet. You and creatures you designate at the time you cast ",
+      "If the wall cuts through a creature\u2019s space when it appears, the creature is pushed to one side of the wall (your choice). If a creature would be surr",
+      "If the wall cuts through a creature's space when it appears, the creature is pushed to one side of the wall (your choice). If a creature would be surr",
+      "#### Wind Wall  \n*3rd-level evocation*  \n**Classes:** [Druid](#section-druid), [Ranger](#section-ranger)  \n**Casting Time:** 1 action  \n**Range:** 120",
+      "The tower is made of adamantine, and its magic prevents it from being tipped over. The roof, the door, and the walls each have 100 hit points,  \nimmun"
     ],
     "precision": 0.0,
     "recall": 0.0,
@@ -171,7 +171,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.592
+    "latency": 4.467
   },
   {
     "id": 7,
@@ -187,19 +187,19 @@
     "num_chunks_retrieved": 5,
     "chunks_preview": [
       "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This",
-      "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This",
+      "***Other Intelligence Checks.*** The GM might call for an Intelligence check when you try to accomplish tasks like the following:  \n-   Communicate wi",
       "**Casting Time:** 1 action  \n**Range:** 60 feet  \n**Components:** V, S  \n**Duration:** 10 minutes  \nYou create a magical zone that guards against dece",
-      "Wisdom reflects how attuned you are to the world around you and represents perceptiveness and intuition.  \n#### Wisdom Checks  \nA Wisdom check might r",
-      "Wisdom reflects how attuned you are to the world around you and represents perceptiveness and intuition.  \n#### Wisdom Checks  \nA Wisdom check might r"
+      "#### Zone of Truth  \n*2nd-level enchantment*  \n**Casting Time:** 1 action  \n**Range:** 60 feet  \n**Components:** V, S  \n**Duration:** 10 minutes  \nYou",
+      "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh"
     ],
     "precision": 0.6,
     "recall": 1.0,
     "mrr": 1.0,
-    "ndcg": 1.0,
+    "ndcg": 0.906,
     "f1": 0.75,
     "hit": 1,
-    "ap": 1.0,
-    "latency": 1.145
+    "ap": 0.8056,
+    "latency": 3.164
   },
   {
     "id": 8,
@@ -215,20 +215,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
+      "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh",
       "A trap\u2019s description specifies the checks and DCs needed to detect it, disable it, or both. A character actively looking for a trap can attempt a Wisd",
-      "#### Detecting and Disabling a Trap  \nUsually, some element of a trap is visible to careful inspection. Characters might notice an uneven flagstone th",
       "A trap's description specifies the checks and DCs needed to detect it, disable it, or both. A character actively looking for a trap can attempt a Wisd",
-      "#### Detecting and Disabling a Trap  \nUsually, some element of a trap is visible to careful inspection. Characters might notice an uneven flagstone th",
-      "Traps are often designed with mechanisms that allow them to be disarmed or bypassed. Intelligent monsters that place traps in or around their lairs ne"
+      "You should allow a character to discover a trap without making an ability check if an action would clearly reveal the trap's presence. For example, if",
+      "#### Hiding  \nThe DM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are disc"
     ],
-    "precision": 0.4,
+    "precision": 0.6,
     "recall": 1.0,
-    "mrr": 1.0,
-    "ndcg": 0.9197,
-    "f1": 0.5714,
+    "mrr": 0.5,
+    "ndcg": 0.7123,
+    "f1": 0.75,
     "hit": 1,
-    "ap": 0.8333,
-    "latency": 0.998
+    "ap": 0.5889,
+    "latency": 3.638
   },
   {
     "id": 9,
@@ -244,20 +244,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This",
-      "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This",
-      "**Casting Time:** 1 action  \n**Range:** 60 feet  \n**Components:** V, S  \n**Duration:** 10 minutes  \nYou create a magical zone that guards against dece",
-      "You initially learn the surface thoughts of the creature\u2014what is most on its mind in that moment. As an action, you can either shift your attention to",
-      "You initially learn the surface thoughts of the creature\u2014what is most on its mind in that moment. As an action, you can either shift your attention to"
+      "***Passive Perception.*** When you hide, there\u2019s a chance someone will notice you even if they aren\u2019t searching. To determine whether such a creature ",
+      ">\n> ***Passive Perception.*** When you hide, there's a chance someone will notice you even if they aren't searching. To determine whether such a creat",
+      "A passive check is a special kind of ability check that doesn\u2019t involve any die rolls. Such a check can represent the average result for a task done r",
+      "A passive check is a special kind of ability check that doesn't involve any die rolls. Such a check can represent the average result for a task done r",
+      "Most wealth is not in coins. It is measured in livestock, grain, land, rights to collect taxes, or rights to resources (such as a mine or a forest).  "
     ],
-    "precision": 0.4,
-    "recall": 1.0,
-    "mrr": 0.25,
-    "ndcg": 0.5013,
-    "f1": 0.5714,
-    "hit": 1,
-    "ap": 0.325,
-    "latency": 1.27
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 4.28
   },
   {
     "id": 10,
@@ -273,20 +273,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "A character's interaction with objects in an environment is often simple to resolve in the game. The player tells the GM that his or her character is ",
-      "A character\u2019s interaction with objects in an environment is often simple to resolve in the game. The player tells the GM that his or her character is ",
-      "#### Falling Net  \n*Mechanical trap*  \nThis trap uses a trip wire to release a net suspended from the ceiling.  \nThe trip wire is 3 inches off the gro",
-      "#### Falling Net  \n*Mechanical trap*  \nThis trap uses a trip wire to release a net suspended from the ceiling.  \nThe trip wire is 3 inches off the gro",
-      "*Armor (plate), very rare*  \nWhile wearing this armor, you gain a +2 bonus to AC. In addition, if an effect moves you against your will along the grou"
+      "Dexterity measures agility, reflexes, and balance.  \n#### Dexterity Checks  \nA Dexterity check can model any attempt to move nimbly, quickly, or quiet",
+      "#### Hiding  \nThe DM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are disc",
+      "***Sleight of Hand.*** Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an obje",
+      "The magical and mechanical traps presented here vary in deadliness and are presented in alphabetical order.  \n#### Collapsing Roof  \n*Mechanical trap*",
+      "On each of your turns after you cast this spell, you can use an action to move the beam 60 feet in any direction.  \n***At Higher Levels.*** When you c"
     ],
-    "precision": 0.0,
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "f1": 0.0,
-    "hit": 0,
-    "ap": 0.0,
-    "latency": 1.249
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.3333,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 4.026
   },
   {
     "id": 11,
@@ -301,20 +301,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "During your rogue training you learned thieves\u2019 cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal c",
-      "During your rogue training you learned thieves' cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal c",
-      "***Thieves' Tools.*** This set of tools includes a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed s",
-      "*Wondrous item, very rare*  \nThis bag superficially resembles a bag of holding but is a feeding orifice for a gigantic extradimensional creature. Turn",
-      "When you take the Hide action, you make a Dexterity (Stealth) check in an attempt to hide, following the rules for hiding. If you succeed, you gain ce"
+      "#### Hiding  \nThe DM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are disc",
+      "***Sleight of Hand.*** Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an obje",
+      "When you take the Hide action, you make a Dexterity (Stealth) check in an attempt to hide, following the rules for hiding. If you succeed, you gain ce",
+      "You should allow a character to discover a trap without making an ability check if an action would clearly reveal the trap's presence. For example, if",
+      "***Passive Perception.*** When you hide, there\u2019s a chance someone will notice you even if they aren\u2019t searching. To determine whether such a creature "
     ],
-    "precision": 0.0,
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "f1": 0.0,
-    "hit": 0,
-    "ap": 0.0,
-    "latency": 1.49
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "ndcg": 0.6309,
+    "f1": 0.3333,
+    "hit": 1,
+    "ap": 0.5,
+    "latency": 4.764
   },
   {
     "id": 12,
@@ -329,11 +329,11 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "A character's interaction with objects in an environment is often simple to resolve in the game. The player tells the GM that his or her character is ",
-      "A character\u2019s interaction with objects in an environment is often simple to resolve in the game. The player tells the GM that his or her character is ",
-      "Sometimes one character's or monster's efforts are directly opposed to another's. This can occur when both of them are trying to do the same thing and",
-      "Sometimes one character\u2019s or monster\u2019s efforts are directly opposed to another\u2019s. This can occur when both of them are trying to do the same thing and",
-      "An ability check tests a character's or monster's innate talent and training in an effort to overcome a challenge. The GM calls for an ability check w"
+      "With one gold piece, a character can buy a bedroll, 50 feet of good rope, or a goat. A skilled (but not exceptional) artisan can earn one gold piece a",
+      "One silver piece is worth ten copper pieces, which are common among laborers and beggars. A single copper piece buys a candle, a torch, or a piece of ",
+      "Common coins come in several different denominations based on the relative worth of the metal from which they are made. The three most common coins ar",
+      "Most wealth is not in coins. It is measured in livestock, grain, land, rights to collect taxes, or rights to resources (such as a mine or a forest).  ",
+      "At 2nd level, you gain an uncanny sense of when things nearby aren\u2019t as they should be, giving you an edge when you dodge away from danger.  \nYou have"
     ],
     "precision": 0.0,
     "recall": 0.0,
@@ -342,7 +342,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 1.159
+    "latency": 1.692
   },
   {
     "id": 13,
@@ -358,20 +358,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
+      "***Insight.*** Your Wisdom (Insight) check decides whether you can determine the true intentions of a creature, such as when searching out a lie or pr",
       "***Survival.*** The GM might ask you to make a Wisdom (Survival) check to follow tracks, hunt wild game, guide your group through frozen wastelands, i",
       "***Survival.*** The GM might ask you to make a  \nWisdom (Survival) check to follow tracks, hunt wild game, guide your group through frozen wastelands,",
-      "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favore",
-      "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favore",
-      "Wisdom reflects how attuned you are to the world around you and represents perceptiveness and intuition.  \n#### Wisdom Checks  \nA Wisdom check might r"
+      "Following the road from Baldur\u2019s Gate to Waterdeep, the adventurers spend four uneventful days before a goblin ambush interrupts their journey.  \nIn c",
+      "The DC to spot the pit is 10. Anyone stepping on the cloth falls through and pulls the cloth down into the pit, taking damage based on the pit's depth"
     ],
-    "precision": 0.6,
+    "precision": 0.4,
     "recall": 1.0,
-    "mrr": 1.0,
-    "ndcg": 0.9469,
-    "f1": 0.75,
+    "mrr": 0.5,
+    "ndcg": 0.6934,
+    "f1": 0.5714,
     "hit": 1,
-    "ap": 0.8667,
-    "latency": 0.903
+    "ap": 0.5833,
+    "latency": 4.282
   },
   {
     "id": 14,
@@ -386,10 +386,10 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "**Challenge** 1/4 (50 XP)  \n***Keen Hearing and Smell.*** The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.  \n***Pac",
+      "#### Hiding  \nThe DM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are disc",
       "**Challenge** 3 (700 XP)  \n***Keen Hearing and Smell.*** The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.  \n***Pack",
-      "The arctic-dwelling **winter wolf** is as large as a dire wolf but has snow-white fur and pale blue eyes. Frost giants use these evil creatures as gua",
       "**Challenge** 1/4 (50 XP)  \n***Keen Hearing and Smell.*** The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.  \n***Pac",
+      "**Skills** Perception +3, Stealth +4  \n**Senses** passive Perception 13  \n**Languages** \u2014  \n**Challenge** 1 (200 XP)  \n***Keen Hearing and Smell.*** T",
       "</tr>\n</tbody>\n</table>  \n**Skills** Perception +3, Stealth +4  \n**Senses** passive Perception 13  \n**Languages** \u2014  \n**Challenge** 1 (200 XP)  \n***Ke"
     ],
     "precision": 0.0,
@@ -399,7 +399,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 1.104
+    "latency": 4.17
   },
   {
     "id": 15,
@@ -416,19 +416,19 @@
     "num_chunks_retrieved": 5,
     "chunks_preview": [
       "***Damage at 0 Hit Points.*** If you take any damage while you have 0 hit points, you suffer a death saving throw failure. If the damage is from a cri",
-      "***Damage at 0 Hit Points.*** If you take any damage while you have 0 hit points, you suffer a death saving throw failure. If the damage is from a cri",
-      "**Components:** V, M (a snake's tongue and either a bit of honeycomb or a drop of sweet oil)  \n**Duration:** Concentration, up to 8 hours  \nYou sugges",
-      "**Components:** V, M (a snake\u2019s tongue and either a bit of honeycomb or a drop of sweet oil)  \n**Duration:** Concentration, up to 8 hours  \nYou sugges",
-      "**Casting Time:** 1 hour  \n**Range:** Touch  \n**Components:** V, S, M (a diamond worth at least 1,000 gp, which the spell consumes)  \n**Duration:** In"
+      "Sometimes an attacker wants to incapacitate a foe, rather than deal a killing blow. When an attacker reduces a creature to 0 hit points with a melee a",
+      "*Weapon (any sword), rare (requires [attunement](#section-attunement))*  \nHit points lost to this weapon's damage can be regained only through a short",
+      "##### Actions  \n***Bite.*** *Melee Weapon Attack:* +2 to hit, reach 5 ft., one creature. *Hit:* 9 (2d6 + 2) piercing damage.  \n***Claws.*** *Melee Wea",
+      "Hit points lost to this weapon\u2019s damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means.  \nO"
     ],
-    "precision": 0.4,
+    "precision": 0.6,
     "recall": 1.0,
     "mrr": 1.0,
-    "ndcg": 1.0,
-    "f1": 0.5714,
+    "ndcg": 0.8855,
+    "f1": 0.75,
     "hit": 1,
-    "ap": 1.0,
-    "latency": 1.262
+    "ap": 0.7556,
+    "latency": 4.685
   },
   {
     "id": 16,
@@ -444,20 +444,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "The spell can locate a specific creature known to you, or the nearest creature of a specific kind (such as a human or a unicorn), so long as you have ",
-      "**Casting Time:** 1 action  \n**Range:** Self  \n**Components:** V, S, M (a bit of fur from a bloodhound)  \n**Duration:** Instantaneous  \nDescribe or na",
-      "#### Locate Object  \n*2nd-level divination*  \n**Classes:** [Bard](#section-bard), [Cleric](#section-cleric), [Druid](#section-druid), [Paladin](#secti",
-      "**Casting Time:** 1 action  \n**Range:** Self  \n**Components:** V, S, M (a bit of fur from a bloodhound)  \n**Duration:** Concentration, up to 1 hour  \n",
-      "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh"
+      "**Casting Time:** 1 action  \n**Range:** 10 feet  \n**Components:** V, S, M (burning incense)  \n**Duration:** 10 minutes  \nYou grant the semblance of li",
+      "***Survival.*** The GM might ask you to make a Wisdom (Survival) check to follow tracks, hunt wild game, guide your group through frozen wastelands, i",
+      "***Survival.*** The GM might ask you to make a  \nWisdom (Survival) check to follow tracks, hunt wild game, guide your group through frozen wastelands,",
+      "The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears. As an action, you ",
+      "#### Channel Divinity: Turn Undead  \nAs an action, you present your holy symbol and speak a prayer censuring the undead. Each undead that can see or h"
     ],
-    "precision": 0.2,
-    "recall": 1.0,
-    "mrr": 0.2,
-    "ndcg": 0.3869,
-    "f1": 0.3333,
-    "hit": 1,
-    "ap": 0.2,
-    "latency": 1.334
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.346
   },
   {
     "id": 17,
@@ -472,20 +472,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "***Insight.*** Your Wisdom (Insight) check decides whether you can determine the true intentions of a creature, such as when searching out a lie or pr",
-      "***Insight.*** Your Wisdom (Insight) check decides whether you can determine the true intentions of a creature, such as when searching out a lie or pr",
-      "With a successful DC 15 Wisdom (Perception) check, a character can spot the trapdoor and pressure plate. A search of the floor accompanied by a succes",
-      "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh",
-      "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh"
+      "***Glaive.** Melee Weapon Attack:* +5 to hit, reach 10 ft., one target. *Hit:* 8 (1d10 + 3) slashing damage. If the target is a creature other than an",
+      "*Weapon (any sword), rare (requires [attunement](#section-attunement))*  \nHit points lost to this weapon's damage can be regained only through a short",
+      "Hit points lost to this weapon\u2019s damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means.  \nO",
+      "***Glaive.*** *Melee Weapon Attack:* +5 to hit, reach 10 ft., one target. *Hit:* 8 (1d10 + 3) slashing damage. If the target is a creature other than ",
+      "***Fork.** Melee Weapon Attack:* +10 to hit, reach 10 ft., one target. *Hit:* 15 (2d8 + 6) piercing damage.  \n***Tail.** Melee Weapon Attack:* +10 to "
     ],
-    "precision": 0.6,
-    "recall": 1.0,
-    "mrr": 0.3333,
-    "ndcg": 0.6183,
-    "f1": 0.75,
-    "hit": 1,
-    "ap": 0.4778,
-    "latency": 1.246
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 2.741
   },
   {
     "id": 18,
@@ -500,11 +500,11 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "**Range:** Touch  \n**Components:** V, S, M (an agate worth at least 1,000 gp, which the spell consumes)  \n**Duration:** Instantaneous  \nAfter spending",
-      "**Range:** Touch  \n**Components:** V, S, M (an agate worth at least 1,000 gp, which the spell consumes)  \n**Duration:** Instantaneous  \nAfter spending",
-      "-   [*Animal Messenger*](#animal-messenger)\n-   [*Blindness/Deafness*](#blindnessdeafness)\n-   [*Calm Emotions*](#calm-emotions)\n-   [*Detect Thoughts",
-      "With a successful DC 15 Wisdom (Perception) check, a character can spot the trapdoor and pressure plate. A search of the floor accompanied by a succes",
-      "With a successful DC 15 Wisdom (Perception) check, a character can spot the trapdoor and pressure plate. A search of the floor accompanied by a succes"
+      "**Classes:** [Druid](#section-druid)  \n**Casting Time:** 1 action  \n**Range:** 10 feet  \n**Components:** V, S  \n**Duration:** 1 round  \nThis spell cre",
+      "Plants might be able to perform other tasks on your behalf, at the GM's discretion. The spell doesn't enable plants to uproot themselves and move abou",
+      "A character's interaction with objects in an environment is often simple to resolve in the game. The player tells the GM that his or her character is ",
+      "A character\u2019s interaction with objects in an environment is often simple to resolve in the game. The player tells the GM that his or her character is ",
+      "*Medium plant, unaligned*  \n**Armor Class** 5  \n**Hit Points** 13 (3d8)  \n**Speed** 0 ft.  \n| STR    | DEX    | CON     | INT    | WIS    | CHA    |\n|"
     ],
     "precision": 0.0,
     "recall": 0.0,
@@ -513,7 +513,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.61
+    "latency": 2.461
   },
   {
     "id": 19,
@@ -529,20 +529,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "***Passive Perception.*** When you hide, there\u2019s a chance someone will notice you even if they aren\u2019t searching. To determine whether such a creature ",
-      ">\n> ***Passive Perception.*** When you hide, there's a chance someone will notice you even if they aren't searching. To determine whether such a creat",
-      "***Insight.*** Your Wisdom (Insight) check decides whether you can determine the true intentions of a creature, such as when searching out a lie or pr",
-      "***Insight.*** Your Wisdom (Insight) check decides whether you can determine the true intentions of a creature, such as when searching out a lie or pr",
-      "For example, if a 1st-level character has a Wisdom of 15 and proficiency in Perception, he or she has a passive Wisdom (Perception) score of 14.  \nThe"
+      "***Holy Symbol.*** A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same sym",
+      "*Wondrous item, rare (requires [attunement](#section-attunement))*  \nThis robe is adorned with eyelike patterns. While you wear the robe, you gain the",
+      "*Wondrous item, very rare (requires [attunement](#section-attunement))*  \nThis robe has 3 charges, and it regains 1d3 expended charges daily at dawn. ",
+      "*Wondrous item, legendary (requires [attunement](#section-attunement) by a creature of good alignment)*  \nThis talisman is a mighty symbol of goodness",
+      "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh"
     ],
-    "precision": 0.0,
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "f1": 0.0,
-    "hit": 0,
-    "ap": 0.0,
-    "latency": 0.91
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 0.2,
+    "ndcg": 0.3869,
+    "f1": 0.3333,
+    "hit": 1,
+    "ap": 0.2,
+    "latency": 4.039
   },
   {
     "id": 20,
@@ -557,20 +557,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "When you join the College of Lore at 3rd level, you gain proficiency with three skills of your choice.  \n#### Cutting Words  \nAlso at 3rd level, you l",
-      "When you join the College of Lore at 3rd level, you gain proficiency with three skills of your choice.  \n#### Cutting Words  \nAlso at 3rd level, you l",
-      "#### Legend Lore  \n*5th-level divination*  \n**Casting Time:** 10 minutes  \n**Range:** Self  \n**Components:** V, S, M (incense worth at least 250 gp, w",
+      "Intelligence measures mental acuity, accuracy of recall, and the ability to reason.  \n#### Intelligence Checks  \nAn Intelligence check comes into play",
       "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh",
-      "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh"
+      "- Meld into Stone\n- Protection from Energy\n- Remove Curse\n- Revivify\n- Sending\n- Speak with Dead\n- Spirit Guardians\n- Tongues\n- Water Walk  \n#### 4th ",
+      "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language",
+      "- Major Image\n- Nondetection\n- Plant Growth\n- Sending\n- Speak with Dead\n- Speak with Plants\n- Stinking Cloud\n- Tiny Hut\n- Tongues  \n#### 4th Level\n- C"
     ],
-    "precision": 0.0,
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "f1": 0.0,
-    "hit": 0,
-    "ap": 0.0,
-    "latency": 1.239
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.3333,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 2.851
   },
   {
     "id": 21,
@@ -585,20 +585,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "A creature can use its action to inspect a target and make an Intelligence (Investigation) check against your spell save DC. If it succeeds, it become",
-      "**Casting Time:** 1 action  \n**Range:** Self  \n**Components:** V, S, M (a bit of fur from a bloodhound)  \n**Duration:** Instantaneous  \nDescribe or na",
-      "The spell can locate a specific creature known to you, or the nearest creature of a specific kind (such as a human or a unicorn), so long as you have ",
-      "**Casting Time:** 1 action  \n**Range:** Self  \n**Components:** V, S, M (a bit of fur from a bloodhound)  \n**Duration:** Concentration, up to 1 hour  \n",
-      "You initially learn the surface thoughts of the creature\u2014what is most on its mind in that moment. As an action, you can either shift your attention to"
+      "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh",
+      "Intelligence measures mental acuity, accuracy of recall, and the ability to reason.  \n#### Intelligence Checks  \nAn Intelligence check comes into play",
+      "This 2-foot-diameter black sphere is a hole in the multiverse, hovering in space and stabilized by a magical field surrounding it.  \nThe sphere oblite",
+      "*Wondrous item, legendary*  \nThis 2-foot-diameter black sphere is a hole in the multiverse, hovering in space and stabilized by a magical field surrou",
+      "***Other Intelligence Checks.*** The GM might call for an Intelligence check when you try to accomplish tasks like the following:  \n-   Communicate wi"
     ],
-    "precision": 0.0,
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "f1": 0.0,
-    "hit": 0,
-    "ap": 0.0,
-    "latency": 1.006
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "ndcg": 0.6934,
+    "f1": 0.5714,
+    "hit": 1,
+    "ap": 0.5833,
+    "latency": 1.486
   },
   {
     "id": 22,
@@ -614,20 +614,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "(Athletics) check.  \n***Moving a Grappled Creature.*** When you move, you can drag or carry the grappled creature with you, but your speed is halved, ",
-      "#### Grappling  \nWhen you want to grab a creature or wrestle with it, you can use the Attack action to make a special melee attack, a grapple. If you\u2019",
-      "> #### Contests in Combat\n>\n> Battle often involves pitting your prowess against that of your foe. Such a challenge is represented by a contest. This ",
-      "The target of your grapple must be no more than one size larger than you and must be within your reach. Using at least one free hand, you try to seize",
-      "#### Protection  \nWhen a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadv"
+      "##### Actions  \n***Scimitar.*** *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 4 (1d6 + 1) slashing damage.  \n***Light Crossbow.***",
+      "#### Hiding  \nThe DM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are disc",
+      "***Sleight of Hand.*** Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an obje",
+      "#### Two-Weapon Fighting  \nWhen you take the Attack action and attack with a light melee weapon that you\u2019re holding in one hand, you can use a bonus a",
+      "**Actions**  \n***Dagger.** Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 4 (1d4 + 2) piercing damage.  \n***Sling.** Ranged Weapon A"
     ],
-    "precision": 0.6,
-    "recall": 1.0,
-    "mrr": 1.0,
-    "ndcg": 0.9675,
-    "f1": 0.75,
-    "hit": 1,
-    "ap": 0.9167,
-    "latency": 1.13
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 4.511
   },
   {
     "id": 23,
@@ -642,11 +642,11 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "The most common action to take in combat is the Attack action, whether you are swinging a sword, firing an arrow from a bow, or brawling with your fis",
-      "The most common action to take in combat is the Attack action, whether you are swinging a sword, firing an arrow from a bow, or brawling with your fis",
-      "#### Two-Weapon Fighting  \nWhen you take the Attack action and attack with a light melee weapon that you\u2019re holding in one hand, you can use a bonus a",
-      "When a monster takes its action, it can choose from the options in the Actions section of its stat block or use one of the actions available to all cr",
-      "When a monster takes its action, it can choose from the options in the Actions section of its stat block or use one of the actions available to all cr"
+      "#### Hiding  \nThe DM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are disc",
+      "> #### Hiding\n>\n> The GM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are ",
+      "(Athletics) check.  \n***Moving a Grappled Creature.*** When you move, you can drag or carry the grappled creature with you, but your speed is halved, ",
+      "> #### Contests in Combat\n>\n> Battle often involves pitting your prowess against that of your foe. Such a challenge is represented by a contest. This ",
+      "#### Goblin  \n*Small humanoid (goblinoid), neutral evil*  \n**Armor Class** 15 (leather armor, shield)  \n**Hit Points** 7 (2d6)  \n**Speed** 30 ft.  \n| "
     ],
     "precision": 0.0,
     "recall": 0.0,
@@ -655,7 +655,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 1.055
+    "latency": 3.741
   },
   {
     "id": 24,
@@ -671,20 +671,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "***Retributive Strike.*** You can use an action to break the staff over your knee or against a solid surface, performing a retributive strike. The sta",
-      "**Range:** Touch  \n**Components:** V, S, M (gold dust worth at least 25 gp, which the spell consumes)  \n**Duration:** Until dispelled  \nYou touch a cl",
-      "-   [*Chill Touch*](#chill-touch)\n-   [*Eldritch Blast*](#eldritch-blast)\n-   [*Mage Hand*](#mage-hand)\n-   [*Minor Illusion*](#minor-illusion)\n-   [*",
-      "***Retributive Strike.*** You can use an action to break the staff over your knee or against a solid surface, performing a retributive strike. The sta",
-      "***Retributive Strike.*** You can use an action to break the staff over your knee or against a solid surface, performing a retributive strike. The sta"
+      "Sometimes an attacker wants to incapacitate a foe, rather than deal a killing blow. When an attacker reduces a creature to 0 hit points with a melee a",
+      "#### Hiding  \nThe DM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are disc",
+      "The fortress is a square tower, 20 feet on a side and 30 feet high, with arrow slits on all sides and a battlement atop it. Its interior is divided in",
+      "#### Falling Net  \n*Mechanical trap*  \nThis trap uses a trip wire to release a net suspended from the ceiling.  \nThe trip wire is 3 inches off the gro",
+      "#### Goblin  \n*Small humanoid (goblinoid), neutral evil*  \n**Armor Class** 15 (leather armor, shield)  \n**Hit Points** 7 (2d6)  \n**Speed** 30 ft.  \n| "
     ],
-    "precision": 0.0,
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "f1": 0.0,
-    "hit": 0,
-    "ap": 0.0,
-    "latency": 0.663
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.3333,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 4.616
   },
   {
     "id": 25,
@@ -700,20 +700,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "#### Bonus Actions  \nVarious class features, spells, and other abilities let you take an additional action on your turn called a bonus action. The Cun",
-      "#### Bonus Actions  \nVarious class features, spells, and other abilities let you take an additional action on your turn called a bonus action. The Cun",
       "#### Two-Weapon Fighting  \nWhen you take the Attack action and attack with a light melee weapon that you're holding in one hand, you can use a bonus a",
-      "#### Two-Weapon Fighting  \nWhen you take the Attack action and attack with a light melee weapon that you\u2019re holding in one hand, you can use a bonus a",
-      "When you take the Hide action, you make a Dexterity (Stealth) check in an attempt to hide, following the rules for hiding. If you succeed, you gain ce"
+      "**Challenge** 1 (200 XP)  \n***Cunning Action.*** On each of its turns, the spy can use a bonus action to take the Dash, Disengage, or Hide action.  \n*",
+      "You normally interact with an object while doing something else, such as when you draw a sword as part of an attack. When an object requires your acti",
+      "#### Opportunity Attacks  \nIn a fight, everyone is constantly watching for a chance to strike an enemy who is fleeing or passing by. Such a strike is ",
+      "*Weapon (dagger), rare*  \nYou gain a +1 bonus to attack and damage rolls made with this magic weapon.  \nYou can use an action to cause thick, black po"
     ],
-    "precision": 0.4,
+    "precision": 0.2,
     "recall": 1.0,
-    "mrr": 0.3333,
-    "ndcg": 0.5706,
-    "f1": 0.5714,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.3333,
     "hit": 1,
-    "ap": 0.4167,
-    "latency": 0.844
+    "ap": 1.0,
+    "latency": 2.992
   },
   {
     "id": 26,
@@ -729,20 +729,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "(Athletics) check.  \n***Moving a Grappled Creature.*** When you move, you can drag or carry the grappled creature with you, but your speed is halved, ",
-      "A fall from a great height is one of the most common hazards facing an adventurer. At the end of a fall, a creature takes 1d6 bludgeoning damage for e",
-      "A fall from a great height is one of the most common hazards facing an adventurer. At the end of a fall, a creature takes 1d6 bludgeoning damage for e",
-      "***Stand Against the Tide.*** When a hostile creature misses you with a melee attack, you can use your reaction to force that creature to repeat the s",
-      "***Pounce.*** If the lion moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must suc"
+      "#### Falling Net  \n*Mechanical trap*  \nThis trap uses a trip wire to release a net suspended from the ceiling.  \nThe trip wire is 3 inches off the gro",
+      "#### Hiding  \nThe DM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are disc",
+      "***Sleight of Hand.*** Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an obje",
+      "A character's interaction with objects in an environment is often simple to resolve in the game. The player tells the GM that his or her character is ",
+      "A character\u2019s interaction with objects in an environment is often simple to resolve in the game. The player tells the GM that his or her character is "
     ],
-    "precision": 0.2,
-    "recall": 1.0,
-    "mrr": 1.0,
-    "ndcg": 1.0,
-    "f1": 0.3333,
-    "hit": 1,
-    "ap": 1.0,
-    "latency": 1.11
+    "precision": 0.0,
+    "recall": 0.5,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.786
   },
   {
     "id": 27,
@@ -758,20 +758,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "> #### Hiding\n>\n> The GM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are ",
       "#### Hiding  \nThe DM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are disc",
-      ">\n> ***Passive Perception.*** When you hide, there's a chance someone will notice you even if they aren't searching. To determine whether such a creat",
-      "***Passive Perception.*** When you hide, there\u2019s a chance someone will notice you even if they aren\u2019t searching. To determine whether such a creature ",
+      "> #### Hiding\n>\n> The GM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are ",
+      "Combatants often try to escape their foes\u2019 notice by hiding, casting the invisibility spell, or lurking in darkness.  \nWhen you attack a target that y",
+      "Combatants often try to escape their foes' notice by hiding, casting the [*invisibility*](#invisibility) spell, or lurking in darkness.  \nWhen you att",
       "When you take the Hide action, you make a Dexterity (Stealth) check in an attempt to hide, following the rules for hiding. If you succeed, you gain ce"
     ],
-    "precision": 1.0,
+    "precision": 0.6,
     "recall": 1.0,
     "mrr": 1.0,
-    "ndcg": 1.0,
-    "f1": 1.0,
+    "ndcg": 0.9469,
+    "f1": 0.75,
     "hit": 1,
-    "ap": 1.0,
-    "latency": 1.583
+    "ap": 0.8667,
+    "latency": 3.531
   },
   {
     "id": 28,
@@ -787,20 +787,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "- **Being incapacitated or killed.** You lose concentration on a spell if you are incapacitated or if you die.  \nThe GM might also decide that certain",
-      "-   **Being incapacitated or killed.** You lose concentration on a spell if you are [incapacitated](#incapacitated) or if you die.  \nThe GM might also",
       "Normal activity, such as moving and attacking, doesn't interfere with concentration. The following factors can break concentration:  \n-   **Casting an",
       "Normal activity, such as moving and attacking, doesn\u2019t interfere with concentration. The following factors can break concentration:\n- **Casting anothe",
-      "Spellcasters such as wizards and clerics, as well as many monsters, have access to spells and can use them to great effect in combat. Each spell has a"
+      "In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action.  \nWhile raging, you gain the following benefits if yo",
+      "***Forceful Hand.*** The hand attempts to push a creature within 5 feet of it in a direction you choose.  \nMake a check with the hand\u2019s Strength conte",
+      "- **Being incapacitated or killed.** You lose concentration on a spell if you are incapacitated or if you die.  \nThe GM might also decide that certain"
     ],
-    "precision": 0.8,
+    "precision": 0.6,
     "recall": 1.0,
     "mrr": 1.0,
-    "ndcg": 1.0,
-    "f1": 0.8889,
+    "ndcg": 0.9469,
+    "f1": 0.75,
     "hit": 1,
-    "ap": 1.0,
-    "latency": 1.473
+    "ap": 0.8667,
+    "latency": 3.708
   },
   {
     "id": 29,
@@ -816,20 +816,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "***At Higher Levels.*** When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th.",
-      "One side of the wall, selected by you when you cast this spell, deals 5d8 fire damage to each creature that ends its turn within 10 feet of that side ",
-      "Some spells require the caster to make an attack roll to determine whether the spell effect hits the intended target. Your attack bonus with a spell a",
-      "A nonmagical object that isn't being worn or carried also takes the damage if it's in the spell's area.  \n***At Higher Levels.*** When you cast this s",
-      "Some spells require the caster to make an attack roll to determine whether the spell effect hits the intended target. Your attack bonus with a spell a"
+      "| Longbow         | 50 gp | 1d8 piercing  |  2 lb.  | Ammunition (range 150/600), heavy, two-handed          |\n| Net             | 1 gp  | \u2014          ",
+      "#### Acid Splash  \n*Conjuration cantrip*  \n**Casting Time:** 1 action  \n**Range:** 60 feet  \n**Components:** V, S  \n**Duration:** Instantaneous  \nYou ",
+      "</table>  \n**Senses** darkvision 60 ft., tremorsense 60 ft., passive Perception 11  \n**Languages** \u2014  \n**Challenge** 2 (450 XP)  \n##### Actions  \n***B",
+      "***Passive Perception.*** When you hide, there\u2019s a chance someone will notice you even if they aren\u2019t searching. To determine whether such a creature ",
+      ">\n> ***Passive Perception.*** When you hide, there's a chance someone will notice you even if they aren't searching. To determine whether such a creat"
     ],
-    "precision": 0.0,
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "f1": 0.0,
-    "hit": 0,
-    "ap": 0.0,
-    "latency": 0.389
+    "precision": 0.6,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.75,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 3.946
   },
   {
     "id": 30,
@@ -845,20 +845,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "Starting at 14th level, if you are able to hear, you are aware of the location of any hidden or [invisible](#invisible) creature within 10 feet of you",
-      "Starting at 14th level, if you are able to hear, you are aware of the location of any hidden or invisible creature within 10 feet of you.",
-      ">\n> ***Passive Perception.*** When you hide, there's a chance someone will notice you even if they aren't searching. To determine whether such a creat",
+      "***Insight.*** Your Wisdom (Insight) check decides whether you can determine the true intentions of a creature, such as when searching out a lie or pr",
       "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language",
-      "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language"
+      "#### Hiding  \nThe DM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are disc",
+      "A creature can use its action to inspect a target and make an Intelligence (Investigation) check against your spell save DC. If it succeeds, it become",
+      "> #### Hiding\n>\n> The GM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are "
     ],
-    "precision": 0.6,
+    "precision": 0.8,
     "recall": 1.0,
-    "mrr": 0.3333,
-    "ndcg": 0.6183,
-    "f1": 0.75,
+    "mrr": 1.0,
+    "ndcg": 0.9829,
+    "f1": 0.8889,
     "hit": 1,
-    "ap": 0.4778,
-    "latency": 1.33
+    "ap": 0.95,
+    "latency": 4.281
   },
   {
     "id": 31,
@@ -875,20 +875,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "*Wondrous item, rare*  \nThis rope is 30 feet long and weighs 3 pounds. If you hold one end of the rope and use an action to speak its command word, th",
-      "The rope has AC 20 and 20 hit points. It regains 1 hit point every 5 minutes as long as it has at least 1 hit point. If the rope drops to 0 hit points",
+      "***Sleight of Hand.*** Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an obje",
+      "-   Disable a trap\n-   Securely tie up a prisoner\n-   Wriggle free of bonds\n-   Play a stringed instrument\n-   Craft a small or detailed object  \n####",
+      "- Securely tie up a prisoner\n- Wriggle free of bonds\n- Play a stringed instrument\n- Craft a small or detailed object  \n#### Attack Rolls and Damage  \n",
       "#### Falling Net  \n*Mechanical trap*  \nThis trap uses a trip wire to release a net suspended from the ceiling.  \nThe trip wire is 3 inches off the gro",
-      "***False Appearance.*** While the roper remains motionless, it is indistinguishable from a normal cave formation, such as a stalagmite.  \n***Grasping ",
-      "*Wondrous item, rare*  \nThis rusty iron sphere measures 3 inches in diameter and weighs 1 pound. You can use an action to speak the command word and t"
+      "***False Appearance.*** While the roper remains motionless, it is indistinguishable from a normal cave formation, such as a stalagmite.  \n***Grasping "
     ],
-    "precision": 0.0,
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "f1": 0.0,
-    "hit": 0,
-    "ap": 0.0,
-    "latency": 1.158
+    "precision": 0.6,
+    "recall": 0.5,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.5455,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 3.089
   },
   {
     "id": 32,
@@ -905,20 +905,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "A character\u2019s interaction with objects in an environment is often simple to resolve in the game. The player tells the GM that his or her character is ",
-      "A character's interaction with objects in an environment is often simple to resolve in the game. The player tells the GM that his or her character is ",
-      "***Other Strength Checks.*** The GM might also call for a Strength check when you try to accomplish tasks like the following:  \n-   Force open a stuck",
-      "***Other Strength Checks.*** The GM might also call for a Strength check when you try to accomplish tasks like the following:\n- Force open a stuck, lo",
-      "Characters can also damage objects with their weapons and spells. Objects are immune to poison and psychic damage, but otherwise they can be affected "
+      "#### Dimension Door  \n*4th-level conjuration*  \n**Casting Time:** 1 action  \n**Range:** 500 feet  \n**Components:** V  \n**Duration:** Instantaneous  \nY",
+      "***Spider Climb.*** The drider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.  \n***Sunligh",
+      "The fortress is a square tower, 20 feet on a side and 30 feet high, with arrow slits on all sides and a battlement atop it. Its interior is divided in",
+      "Each creature in the area where the fortress appears must make a DC 15 Dexterity saving throw, taking 10d10 bludgeoning damage on a failed save, or ha",
+      "*Wondrous item, rare*  \nYou can use an action to place this 1-inch metal cube on the ground and speak its command word. The cube rapidly grows into a "
     ],
-    "precision": 1.0,
-    "recall": 1.0,
+    "precision": 0.2,
+    "recall": 0.5,
     "mrr": 1.0,
     "ndcg": 1.0,
-    "f1": 1.0,
+    "f1": 0.2857,
     "hit": 1,
     "ap": 1.0,
-    "latency": 1.047
+    "latency": 0.646
   },
   {
     "id": 33,
@@ -934,20 +934,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "With a successful DC 15 Wisdom (Perception) check, a character can spot the trapdoor and pressure plate. A search of the floor accompanied by a succes",
-      "With a successful DC 15 Wisdom (Perception) check, a character can spot the trapdoor and pressure plate. A search of the floor accompanied by a succes",
+      ">\n> ***Passive Perception.*** When you hide, there's a chance someone will notice you even if they aren't searching. To determine whether such a creat",
+      "***Passive Perception.*** When you hide, there\u2019s a chance someone will notice you even if they aren\u2019t searching. To determine whether such a creature ",
+      "(2d10) poison damage, and must succeed on a DC 15 Constitution saving throw or be poisoned for 1 hour.  \nA successful DC 20 Intelligence (Investigatio",
       "The DC to spot the pit is 10. Anyone stepping on the cloth falls through and pulls the cloth down into the pit, taking damage based on the pit's depth",
-      "The tiny holes in the walls are obscured by dust and cobwebs, or cleverly hidden amid bas-reliefs, murals, or frescoes that adorn the walls. The DC to",
-      "Starting at 14th level, if you are able to hear, you are aware of the location of any hidden or invisible creature within 10 feet of you."
+      "A character's interaction with objects in an environment is often simple to resolve in the game. The player tells the GM that his or her character is "
     ],
-    "precision": 0.8,
+    "precision": 0.4,
     "recall": 1.0,
-    "mrr": 1.0,
-    "ndcg": 1.0,
-    "f1": 0.8889,
+    "mrr": 0.3333,
+    "ndcg": 0.5706,
+    "f1": 0.5714,
     "hit": 1,
-    "ap": 1.0,
-    "latency": 0.85
+    "ap": 0.4167,
+    "latency": 1.679
   },
   {
     "id": 34,
@@ -963,20 +963,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
+      "Swimming across a rushing river, sneaking down a dungeon corridor, scaling a treacherous mountain slope\u2014all sorts of movement play a key role in fanta",
+      "**Senses** darkvision 60 ft., passive Perception 10  \n**Languages** understands the languages of its creator but can't speak  \n**Challenge** 0 (10 XP)",
       "***Redirect Flow.*** You cause flowing water in the area to move in a direction you choose, even if the water has to flow over obstacles, up walls, or",
       "-   You can breathe underwater and have a swimming speed equal to your walking speed.\n-   You can cast the following spells from the ring, expending t",
-      "#### Fly  \nA monster that has a flying speed can use all or part of its movement to fly. Some monsters have the ability to **hover**, which makes them",
-      "**Range:** Touch  \n**Components:** V, S, M (a leather strap, bound around the arm or a similar appendage)  \n**Duration:** 1 hour  \nYou touch a willing",
-      "#### Fly  \nA monster that has a flying speed can use all or part of its movement to fly. Some monsters have the ability to hover, which makes them har"
+      "***Fan.*** If you are on a boat or ship, you can use an action to toss the token up to 10 feet in the air. The token disappears, and a giant flapping "
     ],
     "precision": 0.2,
     "recall": 1.0,
-    "mrr": 1.0,
-    "ndcg": 1.0,
+    "mrr": 0.3333,
+    "ndcg": 0.5,
     "f1": 0.3333,
     "hit": 1,
-    "ap": 1.0,
-    "latency": 0.596
+    "ap": 0.3333,
+    "latency": 4.427
   },
   {
     "id": 35,
@@ -992,11 +992,11 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "With a successful DC 15 Wisdom (Perception) check, a character can spot the trapdoor and pressure plate. A search of the floor accompanied by a succes",
-      "With a successful DC 15 Wisdom (Perception) check, a character can spot the trapdoor and pressure plate. A search of the floor accompanied by a succes",
-      ">\n> ***Passive Perception.*** When you hide, there's a chance someone will notice you even if they aren't searching. To determine whether such a creat",
-      "A creature can use its action to inspect a target and make an Intelligence (Investigation) check against your spell save DC. If it succeeds, it become",
-      "For example, if a 1st-level character has a Wisdom of 15 and proficiency in Perception, he or she has a passive Wisdom (Perception) score of 14.  \nThe"
+      "The triggering condition can be as general or as detailed as you like, though it must be based on visual or audible conditions that occur within 30 fe",
+      "A character's interaction with objects in an environment is often simple to resolve in the game. The player tells the GM that his or her character is ",
+      "A character\u2019s interaction with objects in an environment is often simple to resolve in the game. The player tells the GM that his or her character is ",
+      "If the mirror traps a creature but its twelve extradimensional cells are already occupied, the mirror frees one trapped creature at random to accommod",
+      "***Passive Perception.*** When you hide, there\u2019s a chance someone will notice you even if they aren\u2019t searching. To determine whether such a creature "
     ],
     "precision": 0.0,
     "recall": 0.0,
@@ -1005,7 +1005,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.499
+    "latency": 4.519
   },
   {
     "id": 36,
@@ -1020,20 +1020,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "***Performance.*** Your Charisma (Performance) check determines how well you can delight an audience with music, dance, acting, storytelling, or some ",
-      "***Performance.*** Your Charisma (Performance) check determines how well you can delight an audience with music, dance, acting, storytelling, or some ",
-      "***Insight.*** Your Wisdom (Insight) check decides whether you can determine the true intentions of a creature, such as when searching out a lie or pr",
-      "***Insight.*** Your Wisdom (Insight) check decides whether you can determine the true intentions of a creature, such as when searching out a lie or pr",
-      "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This"
+      "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This",
+      "***Other Intelligence Checks.*** The GM might call for an Intelligence check when you try to accomplish tasks like the following:  \n-   Communicate wi",
+      "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh",
+      "You initially learn the surface thoughts of the creature\u2014what is most on its mind in that moment. As an action, you can either shift your attention to",
+      "#### Hiding  \nThe DM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are disc"
     ],
     "precision": 0.2,
     "recall": 1.0,
-    "mrr": 0.2,
-    "ndcg": 0.3869,
+    "mrr": 1.0,
+    "ndcg": 1.0,
     "f1": 0.3333,
     "hit": 1,
-    "ap": 0.2,
-    "latency": 1.466
+    "ap": 1.0,
+    "latency": 3.444
   },
   {
     "id": 37,
@@ -1048,20 +1048,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "#### Intimidating Presence  \nBeginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose ",
-      "#### Intimidating Presence  \nBeginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose ",
-      "***Paralyze.*** When you hit a creature with a melee attack using the rod, you can force the target to make a DC 17 Strength saving throw. On a failur",
-      "***Fear.*** Each target must make a Wisdom saving throw and becomes frightened for 1 minute on a failed save. While frightened, the target drops whate",
-      "***Fear.*** Each target must make a Wisdom saving throw and becomes [frightened](#frightened) for 1 minute on a failed save. While frightened, the tar"
+      "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This",
+      "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh",
+      "You initially learn the surface thoughts of the creature\u2014what is most on its mind in that moment. As an action, you can either shift your attention to",
+      "***Other Intelligence Checks.*** The GM might call for an Intelligence check when you try to accomplish tasks like the following:  \n-   Communicate wi",
+      "***Heavy Crossbow.** Ranged Weapon Attack:* +2 to hit, range 100/400 ft., one target. *Hit:* 5 (1d10) piercing damage.  \n**Thugs** are ruthless enforc"
     ],
-    "precision": 0.0,
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "f1": 0.0,
-    "hit": 0,
-    "ap": 0.0,
-    "latency": 1.59
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.3333,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 3.168
   },
   {
     "id": 38,
@@ -1076,20 +1076,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends.  \n***At Higher ",
-      "#### Intimidating Presence  \nBeginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose ",
-      "#### Intimidating Presence  \nBeginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose ",
-      "***Sympathy.*** The enchantment causes the specified creatures to feel an intense urge to approach the target while within 60 feet of it or able to se",
-      "***Sympathy.*** The enchantment causes the specified creatures to feel an intense urge to approach the target while within 60 feet of it or able to se"
+      "***Performance.*** Your Charisma (Performance) check determines how well you can delight an audience with music, dance, acting, storytelling, or some ",
+      "Sometimes one character's or monster's efforts are directly opposed to another's. This can occur when both of them are trying to do the same thing and",
+      "Sometimes one character\u2019s or monster\u2019s efforts are directly opposed to another\u2019s. This can occur when both of them are trying to do the same thing and",
+      "- Blend into a crowd to get the sense of key topics of conversation  \n#### Spellcasting Ability  \nBards, paladins, sorcerers, and warlocks use Charism",
+      "Many spells specify that a target can make a saving throw to avoid some or all of a spell\u2019s effects. The spell specifies the ability that the target u"
     ],
-    "precision": 0.0,
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "f1": 0.0,
-    "hit": 0,
-    "ap": 0.0,
-    "latency": 1.231
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.3333,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 3.507
   },
   {
     "id": 39,
@@ -1105,20 +1105,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This",
-      "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This",
+      "#### Disguise Self  \n*1st-level illusion*  \n**Casting Time:** 1 action  \n**Range:** Self  \n**Components:** V, S  \n**Duration:** 1 hour  \nYou make your",
       "The spell disguises physical appearance as well as clothing, armor, weapons, and equipment. You can make each creature seem 1 foot shorter or taller a",
       "To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check ",
-      "*5th-level illusion*  \n**Classes:** [Bard](#section-bard), [Sorcerer](#section-sorcerer), [Wizard](#section-wizard)  \n**Casting Time:** 1 action  \n**R"
+      "*5th-level illusion*  \n**Classes:** [Bard](#section-bard), [Sorcerer](#section-sorcerer), [Wizard](#section-wizard)  \n**Casting Time:** 1 action  \n**R",
+      "The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass"
     ],
-    "precision": 0.6,
-    "recall": 1.0,
-    "mrr": 1.0,
-    "ndcg": 0.9469,
-    "f1": 0.75,
+    "precision": 0.2,
+    "recall": 0.5,
+    "mrr": 0.25,
+    "ndcg": 0.4307,
+    "f1": 0.2857,
     "hit": 1,
-    "ap": 0.8667,
-    "latency": 1.609
+    "ap": 0.25,
+    "latency": 0.684
   },
   {
     "id": 40,
@@ -1133,20 +1133,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "Guilds, nobles, and royalty regulate trade. Chartered companies are granted rights to conduct trade along certain routes, to send merchant ships to va",
-      "***Quiver.*** A quiver can hold up to 20 arrows.  \n***Ram, Portable.*** You can use a portable ram to break down doors. When doing so, you gain a +4 b",
-      "Most wealth is not in coins. It is measured in livestock, grain, land, rights to collect taxes, or rights to resources (such as a mine or a forest).  ",
-      "-   Insight\n-   Medicine\n-   Perception\n-   Survival  \n#### Charisma  \n-   Deception\n-   Intimidation\n-   Performance\n-   Persuasion  \nSometimes, the ",
-      "| Platinum (pp) | 1,000 | 100  | 20   | 10    | 1       |  \nSelling Treasure\n----------------  \nOpportunities abound to find treasure, equipment, weap"
+      "<td align=\"center\">1 (\u22125)</td>\n<td align=\"center\">5 (\u22123)</td>\n<td align=\"center\">1 (\u22125)</td>\n</tr>\n</tbody>\n</table>  \n**Saving Throws** Dex +4  \n**Da",
+      "- The third command word expends 5 charges and causes the gem to flare with blinding light in a 30- foot cone originating from it. Each creature in th",
+      "**Senses** blindsight 60 ft. (blind beyond this radius), passive Perception 7  \n**Languages** \u2014  \n**Challenge** 1/4 (50 XP)  \n***Antimagic Susceptibil",
+      "When you attack an object with this magic sword and hit, maximize your weapon damage dice against the target.  \nWhen you attack a creature with this w",
+      "*Weapon (any sword that deals slashing damage), very rare (requires [attunement](#section-attunement))*  \nWhen you attack an object with this magic sw"
     ],
-    "precision": 0.2,
-    "recall": 1.0,
-    "mrr": 0.25,
-    "ndcg": 0.4307,
-    "f1": 0.3333,
-    "hit": 1,
-    "ap": 0.25,
-    "latency": 1.841
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 4.679
   },
   {
     "id": 41,
@@ -1162,10 +1162,10 @@
     "num_chunks_retrieved": 5,
     "chunks_preview": [
       "#### Locate Object  \n*2nd-level divination*  \n**Classes:** [Bard](#section-bard), [Cleric](#section-cleric), [Druid](#section-druid), [Paladin](#secti",
-      "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh",
-      "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh",
-      "***Insight.*** Your Wisdom (Insight) check decides whether you can determine the true intentions of a creature, such as when searching out a lie or pr",
-      "***Insight.*** Your Wisdom (Insight) check decides whether you can determine the true intentions of a creature, such as when searching out a lie or pr"
+      "**Duration:** Concentration, up to 10 minutes  \nYou create an [invisible](#invisible) sensor within range in a location familiar to you (a place you h",
+      "The following items are designated Product Identity, as defined in Section 1(e) of the Open Game License Version 1.0a, and are subject to the conditio",
+      "A character's interaction with objects in an environment is often simple to resolve in the game. The player tells the GM that his or her character is ",
+      "A character\u2019s interaction with objects in an environment is often simple to resolve in the game. The player tells the GM that his or her character is "
     ],
     "precision": 0.0,
     "recall": 0.0,
@@ -1174,7 +1174,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 1.111
+    "latency": 4.46
   },
   {
     "id": 42,
@@ -1190,11 +1190,11 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "Intelligence measures mental acuity, accuracy of recall, and the ability to reason.  \n#### Intelligence Checks  \nAn Intelligence check comes into play",
-      "Intelligence measures mental acuity, accuracy of recall, and the ability to reason.  \n#### Intelligence Checks  \nAn Intelligence check comes into play",
-      "Once the stone has canceled 50 levels of spells, it burns out and turns dull gray, losing its magic. If you are targeted by a spell whose level is hig",
-      "Once the stone has canceled 50 levels of spells, it burns out and turns dull gray, losing its magic. If you are targeted by a spell whose level is hig",
-      "*Wondrous item, very rare*  \nThis book contains intuition and insight exercises, and its words are charged with magic. If you spend 48 hours over a pe"
+      "You can also use this spell to detect the presence of thinking creatures you can\u2019t see. When you cast the spell or as your action during the duration,",
+      "You can also use this spell to detect the presence of thinking creatures you can't see. When you cast the spell or as your action during the duration,",
+      "***Protection (Rare).*** You gain a +1 bonus to AC while this dusty rose prism orbits your head.  \n***Regeneration (Legendary).*** You regain 15 hit p",
+      ">\n> ***Passive Perception.*** When you hide, there's a chance someone will notice you even if they aren't searching. To determine whether such a creat",
+      "The triggering condition can be as general or as detailed as you like, though it must be based on visual or audible conditions that occur within 30 fe"
     ],
     "precision": 0.0,
     "recall": 1.0,
@@ -1203,7 +1203,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 1.179
+    "latency": 0.615
   },
   {
     "id": 43,
@@ -1219,20 +1219,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
+      "***Sleight of Hand.*** Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an obje",
+      "Dexterity measures agility, reflexes, and balance.  \n#### Dexterity Checks  \nA Dexterity check can model any attempt to move nimbly, quickly, or quiet",
       "A character\u2019s interaction with objects in an environment is often simple to resolve in the game. The player tells the GM that his or her character is ",
-      "A character's interaction with objects in an environment is often simple to resolve in the game. The player tells the GM that his or her character is ",
-      "***Sleight of Hand.*** Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an obje",
-      "***Sleight of Hand.*** Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an obje",
-      "Dexterity measures agility, reflexes, and balance.  \n#### Dexterity Checks  \nA Dexterity check can model any attempt to move nimbly, quickly, or quiet"
+      "This rule assumes that the height of your jump doesn\u2019t matter, such as a jump across a stream or chasm. At your GM\u2019s option, you must succeed on a DC ",
+      "On your turn, you can **move** a distance up to your speed and **take one action**. You decide whether to move first or take your action first. Your s"
     ],
-    "precision": 0.4,
+    "precision": 0.2,
     "recall": 1.0,
-    "mrr": 0.3333,
-    "ndcg": 0.5706,
-    "f1": 0.5714,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.3333,
     "hit": 1,
-    "ap": 0.4167,
-    "latency": 1.424
+    "ap": 1.0,
+    "latency": 3.329
   },
   {
     "id": 44,
@@ -1248,20 +1248,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "*Wondrous item, rare*  \nThis rope is 30 feet long and weighs 3 pounds. If you hold one end of the rope and use an action to speak its command word, th",
-      "The rope has AC 20 and 20 hit points. It regains 1 hit point every 5 minutes as long as it has at least 1 hit point. If the rope drops to 0 hit points",
-      "*Wondrous item, uncommon*  \nThis 60-foot length of silk rope weighs 3 pounds and can hold up to 3,000 pounds. If you hold one end of the rope and use ",
-      "#### Rope of Climbing  \n*Wondrous item, uncommon*  \nThis 60-foot length of silk rope weighs 3 pounds and can hold up to 3,000 pounds. If you hold one ",
-      "#### Falling Net  \n*Mechanical trap*  \nThis trap uses a trip wire to release a net suspended from the ceiling.  \nThe trip wire is 3 inches off the gro"
+      "***Sleight of Hand.*** Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an obje",
+      "#### Rod of Alertness  \n*Rod, very rare (requires attunement)*  \nThis rod has a flanged head and the following properties.  \n***Alertness.*** While ho",
+      "##### Actions  \n***Scimitar.*** *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 4 (1d6 + 1) slashing damage.  \n***Light Crossbow.***",
+      "You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who pr",
+      "More than treasure, a bandit captain or pirate captain craves infamy. A prisoner who appeals to the captain's vanity or ego is more likely to be treat"
     ],
-    "precision": 0.0,
+    "precision": 0.2,
     "recall": 1.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "f1": 0.0,
-    "hit": 0,
-    "ap": 0.0,
-    "latency": 1.362
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.3333,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 4.219
   },
   {
     "id": 45,
@@ -1277,20 +1277,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "With a successful DC 15 Wisdom (Perception) check, a character can spot the trapdoor and pressure plate. A search of the floor accompanied by a succes",
-      "With a successful DC 15 Wisdom (Perception) check, a character can spot the trapdoor and pressure plate. A search of the floor accompanied by a succes",
-      "You write on parchment, paper, or some other suitable writing material and imbue it with a potent illusion that lasts for the duration.  \nTo you and a",
-      "Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the i",
-      "***Disguise Kit.*** This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance. Proficiency wit"
+      "***Deception.*** Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This",
+      "***Sleight of Hand.*** Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an obje",
+      "**Casting Time:** 1 action  \n**Range:** 60 feet  \n**Components:** V, S  \n**Duration:** 10 minutes  \nYou create a magical zone that guards against dece",
+      "#### Zone of Truth  \n*2nd-level enchantment*  \n**Casting Time:** 1 action  \n**Range:** 60 feet  \n**Components:** V, S  \n**Duration:** 10 minutes  \nYou",
+      "***Other Intelligence Checks.*** The GM might call for an Intelligence check when you try to accomplish tasks like the following:  \n-   Communicate wi"
     ],
-    "precision": 0.0,
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "f1": 0.0,
-    "hit": 0,
-    "ap": 0.0,
-    "latency": 0.484
+    "precision": 0.6,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.906,
+    "f1": 0.75,
+    "hit": 1,
+    "ap": 0.8056,
+    "latency": 4.087
   },
   {
     "id": 46,
@@ -1306,11 +1306,11 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "The spell disguises physical appearance as well as clothing, armor, weapons, and equipment. You can make each creature seem 1 foot shorter or taller a",
-      "To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check ",
-      "*5th-level illusion*  \n**Classes:** [Bard](#section-bard), [Sorcerer](#section-sorcerer), [Wizard](#section-wizard)  \n**Casting Time:** 1 action  \n**R",
-      "***Ability Score Increase.*** Your Charisma score increases by 1.  \n***Naturally Stealthy.*** You can attempt to hide even when you are obscured only ",
-      "***Ability Score Increase.*** Your Charisma score increases by 1.  \n***Naturally Stealthy.*** You can attempt to hide even when you are obscured only "
+      "***Performance.*** Your Charisma (Performance) check determines how well you can delight an audience with music, dance, acting, storytelling, or some ",
+      "A character's interaction with objects in an environment is often simple to resolve in the game. The player tells the GM that his or her character is ",
+      "#### Hiding  \nThe DM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are disc",
+      "> #### Hiding\n>\n> The GM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are ",
+      "When you take the Hide action, you make a Dexterity (Stealth) check in an attempt to hide, following the rules for hiding. If you succeed, you gain ce"
     ],
     "precision": 0.0,
     "recall": 1.0,
@@ -1319,7 +1319,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 1.455
+    "latency": 3.557
   },
   {
     "id": 47,
@@ -1335,20 +1335,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "A monster\u2019s speed tells you how far it can move on its turn. For more information on speed, see the *Player\u2019s Handbook.*  \nAll creatures have a walkin",
-      "A monster's speed tells you how far it can move on its turn. For more information on speed, see \"[Movement and Position](#section-movement-and-positio",
-      "Every character and monster has a speed, which is the distance in feet that the character or monster can walk in 1 round. This number assumes short bu",
-      "Every character and monster has a speed, which is the distance in feet that the character or monster can walk in 1 round. This number assumes short bu",
-      "| Normal | 300 feet             | 3 miles | 18 miles | \u2014                                                |\n| Slow   | 200 feet             | 2 miles | "
+      "***Speed.*** Your base walking speed is 30 feet.  \n***Darkvision.*** Accustomed to twilit forests and the night sky, you have superior vision in dark ",
+      "**Bright light** lets most creatures see normally.  \nEven gloomy days provide bright light, as do torches, lanterns, fires, and other sources of illum",
+      "#### Opportunity Attacks  \nIn a fight, everyone is constantly watching for a chance to strike an enemy who is fleeing or passing by. Such a strike is ",
+      "**Range:** 60 feet  \n**Components:** V, M (bat fur and a drop of pitch or piece of coal)  \n**Duration:** Concentration, up to 10 minutes  \nMagical dar",
+      "The presence or absence of light in an environment creates three categories of illumination: bright light, dim light, and darkness.  \n**Bright light**"
     ],
-    "precision": 0.4,
-    "recall": 0.5,
-    "mrr": 0.3333,
-    "ndcg": 0.5706,
-    "f1": 0.4444,
-    "hit": 1,
-    "ap": 0.4167,
-    "latency": 0.663
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.83
   },
   {
     "id": 48,
@@ -1364,20 +1364,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "This rule assumes that the height of your jump doesn't matter, such as a jump across a stream or chasm. At your GM's option, you must succeed on a DC ",
       "This rule assumes that the height of your jump doesn\u2019t matter, such as a jump across a stream or chasm. At your GM\u2019s option, you must succeed on a DC ",
-      "Movement through dangerous dungeons or wilderness areas often involves more than simply walking. Adventurers might have to climb, crawl, swim, or jump",
-      "Movement through dangerous dungeons or wilderness areas often involves more than simply walking. Adventurers might have to climb, crawl, swim, or jump",
-      "You can extend your arms half your height above yourself during the jump. Thus, you can reach above you a distance equal to the height of the jump plu"
+      "This rule assumes that the height of your jump doesn't matter, such as a jump across a stream or chasm. At your GM's option, you must succeed on a DC ",
+      "#### Jump  \n*1st-level transmutation*  \n**Classes:** [Druid](#section-druid), [Ranger](#section-ranger), [Sorcerer](#section-sorcerer), [Wizard](#sect",
+      "You can extend your arms half your height above yourself during the jump. Thus, you can reach above you a distance equal to the height of the jump plu",
+      "</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td align=\"center\">19 (+4)</td>\n<td align=\"center\">11 (+0)</td>\n<td align=\"center\">21 (+5)</td>\n<td align=\"cen"
     ],
-    "precision": 0.8,
-    "recall": 1.0,
+    "precision": 0.4,
+    "recall": 0.5,
     "mrr": 1.0,
     "ndcg": 1.0,
-    "f1": 0.8889,
+    "f1": 0.4444,
     "hit": 1,
     "ap": 1.0,
-    "latency": 0.836
+    "latency": 5.267
   },
   {
     "id": 49,
@@ -1393,20 +1393,20 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "A trap\u2019s description specifies the checks and DCs needed to detect it, disable it, or both. A character actively looking for a trap can attempt a Wisd",
       "Any character can attempt an Intelligence (Arcana) check to detect or disarm a magic trap, in addition to any other checks noted in the trap\u2019s descrip",
+      "A trap\u2019s description specifies the checks and DCs needed to detect it, disable it, or both. A character actively looking for a trap can attempt a Wisd",
       "A trap's description specifies the checks and DCs needed to detect it, disable it, or both. A character actively looking for a trap can attempt a Wisd",
-      "Any character can attempt an Intelligence (Arcana) check to detect or disarm a magic trap, in addition to any other checks noted in the trap's descrip",
+      "Traps are often designed with mechanisms that allow them to be disarmed or bypassed. Intelligent monsters that place traps in or around their lairs ne",
       "(2d10) poison damage, and must succeed on a DC 15 Constitution saving throw or be poisoned for 1 hour.  \nA successful DC 20 Intelligence (Investigatio"
     ],
     "precision": 0.6,
     "recall": 1.0,
-    "mrr": 1.0,
-    "ndcg": 0.8855,
+    "mrr": 0.5,
+    "ndcg": 0.7123,
     "f1": 0.75,
     "hit": 1,
-    "ap": 0.7556,
-    "latency": 1.22
+    "ap": 0.5889,
+    "latency": 3.883
   },
   {
     "id": 50,
@@ -1422,19 +1422,19 @@
     ],
     "num_chunks_retrieved": 5,
     "chunks_preview": [
-      "With a successful DC 15 Wisdom (Perception) check, a character can spot the trapdoor and pressure plate. A search of the floor accompanied by a succes",
+      "***Sleight of Hand.*** Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an obje",
       "***Thieves' Tools.*** This set of tools includes a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed s",
-      "With a successful DC 15 Wisdom (Perception) check, a character can spot the trapdoor and pressure plate. A search of the floor accompanied by a succes",
       "(2d10) poison damage, and must succeed on a DC 15 Constitution saving throw or be poisoned for 1 hour.  \nA successful DC 20 Intelligence (Investigatio",
-      "When the trap is triggered, the needle extends 3 inches straight out from the lock. A creature within range takes 1 piercing damage and 11 (2d10) pois"
+      "When the trap is triggered, the needle extends 3 inches straight out from the lock. A creature within range takes 1 piercing damage and 11 (2d10) pois",
+      "You should allow a character to discover a trap without making an ability check if an action would clearly reveal the trap's presence. For example, if"
     ],
-    "precision": 0.4,
+    "precision": 0.6,
     "recall": 1.0,
-    "mrr": 0.25,
-    "ndcg": 0.5013,
-    "f1": 0.5714,
+    "mrr": 1.0,
+    "ndcg": 0.906,
+    "f1": 0.75,
     "hit": 1,
-    "ap": 0.325,
-    "latency": 0.654
+    "ap": 0.8056,
+    "latency": 4.173
   }
 ]

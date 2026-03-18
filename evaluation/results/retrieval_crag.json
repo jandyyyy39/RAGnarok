@@ -27,7 +27,7 @@
     "f1": 0.5714,
     "hit": 1,
     "ap": 0.5833,
-    "latency": 1.978
+    "latency": 2.074
   },
   {
     "id": 2,
@@ -41,18 +41,16 @@
     "supporting_keywords": [
       "dexterity"
     ],
-    "num_chunks_retrieved": 1,
-    "chunks_preview": [
-      "> #### Hiding\n>\n> The GM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are "
-    ],
-    "precision": 1.0,
-    "recall": 1.0,
-    "mrr": 1.0,
-    "ndcg": 1.0,
-    "f1": 1.0,
-    "hit": 1,
-    "ap": 1.0,
-    "latency": 4.275
+    "num_chunks_retrieved": 0,
+    "chunks_preview": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.971
   },
   {
     "id": 3,
@@ -77,7 +75,7 @@
     "f1": 1.0,
     "hit": 1,
     "ap": 1.0,
-    "latency": 1.375
+    "latency": 1.419
   },
   {
     "id": 4,
@@ -92,18 +90,19 @@
       "athletics",
       "contested"
     ],
-    "num_chunks_retrieved": 1,
+    "num_chunks_retrieved": 2,
     "chunks_preview": [
-      "do for a Strength (Athletics) check. Similarly, when your half\u2014orc barbarian uses a display of raw strength to intimidate an enemy, your GM might ask "
+      "do for a Strength (Athletics) check. Similarly, when your half\u2014orc barbarian uses a display of raw strength to intimidate an enemy, your GM might ask ",
+      "(Athletics) check.  \n***Moving a Grappled Creature.*** When you move, you can drag or carry the grappled creature with you, but your speed is halved, "
     ],
-    "precision": 0.0,
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "f1": 0.0,
-    "hit": 0,
-    "ap": 0.0,
-    "latency": 3.717
+    "precision": 0.5,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "ndcg": 0.6309,
+    "f1": 0.6667,
+    "hit": 1,
+    "ap": 0.5,
+    "latency": 3.609
   },
   {
     "id": 5,
@@ -125,7 +124,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 3.433
+    "latency": 3.547
   },
   {
     "id": 6,
@@ -139,8 +138,11 @@
     "supporting_keywords": [
       "strength"
     ],
-    "num_chunks_retrieved": 0,
-    "chunks_preview": [],
+    "num_chunks_retrieved": 2,
+    "chunks_preview": [
+      "Dexterity measures agility, reflexes, and balance.  \n#### Dexterity Checks  \nA Dexterity check can model any attempt to move nimbly, quickly, or quiet",
+      "Dexterity measures agility, reflexes, and balance.  \n#### Dexterity Checks  \nA Dexterity check can model any attempt to move nimbly, quickly, or quiet"
+    ],
     "precision": 0.0,
     "recall": 0.0,
     "mrr": 0.0,
@@ -148,7 +150,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 3.553
+    "latency": 3.914
   },
   {
     "id": 7,
@@ -175,7 +177,7 @@
     "f1": 0.6667,
     "hit": 1,
     "ap": 1.0,
-    "latency": 1.521
+    "latency": 1.569
   },
   {
     "id": 8,
@@ -204,7 +206,7 @@
     "f1": 0.3333,
     "hit": 1,
     "ap": 0.2,
-    "latency": 1.494
+    "latency": 1.526
   },
   {
     "id": 9,
@@ -230,7 +232,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 1.488
+    "latency": 1.496
   },
   {
     "id": 10,
@@ -253,7 +255,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 4.288
+    "latency": 4.425
   },
   {
     "id": 11,
@@ -266,19 +268,21 @@
     "supporting_keywords": [
       "dexterity"
     ],
-    "num_chunks_retrieved": 2,
+    "num_chunks_retrieved": 4,
     "chunks_preview": [
+      "***Sleight of Hand.*** Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an obje",
+      "***Sleight of Hand.*** Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an obje",
       "During your rogue training you learned thieves\u2019 cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal c",
       "During your rogue training you learned thieves' cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal c"
     ],
-    "precision": 0.0,
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "f1": 0.0,
-    "hit": 0,
-    "ap": 0.0,
-    "latency": 3.825
+    "precision": 0.5,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.6667,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 3.701
   },
   {
     "id": 12,
@@ -304,7 +308,7 @@
     "f1": 1.0,
     "hit": 1,
     "ap": 1.0,
-    "latency": 3.611
+    "latency": 3.892
   },
   {
     "id": 13,
@@ -329,7 +333,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 4.065
+    "latency": 3.794
   },
   {
     "id": 14,
@@ -351,7 +355,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 3.196
+    "latency": 3.297
   },
   {
     "id": 15,
@@ -377,7 +381,7 @@
     "f1": 1.0,
     "hit": 1,
     "ap": 1.0,
-    "latency": 1.751
+    "latency": 1.793
   },
   {
     "id": 16,
@@ -391,19 +395,20 @@
       "intelligence",
       "undead"
     ],
-    "num_chunks_retrieved": 2,
+    "num_chunks_retrieved": 3,
     "chunks_preview": [
+      "Intelligence measures mental acuity, accuracy of recall, and the ability to reason.  \n#### Intelligence Checks  \nAn Intelligence check comes into play",
       "***Other Intelligence Checks.*** The GM might call for an Intelligence check when you try to accomplish tasks like the following:  \n-   Communicate wi",
       "***Other Intelligence Checks.*** The GM might call for an Intelligence check when you try to accomplish tasks like the following:\n- Communicate with a"
     ],
-    "precision": 0.0,
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "f1": 0.0,
-    "hit": 0,
-    "ap": 0.0,
-    "latency": 3.544
+    "precision": 0.3333,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.5,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 3.318
   },
   {
     "id": 17,
@@ -427,7 +432,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 4.337
+    "latency": 4.251
   },
   {
     "id": 18,
@@ -449,7 +454,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 4.289
+    "latency": 4.057
   },
   {
     "id": 19,
@@ -477,7 +482,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 1.591
+    "latency": 1.655
   },
   {
     "id": 20,
@@ -490,20 +495,21 @@
     "supporting_keywords": [
       "intelligence"
     ],
-    "num_chunks_retrieved": 3,
+    "num_chunks_retrieved": 4,
     "chunks_preview": [
       "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh",
       "***Other Intelligence Checks.*** The GM might call for an Intelligence check when you try to accomplish tasks like the following:  \n-   Communicate wi",
-      "***Other Intelligence Checks.*** The GM might call for an Intelligence check when you try to accomplish tasks like the following:\n- Communicate with a"
+      "***Other Intelligence Checks.*** The GM might call for an Intelligence check when you try to accomplish tasks like the following:\n- Communicate with a",
+      "Intelligence measures mental acuity, accuracy of recall, and the ability to reason.  \n#### Intelligence Checks  \nAn Intelligence check comes into play"
     ],
-    "precision": 0.0,
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "f1": 0.0,
-    "hit": 0,
-    "ap": 0.0,
-    "latency": 3.403
+    "precision": 0.25,
+    "recall": 1.0,
+    "mrr": 0.25,
+    "ndcg": 0.4307,
+    "f1": 0.4,
+    "hit": 1,
+    "ap": 0.25,
+    "latency": 3.421
   },
   {
     "id": 21,
@@ -528,7 +534,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 1.564
+    "latency": 1.62
   },
   {
     "id": 22,
@@ -551,7 +557,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 4.207
+    "latency": 4.391
   },
   {
     "id": 23,
@@ -573,7 +579,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 4.612
+    "latency": 4.135
   },
   {
     "id": 24,
@@ -596,7 +602,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 4.192
+    "latency": 4.413
   },
   {
     "id": 25,
@@ -621,7 +627,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 3.987
+    "latency": 4.183
   },
   {
     "id": 26,
@@ -647,7 +653,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 3.405
+    "latency": 3.56
   },
   {
     "id": 27,
@@ -674,7 +680,7 @@
     "f1": 0.8,
     "hit": 1,
     "ap": 1.0,
-    "latency": 1.521
+    "latency": 1.596
   },
   {
     "id": 28,
@@ -700,7 +706,7 @@
     "f1": 1.0,
     "hit": 1,
     "ap": 1.0,
-    "latency": 1.501
+    "latency": 1.54
   },
   {
     "id": 29,
@@ -728,7 +734,7 @@
     "f1": 1.0,
     "hit": 1,
     "ap": 1.0,
-    "latency": 1.872
+    "latency": 1.957
   },
   {
     "id": 30,
@@ -751,7 +757,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 3.742
+    "latency": 4.175
   },
   {
     "id": 31,
@@ -766,19 +772,21 @@
       "dexterity",
       "escape"
     ],
-    "num_chunks_retrieved": 2,
+    "num_chunks_retrieved": 4,
     "chunks_preview": [
       "Dexterity measures agility, reflexes, and balance.  \n#### Dexterity Checks  \nA Dexterity check can model any attempt to move nimbly, quickly, or quiet",
-      "Dexterity measures agility, reflexes, and balance.  \n#### Dexterity Checks  \nA Dexterity check can model any attempt to move nimbly, quickly, or quiet"
+      "Dexterity measures agility, reflexes, and balance.  \n#### Dexterity Checks  \nA Dexterity check can model any attempt to move nimbly, quickly, or quiet",
+      "Strength measures bodily power, athletic training, and the extent to which you can exert raw physical force.  \n#### Strength Checks  \nA Strength check",
+      "Strength measures bodily power, athletic training, and the extent to which you can exert raw physical force.  \n#### Strength Checks  \nA Strength check"
     ],
-    "precision": 1.0,
+    "precision": 0.5,
     "recall": 0.5,
     "mrr": 1.0,
     "ndcg": 1.0,
-    "f1": 0.6667,
+    "f1": 0.5,
     "hit": 1,
     "ap": 1.0,
-    "latency": 3.965
+    "latency": 4.101
   },
   {
     "id": 32,
@@ -793,22 +801,19 @@
       "break",
       "door"
     ],
-    "num_chunks_retrieved": 5,
+    "num_chunks_retrieved": 2,
     "chunks_preview": [
-      "do for a Strength (Athletics) check. Similarly, when your half-orc barbarian uses a display of raw strength to intimidate an enemy, your GM might ask ",
-      "do for a Strength (Athletics) check. Similarly, when your half\u2014orc barbarian uses a display of raw strength to intimidate an enemy, your GM might ask ",
       "Strength measures bodily power, athletic training, and the extent to which you can exert raw physical force.  \n#### Strength Checks  \nA Strength check",
-      "Strength measures bodily power, athletic training, and the extent to which you can exert raw physical force.  \n#### Strength Checks  \nA Strength check",
-      "***Other Strength Checks.*** The GM might also call for a Strength check when you try to accomplish tasks like the following:  \n-   Force open a stuck"
+      "Strength measures bodily power, athletic training, and the extent to which you can exert raw physical force.  \n#### Strength Checks  \nA Strength check"
     ],
-    "precision": 0.6,
+    "precision": 1.0,
     "recall": 1.0,
-    "mrr": 0.3333,
-    "ndcg": 0.6183,
-    "f1": 0.75,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 1.0,
     "hit": 1,
-    "ap": 0.4778,
-    "latency": 3.979
+    "ap": 1.0,
+    "latency": 3.719
   },
   {
     "id": 33,
@@ -822,19 +827,18 @@
     "supporting_keywords": [
       "intelligence"
     ],
-    "num_chunks_retrieved": 2,
+    "num_chunks_retrieved": 1,
     "chunks_preview": [
-      "When you take the Search action, you devote your attention to finding something. Depending on the nature of your search, the GM might have you make a ",
-      "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh"
+      "When you take the Search action, you devote your attention to finding something. Depending on the nature of your search, the GM might have you make a "
     ],
     "precision": 1.0,
-    "recall": 1.0,
+    "recall": 0.5,
     "mrr": 1.0,
     "ndcg": 1.0,
-    "f1": 1.0,
+    "f1": 0.6667,
     "hit": 1,
     "ap": 1.0,
-    "latency": 3.496
+    "latency": 3.993
   },
   {
     "id": 34,
@@ -859,7 +863,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 3.971
+    "latency": 3.314
   },
   {
     "id": 35,
@@ -873,10 +877,8 @@
       "wisdom",
       "intentions"
     ],
-    "num_chunks_retrieved": 1,
-    "chunks_preview": [
-      "During your rogue training you learned thieves\u2019 cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal c"
-    ],
+    "num_chunks_retrieved": 0,
+    "chunks_preview": [],
     "precision": 0.0,
     "recall": 0.0,
     "mrr": 0.0,
@@ -884,7 +886,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 3.943
+    "latency": 4.019
   },
   {
     "id": 36,
@@ -912,7 +914,7 @@
     "f1": 0.75,
     "hit": 1,
     "ap": 0.4778,
-    "latency": 3.501
+    "latency": 3.812
   },
   {
     "id": 37,
@@ -937,7 +939,7 @@
     "f1": 1.0,
     "hit": 1,
     "ap": 1.0,
-    "latency": 3.562
+    "latency": 3.558
   },
   {
     "id": 38,
@@ -959,7 +961,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 4.009
+    "latency": 4.25
   },
   {
     "id": 39,
@@ -982,7 +984,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 3.321
+    "latency": 3.648
   },
   {
     "id": 40,
@@ -1004,7 +1006,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 3.88
+    "latency": 4.13
   },
   {
     "id": 41,
@@ -1028,7 +1030,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 3.772
+    "latency": 3.961
   },
   {
     "id": 42,
@@ -1051,7 +1053,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 3.532
+    "latency": 3.839
   },
   {
     "id": 43,
@@ -1074,7 +1076,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 4.098
+    "latency": 4.258
   },
   {
     "id": 44,
@@ -1097,7 +1099,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 4.247
+    "latency": 4.232
   },
   {
     "id": 45,
@@ -1123,7 +1125,7 @@
     "f1": 1.0,
     "hit": 1,
     "ap": 1.0,
-    "latency": 1.578
+    "latency": 1.619
   },
   {
     "id": 46,
@@ -1146,7 +1148,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 3.785
+    "latency": 3.964
   },
   {
     "id": 47,
@@ -1171,7 +1173,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 3.555
+    "latency": 3.653
   },
   {
     "id": 48,
@@ -1185,20 +1187,19 @@
     "supporting_keywords": [
       "strength"
     ],
-    "num_chunks_retrieved": 3,
+    "num_chunks_retrieved": 2,
     "chunks_preview": [
       "You can extend your arms half your height above yourself during the jump. Thus, you can reach above you a distance equal to the height of the jump plu",
-      "Movement through dangerous dungeons or wilderness areas often involves more than simply walking. Adventurers might have to climb, crawl, swim, or jump",
-      "Movement through dangerous dungeons or wilderness areas often involves more than simply walking. Adventurers might have to climb, crawl, swim, or jump"
+      "-   [*Animal Friendship*](#animal-friendship)\n-   [*Charm Person*](#charm-person)\n-   [*Create or Destroy Water*](#create-or-destroy-water)\n-   [*Cure"
     ],
-    "precision": 0.6667,
-    "recall": 1.0,
-    "mrr": 0.5,
-    "ndcg": 0.6934,
-    "f1": 0.8,
-    "hit": 1,
-    "ap": 0.5833,
-    "latency": 3.426
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 3.912
   },
   {
     "id": 49,
@@ -1226,7 +1227,7 @@
     "f1": 0.6667,
     "hit": 1,
     "ap": 1.0,
-    "latency": 1.366
+    "latency": 1.384
   },
   {
     "id": 50,
@@ -1249,6 +1250,6 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 4.075
+    "latency": 4.19
   }
 ]

@@ -28,17 +28,22 @@ class RulesArbiterHyDE:
             persist_directory=db_path,
             embedding_function=self.embeddings)
 
-    # Difference for HyDE. 
     def _generate_hypothetical_document(self, player_action, world_context):
         prompt = f"""You are a D&D 5e rules encyclopedia.
-        Write a short excerpt (2-4 sentences) from the official D&D 5e System Reference Document
-        that would contain the rules governing this player action.
+        Write a single paragraph (3-5 sentences) from the official D&D 5e SRD
+        that contains the EXACT rules mechanic for this player action.
+
+        Use precise SRD language: skill names (Athletics, Acrobatics, Stealth,
+        Deception, Persuasion, Perception, Animal Handling, Medicine, etc.),
+        action types (action, bonus action, reaction), and mechanical terms
+        (DC, contested check, saving throw, ability check).
 
         Player action: "{player_action}"
         Game context: {world_context}
 
-        Write ONLY the rules text as it would appear in the SRD. No commentary.
-        If no ability check or roll is needed for this action, write:
+        Begin directly with the mechanic name or rule heading. Write ONLY the
+        rules text as it would appear in the SRD. No commentary.
+        If no ability check or roll is needed, write:
         'This action does not require an ability check or saving throw. It succeeds automatically.'"""
 
         response = self.client.chat.completions.create(
@@ -47,12 +52,44 @@ class RulesArbiterHyDE:
             temperature=0.1,
             max_tokens=600)   # deepseek-r1 needs ~300-400 tokens just for <think>...</think> before writing the answer
         return _strip_think_tags(response.choices[0].message.content)
-    
 
-    # calls the hypothetical document generator, then searches ChromaDB. 
     def retrieve(self, player_action, world_context=""):
-        hyp_doc = self._generate_hypothetical_document(player_action, world_context)
-        return self.vectorstore.similarity_search(hyp_doc, k=5)
+        # Generate 3 hypothetical documents to reduce variance from small models.
+        # Different phrasings catch different chunks.
+        hyp_docs = [
+            self._generate_hypothetical_document(player_action, world_context)
+            for _ in range(3)
+        ]
+
+        seen = set()
+        merged = []
+
+        # Search with each hypothetical doc (k=8 each for broader recall)
+        for hyp in hyp_docs:
+            for doc in self.vectorstore.similarity_search(hyp, k=8):
+                key = doc.page_content[:100]
+                if key not in seen:
+                    seen.add(key)
+                    merged.append(doc)
+
+        # Also search with the original player query directly.
+        # Small models sometimes produce hypothetical docs that miss obvious
+        # SRD terms that the raw query would have matched (e.g. Q29 acid splash).
+        for doc in self.vectorstore.similarity_search(player_action, k=5):
+            key = doc.page_content[:100]
+            if key not in seen:
+                seen.add(key)
+                merged.append(doc)
+
+        # Re-rank the merged pool by how many query words appear in each chunk,
+        # then return the top 5. This lightweight filter surfaces chunks that
+        # actually share vocabulary with the player's action.
+        query_words = set(player_action.lower().split())
+        def overlap_score(doc):
+            return sum(1 for w in query_words if w in doc.page_content.lower())
+
+        merged.sort(key=overlap_score, reverse=True)
+        return merged[:5]
 
 
 
