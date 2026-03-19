@@ -6,18 +6,15 @@ from dotenv import load_dotenv
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 
-# Adjust the path to where Config is located if needed, 
-# or just hardcode the embedding model string if Config isn't in scope here.
-# Assuming this script is run as a module where config.py is in the root:
-sys.path.append(str(Path(__file__).resolve().parent.parent.parent.parent))
+BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
+
+sys.path.append(str(BASE_DIR))
 from config import Config
+DB_PATH = str(BASE_DIR / "data/chroma_db")
 
 load_dotenv()
 
-# Dynamically point to the absolute root of RAGnarok where chroma_db lives
-BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
-DB_PATH = str(BASE_DIR / "chroma_db")
-
+# Singleton
 _embeddings = None
 _vectorstore = None
 

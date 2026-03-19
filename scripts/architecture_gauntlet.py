@@ -68,7 +68,7 @@ def run_gauntlet():
 
         # Wait a beat between turns to let Ollama fully flush,
         # but only AFTER the response (or failure) has returned
-        time.sleep(2)
+        time.sleep(10)
         
 if __name__ == "__main__":
     run_gauntlet()

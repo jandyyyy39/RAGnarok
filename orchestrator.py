@@ -178,7 +178,7 @@ class RAGnarokOrchestrator:
             arbiter_tokens, dm_tokens, npc_tokens,
             latency_ms, retrieved_context
         )
-        _critic_queue.put((self.client, self.model, turn_data, self.log_file))
+        _critic_queue.put((self.client, self.fast_model, turn_data, self.log_file))
 
         return {"response": final_output, "pending_action": pending_action}
 

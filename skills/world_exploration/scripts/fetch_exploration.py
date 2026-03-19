@@ -6,13 +6,13 @@ from dotenv import load_dotenv
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 
-sys.path.append(str(Path(__file__).resolve().parent.parent.parent.parent))
+BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
+
+sys.path.append(str(BASE_DIR))
 from config import Config
+DB_PATH = str(BASE_DIR / "chroma_db")
 
 load_dotenv()
-
-BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
-DB_PATH = str(BASE_DIR / "chroma_db")
 
 # Singleton
 _embeddings = None
@@ -34,8 +34,31 @@ def _get_vectorstore():
 
 # Exploration-specific SRD topics to bias retrieval toward
 EXPLORATION_CONTEXT = (
+    # Core Interaction, Traps & Stealth
     "environmental interaction traps locks perception investigation "
-    "survival hiding cover stealth searching terrain"
+    "survival hiding cover half cover three-quarters cover stealth searching secret doors "
+    "triggers disarming mechanisms thieves tools "
+    
+    # Movement, Travel & Navigation
+    "terrain difficult terrain travel pace forced march climbing "
+    "swimming crawling jumping long jump high jump falling mounts vehicles "
+    "navigating getting lost tracking foraging marching order "
+    
+    # Vision, Light & Senses
+    "vision light darkness obscurement illumination darkvision blindsight truesight "
+    "dim light bright light heavily obscured lightly obscured invisible unseen "
+    
+    # Hazards, Environment & Survival Limits
+    "hazards weather suffocation choking exhaustion starvation dehydration food water "
+    "extreme heat extreme cold strong wind heavy precipitation high altitude "
+    
+    # Physical Limits & Resting
+    "encumbrance lifting carrying capacity pushing dragging size weight "
+    "resting short rest long rest downtime hit dice sleep watch "
+    
+    # Object Manipulation & Destruction
+    "objects breaking smashing bursting object armor class AC object hit points HP "
+    "doors hinges chains ropes bursting DC"
 )
 
 def search_exploration(query: str) -> str:
