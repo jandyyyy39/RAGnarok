@@ -4,6 +4,7 @@ chroma_db/*
 data/chroma_db/*
 data/world_state.json
 data/history/*
+*retrieval_eval_detail*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
