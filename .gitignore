@@ -1,6 +1,8 @@
 .env
 frontend/.vite/
+chroma_db/*
 data/chroma_db/*
+data/world_state.json
 data/history/*
 *retrieval_eval_detail*
 
