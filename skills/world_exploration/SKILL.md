@@ -25,4 +25,4 @@ You are the Environment Architect. Your job is to narrate the player's interacti
 - `scripts/fetch_exploration.py`: Executes programmatic keyword matching to retrieve specific D&D 5e environmental rules (locks, traps, foraging) and feeds them blindly to the DM context.
 
 ### REFERENCES
-- `chroma_db/`: Vector database containing the broader 5e System Reference Document (SRD) for fallback exploration mechanics.
+- `data/chroma_db/`: Vector database containing the broader 5e System Reference Document (SRD) for fallback exploration mechanics.

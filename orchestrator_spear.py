@@ -2,10 +2,8 @@ import json
 import os
 import time
 import re
-import threading
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
-from typing import Dict, Any, List
 import argparse 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -18,8 +16,7 @@ from agents.memory import MemoryAgent
 from skills.rules_logic.scripts import fetch_rules
 from skills.npc_lore.scripts import fetch_npc
 from skills.world_exploration.scripts import fetch_exploration
-
-telemetry_lock = threading.Lock()
+from telemetry import _critic_queue, telemetry_lock
 
 # --- PROGRAMMATIC GUARDS ---
 def safety_filter(intent: str) -> bool:
@@ -32,45 +29,6 @@ def deterministic_guard(narrative: str) -> bool:
     meta_game_terms = re.compile(r'\b(DC|saving throw)\b', re.IGNORECASE)
     return not bool(meta_game_terms.findall(narrative))
 
-# --- ASYNC BACKGROUND CRITIC ---
-def async_critic_evaluation(client, model, turn_data, log_file):
-    """Runs completely in the background. The player NEVER waits for this."""
-    try:
-        # Use a fast, cheap prompt just for scoring
-        prompt = f"""
-        Evaluate this TTRPG turn from 0 to 10 on three metrics:
-        1. rule_accuracy: Did it follow 5e mechanics?
-        2. narrative_coherence: Did the story advance?
-        3. npc_voice_consistency: Did NPCs use their quirks/rhymes/personalities?
-        
-        Player Intent: {turn_data['player_intent']}
-        DM Response: {turn_data['final_output'].get('response', 'TOOL_CALL')}
-        
-        Output pure JSON: {{"rule_accuracy": 0, "narrative_coherence": 0, "npc_voice_consistency": 0, "reasoning": "..."}}
-        """
-        response = client.chat.completions.create(
-            messages=[{"role": "user", "content": prompt}],
-            model=model,
-            temperature=0.0,
-            response_format={"type": "json_object"}
-        )
-        scores = json.loads(response.choices[0].message.content)
-        turn_data["async_critic_scores"] = scores
-        
-        # Append to telemetry log safely
-        with telemetry_lock:
-            if os.path.exists(log_file):
-                with open(log_file, "r", encoding="utf-8") as f:
-                    history = json.load(f)
-            else:
-                history = []
-            history.append(turn_data)
-            with open(log_file, "w", encoding="utf-8") as f:
-                json.dump(history, f, indent=4)
-            print(f"   [Async Critic] Logged scores: {scores}")
-    except Exception as e:
-        print(f"   [Async Critic] Failed to score turn: {e}")
-
 # --- SPEAR ORCHESTRATOR ---
 class SPEAROrchestrator:
     def __init__(self, client, model_profile: str):
@@ -79,7 +37,9 @@ class SPEAROrchestrator:
         self.model = Config.LLM_MODEL[model_profile]
         
         # Use a smaller/faster model for the Supervisor if available (e.g., Llama 3 8B)
-        self.fast_model = "llama3-8b-8192" if model_profile == "GROQ" else self.model
+        self.fast_model = Config.LLM_MODEL.get(
+            "LOCAL_FAST" if model_profile == "LOCAL" else "GROQ_FAST"
+        )
         
         self.memory = MemoryAgent()
         self.dm = DMSpearAgent(client, model_profile)
@@ -113,6 +73,8 @@ class SPEAROrchestrator:
 
     def process_turn(self, player_input: str):
         start_time = time.time()
+        router_tokens = 0
+        dm_tokens = 0
         print("\n" + "▼"*50)
         print(f"[SPEAR] Intent: '{player_input}'")
 
@@ -151,8 +113,9 @@ class SPEAROrchestrator:
                     response_format={"type": "json_object"}
                 )
                 routes = json.loads(route_response.choices[0].message.content)
+                router_tokens = route_response.usage.total_tokens if getattr(route_response, 'usage', None) else 0
                 
-                # Claude's Hallucination Check: Validate keys
+                # Hallucination Check: Validate keys
                 if not all(k in ["rules_logic", "npc_lore", "world_exploration"] for k in routes.keys()):
                     routing_hallucination = True
                 print(f"[SPEAR] Router Decision: {routes}")
@@ -169,16 +132,20 @@ class SPEAROrchestrator:
             future_rules = executor.submit(fetch_rules.search_rules, player_input) if routes.get("rules_logic") else None
             future_npc = executor.submit(fetch_npc.fetch_profile, player_input + " " + " ".join(active_npcs)) if routes.get("npc_lore") else None
             future_explore = executor.submit(fetch_exploration.search_exploration, player_input) if routes.get("world_exploration") else None
+            
+            npc_result = future_npc.result() if future_npc else ""
+            rules_result = future_rules.result() if future_rules else ""
+            explore_result = future_explore.result() if future_explore else ""
 
-            if future_rules:
+            if rules_result:
                 dynamic_instructions.append(self._read_skill_instructions("rules_logic"))
-                retrieved_context.append(f"=== RULES ===\n{future_rules.result()}")
-            if future_npc:
+                retrieved_context.append(f"=== RULES ===\n{rules_result}")
+            if npc_result and "No deep lore retrieved" not in npc_result:
                 dynamic_instructions.append(self._read_skill_instructions("npc_lore"))
-                retrieved_context.append(f"=== NPC LORE ===\n{future_npc.result()}")
-            if future_explore:
+                retrieved_context.append(f"=== NPC LORE ===\n{npc_result}")
+            if explore_result:
                 dynamic_instructions.append(self._read_skill_instructions("world_exploration"))
-                retrieved_context.append(f"=== EXPLORATION ===\n{future_explore.result()}")
+                retrieved_context.append(f"=== EXPLORATION ===\n{explore_result}")
 
         # -- PHASE 3: EXECUTION (Single Pass) --
         dm_result = self.dm.generate_response(
@@ -203,16 +170,28 @@ class SPEAROrchestrator:
 
         # -- PHASE 4: ASYNC TELEMETRY (Thesis Metrics) --
         latency_ms = (time.time() - start_time) * 1000
+        dm_tokens = dm_result.get("usage", 0)
+
         turn_data = {
             "timestamp_utc": datetime.utcnow().isoformat() + "Z",
             "architecture": "SPEAR",
             "latency_ms": round(latency_ms),
-            "total_tokens": dm_result.get("usage", 0),
+            "total_tokens": router_tokens + dm_tokens,
+            "token_breakdown": {
+                "router": router_tokens,
+                "dm": dm_tokens,
+                "critic": 0,  # backfilled by async_critic_evaluation
+            },
             "routing_hallucination": routing_hallucination,
             "routes_fired": routes,
             "retrieval_types": {
                 "rag_vector": routes.get("rules_logic", False) or routes.get("world_exploration", False),
                 "kv_lookup": routes.get("npc_lore", False)
+            },
+            "retrieved_context": {
+                "rules":       rules_result or "Not retrieved.",
+                "npc_lore":    npc_result   or "Not retrieved.",
+                "exploration": explore_result or "Not retrieved.",
             },
             "async_critic_scores": {
                 "rule_accuracy": 0, 
@@ -224,7 +203,7 @@ class SPEAROrchestrator:
         }
         
         # Fire background thread to populate async_critic_scores
-        threading.Thread(target=async_critic_evaluation, args=(self.client, self.fast_model, turn_data, self.log_file)).start()
+        _critic_queue.put((self.client, self.fast_model, turn_data, self.log_file))
 
         print(f"[SPEAR] Turn Complete | Latency: {round(latency_ms)}ms")
         print("▲"*50)

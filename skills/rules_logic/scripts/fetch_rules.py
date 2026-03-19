@@ -18,34 +18,34 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 DB_PATH = str(BASE_DIR / "chroma_db")
 
-def search_rules(query: str) -> str:
-    """
-    Pure data retrieval. NO LLM INFERENCE ALLOWED HERE.
-    """
-    if not os.path.exists(DB_PATH):
-        return "SYSTEM ERROR: ChromaDB not found at expected path. Did you run the ingestion script?"
+_embeddings = None
+_vectorstore = None
 
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
-    
-    try:
-        embeddings = HuggingFaceEmbeddings(
+def _get_vectorstore():
+    global _embeddings, _vectorstore
+    if _vectorstore is None:
+        device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        _embeddings = HuggingFaceEmbeddings(
             model_name=Config.EMBEDDING_MODEL,
             model_kwargs={'device': device}
         )
-        
-        vectorstore = Chroma(persist_directory=DB_PATH, embedding_function=embeddings)
-        
-        # Retrieve the most relevant rules from the RAG database
-        relevant_rules = vectorstore.similarity_search(query, k=3)
-        
+        _vectorstore = Chroma(
+            persist_directory=DB_PATH,
+            embedding_function=_embeddings
+        )
+    return _vectorstore
+
+def search_rules(query: str) -> str:
+    if not os.path.exists(DB_PATH):
+        return "SYSTEM ERROR: ChromaDB not found."
+    try:
+        vs = _get_vectorstore()
+        relevant_rules = vs.similarity_search(query, k=3)
         if not relevant_rules:
             return "No specific SRD rules found for this action."
-            
-        context_text = "\n".join([f"- {doc.page_content}" for doc in relevant_rules])
-        return context_text
-        
+        return "\n".join([f"- {doc.page_content}" for doc in relevant_rules])
     except Exception as e:
-        return f"SYSTEM ERROR: Failed to query vector database. {str(e)}"
+        return f"SYSTEM ERROR: {str(e)}"
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:

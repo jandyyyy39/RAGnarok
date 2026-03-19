@@ -17,6 +17,7 @@ class Config:
         'GROQ': "llama-3.3-70b-versatile",
         'GROQ_FAST': "llama-3.1-8b-instant",
         'LOCAL': "mistral-small3.2",
+        "LOCAL_FAST": "llama3.2",
     }
 
     # --- Inference ---

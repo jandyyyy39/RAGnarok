@@ -22,4 +22,4 @@ You are the Mechanical Arbiter. Your sole purpose is to evaluate the RETRIEVED R
 - `scripts/fetch_rules.py`: Executes the vector search against the ChromaDB SRD to find relevant mechanical snippets.
 
 ### REFERENCES
-- `chroma_db/`: Vector database containing the broader 5e System Reference Document (SRD) for fallback exploration mechanics.
+- `data/chroma_db/`: Vector database containing the broader 5e System Reference Document (SRD) for fallback exploration mechanics.
