@@ -13,6 +13,8 @@ import torch
 import argparse
 from groq import Groq
 from openai import OpenAI
+from time import time
+from telemetry import _critic_queue, telemetry_lock
 
 class RAGnarokOrchestrator:
     def __init__(self, client, model_profile: str):
@@ -23,33 +25,64 @@ class RAGnarokOrchestrator:
         self.dm = DMAgent(client=client, model_profile=model_profile)
         self.npc_agent = NPCConsistencyAgent(client=client, model_profile=model_profile)
         
+        self.client = client
+        self.model = Config.LLM_MODEL[model_profile]
+        # Use a smaller/faster model for the Supervisor if available (e.g., Llama 3 8B)
+        self.fast_model = Config.LLM_MODEL.get(
+            "LOCAL_FAST" if model_profile == "LOCAL" else "GROQ_FAST"
+        )
+
         # --- SESSION GENERATOR ---
         os.makedirs("data/history", exist_ok=True) 
         
-        session_id = datetime.now().strftime("%Y%m%d_%H%M%S")
-        self.log_file = f"data/history/session_{session_id}.json" 
+        # session_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+        self.log_file = f"data/history/baseline_architecture_log.json" 
         
-        with open(self.log_file, "w", encoding="utf-8") as f:
-            json.dump([], f)
+        # Initialize thread-safely
+        with telemetry_lock:
+            with open(self.log_file, "w", encoding="utf-8") as f:
+                json.dump([], f)
             
         print(f"Session telemetry initialized: {self.log_file}")
         print("All agents online. Ready to play.\n")
 
     def process_turn(self, player_input: str, args):
+        start_time = time()
+        
+        arbiter_tokens = 0
+        npc_tokens = 0
+        dm_tokens = 0
+
+        # Retrieved context for the critic — baseline has rules via arbiter,
+        # NPC refinement via NPCConsistencyAgent (no profile fetch, but refines narrative)
+        retrieved_context = {
+            "rules":       "Not retrieved.",
+            "npc_lore":    "Not retrieved.",
+            "exploration": "Not retrieved.",
+        }
+        
         turn_log = []
         def trace(message: str):
             print(message)
             turn_log.append(message)
 
         trace("\n" + "="*50)
+        trace(f"Player Input: {player_input}")
 
         # --- INTERCEPTOR ---
         is_system_roll = player_input.startswith("[SYSTEM: ROLL_RESOLUTION")
+        
+        # Standardize Baseline Routes: In this architecture, everything is ALWAYS on.
+        baseline_routes = {
+            "rules_logic": True, 
+            "npc_lore": True, 
+            "world_exploration": True
+        }
 
         if is_system_roll:
             trace("[Orchestrator] 🎲 Dice Roll detected. Bypassing Arbiter.")
             world_state = self.memory.format_for_dm()
-            
+
             # --- Look at the last REAL player action in memory ---
             recent_history = self.memory.get_current_state()["recent_events"]
             # Get the last event that starts with "Player:"
@@ -59,7 +92,6 @@ class RAGnarokOrchestrator:
                     last_action = event.split("Player: ")[1].split(" | ")[0]
                     break
 
-            # Force the DM to tie the roll result to that specific action
             ruling = f"""
             SYSTEM OVERRIDE: 
             The player was trying to: "{last_action}"
@@ -90,12 +122,16 @@ class RAGnarokOrchestrator:
                 ruling = "The Rules Arbiter was not consulted."
             else:
                 trace("[Rules Arbiter] Consulting the SRD...")
-                ruling = self.arbiter.get_ruling(player_input, world_state)
+                arbiter_result = self.arbiter.get_ruling(player_input, world_state)
+                ruling = arbiter_result["ruling"]
+                arbiter_tokens = arbiter_result["usage"]
+                retrieved_context["rules"] = arbiter_result.get("context_text", ruling)
                 trace(f"[Rules Arbiter] Ruling: {ruling}")
-        
+
         # DM generates response
         trace("[DM Agent] Weaving the narrative...")
         dm_result = self.dm.generate_response(player_input, world_state, ruling)
+        dm_tokens = dm_result.get("usage", 0)
 
         # --- FORK ---
         if dm_result["type"] == "tool_call":
@@ -104,20 +140,25 @@ class RAGnarokOrchestrator:
                 "response": dm_result["narrative"],
                 "pending_action": dm_result["action"]
             }
-            self._save_history({
-                "timestamp": datetime.now().isoformat(),
-                "user_input": player_input,
-                "backend_log": "\n".join(turn_log),
-                "final_output": result
-            })
+            latency_ms = (time() - start_time) * 1000
+
+            turn_data = self._build_turn_data(
+                player_input, result, baseline_routes,
+                arbiter_tokens, dm_tokens, npc_tokens,
+                latency_ms, retrieved_context
+            )
+            _critic_queue.put((self.client, self.fast_model, turn_data, self.log_file))
+            
             return result
 
         if args.no_npc_const:
             trace("[Orchestrator] --no-npc-const: Skipping NPC consistency check.")
             final_output = dm_result["narrative"]
+            pending_action = dm_result["action"] if "action" in dm_result else None
         else:
             trace("[NPC Agent] Checking character sheets...")
             final_output = self.npc_agent.refine_dialogue(dm_result["narrative"])
+            pending_action = None
         
         # Memory update
         current_events = self.memory.get_current_state()["recent_events"]
@@ -128,31 +169,63 @@ class RAGnarokOrchestrator:
         self.memory.update_state({"recent_events": current_events + [new_event]})
 
         trace("="*50 + "\n")
-        result = {
-            "response": final_output,
-            "pending_action": None
+        # --- TELEMETRY LOGGING ---
+        latency_ms = (time() - start_time) * 1000
+        turn_data = self._build_turn_data(
+            player_input,
+            {"response": final_output, "pending_action": pending_action},
+            baseline_routes,
+            arbiter_tokens, dm_tokens, npc_tokens,
+            latency_ms, retrieved_context
+        )
+        _critic_queue.put((self.client, self.fast_model, turn_data, self.log_file))
+
+        return {"response": final_output, "pending_action": pending_action}
+
+    def _build_turn_data(self, player_input, final_output, routes,
+                     arbiter_tokens, dm_tokens, npc_tokens,
+                     latency_ms, retrieved_context):
+        """Single source of truth for turn_data shape — used by both exit paths."""
+        return {
+            "timestamp_utc": datetime.utcnow().isoformat() + "Z",
+            "architecture": "baseline",
+            "latency_ms": round(latency_ms),
+            "total_tokens": arbiter_tokens + dm_tokens + npc_tokens,
+            "token_breakdown": {
+                "arbiter": arbiter_tokens,
+                "dm":      dm_tokens,
+                "npc":     npc_tokens,
+                "critic":  0,  # backfilled by async critic
+            },
+            "routing_hallucination": False,
+            "routes_fired": routes,
+            "retrieval_types": {
+                "rag_vector": True,
+                "kv_lookup":  True
+            },
+            "async_critic_scores": {
+                "rule_accuracy": 0,
+                "narrative_coherence": 0,
+                "npc_voice_consistency": 0
+            },
+            "retrieved_context": retrieved_context,
+            "player_intent": player_input,
+            "final_output": final_output,
         }
 
-        self._save_history({
-            "timestamp": datetime.now().isoformat(),
-            "user_input": player_input,
-            "backend_log": "\n".join(turn_log),
-            "final_output": result
-        })
-
-        return result
-    
     def _save_history(self, turn_data: dict):
-        """Appends a structured turn record to the JSON flight recorder."""
-        with open(self.log_file, "r", encoding="utf-8") as f:
-            history = json.load(f)
+        """Thread-safe standardized JSON log for comparison."""
+        with telemetry_lock:
+            try:
+                with open(self.log_file, "r", encoding="utf-8") as f:
+                    history = json.load(f)
+            except (FileNotFoundError, json.JSONDecodeError):
+                history = []
+                
+            history.append(turn_data)
 
-        # Append new turn
-        history.append(turn_data)
-        
-        # Save it back
-        with open(self.log_file, "w", encoding="utf-8") as f:
-            json.dump(history, f, indent=4)
+            with open(self.log_file, "w", encoding="utf-8") as f:
+                json.dump(history, f, indent=4)
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "*"}}) # Allow all origins for development
@@ -181,7 +254,6 @@ def handle_game_turn():
         'pending_action': turn_result["pending_action"],
         'game_state': game.memory.get_current_state()
     })
-
 
 if __name__ == "__main__":
     # Check for GPU

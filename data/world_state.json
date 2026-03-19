@@ -1,11 +1,13 @@
 {
-    "current_location": "The Yawning Portal Tavern",
+    "current_location": "The Black Boar Tavern",
     "active_npcs": [
-        "Durnan the Barkeep"
+        "Thrain Blackbeard (Human Barbarian)",
+        "Elara Moonwhisper (Half-Elf Bard)",
+        "Arin the Bold (Human Rogue)"
     ],
     "party_status": "Healthy",
     "recent_events": [
-        "The party just walked into the crowded tavern."
+        "The party just walked into the loud, sea-shanty-filled Black Boar Tavern. Thrain is yelling for stronger ale, while Elara sings a haunting melody. What would you like to do?"
     ],
     "inventory_changes": []
 }
