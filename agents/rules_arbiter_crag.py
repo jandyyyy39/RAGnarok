@@ -119,4 +119,11 @@ class RulesArbiterCRAG:
             model=self.model,
             temperature=0.1,
             max_tokens=150)
-        return response.choices[0].message.content
+        
+        total_tokens = response.usage.total_tokens if getattr(response, 'usage', None) else 0
+
+        return {
+            "ruling"        : response.choices[0].message.content,
+            "usage"         : total_tokens,
+            "context_text"  : context_text,
+        }
