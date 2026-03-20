@@ -29,9 +29,9 @@ class RulesArbiterHybrid:
         # BM25 keyword index (loaded from the pickle you built in Step 4)
         with open(Config.DATA_DIR / 'bm25_index.pkl', 'rb') as f:
             self.bm25 = pickle.load(f)
-        with open(Config.DATA_DIR / 'chunks_raw.pkl', 'rb') as f:
-            data = pickle.load(f)
-            self.chunk_texts = data['texts']
+        with open(Config.DATA_DIR / 'bm25_chunks.pkl', 'rb') as f:
+            final_splits = pickle.load(f)
+            self.chunk_texts = [doc.page_content for doc in final_splits]
 
         # Cross-encoder re-ranker
         self.reranker = CrossEncoder(
