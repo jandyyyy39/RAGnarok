@@ -1,8 +1,5 @@
 import requests
 import time
-import json
-import itertools
-import threading
 
 URL = "http://localhost:5000/api/game"
 
@@ -68,7 +65,7 @@ def run_gauntlet():
 
         # Wait a beat between turns to let Ollama fully flush,
         # but only AFTER the response (or failure) has returned
-        time.sleep(10)
+        time.sleep(2)
         
 if __name__ == "__main__":
     run_gauntlet()

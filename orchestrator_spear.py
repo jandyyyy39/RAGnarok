@@ -29,6 +29,15 @@ def deterministic_guard(narrative: str) -> bool:
     meta_game_terms = re.compile(r'\b(DC|saving throw)\b', re.IGNORECASE)
     return not bool(meta_game_terms.findall(narrative))
 
+# RULES_FORCE_PATTERNS = re.compile(
+#     r'\b(DC\s*\d+|saving throw|attack roll|skill check|i (automatically )?succeed|i (automatically )?fail|advantage|disadvantage|spell slot|hit points?|HP)\b',
+#     re.IGNORECASE
+# )
+
+# def force_rules_route(intent: str) -> bool:
+#     """Returns True if rules_logic must be forced on regardless of router decision."""
+#     return bool(RULES_FORCE_PATTERNS.search(intent))
+
 # --- SPEAR ORCHESTRATOR ---
 class SPEAROrchestrator:
     def __init__(self, client, model_profile: str):
@@ -46,9 +55,12 @@ class SPEAROrchestrator:
 
         os.makedirs("data/history", exist_ok=True) 
         self.log_file = "data/history/spear_architecture_log.json"
-        if not os.path.exists(self.log_file):
+        
+        with telemetry_lock:
             with open(self.log_file, "w", encoding="utf-8") as f:
                 json.dump([], f)
+                
+        print(f"Session telemetry initialized & wiped clean: {self.log_file}")
 
     def _read_skill_instructions(self, skill_name: str) -> str:
         """
@@ -71,6 +83,22 @@ class SPEAROrchestrator:
                     return content.split('---')[-1].strip()
         return ""
 
+    def _read_skill_metadata(self, skill_name: str) -> dict:
+        """Reads Level 1 metadata for the Supervisor/Router."""
+        path = os.path.join("skills", skill_name, "SKILL.md")
+        if os.path.exists(path):
+            with open(path, 'r') as f:
+                content = f.read()
+            try:
+                level_1_section = content.split("# LEVEL 1: METADATA")[1].split("# LEVEL 2")[0]
+                # Extract the description line
+                for line in level_1_section.splitlines():
+                    if line.strip().startswith("description:"):
+                        return {"description": line.split("description:")[1].strip().strip('"')}
+            except IndexError:
+                pass
+        return {"description": ""}
+    
     def process_turn(self, player_input: str):
         start_time = time.time()
         router_tokens = 0
@@ -78,7 +106,7 @@ class SPEAROrchestrator:
         print("\n" + "▼"*50)
         print(f"[SPEAR] Intent: '{player_input}'")
 
-        # 1. Zero-LLM Safety Guard
+        # Zero-LLM Safety Guard
         if not safety_filter(player_input):
             return {"response": "Safety Agent Intercept: Invalid input.", "pending_action": None}
 
@@ -96,15 +124,20 @@ class SPEAROrchestrator:
         else:
             try:
                 # Location + Active NPCs are injected here.
+                skill_routing = {
+                    skill: self._read_skill_metadata(skill)["description"]
+                    for skill in ["rules_logic", "npc_lore", "world_exploration"]
+                }
+
                 router_prompt = f"""
                 Analyze intent: "{player_input}"
                 Current Location: {world_state.get('current_location')}
-                Active NPCs: {active_npcs}
+                Active NPCs: {[npc.split('(')[0].strip() for npc in active_npcs]}
 
-                Return pure JSON:
-                "rules_logic": true if action requires combat or physical mechanics.
-                "npc_lore": true if player interacts with NPCs or they are likely to react.
-                "world_exploration": true if player searches, picks locks, or interacts with the environment.
+                Return pure JSON with true/false for each skill:
+                "rules_logic": {skill_routing["rules_logic"]}
+                "npc_lore": {skill_routing["npc_lore"]} Do NOT set true if NPCs are merely present.
+                "world_exploration": {skill_routing["world_exploration"]}
                 """
                 route_response = self.client.chat.completions.create(
                     messages=[{"role": "user", "content": router_prompt}],
@@ -118,6 +151,10 @@ class SPEAROrchestrator:
                 # Hallucination Check: Validate keys
                 if not all(k in ["rules_logic", "npc_lore", "world_exploration"] for k in routes.keys()):
                     routing_hallucination = True
+
+                if force_rules_route(player_input):
+                    routes["rules_logic"] = True
+
                 print(f"[SPEAR] Router Decision: {routes}")
             except Exception as e:
                 print(f"[SPEAR ALERT] Routing Error: {e}")
@@ -150,7 +187,7 @@ class SPEAROrchestrator:
         # -- PHASE 3: EXECUTION (Single Pass) --
         dm_result = self.dm.generate_response(
             player_input=player_input,
-            world_state=world_state,
+            world_state=self.memory.format_for_dm(),
             dynamic_instructions=dynamic_instructions,
             retrieved_context=retrieved_context
         )
