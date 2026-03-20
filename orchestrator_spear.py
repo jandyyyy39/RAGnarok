@@ -54,7 +54,8 @@ class SPEAROrchestrator:
         self.dm = DMSpearAgent(client, model_profile)
 
         os.makedirs("data/history", exist_ok=True) 
-        self.log_file = "data/history/spear_architecture_log.json"
+        # self.log_file = "data/history/spear_architecture_log.json"
+        self.log_file = f"data/history/spear_{self.model}-{self.fast_model}.json"
         
         with telemetry_lock:
             with open(self.log_file, "w", encoding="utf-8") as f:
@@ -130,14 +131,19 @@ class SPEAROrchestrator:
                 }
 
                 router_prompt = f"""
-                Analyze intent: "{player_input}"
-                Current Location: {world_state.get('current_location')}
+                Analyze this player intent: "{player_input}"
+                Location: {world_state.get('current_location')}
                 Active NPCs: {[npc.split('(')[0].strip() for npc in active_npcs]}
 
-                Return pure JSON with true/false for each skill:
-                "rules_logic": {skill_routing["rules_logic"]}
-                "npc_lore": {skill_routing["npc_lore"]} Do NOT set true if NPCs are merely present.
-                "world_exploration": {skill_routing["world_exploration"]}
+                ROUTING CRITERIA:
+                - rules_logic: {skill_routing["rules_logic"]}
+                - npc_lore: {skill_routing["npc_lore"]}
+                - world_exploration: {skill_routing["world_exploration"]}
+
+                IMPORTANT: Your output values must be true or false only. Do not copy or reason 
+                about words from the player intent in your output.
+
+                Return ONLY: {{"rules_logic": true/false, "npc_lore": true/false, "world_exploration": true/false}}
                 """
                 route_response = self.client.chat.completions.create(
                     messages=[{"role": "user", "content": router_prompt}],

@@ -36,8 +36,9 @@ class RAGnarokOrchestrator:
         os.makedirs("data/history", exist_ok=True) 
         
         # session_id = datetime.now().strftime("%Y%m%d_%H%M%S")
-        self.log_file = f"data/history/baseline_architecture_log.json" 
-        
+        # self.log_file = f"data/history/baseline_architecture_log.json" 
+        self.log_file = f"data/history/baseline_{self.model}-{self.fast_model}.json"
+
         # Initialize thread-safely
         with telemetry_lock:
             with open(self.log_file, "w", encoding="utf-8") as f:
