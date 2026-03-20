@@ -152,8 +152,8 @@ class SPEAROrchestrator:
                 if not all(k in ["rules_logic", "npc_lore", "world_exploration"] for k in routes.keys()):
                     routing_hallucination = True
 
-                if force_rules_route(player_input):
-                    routes["rules_logic"] = True
+                # if force_rules_route(player_input):
+                #     routes["rules_logic"] = True
 
                 print(f"[SPEAR] Router Decision: {routes}")
             except Exception as e:
