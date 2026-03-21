@@ -1,12 +1,19 @@
 import json
-import re
-import csv
-from datetime import datetime
-from typing import Any
-
+import math
+import time
 import os
 import sys
+import csv
+from collections import defaultdict
+
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
+from config import Config
+from groq import Groq
+from agents.rules_arbiter import RulesArbiter
+from agents.rules_arbiter_hyde import RulesArbiterHyDE
+from agents.rules_arbiter_hybrid import RulesArbiterHybrid
+from agents.rules_arbiter_crag import RulesArbiterCRAG
 
 from scripts.test_rag import (
     test_retrieval_cosine_sim,
@@ -16,346 +23,262 @@ from scripts.test_rag import (
     build_bm25_index,
 )
 
-EVAL_SET_PATH = "./data/eval_set.json"
-K = 5
+DB_PATH = "data/chroma_db"
+WORLD_CTX = "Location: The Black Boar Tavern. Active NPCs: Thrain Blackbeard."
 
-RETRIEVAL_SYSTEMS = [
-    "cosine_sim",
-    "bm25",
-    "cosine_rerank",
-    "bm25_rerank",
-]
-
-def strip_anchor(text: str | None) -> str:
-    """Remove {#section-anchor} style fragments from header strings."""
-    if text is None:
-        return ""
-    return re.sub(r"\{#[^}]+\}", "", str(text)).strip()
-
-
-def normalise(text: str | None) -> str:
-    """Lowercase, strip anchors and surrounding whitespace."""
-    return strip_anchor(text).lower().strip()
-
-
-def get_deepest_header(metadata: dict) -> str:
-    """Return the most specific non-empty header from a chunk's metadata dict."""
-    for level in ("Header 4", "Header 3", "Header 2", "Header 1"):
-        value = metadata.get(level)
-        if value is not None and str(value).strip():
-            return str(value)
-    return ""
-
-def extract_metadata(result: Any) -> dict:
+# -------------- Helper functions (General) --------------
+def normalize_chunks(results):
     """
-    Normalise the two different return shapes:
-      - Document objects  (cosine_sim, bm25)
-      - Dicts with 'metadata' key  (reranker variants)
-    Always returns the raw metadata dict.
-    """
-    if isinstance(result, dict):
-        return result.get("metadata", {})
-    return result.metadata  # LangChain Document
+    Convert retrieval outputs into plain chunk text for content-based evaluation.
 
-def get_all_headers(metadata: dict) -> list[str]:
-    """
-    Return all header values in the chain (H1, H2, H3) normalised.
-    A retrieved chunk is relevant if ANY level of its header chain
-    matches a gold section — not just the deepest level.
-    """
-    headers = []
-    for level in ("Header 1", "Header 2", "Header 3", "Header 4"):
-        value = metadata.get(level)
-        if value is not None and str(value).strip():
-            headers.append(normalise(value))
-    return headers
+    Supported input shapes:
+      - str
+      - LangChain Document-like objects with .page_content
+      - dicts containing:
+          * "text": str
+          * "doc": Document-like object with .page_content
 
-def get_retrieved_headers(results: list) -> list[str]:
+    Unknown shapes are skipped instead of being stringified.
     """
-    Extract the deepest header from each result for logging/CSV output.
-    Returns a list of length K preserving retrieval rank order.
-    """
-    headers = []
-    for r in results:
-        metadata = extract_metadata(r)
-        raw_header = get_deepest_header(metadata)
-        headers.append(normalise(raw_header))
-    return headers
+    if not results:
+        return []
 
-def get_header_chain_for_logging(metadata: dict) -> str:
-    parts = []
-    for level in ("Header 1", "Header 2", "Header 3", "Header 4"):
-        value = metadata.get(level)
-        if value is not None and str(value).strip():
-            parts.append(normalise(value))
-    return " > ".join(parts)
-
-# ── Relevance helpers ─────────────────────────────────────────────────────────
-
-def build_relevance_list(results: list, gold_sections: list[str]) -> list[int]:
-    """
-    Binary relevance list in rank order.
-    A result is relevant if ANY header in its full chain matches a gold section.
-    Each gold section can only contribute one hit (deduplication).
-    """
-    normalised_gold = {normalise(s) for s in gold_sections}
-    seen_gold_hits = set()
-    relevance = []
+    normalized = []
 
     for r in results:
-        metadata = extract_metadata(r)
-        chain_headers = get_all_headers(metadata)
-        matched_gold = next(
-            (h for h in chain_headers if h in normalised_gold and h not in seen_gold_hits),
-            None
-        )
-        if matched_gold:
-            relevance.append(1)
-            seen_gold_hits.add(matched_gold)
+        if isinstance(r, str):
+            text = r
+
+        elif hasattr(r, "page_content"):
+            text = r.page_content
+
+        elif isinstance(r, dict):
+            if isinstance(r.get("text"), str):
+                text = r["text"]
+            elif "doc" in r and hasattr(r["doc"], "page_content"):
+                text = r["doc"].page_content
+            else:
+                continue
+
         else:
-            relevance.append(0)
+            continue
 
-    return relevance
+        if text is None:
+            continue
 
-# ── Metric calculations ───────────────────────────────────────────────────────
+        text = str(text).strip()
+        if text:
+            normalized.append(text)
 
-def precision_at_k(relevance: list[int], k: int, total_relevant: int) -> float:
-    """
-    Precision@min(k, r) where r is the number of relevant items.
-    This prevents precision from being artificially capped when r < k.
-    """
-    cutoff = min(k, total_relevant)
+    return normalized
 
-    if cutoff == 0:
+def retrieve_naive_arbiter_eval(arbiter, query):
+    docs = arbiter.vectorstore.similarity_search(query, k=5)
+    return normalize_chunks(docs)
+
+def retrieve_arbiter_method_eval(arbiter, query, world_ctx):
+    docs = arbiter.retrieve(query, world_ctx)
+    return normalize_chunks(docs)
+
+def chunk_is_relevant(chunk_text, test_case):
+    chunk_lower = chunk_text.lower()
+    primary = test_case.get("primary_keywords", [])
+    supporting = test_case.get("supporting_keywords", [])
+
+    primary_match = any(kw.lower() in chunk_lower for kw in primary)
+
+    if supporting:
+        supporting_match = any(kw.lower() in chunk_lower for kw in supporting)
+    else:
+        supporting_match = True
+
+    return primary_match and supporting_match
+
+# -------------- Metrics Functions --------------
+def precision_at_k(chunks, test_case):
+    if not chunks:
         return 0.0
+    hits = sum(1 for c in chunks if chunk_is_relevant(c, test_case))
+    return hits / len(chunks)
 
-    return sum(relevance[:cutoff]) / cutoff
-
-def recall_at_k(relevance: list[int], k: int, total_relevant: int) -> float:
-    """Fraction of all relevant sections retrieved in top-K."""
-    if total_relevant == 0:
+def recall_at_k(chunks, test_case):
+    primary = test_case.get("primary_keywords", [])
+    if not primary:
         return 0.0
-    return sum(relevance[:k]) / total_relevant
+    all_text = " ".join(chunks).lower()
+    found = sum(1 for kw in primary if kw.lower() in all_text)
+    return found / len(primary)
 
-def ndcg_at_k(relevance: list[int], k: int, total_relevant: int) -> float:
-    """
-    Normalised Discounted Cumulative Gain at K.
-    Ideal DCG is built from total_relevant (all gold sections that exist),
-    not just the subset the retriever happened to find.
-    """
-    import math
-
-    def dcg(rels):
-        return sum(
-            rel / math.log2(i + 2)
-            for i, rel in enumerate(rels[:k])
-        )
-
-    actual_dcg = dcg(relevance[:k])
-
-    # Ideal: as many 1s as there are gold sections, capped at K
-    ideal_rels = [1] * min(total_relevant, k)
-    ideal_dcg = dcg(ideal_rels)
-
-    if ideal_dcg == 0:
-        return 0.0
-    return actual_dcg / ideal_dcg
-
-def reciprocal_rank(relevance: list[int]) -> float:
-    """1 / rank of first relevant result. 0 if none found."""
-    for i, rel in enumerate(relevance):
-        if rel == 1:
-            return 1.0 / (i + 1)
+def mrr_score(chunks, test_case):
+    for rank, chunk in enumerate(chunks, start=1):
+        if chunk_is_relevant(chunk, test_case):
+            return 1.0 / rank
     return 0.0
 
-def average_precision(relevance: list[int], total_relevant: int) -> float:
-    """Average precision for a single query."""
-    if total_relevant == 0:
-        return 0.0
+def ndcg_at_k(chunks, test_case):
+    relevance = [1 if chunk_is_relevant(c, test_case) else 0 for c in chunks]
+    dcg = sum(rel / math.log2(rank + 2) for rank, rel in enumerate(relevance))
 
+    n_relevant = sum(relevance)
+    ideal = [1] * n_relevant + [0] * (len(chunks) - n_relevant)
+    idcg = sum(rel / math.log2(rank + 2) for rank, rel in enumerate(ideal))
+
+    return dcg / idcg if idcg > 0 else 0.0
+
+def f1_at_k(precision, recall):
+    if precision + recall == 0:
+        return 0.0
+    return 2 * precision * recall / (precision + recall)
+
+def hit_at_k(chunks, test_case):
+    return 1.0 if any(chunk_is_relevant(c, test_case) for c in chunks) else 0.0
+
+def average_precision(chunks, test_case):
     hits = 0
     precision_sum = 0.0
-
-    for i, rel in enumerate(relevance):
-        if rel == 1:
+    for rank, chunk in enumerate(chunks, start=1):
+        if chunk_is_relevant(chunk, test_case):
             hits += 1
-            precision_sum += hits / (i + 1)
+            precision_sum += hits / rank
+    if hits == 0:
+        return 0.0
+    return precision_sum / hits
 
-    return precision_sum / total_relevant
+# -------------- Helper Functions (RAG Systems) --------------
+def retrieve_cosine_eval(query):
+    return normalize_chunks(test_retrieval_cosine_sim(query))
 
-def compute_metrics(relevance: list[int], total_relevant: int, k: int) -> dict:
-    # No rounding here — keep full precision for accurate aggregation.
-    # Rounding happens only at save/print time.
-    return {
-        f"precision@{k}": precision_at_k(relevance, k, total_relevant),
-        f"recall@{k}":    recall_at_k(relevance, k, total_relevant),
-        f"ndcg@{k}":      ndcg_at_k(relevance, k, total_relevant),
-        "mrr":            reciprocal_rank(relevance),
-        "ap":             average_precision(relevance, total_relevant),
-    }
+def retrieve_bm25_eval(bm25, final_splits, query):
+    return normalize_chunks(test_bm25(bm25, final_splits, query))
 
-# ── Core evaluation loop ──────────────────────────────────────────────────────
+def retrieve_cosine_rerank_eval(query):
+    return normalize_chunks(retrieve_with_rerank(query))
 
-def run_retrieval(system: str, query: str, bm25=None, final_splits=None) -> list:
-    """Dispatch query to the correct retrieval function."""
-    if system == "cosine_sim":
-        return test_retrieval_cosine_sim(query)
-    elif system == "bm25":
-        return test_bm25(bm25, final_splits, query)
-    elif system == "cosine_rerank":
-        return retrieve_with_rerank(query=query)
-    elif system == "bm25_rerank":
-        return retrieve_bm25_with_rerank(bm25, final_splits, query=query)
-    else:
-        raise ValueError(f"Unknown retrieval system: {system}")
+def retrieve_bm25_rerank_eval(bm25, final_splits, query):
+    return normalize_chunks(retrieve_bm25_with_rerank(bm25, final_splits, query))
 
-def print_canonical_headers(final_splits, output_path="canonical_headers.txt"):
-    from collections import Counter
-    headers = Counter()
-    for chunk in final_splits:
-        for level in ("Header 1", "Header 2", "Header 3", "Header 4"):
-            val = chunk.metadata.get(level)
-            if val:
-                headers[val.strip()] += 1
+def main():
+    with open("evaluation/test_cases.json", "r", encoding="utf-8") as f:
+        test_cases = json.load(f)
 
-    with open(output_path, "w", encoding="utf-8") as f:
-        for header, count in headers.most_common():
-            f.write(f"{count:>4}x  {header}\n")
+    os.makedirs("evaluation/results_v2", exist_ok=True)
 
-    print(f"Canonical headers written to {output_path} ({len(headers)} unique headers)")
-        
-def evaluate(eval_path: str, k: int = K) -> tuple[list[dict], dict]:
-    """
-    Run all retrieval systems over the full eval set.
-
-    Returns:
-        per_query_rows  — one row per (query × system) for the detailed CSV
-        aggregate       — mean metrics per system for the summary CSV
-    """
-    with open(eval_path, "r", encoding="utf-8") as f:
-        eval_set = json.load(f)
-
-    # Build BM25 index once — reused across all BM25 queries
-    print("Building BM25 index...")
     bm25, final_splits = build_bm25_index()
 
-    per_query_rows = []
+    client = Groq(api_key=Config.GROQ_API_KEY)
+    model_profile = "GROQ"
 
-    # Track running totals for aggregate metrics
-    agg = {
-        system: {
-            f"precision@{k}": 0.0,
-            f"recall@{k}":    0.0,
-            f"ndcg@{k}":      0.0,
-            "mrr":            0.0,
-            "ap":             0.0,
-            "count":          0,
-        }
-        for system in RETRIEVAL_SYSTEMS
+    naive_arbiter = RulesArbiter(client, model_profile, db_path=DB_PATH)
+    hyde_arbiter = RulesArbiterHyDE(client, model_profile, db_path=DB_PATH)
+    hybrid_arbiter = RulesArbiterHybrid(client, model_profile, db_path=DB_PATH)
+    crag_arbiter = RulesArbiterCRAG(client, model_profile, db_path=DB_PATH)
+
+    methods = {
+        "cosine": lambda q: retrieve_cosine_eval(q),
+        "bm25": lambda q: retrieve_bm25_eval(bm25, final_splits, q),
+        "cosine_rerank": lambda q: retrieve_cosine_rerank_eval(q),
+        "bm25_rerank": lambda q: retrieve_bm25_rerank_eval(bm25, final_splits, q),
+        "naive_old": lambda q: retrieve_naive_arbiter_eval(naive_arbiter, q),
+        "hyde": lambda q: retrieve_arbiter_method_eval(hyde_arbiter, q, WORLD_CTX),
+        "hybrid": lambda q: retrieve_arbiter_method_eval(hybrid_arbiter, q, WORLD_CTX),
+        "crag": lambda q: retrieve_arbiter_method_eval(crag_arbiter, q, WORLD_CTX),
     }
 
-    for entry in eval_set:
-        query_id      = entry["id"]
-        query         = entry["player_action"]
-        gold_sections = entry["relevant_srd_sections"]
-        total_relevant = len(gold_sections)
+    all_summaries = []
+    metric_keys = ["precision", "recall", "mrr", "ndcg", "f1", "hit", "ap"]
 
-        print(f"\nQuery {query_id}: {query}")
+    for method_name, retrieve_fn in methods.items():
+        print(f"\n{'=' * 60}")
+        print(f"Evaluating {method_name.upper()}")
+        print(f"{'=' * 60}")
 
-        for system in RETRIEVAL_SYSTEMS:
-            print(f"  [{system}]", end=" ")
+        results = []
+        scores = defaultdict(list)
 
+        for tc in test_cases:
+            start = time.time()
             try:
-                results = run_retrieval(system, query, bm25, final_splits)
+                chunks = retrieve_fn(tc["query"])
             except Exception as e:
-                print(f"ERROR: {e}")
-                results = []
+                print(f"ERROR on {method_name} / query {tc['id']}: {e}")
+                chunks = []
 
-            retrieved_headers = get_retrieved_headers(results)
-            relevance         = build_relevance_list(results, gold_sections)
-            metrics           = compute_metrics(relevance, total_relevant, k)
+            latency = time.time() - start
+
+            p = precision_at_k(chunks, tc)
+            r = recall_at_k(chunks, tc)
+            m = mrr_score(chunks, tc)
+            n = ndcg_at_k(chunks, tc)
+            f1 = f1_at_k(p, r)
+            h = hit_at_k(chunks, tc)
+            ap = average_precision(chunks, tc)
+
+            for key, val in zip(metric_keys, [p, r, m, n, f1, h, ap]):
+                scores[key].append(val)
+
+            results.append({
+                "id": tc["id"],
+                "query": tc["query"],
+                "category": tc.get("category"),
+                "query_type": tc.get("query_type"),
+                "num_chunks_retrieved": len(chunks),
+                "chunks_preview": [c[:150] for c in chunks],
+                "precision": round(p, 4),
+                "recall": round(r, 4),
+                "mrr": round(m, 4),
+                "ndcg": round(n, 4),
+                "f1": round(f1, 4),
+                "hit": int(h),
+                "ap": round(ap, 4),
+                "latency": round(latency, 3),
+            })
 
             print(
-                f"P@{k}={metrics[f'precision@{k}']:.4f}  "
-                f"R@{k}={metrics[f'recall@{k}']:.4f}  "
-                f"NDCG@{k}={metrics[f'ndcg@{k}']:.4f}  "
-                f"MRR={metrics['mrr']:.4f}"
+                f"[{tc['id']:3d}] "
+                f"P={p:.2f} R={r:.2f} MRR={m:.2f} "
+                f"NDCG={n:.2f} F1={f1:.2f} AP={ap:.2f}"
             )
 
-            # Accumulate for aggregate
-            for metric_key, val in metrics.items():
-                agg[system][metric_key] += val
-            agg[system]["count"] += 1
+        with open(f"evaluation/results_v2/retrieval_{method_name}.json", "w", encoding="utf-8") as f:
+            json.dump(results, f, indent=2)
 
-            # Build detailed row — round here for clean CSV output
-            row = {
-                "query_id":          query_id,
-                "query":             query,
-                "system":            system,
-                "gold_sections":     "|".join(gold_sections),
-                "retrieved_headers": "|".join(retrieved_headers),
-                "relevance_list":    str(relevance),
-                "total_relevant":    total_relevant,
-                **{k_: round(v, 4) for k_, v in metrics.items()},
-                "normalised_gold_sections": "|".join(normalise(s) for s in gold_sections),
-                "retrieved_header_chains": "|".join(
-                    get_header_chain_for_logging(extract_metadata(r)) for r in results
-                ),
-            }
-            per_query_rows.append(row)
+        avg = lambda lst: round(sum(lst) / len(lst), 4) if lst else 0.0
 
-    # Compute means
-    aggregate_rows = []
-    for system in RETRIEVAL_SYSTEMS:
-        n = agg[system]["count"]
-        if n == 0:
-            continue
-        aggregate_rows.append({
-            "system":           system,
-            f"mean_precision@{k}": round(agg[system][f"precision@{k}"] / n, 4),
-            f"mean_recall@{k}":    round(agg[system][f"recall@{k}"] / n, 4),
-            f"mean_ndcg@{k}":      round(agg[system][f"ndcg@{k}"] / n, 4),
-            "mean_mrr":            round(agg[system]["mrr"] / n, 4),
-            "map":                 round(agg[system]["ap"] / n, 4),
-            "n_queries":           n,
-        })
+        summary = {
+            "method": method_name,
+            "n_queries": len(test_cases),
+            "avg_precision_at_k": avg(scores["precision"]),
+            "avg_recall_at_k": avg(scores["recall"]),
+            "avg_mrr": avg(scores["mrr"]),
+            "avg_ndcg": avg(scores["ndcg"]),
+            "avg_f1": avg(scores["f1"]),
+            "avg_hit_at_k": avg(scores["hit"]),
+            "map": avg(scores["ap"]),
+        }
 
-    print_canonical_headers(final_splits)
-    return per_query_rows, aggregate_rows
+        all_summaries.append(summary)
 
-# ── CSV output ────────────────────────────────────────────────────────────────
+    with open("evaluation/results_v2/retrieval_summary.json", "w", encoding="utf-8") as f:
+        json.dump(all_summaries, f, indent=2)
 
-def save_results(per_query_rows: list[dict], aggregate_rows: list[dict]) -> None:
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    fields = [
+        "method",
+        "avg_precision_at_k",
+        "avg_recall_at_k",
+        "avg_mrr",
+        "avg_ndcg",
+        "avg_f1",
+        "avg_hit_at_k",
+        "map",
+        "n_queries",
+    ]
 
-    # Detailed per-query CSV
-    detail_path = f"retrieval_eval_detail_{timestamp}.csv"
-    with open(detail_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=per_query_rows[0].keys())
+    with open("evaluation/results_v2/retrieval_summary.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fields)
         writer.writeheader()
-        writer.writerows(per_query_rows)
-    print(f"\nDetailed results saved to: {detail_path}")
+        for row in all_summaries:
+            writer.writerow({k: row[k] for k in fields})
 
-    # Print summary table to console
-    print("\n" + "=" * 60)
-    print("AGGREGATE RESULTS")
-    print("=" * 60)
-    header = f"{'System':<20} {'P@5':>6} {'R@5':>6} {'NDCG@5':>8} {'MRR':>6} {'MAP':>6}"
-    print(header)
-    print("-" * 60)
-    for row in aggregate_rows:
-        print(
-            f"{row['system']:<20} "
-            f"{row[f'mean_precision@{K}']:>6.4f} "
-            f"{row[f'mean_recall@{K}']:>6.4f} "
-            f"{row[f'mean_ndcg@{K}']:>8.4f} "
-            f"{row['mean_mrr']:>6.4f} "
-            f"{row['map']:>6.4f}"
-        )
-    print("=" * 60)
-
-# ── Entry point ───────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    per_query_rows, aggregate_rows = evaluate(EVAL_SET_PATH, k=K)
-    save_results(per_query_rows, aggregate_rows)
+    main()

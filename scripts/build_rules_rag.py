@@ -250,8 +250,9 @@ def build_bm25_index():
 
 if __name__ == "__main__":
     # download_srd()
-    # build_vector_store()
+    build_vector_store()
     build_bm25_index()
+    
     # bm25, final_splits = build_bm25_index()
     # peek_chunks(final_splits)
 
