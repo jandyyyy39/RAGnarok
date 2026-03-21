@@ -1,0 +1,2 @@
+method,avg_precision_at_k,avg_recall_at_k,avg_mrr,avg_ndcg,avg_f1,avg_hit_at_k,map,n_queries
+crag,0.116,0.47,0.2633,0.2944,0.1629,0.38,0.2634,50

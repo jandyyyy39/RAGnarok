@@ -1,0 +1,13 @@
+[
+  {
+    "method": "crag",
+    "n_queries": 50,
+    "avg_precision_at_k": 0.116,
+    "avg_recall_at_k": 0.47,
+    "avg_mrr": 0.2633,
+    "avg_ndcg": 0.2944,
+    "avg_f1": 0.1629,
+    "avg_hit_at_k": 0.38,
+    "map": 0.2634
+  }
+]

@@ -6,7 +6,7 @@ import os
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 from config import Config
-from build_rules_rag import build_bm25_index
+from scripts.build_rules_rag import build_bm25_index
 
 CHROMA_DIR = "data/chroma_db"
 

@@ -29,9 +29,9 @@ class RulesArbiterHybrid:
         # BM25 keyword index
         with open(Config.DATA_DIR / 'bm25_index.pkl', 'rb') as f:
             self.bm25 = pickle.load(f)
-        with open(Config.DATA_DIR / 'chunks_raw.pkl', 'rb') as f:
-            data = pickle.load(f)
-            self.chunk_texts = data['texts']
+        with open(Config.DATA_DIR / 'bm25_chunks.pkl', 'rb') as f:
+            final_splits = pickle.load(f)
+            self.chunk_texts = [doc.page_content for doc in final_splits]
 
         # Cross-encoder re-ranker — load once at startup
         self.ce_tokenizer = AutoTokenizer.from_pretrained(_RERANKER_MODEL)
@@ -153,4 +153,11 @@ class RulesArbiterHybrid:
             model=self.model,
             temperature=0.1,
             max_tokens=150)
-        return response.choices[0].message.content
+        
+        total_tokens = response.usage.total_tokens if getattr(response, 'usage', None) else 0
+
+        return {
+            "ruling"        : response.choices[0].message.content,
+            "usage"         : total_tokens,
+            "context_text"  : context_text,
+        }

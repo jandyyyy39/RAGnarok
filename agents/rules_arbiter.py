@@ -8,7 +8,7 @@ from config import Config
 load_dotenv()
 
 class RulesArbiter:
-    def __init__(self, client, model_profile: str, db_path="chroma_db"):
+    def __init__(self, client, model_profile: str, db_path="data/chroma_db"):
         self.client = client
         self.model = Config.LLM_MODEL[model_profile]
         
@@ -21,6 +21,9 @@ class RulesArbiter:
             model_kwargs={'device': device}
         )
         self.vectorstore = Chroma(persist_directory=db_path, embedding_function=self.embeddings)
+
+    def retrieve(self, player_action: str, world_context: str = ""):
+        return self.vectorstore.similarity_search(player_action, k=5)
 
     def get_ruling(self, player_action: str, world_context: str):
         """
@@ -59,5 +62,11 @@ class RulesArbiter:
             temperature=0.1, # Low temperature for consistency
             max_tokens=150,
         )
+        
+        total_tokens = response.usage.total_tokens if getattr(response, 'usage', None) else 0
 
-        return response.choices[0].message.content
+        return {
+            "ruling"        : response.choices[0].message.content,
+            "usage"         : total_tokens,
+            "context_text"  : context_text,
+        }
