@@ -141,14 +141,14 @@ def main():
     bm25, final_splits = build_bm25_index()
 
     # old-model setup
-    # client = Groq(api_key=Config.GROQ_API_KEY)
-    # model_profile = "GROQ"
+    client = Groq(api_key=Config.GROQ_API_KEY)
+    model_profile = "GROQ"
 
     # instantiate old arbiter-based methods
-    # naive_arbiter = RulesArbiter(client, model_profile, db_path=DB_PATH)
-    # hyde_arbiter = RulesArbiterHyDE(client, model_profile, db_path=DB_PATH)
-    # hybrid_arbiter = RulesArbiterHybrid(client, model_profile, db_path=DB_PATH)
-    # crag_arbiter = RulesArbiterCRAG(client, model_profile, db_path=DB_PATH)
+    naive_arbiter = RulesArbiter(client, model_profile, db_path=DB_PATH)
+    hyde_arbiter = RulesArbiterHyDE(client, model_profile, db_path=DB_PATH)
+    hybrid_arbiter = RulesArbiterHybrid(client, model_profile, db_path=DB_PATH)
+    crag_arbiter = RulesArbiterCRAG(client, model_profile, db_path=DB_PATH)
 
     methods = {
         "cosine": lambda q: retrieve_cosine_eval(q),
@@ -156,10 +156,10 @@ def main():
         "cosine_rerank": lambda q: retrieve_cosine_rerank_eval(q),
         "bm25_rerank": lambda q: retrieve_bm25_rerank_eval(bm25, final_splits, q),
 
-        # "naive_old": lambda q: retrieve_naive_arbiter_eval(naive_arbiter, q),
-        # "hyde": lambda q: retrieve_arbiter_method_eval(hyde_arbiter, q, WORLD_CTX),
-        # "hybrid": lambda q: retrieve_arbiter_method_eval(hybrid_arbiter, q, WORLD_CTX),
-        # "crag": lambda q: retrieve_arbiter_method_eval(crag_arbiter, q, WORLD_CTX),
+        "naive_old": lambda q: retrieve_naive_arbiter_eval(naive_arbiter, q),
+        "hyde": lambda q: retrieve_arbiter_method_eval(hyde_arbiter, q, WORLD_CTX),
+        "hybrid": lambda q: retrieve_arbiter_method_eval(hybrid_arbiter, q, WORLD_CTX),
+        "crag": lambda q: retrieve_arbiter_method_eval(crag_arbiter, q, WORLD_CTX),
     }
 
     all_summaries = []
