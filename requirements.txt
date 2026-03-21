@@ -7,6 +7,7 @@ langchain-community
 chromadb>=0.6.0
 python-dotenv>=1.0.1
 openai
+rank_bm25
 
 # --- Local Embeddings  ---
 sentence-transformers>=3.0.1
@@ -25,6 +26,8 @@ matplotlib>=3.9.0
 numpy>=1.26.0,<2.0   # ChromaDB incompatible with NumPy 2.x
 sacrebleu>=2.4.0
 nltk>=3.9.1
+pandas>=2.0.0
+seaborn>=0.13.0
 
 # --- Productivity ---
 tqdm
