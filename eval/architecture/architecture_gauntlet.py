@@ -43,6 +43,7 @@ PROMPTS = [
 
 def run_gauntlet():
     # Fetch model info from orchestrator
+    timestamp   = datetime.now().strftime("%Y%m%d_%H%M%S")
     try:
         info = requests.get(INFO_URL).json()
         architecture = info.get('architecture', 'unknown')
@@ -105,8 +106,6 @@ def run_gauntlet():
             print(f"  [FAILED]  -> {e}\n")
             results.append({"turn": i+1, "prompt": prompt, "status": "failed", "error": str(e)})
 
-        time.sleep(2)
-
     # Write gauntlet run log
     gauntlet_record = {
         "timestamp":    timestamp,
@@ -122,6 +121,8 @@ def run_gauntlet():
         json.dump(gauntlet_record, f, indent=4)
     print(f"[GAUNTLET] Run log saved: {gauntlet_log_path}")
 
+    time.sleep(30)  # Wait for any pending async critic evaluations to complete
+
     # Copy orchestrator telemetry log into gauntlet logs dir
     if src_log_file:
         src_abs = os.path.join(
@@ -130,7 +131,7 @@ def run_gauntlet():
         )
         src_abs = os.path.normpath(src_abs)
         if os.path.exists(src_abs):
-            dest_name = f"telemetry_{architecture}_{safe_main}_{safe_router}_{timestamp}.json"
+            dest_name = f"telemetry_{architecture}_{safe_main}_{safe_router}.json"
             dest_path = os.path.join(LOG_DIR, dest_name)
             shutil.copy2(src_abs, dest_path)
             print(f"[GAUNTLET] Telemetry copied: {dest_path}")
