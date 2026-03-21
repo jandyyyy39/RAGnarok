@@ -193,6 +193,12 @@ def main():
         default="groq",
         help="local = Ollama (no API cost), groq = Groq API, fast = Groq fast model"
     )
+    parser.add_argument(
+        "-m", "--method",
+        choices=["naive", "hyde", "hybrid", "crag", "all"],
+        default="all",
+        help="Which retrieval method to evaluate (default: all)"
+    )
     args = parser.parse_args()
 
     # --- Load test cases ---
@@ -221,14 +227,19 @@ def main():
     # Note: Naive and Hybrid do NOT call the LLM during retrieval.
     # The client is only used by HyDE (1 call/query) and CRAG (up to 12 calls/query).
 
-    print("Initializing methods...")
-    methods = {
-        'naive':  ('naive',  RulesArbiter(client, model_profile, db_path=DB_PATH)),
-        'hyde':   ('hyde',   RulesArbiterHyDE(client, model_profile, db_path=DB_PATH)),
-        'hybrid': ('hybrid', RulesArbiterHybrid(client, model_profile, db_path=DB_PATH)),
-        'crag':   ('crag',   RulesArbiterCRAG(client, model_profile, db_path=DB_PATH)),
+    # --- Determine which methods to run ---
+    selected = ['naive', 'hyde', 'hybrid', 'crag'] if args.method == 'all' else [args.method]
+
+    all_method_classes = {
+        'naive':  ('naive',  lambda: RulesArbiter(client, model_profile, db_path=DB_PATH)),
+        'hyde':   ('hyde',   lambda: RulesArbiterHyDE(client, model_profile, db_path=DB_PATH)),
+        'hybrid': ('hybrid', lambda: RulesArbiterHybrid(client, model_profile, db_path=DB_PATH)),
+        'crag':   ('crag',   lambda: RulesArbiterCRAG(client, model_profile, db_path=DB_PATH)),
     }
-    print("All methods ready.\n")
+
+    print(f"Initializing method(s): {', '.join(selected)}")
+    methods = {k: (name, factory()) for k, (name, factory) in all_method_classes.items() if k in selected}
+    print("Ready.\n")
 
     # --- Run evaluation ---
     all_summaries = []
