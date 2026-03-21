@@ -12,29 +12,6 @@ from agents.npc_consistency import NPCConsistencyAgent
 from agents.input_classifier import InputClassifier
 
 
-try:
-    import asyncio
-    import edge_tts
-    TTS_AVAILABLE = True
-except ImportError:
-    TTS_AVAILABLE = False
-
-
-async def _speak_async(text: str, voice: str = "en-US-GuyNeural"):
-    communicate = edge_tts.Communicate(text, voice)
-    await communicate.save("dm_output.mp3")
-    import subprocess, sys
-    if sys.platform == "win32":
-        subprocess.Popen(["start", "dm_output.mp3"], shell=True)
-
-
-def speak(text: str):
-    if TTS_AVAILABLE:
-        asyncio.run(_speak_async(text))
-    else:
-        print("[TTS] edge-tts not installed. Run: pip install edge-tts")
-
-
 def transcribe_audio(audio_file_path: str) -> str:
     from groq import Groq
     client = Groq(api_key=Config.GROQ_API_KEY)
@@ -54,13 +31,11 @@ class RAGnarokOrchestrator:
         use_rag:       bool = True,
         use_memory:    bool = True,
         use_npc:       bool = True,
-        use_voice:     bool = False,
         smart_routing: bool = True,
     ):
         self.use_rag       = use_rag
         self.use_memory    = use_memory
         self.use_npc       = use_npc
-        self.use_voice     = use_voice
         self.smart_routing = smart_routing
 
         print("Initializing RAGnarok Multi-Agent System...")
@@ -68,7 +43,6 @@ class RAGnarokOrchestrator:
         print(f"  RAG      : {'ON' if use_rag else 'OFF (ablation)'}")
         print(f"  Memory   : {'ON' if use_memory else 'OFF (ablation)'}")
         print(f"  NPC Pass : {'ON' if use_npc else 'OFF (ablation)'}")
-        print(f"  Voice TTS: {'ON' if use_voice else 'OFF'}")
 
         self.safety     = SafetyAgent()
         self.classifier = InputClassifier()
@@ -156,9 +130,6 @@ class RAGnarokOrchestrator:
                 ]
             })
 
-        if self.use_voice:
-            speak(final_output)
-
         result["latency_ms"] = int((time.time() - start) * 1000)
         print(f"[Orchestrator] Turn complete in {result['latency_ms']}ms")
         print("=" * 50 + "\n")
@@ -201,7 +172,6 @@ if __name__ == "__main__":
     parser.add_argument("--no-rag",           action="store_true")
     parser.add_argument("--no-memory",        action="store_true")
     parser.add_argument("--no-npc-const",     action="store_true")
-    parser.add_argument("--voice",            action="store_true")
     parser.add_argument("--no-smart-routing", action="store_true")
     args = parser.parse_args()
 
@@ -210,7 +180,6 @@ if __name__ == "__main__":
         use_rag       = not args.no_rag,
         use_memory    = not args.no_memory,
         use_npc       = not args.no_npc_const,
-        use_voice     = args.voice,
         smart_routing = not args.no_smart_routing,
     )
 

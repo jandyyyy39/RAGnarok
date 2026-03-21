@@ -10,9 +10,10 @@ This document explains the FIREBALL dataset, fine-tuning pipeline, hyperparamete
 2. [Fine-Tuning Logic](#part-2--fine-tuning-logic)
 3. [Hyperparameter Grid Search](#part-3--hyperparameter-grid-search)
 4. [Evaluation Logic](#part-4--evaluation-logic)
-5. [Architecture Changes](#part-5--architecture-changes)
-6. [How Fine-Tuning and Evaluation Connect](#part-6--how-fine-tuning-and-evaluation-connect)
-7. [Commands Reference](#commands-reference)
+5. [Ablation Study](#part-45--ablation-study)
+6. [Architecture Changes](#part-5--architecture-changes)
+7. [How Fine-Tuning and Evaluation Connect](#part-6--how-fine-tuning-and-evaluation-connect)
+8. [Commands Reference](#commands-reference)
 
 ---
 
@@ -248,6 +249,112 @@ These samples are never used for training, so they serve as ground truth for eva
 
 ---
 
+## Part 4.5 — Ablation Study
+
+### What Is the Ablation Study?
+
+An **ablation study** systematically removes or varies components of the RAGnarok pipeline to measure each agent's contribution. By comparing performance when RAG, Memory, or NPC Consistency is disabled, we quantify how much each component improves (or degrades) output quality and latency.
+
+---
+
+### Experimental Conditions
+
+The evaluation harness runs **7 configurations** on the same held-out inputs:
+
+| Configuration | RAG | Memory | NPC | Model | What It Tests |
+|---------------|-----|--------|-----|-------|---------------|
+| **Full Pipeline (Groq)** | ✓ | ✓ | ✓ | Groq | Baseline — all agents enabled |
+| **No RAG** | ✗ | ✓ | ✓ | Groq | Impact of rules grounding (SRD lookups) |
+| **No Memory** | ✓ | ✗ | ✓ | Groq | Impact of world-state context |
+| **No NPC Pass** | ✓ | ✓ | ✗ | Groq | Impact of dialogue consistency agent |
+| **Bare DM Only** | ✗ | ✗ | ✗ | Groq | Floor — DM alone, no supporting agents |
+| **Local (Mistral)** | ✓ | ✓ | ✓ | Ollama | Local model vs. cloud (Groq) |
+| **Local FT + No RAG** | ✗ | ✓ | ✓ | Ollama | Does fine-tuning reduce RAG dependency? |
+
+Smart routing is **disabled** during evaluation so every turn runs the full (or ablated) pipeline — ensuring fair comparison across conditions.
+
+---
+
+### Metrics: Quantitative and Qualitative
+
+#### Quantitative (Local, No API)
+
+| Metric | Scale | What It Measures |
+|--------|-------|------------------|
+| **ROUGE-1/2/L** | 0–1 | N-gram overlap with reference DM narration |
+| **BERTScore** | 0–1 | Semantic similarity via BERT embeddings |
+| **Rule Coverage** | 0–1 | Fraction of D&D mechanical terms present |
+| **Response Length** | words | Output verbosity |
+| **Latency** | ms | End-to-end time per turn |
+
+#### Qualitative (LLM-as-Judge, Optional)
+
+When run with `--llm-judge`, the Groq API scores each response on four criteria (1–5):
+
+| Criterion | What It Measures |
+|-----------|------------------|
+| **Narrative Quality** | Engaging, immersive DM narration |
+| **Rules Accuracy** | Correct D&D 5e mechanics and rulings |
+| **Character Voice** | Consistent tone and DM style |
+| **Relevance** | Response directly addresses the player action |
+
+The **LLM Composite** is the average of these four scores (normalized to 0–1 in plots).
+
+---
+
+### Per-Input-Type Breakdown
+
+When using fallback inputs (no FIREBALL eval file), each sample is tagged by type: `combat`, `roleplay`, `rules`, `exploration`, `dice`, `complex`. The harness aggregates metrics by input type so you can see which configurations perform best for combat vs. roleplay vs. rules questions.
+
+---
+
+### How to Run
+
+```bash
+# Full evaluation (25 inputs × 7 configs) — quantitative only
+python scripts/evaluate.py
+
+# Add LLM-as-judge scoring (requires GROQ_API_KEY)
+python scripts/evaluate.py --llm-judge
+
+# Quick smoke test (8 inputs)
+python scripts/evaluate.py --quick
+
+# Regenerate plots from existing results
+python scripts/evaluate.py --plot-only
+```
+
+---
+
+### Output and Visualizations
+
+| Output | Description |
+|--------|-------------|
+| `data/eval_results.json` | Raw scores per (config, input) pair |
+| `data/plots/scores_grouped.png` | All metrics by configuration |
+| `data/plots/ablation_impact.png` | Δ ROUGE-L vs. baseline when each agent is removed |
+| `data/plots/scores_by_input_type.png` | ROUGE-L by input type (combat, roleplay, etc.) |
+| `data/plots/latency.png` | Average latency per configuration |
+| `data/plots/quality_vs_latency.png` | Pareto frontier: quality vs. speed trade-off |
+| `data/plots/heatmap.png` | Configuration × metric heatmap |
+| `data/plots/radar.png` | Radar chart for top 4 configurations |
+| `data/plots/agent_contribution.png` | Quality drop when each agent is removed |
+| `data/plots/llm_judge_breakdown.png` | LLM-as-judge criteria by configuration |
+| `data/plots/config_ranking.png` | Configurations ranked by ROUGE-L or LLM composite |
+| `data/plots/response_length_dist.png` | Response length distribution (box plot) by config |
+| `data/plots/metric_correlation.png` | Correlation matrix between metrics across samples |
+
+---
+
+### Interpreting Results
+
+1. **Ablation impact**: A negative Δ ROUGE-L when removing RAG means RAG improves quality; a small Δ suggests the component adds little.
+2. **Agent contribution**: The stacked bar chart shows how much quality is lost when each agent is removed — larger bars = more important.
+3. **Quality vs. latency**: Configurations in the upper-left (high quality, low latency) are Pareto-optimal.
+4. **LLM-as-judge**: Use qualitative scores when reference text is sparse or when you care about narrative/rules beyond n-gram overlap.
+
+---
+
 ## Part 5 — Architecture Changes
 
 ### Overview
@@ -256,7 +363,7 @@ The orchestrator was refactored to support **experimentation** — different con
 
 **Default pipeline flow:**
 ```
-Safety Check → Input Classifier → Memory Recall → Rules Arbiter → DM Agent → NPC Consistency → (optional TTS)
+Safety Check → Input Classifier → Memory Recall → Rules Arbiter → DM Agent → NPC Consistency
 ```
 
 Agents can be disabled via flags for ablation. The Input Classifier can also skip RAG or NPC pass for certain input types when smart routing is enabled.
@@ -271,7 +378,6 @@ Agents can be disabled via flags for ablation. The Input Classifier can also ski
 | `--no-rag` | Disable Rules Arbiter — DM gets no mechanical ruling from SRD |
 | `--no-memory` | Disable Memory Agent — DM gets no world state context |
 | `--no-npc-const` | Disable NPC Consistency Agent — no dialogue flavour pass |
-| `--voice` | Enable TTS (edge-tts) — speak DM narration aloud |
 | `--no-smart-routing` | Disable input-based agent skipping (see below) |
 
 ---
@@ -308,8 +414,8 @@ Use `--no-smart-routing` to disable this and run the full pipeline for every tur
 | No Memory | `--no-memory` | Does world state context help? |
 | No NPC Pass | `--no-npc-const` | Does the consistency agent add value? |
 | Bare DM Only | `--no-rag --no-memory --no-npc-const` | Floor baseline — DM alone |
-| Local (Mistral) | `--local` | Local model vs. Groq |
-| Local FT + No RAG | `--local --no-rag` | Does fine-tuning reduce RAG dependency? |
+| Local FT (RAG On) | `--local` | Fine-tuned local DM with RAG enabled |
+| Local FT (No RAG) | `--local --no-rag` | Fine-tuned local DM with RAG disabled |
 
 ---
 
@@ -357,6 +463,61 @@ We never train on the eval split, and both validation and final evaluation use t
 
 ---
 
+## Part 7 — Ablation Findings (`eval_results8`)
+
+This section summarizes the 8-input ablation run using per-config files:
+`data/eval_results8_*.json`, then combined via:
+`python scripts/evaluate_ablation_combine.py --prefix eval_results8 --baseline "Full Pipeline (Groq)"`.
+
+### Experimental Setup
+
+- Inputs per configuration: **8**
+- Configurations compared: **7**
+- Metrics used:
+  - Quantitative: `rouge1`, `rouge2`, `rougeL`, `bertscore`, `bleu`, `chrf`, `rule_coverage`, `response_length`, `latency_ms`
+  - Qualitative (LLM-as-judge): `narrative_quality`, `rules_accuracy`, `character_voice`, `relevance`, `llm_composite`
+- Excluded metrics (by design): `meteor`, `rule_kw_precision`, `rule_kw_recall`, `rule_kw_f1`
+
+### Key Results (means across 8 inputs)
+
+| Configuration | ROUGE-L | BERTScore | Rule Coverage | chrF | LLM Composite | Latency (ms) |
+|---------------|---------|-----------|---------------|------|---------------|--------------|
+| Full Pipeline (Groq) | 0.042 | 0.792 | 0.272 | 0.108 | 4.750 | 9770 |
+| No RAG | 0.046 | 0.794 | 0.082 | 0.105 | 4.594 | 1649 |
+| No Memory | 0.051 | 0.796 | 0.261 | 0.113 | 4.719 | 3296 |
+| No NPC Pass | 0.045 | 0.795 | 0.239 | 0.109 | 4.688 | 8079 |
+| Bare DM Only | 0.048 | 0.793 | 0.065 | 0.110 | 4.375 | 2247 |
+| Local FT (RAG On) | 0.068 | 0.800 | 0.022 | 0.123 | 1.531 | 72939 |
+| Local FT (No RAG) | 0.066 | 0.785 | 0.022 | 0.104 | 2.031 | 206089 |
+
+### Trade-offs and Interpretation
+
+1. **RAG materially improves mechanics grounding** in Groq runs:
+   - Rule coverage drops from **0.272** (baseline) to **0.082** (`No RAG`).
+2. **Memory and NPC consistency ablations are milder**:
+   - `No Memory` and `No NPC Pass` remain close to baseline LLM-judge scores.
+3. **Local fine-tuned model currently underperforms qualitatively**:
+   - Low `llm_composite` despite some higher overlap metrics suggests style/format instability.
+4. **Latency differs strongly by backend**:
+   - Local FT runs are significantly slower in this setup than Groq-based runs.
+
+### What Worked / What Did Not
+
+- **Worked**
+  - Ablation harness supports isolated per-config runs with resumable outputs.
+  - Combined analysis script provides quantitative, qualitative, and visual trade-off views.
+- **Did not work as expected**
+  - Local FT quality (judge-based) is inconsistent versus Groq baseline.
+  - Some local outputs show repetitive/noisy generations in qualitative examples.
+
+### Concrete Next Steps
+
+1. Improve fine-tune data quality and output-format constraints to reduce repetition/artifacts.
+2. Add stricter generation guardrails for local runs (length, formatting, and stop behavior).
+3. Re-run on a larger eval subset after local quality stabilizes to improve confidence.
+
+---
+
 ## Commands Reference
 
 ### Fine-Tuning Pipeline (WSL2)
@@ -376,14 +537,17 @@ ollama create ragnarok-dm -f data/ragnarok-dm-gguf/Modelfile
 ollama run ragnarok-dm
 ```
 
-### Evaluation (No API Required)
+### Evaluation
 
 ```bash
-# Quick smoke test (8 inputs)
+# Quick smoke test (8 inputs) — quantitative only
 python scripts/evaluate.py --quick
 
 # Full evaluation (25 inputs × all configs)
 python scripts/evaluate.py
+
+# Add LLM-as-judge qualitative scoring (requires GROQ_API_KEY)
+python scripts/evaluate.py --llm-judge
 
 # Re-generate plots from existing results
 python scripts/evaluate.py --plot-only
