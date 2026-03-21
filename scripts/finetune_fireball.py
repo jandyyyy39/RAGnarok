@@ -17,9 +17,9 @@ MODELS = {
     "llama3.2-1b": "unsloth/Llama-3.2-1B-Instruct",
 }
 
-MAX_SEQ_LEN  = 2048
-BATCH_SIZE   = 2
-GRAD_ACCUM   = 4
+MAX_SEQ_LEN  = 1024   # Lower for 12GB VRAM; increase if you have more
+BATCH_SIZE   = 1       # Reduce to avoid fused cross-entropy OOM on RTX 4070
+GRAD_ACCUM   = 8       # Compensate: effective batch = 1 * 8 = 8
 
 
 def load_jsonl(path: Path) -> list[dict]:
@@ -46,6 +46,9 @@ def main():
     parser.add_argument("--rank",   type=int,   default=16,   help="LoRA rank")
     parser.add_argument("--alpha",  type=int,   default=16,   help="LoRA alpha")
     parser.add_argument("--lr",     type=float, default=1e-4, help="Learning rate")
+    parser.add_argument("--batch-size", type=int, default=BATCH_SIZE, help="Per-device batch size (default 1 for 12GB VRAM)")
+    parser.add_argument("--max-seq-len", type=int, default=MAX_SEQ_LEN, help="Max sequence length (default 1024)")
+    parser.add_argument("--no-4bit", action="store_true", help="Disable 4-bit loading (needs ~24GB VRAM)")
     args = parser.parse_args()
 
     try:
@@ -56,10 +59,11 @@ def main():
 
     model_id = MODELS[args.model]
     print(f"Loading {model_id} | rank={args.rank} alpha={args.alpha} lr={args.lr}")
+    max_seq = args.max_seq_len
     model, tokenizer = FastLanguageModel.from_pretrained(
         model_name     = model_id,
-        max_seq_length = MAX_SEQ_LEN,
-        load_in_4bit   = False,
+        max_seq_length = max_seq,
+        load_in_4bit   = not args.no_4bit,
         dtype          = None,
     )
 
@@ -97,15 +101,16 @@ def main():
         train_dataset      = train_ds,
         eval_dataset       = eval_ds,
         dataset_text_field = "text",
-        max_seq_length     = MAX_SEQ_LEN,
+        max_seq_length     = max_seq,
         args = TrainingArguments(
             output_dir                  = str(OUTPUT_DIR),
             num_train_epochs            = args.epochs,
-            per_device_train_batch_size = BATCH_SIZE,
+            per_device_train_batch_size = args.batch_size,
             gradient_accumulation_steps = GRAD_ACCUM,
             warmup_steps                = 50,
             learning_rate               = args.lr,
-            fp16                        = True,
+            fp16                        = False,
+            bf16                        = True,   # Match Unsloth's bfloat16 model
             logging_steps               = 25,
             eval_strategy               = "epoch",
             save_strategy               = "epoch",

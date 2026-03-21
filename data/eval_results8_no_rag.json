@@ -1,0 +1,226 @@
+[
+  {
+    "experiment": "No RAG",
+    "input": ") *The basilisk moves forward, now only with 6 targets to chose from* *Attack of Opportunity from Polearm Master as it moves forward.*",
+    "input_type": "combat",
+    "response": "As the basilisk moves forward, its unblinking eyes scan the room, searching for its next victim. The air is thick with tension, and the patrons of the Yawning Portal Tavern hold their collective breath. The bard in the corner raises an eyebrow, intrigued by the sudden turn of events. Durnan, the barkeep, polishes a mug with a dirty apron, his eyes fixed on the basilisk with a mixture of curiosity and concern.\n\nWith only six targets to choose from, the basilisk's gaze settles on the nearest adventurer, its eyes locking onto the Polearm Master. The master, anticipating the basilisk's movement, seizes the opportunity to strike. With a swift and deadly motion, the Polearm Master unleashes a swift jab, aiming to catch the basilisk off guard.\n\nThe Attack of Opportunity lands, and the basilisk's scales glint in the firelight as the polearm bites deep into its flesh. The basilisk's body recoils, its movement momentarily arrested by the sudden pain. However, the beast's resilience is legendary, and it quickly recovers from the blow.\n\nThe basilisk's gaze never wavers, its attention fixed intently on the Polearm Master. With a deliberate slowness, it raises its head, its jaws open wide, revealing rows of razor-sharp teeth. The air seems to vibrate with anticipation as the basilisk prepares to strike, its body coiled and ready to unleash a devastating counterattack.\n\nThe outcome of the player's action is that the basilisk takes 4d8 + 2 piercing damage from the Polearm Master's Attack of Opportunity. The basilisk's current hit points are unknown, but its resilience and ferocity suggest that it will not go down without a fierce struggle.\n\nThe scene is set, and the battle rages on. The patrons of the Yawning Portal Tavern watch with bated breath as the adventurers face off against the formidable basilisk. The air is electric with tension, and the outcome of the combat hangs precariously in the balance. What will the players do next? Will they press their advantage, or will the basilisk's counterattack prove too much to handle? The choice is theirs, and the fate of the tavern hangs in the balance.",
+    "reference": "*Before the creature has the chance to do anything, Ephraim's blade flies out to demolish it in one strike, having been waiting for the perfect moment to strike.* *The basilisk comes forward and gets absolutely impaled on the polearm Ephraim wields, crumbling to the ground in death* *Just as they were appreciating the bolstering feeling inside of them, as suddenly as the basilisk arrived it is dead, and Beau cheers* \"Ain't that somethin, wonderful job!\"",
+    "latency_ms": 1541,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.1598,
+      "rouge2": 0.0275,
+      "rougeL": 0.105,
+      "bertscore": 0.8109,
+      "bleu": 0.0107,
+      "chrf": 0.2428,
+      "rule_coverage": 0.2174,
+      "response_length": 351,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": "*seeing as I am still stealthed, draws out shortbow*",
+    "input_type": "general",
+    "response": "As you draw out your shortbow, the soft glow of the tavern's lanterns casts a warm light on the intricately carved wooden limbs, the string humming softly as you prepare to take aim. The air is thick with the smell of ale and roasting meat, the sounds of hushed conversations and clinking glasses filling the background. Durnan, the barkeep, polishes a mug with a white apron, his eyes scanning the room with a mixture of curiosity and wariness.\n\nYou remain stealthed, a ghostly figure blending into the shadows, unnoticed by the patrons of the Yawning Portal Tavern. The basilisk, its gaze sweeping the room, seems oblivious to your presence, its attention fixed on the remaining targets. Cuven, still reeling from the previous encounter, casts a wary glance around the room, his eyes darting towards the haregon, now motionless, and the basilisk, its eyes fixed on its next victim.\n\nAs you draw your shortbow, the mechanical click of the string being drawn taut is almost imperceptible, lost in the murmur of the tavern's patrons. You take aim, your eyes locked onto the basilisk, its scaly body a blur of motion as it moves forward, its gaze fixed on its next target. The shortbow, a trusty companion in the heat of battle, feels reassuring in your hands, its weight and balance a comfort as you prepare to unleash a deadly shot.\n\nThe scene is set, the players are in position, and the outcome of your action hangs in the balance. Will your stealthy shot find its mark, or will the basilisk's unblinking gaze detect your presence, turning the tables on you? The tension builds, the air thick with anticipation, as you prepare to unleash your attack, the shortbow at the ready, poised to strike.",
+    "reference": "\"First blood there prime rib.\"",
+    "latency_ms": 1218,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.0,
+      "rouge2": 0.0,
+      "rougeL": 0.0,
+      "bertscore": 0.7831,
+      "bleu": 0.0011,
+      "chrf": 0.0237,
+      "rule_coverage": 0.087,
+      "response_length": 292,
+      "llm_composite": 4.5,
+      "narrative_quality": 5,
+      "rules_accuracy": 4,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": "*sees the sudden rush of the creature, he is caught off guard but quickly shoots regardless, as a tiny dart flies towards its target*",
+    "input_type": "general",
+    "response": "As the basilisk charges forward, its scaly body undulating with an unnatural gait, the air seems to vibrate with tension. The patrons of the Yawning Portal Tavern scramble to get out of the way, their faces pale with fear. Durnan, the barkeep, stands frozen behind the counter, his eyes fixed on the horror unfolding before him.\n\nYou, still stealthed, swiftly draw your shortbow and release the tiny dart towards the basilisk. The dart flies straight and true, its trajectory unwavering as it hurtles towards the creature's left eye. Time seems to slow as the dart approaches its target, the only sound the soft whoosh of the projectile cutting through the air.\n\nThe dart strikes the basilisk's eye with a faint splat, burying itself deep into the socket. The creature's unblinking gaze falters for a moment, its eye twitching in response to the sudden intrusion. A faint hiss escapes its lips as it recoils, its body language betraying a flicker of surprise and pain.\n\nThe basilisk's charge falters, its momentum lost as it staggers to the side. The room holds its collective breath as the creature's gaze sweeps across the tavern, its eyes locking onto potential targets. The air is heavy with anticipation, the patrons waiting with bated breath to see who will be the basilisk's next victim.\n\nThe outcome of your action is a direct hit, the dart finding its mark in the basilisk's left eye. However, it remains to be seen whether this will be enough to stop the creature or merely slow it down. The basilisk's body language suggests that it is far from defeated, its malevolent presence still dominating the room.\n\nAs the scene unfolds, the mechanical requirements of your action are met: your stealth remains intact, and your shortbow attack has found its mark. The basilisk, however, is far from defeated, and its next move will be crucial in determining the outcome of this encounter. The question on everyone's mind is: what will the basilisk do next? Will it target you, or will it fixate on another victim? The tension in the room is palpable, and the fate of the Yawning Portal Tavern hangs in the balance.",
+    "reference": "*he then runs 25 more feet for a total of 35*",
+    "latency_ms": 1412,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.0157,
+      "rouge2": 0.0053,
+      "rougeL": 0.0157,
+      "bertscore": 0.7826,
+      "bleu": 0.0019,
+      "chrf": 0.029,
+      "rule_coverage": 0.087,
+      "response_length": 361,
+      "llm_composite": 4.5,
+      "narrative_quality": 5,
+      "rules_accuracy": 4,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": "!cast mass -t kei -t Ed -t Ceph -t Lav",
+    "input_type": "combat",
+    "response": "As the basilisk charges forward, its unblinking eyes scanning the room for its next victim, you swiftly begin to chant the words of a powerful spell. The air around you seems to vibrate with magical energy as you cast Mass Suggestion, targeting Kei, Ed, Ceph, and Lav. The words of the spell tumble forth from your lips like a torrent, each syllable imbued with the weight of your magical will.\n\nThe room falls silent, the only sound the soft crackling of the tavern's fire pit and the heavy breathing of the basilisk. Durnan, the barkeep, looks on with a mixture of curiosity and concern, his eyes darting between you and the basilisk. The targets of your spell, Kei, Ed, Ceph, and Lav, seem to hesitate, their eyes glazing over as the magical suggestion takes hold.\n\nThe basilisk, sensing its next meal, takes another step forward, its jaws open wide, revealing rows of razor-sharp teeth. But your spell has already begun to weave its magic. Kei, Ed, Ceph, and Lav, now under the influence of your Mass Suggestion, begin to move in tandem, their actions coordinated by the subtle persuasion of your magic.\n\nKei, with a look of determination, readies their sword, preparing to strike at the basilisk. Ed, with a nod, begins to chant a spell of their own, the words of a protective charm tumbling forth from their lips. Ceph, with a swift motion, draws their shortbow, an arrow nocked and ready to fly. Lav, with a fierce cry, charges forward, their polearm at the ready.\n\nThe basilisk, sensing the sudden coordination of its would-be victims, hesitates for a moment, its unblinking eyes darting between the four. The room holds its breath, the outcome of the battle hanging precariously in the balance. The stage is set for a clash of steel, magic, and monster, as the Yawning Portal Tavern becomes a battleground in the heart of the city. What will happen next, only time will tell.",
+    "reference": "*it tells you to attack the paladin* ||*it tells you to kill the paladin*||",
+    "latency_ms": 1807,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.0407,
+      "rouge2": 0.0,
+      "rougeL": 0.0349,
+      "bertscore": 0.7918,
+      "bleu": 0.0014,
+      "chrf": 0.0516,
+      "rule_coverage": 0.087,
+      "response_length": 327,
+      "llm_composite": 4.5,
+      "narrative_quality": 5,
+      "rules_accuracy": 4,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": "*She tries to assess who looks the worst off... deciding it's probably Karmag, she walks over and heals him a bit before they move to the next room.*",
+    "input_type": "exploration",
+    "response": "As the basilisk's charge is momentarily halted by the swift casting of the mass spell, the tavern's patrons are given a brief respite from the impending doom. The air is thick with tension, and the smell of sweat, smoke, and scales hangs heavy over the room. The sound of clashing steel and the occasional shout of panic still echoes through the Yawning Portal, but for a moment, the chaos seems to pause.\n\nYou make your way through the crowded room, weaving past the stunned onlookers, to reach Karmag's side. The poor soul looks like he's been through a wringer, his armor dented and his face pale. You can see the fear still lingering in his eyes, but as you approach, a glimmer of hope flickers to life. You gently place a hand on his shoulder, and a warm, soothing energy begins to flow from your fingertips.\n\nAs you channel the healing magic, Karmag's wounds begin to close, and his complexion starts to return to a healthier hue. The cuts and bruises seem to fade away, replaced by a soft, pink glow that spreads across his skin. His eyes, too, begin to clear, and he looks up at you with a mixture of gratitude and relief. \"Thanks... I owe you one,\" he says, his voice still shaking slightly.\n\nWith Karmag's condition stabilized, you take a moment to assess the rest of the party. Cuven, Ed, Lav, and Ceph all seem to be holding their own, though they're all sporting various degrees of injury. The basilisk, still reeling from the mass spell, is momentarily stunned, giving you a small window of opportunity to regroup and plan your next move.\n\nAs you finish healing Karmag, Durnan the Barkeep catches your eye, his face a picture of concern. He mouths a single word: \"Go.\" It's clear that he wants you to get out of the tavern, to escape the basilisk's deadly gaze and find a way to stop it before it's too late.\n\nThe door to the next room is just a few feet away, slightly ajar. You can see a sliver of darkness beyond, and the faint sound of scuttling, scratching noises echoes from the other side. It's unclear what dangers or wonders lie beyond the threshold, but one thing is certain: you need to move, and fast, if you hope to survive this nightmare.\n\nWhat will you do next?",
+    "reference": "\"Mavil...?\" *she asks, not sure what more to say... but making it clear she noticed the spark.*",
+    "latency_ms": 1891,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.0376,
+      "rouge2": 0.0,
+      "rougeL": 0.0235,
+      "bertscore": 0.7984,
+      "bleu": 0.0044,
+      "chrf": 0.0677,
+      "rule_coverage": 0.0435,
+      "response_length": 397,
+      "llm_composite": 4.5,
+      "narrative_quality": 5,
+      "rules_accuracy": 4,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": "*The violet magic came over her again, creating another shield to cover her arms, now covered in blade marks and gun shot wounds. She lowered her guard and stood there in front of her, the magic still coursing violently through her. Her voice was gruff, but calm and genuine*\n\n\"...ya think you can win?\"",
+    "input_type": "general",
+    "response": "As the violet magic washes over her once more, it's as if the very essence of the mystical energy is drawn to her battered and bruised form. The air around her seems to shimmer and distort, like the gentle lapping of waves on a summer's day, as the shield of swirling violet energy coalesces around her arms. The blade marks and gunshot wounds, a testament to the ferocity of the battle, seem to fade into the background as the magic asserts its dominance.\n\nWith her guard lowered, she stands tall, her gruff yet calm voice carrying across the room as she poses a simple, yet potent question: \"...ya think you can win?\" The words hang in the air, heavy with the weight of defiance and determination. The patrons of the Yawning Portal Tavern, still reeling from the sudden appearance of the basilisk, seem to hold their collective breath as they await the creature's response.\n\nDurnan, the barkeep, watches the scene unfold with a keen eye, his expression a mask of concern and curiosity. The basilisk, its unblinking eyes fixed intently on the player, appears to regard her with a calculating interest, as if sizing her up for the kill. The air is thick with tension, the outcome of this confrontation hanging precariously in the balance.\n\nAs the player's words hang in the air, the violet magic continues to course through her, its violent energy a potent reminder of the forces at play. The shield of magic, now fully formed, seems to pulse with an inner light, as if waiting for the next blow to be struck. The basilisk, its gaze never wavering, takes a step forward, its scaly body undulating with an unnatural gait. The sound of its movement is like a low, ominous rumble, a harbinger of the chaos that is to come.\n\nThe scene is set, the players and the basilisk poised on the cusp of a decisive confrontation. The fate of the Yawning Portal Tavern, and all those within, hangs in the balance. The question on everyone's mind is clear: what will happen next? Will the player's bravery and magical prowess be enough to turn the tide, or will the basilisk's deadly gaze prove too much to overcome? Only time will tell.",
+    "reference": "*That nat 20 really showed up when I didn't need it huh* *She smirked and chuckled. She walked up to her calmly and, instead of going for a grapple or a face punch, simply punched her in the stomach. Knowing she'd go down, she immediately scooped her up and made sure she wouldn't die from the blood loss, putting some bandages around her arms and head, though the wool made it particularly hard to do*\n\n*She patted her on the back with a smile, holding her close to make sure she was okay. She spoke again, somewhat jokingly*\n\n\"Woulda gone for the face, but...I wasn't gonna take that smile away from ya. Ya did good Melia, damn good\"",
+    "latency_ms": 1584,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.1545,
+      "rouge2": 0.0358,
+      "rougeL": 0.103,
+      "bertscore": 0.8011,
+      "bleu": 0.0117,
+      "chrf": 0.2444,
+      "rule_coverage": 0.0,
+      "response_length": 375,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 4,
+      "character_voice": 5,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": "\"Fucking ell you weren't kidding about this thing being the pinnacle\"",
+    "input_type": "general",
+    "response": "As you utter the words, \"Fucking hell you weren't kidding about this thing being the pinnacle,\" the air in the Yawning Portal Tavern seems to thicken, heavy with the weight of unspoken truths. The patrons, still reeling from the sudden appearance of the basilisk, exchange uneasy glances, their faces illuminated by the flickering lanterns that cast eerie shadows on the walls. Durnan, the barkeep, polishes a mug with a dirty apron, his eyes fixed intently on the scene unfolding before him, his expression a mask of concern and curiosity.\n\nThe basilisk, its scaly body still radiating an unnatural aura, regards you with an unblinking gaze, as if sizing you up for the kill. The violet magic that had been coursing through the woman in front of you still crackles with energy, her arms covered in blade marks and gunshot wounds, a testament to the brutal battle that had transpired mere moments ago. Her voice, gruff but calm, still echoes in the air, \"ya think you can win?\" The question hangs like a challenge, a gauntlet thrown down, as the room holds its collective breath, waiting for your response.\n\nYour words, laced with a mix of awe and trepidation, seem to have drawn the attention of the entire tavern. The atmosphere is tense, the patrons on edge, as they await the outcome of this encounter. The basilisk, sensing the uncertainty in the air, takes a step forward, its eyes fixed on you, its gaze piercing and unyielding. The woman, still radiating the violet magic, regards you with a calculating gaze, as if assessing your resolve, your determination to emerge victorious.\n\nIn this moment, the Yawning Portal Tavern is a powder keg, waiting to be ignited. The air is charged with anticipation, the outcome hanging precariously in the balance. Your next move will determine the course of events, will you rise to the challenge, or will the basilisk prove to be the pinnacle of terror that it has been touted to be? The choice is yours, and the fate of the tavern, and its patrons, hangs in the balance.",
+    "reference": "\"Wanna see how long I can survive in this thing?\"",
+    "latency_ms": 1716,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.0223,
+      "rouge2": 0.0112,
+      "rougeL": 0.0168,
+      "bertscore": 0.7891,
+      "bleu": 0.0028,
+      "chrf": 0.0426,
+      "rule_coverage": 0.0,
+      "response_length": 347,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 4,
+      "character_voice": 5,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": "*Immediately stabs 8 times, not even bothering to stop when the mark appeared on the third one*",
+    "input_type": "general",
+    "response": "As the violet magic still crackles around her, you unleash a flurry of strikes, your blade flashing in the dim light of the Yawning Portal Tavern. The air is heavy with the weight of clashing energies, the patrons cowering in fear as the battle rages on. Durnan the Barkeep, ever the stalwart, watches with a mix of concern and fascination, his eyes darting between the combatants.\n\nYour first strike bites deep, the blade slicing through the air with deadly precision. The second and third follow in quick succession, each one aimed at a vulnerable spot. It's on the third strike that the mark appears, a glowing sigil that seems to sear itself into the basilisk's scaly hide. Yet, you press on, undeterred, your blade rising and falling with a deadly rhythm.\n\nThe fourth, fifth, and sixth strikes land with varying degrees of success, some glancing off the basilisk's armor-like scales, while others dig deep into its flesh. The seventh strike is a particularly vicious one, the blade sinking into the basilisk's shoulder with a sickening crunch. The eighth and final strike is a wild, desperate swing, the blade biting into the air mere inches from the basilisk's face.\n\nAs the last strike falls, the basilisk's body begins to shudder and convulse, its unblinking eyes rolling back in its head. The air around it seems to distort and ripple, as if reality itself is bending to accommodate the sheer ferocity of the attack. The sigil on its hide pulses with an intense, malevolent energy, as if it's feeding off the basilisk's life force.\n\nThe outcome of your action is nothing short of catastrophic. The basilisk's body begins to dissolve into a noxious cloud of gas, its scales and flesh breaking down into a corrosive, acidic mist. The cloud erupts from its body, threatening to engulf everything in its path. The patrons scream, covering their faces and stumbling backward in a desperate bid to escape the deadly cloud.\n\nDurnan, ever the quick thinker, grabs a nearby bucket of water and flings it at the cloud, attempting to contain its spread. The water hisses and steams as it hits the acidic mist, buying the patrons a few precious seconds to escape.\n\nAs the cloud begins to clear, you're left standing amidst the chaos, your chest heaving with exertion, your blade still trembling with the force of your final strike. The basilisk's body is nothing more than a memory, its remains dissolving into a puddle of corrosive goo on the tavern floor. The question on everyone's mind is: what's next? Will you be able to capitalize on this momentary victory, or will the consequences of your actions prove too great to overcome? The choice is yours.",
+    "reference": "On Kaskin's chest, right where his heart is. The mark appears *He wipes the dagger off Kaskin's shirt and begins walking away* \"Enjoy your new cool brand Kas. Its there forever\" *He says as he walks and disappears into the streets outside* Head to the Twilight dawn and get inducted",
+    "latency_ms": 2023,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.0888,
+      "rouge2": 0.0116,
+      "rougeL": 0.0695,
+      "bertscore": 0.7941,
+      "bleu": 0.0033,
+      "chrf": 0.1402,
+      "rule_coverage": 0.1304,
+      "response_length": 452,
+      "llm_composite": 4.5,
+      "narrative_quality": 5,
+      "rules_accuracy": 4,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  }
+]

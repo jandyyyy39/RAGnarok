@@ -5,11 +5,11 @@
     ],
     "party_status": "Healthy",
     "recent_events": [
-        "Player: \"Fel the Voice speaks to you, no no no no get out!\" | Outcome: As Fel the Voice speaks to you, the warm ambiance of the Yawning Portal Tavern seems to falter, like...",
-        "Player: still here or you staying back? *The room is small, 25 by 15 ft* | Outcome: As you pose the question, \"still here or you staying back?\" the warm glow of the Yawning Portal Tave...",
-        "Player: // Sure, but flat na | Outcome: The warm glow of the Yawning Portal Tavern's lanterns seems to dim slightly, as if the very atmosphe...",
-        "Player: **Looks down at Erevan and swings** | Outcome: As you swing your arm, the warm glow of the Yawning Portal Tavern's lanterns seems to hold its breat...",
-        "Player: *Calder runs forward 30 ft. A red mist rushes towards Zion.* | Outcome: As Calder sprints forward 30 feet, the warm glow of the Yawning Portal Tavern's lanterns seems to ho..."
+        "Player: !cast mass -t kei -t Ed -t Ceph -t Lav | Outcome: As you utter the words of the mysterious incantation, the air in the Yawning Portal Tavern seems to ...",
+        "Player: *She tries to assess who looks the worst off... deciding it's probably Karmag, she walks over and heals him a bit before they move to the next room.* | Outcome: As you scan the room, your eyes darting between the battered forms of your companions, you notice Ka...",
+        "Player: *The violet magic came over her again, creating another shield to cover her arms, now covered in blade marks and gun shot wounds. She lowered her guard and stood there in front of her, the magic still coursing violently through her. Her voice was gruff, but calm and genuine*\n\n\"...ya think you can win?\" | Outcome: As the violet magic washes over her once more, the air around her seems to shimmer and distort, like...",
+        "Player: \"Fucking ell you weren't kidding about this thing being the pinnacle\" | Outcome: As you utter the words, \"Fucking hell, you weren't kidding about this thing being the pinnacle,\" the...",
+        "Player: *Immediately stabs 8 times, not even bothering to stop when the mark appeared on the third one* | Outcome: As you unleash a flurry of stabbing attacks, the air is filled with the sound of clashing steel and ..."
     ],
     "inventory_changes": []
 }

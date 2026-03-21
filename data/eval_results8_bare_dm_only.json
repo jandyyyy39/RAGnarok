@@ -1,0 +1,242 @@
+[
+  {
+    "experiment": "Bare DM Only",
+    "input": ") *The basilisk moves forward, now only with 6 targets to chose from* *Attack of Opportunity from Polearm Master as it moves forward.*",
+    "input_type": "combat",
+    "response": "As the basilisk takes its first deliberate step forward, its unblinking gaze sweeps across the dwindling group of adventurers, now only six in number. The air is heavy with tension, the very presence of the beast seeming to draw the warmth out of the surroundings. Its movement, though slow and calculated, triggers a burst of swift action from one of your companions, a Polearm Master, who seizes the opportunity to strike.\n\nWith a swift, practiced motion, the Polearm Master lunges forward, the long haft of their glaive extending as they aim a precise strike at the basilisk's exposed flank. The glaive's blade, honed to a deadly edge, slices through the air with a soft whoosh, heading straight for the basilisk. Time seems to slow as the attack unfolds, the outcome hanging precariously in the balance.\n\nThe basilisk, however, is no ordinary creature. Its body, a mass of scaled, muscular power, seems to tense in anticipation of the strike. Just as the glaive is about to make contact, the basilisk's body twitches, its scales rippling like the surface of a disturbed pond. The glaive bites deep, but instead of the satisfying crunch of metal into flesh, it meets a resistant, almost stone-like hardness. The blade scrapes against the basilisk's hide, sparking as it slides off, leaving behind a shallow gash that seems to seal itself almost instantly.\n\nThe Polearm Master's attack of opportunity, swift and deadly as it was, only manages to graze the basilisk, dealing minimal damage. The basilisk, now closer than before, fixes its gaze on its chosen target, its eyes burning with an unnatural hunger. The air around it seems to distort, as if reality itself is bending to accommodate the beast's malevolent presence.\n\nThe basilisk's next move is all but inevitable, its intent clear in the cold, calculating gleam of its eyes. It will strike, and when it does, the consequences will be dire. The question remains, who will be the target of its deadly gaze, and can the party react in time to save their companion from the brink of death? The scene hangs in the balance, the fate of the adventurers teetering on the edge of disaster.",
+    "reference": "*Before the creature has the chance to do anything, Ephraim's blade flies out to demolish it in one strike, having been waiting for the perfect moment to strike.* *The basilisk comes forward and gets absolutely impaled on the polearm Ephraim wields, crumbling to the ground in death* *Just as they were appreciating the bolstering feeling inside of them, as suddenly as the basilisk arrived it is dead, and Beau cheers* \"Ain't that somethin, wonderful job!\"",
+    "latency_ms": 2107,
+    "safety_pass": true,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "expected_groq_calls": 2,
+    "scores": {
+      "rouge1": 0.1834,
+      "rouge2": 0.0449,
+      "rougeL": 0.1119,
+      "bertscore": 0.8124,
+      "bleu": 0.0097,
+      "chrf": 0.2561,
+      "rule_coverage": 0.1304,
+      "response_length": 362,
+      "llm_composite": 4.5,
+      "narrative_quality": 5,
+      "rules_accuracy": 4,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "*seeing as I am still stealthed, draws out shortbow*",
+    "input_type": "general",
+    "response": "As you remain shrouded in the shadows, your stealthy form undetected by the unaware guards, you slowly draw out your shortbow. The gentle creak of the bow's wooden limbs and the soft whisper of the string as it's pulled taut are the only sounds that betray your movement. Your heart beats in anticipation, your senses heightened as you prepare for the potential chaos that may ensue.\n\nThe air is heavy with tension, the flickering torches casting eerie silhouettes on the stone walls as the guards continue their mundane patrol. The clanging of pots and pans from the nearby kitchen, the distant murmur of hushed conversations, and the creaking of old wooden beams all blend together to create a sense of normalcy, but you know that this tranquility is precarious at best.\n\nYour shortbow, now at the ready, seems to hum with potential energy, its compact frame and taut string awaiting the release of an arrow. Your fingers, deft and practiced, instinctively find the familiar contours of the bow, your thumb grazing the fletching of the arrow nocked and ready to fly.\n\nAs you draw the bow, your gaze darts between the guards, searching for the perfect moment to strike. The guards, oblivious to the danger lurking in the shadows, continue their patrol, their footsteps echoing off the stone walls. The atmosphere is electric, the promise of violence hanging in the air like the whispered promise of a summer storm.\n\nThe moment hangs, suspended like the arrow on your bowstring, as you wait for the perfect moment to release the tension and unleash the chaos. The world holds its breath, the only sound the soft creaking of your bow, a reminder that the balance between tranquility and turmoil is about to be shattered. What will you do next?",
+    "reference": "\"First blood there prime rib.\"",
+    "latency_ms": 4865,
+    "safety_pass": true,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "expected_groq_calls": 2,
+    "scores": {
+      "rouge1": 0.0,
+      "rouge2": 0.0,
+      "rougeL": 0.0,
+      "bertscore": 0.7762,
+      "bleu": 0.0011,
+      "chrf": 0.0231,
+      "rule_coverage": 0.0,
+      "response_length": 297,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "*sees the sudden rush of the creature, he is caught off guard but quickly shoots regardless, as a tiny dart flies towards its target*",
+    "input_type": "general",
+    "response": "As the creature bursts forth from the underbrush, its eyes fixed on you with an unblinking gaze, the air is filled with the sweet scent of blooming wildflowers and the earthy smell of damp soil. The sudden rush of the beast catches you off guard, but your reflexes prove sharper than your surprise. With a swift motion, you raise your arm, and a tiny dart flies towards its target, soaring through the air with a soft whoosh.\n\nThe dart, no larger than a hummingbird's feather, seems to hang in the air for a moment, suspended in time as the creature's gaze meets yours. Then, in an instant, it strikes true, burying itself deep within the creature's left shoulder. The beast lets out a pained yelp, its eyes widening in surprise as it stumbles forward, its momentum momentarily halted.\n\nThe creature's hide, a deep, mottled brown, seems to ripple and flex as it moves, like the surface of a pond disturbed by a thrown stone. A small, dark stain begins to spread from the point of impact, as if the dart has unleashed a tiny, crimson bloom. The beast's gaze never leaves yours, its eyes burning with a fierce, primal intensity as it takes a step closer, its massive paws thundering against the earth.\n\nThe air is electric with tension, the only sound the heavy breathing of the creature and the soft, labored beating of your own heart. The world seems to have narrowed to a single, razor-sharp point, where the only reality is the space between you and the beast. The outcome of your action hangs in the balance, as the creature's next move will determine the course of this deadly dance.\n\nThe creature's wound seems to be having an unexpected effect, its eyes taking on a glassy, far-off sheen as it sways slightly, its massive body trembling. The dart, it seems, has delivered more than just a physical blow – it has also unleashed a subtle, insidious force that threatens to unravel the creature's very fabric. The question is, will this unforeseen consequence prove to be a blessing or a curse? Only time will tell.",
+    "reference": "*he then runs 25 more feet for a total of 35*",
+    "latency_ms": 1450,
+    "safety_pass": true,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "expected_groq_calls": 2,
+    "scores": {
+      "rouge1": 0.0266,
+      "rouge2": 0.0053,
+      "rougeL": 0.016,
+      "bertscore": 0.7857,
+      "bleu": 0.0021,
+      "chrf": 0.032,
+      "rule_coverage": 0.0435,
+      "response_length": 356,
+      "llm_composite": 4.5,
+      "narrative_quality": 5,
+      "rules_accuracy": 4,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "!cast mass -t kei -t Ed -t Ceph -t Lav",
+    "input_type": "combat",
+    "response": "As the words leave your lips, the air is charged with anticipation. The dimly lit chamber, with its intricate network of ancient ruins, seems to hold its breath in expectation. Your companions, Kei, Ed, Ceph, and Lav, stand ready, their eyes fixed on you with a mix of curiosity and trepidation.\n\nWith a sweep of your arm, you begin the incantation, feeling the familiar surge of magical energy coursing through your veins. The words of the spell, a complex series of syllables and gestures, flow from your lips like a river of pure intent. The air around you shimmers, as if the very fabric of reality is being woven and unwoven in a dance of arcane power.\n\nAs the spell reaches its climax, a blinding flash of light erupts, illuminating the dark recesses of the chamber. The sound of crackling energy fills the air, like the snapping of a thousand whips. Your companions stumble backward, shielding their eyes from the intense radiance.\n\nWhen the light fades, the chamber is bathed in an eerie, pulsating glow. The walls, once dull and worn, now seem to vibrate with an otherworldly energy. Kei, Ed, Ceph, and Lav look around in awe, their faces aglow with the soft, ethereal light.\n\nYour spell, a masterful weave of magical forces, has imbued the chamber with a temporary, reality-bending aura. The air is alive with possibilities, as if the very laws of physics are being rewritten before your eyes. For a fleeting moment, the boundaries between the mundane and the mystical are blurred, and the impossible becomes possible.\n\nThe outcome of your spell is a success, but the true extent of its effects remains to be seen. The chamber, now a nexus of unstable energy, seems to be waiting for your next move, like a canvas eager to be filled with the brushstrokes of your imagination. The fate of your companions, and the secrets hidden within the ancient ruins, hang in the balance, as you ponder the consequences of your actions.\n\nThe scene is set, the stage is lit, and the curtains are drawn. The true magic has only just begun. What will you do next?",
+    "reference": "*it tells you to attack the paladin* ||*it tells you to kill the paladin*||",
+    "latency_ms": 1787,
+    "safety_pass": true,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "expected_groq_calls": 2,
+    "scores": {
+      "rouge1": 0.0321,
+      "rouge2": 0.0,
+      "rougeL": 0.0267,
+      "bertscore": 0.7902,
+      "bleu": 0.0013,
+      "chrf": 0.047,
+      "rule_coverage": 0.087,
+      "response_length": 359,
+      "llm_composite": 3.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 1,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "*She tries to assess who looks the worst off... deciding it's probably Karmag, she walks over and heals him a bit before they move to the next room.*",
+    "input_type": "exploration",
+    "response": "As you approach Karmag, the dim light of the torches in the room casts eerie shadows on the walls, making his battered form seem even more dire. His armor is dented and scratched, and a faint smudge of blood trickles from the corner of his mouth. You can see the weight of his exhaustion bearing down on him, his eyes sunken and his movements sluggish. Your assessment is spot on – he's indeed the worst off among your companions.\n\nYou gently place a hand on his shoulder, and a warm, soothing energy begins to emanate from your touch. Karmag's eyes flicker towards you, a hint of gratitude in their depths as he feels the healing magic take hold. The wounds on his body begin to knit together, the bruises fading like mist in the morning sun. His breathing slows, and his posture straightens, as if the weight of his fatigue has been partially lifted.\n\nThe air is filled with the sweet scent of blooming wildflowers as your magic washes over Karmag, and for a moment, the darkness of the dungeon recedes. The sound of dripping water and creaking stone seems to fade into the background, replaced by the gentle hum of your companions' relieved murmurs. They watch with a mixture of awe and appreciation as you work your healing magic, their faces etched with a sense of hope.\n\nAs the healing energy dissipates, Karmag takes a deep breath, his chest rising and falling with renewed vitality. He offers you a weak but sincere smile, his eyes sparkling with gratitude. \"Thanks... I owe you one,\" he says, his voice still husky from exhaustion, but laced with a hint of determination.\n\nWith Karmag's condition stabilized, the group's morale seems to lift, their spirits buoyed by the knowledge that they can rely on each other in times of need. As you prepare to move on to the next room, the atmosphere is filled with a sense of trepidation, but also a sense of unity and purpose. The darkness ahead seems less daunting, knowing that you've got each other's backs.\n\nAs you proceed, you notice that the corridor stretches out before you, the walls adorned with ancient carvings that seem to whisper secrets to the wind. The air grows thick with an eerie, pungent scent, like something is burning in the distance. The silence is oppressive, punctuated only by the soft crunch of gravel beneath your feet. What will you do next?",
+    "reference": "\"Mavil...?\" *she asks, not sure what more to say... but making it clear she noticed the spark.*",
+    "latency_ms": 2146,
+    "safety_pass": true,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "expected_groq_calls": 2,
+    "scores": {
+      "rouge1": 0.0372,
+      "rouge2": 0.0,
+      "rougeL": 0.0279,
+      "bertscore": 0.7956,
+      "bleu": 0.0043,
+      "chrf": 0.064,
+      "rule_coverage": 0.0,
+      "response_length": 408,
+      "llm_composite": 4.5,
+      "narrative_quality": 5,
+      "rules_accuracy": 4,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "*The violet magic came over her again, creating another shield to cover her arms, now covered in blade marks and gun shot wounds. She lowered her guard and stood there in front of her, the magic still coursing violently through her. Her voice was gruff, but calm and genuine*\n\n\"...ya think you can win?\"",
+    "input_type": "general",
+    "response": "As the violet magic envelops her once more, the air around her seems to vibrate with an otherworldly energy. The shield that materializes to cover her arms pulsates with a gentle, ethereal glow, as if the very fabric of reality is being woven and unwoven in a mesmerizing dance. The blade marks and gunshot wounds that crisscross her skin seem to fade into the background, their severity momentarily diminished by the radiant aura that now surrounds her.\n\nThe atmosphere in the room grows heavy with tension as she lowers her guard, her gaze locked onto the opponent before her. The magic coursing through her veins appears to be a double-edged sword – on one hand, it's a potent force that has allowed her to withstand the brutal onslaught she's faced, but on the other, it seems to be exacting a toll on her very being. The violent, almost feral energy that emanates from her is a testament to the turmoil that rages within.\n\nAs she speaks, her gruff, calm tone seems to belie the intensity of the emotions that swirl beneath the surface. The words themselves are a challenge, a gauntlet thrown down before her opponent, and they hang in the air like a promise – or a threat. The room seems to hold its breath, waiting to see how the opponent will respond to this quiet, confident assertion.\n\nIn this moment, the outcome of her action is not about the mechanical advantages or disadvantages that may arise, but about the emotional and psychological impact it has on the scene. The opponent's response will be shaped by the weight of her words, the aura of the violet magic, and the unyielding determination that burns within her. The question hangs in the air, a spark waiting to ignite the flames of conflict or concession – will her opponent rise to the challenge, or will they falter in the face of her unwavering resolve?",
+    "reference": "*That nat 20 really showed up when I didn't need it huh* *She smirked and chuckled. She walked up to her calmly and, instead of going for a grapple or a face punch, simply punched her in the stomach. Knowing she'd go down, she immediately scooped her up and made sure she wouldn't die from the blood loss, putting some bandages around her arms and head, though the wool made it particularly hard to do*\n\n*She patted her on the back with a smile, holding her close to make sure she was okay. She spoke again, somewhat jokingly*\n\n\"Woulda gone for the face, but...I wasn't gonna take that smile away from ya. Ya did good Melia, damn good\"",
+    "latency_ms": 1822,
+    "safety_pass": true,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "expected_groq_calls": 2,
+    "scores": {
+      "rouge1": 0.1839,
+      "rouge2": 0.036,
+      "rougeL": 0.1121,
+      "bertscore": 0.8053,
+      "bleu": 0.0076,
+      "chrf": 0.2416,
+      "rule_coverage": 0.1304,
+      "response_length": 322,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 4,
+      "character_voice": 5,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "\"Fucking ell you weren't kidding about this thing being the pinnacle\"",
+    "input_type": "general",
+    "response": "As you utter those words, the air seems to vibrate with a mix of awe and trepidation. The chamber around you, once a dull, damp cave, has transformed into a realm of breathtaking wonder. The walls, now a kaleidoscope of colors, shimmer and pulse with an otherworldly energy. The very fabric of reality appears to be woven from the threads of madness and genius, a testament to the unfathomable power that lies before you.\n\nYour voice, laced with a cocktail of emotions, echoes off the walls, and for a moment, it seems as if the universe itself is holding its breath in anticipation. The \"thing\" you're referring to, an entity of unutterable horror and majesty, begins to stir. Its presence, previously a subtle hum in the background, now swells to a deafening crescendo, as if it's been waiting for your acknowledgment, your recognition of its supremacy.\n\nThe ground beneath your feet starts to tremble, and the colors around you deepen, becoming almost palpable. You can feel the weight of the entity's gaze upon you, a sensation that's both exhilarating and terrifying. It's as if you're standing at the precipice of a great abyss, staring into the void, with the void staring back at you.\n\nIn this moment, the rules of the world seem to bend and warp, becoming fluid and malleable. The mechanics of reality, once rigid and unyielding, now appear to be mere suggestions, waiting to be shaped and molded by the whims of the entity and your own actions. The outcome of your words, your acknowledgment of the entity's power, hangs in the balance, poised between the possibility of transcendence and the promise of oblivion.\n\nThe entity, sensing your awe and trepidation, begins to respond, its presence surging forward like a tidal wave of chaos and creation. The air is filled with an expectant hush, as if the very fabric of reality is waiting to see how you'll react next, how you'll choose to navigate the uncharted territories that lie ahead. The choice, much like the entity itself, is both beautiful and terrifying, a reflection of the infinite possibilities that await you in this realm of wonder and horror.",
+    "reference": "\"Wanna see how long I can survive in this thing?\"",
+    "latency_ms": 2251,
+    "safety_pass": true,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "expected_groq_calls": 2,
+    "scores": {
+      "rouge1": 0.0316,
+      "rouge2": 0.0106,
+      "rougeL": 0.0211,
+      "bertscore": 0.7833,
+      "bleu": 0.0029,
+      "chrf": 0.0453,
+      "rule_coverage": 0.0435,
+      "response_length": 361,
+      "llm_composite": 4.25,
+      "narrative_quality": 5,
+      "rules_accuracy": 4,
+      "character_voice": 3,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "*Immediately stabs 8 times, not even bothering to stop when the mark appeared on the third one*",
+    "input_type": "general",
+    "response": "As you unleash a flurry of strikes, your blade dances in the dimly lit chamber, casting eerie shadows on the walls. The air is heavy with anticipation, and the silence is palpable, punctuated only by the soft whoosh of your sword slicing through the air. Your target, a mysterious figure shrouded in darkness, stands frozen, awaiting the outcome of your frenzied assault.\n\nThe first strike lands with a wet thud, and a faint glow begins to emanate from the point of impact. The second strike follows in quick succession, and the glow grows brighter, illuminating the darkened chamber. On the third strike, a mark appears, etched into the air like a burning brand. It pulses with an otherworldly energy, as if warning you to cease your attack.\n\nYet, you press on, driven by a fierce determination. Your sword arm moves with a life of its own, striking true four more times. With each blow, the mark grows brighter, its power coursing through the air like a palpable force. The chamber begins to shake, and the shadows on the walls seem to twist and writhe in agony.\n\nAs you deliver your eighth and final strike, the mark reaches a blinding crescendo, filling the room with an intense, blinding light. The air is charged with energy, and the very fabric of reality seems to tremble. Your target, once a mysterious figure, now stands revealed, its true form illuminated by the radiance of the mark.\n\nIn this moment, the outcome of your action hangs in the balance. The mark, now a burning symbol of your unrelenting fury, seems to hold the key to unlocking the secrets of this forsaken place. Will you reap the rewards of your unyielding assault, or will the consequences of your actions prove too terrible to bear? The choice, much like the mark, remains etched in the air, waiting for your next move.\n\nThe scene is set, the stage is yours, and the fate of this darkened chamber hangs in the balance. What will you do next?",
+    "reference": "On Kaskin's chest, right where his heart is. The mark appears *He wipes the dagger off Kaskin's shirt and begins walking away* \"Enjoy your new cool brand Kas. Its there forever\" *He says as he walks and disappears into the streets outside* Head to the Twilight dawn and get inducted",
+    "latency_ms": 1552,
+    "safety_pass": true,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "expected_groq_calls": 2,
+    "scores": {
+      "rouge1": 0.0923,
+      "rouge2": 0.0155,
+      "rougeL": 0.0718,
+      "bertscore": 0.7916,
+      "bleu": 0.0064,
+      "chrf": 0.1698,
+      "rule_coverage": 0.087,
+      "response_length": 338,
+      "llm_composite": 4.0,
+      "narrative_quality": 5,
+      "rules_accuracy": 2,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  }
+]
