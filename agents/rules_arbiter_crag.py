@@ -116,7 +116,11 @@ class RulesArbiterCRAG:
         relevant_rules = self.retrieve(player_action, world_context)
 
         if not relevant_rules:
-            return "No check required. No relevant D&D 5e rules apply to this action."
+            return {
+                "ruling"        : "No check required. No relevant D&D 5e rules apply to this action.",
+                "usage"         : 0,
+                "context_text"  : "",
+            }
 
         context_text = "\n".join([doc.page_content for doc in relevant_rules])
 
