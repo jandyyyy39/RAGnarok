@@ -98,7 +98,13 @@ def compute_aggregates(all_results: list[dict]) -> tuple[list[str], dict]:
     return experiments, agg
 
 
-def build_and_save_plots(all_results: list[dict], experiments: list[str], agg: dict, baseline: str) -> None:
+def build_and_save_plots(
+    all_results: list[dict],
+    experiments: list[str],
+    agg: dict,
+    baseline: str,
+    plot_prefix: str = "final_eval_ablation_plot",
+) -> None:
     try:
         import matplotlib
         matplotlib.use("Agg")
@@ -109,6 +115,8 @@ def build_and_save_plots(all_results: list[dict], experiments: list[str], agg: d
         return
 
     PLOTS_DIR.mkdir(parents=True, exist_ok=True)
+    def save_plot(stem: str) -> Path:
+        return PLOTS_DIR / f"{plot_prefix}_{stem}.png"
 
     # Metrics selected for the 0–1 style plots.
     candidate_metrics = [
@@ -164,9 +172,9 @@ def build_and_save_plots(all_results: list[dict], experiments: list[str], agg: d
     ax.set_title("Ablation Metrics by Configuration (combined)", fontsize=13, fontweight="bold")
     ax.legend(fontsize=8, loc="upper right", ncol=2)
     plt.tight_layout()
-    plt.savefig(PLOTS_DIR / "ablation_combined_scores_grouped.png", dpi=150)
+    plt.savefig(save_plot("scores_grouped"), dpi=150)
     plt.close()
-    print("  Saved -> ablation_combined_scores_grouped.png")
+    print(f"  Saved -> {save_plot('scores_grouped').name}")
 
     # 2) Delta vs baseline for key metrics
     if baseline and baseline in experiments:
@@ -190,9 +198,9 @@ def build_and_save_plots(all_results: list[dict], experiments: list[str], agg: d
             ax.set_title("Ablation Impact (delta from baseline)", fontsize=13, fontweight="bold")
             ax.legend(fontsize=8)
             plt.tight_layout()
-            plt.savefig(PLOTS_DIR / "ablation_combined_deltas.png", dpi=150)
+            plt.savefig(save_plot("deltas_vs_baseline"), dpi=150)
             plt.close()
-            print("  Saved -> ablation_combined_deltas.png")
+            print(f"  Saved -> {save_plot('deltas_vs_baseline').name}")
 
     # 3) Heatmap (config × metric)
     heat_metrics = [m for m in ["rougeL", "bertscore", "bleu", "chrf", "distinct1"] if m in available_metrics]
@@ -210,9 +218,9 @@ def build_and_save_plots(all_results: list[dict], experiments: list[str], agg: d
         plt.colorbar(im, ax=ax, label="Score (0–1)")
         ax.set_title("Ablation Heatmap (combined)", fontsize=13, fontweight="bold")
         plt.tight_layout()
-        plt.savefig(PLOTS_DIR / "ablation_combined_heatmap.png", dpi=150)
+        plt.savefig(save_plot("metric_heatmap"), dpi=150)
         plt.close()
-        print("  Saved -> ablation_combined_heatmap.png")
+        print(f"  Saved -> {save_plot('metric_heatmap').name}")
 
     # 4) Quality vs Latency scatter (using a simple composite)
     # Composite uses the most stable metrics.
@@ -231,9 +239,9 @@ def build_and_save_plots(all_results: list[dict], experiments: list[str], agg: d
         ax.set_title("Quality vs Latency Trade-off (combined)", fontsize=13, fontweight="bold")
         ax.grid(True, linestyle="--", alpha=0.5)
         plt.tight_layout()
-        plt.savefig(PLOTS_DIR / "ablation_combined_quality_vs_latency.png", dpi=150)
+        plt.savefig(save_plot("quality_vs_latency"), dpi=150)
         plt.close()
-        print("  Saved -> ablation_combined_quality_vs_latency.png")
+        print(f"  Saved -> {save_plot('quality_vs_latency').name}")
 
     # 5) Input-type breakdown (ROUGE-L)
     by_type = defaultdict(lambda: defaultdict(list))
@@ -262,9 +270,9 @@ def build_and_save_plots(all_results: list[dict], experiments: list[str], agg: d
             ax.set_ylabel("ROUGE-L (mean)")
             ax.set_title(f"Input type: {itype}")
         plt.tight_layout()
-        plt.savefig(PLOTS_DIR / "ablation_combined_scores_by_input_type.png", dpi=150)
+        plt.savefig(save_plot("scores_by_input_type"), dpi=150)
         plt.close()
-        print("  Saved -> ablation_combined_scores_by_input_type.png")
+        print(f"  Saved -> {save_plot('scores_by_input_type').name}")
 
     # 6) Diversity summary (distinct-1/2 box plots)
     if "distinct1" in available_metrics or "distinct2" in available_metrics:
@@ -289,9 +297,81 @@ def build_and_save_plots(all_results: list[dict], experiments: list[str], agg: d
             ax.set_title("Generation diversity distribution (combined)")
             plt.xticks(rotation=20, ha="right", fontsize=8)
             plt.tight_layout()
-            plt.savefig(PLOTS_DIR / "ablation_combined_diversity_boxplot.png", dpi=150)
+            plt.savefig(save_plot("diversity_boxplot"), dpi=150)
             plt.close()
-            print("  Saved -> ablation_combined_diversity_boxplot.png")
+            print(f"  Saved -> {save_plot('diversity_boxplot').name}")
+
+    # 7) LLM judge criteria breakdown (if present)
+    llm_metrics = ["narrative_quality", "rules_accuracy", "character_voice", "relevance"]
+    present_llm = [m for m in llm_metrics if any(m in agg[e] and len(agg[e][m]) > 0 for e in experiments)]
+    if present_llm:
+        fig, ax = plt.subplots(figsize=(12, 6))
+        x = np.arange(len(experiments))
+        width = 0.16
+        for i, m in enumerate(present_llm):
+            vals = [mean_val(e, m) for e in experiments]
+            ax.bar(x + (i - len(present_llm)/2 + 0.5) * width, vals, width, label=m.replace("_", " ").title(), edgecolor="white")
+        ax.set_xticks(x)
+        ax.set_xticklabels(short_names, rotation=15, ha="right", fontsize=8)
+        ax.set_ylim(0, 5.2)
+        ax.set_ylabel("LLM Judge Score (1–5)")
+        ax.set_title("LLM-as-Judge Criteria by Configuration", fontweight="bold")
+        ax.legend(fontsize=8, ncol=2)
+        plt.tight_layout()
+        plt.savefig(save_plot("llm_judge_breakdown"), dpi=150)
+        plt.close()
+        print(f"  Saved -> {save_plot('llm_judge_breakdown').name}")
+
+    # 8) Configuration ranking by quality composite
+    rank_metric = "llm_composite" if "llm_composite" in available_metrics else "rougeL"
+    ranked = sorted(experiments, key=lambda e: mean_val(e, rank_metric), reverse=True)
+    vals = [mean_val(e, rank_metric) for e in ranked]
+    fig, ax = plt.subplots(figsize=(10, 5))
+    bars = ax.barh(range(len(ranked)), vals, color="#4C72B0", edgecolor="white")
+    ax.set_yticks(range(len(ranked)))
+    ax.set_yticklabels([r.replace(" (Groq)", "") for r in ranked], fontsize=9)
+    ax.invert_yaxis()
+    ax.bar_label(bars, fmt="%.3f", padding=4, fontsize=8)
+    ax.set_xlabel(rank_metric.replace("_", " ").title())
+    ax.set_title(f"Configuration Ranking by {rank_metric.replace('_', ' ').title()}", fontweight="bold")
+    plt.tight_layout()
+    plt.savefig(save_plot("config_ranking"), dpi=150)
+    plt.close()
+    print(f"  Saved -> {save_plot('config_ranking').name}")
+
+    # 9) Safety pass rate by configuration
+    safety_rate = []
+    for e in experiments:
+        s = [r.get("safety_pass") for r in all_results if r.get("experiment") == e]
+        s = [1.0 if v is True else 0.0 for v in s if isinstance(v, bool)]
+        safety_rate.append(_safe_mean(s) if s else 0.0)
+    fig, ax = plt.subplots(figsize=(10, 4.5))
+    bars = ax.bar(short_names, safety_rate, color="#55A868", edgecolor="white")
+    ax.set_ylim(0, 1.05)
+    ax.bar_label(bars, fmt="%.2f", padding=3, fontsize=8)
+    ax.set_ylabel("Safety Pass Rate")
+    ax.set_title("Safety Pass Rate by Configuration", fontweight="bold")
+    plt.xticks(rotation=15, ha="right", fontsize=8)
+    plt.tight_layout()
+    plt.savefig(save_plot("safety_pass_rate"), dpi=150)
+    plt.close()
+    print(f"  Saved -> {save_plot('safety_pass_rate').name}")
+
+    # 10) Expected Groq calls per input (cost proxy)
+    groq_calls = []
+    for e in experiments:
+        c = [r.get("expected_groq_calls") for r in all_results if r.get("experiment") == e and r.get("expected_groq_calls") is not None]
+        groq_calls.append(_safe_mean(c) if c else 0.0)
+    fig, ax = plt.subplots(figsize=(10, 4.5))
+    bars = ax.bar(short_names, groq_calls, color="#DD8452", edgecolor="white")
+    ax.bar_label(bars, fmt="%.1f", padding=3, fontsize=8)
+    ax.set_ylabel("Expected Groq Calls / Input")
+    ax.set_title("Cost Proxy by Configuration", fontweight="bold")
+    plt.xticks(rotation=15, ha="right", fontsize=8)
+    plt.tight_layout()
+    plt.savefig(save_plot("cost_proxy_groq_calls"), dpi=150)
+    plt.close()
+    print(f"  Saved -> {save_plot('cost_proxy_groq_calls').name}")
 
 
 def print_metrics_table(all_results: list[dict], experiments: list[str], agg: dict, baseline: str) -> None:
@@ -498,6 +578,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--prefix", type=str, default="eval_results", help="Per-config json prefix: data/<prefix>_*.json")
     parser.add_argument("--baseline", type=str, default="", help="Baseline experiment display name (must match stored results).")
+    parser.add_argument("--plot-prefix", type=str, default="final_eval_ablation_plot", help="Output filename prefix for all generated plots.")
     args = parser.parse_args()
 
     all_results = load_all_per_config_results(args.prefix)
@@ -508,6 +589,6 @@ if __name__ == "__main__":
     print(f"Baseline: {baseline}")
     print_metrics_table(all_results, experiments, agg, baseline)
 
-    build_and_save_plots(all_results, experiments, agg, baseline)
+    build_and_save_plots(all_results, experiments, agg, baseline, plot_prefix=args.plot_prefix)
     build_markdown_report(all_results, experiments, baseline, args.prefix)
 

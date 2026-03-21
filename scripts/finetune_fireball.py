@@ -15,6 +15,8 @@ GGUF_DIR   = DATA_DIR / "ragnarok-dm-gguf"
 MODELS = {
     "llama3.2-3b": "unsloth/Llama-3.2-3B-Instruct",
     "llama3.2-1b": "unsloth/Llama-3.2-1B-Instruct",
+    # Candidate larger base for separate experiments. Requires substantially more VRAM.
+    "mistral-small-24b": "unsloth/Mistral-Small-24B-Instruct-2501",
 }
 
 MAX_SEQ_LEN  = 1024   # Lower for 12GB VRAM; increase if you have more
@@ -42,6 +44,7 @@ def format_prompt(sample: dict, tokenizer) -> str:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model",  default="llama3.2-3b", choices=list(MODELS.keys()))
+    parser.add_argument("--base-model-id", type=str, default="", help="Optional HuggingFace model id override (takes precedence over --model)")
     parser.add_argument("--epochs", type=int,   default=3)
     parser.add_argument("--rank",   type=int,   default=16,   help="LoRA rank")
     parser.add_argument("--alpha",  type=int,   default=16,   help="LoRA alpha")
@@ -49,6 +52,7 @@ def main():
     parser.add_argument("--batch-size", type=int, default=BATCH_SIZE, help="Per-device batch size (default 1 for 12GB VRAM)")
     parser.add_argument("--max-seq-len", type=int, default=MAX_SEQ_LEN, help="Max sequence length (default 1024)")
     parser.add_argument("--no-4bit", action="store_true", help="Disable 4-bit loading (needs ~24GB VRAM)")
+    parser.add_argument("--run-name", type=str, default="", help="Unique run tag for non-overwriting outputs (e.g., fireball-mistral24b-r16a32)")
     args = parser.parse_args()
 
     try:
@@ -57,8 +61,17 @@ def main():
         print("ERROR: run inside WSL2 with: pip install unsloth")
         return
 
-    model_id = MODELS[args.model]
+    model_id = args.base_model_id.strip() if args.base_model_id.strip() else MODELS[args.model]
+    run_name = args.run_name.strip() if args.run_name.strip() else f"ragnarok-dm-{args.model}"
+
+    # Keep each fine-tune isolated so experiments do not overwrite each other.
+    output_dir = DATA_DIR / f"{run_name}-lora"
+    gguf_dir   = DATA_DIR / f"{run_name}-gguf"
+
+    print(f"Run name: {run_name}")
     print(f"Loading {model_id} | rank={args.rank} alpha={args.alpha} lr={args.lr}")
+    print(f"Output dir: {output_dir}")
+    print(f"GGUF dir: {gguf_dir}")
     max_seq = args.max_seq_len
     model, tokenizer = FastLanguageModel.from_pretrained(
         model_name     = model_id,
@@ -94,7 +107,7 @@ def main():
     from trl import SFTTrainer
     from transformers import TrainingArguments
  
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    output_dir.mkdir(parents=True, exist_ok=True)
     trainer = SFTTrainer(
         model              = model,
         tokenizer          = tokenizer,
@@ -103,7 +116,7 @@ def main():
         dataset_text_field = "text",
         max_seq_length     = max_seq,
         args = TrainingArguments(
-            output_dir                  = str(OUTPUT_DIR),
+            output_dir                  = str(output_dir),
             num_train_epochs            = args.epochs,
             per_device_train_batch_size = args.batch_size,
             gradient_accumulation_steps = GRAD_ACCUM,
@@ -123,21 +136,22 @@ def main():
     trainer.train()
     print("Training complete.")
 
-    GGUF_DIR.mkdir(parents=True, exist_ok=True)
-    print(f"Exporting to GGUF → {GGUF_DIR}")
-    model.save_pretrained_gguf(str(GGUF_DIR), tokenizer, quantization_method="q8_0")
+    gguf_dir.mkdir(parents=True, exist_ok=True)
+    print(f"Exporting to GGUF -> {gguf_dir}")
+    model.save_pretrained_gguf(str(gguf_dir), tokenizer, quantization_method="q8_0")
 
-    gguf_files     = list(GGUF_DIR.glob("*.gguf"))
-    gguf_path      = gguf_files[0] if gguf_files else GGUF_DIR / "model.gguf"
-    modelfile_path = GGUF_DIR / "Modelfile"
+    gguf_files     = list(gguf_dir.glob("*.gguf"))
+    gguf_path      = gguf_files[0] if gguf_files else gguf_dir / "model.gguf"
+    modelfile_path = gguf_dir / "Modelfile"
     modelfile_path.write_text(
         f'FROM {gguf_path}\n'
         'PARAMETER temperature 0.7\n'
         'SYSTEM "You are a master storyteller and Dungeon Master for a D&D 5e campaign."\n'
     )
 
-    print(f"\nollama create ragnarok-dm -f {modelfile_path}")
-    print("ollama run ragnarok-dm")
+    ollama_name = run_name.replace("_", "-")
+    print(f"\nollama create {ollama_name} -f {modelfile_path}")
+    print(f"ollama run {ollama_name}")
     print("python orchestrator.py --local")
 
 
