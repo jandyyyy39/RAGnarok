@@ -28,24 +28,36 @@ class RulesArbiterCRAG:
             embedding_function=self.embeddings)
 
     def _grade_document(self, doc_text, player_action):
+        """
+        Score relevance 1-3 instead of binary yes/no.
+        1 = not relevant, 2 = partially relevant, 3 = directly relevant.
+        Threshold >= 2 keeps more useful chunks that a hard yes/no would drop.
+        """
         prompt = f"""You are a relevance grader for a D&D 5e rules database.
-            Does the following rule excerpt contain information DIRECTLY relevant
-            to determining the game mechanic for this player action?
+            Score how relevant the rule excerpt is for determining the game mechanic
+            for the player action below.
 
             Player action: "{player_action}"
 
             Rule excerpt:
             \"\"\"{doc_text[:500]}\"\"\"
 
-            Answer ONLY 'yes' or 'no'. Nothing else."""
+            Output ONLY a single digit: 1, 2, or 3.
+            1 = not relevant (different topic entirely)
+            2 = partially relevant (related mechanic but not exact)
+            3 = directly relevant (contains the specific rule needed)"""
 
         resp = self.client.chat.completions.create(
             messages=[{"role": "user", "content": prompt}],
             model=self.model,
             temperature=0.0,
-            max_tokens=300)   # deepseek-r1 needs room for <think>...</think> before outputting yes/no
-        answer = _strip_think_tags(resp.choices[0].message.content)
-        return 'yes' in answer.lower()
+            max_tokens=300)
+        answer = _strip_think_tags(resp.choices[0].message.content).strip()
+        # Extract first digit found; default to 1 (not relevant) if parse fails
+        for ch in answer:
+            if ch in ('1', '2', '3'):
+                return int(ch)
+        return 1
 
     def _reformulate_query(self, player_action, world_context):
         prompt = f"""The following D&D player action did not return good results
@@ -61,38 +73,54 @@ class RulesArbiterCRAG:
             messages=[{"role": "user", "content": prompt}],
             model=self.model,
             temperature=0.1,
-            max_tokens=300)   # deepseek-r1 needs room for <think>...</think> before the rewritten query
-        
+            max_tokens=300)
         return _strip_think_tags(resp.choices[0].message.content)
 
     def retrieve(self, player_action, world_context=""):
-        # Round 1: retrieve and grade
-        docs = self.vectorstore.similarity_search(player_action, k=6)
+        seen = set()
+        scored = []  # list of (score, doc) so we can sort by score before slicing
 
-        relevant = []
-        for doc in docs:
-            if self._grade_document(doc.page_content, player_action):
-                relevant.append(doc)
+        def _add_graded(docs, threshold=2):
+            """Grade docs and append (score, doc) tuples for those scoring >= threshold."""
+            for doc in docs:
+                key = doc.page_content[:100]
+                if key in seen:
+                    continue
+                seen.add(key)
+                score = self._grade_document(doc.page_content, player_action)
+                if score >= threshold:
+                    scored.append((score, doc))
 
-        # Round 2: if too few relevant, reformulate and retry
-        if len(relevant) < 2:
+        # Round 1: wider initial pool (k=10 instead of 6) — more candidates to grade
+        docs1 = self.vectorstore.similarity_search(player_action, k=10)
+        _add_graded(docs1, threshold=2)
+
+        # Round 2: reformulate and retry if fewer than 3 relevant found
+        if len(scored) < 3:
             new_query = self._reformulate_query(player_action, world_context)
-            docs2 = self.vectorstore.similarity_search(new_query, k=6)
+            docs2 = self.vectorstore.similarity_search(new_query, k=8)
+            _add_graded(docs2, threshold=2)
 
-            existing_texts = {r.page_content for r in relevant}
-            for doc in docs2:
-                if doc.page_content not in existing_texts:
-                    if self._grade_document(doc.page_content, player_action):
-                        relevant.append(doc)
-                        existing_texts.add(doc.page_content)
+        # Round 3 (keyword safety net): if still weak, fall back to direct query
+        # with a looser threshold so we don't return empty-handed
+        if len(scored) < 2:
+            docs3 = self.vectorstore.similarity_search(player_action, k=5)
+            _add_graded(docs3, threshold=1)  # accept anything loosely related
 
-        return relevant[:5]
+        # Sort by score descending so Score=3 chunks always appear first in the
+        # final context window, regardless of their cosine similarity rank.
+        scored.sort(key=lambda x: x[0], reverse=True)
+        return [doc for _, doc in scored[:5]]
 
     def get_ruling(self, player_action, world_context):
         relevant_rules = self.retrieve(player_action, world_context)
 
         if not relevant_rules:
-            return "No check required. No relevant D&D 5e rules apply to this action."
+            return {
+                "ruling"        : "No check required. No relevant D&D 5e rules apply to this action.",
+                "usage"         : 0,
+                "context_text"  : "",
+            }
 
         context_text = "\n".join([doc.page_content for doc in relevant_rules])
 
@@ -108,7 +136,9 @@ class RulesArbiterCRAG:
             INSTRUCTIONS:
             1. If the action is trivial (e.g., greeting someone, walking, eating, sitting down, accepting a quest), state 'No check required' and explain briefly why.
             2. If a check IS required, identify EXACTLY ONE primary Ability Check, Saving Throw, or Attack Roll.
-            3. Set a single Difficulty Class (DC) using the standard table (Easy=10, Medium=15, Hard=20, Very Hard=25).
+            3. For the resolution, use EXACTLY what the SRD rules above specify:
+               - If the rules say it is a CONTESTED CHECK (one roll vs another), state both rolls (e.g. "Dexterity (Stealth) contested by Wisdom (Perception)"). Do NOT invent a DC.
+               - If the rules specify a fixed DC or saving throw, state that DC (Easy=10, Medium=15, Hard=20, Very Hard=25).
             4. Output strict, concise mechanics only. No conversational text."""
 
         response = self.client.chat.completions.create(

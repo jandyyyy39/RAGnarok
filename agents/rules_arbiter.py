@@ -22,6 +22,9 @@ class RulesArbiter:
         )
         self.vectorstore = Chroma(persist_directory=db_path, embedding_function=self.embeddings)
 
+    def retrieve(self, player_action: str, world_context: str = ""):
+        return self.vectorstore.similarity_search(player_action, k=5)
+
     def get_ruling(self, player_action: str, world_context: str):
         """
         Determines if an action is valid and what rolls are required.

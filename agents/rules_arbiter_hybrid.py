@@ -3,8 +3,10 @@ import pickle
 import numpy as np
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
-from sentence_transformers import CrossEncoder
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from config import Config
+
+_RERANKER_MODEL = 'cross-encoder/ms-marco-MiniLM-L-6-v2'
 
 
 class RulesArbiterHybrid:
@@ -12,31 +14,30 @@ class RulesArbiterHybrid:
         self.client = client
         self.model = Config.LLM_MODEL[model_profile]
         device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        self.device = device
         print(f"[Hybrid Arbiter] Using {device.upper()} for embeddings.")
-
 
         # Vector store (same as Naive)
         self.embeddings = HuggingFaceEmbeddings(
             model_name=Config.EMBEDDING_MODEL,
             model_kwargs={'device': device})
-        
 
         self.vectorstore = Chroma(
             persist_directory=db_path,
             embedding_function=self.embeddings)
-        
 
-        # BM25 keyword index (loaded from the pickle you built in Step 4)
+        # BM25 keyword index
         with open(Config.DATA_DIR / 'bm25_index.pkl', 'rb') as f:
             self.bm25 = pickle.load(f)
         with open(Config.DATA_DIR / 'bm25_chunks.pkl', 'rb') as f:
             final_splits = pickle.load(f)
             self.chunk_texts = [doc.page_content for doc in final_splits]
 
-        # Cross-encoder re-ranker
-        self.reranker = CrossEncoder(
-            'cross-encoder/ms-marco-MiniLM-L-6-v2',
-            device=device)
+        # Cross-encoder re-ranker — load once at startup
+        self.ce_tokenizer = AutoTokenizer.from_pretrained(_RERANKER_MODEL)
+        self.ce_model = AutoModelForSequenceClassification.from_pretrained(
+            _RERANKER_MODEL, dtype=torch.float32).to(device)
+        self.ce_model.eval()
         print(f"[Hybrid Arbiter] BM25 ({len(self.chunk_texts)} chunks) + Vector + Reranker ready.")
 
     # Common words that appear everywhere in the SRD and carry no signal.
@@ -57,6 +58,27 @@ class RulesArbiterHybrid:
     # Minimum BM25 score for a result to enter the merged pool.
     # Results below this threshold are noise (no meaningful keyword overlap).
     _MIN_BM25_SCORE = 1.0
+
+    def _ce_scores(self, query, docs):
+        """Score (query, doc) pairs one at a time. Falls back to word-overlap if model returns NaN."""
+        scores = []
+        with torch.no_grad():
+            for doc in docs:
+                enc = self.ce_tokenizer(
+                    query, doc,
+                    truncation=True, max_length=512, return_tensors='pt'
+                ).to(self.device)
+                logit = self.ce_model(**enc).logits.view(-1)[0].item()
+                scores.append(logit)
+        scores = np.array(scores, dtype=np.float32)
+
+        # If the cross-encoder fails (NaN), fall back to BM25+Vector-aware overlap scoring
+        if np.all(np.isnan(scores)):
+            query_words = {w for w in query.lower().split() if w not in self._STOP_WORDS}
+            scores = np.array([
+                sum(1 for w in query_words if w in doc.lower()) for doc in docs
+            ], dtype=np.float32)
+        return scores
 
     def retrieve(self, player_action, world_context=""):
         # 1. BM25 keyword search — top 10 (after stop-word filtering)
@@ -79,7 +101,7 @@ class RulesArbiterHybrid:
         vector_results = self.vectorstore.similarity_search(player_action, k=10)
         vector_docs = [doc.page_content for doc in vector_results]
 
-        # 3. Merge and de dupe
+        # 3. Merge and dedupe
         seen = set()
         merged = []
         for doc_text in bm25_docs + vector_docs:
@@ -92,8 +114,7 @@ class RulesArbiterHybrid:
             return []
 
         # 4. Re-rank with cross-encoder
-        pairs = [(player_action, doc) for doc in merged]
-        scores = self.reranker.predict(pairs)
+        scores = self._ce_scores(player_action, merged)
         ranked_idx = np.argsort(scores)[::-1][:5]
 
         # Wrap results so they have .page_content like LangChain docs
@@ -120,7 +141,9 @@ class RulesArbiterHybrid:
             INSTRUCTIONS:
             1. If the action is trivial (e.g., greeting someone, walking, eating, sitting down, accepting a quest), state 'No check required' and explain briefly why.
             2. If a check IS required, identify EXACTLY ONE primary Ability Check, Saving Throw, or Attack Roll.
-            3. Set a single Difficulty Class (DC) using the standard table (Easy=10, Medium=15, Hard=20, Very Hard=25).
+            3. For the resolution, use EXACTLY what the SRD rules above specify:
+               - If the rules say it is a CONTESTED CHECK (one roll vs another), state both rolls (e.g. "Dexterity (Stealth) contested by Wisdom (Perception)"). Do NOT invent a DC.
+               - If the rules specify a fixed DC or saving throw, state that DC (Easy=10, Medium=15, Hard=20, Very Hard=25).
             4. Output strict, concise mechanics only. No conversational text."""
 
         response = self.client.chat.completions.create(
