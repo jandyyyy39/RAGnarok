@@ -32,12 +32,15 @@ class RAGnarokOrchestrator:
             "LOCAL_FAST" if model_profile == "LOCAL" else "GROQ_FAST"
         )
 
+        self.critic_model = Config.LLM_MODEL.get(
+            "LOCAL_CRITIC" if model_profile == "LOCAL" else "GROQ_CRITIC"
+        )
+
         # --- SESSION GENERATOR ---
         os.makedirs("data/history", exist_ok=True) 
         
         # session_id = datetime.now().strftime("%Y%m%d_%H%M%S")
-        # self.log_file = f"data/history/baseline_architecture_log.json" 
-        self.log_file = f"data/history/baseline_{self.model}-{self.fast_model}.json"
+        self.log_file = f"data/history/baseline_architecture_log.json" 
 
         # Initialize thread-safely
         with telemetry_lock:
@@ -49,7 +52,8 @@ class RAGnarokOrchestrator:
 
     def process_turn(self, player_input: str, args):
         start_time = time()
-        
+        latency_breakdown = {}
+
         arbiter_tokens = 0
         npc_tokens = 0
         dm_tokens = 0
@@ -105,19 +109,24 @@ class RAGnarokOrchestrator:
             """
         else: 
             # --- NORMAL TURN ---
+            t = time()
             # Safety Check
             if not self.safety.check(player_input):
                 return {"response": "Safety Agent Intercept: That action violates the table's safety tools.", "pending_action": None}
-            
+            latency_breakdown["safety_ms"] = round((time() - t) * 1000)
+
             # Retrieve world state
+            t = time()
             if args.no_memory:
                 trace("[Orchestrator] --no-memory: Skipping world state injection.")
                 world_state = "No world state provided by the Memory agent."
             else:
                 trace("[Memory Agent] Fetching recap...")
                 world_state = self.memory.format_for_dm()
+            latency_breakdown["memory_ms"] = round((time() - t) * 1000)
 
             # Rules arbiter assessment
+            t = time()
             if args.no_rag:
                 trace("[Orchestrator] --no-rag: Skipping RAG lookup.")
                 ruling = "The Rules Arbiter was not consulted."
@@ -129,9 +138,13 @@ class RAGnarokOrchestrator:
                 retrieved_context["rules"] = arbiter_result.get("context_text", ruling)
                 trace(f"[Rules Arbiter] Ruling: {ruling}")
 
+            latency_breakdown["arbiter_ms"] = round((time() - t) * 1000)
+
         # DM generates response
         trace("[DM Agent] Weaving the narrative...")
+        t = time()
         dm_result = self.dm.generate_response(player_input, world_state, ruling)
+        latency_breakdown["dm_ms"] = round((time() - t) * 1000)
         dm_tokens = dm_result.get("usage", 0)
 
         # --- FORK ---
@@ -142,16 +155,18 @@ class RAGnarokOrchestrator:
                 "pending_action": dm_result["action"]
             }
             latency_ms = (time() - start_time) * 1000
+            latency_breakdown["total_ms"] = round(latency_ms) # npc_agent_ms and post_processing_ms intentionally absent — path was skipped
 
             turn_data = self._build_turn_data(
                 player_input, result, baseline_routes,
                 arbiter_tokens, dm_tokens, npc_tokens,
-                latency_ms, retrieved_context
+                latency_ms, latency_breakdown, retrieved_context
             )
-            _critic_queue.put((self.client, self.fast_model, turn_data, self.log_file))
-            
+
+            _critic_queue.put((self.client, self.critic_model, turn_data, self.log_file))
             return result
 
+        t = time()
         if args.no_npc_const:
             trace("[Orchestrator] --no-npc-const: Skipping NPC consistency check.")
             final_output = dm_result["narrative"]
@@ -160,15 +175,18 @@ class RAGnarokOrchestrator:
             trace("[NPC Agent] Checking character sheets...")
             final_output = self.npc_agent.refine_dialogue(dm_result["narrative"])
             pending_action = None
+        latency_breakdown["npc_agent_ms"] = round((time() - t) * 1000)
         
         # Memory update
+        t = time()
         current_events = self.memory.get_current_state()["recent_events"]
         
         event_text = player_input if not is_system_roll else f"The player rolled dice. {player_input}"
         new_event = f"Action: {event_text} | Outcome: {final_output[:100]}..." 
         
         self.memory.update_state({"recent_events": current_events + [new_event]})
-
+        latency_breakdown["post_processing_ms"] = round((time() - t) * 1000)
+        latency_breakdown["total_ms"] = round((time() - start_time) * 1000)
         trace("="*50 + "\n")
         # --- TELEMETRY LOGGING ---
         latency_ms = (time() - start_time) * 1000
@@ -177,20 +195,21 @@ class RAGnarokOrchestrator:
             {"response": final_output, "pending_action": pending_action},
             baseline_routes,
             arbiter_tokens, dm_tokens, npc_tokens,
-            latency_ms, retrieved_context
+            latency_ms, latency_breakdown, retrieved_context
         )
-        _critic_queue.put((self.client, self.fast_model, turn_data, self.log_file))
+        _critic_queue.put((self.client, self.critic_model, turn_data, self.log_file))
 
         return {"response": final_output, "pending_action": pending_action}
 
     def _build_turn_data(self, player_input, final_output, routes,
                      arbiter_tokens, dm_tokens, npc_tokens,
-                     latency_ms, retrieved_context):
+                     latency_ms, latency_breakdown, retrieved_context):
         """Single source of truth for turn_data shape — used by both exit paths."""
         return {
             "timestamp_utc": datetime.utcnow().isoformat() + "Z",
             "architecture": "baseline",
             "latency_ms": round(latency_ms),
+            "latency_breakdown": latency_breakdown or {},
             "total_tokens": arbiter_tokens + dm_tokens + npc_tokens,
             "token_breakdown": {
                 "arbiter": arbiter_tokens,
@@ -256,6 +275,15 @@ def handle_game_turn():
         'game_state': game.memory.get_current_state()
     })
 
+@app.route('/api/info', methods=['GET'])
+def get_info():
+    return jsonify({
+        'architecture': 'baseline',
+        'model':        game.model,
+        'fast_model':   game.fast_model,
+        'critic_model': game.critic_model,
+        'log_file':     game.log_file,
+    })
 if __name__ == "__main__":
     # Check for GPU
     device = "cuda" if torch.cuda.is_available() else "cpu"

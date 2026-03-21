@@ -1,6 +1,6 @@
 import json
 import os
-import time
+from time import time
 import re
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
@@ -29,15 +29,6 @@ def deterministic_guard(narrative: str) -> bool:
     meta_game_terms = re.compile(r'\b(DC|saving throw)\b', re.IGNORECASE)
     return not bool(meta_game_terms.findall(narrative))
 
-# RULES_FORCE_PATTERNS = re.compile(
-#     r'\b(DC\s*\d+|saving throw|attack roll|skill check|i (automatically )?succeed|i (automatically )?fail|advantage|disadvantage|spell slot|hit points?|HP)\b',
-#     re.IGNORECASE
-# )
-
-# def force_rules_route(intent: str) -> bool:
-#     """Returns True if rules_logic must be forced on regardless of router decision."""
-#     return bool(RULES_FORCE_PATTERNS.search(intent))
-
 # --- SPEAR ORCHESTRATOR ---
 class SPEAROrchestrator:
     def __init__(self, client, model_profile: str):
@@ -45,9 +36,12 @@ class SPEAROrchestrator:
         self.client = client
         self.model = Config.LLM_MODEL[model_profile]
         
-        # Use a smaller/faster model for the Supervisor if available (e.g., Llama 3 8B)
         self.fast_model = Config.LLM_MODEL.get(
             "LOCAL_FAST" if model_profile == "LOCAL" else "GROQ_FAST"
+        )
+
+        self.critic_model = Config.LLM_MODEL.get(
+            "LOCAL_CRITIC" if model_profile == "LOCAL" else "GROQ_CRITIC"
         )
         
         self.memory = MemoryAgent()
@@ -101,15 +95,18 @@ class SPEAROrchestrator:
         return {"description": ""}
     
     def process_turn(self, player_input: str):
-        start_time = time.time()
+        start_time = time()
+        latency_breakdown = {}
         router_tokens = 0
         dm_tokens = 0
         print("\n" + "▼"*50)
         print(f"[SPEAR] Intent: '{player_input}'")
 
+        t = time()
         # Zero-LLM Safety Guard
         if not safety_filter(player_input):
             return {"response": "Safety Agent Intercept: Invalid input.", "pending_action": None}
+        latency_breakdown["safety_filter_ms"] = round((time() - t) * 1000)
 
         world_state = self.memory.get_current_state()
         active_npcs = world_state.get("active_npcs", [])
@@ -118,59 +115,69 @@ class SPEAROrchestrator:
         routes = {"rules_logic": False, "npc_lore": False, "world_exploration": False}
         routing_hallucination = False
         is_system_roll = player_input.startswith("[SYSTEM: ROLL_RESOLUTION")
-
+        
+        t = time()
         if is_system_roll:
             print("[SPEAR] Dice Roll detected. Bypassing Supervisor.")
             routes["npc_lore"] = True # Always fetch NPCs for narrative fallout
         else:
             try:
-                # Location + Active NPCs are injected here.
                 skill_routing = {
                     skill: self._read_skill_metadata(skill)["description"]
                     for skill in ["rules_logic", "npc_lore", "world_exploration"]
                 }
-
                 router_prompt = f"""
                 Analyze this player intent: "{player_input}"
                 Location: {world_state.get('current_location')}
                 Active NPCs: {[npc.split('(')[0].strip() for npc in active_npcs]}
-
                 ROUTING CRITERIA:
                 - rules_logic: {skill_routing["rules_logic"]}
                 - npc_lore: {skill_routing["npc_lore"]}
                 - world_exploration: {skill_routing["world_exploration"]}
-
                 IMPORTANT: Your output values must be true or false only. Do not copy or reason 
                 about words from the player intent in your output.
-
-                Return ONLY: {{"rules_logic": true/false, "npc_lore": true/false, "world_exploration": true/false}}
+                Return ONLY this format: {{"rules_logic": true, "npc_lore": false, "world_exploration": true}}
                 """
                 route_response = self.client.chat.completions.create(
                     messages=[{"role": "user", "content": router_prompt}],
                     model=self.fast_model,
-                    temperature=0.0,
+                    temperature=Config.ROUTER_TEMPERATURE,
                     response_format={"type": "json_object"}
                 )
-                routes = json.loads(route_response.choices[0].message.content)
                 router_tokens = route_response.usage.total_tokens if getattr(route_response, 'usage', None) else 0
-                
-                # Hallucination Check: Validate keys
-                if not all(k in ["rules_logic", "npc_lore", "world_exploration"] for k in routes.keys()):
+
+                raw_content = route_response.choices[0].message.content
+                routes_raw = json.loads(raw_content)
+                routes_normalized = {k.strip().lower(): v for k, v in routes_raw.items()}
+
+                routes = {
+                    "rules_logic":       bool(routes_normalized.get("rules_logic",       False)),
+                    "npc_lore":          bool(routes_normalized.get("npc_lore",          False)),
+                    "world_exploration": bool(routes_normalized.get("world_exploration",  False)),
+                }
+
+                # Flag hallucination if unexpected keys present
+                expected = {"rules_logic", "npc_lore", "world_exploration"}
+                if set(routes_normalized.keys()) != expected:
                     routing_hallucination = True
 
-                # if force_rules_route(player_input):
-                #     routes["rules_logic"] = True
-
                 print(f"[SPEAR] Router Decision: {routes}")
+
+            except json.JSONDecodeError:
+                print(f"[SPEAR ALERT] Router returned unparseable JSON: {raw_content}")
+                routing_hallucination = True
+                routes = {"rules_logic": True, "npc_lore": True, "world_exploration": True}
             except Exception as e:
                 print(f"[SPEAR ALERT] Routing Error: {e}")
                 routing_hallucination = True
-                routes = {"rules_logic": True, "npc_lore": True, "world_exploration": True} # Fallback to Baseline (Bloat)
+                routes = {"rules_logic": True, "npc_lore": True, "world_exploration": True}
+
+        latency_breakdown["router_ms"] = round((time() - t) * 1000)
 
         # -- PHASE 2: PARALLEL DATA FETCH (Efficiency) --
         retrieved_context = []
         dynamic_instructions = []
-
+        t = time()
         with ThreadPoolExecutor(max_workers=3) as executor:
             future_rules = executor.submit(fetch_rules.search_rules, player_input) if routes.get("rules_logic") else None
             future_npc = executor.submit(fetch_npc.fetch_profile, player_input + " " + " ".join(active_npcs)) if routes.get("npc_lore") else None
@@ -190,7 +197,10 @@ class SPEAROrchestrator:
                 dynamic_instructions.append(self._read_skill_instructions("world_exploration"))
                 retrieved_context.append(f"=== EXPLORATION ===\n{explore_result}")
 
+        latency_breakdown["parallel_fetch_ms"] = round((time() - t) * 1000)
+
         # -- PHASE 3: EXECUTION (Single Pass) --
+        t = time()
         dm_result = self.dm.generate_response(
             player_input=player_input,
             world_state=self.memory.format_for_dm(),
@@ -198,11 +208,14 @@ class SPEAROrchestrator:
             retrieved_context=retrieved_context
         )
 
+        latency_breakdown["dm_ms"] = round((time() - t) * 1000)
+
         final_output = {
             "response": dm_result.get("response", ""),
             "pending_action": dm_result.get("pending_action")
         }
 
+        t = time()
         # Deterministic Guard (Leak Check)
         if dm_result.get("type") == "text" and not deterministic_guard(final_output["response"]):
             final_output["response"] += "\n\n[System Alert: Meta-game terms detected and scrubbed.]"
@@ -211,14 +224,17 @@ class SPEAROrchestrator:
         new_event = f"Action: {player_input} | Outcome: {final_output['response'][:100]}..." 
         self.memory.update_state({"recent_events": world_state["recent_events"] + [new_event]})
 
+        latency_breakdown["post_processing_ms"] = round((time() - t) * 1000)
+        latency_breakdown["total_ms"] = round((time() - start_time) * 1000)
         # -- PHASE 4: ASYNC TELEMETRY (Thesis Metrics) --
-        latency_ms = (time.time() - start_time) * 1000
+        latency_ms = (time() - start_time) * 1000
         dm_tokens = dm_result.get("usage", 0)
 
         turn_data = {
             "timestamp_utc": datetime.utcnow().isoformat() + "Z",
             "architecture": "SPEAR",
             "latency_ms": round(latency_ms),
+            "latency_breakdown": latency_breakdown,
             "total_tokens": router_tokens + dm_tokens,
             "token_breakdown": {
                 "router": router_tokens,
@@ -246,7 +262,7 @@ class SPEAROrchestrator:
         }
         
         # Fire background thread to populate async_critic_scores
-        _critic_queue.put((self.client, self.fast_model, turn_data, self.log_file))
+        _critic_queue.put((self.client, self.critic_model, turn_data, self.log_file))
 
         print(f"[SPEAR] Turn Complete | Latency: {round(latency_ms)}ms")
         print("▲"*50)
@@ -278,6 +294,16 @@ def get_game_state():
     if not game:
         return jsonify({"error": "Game not initialized"}), 500
     return jsonify(game.memory.get_current_state())
+
+@app.route('/api/info', methods=['GET'])
+def get_info():
+    return jsonify({
+        'architecture': 'SPEAR',
+        'model':        game.model,
+        'fast_model':   game.fast_model,
+        'critic_model': game.critic_model,
+        'log_file':     game.log_file,
+    })
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

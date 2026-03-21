@@ -1,9 +1,10 @@
 import json
 import sys
 from pathlib import Path
+sys.path.append(Path(__file__).resolve().parent.parent.parent.parent)
+from config import Config
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
-NPC_FILE = BASE_DIR / "data" / "npc_profiles.json"
+NPC_FILE = Config.DATA_DIR / "npc_profiles.json"
 
 def fetch_profile(query: str) -> str:
     if not NPC_FILE.exists():

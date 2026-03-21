@@ -5,12 +5,10 @@ import torch
 from dotenv import load_dotenv
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
-
-BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
-
-sys.path.append(str(BASE_DIR))
+sys.path.append(str(Path(__file__).resolve().parent.parent.parent.parent))
 from config import Config
-DB_PATH = str(BASE_DIR / "data/chroma_db")
+
+DB_PATH = str(Config.DATA_DIR / "chroma_db")
 
 load_dotenv()
 
