@@ -1,10 +1,10 @@
 import os
-import requests
 from langchain_text_splitters import MarkdownHeaderTextSplitter, RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from pathlib import Path
 import re
+import pickle
 
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
@@ -224,7 +224,6 @@ def build_vector_store():
 def build_bm25_index():
     print(f"Reading and processing {SRD_FILE}...")
     
-    # Use the shared logic!
     final_splits = _load_and_chunk_documents()
     
     print(f"Building BM25 index with {len(final_splits)} chunks...")
@@ -232,13 +231,28 @@ def build_bm25_index():
     corpus = [doc.page_content for doc in final_splits]
     tokenized_corpus = [doc.split() for doc in corpus]
     bm25 = BM25Okapi(tokenized_corpus)
+
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+
+    bm25_path = DATA_DIR / "bm25_index.pkl"
+    chunks_path = DATA_DIR / "bm25_chunks.pkl"
+
+    with open(bm25_path, "wb") as f:
+        pickle.dump(bm25, f)
+
+    with open(chunks_path, "wb") as f:
+        pickle.dump(final_splits, f)
     
-    print("BM25 index built")
+    print(f"BM25 index saved to {bm25_path}")
+    print(f"BM25 chunks saved to {chunks_path}")
+    
     return bm25, final_splits
 
 if __name__ == "__main__":
     # download_srd()
     build_vector_store()
+    build_bm25_index()
+    
     # bm25, final_splits = build_bm25_index()
     # peek_chunks(final_splits)
 

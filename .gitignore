@@ -212,6 +212,12 @@ marimo/_lsp/
 __marimo__/
 __marimo__/data/chroma_db/
 
+evaluation/.DS_Store
+
+data/bm25_chunks.pkl
+data/bm25_index.pkl
+
+
 Miniconda3-latest-Linux-x86_64.sh
 
 
