@@ -3,6 +3,7 @@ frontend/.vite/
 chroma_db/*
 data/history/*
 data/chroma_db/
+data/world_state.json
 
 # Marimo
 marimo/_static/
