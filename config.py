@@ -14,10 +14,12 @@ class Config:
 
     # --- Models ---
     LLM_MODEL = {
-        'GROQ': "llama-3.3-70b-versatile",
-        'GROQ_FAST': "llama-3.1-8b-instant",
-        'LOCAL': "llama3.2",
-        "LOCAL_FAST": "llama3.2",
+        'GROQ':       "llama-3.3-70b-versatile",
+        'GROQ_FAST':  "llama-3.1-8b-instant",
+        'GROQ_CRITIC': "llama-3.3-70b-versatile",
+        'LOCAL':      "ragnarok-dm",
+        'LOCAL_FAST': "llama3.1",
+        'LOCAL_CRITIC': "llama3.1",
     }
 
     # --- Inference ---
@@ -27,6 +29,8 @@ class Config:
     EMBEDDING_MODEL     = "all-MiniLM-L6-v2"
     DM_TEMPERATURE      = 0.7
     ARBITER_TEMPERATURE = 0.1
+    ROUTER_TEMPERATURE  = 0.0
+    CRITIC_TEMPERATURE  = 0.0
 
     # --- Cross-Platform Paths ---
     BASE_DIR   = Path(__file__).resolve().parent
@@ -39,8 +43,8 @@ class Config:
     ESRD_FILE    = DATA_DIR / "5esrd.md"
 
     # FIREBALL fine-tuning data
-    FIREBALL_DIR   = DATA_DIR / "fireball"
-    TRAIN_FILE     = DATA_DIR / "fireball_train.jsonl"
-    EVAL_FILE      = DATA_DIR / "fireball_eval.jsonl"
+    FIREBALL_DIR = DATA_DIR / "fireball"
+    TRAIN_FILE   = DATA_DIR / "fireball_train.jsonl"
+    EVAL_FILE    = DATA_DIR / "fireball_eval.jsonl"
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)

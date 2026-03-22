@@ -1,6 +1,6 @@
 # LEVEL 1: METADATA (Always Loaded for Routing)
 name: "world_exploration"
-description: "Handles environmental interaction, traps, locked doors, perception, and survival mechanics. Trigger this when the player searches the room, interacts with inanimate objects, picks locks, or navigates terrain."
+description: "Handles environmental interaction, traps, locked doors, perception, and survival mechanics. Trigger this when the player searches the room, interacts with inanimate objects, picks locks, or navigates terrain. Note: exploration actions almost always co-trigger rules_logic since they require Perception or Investigation checks."
 version: "1.0.0"
 metadata:
   author: "g7"

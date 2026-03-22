@@ -1,6 +1,6 @@
 # LEVEL 1: METADATA (Always Loaded for Routing)
 name: "npc_lore"
-description: "Handles NPC personality traits, dialogue quirks, hidden secrets, and character consistency. Trigger this when the player speaks to, observes, or attempts to influence an NPC."
+description: "Handles personality, dialogue quirks, and consistency for named NPCs with established profiles. Trigger ONLY when the player explicitly interacts with a named character. Do NOT trigger for unnamed background characters such as guards, sailors, bartenders, or bystanders."
 version: "1.0.0"
 metadata:
   author: "g7"
