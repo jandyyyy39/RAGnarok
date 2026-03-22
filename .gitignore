@@ -1,10 +1,7 @@
 .env
 frontend/.vite/
 chroma_db/*
-data/chroma_db/*
-data/world_state.json
 data/history/*
-*retrieval_eval_detail*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -212,4 +209,13 @@ cython_debug/
 # Marimo
 marimo/_static/
 marimo/_lsp/
+__marimo__/
 __marimo__/data/chroma_db/
+
+Miniconda3-latest-Linux-x86_64.sh
+
+
+Gen20with20Final20Project.pdf
+data/ragnarok-dm-lora/
+data/ragnarok-dm-gguf_gguf/
+data/ragnarok-dm-gguf/

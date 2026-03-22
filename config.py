@@ -14,10 +14,10 @@ class Config:
 
     # --- Models ---
     LLM_MODEL = {
-        'GROQ': "llama-3.3-70b-versatile",
-        'GROQ_FAST': "llama-3.1-8b-instant",
+        'GROQ':       "llama-3.3-70b-versatile",
+        'GROQ_FAST':  "llama-3.1-8b-instant",
         'GROQ_CRITIC': "llama-3.3-70b-versatile",
-        'LOCAL': "llama3.2",
+        'LOCAL':      "ragnarok-dm",
         'LOCAL_FAST': "llama3.1",
         'LOCAL_CRITIC': "llama3.1",
     }
@@ -43,8 +43,8 @@ class Config:
     ESRD_FILE    = DATA_DIR / "5esrd.md"
 
     # FIREBALL fine-tuning data
-    FIREBALL_DIR   = DATA_DIR / "fireball"
-    TRAIN_FILE     = DATA_DIR / "fireball_train.jsonl"
-    EVAL_FILE      = DATA_DIR / "fireball_eval.jsonl"
+    FIREBALL_DIR = DATA_DIR / "fireball"
+    TRAIN_FILE   = DATA_DIR / "fireball_train.jsonl"
+    EVAL_FILE    = DATA_DIR / "fireball_eval.jsonl"
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)

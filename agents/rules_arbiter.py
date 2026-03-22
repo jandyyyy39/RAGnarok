@@ -1,28 +1,32 @@
 import os
 import torch
 from dotenv import load_dotenv
+from groq import Groq
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 from config import Config
 
 load_dotenv()
 
+
 class RulesArbiter:
-    def __init__(self, client, model_profile: str, db_path="data/chroma_db"):
-        self.client = client
-        self.model = Config.LLM_MODEL[model_profile]
-        
-        # --- GPU-aware Embeddings ---
-        device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    """
+    Main-branch retrieval/ruling behavior with backward-compatible constructor and return type.
+    """
+    def __init__(self, client=None, model_profile: str = "GROQ", db_path=None):
+        self.client = client or Groq(api_key=Config.GROQ_API_KEY)
+        self.model = Config.LLM_MODEL.get(model_profile, Config.LLM_MODEL["GROQ"])
+        db_path = db_path or str(Config.CHROMA_DIR)
+
+        device = "cuda" if torch.cuda.is_available() else "cpu"
         print(f"[Rules Arbiter] Using {device.upper()} for sentence embeddings.")
-        
         self.embeddings = HuggingFaceEmbeddings(
             model_name=Config.EMBEDDING_MODEL,
-            model_kwargs={'device': device}
+            model_kwargs={"device": device},
         )
         self.vectorstore = Chroma(persist_directory=db_path, embedding_function=self.embeddings)
 
-    def get_ruling(self, player_action: str, world_context: str):
+    def get_ruling(self, player_action: str, world_context: str) -> str:
         """
         Determines if an action is valid and what rolls are required.
         """
@@ -60,10 +64,4 @@ class RulesArbiter:
             max_tokens=150,
         )
         
-        total_tokens = response.usage.total_tokens if getattr(response, 'usage', None) else 0
-
-        return {
-            "ruling"        : response.choices[0].message.content,
-            "usage"         : total_tokens,
-            "context_text"  : context_text,
-        }
+        return response.choices[0].message.content

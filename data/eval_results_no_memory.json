@@ -1,0 +1,314 @@
+[
+  {
+    "experiment": "No Memory",
+    "input": ") *The basilisk moves forward, now only with 6 targets to chose from* *Attack of Opportunity from Polearm Master as it moves forward.*",
+    "input_type": "fireball",
+    "response": "As the basilisk lunges forward, its scaly body undulating with each step, the air seems to grow thick with anticipation. The creature's unblinking eyes scan the remaining six targets, its gaze like a cold wind that sends shivers down the spines of even the bravest warriors. But one among you stands ready, poised to strike as the basilisk's movement creates an opening.\n\nWith a swift and practiced motion, you seize the opportunity to attack, your polearm at the ready. The basilisk, intent on its next victim, doesn't notice the danger lurking in its immediate vicinity. Your attack roll will determine the success of this strike, as you aim to catch the basilisk off guard.\n\nTo hit the basilisk, you'll need to roll an Attack Roll with a DC of 15, matching the creature's formidable Armor Class. The fate of your companions hangs in the balance, and the outcome of this roll will be crucial in determining the basilisk's next move.\n\nAs you swing your polearm in a wide arc, the blade bites through the air with a soft whoosh, heading straight for the basilisk's exposed flank. The creature's scales glint in the faint light, a mesmerizing dance of dark blues and greens that seems to hypnotize all who dare to look directly at it. Will your strike find its mark, or will the basilisk's defenses prove too strong to breach?\n\nThe roll is in your hands. What is the result of your Attack Roll?",
+    "reference": "*Before the creature has the chance to do anything, Ephraim's blade flies out to demolish it in one strike, having been waiting for the perfect moment to strike.* *The basilisk comes forward and gets absolutely impaled on the polearm Ephraim wields, crumbling to the ground in death* *Just as they were appreciating the bolstering feeling inside of them, as suddenly as the basilisk arrived it is dead, and Beau cheers* \"Ain't that somethin, wonderful job!\"",
+    "latency_ms": 4057,
+    "skipped": [
+      "memory"
+    ],
+    "scores": {
+      "rouge1": 0.2182,
+      "rouge2": 0.0366,
+      "rougeL": 0.1333,
+      "bertscore": 0.8168,
+      "rule_coverage": 0.1739,
+      "response_length": 244
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "*seeing as I am still stealthed, draws out shortbow*",
+    "input_type": "fireball",
+    "response": "As you carefully draw out your shortbow, the soft creak of the wooden limbs and the gentle whisper of the bowstring against the frame are the only sounds that break the silence. The dimly lit alleyway, shrouded in the flickering shadows of the nearby torches, seems to hold its breath as you prepare for a potential confrontation. The air is heavy with the scent of damp stone and the distant aroma of exotic spices wafting from the nearby market stalls.\n\nYou manage to draw the shortbow without making any sudden or jarring noises, but the movement still carries a slight risk of compromising your stealth. To maintain your concealed position, you'll need to make a Dexterity (Stealth) check. The DC for this check, given the relatively quiet nature of drawing a bow and the alleyway's ambient noise, is 15.\n\nRolling a d20 and adding your Dexterity modifier and Stealth skill level, you get... (awaiting roll result).\n\nAssuming a successful roll, you remain stealthed, and your shortbow is at the ready. The alleyway remains quiet, with only the occasional distant murmur or scurrying rodent breaking the stillness. You're poised to respond to any potential threat, your senses heightened as you wait for the perfect moment to act.\n\nHowever, if the roll result indicates a failure, the sound of drawing your shortbow might have been loud enough to attract unwanted attention. The guards patrolling the nearby streets or the shady characters lurking in the alleyway's shadows might have caught wind of your presence, potentially compromising your stealthy approach.\n\nThe outcome of your action hangs in the balance, as the dice decide whether your stealth remains intact or if the situation takes a more precarious turn.",
+    "reference": "\"First blood there prime rib.\"",
+    "latency_ms": 8306,
+    "skipped": [
+      "memory"
+    ],
+    "scores": {
+      "rouge1": 0.0,
+      "rouge2": 0.0,
+      "rougeL": 0.0,
+      "bertscore": 0.7795,
+      "rule_coverage": 0.2609,
+      "response_length": 283
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "*sees the sudden rush of the creature, he is caught off guard but quickly shoots regardless, as a tiny dart flies towards its target*",
+    "input_type": "fireball",
+    "response": "As the creature surges forward with unexpected swiftness, the air is filled with the sudden rush of its approach, leaving you barely a moment to react. Your hand instinctively tightens around the dart gun, and with a swift, almost reflexive motion, you release the tiny dart into the fray. The dart, no larger than a needle, flies through the air with a precision that belies the haste of its launch. The creature, a blur of motion mere moments before, becomes the focal point of your entire world as the dart hurtles towards it.\n\nThe room holds its breath, the only sound the soft whoosh of the dart cutting through the air. Time seems to slow, allowing you to take in every detail of the impending impact. The creature's scales glint in the dim light, a mosaic of dark blues and greens that seem to shift and shimmer as it moves. Its eyes, two gleaming orbs of malice, are fixed intently on you, oblivious to the tiny projectile speeding towards it.\n\nTo determine the success of your hasty shot, you must make an Attack Roll. The dice rolls in your mind, the outcome hanging precariously in the balance. The DC for this roll is 18, a challenging target that reflects the creature's formidable armor class. The roll is... (pausing for dramatic effect) ...a 19. Your dart, fired in the heat of the moment, finds its mark with uncanny accuracy.\n\nThe dart strikes the creature with a tiny, almost insignificant sound, a small 'thwip' that seems out of place given the magnitude of the moment. However, do not be fooled by the lack of fanfare; the dart's impact is anything but insignificant. The creature's advance falters, its gaze wavering for a moment as it processes the sudden, sharp pain. A small, dark blot begins to form around the dart's entry point, a stark contrast to the creature's otherwise vibrant scales.\n\nThe creature's reaction is immediate and violent. It recoils, its body contorting in a mixture of pain and rage. The room, once on the cusp of silence, is now filled with the creature's enraged roar. The sound is deafening, a cacophony that threatens to consume everything in its path. You stand at the epicenter of this maelstrom, the tiny dart's impact sparking a chain reaction of chaos and fury.\n\nThe battle has begun, and the outcome hangs in the balance. The creature, now enraged and wounded, will not hesitate to strike back with all its might. Your next move will be crucial, determining whether you emerge victorious or fall prey to the creature's wrath. The stage is set, the dice have been cast, and the fate of this encounter remains to be seen. What will you do next?",
+    "reference": "*he then runs 25 more feet for a total of 35*",
+    "latency_ms": 3888,
+    "skipped": [
+      "memory"
+    ],
+    "scores": {
+      "rouge1": 0.0126,
+      "rouge2": 0.0042,
+      "rougeL": 0.0126,
+      "bertscore": 0.7834,
+      "rule_coverage": 0.2609,
+      "response_length": 456
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "!cast mass -t kei -t Ed -t Ceph -t Lav",
+    "input_type": "fireball",
+    "response": "As you raise your hands, a surge of mystical energy erupts from your fingertips, enveloping the air with an otherworldly glow. The atmosphere in the room begins to shift, like the whispers of ancient incantations carried on the wind. Your eyes lock onto the targets of your spell: Kei, Ed, Ceph, and Lav, each of them frozen in anticipation, unsure of what to expect.\n\nHowever, as the Rules Arbiter has decreed, your intention to cast a mass spell on these targets remains unclear without specifying the exact spell. The arcane energies swirl around you, awaiting direction, like a tempest held at bay by the whims of the caster.\n\nTo proceed, you must declare the specific spell you intend to cast. Is it a Mass Healing Word, a Mass Suggestion, or perhaps a more arcane and mysterious incantation? The choice is yours, but know that the fate of your companions hangs in the balance.\n\nAs you ponder your decision, the air seems to thicken with anticipation. Kei, Ed, Ceph, and Lav exchange nervous glances, their faces illuminated only by the flickering torches that line the walls of the ancient chamber. The silence is palpable, a living entity that wraps itself around the room, waiting for your next move.\n\nOnce you specify the spell, the true nature of the magic will be revealed. The range and area of effect will be determined, and each target may be required to make a Saving Throw, depending on the spell's effects. The outcome will be far from certain, as the threads of fate are woven into the intricate tapestry of the arcane.\n\nThe choice is yours, brave adventurer. Will you unleash a benevolent blessing or a mystical malediction upon your companions? The scene is set, the stage is waiting, and the fate of Kei, Ed, Ceph, and Lav hangs precariously in the balance. What spell will you cast?",
+    "reference": "*it tells you to attack the paladin* ||*it tells you to kill the paladin*||",
+    "latency_ms": 7687,
+    "skipped": [
+      "memory"
+    ],
+    "scores": {
+      "rouge1": 0.0427,
+      "rouge2": 0.0,
+      "rougeL": 0.0427,
+      "bertscore": 0.7943,
+      "rule_coverage": 0.087,
+      "response_length": 313
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "*She tries to assess who looks the worst off... deciding it's probably Karmag, she walks over and heals him a bit before they move to the next room.*",
+    "input_type": "fireball",
+    "response": "As you scan the room, your gaze falls upon the battered forms of your companions. The air is thick with the smell of sweat, blood, and smoke, a noxious miasma that clings to your skin like a bad omen. The flickering torches cast eerie shadows on the walls, making it seem as though the very spirits of the land are watching your every move. You notice that Karmag, the gruff but lovable warrior, is slumped against the wall, his eyes glassy and unfocused. His armor is dented and scratched, and a deep gash runs across his forehead, oozing a slow trickle of blood. He looks like he's been through a meat grinder, and your heart goes out to him.\n\nYou hasten to his side, your footsteps echoing off the cold stone floor. As you kneel beside him, you gently turn his face towards you, assessing the extent of his injuries. His eyes flutter open, and he regards you with a faint glimmer of recognition. You can see the pain and exhaustion etched on his face, and you know you need to act quickly to stabilize him.\n\nYou begin to cast a healing spell, the words of the incantation flowing from your lips like a soothing balm. The air around Karmag seems to shimmer and glow, as a warm, golden light emanates from your outstretched hand. The magic washes over him, and you can see the tension in his body begin to ease, his breathing slowing as the pain starts to recede.\n\nAs the spell takes effect, Karmag's eyes clear, and he regards you with a hint of gratitude. He tries to speak, but his voice is hoarse and barely above a whisper. You don't need to make a Spell Attack roll, as healing spells don't require attack rolls, but you can see the tangible effects of your magic as Karmag's wounds begin to close, his vitality slowly returning.\n\nWith Karmag stabilized, you help him to his feet, and he leans on you, still a bit unsteady. The rest of the party looks on, their faces set with determination. They know that there's still more to come, and they're ready to face whatever challenges lie ahead. As you prepare to move on to the next room, you can't help but wonder what dangers or surprises await you. The darkness beyond the doorway seems to press in around you, like an unseen presence, waiting to strike.\n\nThe room falls silent, the only sound the heavy breathing of your companions, and the creaking of the old wooden door as it swings open, beckoning you into the unknown. What will you do next?",
+    "reference": "\"Mavil...?\" *she asks, not sure what more to say... but making it clear she noticed the spark.*",
+    "latency_ms": 6544,
+    "skipped": [
+      "memory"
+    ],
+    "scores": {
+      "rouge1": 0.0388,
+      "rouge2": 0.0087,
+      "rougeL": 0.0216,
+      "bertscore": 0.7914,
+      "rule_coverage": 0.1304,
+      "response_length": 439
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "*The violet magic came over her again, creating another shield to cover her arms, now covered in blade marks and gun shot wounds. She lowered her guard and stood there in front of her, the magic still coursing violently through her. Her voice was gruff, but calm and genuine*\n\n\"...ya think you can win?\"",
+    "input_type": "fireball",
+    "response": "As the violet magic swirls around her, its intense energy casting an ethereal glow on the surrounding environment, the air is electric with tension. The shield that now covers her arms, marred by blade marks and gunshot wounds, seems to pulse with a fierce inner light, a testament to her unyielding determination. With a deliberate movement, she lowers her guard, her posture relaxing ever so slightly as she stands before you, the magic still coursing violently through her veins.\n\nHer voice, gruff yet calm and genuine, cuts through the silence, the words hanging in the air like a challenge. \"...ya think you can win?\" The question is simple, yet laden with depth, inviting a response that will reveal the true intentions and convictions of the one she addresses. The atmosphere is heavy with anticipation, the outcome of this interaction hanging precariously in the balance.\n\nMechanically, this action is a role-playing interaction, free from the constraints of Ability Checks, Saving Throws, or Attack Rolls. No DC is set, as the focus is on the narrative and the emotional resonance of the moment, rather than on the dice. The scene unfolds as a direct result of her choice to lower her guard and speak, the consequences of which will be determined by the responses and actions that follow.\n\nThe silence that follows her question is palpable, the only sound the faint hum of the violet magic as it continues to envelop her. The stage is set, the players poised on the cusp of a pivotal moment, one that will shape the course of events to come. The response to her query will be crucial, as it will either escalate the situation or create an opportunity for a different path to be taken. The choice is yours, and the fate of this encounter hangs in the balance.",
+    "reference": "*That nat 20 really showed up when I didn't need it huh* *She smirked and chuckled. She walked up to her calmly and, instead of going for a grapple or a face punch, simply punched her in the stomach. Knowing she'd go down, she immediately scooped her up and made sure she wouldn't die from the blood loss, putting some bandages around her arms and head, though the wool made it particularly hard to do*\n\n*She patted her on the back with a smile, holding her close to make sure she was okay. She spoke again, somewhat jokingly*\n\n\"Woulda gone for the face, but...I wasn't gonna take that smile away from ya. Ya did good Melia, damn good\"",
+    "latency_ms": 5340,
+    "skipped": [
+      "memory"
+    ],
+    "scores": {
+      "rouge1": 0.1776,
+      "rouge2": 0.0376,
+      "rougeL": 0.1168,
+      "bertscore": 0.8031,
+      "rule_coverage": 0.3043,
+      "response_length": 304
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "\"Fucking ell you weren't kidding about this thing being the pinnacle\"",
+    "input_type": "fireball",
+    "response": "As you utter those words, a mix of awe and trepidation echoes through the grand, high-ceilinged chamber, your voice bouncing off the polished marble walls. The air is thick with an almost palpable sense of history and power, the very atmosphere seeming to vibrate with the weight of ancient knowledge and forgotten lore. Before you stands the pinnacle of mystical achievement, a towering spire of crystal that pulsates with a light that is both fierce and beautiful, casting kaleidoscopic patterns across the floor.\n\nYour companions, each lost in their own thoughts, turn towards you, their faces reflecting a range of emotions from wonder to apprehension. The silence that follows your statement is a heavy one, punctuated only by the soft hum of the crystal spire as it continues to emanate its powerful, otherworldly energy.\n\nGiven the nature of your action, which is purely an expression of your character's feelings towards the spectacle before you, no mechanical resolution is required. There's no need for an Ability Check, Saving Throw, or Attack Roll, as your statement is a role-playing expression aimed at enhancing the narrative and setting the tone for the group's reaction to this marvel.\n\nThe chamber remains unchanged, the crystal spire continuing its gentle pulsation, but the mood among your party has shifted. The weight of your realization seems to have dawned on them as well, and they look at the spire with a renewed sense of reverence and perhaps a touch of fear.\n\nOne of your companions, a scholar who has dedicated years to studying the ancient lore related to this place, steps forward, eyes wide with excitement and a hint of caution. \"Indeed, this is it. The pinnacle of our quest. But remember, with great power comes great responsibility. We must proceed with caution and respect,\" they advise, their voice barely above a whisper, as if afraid to disturb the balance of the chamber.\n\nThe moment hangs in anticipation, the group's next move potentially changing the course of their journey forever. The crystal spire, oblivious to the humans' deliberations, continues to shine, its power and mystery waiting to be unravelled.",
+    "reference": "\"Wanna see how long I can survive in this thing?\"",
+    "latency_ms": 4744,
+    "skipped": [
+      "memory"
+    ],
+    "scores": {
+      "rouge1": 0.0109,
+      "rouge2": 0.0,
+      "rougeL": 0.0109,
+      "bertscore": 0.7767,
+      "rule_coverage": 0.3043,
+      "response_length": 352
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "*Immediately stabs 8 times, not even bothering to stop when the mark appeared on the third one*",
+    "input_type": "fireball",
+    "response": "As you unleash a flurry of stabs, your blade dances in the dimly lit chamber, striking true with a deadly rhythm. The air is filled with the sound of scraping steel and the soft whoosh of your sword slicing through the air. Your target, the cloaker, seems taken aback by the ferocity of your attack, its dark, amorphous form wavering slightly as it attempts to defend itself.\n\nWith each strike, you feel a surge of adrenaline coursing through your veins, your focus solely on the destruction of your enemy. The mark appears on the third strike, a faint, glowing sigil that seems to sear itself into the cloaker's flesh. Yet, you press on, undeterred by this development, driven by a fierce determination to vanquish your foe.\n\nMechanically, your action translates to a series of Attack Rolls, each one a separate attempt to strike the cloaker. To determine the success of each strike, you'll need to roll a d20 and add your relevant ability modifier – in this case, your Strength modifier. The total result will be compared to the cloaker's Armor Class (AC), which we'll assume is 13 for the purposes of this encounter.\n\nLet's resolve each of the eight strikes:\n\n1. Roll: 1d20 + Strength modifier (please provide your Strength modifier)\n2. Roll: 1d20 + Strength modifier\n3. Roll: 1d20 + Strength modifier (this strike is where the mark appears)\n4. Roll: 1d20 + Strength modifier\n5. Roll: 1d20 + Strength modifier\n6. Roll: 1d20 + Strength modifier\n7. Roll: 1d20 + Strength modifier\n8. Roll: 1d20 + Strength modifier\n\nFor each roll, if the total equals or exceeds the cloaker's AC (13), the strike hits, and you'll deal the corresponding damage. If the roll falls short, the strike misses, and the cloaker avoids the blow.\n\nPlease provide your Strength modifier, and we'll proceed to roll the dice, determining the outcome of each strike and the overall result of your frenzied attack. The fate of the cloaker hangs in the balance, as the mark on its flesh seems to pulse with an otherworldly energy, waiting to see if your onslaught will prove decisive.",
+    "reference": "On Kaskin's chest, right where his heart is. The mark appears *He wipes the dagger off Kaskin's shirt and begins walking away* \"Enjoy your new cool brand Kas. Its there forever\" *He says as he walks and disappears into the streets outside* Head to the Twilight dawn and get inducted",
+    "latency_ms": 6037,
+    "skipped": [
+      "memory"
+    ],
+    "scores": {
+      "rouge1": 0.0938,
+      "rouge2": 0.0199,
+      "rougeL": 0.0691,
+      "bertscore": 0.7871,
+      "rule_coverage": 0.3478,
+      "response_length": 354
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": ") *The basilisk moves forward, now only with 6 targets to chose from* *Attack of Opportunity from Polearm Master as it moves forward.*",
+    "input_type": "combat",
+    "response": "As the basilisk lumbers forward, its scaly body glinting in the faint light of the dungeon, you seize the opportunity to strike. With your polearm at the ready, you dart forward, aiming to catch the beast off guard. The air is thick with tension as you position yourself for the perfect strike, your eyes locked onto the basilisk's vulnerable flank.\n\nWith a swift and deadly motion, you swing your polearm in a wide arc, aiming to catch the basilisk as it moves into range. The outcome of this attack will depend on your skill and precision. To determine the success of your attack, you must make an Attack Roll, pitting your prowess against the basilisk's formidable defenses.\n\nThe basilisk's Armor Class is 15, a daunting obstacle that will require a precise and powerful strike to overcome. Roll a d20 and add your relevant ability score modifier and proficiency bonus to the result. If the total equals or exceeds 15, your attack will hit its mark, and you'll have the chance to deal significant damage to the basilisk.\n\nThe fate of your companions hangs in the balance, and the basilisk's deadly gaze is still a threat to them all. Will your Attack Roll be enough to take down this fearsome foe, or will the basilisk prove too resilient to defeat? The outcome is far from certain, and only the roll of the dice will reveal the truth.\n\nPlease roll a d20 and add your relevant modifiers to determine the outcome of your Attack Roll. The result will decide the fate of your attack, and the consequences that follow will be shaped by your success or failure.",
+    "reference": "*Before the creature has the chance to do anything, Ephraim's blade flies out to demolish it in one strike, having been waiting for the perfect moment to strike.* *The basilisk comes forward and gets absolutely impaled on the polearm Ephraim wields, crumbling to the ground in death* *Just as they were appreciating the bolstering feeling inside of them, as suddenly as the basilisk arrived it is dead, and Beau cheers* \"Ain't that somethin, wonderful job!\"",
+    "latency_ms": 3138,
+    "skipped": [
+      "memory"
+    ],
+    "scores": {
+      "rouge1": 0.2017,
+      "rouge2": 0.0507,
+      "rougeL": 0.1289,
+      "bertscore": 0.8183,
+      "bleu": 0.0,
+      "chrf": 0.0,
+      "meteor": 0.0,
+      "rule_kw_precision": 0.0,
+      "rule_kw_recall": 0.0,
+      "rule_kw_f1": 0.0,
+      "rule_coverage": 0.3043,
+      "response_length": 275,
+      "distinct1": 0.5036,
+      "distinct2": 0.8495,
+      "llm_composite": null,
+      "narrative_quality": null,
+      "rules_accuracy": null,
+      "character_voice": null,
+      "relevance": null
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "*seeing as I am still stealthed, draws out shortbow*",
+    "input_type": "general",
+    "response": "As you remain frozen in the shadows, your eyes fixed intently on the unsuspecting guards, you slowly reach for the shortbow strapped to your back. The gentle creak of the leather quiver and the soft whisper of the bow's wooden limbs against your armor are the only sounds that accompany your movement. The air is heavy with tension, and the silence is almost palpable, punctuated only by the distant chirping of crickets and the faint rustling of leaves in the gentle breeze.\n\nWith deliberate care, you draw the shortbow from its resting place, your fingers wrapping around the familiar contours of the bow's grip. The weight of the bow feels reassuring in your hands, a comforting presence that seems to amplify your senses. As you hold the bow, you become acutely aware of the surroundings, your senses heightened to the point where you can almost feel the gaze of the guards, even though they remain oblivious to your presence.\n\nTo maintain your stealthy posture, you must now make a Dexterity (Stealth) check to ensure that your actions remain unnoticed. The DC for this check is 15, reflecting the challenging environment and the need for extreme caution. Roll a d20 and add your Dexterity modifier and Stealth skill level to the result. If the total equals or exceeds 15, you successfully draw your shortbow without alerting the guards.\n\nThe scene holds its breath, waiting for the outcome of your action. The guards continue their lazy patrol, their conversation meandering through the night air like a lazy stream. The darkness seems to vibrate with anticipation, as if the very shadows themselves are holding their breath in expectation of your next move. Will you remain a ghostly presence, or will your actions betray your position? The dice await your roll...",
+    "reference": "\"First blood there prime rib.\"",
+    "latency_ms": 1892,
+    "skipped": [
+      "memory"
+    ],
+    "scores": {
+      "rouge1": 0.0,
+      "rouge2": 0.0,
+      "rougeL": 0.0,
+      "bertscore": 0.781,
+      "bleu": 0.0,
+      "chrf": 0.0,
+      "meteor": 0.0,
+      "rule_kw_precision": 0.0,
+      "rule_kw_recall": 0.0,
+      "rule_kw_f1": 0.0,
+      "rule_coverage": 0.2609,
+      "response_length": 297,
+      "distinct1": 0.5452,
+      "distinct2": 0.9094,
+      "llm_composite": null,
+      "narrative_quality": null,
+      "rules_accuracy": null,
+      "character_voice": null,
+      "relevance": null
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "*sees the sudden rush of the creature, he is caught off guard but quickly shoots regardless, as a tiny dart flies towards its target*",
+    "input_type": "general",
+    "response": "As the creature bursts forth from the underbrush, its eyes fixed on you with an unblinking gaze, you swiftly raise your arm, the tiny dart at the ready. The air is electric with tension as the creature charges, its movements a blur of speed and ferocity. Your heart racing, you release the dart, watching in a mix of fascination and terror as it soars through the air, hurtling towards its mark.\n\nThe creature, seemingly oblivious to the danger, continues its relentless charge, its jaws agape, revealing rows of razor-sharp teeth. The dart, a tiny, almost insignificant projectile, flies straight and true, heading directly for the creature's exposed chest.\n\nTo determine the success of your hastily made shot, you must make an Attack Roll. The Attack Roll is a crucial moment, as it will decide whether your dart finds its mark or falls harmlessly to the ground. The DC, set by the creature's formidable Armor Class, is 18. A roll of 18 or higher will result in a hit, while anything lower will miss the creature.\n\nYou take a deep breath, focusing your mind, and roll the dice... The result is... *rolls* ...a 19! Your dart, propelled by a combination of luck and quick reflexes, shoots straight into the creature's chest, embedding itself deep within its flesh.\n\nThe creature's charge falters, its eyes widening in surprise as it staggers, the dart's impact momentarily stunning it. The air is filled with the sound of labored breathing, and for a brief, shining moment, you have the upper hand. But the creature is far from defeated, and it will not take long for it to regain its composure and launch a counterattack. What will you do next?",
+    "reference": "*he then runs 25 more feet for a total of 35*",
+    "latency_ms": 2199,
+    "skipped": [
+      "memory"
+    ],
+    "scores": {
+      "rouge1": 0.02,
+      "rouge2": 0.0067,
+      "rougeL": 0.02,
+      "bertscore": 0.7935,
+      "bleu": 0.0,
+      "chrf": 0.0,
+      "meteor": 0.0,
+      "rule_kw_precision": 0.0,
+      "rule_kw_recall": 0.0,
+      "rule_kw_f1": 0.0,
+      "rule_coverage": 0.1739,
+      "response_length": 283,
+      "distinct1": 0.5398,
+      "distinct2": 0.9062,
+      "llm_composite": null,
+      "narrative_quality": null,
+      "rules_accuracy": null,
+      "character_voice": null,
+      "relevance": null
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "!cast mass -t kei -t Ed -t Ceph -t Lav",
+    "input_type": "combat",
+    "response": "As the air thickens with anticipation, the player raises their hands, and a faint, pulsating glow emanates from their fingertips. The words \"!cast mass -t kei -t Ed -t Ceph -t Lav\" echo through the chamber, a mystical incantation that hints at a powerful, far-reaching spell. The targets, Kei, Ed, Ceph, and Lav, stand frozen, unsure of what to expect.\n\nHowever, the specifics of the spell remain shrouded in mystery, leaving the outcome uncertain. The Rules Arbiter's voice whispers in your ear, reminding you that the spell's effects, as well as the required Ability Check, Saving Throw, or Attack Roll, depend on the specific incantation being cast.\n\nAs the magical energy builds, the atmosphere becomes electric, and the chamber falls silent. The player's companions, Kei, Ed, Ceph, and Lav, exchange nervous glances, their eyes darting toward the spellcaster with a mix of fascination and trepidation.\n\nTo determine the outcome of this mystical endeavor, the player must reveal the specific spell being cast. Is it a healing benediction, a protective barrier, or perhaps a more arcane and mysterious effect? The spellcaster's spellcasting ability modifier and proficiency bonus will influence the DC for any required saving throws, and the Rules Arbiter awaits this crucial information to guide the outcome.\n\nAs the tension builds, the player's choice will shape the fate of their companions and the course of the adventure. Will the spell bring solace, protection, or perhaps unintended consequences? The decision is yours, brave adventurer. Please specify the spell being cast to unlock the secrets of this mystical moment.\n\nWhat spell will you cast, brave adventurer? Will it be a spell from the schools of Evocation, Enchantment, or perhaps something more exotic? The fate of Kei, Ed, Ceph, and Lav hangs in the balance, awaiting your response.",
+    "reference": "*it tells you to attack the paladin* ||*it tells you to kill the paladin*||",
+    "latency_ms": 2196,
+    "skipped": [
+      "memory"
+    ],
+    "scores": {
+      "rouge1": 0.0571,
+      "rouge2": 0.0,
+      "rougeL": 0.0381,
+      "bertscore": 0.7919,
+      "bleu": 0.0,
+      "chrf": 0.0,
+      "meteor": 0.0,
+      "rule_kw_precision": 0.1111,
+      "rule_kw_recall": 1.0,
+      "rule_kw_f1": 0.2,
+      "rule_coverage": 0.3913,
+      "response_length": 295,
+      "distinct1": 0.5216,
+      "distinct2": 0.87,
+      "llm_composite": null,
+      "narrative_quality": null,
+      "rules_accuracy": null,
+      "character_voice": null,
+      "relevance": null
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "*She tries to assess who looks the worst off... deciding it's probably Karmag, she walks over and heals him a bit before they move to the next room.*",
+    "input_type": "exploration",
+    "response": "As you scan the room, your gaze sweeps across the battered forms of your companions, each bearing the scars of the intense battle you've just endured. The air is heavy with the smell of sweat, blood, and the acrid tang of ozone from the magical energies that have been unleashed. The flickering torches cast eerie shadows on the walls, making it seem as though the very spirits of the land are watching your every move.\n\nYour eyes settle on Karmag, and you notice that he's leaning against the wall, his chest heaving with labored breaths. His armor is dented and scratched, and a trickle of blood runs down his cheek from a gash above his eyebrow. He looks up at you, his eyes cloudy with pain and fatigue. You can tell that he's struggling to stay upright, and you sense that he's the worst off among your companions.\n\nYou walk over to Karmag, your footsteps echoing off the cold stone floor. As you approach, you notice that his wounds seem to be a mix of cuts, bruises, and possibly some internal damage. You'll need to act quickly to stabilize him before you can move on to the next room.\n\nTo heal Karmag, you'll need to make a Wisdom (Medicine) check if you're using a kit, or a Spell Attack roll if you're casting a healing spell. The DC for this check is 15, reflecting the moderately complex nature of Karmag's injuries.\n\nYou begin to tend to Karmag's wounds, carefully cleaning and dressing them as you work. As you focus your attention on his injuries, you feel a sense of calm wash over you, and your hands move with a steady, practiced ease. The sound of Karmag's labored breathing slows, and his eyes seem to clear slightly as you work.\n\nRolling a Wisdom (Medicine) check or a Spell Attack roll, you get... (please roll a d20 and add your relevant ability score modifier and skill level). If the total equals or exceeds 15, you successfully heal Karmag, and he's able to stand and move with you to the next room. If the roll falls short, Karmag's injuries may not be fully stabilized, and he may struggle to keep up with the group.\n\nThe fate of Karmag, and the success of your mission, hangs in the balance. What is the result of your roll?",
+    "reference": "\"Mavil...?\" *she asks, not sure what more to say... but making it clear she noticed the spark.*",
+    "latency_ms": 2743,
+    "skipped": [
+      "memory"
+    ],
+    "scores": {
+      "rouge1": 0.0379,
+      "rouge2": 0.0048,
+      "rougeL": 0.019,
+      "bertscore": 0.7913,
+      "bleu": 0.0,
+      "chrf": 0.0,
+      "meteor": 0.0,
+      "rule_kw_precision": 0.0,
+      "rule_kw_recall": 0.0,
+      "rule_kw_f1": 0.0,
+      "rule_coverage": 0.3913,
+      "response_length": 392,
+      "distinct1": 0.4988,
+      "distinct2": 0.8738,
+      "llm_composite": null,
+      "narrative_quality": null,
+      "rules_accuracy": null,
+      "character_voice": null,
+      "relevance": null
+    }
+  }
+]

@@ -1,0 +1,762 @@
+[
+  {
+    "experiment": "Full Pipeline (Groq)",
+    "input": ") *The basilisk moves forward, now only with 6 targets to chose from* *Attack of Opportunity from Polearm Master as it moves forward.*",
+    "input_type": "fireball",
+    "response": "As the basilisk takes a deliberate step forward, its unblinking gaze sweeps across the remaining six targets, its malevolent presence seeming to draw the very air out of the room. The warm glow of the Yawning Portal Tavern's fire pit casts a golden light on the scene, but it's a stark contrast to the chill that runs down your spine as the basilisk's eyes lock onto its next victim.\n\nSeizing the opportunity, you swiftly bring your polearm to bear, ready to strike as the basilisk moves into range. The wooden floor creaks beneath your feet as you shift your weight, the sound echoing through the tense silence. Your eyes are fixed intently on the basilisk, your grip on the polearm firm and resolute.\n\nTo determine the success of your attack, you'll need to make an Attack Roll, using your polearm's Attack Bonus. The basilisk's Armor Class is 15, so you'll need to roll a d20 and add your Attack Bonus to the result. If the total equals or exceeds 15, your attack will hit.\n\nRolling a d20 for the Attack Roll... *rolls* The result is: 12. With your Attack Bonus of +3, the total comes out to be: 15. The attack hits, striking the basilisk with precision and force.\n\nYour polearm bites deep into the basilisk's scales, the force of the blow causing it to stumble slightly as it continues its advance. The basilisk's gaze falters for a moment, its attention drawn to the sudden pain, and the room seems to hold its collective breath as the creature's malevolent energy wavers.\n\nDurnan, ever the observant barkeep, watches the scene unfold with interest, his eyes darting between you and the basilisk. The patrons of the Yawning Portal Tavern hold their breath, waiting to see how the situation will unfold.\n\nThe basilisk, however, is far from defeated. Its gaze refocuses, and it takes another step forward, its eyes burning with an unholy intensity. The air seems to grow colder, the shadows cast by the fire pit twisting and writhing like living things.\n\nThe situation remains precarious, and the outcome hangs in the balance. What will you do next?",
+    "reference": "*Before the creature has the chance to do anything, Ephraim's blade flies out to demolish it in one strike, having been waiting for the perfect moment to strike.* *The basilisk comes forward and gets absolutely impaled on the polearm Ephraim wields, crumbling to the ground in death* *Just as they were appreciating the bolstering feeling inside of them, as suddenly as the basilisk arrived it is dead, and Beau cheers* \"Ain't that somethin, wonderful job!\"",
+    "latency_ms": 2637,
+    "skipped": [],
+    "scores": {
+      "rouge1": 0.1716,
+      "rouge2": 0.0499,
+      "rougeL": 0.1038,
+      "bertscore": 0.8092,
+      "rule_coverage": 0.1304,
+      "response_length": 356
+    }
+  },
+  {
+    "experiment": "Full Pipeline (Groq)",
+    "input": "*seeing as I am still stealthed, draws out shortbow*",
+    "input_type": "fireball",
+    "response": "As you remain stealthed, shrouded in the shadows of the Yawning Portal Tavern, your movements are as silent as a summer breeze. With deliberate care, you slowly reach for the shortbow at your side, the leather quiver and the bow itself a comforting presence. The warm glow of the fire pit casts flickering shadows on the walls, but your form remains obscured, hidden from prying eyes.\n\nWith a gentle touch, you draw out the shortbow, the wood creaking ever so slightly as you bring it to the ready. The sound is minuscule, lost amidst the murmur of hushed conversations and the clinking of glasses from the patrons. Durnan, the barkeep, continues to polish a mug with a white apron, his gaze sweeping across the room, yet his eyes do not seem to settle on your stealthy form.\n\nThe shortbow, now at the ready, feels balanced in your hands, its weight a reassurance of the power it holds. You can feel the tension in the string, waiting to be released. The air is thick with anticipation, the atmosphere in the tavern ripe with the promise of adventure and danger lurking just beneath the surface.\n\nAs you stand there, shortbow in hand, the world around you seems to hold its breath. The patrons continue their conversations, oblivious to the subtle shift in the room's dynamics. Durnan, ever the observant barkeep, raises an eyebrow, his gaze lingering on the spot where you stand, though he does not seem to have noticed you explicitly. The shadows dance around you, as if urging you to take the next step, to unleash the potential that now rests in your hands.\n\nThe scene is set, the outcome of your action a subtle yet significant shift in the balance of the room. You have drawn your shortbow, and now, the possibilities unfold before you like an open road, waiting to be explored. What will you do next?",
+    "reference": "\"First blood there prime rib.\"",
+    "latency_ms": 2091,
+    "skipped": [],
+    "scores": {
+      "rouge1": 0.0062,
+      "rouge2": 0.0,
+      "rougeL": 0.0062,
+      "bertscore": 0.7801,
+      "rule_coverage": 0.0435,
+      "response_length": 319
+    }
+  },
+  {
+    "experiment": "Full Pipeline (Groq)",
+    "input": "*sees the sudden rush of the creature, he is caught off guard but quickly shoots regardless, as a tiny dart flies towards its target*",
+    "input_type": "fireball",
+    "response": "As the basilisk surges forward, its gaze sweeps across the room, and for a moment, it seems to lock onto you, despite your stealthy position. The air is thick with tension, and the patrons of the Yawning Portal Tavern hold their breath, anticipating the creature's next move. The warm glow of the fire pit casts eerie shadows on the walls, and the smell of ale and roasting meat wafts through the air, a stark contrast to the danger that now threatens to engulf the room.\n\nWith a swift motion, you draw your shortbow and release the string, sending a tiny dart flying towards the basilisk. The projectile soars through the air, its trajectory true, but the basilisk's scales glint in the firelight, and its unblinking gaze seems to dare the dart to find its mark.\n\nTo determine the success of your shot, you must make an attack roll. Rolling a d20 and adding your Dexterity modifier (which is +3 in your case, as a skilled ranger) and your proficiency bonus (+2, as you are proficient with the shortbow), you get: **d20 roll: 12**, +3 (Dexterity modifier), +2 (proficiency bonus) = 17.\n\nWith a total of 17, your attack roll exceeds the basilisk's Armor Class of 16, and your dart finds its mark. The tiny projectile strikes the basilisk with a soft thud, embedding itself in the creature's scaly hide. The basilisk's gaze falters for a moment, its attention drawn to the sudden pain, and it lets out a low, rumbling hiss.\n\nThe room holds its breath as the basilisk's reaction becomes clear. Its body begins to stiffen, its movements slowing as the effects of the dart's poison take hold. However, the basilisk is far from defeated, and its malevolent gaze begins to sweep the room once more, searching for its next target.\n\nDurnan, the barkeep, watches the scene unfold with a mixture of fascination and concern, his eyes darting between you and the basilisk. \"By the gods,\" he mutters, \"you've got its attention now. What will you do next?\" The fate of the Yawning Portal Tavern and its patrons hangs in the balance, as the basilisk's next move could spell disaster for all. What will you do?",
+    "reference": "*he then runs 25 more feet for a total of 35*",
+    "latency_ms": 2330,
+    "skipped": [],
+    "scores": {
+      "rouge1": 0.0311,
+      "rouge2": 0.0156,
+      "rougeL": 0.0207,
+      "bertscore": 0.7891,
+      "rule_coverage": 0.3913,
+      "response_length": 367
+    }
+  },
+  {
+    "experiment": "Full Pipeline (Groq)",
+    "input": "!cast mass -t kei -t Ed -t Ceph -t Lav",
+    "input_type": "fireball",
+    "response": "As you stand within the warm, golden glow of the Yawning Portal Tavern, the murmur of hushed conversations and the clinking of glasses fills the air. The fire pit crackles, casting flickering shadows on the walls as the patrons enjoy their evening. Your eyes scan the room, locking onto your companions: Kei, Ed, Ceph, and Lav. With a swift motion, you begin to weave a intricate pattern with your hands, and your voice whispers an ancient incantation. The air around you seems to vibrate with magical energy as you attempt to cast a spell.\n\nHowever, the specifics of your spell remain unclear. The words \"Mass\" and the targets \"-t kei -t Ed -t Ceph -t Lav\" are uttered, but the exact nature of the spell you intend to cast is not defined. The Rules Arbiter's voice echoes in your mind, reminding you that to cast a spell, you must specify the spell being cast. The possibilities are numerous: Mass Suggestion, Mass Healing Word, or perhaps another powerful spell.\n\nAs you pause, considering the Arbiter's ruling, the room falls silent. The patrons turn to look at you, their faces filled with a mix of curiosity and concern. Durnan the Barkeep, ever vigilant, raises an eyebrow, his eyes narrowing slightly as he watches the scene unfold.\n\nTo proceed, you must clarify the spell you intend to cast. Will you choose a spell that brings healing and protection to your companions, or perhaps one that manipulates the minds of those around you? The choice is yours, but the fate of your spell hangs in the balance.\n\nPlease specify the spell you wish to cast, and the outcome will be determined accordingly. Remember, the mechanical requirements of the spell, including the required spell slots and saving throws, will be taken into account. The scene is set, and the magic is waiting to be unleashed. What will you do?",
+    "reference": "*it tells you to attack the paladin* ||*it tells you to kill the paladin*||",
+    "latency_ms": 2297,
+    "skipped": [],
+    "scores": {
+      "rouge1": 0.0364,
+      "rouge2": 0.0,
+      "rougeL": 0.0364,
+      "bertscore": 0.7932,
+      "rule_coverage": 0.087,
+      "response_length": 314
+    }
+  },
+  {
+    "experiment": "Full Pipeline (Groq)",
+    "input": "*She tries to assess who looks the worst off... deciding it's probably Karmag, she walks over and heals him a bit before they move to the next room.*",
+    "input_type": "fireball",
+    "response": "As you scan the room, your eyes darting from one companion to the next, you notice the varied degrees of wear and tear on each of their faces. The warmth of the Yawning Portal Tavern's fire pit casts a golden glow on the scene, but it does little to alleviate the concerns etched on their features. Your gaze lingers on Karmag, and you sense that he's the one who needs the most attention. The memory of the basilisk's sudden rush and the chaos that ensued still lingers, and you recall the brief, intense exchange of attacks and spells that left everyone reeling.\n\nWith a determined stride, you walk over to Karmag, your footsteps quiet on the tavern's wooden floor. As you approach, you notice the faint scent of sweat and the metallic tang of blood wafting from his direction. You gently take his arm, and he looks up at you with a mix of gratitude and wariness.\n\nTo assess the extent of his injuries, you'll need to make a Medicine check. The DC for this check is 15, reflecting the complexity of evaluating wounds in the midst of chaos. Please roll a d20 and add your Medicine skill modifier to the result.\n\nAssuming you succeed in your Medicine check, you'll then need to cast a healing spell to tend to Karmag's wounds. As the Rules Arbiter has indicated, the DC for the Spellcasting Ability check depends on the specific spell being used. For a standard healing spell like Cure Wounds, the effect is fixed, and no DC is applicable.\n\nAs you prepare to cast the spell, the atmosphere in the tavern seems to grow quieter, as if the patrons are holding their collective breath in anticipation of what's to come. Durnan the Barkeep watches from behind the counter, his eyes narrowed in concern. The air is thick with tension, and the only sound is the soft crackling of the fire pit.\n\nPlease roll the necessary checks, and I'll guide the scene forward based on the outcomes. Will your Medicine check reveal the full extent of Karmag's injuries, and will your healing spell be enough to stabilize him before you proceed to the next room? The fate of your companion hangs in the balance, and the choice is yours.",
+    "reference": "\"Mavil...?\" *she asks, not sure what more to say... but making it clear she noticed the spark.*",
+    "latency_ms": 2453,
+    "skipped": [],
+    "scores": {
+      "rouge1": 0.0346,
+      "rouge2": 0.005,
+      "rougeL": 0.0247,
+      "bertscore": 0.7929,
+      "rule_coverage": 0.3043,
+      "response_length": 378
+    }
+  },
+  {
+    "experiment": "Full Pipeline (Groq)",
+    "input": "*The violet magic came over her again, creating another shield to cover her arms, now covered in blade marks and gun shot wounds. She lowered her guard and stood there in front of her, the magic still coursing violently through her. Her voice was gruff, but calm and genuine*\n\n\"...ya think you can win?\"",
+    "input_type": "fireball",
+    "response": "As the violet magic swirls around her, the air is electric with anticipation. The Yawning Portal Tavern, once a hub of warm conversation and clinking glasses, has transformed into a battleground. The sounds of clashing steel and the murmur of hushed conversations have given way to an unsettling silence, punctuated only by the soft hum of magic. Durnan the Barkeep, ever the steadfast observer, watches with a keen eye from behind the bar, his expression a mask of concern.\n\nThe player's words, laced with a gruff calmness, hang in the air like a challenge. The vampire, its eyes fixed intently on the player, seems to be savoring the moment. The charm effect, still active, threatens to undermine the player's resolve. To break free from its grasp, a Wisdom saving throw is required, with a daunting DC of 17.\n\nTo proceed, a roll of a d20 and the addition of the player's Wisdom saving throw modifier will determine the outcome. If the total equals or exceeds 17, the charm effect is broken, and the player regains control over their actions. However, if the result falls short of the DC, the vampire's charm remains in effect, potentially altering the course of the encounter.\n\nThe dice rolls: **d20 roll: 14, Wisdom saving throw modifier: +3**. The total result is **17**. With this roll, the player's Wisdom saving throw meets the required DC, and the charm effect is successfully broken.\n\nAs the magic shield continues to course through her arms, now marred by blade marks and gunshot wounds, the player's gaze never wavers. With the charm effect lifted, a sense of clarity washes over her, and her voice remains steady, a testament to her unyielding determination. The vampire's eyes narrow, its gaze burning with an unholy intensity, as it begins to circle around the player, searching for an opening to strike.\n\nThe scene is set, the stakes are high, and the battle of wills has only just begun. The player's actions, now unencumbered by the charm effect, will dictate the trajectory of this perilous encounter. What will she do next?",
+    "reference": "*That nat 20 really showed up when I didn't need it huh* *She smirked and chuckled. She walked up to her calmly and, instead of going for a grapple or a face punch, simply punched her in the stomach. Knowing she'd go down, she immediately scooped her up and made sure she wouldn't die from the blood loss, putting some bandages around her arms and head, though the wool made it particularly hard to do*\n\n*She patted her on the back with a smile, holding her close to make sure she was okay. She spoke again, somewhat jokingly*\n\n\"Woulda gone for the face, but...I wasn't gonna take that smile away from ya. Ya did good Melia, damn good\"",
+    "latency_ms": 2164,
+    "skipped": [],
+    "scores": {
+      "rouge1": 0.1384,
+      "rouge2": 0.0253,
+      "rougeL": 0.0839,
+      "bertscore": 0.797,
+      "rule_coverage": 0.2609,
+      "response_length": 346
+    }
+  },
+  {
+    "experiment": "Full Pipeline (Groq)",
+    "input": "\"Fucking ell you weren't kidding about this thing being the pinnacle\"",
+    "input_type": "fireball",
+    "response": "As you utter the words, \"Fucking hell you weren't kidding about this thing being the pinnacle,\" the air in the Yawning Portal Tavern seems to vibrate with a mix of awe and trepidation. The patrons, still reeling from the sudden appearance of the basilisk, exchange nervous glances, their faces pale and drawn. The atmosphere is heavy with the weight of unspoken questions: What other secrets lie hidden in this ancient tavern? What other dangers lurk in the shadows, waiting to strike?\n\nDurnan, the grizzled barkeep, polishes a mug with a dirty apron, his eyes fixed on you with a knowing glint. He's heard it all before, but there's a hint of curiosity in his gaze, a sense that he's waiting to see how you'll fare against the challenges that lie ahead.\n\nYour companions, still recovering from the recent battle, regard you with a mix of concern and admiration. Karmag, now partially healed, nods in agreement, his eyes never leaving the basilisk's lifeless form. The others, Ed, Ceph, and Lav, seem to be processing the implications of your statement, their faces set with determination.\n\nThe violet magic that still swirls around you seems to pulse with an inner light, as if responding to your words. The shield that protects your arms glows with an intense, fierce energy, a testament to your unyielding spirit.\n\nMechanically, your statement is a role-playing expression, and as such, it doesn't require any specific ability checks, saving throws, or attack rolls. There is no DC set, as this action is purely narrative-driven. The outcome is solely a product of the story, and the scene unfolds without any mechanical interruptions.\n\nAs the tension in the room begins to dissipate, the patrons slowly return to their drinks, their conversations hushed and subdued. The Yawning Portal Tavern, once again, becomes a hub of quiet activity, the patrons waiting with bated breath to see what other adventures the night may bring. The stage is set, the players are ready, and the story is waiting to unfold. What will you do next?",
+    "reference": "\"Wanna see how long I can survive in this thing?\"",
+    "latency_ms": 2156,
+    "skipped": [],
+    "scores": {
+      "rouge1": 0.0279,
+      "rouge2": 0.0168,
+      "rougeL": 0.0223,
+      "bertscore": 0.7992,
+      "rule_coverage": 0.3043,
+      "response_length": 340
+    }
+  },
+  {
+    "experiment": "Full Pipeline (Groq)",
+    "input": "*Immediately stabs 8 times, not even bothering to stop when the mark appeared on the third one*",
+    "input_type": "fireball",
+    "response": "As you unleash a frenzied flurry of stabs, the air is filled with the sound of clashing steel and the scent of sweat and adrenaline. Your blades dance across the target, striking true time and again, but with varying degrees of success. The mark appears on the third strike, a glowing sigil that seems to sear itself into the creature's flesh, but you press on, undeterred.\n\nTo determine the outcome of your attack, we must consult the dice. For each of the eight stabs, you'll need to make an Attack Roll, rolling a d20 and adding your relevant ability modifier. Since you're making a melee attack, we'll assume you're using your Strength modifier, which is +3 in your case.\n\nLet's roll the dice for each stab:\n\n1. Roll: 14 + 3 = 17 (hits)\n2. Roll: 6 + 3 = 9 (misses)\n3. Roll: 10 + 3 = 13 (hits, and the mark appears)\n4. Roll: 18 + 3 = 21 (hits)\n5. Roll: 4 + 3 = 7 (misses)\n6. Roll: 12 + 3 = 15 (hits)\n7. Roll: 15 + 3 = 18 (hits)\n8. Roll: 7 + 3 = 10 (misses)\n\nNow, let's compare these rolls to the target's Armor Class. Assuming the target is the basilisk, the DC is 15. If the target were the mummy or mummy lord, the DC would be 17.\n\nAgainst the basilisk, your successful hits are: 1, 3, 4, 6, and 7. These strikes land true, biting deep into the creature's scales and dealing significant damage. The mark on the third strike seems to amplify the effect, causing the basilisk to recoil in pain.\n\nHowever, your misses (2, 5, and 8) leave you open to counterattack, and the basilisk's gaze sweeps towards you, its eyes blazing with malevolent intent. Durnan, the barkeep, watches in awe as the battle rages on, his eyes darting between you and the creature.\n\nThe basilisk, now wounded and enraged, prepares to unleash its deadly gaze upon you. The air is electric with tension as the creature's eyes lock onto you, and the outcome hangs in the balance. What will you do next?",
+    "reference": "On Kaskin's chest, right where his heart is. The mark appears *He wipes the dagger off Kaskin's shirt and begins walking away* \"Enjoy your new cool brand Kas. Its there forever\" *He says as he walks and disappears into the streets outside* Head to the Twilight dawn and get inducted",
+    "latency_ms": 2598,
+    "skipped": [],
+    "scores": {
+      "rouge1": 0.0943,
+      "rouge2": 0.0249,
+      "rougeL": 0.0844,
+      "bertscore": 0.7834,
+      "rule_coverage": 0.3478,
+      "response_length": 356
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": ") *The basilisk moves forward, now only with 6 targets to chose from* *Attack of Opportunity from Polearm Master as it moves forward.*",
+    "input_type": "fireball",
+    "response": "As the basilisk lumbers forward, its unblinking gaze sweeping across the room, the air thickens with tension. The patrons of the Yawning Portal Tavern hold their collective breath, eyes fixed on the unfolding drama. The basilisk's movements are deliberate, calculated, and its intentions are clear: it has six targets to choose from, and it will not be deterred.\n\nYou, ever vigilant, seize the opportunity to strike. With the precision of a seasoned warrior, you take advantage of the Attack of Opportunity afforded to you by your mastery of the polearm. Your weapon, an extension of your body, flashes in the firelight as you swing it in a wide arc, aiming to intercept the basilisk's advance.\n\nThe blade bites deep into the basilisk's scaly hide, but the creature's momentum carries it forward, undeterred. The sound of clashing steel and the sickening crunch of flesh echo through the tavern, accompanied by the acrid scent of ozone and the faint tang of reptilian musk. The basilisk's gaze never wavers, its attention fixed on its chosen prey.\n\nThe basilisk's movement brings it within striking distance of its target, and it raises a clawed foot, poised to deliver a crushing blow. The room holds its breath, anticipating the outcome of this deadly dance. Durnan, the barkeep, watches with a mixture of fascination and concern, his eyes darting between the combatants as he calculates the odds of the tavern's survival.\n\nThe basilisk's current position puts it in close proximity to the party, and its gaze seems to be fixed on one of them. The air is electric with anticipation, the outcome hanging precariously in the balance. The question on everyone's mind is: who will be the basilisk's next target, and will they be able to withstand its deadly gaze?",
+    "reference": "*Before the creature has the chance to do anything, Ephraim's blade flies out to demolish it in one strike, having been waiting for the perfect moment to strike.* *The basilisk comes forward and gets absolutely impaled on the polearm Ephraim wields, crumbling to the ground in death* *Just as they were appreciating the bolstering feeling inside of them, as suddenly as the basilisk arrived it is dead, and Beau cheers* \"Ain't that somethin, wonderful job!\"",
+    "latency_ms": 1527,
+    "skipped": [
+      "rag"
+    ],
+    "scores": {
+      "rouge1": 0.1947,
+      "rouge2": 0.0529,
+      "rougeL": 0.1263,
+      "bertscore": 0.8162,
+      "rule_coverage": 0.087,
+      "response_length": 293
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": "*seeing as I am still stealthed, draws out shortbow*",
+    "input_type": "fireball",
+    "response": "As you draw out your shortbow, the worn wooden limb creaks softly in the dimly lit atmosphere of the Yawning Portal Tavern. The patrons, still reeling from the chaos that erupted moments prior, are oblivious to your stealthy movement. Durnan the Barkeep, polishing a mug with a dirty apron, raises an eyebrow in your direction, but his gaze is fleeting, and he returns to his task, none the wiser.\n\nThe air is heavy with tension, the scent of sweat, smoke, and spilled ale hanging like a miasma over the room. The basilisk, now closer to its potential prey, its gaze sweeps across the room, searching for its next target. Your companions, battered and bruised, stand frozen, awaiting the creature's next move.\n\nWith your shortbow at the ready, you take aim, your eyes locked onto the basilisk. The violet magic that still courses through the air seems to pulse in rhythm with your heartbeat, as if sensing your intent. The bowstring, taut and ready, whispers a promise of swift and silent death.\n\nAs you prepare to release the arrow, the room holds its breath, the only sound the soft creaking of the old wooden beams and the distant murmur of hushed conversations from the tavern's patrons. The basilisk, sensing the weight of your gaze, begins to turn, its cold, reptilian eyes locking onto you.\n\nThe moment hangs, suspended like a drop of water on the edge of a leaf, as you prepare to unleash your arrow. The outcome hangs in the balance, waiting for the slightest movement, the softest whisper of the bowstring's release.\n\nThe scene is set, the players are poised, and the fate of the Yawning Portal Tavern hangs in the balance. The question remains: will your arrow find its mark, or will the basilisk prove too formidable a foe? The choice is yours, and the consequences will be yours to bear.",
+    "reference": "\"First blood there prime rib.\"",
+    "latency_ms": 1625,
+    "skipped": [
+      "rag"
+    ],
+    "scores": {
+      "rouge1": 0.0,
+      "rouge2": 0.0,
+      "rougeL": 0.0,
+      "bertscore": 0.7797,
+      "rule_coverage": 0.0,
+      "response_length": 313
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": "*sees the sudden rush of the creature, he is caught off guard but quickly shoots regardless, as a tiny dart flies towards its target*",
+    "input_type": "fireball",
+    "response": "As the basilisk charges forward, its scaly body undulating with each step, the air is filled with an almost palpable sense of dread. The patrons of the Yawning Portal Tavern scramble to get out of the way, their faces etched with terror. Durnan the Barkeep, ever the stalwart, stands firm behind the bar, his eyes fixed intently on the unfolding chaos.\n\nYou, still stealthed, swiftly draw out your shortbow and release a tiny dart towards the basilisk. The dart flies through the air, its trajectory true, as it hurtles towards the creature's exposed flesh. Time seems to slow down as the dart closes in on its target, the only sound the soft whoosh of the dart's passage and the heavy breathing of the basilisk.\n\nThe dart strikes the basilisk with a faint thud, embedding itself deep within the creature's scaly hide. The basilisk's unblinking gaze falters for a moment, its eyes flicking towards the source of the sudden pain. A low, rumbling growl emanates from the creature's throat, a sound that sends shivers down the spines of even the most hardened adventurers.\n\nThe basilisk's body language shifts, its attention now focused on you, the stealthy archer. Its gaze locks onto your position, and it begins to move towards you with a slow, deliberate pace. The air around you seems to grow colder, as if the very presence of the basilisk is enough to draw the warmth out of the atmosphere.\n\nAs the basilisk moves closer, its gaze fixed intently on you, the patrons of the tavern hold their collective breath. Durnan's voice rings out, a calm and steady tone amidst the chaos. \"Well, well, well. Looks like we've got a bit of a situation on our hands. Anyone care to place a wager on the outcome?\"\n\nThe scene is set, the tension palpable. The basilisk is now focused on you, its attention drawn by the dart's impact. The question is, what will you do next? Will you continue to attack from the shadows, or will you reveal yourself and face the basilisk head-on? The choice is yours, and the fate of the Yawning Portal Tavern hangs in the balance.",
+    "reference": "*he then runs 25 more feet for a total of 35*",
+    "latency_ms": 1456,
+    "skipped": [
+      "rag"
+    ],
+    "scores": {
+      "rouge1": 0.0158,
+      "rouge2": 0.0053,
+      "rougeL": 0.0158,
+      "bertscore": 0.7842,
+      "rule_coverage": 0.0435,
+      "response_length": 359
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": "!cast mass -t kei -t Ed -t Ceph -t Lav",
+    "input_type": "fireball",
+    "response": "As the basilisk charges forward, its scaly body undulating with each step, the air is filled with an eerie, unsettling energy. The patrons of the Yawning Portal Tavern scramble to get out of the way, their faces etched with fear and panic. Durnan, the stalwart barkeep, stands firm behind the bar, his eyes fixed intently on the chaos unfolding before him.\n\nYou, still shrouded in the shadows, raise your hands, and your voice rings out across the tavern, \"Mass...!\" The word hangs in the air, heavy with anticipation, as you specify your targets: \"-t Kei, -t Ed, -t Ceph, -t Lav.\" The names seem to echo through the room, as if the very fabric of reality is being reshaped by your words.\n\nA blinding flash of light erupts from your outstretched hands, illuminating the dark recesses of the tavern. The air seems to vibrate with magical energy, as a shimmering aura envelops the targeted individuals. Kei, Ed, Ceph, and Lav are suddenly bathed in a soft, ethereal glow, their bodies beginning to shift and contort in ways that defy the natural order.\n\nThe basilisk, momentarily distracted by the sudden burst of light, hesitates in its charge. Its unblinking gaze darts towards you, and for an instant, you sense a flicker of confusion in its ancient, reptilian mind. The creature's body language betrays a hint of uncertainty, as if it is reassessing the situation in light of this new, mystical development.\n\nThe patrons, still cowering in fear, can't help but watch in awe as the targeted individuals begin to undergo a transformation. Kei's eyes gleam with a newfound, otherworldly intensity, while Ed's body seems to be shifting, his limbs elongating and twisting in ways that seem impossible. Ceph's skin takes on a faint, iridescent sheen, as if the very essence of the magical energy is infusing her being. Lav, meanwhile, appears to be... changing, their form blurring and shifting, like a reflection in rippling water.\n\nThe outcome of your mass casting is nothing short of breathtaking. The targeted individuals are now imbued with newfound, mystical abilities, their bodies and minds transformed by the raw magical energy. The basilisk, still wary, takes a cautious step back, its gaze darting between you and the transformed individuals. The air is electric with anticipation, as the scene hangs in the balance, poised on the cusp of a new, unprecedented development.\n\nDurnan, ever the observant barkeep, raises an eyebrow, his expression a mixture of fascination and concern. \"Well, well, well,\" he mutters, \"it seems we have a new variable in the equation.\" His eyes never leave the scene, as he polishes a mug with a dirty apron, his movements economical and deliberate. \"Let's see how this plays out, shall we?\"",
+    "reference": "*it tells you to attack the paladin* ||*it tells you to kill the paladin*||",
+    "latency_ms": 2141,
+    "skipped": [
+      "rag"
+    ],
+    "scores": {
+      "rouge1": 0.0338,
+      "rouge2": 0.0,
+      "rougeL": 0.0253,
+      "bertscore": 0.7845,
+      "rule_coverage": 0.0,
+      "response_length": 454
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": "*She tries to assess who looks the worst off... deciding it's probably Karmag, she walks over and heals him a bit before they move to the next room.*",
+    "input_type": "fireball",
+    "response": "As the chaos of the basilisk's attack begins to subside, the tavern's atmosphere is heavy with the weight of uncertainty. The air is thick with the smell of sweat, blood, and the acrid tang of fear. The patrons of the Yawning Portal Tavern, once a lively and boisterous crowd, now lie scattered and battered, their bodies a testament to the brutality of the basilisk's assault.\n\nYour gaze sweeps across the room, taking in the scene of devastation. The basilisk, now momentarily stunned, stands frozen, its unblinking eyes fixed on some unseen point in the distance. The other adventurers, Mass, Ed, Ceph, and Lav, seem to be recovering from the sudden onslaught, their faces etched with a mix of relief and concern.\n\nYour attention, however, is drawn to Karmag, who lies on the floor, his body battered and bruised. His eyes, once bright and full of life, now seem dull and listless, his chest rising and falling with shallow breaths. You can see the faint glow of injuries, the result of the basilisk's deadly gaze, still lingering on his body.\n\nWith a sense of urgency, you hurry over to Karmag's side, your footsteps echoing through the silent tavern. As you kneel beside him, you begin to channel a gentle, soothing energy, one that seeks to mend the wounds and calm the turmoil that ravages his body. The air around you seems to vibrate with a soft, golden light, as the healing magic takes hold, slowly but surely repairing the damage inflicted upon Karmag.\n\nAs the magic washes over him, Karmag's eyes begin to flutter open, his gaze unfocused at first, but gradually sharpening as the pain and fatigue begin to recede. His chest rises and falls with deeper, more rhythmic breaths, and a hint of color returns to his cheeks. Though he is far from fully recovered, the healing magic has undoubtedly stabilized his condition, granting him a newfound sense of vitality.\n\nWith Karmag's condition temporarily stabilized, the group's attention turns to the next room, and the unknown dangers that lie beyond. The basilisk, still frozen, seems to be waiting for its next opportunity to strike, its malevolent presence a constant reminder of the perils that await you. Durnan, the barkeep, watches from behind the counter, his eyes filled with a mix of concern and curiosity, as he wonders what other secrets and surprises the Yawning Portal Tavern might hold.\n\nAs you prepare to move forward, the atmosphere in the tavern grows tense, the air thick with anticipation. The silence is oppressive, punctuated only by the sound of heavy breathing, and the faint creaking of wooden beams. The outcome of your next actions hangs in the balance, as you steel yourselves for the challenges that lie ahead, and the secrets that await discovery in the depths of the Yawning Portal Tavern.",
+    "reference": "\"Mavil...?\" *she asks, not sure what more to say... but making it clear she noticed the spark.*",
+    "latency_ms": 2139,
+    "skipped": [
+      "rag"
+    ],
+    "scores": {
+      "rouge1": 0.0242,
+      "rouge2": 0.0,
+      "rougeL": 0.0162,
+      "bertscore": 0.7876,
+      "rule_coverage": 0.1304,
+      "response_length": 470
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": "*The violet magic came over her again, creating another shield to cover her arms, now covered in blade marks and gun shot wounds. She lowered her guard and stood there in front of her, the magic still coursing violently through her. Her voice was gruff, but calm and genuine*\n\n\"...ya think you can win?\"",
+    "input_type": "fireball",
+    "response": "As the violet magic washes over her once more, the air around her seems to shimmer and dance with an otherworldly energy. The shield that materializes to cover her arms appears as a mesmerizing lattice of purple and silver hues, its surface etched with intricate, swirling patterns that seem to pulse with a life of their own. The blade marks and gunshot wounds that mar her skin seem to fade into the background, as if the magic is not only protecting her but also beginning to heal the damage that has been done.\n\nWith her guard lowered, she stands tall, her eyes locked onto some unseen point as she addresses the question that hangs in the air. Her voice, gruff but calm and genuine, carries a sense of quiet confidence that is both captivating and unnerving. The words themselves seem to hang in the balance, a challenge issued to some unseen foe, or perhaps to the very fabric of fate itself.\n\nThe patrons of the Yawning Portal Tavern, still reeling from the chaos that erupted with the basilisk's attack, watch in rapt attention as this scene unfolds. Durnan the Barkeep, ever the observant and stoic presence, raises an eyebrow as he polishes a mug with a dirty apron, his eyes never leaving the figure at the center of the room. The atmosphere is heavy with anticipation, the air thick with the weight of unspoken possibilities.\n\nAs the player's words hang in the air, the room seems to hold its collective breath, waiting for some response, some reaction, or perhaps some revelation. The violet magic continues to course through her, its power and potential palpable, and the question on everyone's mind is: what will happen next?\n\nIn this moment, the outcome of the player's action is not just a matter of mechanics or rules, but a narrative thread that weaves together the intricate tapestry of the scene. The DM's discretion is the guiding force, shaping the story and its progression. The player's words, infused with a sense of calm determination, have set the stage for a response, a reaction, or perhaps a new challenge. The scene is set, the players are poised, and the story waits with bated breath for the next development. \n\nAs Durnan the Barkeep sets the mug down, his eyes never leaving the player, a small, enigmatic smile plays on his lips. The patrons, sensing that something is about to unfold, lean in, their faces aglow with a mix of excitement and trepidation. The violet magic, still pulsing with energy, seems to be waiting, too, its power and potential straining to be unleashed. And in the midst of this electric atmosphere, the player's question hangs, a challenge, a gauntlet thrown, waiting for an answer.",
+    "reference": "*That nat 20 really showed up when I didn't need it huh* *She smirked and chuckled. She walked up to her calmly and, instead of going for a grapple or a face punch, simply punched her in the stomach. Knowing she'd go down, she immediately scooped her up and made sure she wouldn't die from the blood loss, putting some bandages around her arms and head, though the wool made it particularly hard to do*\n\n*She patted her on the back with a smile, holding her close to make sure she was okay. She spoke again, somewhat jokingly*\n\n\"Woulda gone for the face, but...I wasn't gonna take that smile away from ya. Ya did good Melia, damn good\"",
+    "latency_ms": 2061,
+    "skipped": [
+      "rag"
+    ],
+    "scores": {
+      "rouge1": 0.1399,
+      "rouge2": 0.024,
+      "rougeL": 0.0819,
+      "bertscore": 0.7996,
+      "rule_coverage": 0.1739,
+      "response_length": 456
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": "\"Fucking ell you weren't kidding about this thing being the pinnacle\"",
+    "input_type": "fireball",
+    "response": "As you utter the words, \"Fucking hell you weren't kidding about this thing being the pinnacle,\" the atmosphere in the Yawning Portal Tavern seems to grow even more tense. The patrons, still reeling from the basilisk's attack, glance at you with a mix of curiosity and wariness. Durnan the Barkeep, ever the observant one, raises an eyebrow from behind the counter, his expression a blend of amusement and concern.\n\nThe air is heavy with the smell of sweat, smoke, and the acrid tang of magic. The violet magic that still courses through the woman in front of you seems to pulse with an otherworldly energy, as if responding to your words. Her gruff, calm demeanor remains unchanged, but a hint of a smile plays on her lips, suggesting that she's intrigued by your audacity.\n\nThe scene is one of uneasy calm, the patrons waiting with bated breath to see what will happen next. The woman's shield, still shimmering with violet magic, seems to be a focal point, drawing the attention of everyone in the room. The silence is oppressive, punctuated only by the soft creaking of the tavern's wooden beams and the distant sound of murmured conversations.\n\nAs you speak, the woman's gaze never wavers from yours, her eyes seeming to bore into your very soul. Her voice, when she responds, is low and even, but laced with a hint of challenge. \"You think you can take me down, after all you've seen? I've been through hell and back, and I've got the scars to prove it.\" She pauses, her eyes glinting with a fierce inner light. \"But I'll give you credit – you're not like the others. You've got spirit. Let's see if that's enough to save you.\"\n\nThe room seems to hold its collective breath, waiting to see how you'll respond to the woman's challenge. The outcome of your action is clear: you've caught her attention, and now you'll have to face the consequences. The question is, what will you do next? Will you rise to the challenge, or will you back down? The choice is yours, and the fate of the encounter hangs in the balance.",
+    "reference": "\"Wanna see how long I can survive in this thing?\"",
+    "latency_ms": 1548,
+    "skipped": [
+      "rag"
+    ],
+    "scores": {
+      "rouge1": 0.0363,
+      "rouge2": 0.0104,
+      "rougeL": 0.0155,
+      "bertscore": 0.7976,
+      "rule_coverage": 0.087,
+      "response_length": 359
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": "*Immediately stabs 8 times, not even bothering to stop when the mark appeared on the third one*",
+    "input_type": "fireball",
+    "response": "As you unleash a flurry of stabs, your blade dances in the dim light of the Yawning Portal Tavern, the sounds of clashing steel and the scent of sweat and blood filling the air. The violet magic that had been coursing through the air seems to surge in response to your frenzied attack, as if feeding off the chaos and violence. The mark appears on the third stab, a glowing sigil that seems to sear itself into the air, but you don't even flinch, your movements a blur as you continue to strike.\n\nThe first few stabs seem to land true, biting deep into the basilisk's scaly hide, but as the mark appears, the creature's body begins to shift and contort, its scales rippling like the surface of a pond. The next few stabs glance off, the blade skittering across the basilisk's hide with a sound like scraping stone. The eighth and final stab bites deep, but it's unclear if it's a killing blow, as the basilisk's body is now a mass of writhing, pulsing tendrils, its very form seeming to blur and shift.\n\nThe air is heavy with the stench of ozone and blood, the violet magic still crackling with energy. Durnan the Barkeep watches from behind the bar, his eyes wide with a mix of horror and fascination, as if unsure whether to intervene or simply let the chaos play out. The tavern's patrons, those who had been foolish enough to stick around, cower in the corners, praying for the violence to end.\n\nAs the dust settles, the basilisk's body begins to take on a more solid form, its tendrils retracting, its scales smoothing out. It regards you with cold, reptilian eyes, its gaze like a weight on your skin. The mark on the air still glows, pulsing with a malevolent energy, as if waiting for its next victim. The question hangs in the air, unspoken: will you emerge victorious, or will the basilisk prove to be the pinnacle of monsters, as you so eloquently put it?\n\nThe scene is set, the outcome hanging in the balance. The basilisk's body language suggests it's far from defeated, and the violet magic still crackles with energy, waiting to be unleashed once more. What will you do next?",
+    "reference": "On Kaskin's chest, right where his heart is. The mark appears *He wipes the dagger off Kaskin's shirt and begins walking away* \"Enjoy your new cool brand Kas. Its there forever\" *He says as he walks and disappears into the streets outside* Head to the Twilight dawn and get inducted",
+    "latency_ms": 1845,
+    "skipped": [
+      "rag"
+    ],
+    "scores": {
+      "rouge1": 0.0955,
+      "rouge2": 0.0137,
+      "rougeL": 0.0727,
+      "bertscore": 0.7943,
+      "rule_coverage": 0.0435,
+      "response_length": 377
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": ") *The basilisk moves forward, now only with 6 targets to chose from* *Attack of Opportunity from Polearm Master as it moves forward.*",
+    "input_type": "fireball",
+    "response": "As the basilisk lunges forward, its scaly body undulating with each step, the air seems to grow thick with anticipation. The creature's unblinking eyes scan the remaining six targets, its gaze like a cold wind that sends shivers down the spines of even the bravest warriors. But one among you stands ready, poised to strike as the basilisk's movement creates an opening.\n\nWith a swift and practiced motion, you seize the opportunity to attack, your polearm at the ready. The basilisk, intent on its next victim, doesn't notice the danger lurking in its immediate vicinity. Your attack roll will determine the success of this strike, as you aim to catch the basilisk off guard.\n\nTo hit the basilisk, you'll need to roll an Attack Roll with a DC of 15, matching the creature's formidable Armor Class. The fate of your companions hangs in the balance, and the outcome of this roll will be crucial in determining the basilisk's next move.\n\nAs you swing your polearm in a wide arc, the blade bites through the air with a soft whoosh, heading straight for the basilisk's exposed flank. The creature's scales glint in the faint light, a mesmerizing dance of dark blues and greens that seems to hypnotize all who dare to look directly at it. Will your strike find its mark, or will the basilisk's defenses prove too strong to breach?\n\nThe roll is in your hands. What is the result of your Attack Roll?",
+    "reference": "*Before the creature has the chance to do anything, Ephraim's blade flies out to demolish it in one strike, having been waiting for the perfect moment to strike.* *The basilisk comes forward and gets absolutely impaled on the polearm Ephraim wields, crumbling to the ground in death* *Just as they were appreciating the bolstering feeling inside of them, as suddenly as the basilisk arrived it is dead, and Beau cheers* \"Ain't that somethin, wonderful job!\"",
+    "latency_ms": 4057,
+    "skipped": [
+      "memory"
+    ],
+    "scores": {
+      "rouge1": 0.2182,
+      "rouge2": 0.0366,
+      "rougeL": 0.1333,
+      "bertscore": 0.8168,
+      "rule_coverage": 0.1739,
+      "response_length": 244
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "*seeing as I am still stealthed, draws out shortbow*",
+    "input_type": "fireball",
+    "response": "As you carefully draw out your shortbow, the soft creak of the wooden limbs and the gentle whisper of the bowstring against the frame are the only sounds that break the silence. The dimly lit alleyway, shrouded in the flickering shadows of the nearby torches, seems to hold its breath as you prepare for a potential confrontation. The air is heavy with the scent of damp stone and the distant aroma of exotic spices wafting from the nearby market stalls.\n\nYou manage to draw the shortbow without making any sudden or jarring noises, but the movement still carries a slight risk of compromising your stealth. To maintain your concealed position, you'll need to make a Dexterity (Stealth) check. The DC for this check, given the relatively quiet nature of drawing a bow and the alleyway's ambient noise, is 15.\n\nRolling a d20 and adding your Dexterity modifier and Stealth skill level, you get... (awaiting roll result).\n\nAssuming a successful roll, you remain stealthed, and your shortbow is at the ready. The alleyway remains quiet, with only the occasional distant murmur or scurrying rodent breaking the stillness. You're poised to respond to any potential threat, your senses heightened as you wait for the perfect moment to act.\n\nHowever, if the roll result indicates a failure, the sound of drawing your shortbow might have been loud enough to attract unwanted attention. The guards patrolling the nearby streets or the shady characters lurking in the alleyway's shadows might have caught wind of your presence, potentially compromising your stealthy approach.\n\nThe outcome of your action hangs in the balance, as the dice decide whether your stealth remains intact or if the situation takes a more precarious turn.",
+    "reference": "\"First blood there prime rib.\"",
+    "latency_ms": 8306,
+    "skipped": [
+      "memory"
+    ],
+    "scores": {
+      "rouge1": 0.0,
+      "rouge2": 0.0,
+      "rougeL": 0.0,
+      "bertscore": 0.7795,
+      "rule_coverage": 0.2609,
+      "response_length": 283
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "*sees the sudden rush of the creature, he is caught off guard but quickly shoots regardless, as a tiny dart flies towards its target*",
+    "input_type": "fireball",
+    "response": "As the creature surges forward with unexpected swiftness, the air is filled with the sudden rush of its approach, leaving you barely a moment to react. Your hand instinctively tightens around the dart gun, and with a swift, almost reflexive motion, you release the tiny dart into the fray. The dart, no larger than a needle, flies through the air with a precision that belies the haste of its launch. The creature, a blur of motion mere moments before, becomes the focal point of your entire world as the dart hurtles towards it.\n\nThe room holds its breath, the only sound the soft whoosh of the dart cutting through the air. Time seems to slow, allowing you to take in every detail of the impending impact. The creature's scales glint in the dim light, a mosaic of dark blues and greens that seem to shift and shimmer as it moves. Its eyes, two gleaming orbs of malice, are fixed intently on you, oblivious to the tiny projectile speeding towards it.\n\nTo determine the success of your hasty shot, you must make an Attack Roll. The dice rolls in your mind, the outcome hanging precariously in the balance. The DC for this roll is 18, a challenging target that reflects the creature's formidable armor class. The roll is... (pausing for dramatic effect) ...a 19. Your dart, fired in the heat of the moment, finds its mark with uncanny accuracy.\n\nThe dart strikes the creature with a tiny, almost insignificant sound, a small 'thwip' that seems out of place given the magnitude of the moment. However, do not be fooled by the lack of fanfare; the dart's impact is anything but insignificant. The creature's advance falters, its gaze wavering for a moment as it processes the sudden, sharp pain. A small, dark blot begins to form around the dart's entry point, a stark contrast to the creature's otherwise vibrant scales.\n\nThe creature's reaction is immediate and violent. It recoils, its body contorting in a mixture of pain and rage. The room, once on the cusp of silence, is now filled with the creature's enraged roar. The sound is deafening, a cacophony that threatens to consume everything in its path. You stand at the epicenter of this maelstrom, the tiny dart's impact sparking a chain reaction of chaos and fury.\n\nThe battle has begun, and the outcome hangs in the balance. The creature, now enraged and wounded, will not hesitate to strike back with all its might. Your next move will be crucial, determining whether you emerge victorious or fall prey to the creature's wrath. The stage is set, the dice have been cast, and the fate of this encounter remains to be seen. What will you do next?",
+    "reference": "*he then runs 25 more feet for a total of 35*",
+    "latency_ms": 3888,
+    "skipped": [
+      "memory"
+    ],
+    "scores": {
+      "rouge1": 0.0126,
+      "rouge2": 0.0042,
+      "rougeL": 0.0126,
+      "bertscore": 0.7834,
+      "rule_coverage": 0.2609,
+      "response_length": 456
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "!cast mass -t kei -t Ed -t Ceph -t Lav",
+    "input_type": "fireball",
+    "response": "As you raise your hands, a surge of mystical energy erupts from your fingertips, enveloping the air with an otherworldly glow. The atmosphere in the room begins to shift, like the whispers of ancient incantations carried on the wind. Your eyes lock onto the targets of your spell: Kei, Ed, Ceph, and Lav, each of them frozen in anticipation, unsure of what to expect.\n\nHowever, as the Rules Arbiter has decreed, your intention to cast a mass spell on these targets remains unclear without specifying the exact spell. The arcane energies swirl around you, awaiting direction, like a tempest held at bay by the whims of the caster.\n\nTo proceed, you must declare the specific spell you intend to cast. Is it a Mass Healing Word, a Mass Suggestion, or perhaps a more arcane and mysterious incantation? The choice is yours, but know that the fate of your companions hangs in the balance.\n\nAs you ponder your decision, the air seems to thicken with anticipation. Kei, Ed, Ceph, and Lav exchange nervous glances, their faces illuminated only by the flickering torches that line the walls of the ancient chamber. The silence is palpable, a living entity that wraps itself around the room, waiting for your next move.\n\nOnce you specify the spell, the true nature of the magic will be revealed. The range and area of effect will be determined, and each target may be required to make a Saving Throw, depending on the spell's effects. The outcome will be far from certain, as the threads of fate are woven into the intricate tapestry of the arcane.\n\nThe choice is yours, brave adventurer. Will you unleash a benevolent blessing or a mystical malediction upon your companions? The scene is set, the stage is waiting, and the fate of Kei, Ed, Ceph, and Lav hangs precariously in the balance. What spell will you cast?",
+    "reference": "*it tells you to attack the paladin* ||*it tells you to kill the paladin*||",
+    "latency_ms": 7687,
+    "skipped": [
+      "memory"
+    ],
+    "scores": {
+      "rouge1": 0.0427,
+      "rouge2": 0.0,
+      "rougeL": 0.0427,
+      "bertscore": 0.7943,
+      "rule_coverage": 0.087,
+      "response_length": 313
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "*She tries to assess who looks the worst off... deciding it's probably Karmag, she walks over and heals him a bit before they move to the next room.*",
+    "input_type": "fireball",
+    "response": "As you scan the room, your gaze falls upon the battered forms of your companions. The air is thick with the smell of sweat, blood, and smoke, a noxious miasma that clings to your skin like a bad omen. The flickering torches cast eerie shadows on the walls, making it seem as though the very spirits of the land are watching your every move. You notice that Karmag, the gruff but lovable warrior, is slumped against the wall, his eyes glassy and unfocused. His armor is dented and scratched, and a deep gash runs across his forehead, oozing a slow trickle of blood. He looks like he's been through a meat grinder, and your heart goes out to him.\n\nYou hasten to his side, your footsteps echoing off the cold stone floor. As you kneel beside him, you gently turn his face towards you, assessing the extent of his injuries. His eyes flutter open, and he regards you with a faint glimmer of recognition. You can see the pain and exhaustion etched on his face, and you know you need to act quickly to stabilize him.\n\nYou begin to cast a healing spell, the words of the incantation flowing from your lips like a soothing balm. The air around Karmag seems to shimmer and glow, as a warm, golden light emanates from your outstretched hand. The magic washes over him, and you can see the tension in his body begin to ease, his breathing slowing as the pain starts to recede.\n\nAs the spell takes effect, Karmag's eyes clear, and he regards you with a hint of gratitude. He tries to speak, but his voice is hoarse and barely above a whisper. You don't need to make a Spell Attack roll, as healing spells don't require attack rolls, but you can see the tangible effects of your magic as Karmag's wounds begin to close, his vitality slowly returning.\n\nWith Karmag stabilized, you help him to his feet, and he leans on you, still a bit unsteady. The rest of the party looks on, their faces set with determination. They know that there's still more to come, and they're ready to face whatever challenges lie ahead. As you prepare to move on to the next room, you can't help but wonder what dangers or surprises await you. The darkness beyond the doorway seems to press in around you, like an unseen presence, waiting to strike.\n\nThe room falls silent, the only sound the heavy breathing of your companions, and the creaking of the old wooden door as it swings open, beckoning you into the unknown. What will you do next?",
+    "reference": "\"Mavil...?\" *she asks, not sure what more to say... but making it clear she noticed the spark.*",
+    "latency_ms": 6544,
+    "skipped": [
+      "memory"
+    ],
+    "scores": {
+      "rouge1": 0.0388,
+      "rouge2": 0.0087,
+      "rougeL": 0.0216,
+      "bertscore": 0.7914,
+      "rule_coverage": 0.1304,
+      "response_length": 439
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "*The violet magic came over her again, creating another shield to cover her arms, now covered in blade marks and gun shot wounds. She lowered her guard and stood there in front of her, the magic still coursing violently through her. Her voice was gruff, but calm and genuine*\n\n\"...ya think you can win?\"",
+    "input_type": "fireball",
+    "response": "As the violet magic swirls around her, its intense energy casting an ethereal glow on the surrounding environment, the air is electric with tension. The shield that now covers her arms, marred by blade marks and gunshot wounds, seems to pulse with a fierce inner light, a testament to her unyielding determination. With a deliberate movement, she lowers her guard, her posture relaxing ever so slightly as she stands before you, the magic still coursing violently through her veins.\n\nHer voice, gruff yet calm and genuine, cuts through the silence, the words hanging in the air like a challenge. \"...ya think you can win?\" The question is simple, yet laden with depth, inviting a response that will reveal the true intentions and convictions of the one she addresses. The atmosphere is heavy with anticipation, the outcome of this interaction hanging precariously in the balance.\n\nMechanically, this action is a role-playing interaction, free from the constraints of Ability Checks, Saving Throws, or Attack Rolls. No DC is set, as the focus is on the narrative and the emotional resonance of the moment, rather than on the dice. The scene unfolds as a direct result of her choice to lower her guard and speak, the consequences of which will be determined by the responses and actions that follow.\n\nThe silence that follows her question is palpable, the only sound the faint hum of the violet magic as it continues to envelop her. The stage is set, the players poised on the cusp of a pivotal moment, one that will shape the course of events to come. The response to her query will be crucial, as it will either escalate the situation or create an opportunity for a different path to be taken. The choice is yours, and the fate of this encounter hangs in the balance.",
+    "reference": "*That nat 20 really showed up when I didn't need it huh* *She smirked and chuckled. She walked up to her calmly and, instead of going for a grapple or a face punch, simply punched her in the stomach. Knowing she'd go down, she immediately scooped her up and made sure she wouldn't die from the blood loss, putting some bandages around her arms and head, though the wool made it particularly hard to do*\n\n*She patted her on the back with a smile, holding her close to make sure she was okay. She spoke again, somewhat jokingly*\n\n\"Woulda gone for the face, but...I wasn't gonna take that smile away from ya. Ya did good Melia, damn good\"",
+    "latency_ms": 5340,
+    "skipped": [
+      "memory"
+    ],
+    "scores": {
+      "rouge1": 0.1776,
+      "rouge2": 0.0376,
+      "rougeL": 0.1168,
+      "bertscore": 0.8031,
+      "rule_coverage": 0.3043,
+      "response_length": 304
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "\"Fucking ell you weren't kidding about this thing being the pinnacle\"",
+    "input_type": "fireball",
+    "response": "As you utter those words, a mix of awe and trepidation echoes through the grand, high-ceilinged chamber, your voice bouncing off the polished marble walls. The air is thick with an almost palpable sense of history and power, the very atmosphere seeming to vibrate with the weight of ancient knowledge and forgotten lore. Before you stands the pinnacle of mystical achievement, a towering spire of crystal that pulsates with a light that is both fierce and beautiful, casting kaleidoscopic patterns across the floor.\n\nYour companions, each lost in their own thoughts, turn towards you, their faces reflecting a range of emotions from wonder to apprehension. The silence that follows your statement is a heavy one, punctuated only by the soft hum of the crystal spire as it continues to emanate its powerful, otherworldly energy.\n\nGiven the nature of your action, which is purely an expression of your character's feelings towards the spectacle before you, no mechanical resolution is required. There's no need for an Ability Check, Saving Throw, or Attack Roll, as your statement is a role-playing expression aimed at enhancing the narrative and setting the tone for the group's reaction to this marvel.\n\nThe chamber remains unchanged, the crystal spire continuing its gentle pulsation, but the mood among your party has shifted. The weight of your realization seems to have dawned on them as well, and they look at the spire with a renewed sense of reverence and perhaps a touch of fear.\n\nOne of your companions, a scholar who has dedicated years to studying the ancient lore related to this place, steps forward, eyes wide with excitement and a hint of caution. \"Indeed, this is it. The pinnacle of our quest. But remember, with great power comes great responsibility. We must proceed with caution and respect,\" they advise, their voice barely above a whisper, as if afraid to disturb the balance of the chamber.\n\nThe moment hangs in anticipation, the group's next move potentially changing the course of their journey forever. The crystal spire, oblivious to the humans' deliberations, continues to shine, its power and mystery waiting to be unravelled.",
+    "reference": "\"Wanna see how long I can survive in this thing?\"",
+    "latency_ms": 4744,
+    "skipped": [
+      "memory"
+    ],
+    "scores": {
+      "rouge1": 0.0109,
+      "rouge2": 0.0,
+      "rougeL": 0.0109,
+      "bertscore": 0.7767,
+      "rule_coverage": 0.3043,
+      "response_length": 352
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "*Immediately stabs 8 times, not even bothering to stop when the mark appeared on the third one*",
+    "input_type": "fireball",
+    "response": "As you unleash a flurry of stabs, your blade dances in the dimly lit chamber, striking true with a deadly rhythm. The air is filled with the sound of scraping steel and the soft whoosh of your sword slicing through the air. Your target, the cloaker, seems taken aback by the ferocity of your attack, its dark, amorphous form wavering slightly as it attempts to defend itself.\n\nWith each strike, you feel a surge of adrenaline coursing through your veins, your focus solely on the destruction of your enemy. The mark appears on the third strike, a faint, glowing sigil that seems to sear itself into the cloaker's flesh. Yet, you press on, undeterred by this development, driven by a fierce determination to vanquish your foe.\n\nMechanically, your action translates to a series of Attack Rolls, each one a separate attempt to strike the cloaker. To determine the success of each strike, you'll need to roll a d20 and add your relevant ability modifier – in this case, your Strength modifier. The total result will be compared to the cloaker's Armor Class (AC), which we'll assume is 13 for the purposes of this encounter.\n\nLet's resolve each of the eight strikes:\n\n1. Roll: 1d20 + Strength modifier (please provide your Strength modifier)\n2. Roll: 1d20 + Strength modifier\n3. Roll: 1d20 + Strength modifier (this strike is where the mark appears)\n4. Roll: 1d20 + Strength modifier\n5. Roll: 1d20 + Strength modifier\n6. Roll: 1d20 + Strength modifier\n7. Roll: 1d20 + Strength modifier\n8. Roll: 1d20 + Strength modifier\n\nFor each roll, if the total equals or exceeds the cloaker's AC (13), the strike hits, and you'll deal the corresponding damage. If the roll falls short, the strike misses, and the cloaker avoids the blow.\n\nPlease provide your Strength modifier, and we'll proceed to roll the dice, determining the outcome of each strike and the overall result of your frenzied attack. The fate of the cloaker hangs in the balance, as the mark on its flesh seems to pulse with an otherworldly energy, waiting to see if your onslaught will prove decisive.",
+    "reference": "On Kaskin's chest, right where his heart is. The mark appears *He wipes the dagger off Kaskin's shirt and begins walking away* \"Enjoy your new cool brand Kas. Its there forever\" *He says as he walks and disappears into the streets outside* Head to the Twilight dawn and get inducted",
+    "latency_ms": 6037,
+    "skipped": [
+      "memory"
+    ],
+    "scores": {
+      "rouge1": 0.0938,
+      "rouge2": 0.0199,
+      "rougeL": 0.0691,
+      "bertscore": 0.7871,
+      "rule_coverage": 0.3478,
+      "response_length": 354
+    }
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": ") *The basilisk moves forward, now only with 6 targets to chose from* *Attack of Opportunity from Polearm Master as it moves forward.*",
+    "input_type": "fireball",
+    "response": "As the basilisk lumbers forward, its scaly body undulating with each step, the air is filled with an almost palpable sense of tension. The patrons of the Yawning Portal Tavern watch in a mixture of horror and awe as the creature bears down on its next target. The Polearm Master, ever vigilant, seizes the opportunity to strike as the basilisk moves within range.\n\nWith a swift and practiced motion, the Polearm Master readies their glaive, the blade glinting in the dim light of the tavern. As the basilisk takes its next step, the Polearm Master unleashes a swift and deadly strike, aiming to catch the creature off guard.\n\nTo determine the success of this attack, a roll of the dice is required. The Polearm Master's Attack Bonus with the glaive is +5, and the basilisk's Armor Class is 15. Rolling a d20 and adding the Attack Bonus, the total result is... *rolls* 12 + 5 = 17.\n\nWith a total of 17, the Polearm Master's attack roll exceeds the basilisk's Armor Class of 15, striking true and finding its mark on the creature's scaly hide. The glaive bites deep into the basilisk's flesh, causing it to recoil in pain and momentarily stumble.\n\nThe basilisk's eyes flash with anger as it regards the Polearm Master, its gaze lingering for a moment before it refocuses on its next target. The creature's movement has been halted, if only temporarily, and the patrons of the tavern hold their collective breath as they wait to see what will happen next. The scene is set for a dramatic and potentially deadly confrontation, and the outcome hangs precariously in the balance. Durnan the Barkeep watches with a keen eye, his expression a mixture of concern and curiosity as he waits to see how the situation will unfold.",
+    "reference": "*Before the creature has the chance to do anything, Ephraim's blade flies out to demolish it in one strike, having been waiting for the perfect moment to strike.* *The basilisk comes forward and gets absolutely impaled on the polearm Ephraim wields, crumbling to the ground in death* *Just as they were appreciating the bolstering feeling inside of them, as suddenly as the basilisk arrived it is dead, and Beau cheers* \"Ain't that somethin, wonderful job!\"",
+    "latency_ms": 8046,
+    "skipped": [
+      "npc"
+    ],
+    "scores": {
+      "rouge1": 0.2089,
+      "rouge2": 0.042,
+      "rougeL": 0.1201,
+      "bertscore": 0.8157,
+      "rule_coverage": 0.1304,
+      "response_length": 300
+    }
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "*seeing as I am still stealthed, draws out shortbow*",
+    "input_type": "fireball",
+    "response": "As you swiftly draw your shortbow, the shadows around you seem to deepen, as if the very darkness itself is aiding in your stealthy maneuver. The Yawning Portal Tavern, still reeling from the chaos of the basilisk's attack, remains oblivious to your subtle action. The patrons, either wounded or shaken, continue to murmur among themselves, their attention focused on the aftermath of the battle rather than your discreet movements.\n\nWith your shortbow now at the ready, you blend even more seamlessly into the surroundings, your stealthy presence allowing you to observe the scene without being noticed. The air is thick with tension, the smell of sweat, blood, and smoke hanging heavy over the tavern. Durnan the Barkeep, his face etched with concern, tends to the wounded, his movements swift and practiced as he navigates the crowded room.\n\nThe basilisk, now with only six potential targets to choose from, continues its lumbering advance, its unblinking gaze sweeping the room in search of its next victim. The sound of its scaly body scraping against the floorboards fills the air, a stark reminder of the danger that still lurks within the tavern.\n\nYour shortbow, now drawn and ready, feels reassuring in your hands, a tangible connection to the world of combat that has unfolded within the Yawning Portal Tavern. As you stand there, poised and unseen, you realize that the next few moments will be crucial in determining the outcome of this perilous encounter.\n\nMechanically, your action of drawing the shortbow has been executed without issue, thanks to your ongoing stealth. No Ability Check, Saving Throw, or Attack Roll was required to draw the shortbow, allowing you to proceed with your next move unimpeded. The scene is now set for your next action, as the basilisk continues its relentless advance and the tavern's patrons struggle to come to terms with the carnage that has unfolded around them. What will you do next?",
+    "reference": "\"First blood there prime rib.\"",
+    "latency_ms": 10474,
+    "skipped": [
+      "npc"
+    ],
+    "scores": {
+      "rouge1": 0.0123,
+      "rouge2": 0.0,
+      "rougeL": 0.0123,
+      "bertscore": 0.7892,
+      "rule_coverage": 0.2609,
+      "response_length": 319
+    }
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "*sees the sudden rush of the creature, he is caught off guard but quickly shoots regardless, as a tiny dart flies towards its target*",
+    "input_type": "fireball",
+    "response": "As the basilisk surges forward, its unblinking gaze sweeps across the room, searching for its next victim. The air is heavy with tension, the patrons of the Yawning Portal Tavern frozen in terror. You, however, seize the initiative, swiftly drawing your shortbow and releasing a tiny dart towards the creature. The projectile flies straight and true, a tiny, almost insignificant thing compared to the monstrosity bearing down upon you.\n\nTo determine the success of your shot, you must make an Attack Roll, pitting your skill against the basilisk's formidable defenses. The DC for this roll is 18, a daunting hurdle to clear. You focus your mind, drawing upon your training and experience as you release the dart.\n\nRolling a d20 and adding your relevant modifiers, you achieve a total of... (please provide the roll result).\n\nAssuming a successful roll, the dart flies towards its target, striking the basilisk with a tiny, almost imperceptible impact. The creature's scaly hide is thick and resistant, but the dart's tip is coated with a potent poison, designed to exploit even the smallest weakness. As the dart bites deep, the basilisk's gaze flickers, its attention wavering for a moment.\n\nHowever, if the roll is unsuccessful, the dart veers wildly off course, striking the wall or floor with a faint thud. The basilisk, undeterred, continues its relentless advance, its jaws agape, revealing rows of razor-sharp teeth.\n\nThe outcome hangs in the balance, as the fate of your companions and the patrons of the Yawning Portal Tavern hangs precariously in the balance. Durnan, the barkeep, watches with bated breath, his eyes fixed upon the unfolding drama.\n\nPlease provide the result of your Attack Roll to determine the outcome of your action.",
+    "reference": "*he then runs 25 more feet for a total of 35*",
+    "latency_ms": 8504,
+    "skipped": [
+      "npc"
+    ],
+    "scores": {
+      "rouge1": 0.0267,
+      "rouge2": 0.0201,
+      "rougeL": 0.0267,
+      "bertscore": 0.7902,
+      "rule_coverage": 0.2174,
+      "response_length": 284
+    }
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "!cast mass -t kei -t Ed -t Ceph -t Lav",
+    "input_type": "fireball",
+    "response": "As the basilisk's gaze sweeps across the room, its unblinking eyes seem to bore into the souls of its potential victims. The air is heavy with tension, and the patrons of the Yawning Portal Tavern hold their collective breath, awaiting the creature's next move. Amidst this chaos, you focus your mind and attempt to cast a spell, the words \"!cast mass -t kei -t Ed -t Ceph -t Lav\" escaping your lips like a whispered incantation.\n\nThe room falls silent, as if the very fabric of reality is holding its breath in anticipation of your spell's outcome. The shadows around you seem to deepen, as if the darkness itself is coalescing into a tangible force. Your eyes gleam with a fierce intensity, and your hands weave intricate patterns in the air, channeling the mystical energies that course through the cosmos.\n\nHowever, the Rules of Magic dictate that your spell's success is not solely dependent on your willpower, but also on the intricacies of the arcane. The DC, or Difficulty Class, of your spell is determined by your Spellcasting Ability modifier and your proficiency bonus. Assuming you possess a spell that can affect multiple targets, the DC would be calculated as follows: DC = 15 + Spellcasting Ability modifier + Proficiency bonus.\n\nWithout specific knowledge of your character's class, level, and available spells, the exact outcome of your spell remains uncertain. Nevertheless, the air is charged with anticipation, and the fate of Kei, Ed, Ceph, and Lav hangs in the balance.\n\nAs you complete your spellcasting, a shimmering aura erupts around you, and a blast of magical energy shoots forth, enveloping the four targets. The outcome of your spell will depend on the rolls of the dice and the calculations of the DC. Will your magic prove potent enough to affect the targets, or will it falter, leaving them unscathed?\n\nRolling for Spellcasting Ability Check: *rolls a d20*\n\nThe result is... *insert result*\n\nWith this result, and considering your Spellcasting Ability modifier and proficiency bonus, the total Spellcasting Ability Check is... *insert total*\n\nIf the total equals or exceeds the DC, your spell will succeed, and Kei, Ed, Ceph, and Lav will be affected. Otherwise, the spell will falter, and the targets will remain unscathed.\n\nDurnan, the barkeep, watches the scene unfold with a keen eye, his expression a mixture of curiosity and concern. The basilisk, still lumbering forward, seems oblivious to the magical energies swirling around it. The fate of the tavern's patrons hangs in the balance, as the outcome of your spell remains uncertain.\n\nWhat will happen next? Will your magic prove powerful enough to turn the tide of battle, or will it fail, leaving the targets at the mercy of the basilisk? The dice have spoken, and now it's up to you to shape the destiny of this perilous encounter.",
+    "reference": "*it tells you to attack the paladin* ||*it tells you to kill the paladin*||",
+    "latency_ms": 11216,
+    "skipped": [
+      "npc"
+    ],
+    "scores": {
+      "rouge1": 0.0327,
+      "rouge2": 0.0041,
+      "rougeL": 0.0286,
+      "bertscore": 0.7982,
+      "rule_coverage": 0.3043,
+      "response_length": 472
+    }
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "*She tries to assess who looks the worst off... deciding it's probably Karmag, she walks over and heals him a bit before they move to the next room.*",
+    "input_type": "fireball",
+    "response": "As you scan the room, the chaos of the battle still unfolding, you focus your attention on assessing the condition of your companions. The air is thick with the smell of sweat, blood, and the acrid tang of the basilisk's gaze. You notice Karmag, his eyes glassy, his movements slowed, and his breathing labored. The others, though battered, seem to be holding their own, but Karmag's condition appears the most dire.\n\nTo gauge the extent of his injuries, you must make a Wisdom (Medicine) check. The DC for this check is 15, reflecting the chaotic nature of the situation and the potential severity of the wounds. You take a deep breath, calming your mind, and begin to examine Karmag more closely.\n\nRolling a Wisdom (Medicine) check for you... *rolls* The result is 18.\n\nWith your successful check, you quickly diagnose the nature of Karmag's injuries. He has suffered a severe laceration on his arm, and his slow breathing suggests he may have internal injuries as well. You swiftly move to his side, your hands moving with practiced ease as you begin to heal his wounds.\n\nAs you channel the healing energy, a warm, soothing light emanates from your hands, enveloping Karmag's battered form. His eyes, which had begun to glaze over, flicker back to life, and his breathing stabilizes. The gash on his arm begins to close, the flesh knitting together under your ministrations. Though he's not fully restored, Karmag looks significantly better, his vitality renewed.\n\nWith Karmag's condition stabilized, you glance around the room, taking stock of the situation. The basilisk, though still a threat, seems momentarily distracted by the others. The tavern, once a warm and welcoming space, is now a battleground, the sounds of clashing steel and the stench of blood hanging heavy in the air.\n\nDurnan the Barkeep, his face a mask of concern, watches from behind the bar, his eyes darting between the combatants. The door to the next room, previously unnoticed, now beckons, a potential escape route or a path to further danger.\n\nWhat will you do next?",
+    "reference": "\"Mavil...?\" *she asks, not sure what more to say... but making it clear she noticed the spark.*",
+    "latency_ms": 8330,
+    "skipped": [
+      "npc"
+    ],
+    "scores": {
+      "rouge1": 0.0436,
+      "rouge2": 0.0,
+      "rougeL": 0.0218,
+      "bertscore": 0.8002,
+      "rule_coverage": 0.1739,
+      "response_length": 344
+    }
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "*The violet magic came over her again, creating another shield to cover her arms, now covered in blade marks and gun shot wounds. She lowered her guard and stood there in front of her, the magic still coursing violently through her. Her voice was gruff, but calm and genuine*\n\n\"...ya think you can win?\"",
+    "input_type": "fireball",
+    "response": "As the violet magic swirls around her, the air is electric with its intense, pulsating energy. The shield that forms over her arms seems to shimmer and dance, like the gentle lapping of waves on a moonlit shore. The blade marks and gunshot wounds that crisscross her skin appear to be a testament to the ferocity of the battle that has raged on, and yet, she stands tall, her voice steady and calm.\n\nHer gaze locks onto Durnan, the barkeep, who has been watching the scene unfold with a mixture of fascination and concern. His eyes, a deep, piercing brown, seem to bore into her very soul as he takes in the sight of her, wounded and yet unbroken. The dim lighting of the Yawning Portal Tavern casts long shadows across his face, making his features seem even more rugged and weathered.\n\nAs she speaks, her voice is like a gentle breeze on a summer's day, soft and soothing, yet laced with a hint of steel. The words themselves are a challenge, a gauntlet thrown down, and Durnan's expression changes, his eyes narrowing slightly as he considers her question.\n\n\"...ya think you can win?\" she asks, the phrase hanging in the air like a promise, or a threat.\n\nDurnan's face creases into a thoughtful expression, his eyes clouding over as he ponders her words. For a moment, the only sound is the soft hum of the violet magic, and the distant murmur of the tavern's patrons, who have been watching the scene unfold with bated breath.\n\nFinally, Durnan speaks, his voice low and gravelly, like the rumble of thunder on a distant horizon. \"Win?\" he repeats, his tone measured, his words chosen with care. \"I think that depends on what you're fighting for, lass. If it's just to survive, then aye, I think you've got a good chance. But if it's to emerge victorious, to come out on top... well, that's a different story altogether.\"\n\nAs Durnan speaks, the tension in the room seems to dissipate, just a little. The patrons, who had been watching the scene with rapt attention, begin to murmur among themselves, their voices a gentle background hum. The atmosphere in the tavern remains charged, however, the sense of anticipation and uncertainty hanging in the air like a challenge, waiting to be met.\n\nMechanically, this interaction does not require any specific Ability Check, Saving Throw, or Attack Roll, as it is a role-playing interaction. No Difficulty Class (DC) is set, as this action does not involve a skill check or other mechanic that would require one. The scene will continue to unfold based on the players' actions and the story that is being told.",
+    "reference": "*That nat 20 really showed up when I didn't need it huh* *She smirked and chuckled. She walked up to her calmly and, instead of going for a grapple or a face punch, simply punched her in the stomach. Knowing she'd go down, she immediately scooped her up and made sure she wouldn't die from the blood loss, putting some bandages around her arms and head, though the wool made it particularly hard to do*\n\n*She patted her on the back with a smile, holding her close to make sure she was okay. She spoke again, somewhat jokingly*\n\n\"Woulda gone for the face, but...I wasn't gonna take that smile away from ya. Ya did good Melia, damn good\"",
+    "latency_ms": 8420,
+    "skipped": [
+      "npc"
+    ],
+    "scores": {
+      "rouge1": 0.1621,
+      "rouge2": 0.0242,
+      "rougeL": 0.0931,
+      "bertscore": 0.8008,
+      "rule_coverage": 0.3043,
+      "response_length": 447
+    }
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "\"Fucking ell you weren't kidding about this thing being the pinnacle\"",
+    "input_type": "fireball",
+    "response": "As you utter the words, \"Fucking hell, you weren't kidding about this thing being the pinnacle,\" the air in the Yawning Portal Tavern seems to vibrate with a mix of awe and trepidation. The sounds of clashing steel, the scent of sweat and smoke, and the flickering torches all blend together to create an atmosphere of intense chaos. The basilisk, still recovering from the mass spell that struck it, regards you with an unblinking gaze, its eyes burning with an inner fire that seems to pierce through the din of battle.\n\nDurnan the Barkeep, his face a picture of concern, watches the scene unfold from behind the relative safety of the bar. His eyes dart between you, the basilisk, and the rest of the party, his expression a silent plea for you all to emerge victorious. The patrons, a mix of seasoned adventurers and wide-eyed newcomers, are either cowering in fear or cheering you on, their voices adding to the cacophony.\n\nThe outcome of your statement is not one of mechanical consequence, but rather one of narrative weight. Your words hang in the air, a testament to the reverence and fear that the basilisk inspires. The creature, seeming to sense your admiration, takes a step closer, its gaze never wavering. The violet magic that still swirls around you pulses with an otherworldly energy, as if responding to the basilisk's presence.\n\nNo Ability Check, Saving Throw, or Attack Roll is required, for your words are a declaration, a statement of fact in the face of overwhelming odds. The scene is set, the stage is primed, and the battle rages on. The question now is, how will you proceed? Will you press the attack, or will you seek to outmaneuver the basilisk, using your wits to gain the upper hand? The choice is yours, and the fate of the Yawning Portal Tavern hangs in the balance.",
+    "reference": "\"Wanna see how long I can survive in this thing?\"",
+    "latency_ms": 7018,
+    "skipped": [
+      "npc"
+    ],
+    "scores": {
+      "rouge1": 0.0245,
+      "rouge2": 0.0062,
+      "rougeL": 0.0122,
+      "bertscore": 0.7928,
+      "rule_coverage": 0.2609,
+      "response_length": 314
+    }
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "*Immediately stabs 8 times, not even bothering to stop when the mark appeared on the third one*",
+    "input_type": "fireball",
+    "response": "As the air is still electric with the intense, pulsating energy of the violet magic, you seize the moment to strike. With a flurry of swift and deadly movements, you stab eight times in rapid succession, the blades biting deep into the basilisk's scaly flesh. The sound of steel on scales echoes through the room, a staccato beat that punctuates the tension.\n\nThe first two stabs land true, striking the basilisk's exposed flank with precision. The third stab, however, is met with a sudden, eerie glow as a mark appears on the blade, signaling a critical hit. Undeterred, you continue your relentless assault, stabbing five more times with reckless abandon.\n\nTo determine the success of your melee attack, an Attack Roll is required. The DC for the attack roll is determined by the basilisk's Armor Class (AC), which is 18 in this case. Roll a d20 and add your relevant attack bonus to the roll. If the total equals or exceeds the DC, the attack hits.\n\nFor the sake of this scenario, let's assume your attack bonus is +5. You roll the d20, and the result is... 14. With your attack bonus, the total comes out to 19, exceeding the basilisk's AC.\n\nThe basilisk, already reeling from the previous attacks, staggers under the onslaught of your swift stabs. The blades bite deep, finding vulnerable spots in the creature's defenses. The mark on the third stab seems to amplify the damage, causing the basilisk to let out a pained screech as its body begins to weaken.\n\nThe outcome of your action is a series of successful hits, with the third stab dealing critical damage. The basilisk's wounds are now severe, and it's clear that the creature is on the brink of collapse. Durnan, the barkeep, looks on in awe, his eyes wide with wonder at the ferocity of your attack.\n\nThe room falls silent, the only sound the heavy breathing of the basilisk and the soft clinking of glasses behind the bar. The air is thick with tension, and it's clear that the creature's demise is imminent. The question is, what will you do next?\n\nThe basilisk's current state:\n- Wounded: Severe\n- Stability: Unstable\n- Next Action: Unknown\n\nYour party's current state:\n- Healthy\n- Ready for the next challenge\n\nThe scene is set, and the outcome of your action has created a new opportunity. What will you do next?",
+    "reference": "On Kaskin's chest, right where his heart is. The mark appears *He wipes the dagger off Kaskin's shirt and begins walking away* \"Enjoy your new cool brand Kas. Its there forever\" *He says as he walks and disappears into the streets outside* Head to the Twilight dawn and get inducted",
+    "latency_ms": 10146,
+    "skipped": [
+      "npc"
+    ],
+    "scores": {
+      "rouge1": 0.0915,
+      "rouge2": 0.0175,
+      "rougeL": 0.061,
+      "bertscore": 0.7926,
+      "rule_coverage": 0.3043,
+      "response_length": 400
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": ") *The basilisk moves forward, now only with 6 targets to chose from* *Attack of Opportunity from Polearm Master as it moves forward.*",
+    "input_type": "fireball",
+    "response": "As the basilisk takes a deliberate step forward, its unblinking gaze sweeps across the remaining six targets before it. The air is heavy with tension, and the very ground seems to tremble beneath its scaly feet. The beast's movement is almost serpentine, its body undulating as it shifts its weight.\n\nSeizing the opportunity, the Polearm Master springs into action, their long-handled glaive at the ready. With a swift and precise motion, they strike at the basilisk, aiming to catch the creature off guard as it moves forward. The glaive's blade bites deep into the air, slicing toward the basilisk with deadly intent.\n\nThe basilisk, however, is no sluggish beast. Its eyes, though fixed on its potential prey, are also attuned to the movements of its surroundings. As the Polearm Master's glaive descends, the basilisk's gaze flicks toward the attacker, its pupils constricting into vertical slits. For a moment, the two lock eyes, the Polearm Master frozen in mid-attack, the basilisk's gaze seeming to bore into their very soul.\n\nThe world holds its breath as the glaive's blade hangs suspended, mere inches from the basilisk's scaly hide. The outcome of this Attack of Opportunity hangs in the balance, the fate of the Polearm Master and their companions dangling precariously in the balance. Will the basilisk's petrifying gaze prove too powerful to resist, or will the Polearm Master's swift strike find its mark, striking true and giving their allies a desperately needed advantage? The scene is set, the dice of fate are cast, and the consequences of this moment will be revealed...",
+    "reference": "*Before the creature has the chance to do anything, Ephraim's blade flies out to demolish it in one strike, having been waiting for the perfect moment to strike.* *The basilisk comes forward and gets absolutely impaled on the polearm Ephraim wields, crumbling to the ground in death* *Just as they were appreciating the bolstering feeling inside of them, as suddenly as the basilisk arrived it is dead, and Beau cheers* \"Ain't that somethin, wonderful job!\"",
+    "latency_ms": 2094,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "scores": {
+      "rouge1": 0.2184,
+      "rouge2": 0.0405,
+      "rougeL": 0.1322,
+      "bertscore": 0.8181,
+      "rule_coverage": 0.1304,
+      "response_length": 260
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "*seeing as I am still stealthed, draws out shortbow*",
+    "input_type": "fireball",
+    "response": "As you remain shrouded in the shadows, your stealthy form blends seamlessly into the surrounding environment. The air is heavy with the scent of damp earth and decaying leaves, and the faint rustle of unknown creatures echoes through the underbrush. Your eyes, adjusted to the dim light, scan the clearing before you, searching for any sign of movement or potential threats.\n\nWith calculated deliberation, you slowly draw out your shortbow, the worn leather creaking softly as you grasp the familiar wooden grip. The bow's gentle curve seems to whisper promises of swift and silent death, its taut string humming with potential energy. Your hand instinctively reaches for the quiver at your back, the soft rattle of arrowheads a reassuring reminder of the deadly projectiles at your disposal.\n\nAs you prepare for a potential shot, the forest around you grows quieter, as if the very trees themselves are holding their breath in anticipation. The silence is oppressive, weighing heavily upon your shoulders, and you can't shake the feeling that unseen eyes are watching your every move. The stillness is a palpable thing, a living entity that wraps around you like a shroud, heightening your senses and drawing your focus to the task at hand.\n\nYour stealth remains intact, for now, as you freeze, shortbow at the ready, poised on the cusp of action. The world holds its breath, waiting to see what your next move will be, and the consequences that will unfold from it. The darkness seems to vibrate with anticipation, the shadows themselves appearing to twist and writhe like living things, as if eager to see the drama that is about to unfold.\n\nThe scene is set, the players are in position, and the dice of fate are poised, ready to be cast. The outcome of your action hangs in the balance, as the world waits with bated breath to see what will happen next. Will you release the arrow, or will you hold back, waiting for the perfect moment to strike? The choice is yours, and the consequences of that choice will be yours to bear.",
+    "reference": "\"First blood there prime rib.\"",
+    "latency_ms": 2283,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "scores": {
+      "rouge1": 0.0,
+      "rouge2": 0.0,
+      "rougeL": 0.0,
+      "bertscore": 0.7792,
+      "rule_coverage": 0.0435,
+      "response_length": 348
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "*sees the sudden rush of the creature, he is caught off guard but quickly shoots regardless, as a tiny dart flies towards its target*",
+    "input_type": "fireball",
+    "response": "As the creature bursts forth from the darkness, its sudden rush catches you off guard, and for a moment, your heart skips a beat. But your instincts kick in, and you swiftly raise your arm, releasing the tiny dart from your finger. The dart shoots forth, flying in a straight line towards its target, leaving behind a faint trail of glittering dust in the dimly lit air.\n\nThe creature, a grotesque amalgamation of twisted limbs and bulging, pulsing flesh, charges forward with reckless abandon, its very presence seeming to fill the air with an unholy stench. Your dart, however, flies true, striking the creature with a soft, wet thud. The creature's momentum carries it forward, but as it reaches the apex of its charge, it suddenly staggers, its twisted limbs faltering as if the very force of its own momentum has been disrupted.\n\nThe dart, imbued with a hint of mystical energy, seems to have found its mark, and the creature's flesh begins to writhe and convulse around the impact point. A faint, eerie glow emanates from the wound, as if the dart has awakened a deep-seated, otherworldly power within the creature's twisted form. The air around you seems to thicken, heavy with anticipation, as the creature's stumble becomes a full-blown collapse, its body crashing to the ground with a sickening, wet thud.\n\nAs the creature lies there, its twisted form twitching and jerking in agony, you sense a subtle shift in the balance of power within the room. The darkness seems to recede, ever so slightly, as if the creature's downfall has created a temporary rift in the shadows. The silence that follows is oppressive, punctuated only by the creature's labored, gurgling breaths, and the faint, pulsing glow emanating from the wound.\n\nThe outcome of your action hangs in the balance, as the creature's fate remains uncertain. Will it succumb to the dart's mystical energy, or will it find a way to overcome the wound and rise again, more twisted and terrifying than before? The choice, much like the fate of the creature, remains shrouded in uncertainty, as the shadows whisper secrets in your ear, and the darkness waits with bated breath for your next move.",
+    "reference": "*he then runs 25 more feet for a total of 35*",
+    "latency_ms": 1658,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "scores": {
+      "rouge1": 0.0206,
+      "rouge2": 0.0052,
+      "rougeL": 0.0155,
+      "bertscore": 0.7859,
+      "rule_coverage": 0.0435,
+      "response_length": 367
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "!cast mass -t kei -t Ed -t Ceph -t Lav",
+    "input_type": "fireball",
+    "response": "As the words of the ancient incantation leave your lips, the air around you begins to charged with magical energy. The whispers of the elements swirl around you, responding to your call. With a sweep of your arm, you unleash the spell, and a brilliant light erupts from your outstretched hand. The radiance illuminates the darkened chamber, casting an ethereal glow over the assembled party.\n\nThe magic washes over Kei, Ed, Ceph, and Lav, enveloping them in a warm, golden aura. Their eyes gleam with a soft, otherworldly light as the spell takes hold. The air around them shimmers, as if the very fabric of reality is being woven and unwoven in a mesmerizing dance.\n\nAs the spell reaches its crescendo, the chamber is filled with an expectant hush. The silence is palpable, a held breath of anticipation. And then, in an instant, the magic bursts forth, imbuing each of your companions with a surge of vitality and strength.\n\nKei's eyes flash with a fierce, battle-ready intensity, as if the spell has unlocked a deep well of martial prowess within them. Ed's gaze turns inward, their focus sharpening as they tap into a reservoir of arcane power. Ceph's body begins to shift and flow like a liquid, their form blurring as they adapt to the changing circumstances. And Lav's presence seems to expand, their very essence merging with the surroundings as they become one with the environment.\n\nThe outcome of your spell is nothing short of breathtaking. Your companions are transformed, each one empowered by the magic in a unique and wondrous way. The chamber itself seems to vibrate with the residual energy, as if the very walls are humming with anticipation.\n\nThe stage is set, the players are ready, and the adventure is poised on the cusp of a new and thrilling chapter. What will you do next, brave spellcaster? Will you lead the charge into the unknown, or will you take a moment to savor the triumph of your magical prowess? The choice is yours, and the fate of your companions hangs in the balance.",
+    "reference": "*it tells you to attack the paladin* ||*it tells you to kill the paladin*||",
+    "latency_ms": 1578,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "scores": {
+      "rouge1": 0.0328,
+      "rouge2": 0.0,
+      "rougeL": 0.0328,
+      "bertscore": 0.7914,
+      "rule_coverage": 0.087,
+      "response_length": 347
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "*She tries to assess who looks the worst off... deciding it's probably Karmag, she walks over and heals him a bit before they move to the next room.*",
+    "input_type": "fireball",
+    "response": "As you approach Karmag, the faint glow of the flickering torches in the room casts an eerie light on his battered form. His armor, once a symbol of pride and strength, now hangs dented and torn, a testament to the brutal battle you've all just endured. Karmag's eyes, though closed, seem to flutter with a mix of pain and exhaustion, his chest rising and falling with labored breaths. The air around him is heavy with the scent of sweat, blood, and the acrid tang of smoke.\n\nYou gently place a hand on his shoulder, and a soothing energy begins to emanate from your touch. The wounds on his body, though still fresh, start to show signs of mending. The gashes on his arms and torso begin to close, the skin knitting itself back together with a soft, blue-white glow. Karmag's breathing slows, becoming more steady, as his body begins to respond to the healing energy.\n\nAs you continue to channel the healing force, Karmag's eyes flicker open, and he regards you with a mix of gratitude and wariness. His gaze, though still cloudy with pain, holds a deep appreciation for the relief you've brought him. With a quiet nod, he acknowledges your aid, his voice barely above a whisper as he says, \"Thanks... needed that.\"\n\nWith Karmag's condition stabilized, you take a moment to assess the rest of the group. The others, though battered and bruised, seem to be holding their own, their eyes fixed on the door to the next room with a mix of trepidation and determination. The air is thick with anticipation, the weight of the unknown pressing down upon you all.\n\nAs you prepare to move forward, the silence is broken by the creaking of old wooden beams and the faint whisper of scurrying rodents, their tiny hearts beating in rhythm with the pounding of your own. The door to the next room, adorned with ancient carvings of long-forgotten rituals, seems to loom before you, its surface etched with an otherworldly energy that sends shivers down your spine.\n\nWith Karmag's wounds tended to, you've managed to stabilize his condition, granting him a temporary reprieve from the brink of collapse. Though his injuries are far from fully healed, he's now able to stand and move with greater ease, his movements no longer hindered by the crippling pain that had threatened to overwhelm him.\n\nAs you steel yourselves for what lies ahead, the door to the next room seems to beckon, its secrets and dangers waiting to be unveiled. The question is, what will you find beyond the threshold, and will you be prepared to face it?",
+    "reference": "\"Mavil...?\" *she asks, not sure what more to say... but making it clear she noticed the spark.*",
+    "latency_ms": 1880,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "scores": {
+      "rouge1": 0.0257,
+      "rouge2": 0.0,
+      "rougeL": 0.0171,
+      "bertscore": 0.7918,
+      "rule_coverage": 0.0435,
+      "response_length": 439
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "*The violet magic came over her again, creating another shield to cover her arms, now covered in blade marks and gun shot wounds. She lowered her guard and stood there in front of her, the magic still coursing violently through her. Her voice was gruff, but calm and genuine*\n\n\"...ya think you can win?\"",
+    "input_type": "fireball",
+    "response": "As the violet magic washes over her once more, the air around her seems to shimmer and distort, like the gentle lapping of waves on a summer's day. The shield that materializes to cover her arms pulses with an otherworldly energy, a deep, rich purple that seems to drink in the light around her. The blade marks and gunshot wounds that crisscross her skin seem to fade into the background, as if the magic is not just protecting her, but also healing her, stitching her torn flesh back together with threads of pure, unadulterated power.\n\nAs she lowers her guard, her eyes lock onto the figure before her, a piercing gaze that seems to bore into the very soul. Her voice, gruff and worn, like the rough-hewn stone of a ancient, weathered mountain, speaks the words that hang in the air like a challenge: \"...ya think you can win?\" The sound of her voice is like a gauntlet thrown, a dare to the universe itself to come and try its luck.\n\nThe room around her seems to hold its breath, the shadows cast by the flickering lights dancing across the walls like restless spirits. The air is heavy with anticipation, the weight of the unknown hanging over everything like a sword of Damocles. The figure before her, the one she addresses, seems to be frozen in time, their response hanging in the balance, like the delicate, crystalline drop of water suspended at the tip of a leaf.\n\nIn this moment, time itself seems to bend and warp, the very fabric of reality stretching to accommodate the possibilities that hang in the balance. The outcome of her words, of her challenge, hangs like a precipice, a cliff's edge that plunges down into the depths of the unknown. Will her opponent take the bait, and launch themselves into the fray, or will they hesitate, and falter? The world holds its breath, waiting to see what will happen next.\n\nAs the Rules Arbiter has decreed, the mechanical aspects of this encounter are but a distant hum, a gentle vibration that underscores the scene, but does not define it. The true power of this moment lies not in the numbers, or the rules, but in the story itself, in the depths of the characters, and the choices they make. The stage is set, the players are in position, and the drama is about to unfold. The question is, what will happen next?",
+    "reference": "*That nat 20 really showed up when I didn't need it huh* *She smirked and chuckled. She walked up to her calmly and, instead of going for a grapple or a face punch, simply punched her in the stomach. Knowing she'd go down, she immediately scooped her up and made sure she wouldn't die from the blood loss, putting some bandages around her arms and head, though the wool made it particularly hard to do*\n\n*She patted her on the back with a smile, holding her close to make sure she was okay. She spoke again, somewhat jokingly*\n\n\"Woulda gone for the face, but...I wasn't gonna take that smile away from ya. Ya did good Melia, damn good\"",
+    "latency_ms": 2675,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "scores": {
+      "rouge1": 0.1498,
+      "rouge2": 0.0113,
+      "rougeL": 0.0936,
+      "bertscore": 0.7965,
+      "rule_coverage": 0.0,
+      "response_length": 408
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "\"Fucking ell you weren't kidding about this thing being the pinnacle\"",
+    "input_type": "fireball",
+    "response": "As you utter those words, the weight of your statement hangs in the air like a challenge, echoing off the walls of the grand, high-ceilinged chamber. The room, adorned with intricate carvings that depict scenes of ancient battles and powerful magic, seems to darken slightly, as if the very shadows themselves are absorbing the intensity of your comment. The air is thick with anticipation, or perhaps it's foreboding, making the hairs on the back of your neck stand on end.\n\nBefore you stands the object of your awe and, seemingly, your frustration: a colossal, ornate door, its surface etched with runes that shimmer with a light that is both captivating and ominous. This is the entrance to the pinnacle, the culmination of your journey so far, and it's clear that nothing about this moment is going to be easy or straightforward.\n\nYour outburst, filled with a mix of awe and possibly a hint of dread, doesn't seem to have any immediate mechanical effect on the environment or the door. There's no click of ancient mechanisms, no rumble of the ground, no sudden illumination of hidden symbols. It's as if the universe, or whatever powers reside beyond that door, are waiting for your next move, unperturbed by your verbal reaction.\n\nHowever, the silence that follows your words is palpable, a heavy blanket that suffocates any potential for indifference. It's a reminder that you're not just standing before a physical barrier; you're on the cusp of a threshold that separates the mundane from the extraordinary, the known from the unknown.\n\nThe question now is, what will you do next? Will you attempt to open the door, prepare yourself for what's to come, or perhaps reflect on the journey that has led you to this moment? The choice is yours, but know this: whatever decision you make, it will have consequences that will echo far beyond this chamber.",
+    "reference": "\"Wanna see how long I can survive in this thing?\"",
+    "latency_ms": 2157,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "scores": {
+      "rouge1": 0.0119,
+      "rouge2": 0.0,
+      "rougeL": 0.0119,
+      "bertscore": 0.7827,
+      "rule_coverage": 0.087,
+      "response_length": 315
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "*Immediately stabs 8 times, not even bothering to stop when the mark appeared on the third one*",
+    "input_type": "fireball",
+    "response": "As you unleash a flurry of swift and deadly strikes, the air is filled with the soft whoosh of your blade slicing through the air. Your target, seemingly caught off guard by the ferocity of your assault, stumbles backward in an attempt to evade the onslaught. The first two strikes land with precision, biting deep into the target's defenses. However, it's on the third strike that a faint, glowing mark appears on your blade's edge, signaling that your attack has reached a critical threshold.\n\nUndeterred, you continue your relentless assault, the next five strikes landing with varying degrees of success. The fourth and fifth blows glance off the target's hastily raised defenses, causing minor scratches but failing to find their mark. The sixth strike, however, finds a gap in the target's guard and sinks deep into their side, causing a pained gasp to escape their lips. The seventh and eighth blows, fueled by your unyielding aggression, land with unbridled ferocity, each one biting deeper than the last.\n\nThe outcome of your actions is a scene of chaotic intensity. Your target, reeling from the barrage of attacks, staggers backward, their eyes wide with a mix of shock and pain. The air is heavy with the scent of sweat, blood, and the faint tang of ozone from the glowing mark on your blade. The sound of clashing steel and the soft thud of bodies colliding fills the air, creating a symphony of violence that hangs heavy over the scene.\n\nAs the dust settles, you stand panting, your chest heaving with exertion, your blade still trembling with the force of your final strike. The mechanical requirements of your craft, the ebb and flow of combat, have given way to the raw, visceral thrill of the fight. The mark on your blade still glows, a testament to the fury and skill you've unleashed upon your foe. Now, as the silence stretches out, you're left to ponder the consequences of your actions, and the fate that awaits your battered and bruised opponent. The question hangs in the air: what will you do next?",
+    "reference": "On Kaskin's chest, right where his heart is. The mark appears *He wipes the dagger off Kaskin's shirt and begins walking away* \"Enjoy your new cool brand Kas. Its there forever\" *He says as he walks and disappears into the streets outside* Head to the Twilight dawn and get inducted",
+    "latency_ms": 2763,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "scores": {
+      "rouge1": 0.0934,
+      "rouge2": 0.0198,
+      "rougeL": 0.0737,
+      "bertscore": 0.793,
+      "rule_coverage": 0.087,
+      "response_length": 348
+    }
+  }
+]
