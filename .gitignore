@@ -2,6 +2,8 @@
 frontend/.vite/
 chroma_db/*
 data/history/*
+# CRD3 dataset clone (large); JSONL outputs stay tracked unless you add them here
+data/crd3/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -219,3 +221,9 @@ Gen20with20Final20Project.pdf
 data/ragnarok-dm-lora/
 data/ragnarok-dm-gguf_gguf/
 data/ragnarok-dm-gguf/
+
+data/bm25_chunks.pkl
+data/crd3-llama32-r16a32-lr2e4-lora/
+data/crd3-llama32-r16a32-lr2e4-gguf_gguf/
+data/crd3-llama32-r16a32-lr2e4-gguf/
+data/chroma_db/

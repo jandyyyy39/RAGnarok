@@ -53,6 +53,18 @@ def main():
     parser.add_argument("--max-seq-len", type=int, default=MAX_SEQ_LEN, help="Max sequence length (default 1024)")
     parser.add_argument("--no-4bit", action="store_true", help="Disable 4-bit loading (needs ~24GB VRAM)")
     parser.add_argument("--run-name", type=str, default="", help="Unique run tag for non-overwriting outputs (e.g., fireball-mistral24b-r16a32)")
+    parser.add_argument(
+        "--train-file",
+        type=str,
+        default="",
+        help=f"Train JSONL path (default: {TRAIN_FILE}). Use for CRD3: data/crd3_train.jsonl",
+    )
+    parser.add_argument(
+        "--eval-file",
+        type=str,
+        default="",
+        help=f"Eval JSONL path (default: {EVAL_FILE}). Use for CRD3: data/crd3_eval.jsonl",
+    )
     args = parser.parse_args()
 
     try:
@@ -92,12 +104,25 @@ def main():
         random_state               = 42,
     )
 
-    if not TRAIN_FILE.exists():
-        print(f"ERROR: {TRAIN_FILE} not found. Run prepare_fireball.py first.")
+    train_path = Path(args.train_file.strip()) if args.train_file.strip() else TRAIN_FILE
+    eval_path = Path(args.eval_file.strip()) if args.eval_file.strip() else EVAL_FILE
+    train_path = train_path.resolve()
+    eval_path = eval_path.resolve()
+
+    if not train_path.exists():
+        print(f"ERROR: train file not found: {train_path}")
+        print("  FIREBALL: run scripts/prepare_fireball.py")
+        print("  CRD3:     run scripts/prepare_cr3d.py (after cloning CRD3 under data/crd3)")
+        return
+    if not eval_path.exists():
+        print(f"ERROR: eval file not found: {eval_path}")
         return
 
-    train_raw = load_jsonl(TRAIN_FILE)
-    eval_raw  = load_jsonl(EVAL_FILE)
+    print(f"Train JSONL: {train_path}")
+    print(f"Eval JSONL:  {eval_path}")
+
+    train_raw = load_jsonl(train_path)
+    eval_raw = load_jsonl(eval_path)
 
     from datasets import Dataset
     train_ds = Dataset.from_list([{"text": format_prompt(s, tokenizer)} for s in train_raw])

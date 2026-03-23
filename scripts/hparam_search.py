@@ -2,6 +2,7 @@ import argparse
 import gc
 import json
 import itertools
+import math
 import sys
 from pathlib import Path
 
@@ -52,7 +53,7 @@ def format_prompt(sample: dict, tokenizer) -> str:
 
 
 def run_single(rank: int, lora_alpha: int, learning_rate: float,
-               train_ds, eval_ds, base_model, base_tokenizer) -> float:
+               train_ds, eval_ds, base_model, base_tokenizer) -> tuple[float, float]:
     from unsloth import FastLanguageModel
     from trl import SFTTrainer
     from transformers import TrainingArguments
@@ -96,6 +97,8 @@ def run_single(rank: int, lora_alpha: int, learning_rate: float,
     trainer.train()
     eval_results = trainer.evaluate()
     eval_loss    = round(eval_results.get("eval_loss", 99.0), 4)
+    # Perplexity = exp(NLL); HF eval_loss is mean token CE in nats for causal LM.
+    eval_ppl = round(math.exp(eval_loss), 4) if eval_loss < 80 else float("inf")
 
     # Release LoRA adapter from GPU before next run
     del model
@@ -103,15 +106,26 @@ def run_single(rank: int, lora_alpha: int, learning_rate: float,
     gc.collect()
     torch.cuda.empty_cache()
 
-    return eval_loss
+    return eval_loss, eval_ppl
+
+
+def _loss_to_perplexity(loss: float) -> float:
+    if loss >= 80:
+        return float("inf")
+    return round(math.exp(loss), 4)
 
 
 def print_table(results: list[dict]):
-    print(f"\n{'Rank':<6} {'Alpha':<7} {'LR':<10} {'Eval Loss':<12} {'Status'}")
-    print("-" * 50)
+    print(f"\n{'Rank':<6} {'Alpha':<7} {'LR':<10} {'Loss':<10} {'PPL':<10} {'Status'}")
+    print("-" * 62)
     for r in sorted(results, key=lambda x: x["eval_loss"]):
         status = "<-- best" if r == sorted(results, key=lambda x: x["eval_loss"])[0] else ""
-        print(f"{r['rank']:<6} {r['lora_alpha']:<7} {r['learning_rate']:<10} {r['eval_loss']:<12} {status}")
+        ppl = r.get("eval_perplexity", _loss_to_perplexity(r["eval_loss"]))
+        if ppl == float("inf"):
+            ppl_str = "inf"
+        else:
+            ppl_str = f"{ppl:.4f}"
+        print(f"{r['rank']:<6} {r['lora_alpha']:<7} {r['learning_rate']:<10} {r['eval_loss']:<10.4f} {ppl_str:<10} {status}")
 
 
 def main():
@@ -158,18 +172,24 @@ def main():
     for i, (rank, alpha, lr) in enumerate(combos, 1):
         print(f"[{i}/{len(combos)}] rank={rank}  alpha={alpha}  lr={lr}")
         try:
-            eval_loss = run_single(rank, alpha, lr, train_ds, eval_ds, base_model, base_tokenizer)
+            eval_loss, eval_ppl = run_single(rank, alpha, lr, train_ds, eval_ds, base_model, base_tokenizer)
             status = "ok"
         except Exception as e:
             print(f"  FAILED: {e}")
             eval_loss = 99.0
+            eval_ppl = float("inf")
             status = "error"
 
+        ppl_for_json = eval_ppl if math.isfinite(eval_ppl) else None
         results.append({
-            "rank": rank, "lora_alpha": alpha,
-            "learning_rate": lr, "eval_loss": eval_loss, "status": status,
+            "rank": rank,
+            "lora_alpha": alpha,
+            "learning_rate": lr,
+            "eval_loss": eval_loss,
+            "eval_perplexity": ppl_for_json,
+            "status": status,
         })
-        print(f"  eval_loss = {eval_loss}\n")
+        print(f"  eval_loss = {eval_loss}  perplexity = {eval_ppl if math.isfinite(eval_ppl) else 'inf'}\n")
 
     best = min(results, key=lambda x: x["eval_loss"])
 
@@ -180,7 +200,9 @@ def main():
     print_table(results)
 
     print(f"\nBest config: rank={best['rank']}  alpha={best['lora_alpha']}  lr={best['learning_rate']}")
-    print(f"Eval loss:   {best['eval_loss']}")
+    print(f"Eval loss:   {best['eval_loss']}  (cross-entropy, nats)")
+    bp = best.get("eval_perplexity", _loss_to_perplexity(best["eval_loss"]))
+    print(f"Perplexity:  {bp if bp != float('inf') else 'inf'}  (= exp(loss); lower is better)")
     print(f"\nRun full fine-tuning with:")
     print(f"  python scripts/finetune_fireball.py --rank {best['rank']} --alpha {best['lora_alpha']} --lr {best['learning_rate']}")
     print(f"\nFull results saved → {RESULTS_FILE}")

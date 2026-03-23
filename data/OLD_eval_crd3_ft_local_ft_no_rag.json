@@ -1,0 +1,242 @@
+[
+  {
+    "experiment": "Local FT (No RAG)",
+    "input": ") *The basilisk moves forward, now only with 6 targets to chose from* *Attack of Opportunity from Polearm Master as it moves forward.*",
+    "input_type": "combat",
+    "response": "All right, so you rush up to help Arin, he looks over at you with a sly grin spreading across his face, saying \"Yeah, I've got this, no sweat, just a flesh wound,\" as you see him clutching his side, blood beginning to spill out of the corner of his mouth. You're like, \"Shit, Arin, you're really living on the edge this time!\" And immediately you pull out your blade and stab it into the back of his shoulder, jamming it in there, pulling it out as he's grinning at you with a look of acceptance, boasting \"Told you, I can take a hit, still the best in the business, the heist of the century is gonna be mine.\"",
+    "reference": "*Before the creature has the chance to do anything, Ephraim's blade flies out to demolish it in one strike, having been waiting for the perfect moment to strike.* *The basilisk comes forward and gets absolutely impaled on the polearm Ephraim wields, crumbling to the ground in death* *Just as they were appreciating the bolstering feeling inside of them, as suddenly as the basilisk arrived it is dead, and Beau cheers* \"Ain't that somethin, wonderful job!\"",
+    "latency_ms": 11568,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 1,
+    "scores": {
+      "rouge1": 0.24,
+      "rouge2": 0.0202,
+      "rougeL": 0.12,
+      "bertscore": 0.8217,
+      "bleu": 0.0129,
+      "chrf": 0.2593,
+      "rule_coverage": 0.0,
+      "response_length": 119,
+      "distinct1": 0.6911,
+      "distinct2": 0.9508,
+      "llm_composite": null,
+      "narrative_quality": null,
+      "rules_accuracy": null,
+      "character_voice": null,
+      "relevance": null
+    }
+  },
+  {
+    "experiment": "Local FT (No RAG)",
+    "input": "*seeing as I am still stealthed, draws out shortbow*",
+    "input_type": "general",
+    "response": "Okay, so you release a single arrow that strikes true into its side. You can see it trying to pull back, but its wings are now bound by the chain of ice, holding it in place. As you rush up to help Arin, he looks over at you with a sly grin spreading across his face, and says, \"Nice shot, mate! I've got a feeling this little tussle's gonna be the icing on the cake for our next big score - the heist of the century, if I do say so myself.\" He gives a low, satisfied chuckle, clearly pleased with the situation, and you catch a glimpse of a fleeting, aristocratic glint in his eye, but it's quickly replaced by his usual roguish swagger.",
+    "reference": "\"First blood there prime rib.\"",
+    "latency_ms": 9767,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 1,
+    "scores": {
+      "rouge1": 0.0,
+      "rouge2": 0.0,
+      "rougeL": 0.0,
+      "bertscore": 0.8035,
+      "bleu": 0.0055,
+      "chrf": 0.0509,
+      "rule_coverage": 0.0,
+      "response_length": 125,
+      "distinct1": 0.7559,
+      "distinct2": 1.0,
+      "llm_composite": null,
+      "narrative_quality": null,
+      "rules_accuracy": null,
+      "character_voice": null,
+      "relevance": null
+    }
+  },
+  {
+    "experiment": "Local FT (No RAG)",
+    "input": "*sees the sudden rush of the creature, he is caught off guard but quickly shoots regardless, as a tiny dart flies towards its target*",
+    "input_type": "general",
+    "response": "All right, so you release a single arrow that strikes true into its side. You can see it trying to pull back as the arrow embeds itself into its body, the fangs retracting in pain. It looks over towards where you are standing there with your bow out, and then (huffs) releases another cloud of poison at the group of you.",
+    "reference": "*he then runs 25 more feet for a total of 35*",
+    "latency_ms": 9149,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 1,
+    "scores": {
+      "rouge1": 0.0833,
+      "rouge2": 0.0,
+      "rougeL": 0.0556,
+      "bertscore": 0.823,
+      "bleu": 0.0069,
+      "chrf": 0.0929,
+      "rule_coverage": 0.0,
+      "response_length": 61,
+      "distinct1": 0.8361,
+      "distinct2": 0.9833,
+      "llm_composite": null,
+      "narrative_quality": null,
+      "rules_accuracy": null,
+      "character_voice": null,
+      "relevance": null
+    }
+  },
+  {
+    "experiment": "Local FT (No RAG)",
+    "input": "!cast mass -t kei -t Ed -t Ceph -t Lav",
+    "input_type": "combat",
+    "response": "You guys watch as Arin the Bold goes rushing up towards you, a pained grimace twisting his face, but still managing a smirk as he says, \"Blimey, mates! Looks like I've got a bit of a scratch, but I'm still the slipperiest rogue you've ever laid eyes on!\" As he reaches over to grab you by the shoulder, he gives you a confident wink and boasts, \"Don't you worry, I've got a plan that's gonna make us all rich, and I'm the only one who can pull it off - the heist of the century, baby!\" You release your arrow, and Arin's eyes flicker towards it, his expression unwavering despite the hint of nobility peeking through his rough demeanor. You've never really shot an arrow from a long distance before, so you're not sure if it will hit or miss.",
+    "reference": "*it tells you to attack the paladin* ||*it tells you to kill the paladin*||",
+    "latency_ms": 8950,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 1,
+    "scores": {
+      "rouge1": 0.0859,
+      "rouge2": 0.0,
+      "rougeL": 0.0736,
+      "bertscore": 0.8059,
+      "bleu": 0.0036,
+      "chrf": 0.0974,
+      "rule_coverage": 0.0,
+      "response_length": 140,
+      "distinct1": 0.6846,
+      "distinct2": 0.9527,
+      "llm_composite": null,
+      "narrative_quality": null,
+      "rules_accuracy": null,
+      "character_voice": null,
+      "relevance": null
+    }
+  },
+  {
+    "experiment": "Local FT (No RAG)",
+    "input": "*She tries to assess who looks the worst off... deciding it's probably Karmag, she walks over and heals him a bit before they move to the next room.*",
+    "input_type": "exploration",
+    "response": "All right, so you rush up to help Arin the Bold. He looks over at you with a sly grin spreading across his face, and you can tell he's thinking he's just pulled off the sneakiest move in the book. \"Nice timing, mate,\" he says with a wink, \"looks like I've got this basilisk right where I want it.\" You can see blood dripping from the corner of his mouth, but he's not paying attention to it, too caught up in the thrill of the heist. The arrow fires off into the basilisk as it moves forward, and you watch as it strikes true into its side. As it pulls back and aims another strike towards Arin, he lets out a low whistle, \"Blimey, this thing's got some bite, don't it?\" You release a second arrow that just barely misses, but you can see now its head is turned in your direction and it's going to take another strike at you. Arin gives you a nod of approval, \"Not bad, not bad at all - you've got skills, I'll give you that.\"",
+    "reference": "\"Mavil...?\" *she asks, not sure what more to say... but making it clear she noticed the spark.*",
+    "latency_ms": 12082,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 1,
+    "scores": {
+      "rouge1": 0.058,
+      "rouge2": 0.0,
+      "rougeL": 0.0483,
+      "bertscore": 0.8121,
+      "bleu": 0.0067,
+      "chrf": 0.1147,
+      "rule_coverage": 0.0,
+      "response_length": 182,
+      "distinct1": 0.5842,
+      "distinct2": 0.9206,
+      "llm_composite": null,
+      "narrative_quality": null,
+      "rules_accuracy": null,
+      "character_voice": null,
+      "relevance": null
+    }
+  },
+  {
+    "experiment": "Local FT (No RAG)",
+    "input": "*The violet magic came over her again, creating another shield to cover her arms, now covered in blade marks and gun shot wounds. She lowered her guard and stood there in front of her, the magic still coursing violently through her. Her voice was gruff, but calm and genuine*\n\n\"...ya think you can win?\"",
+    "input_type": "general",
+    "response": "As Arin rushes up to you with a sly grin, his eyes gleaming with a mixture of excitement and arrogance, he says, \"Blimey, nice score! You've got an eye for the good stuff, don't you?\" He takes the arrow out of your hand, giving it a once-over with a look of admiration, \"This little beauty's gonna be the icing on the cake for my next big job, the one that'll make all of Raven Queen's realm talk.\" With a flourish, he pats the arrow, \"I've got a feeling this is gonna be the key to pulling off the heist of the century, and I'm the only one bold enough to make it happen.\" At which point, you feel this slight surge of energy through the armor as its form seems to shift into one of the few magical protections that exist within the realm of the Raven Queen.",
+    "reference": "*That nat 20 really showed up when I didn't need it huh* *She smirked and chuckled. She walked up to her calmly and, instead of going for a grapple or a face punch, simply punched her in the stomach. Knowing she'd go down, she immediately scooped her up and made sure she wouldn't die from the blood loss, putting some bandages around her arms and head, though the wool made it particularly hard to do*\n\n*She patted her on the back with a smile, holding her close to make sure she was okay. She spoke again, somewhat jokingly*\n\n\"Woulda gone for the face, but...I wasn't gonna take that smile away from ya. Ya did good Melia, damn good\"",
+    "latency_ms": 11125,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 1,
+    "scores": {
+      "rouge1": 0.2222,
+      "rouge2": 0.0361,
+      "rougeL": 0.1147,
+      "bertscore": 0.8205,
+      "bleu": 0.0131,
+      "chrf": 0.2403,
+      "rule_coverage": 0.0,
+      "response_length": 148,
+      "distinct1": 0.641,
+      "distinct2": 0.9355,
+      "llm_composite": null,
+      "narrative_quality": null,
+      "rules_accuracy": null,
+      "character_voice": null,
+      "relevance": null
+    }
+  },
+  {
+    "experiment": "Local FT (No RAG)",
+    "input": "\"Fucking ell you weren't kidding about this thing being the pinnacle\"",
+    "input_type": "general",
+    "response": "You can see, now with a glance at his form in this room, Arin's presence is almost paltry compared to the sheer size of this creature. As he approaches you, a sly grin spreads across his face, and he gives you a cheeky wink before taking his fingers and wiping them across your face, saying, \"Blimey, you're a mess. I've got a job that's gonna make us all rich, but I've seen what this thing can do, and let me tell you, it's no joke. You guys have seen its power, right? I mean, I've pulled off some wild heists in my time, but this one's gonna be the big score, the one that sets us up for life.\" There's already a bit of blood dripping down one side of your face from where it had been pulled back by the blade wound, but Arin doesn't seem too fazed, his eyes gleaming with a mixture of excitement and cunning as he sizes you up.",
+    "reference": "\"Wanna see how long I can survive in this thing?\"",
+    "latency_ms": 11198,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 1,
+    "scores": {
+      "rouge1": 0.0652,
+      "rouge2": 0.022,
+      "rougeL": 0.0543,
+      "bertscore": 0.8152,
+      "bleu": 0.0066,
+      "chrf": 0.0963,
+      "rule_coverage": 0.0,
+      "response_length": 164,
+      "distinct1": 0.6667,
+      "distinct2": 0.9595,
+      "llm_composite": null,
+      "narrative_quality": null,
+      "rules_accuracy": null,
+      "character_voice": null,
+      "relevance": null
+    }
+  },
+  {
+    "experiment": "Local FT (No RAG)",
+    "input": "*Immediately stabs 8 times, not even bothering to stop when the mark appeared on the third one*",
+    "input_type": "general",
+    "response": "As you rush up, Arin the Bold is just now coming into view after being dragged off by Kevdak, who has already finished his conversation with Durnan and has stormed out of the tavern. You can see there's a little blood dripping from the side of Arin's face, but he's still flashing a charming grin, saying \"Looks like I've got a bit of a situation on my hands, mate - Kevdak's got a mean streak a mile wide. But don't you worry, I've been in tighter spots than this before, and I always come out on top, savvy?\" He gives a wink, clearly boasting about his ability to handle himself, and you can tell he's more than happy to have someone watching his back right now, especially with the big score he's been planning - the heist of the century, the one that'll set him up for life, or at least, that's what he's letting on.",
+    "reference": "On Kaskin's chest, right where his heart is. The mark appears *He wipes the dagger off Kaskin's shirt and begins walking away* \"Enjoy your new cool brand Kas. Its there forever\" *He says as he walks and disappears into the streets outside* Head to the Twilight dawn and get inducted",
+    "latency_ms": 10290,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 1,
+    "scores": {
+      "rouge1": 0.2018,
+      "rouge2": 0.0,
+      "rougeL": 0.0917,
+      "bertscore": 0.814,
+      "bleu": 0.0042,
+      "chrf": 0.2157,
+      "rule_coverage": 0.0435,
+      "response_length": 156,
+      "distinct1": 0.6867,
+      "distinct2": 0.9576,
+      "llm_composite": null,
+      "narrative_quality": null,
+      "rules_accuracy": null,
+      "character_voice": null,
+      "relevance": null
+    }
+  }
+]

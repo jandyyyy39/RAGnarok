@@ -17,7 +17,8 @@ class Config:
         'GROQ':       "llama-3.3-70b-versatile",
         'GROQ_FAST':  "llama-3.1-8b-instant",
         'GROQ_CRITIC': "llama-3.3-70b-versatile",
-        'LOCAL':      "ragnarok-dm",
+        'LOCAL':      "cr3d-ragnarok-dm",  # Ollama name from: ollama create cr3d-ragnarok-dm -f Modelfile
+        # 'LOCAL':  "ragnarok-dm"
         'LOCAL_FAST': "llama3.1",
         'LOCAL_CRITIC': "llama3.1",
     }
@@ -46,5 +47,9 @@ class Config:
     FIREBALL_DIR = DATA_DIR / "fireball"
     TRAIN_FILE   = DATA_DIR / "fireball_train.jsonl"
     EVAL_FILE    = DATA_DIR / "fireball_eval.jsonl"
+
+    # CRD3 dataset (separate eval harness: scripts/evaluate_crd3.py)
+    CRD3_TRAIN_FILE = DATA_DIR / "crd3_train.jsonl"
+    CRD3_EVAL_FILE  = DATA_DIR / "crd3_eval.jsonl"
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)

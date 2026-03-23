@@ -1,0 +1,242 @@
+[
+  {
+    "experiment": "No Memory",
+    "input": "Okay. | It's like getting punched with a motorcycle helmet on. | Seven damage.",
+    "input_type": "combat",
+    "response": "As you charge forward, the dimly lit chamber echoes with the sound of clashing steel and the stench of sweat and smoke. Your opponent, a hulking mass of muscle and fury, stands before you, its eyes blazing with a feral intensity. The air is heavy with tension, the weight of the battle hanging precariously in the balance.\n\nWith a fierce battle cry, you unleash a powerful blow, your fist flying toward the creature's jaw like a piston-driven hammer. The impact is tremendous, the sound of flesh meeting flesh a sickening crunch that sends shockwaves through the air. The creature's head snaps back, its eyes widening in surprise as it staggers under the force of the attack.\n\nRolling for melee attack, you score... 18! With a total attack roll of 18, you easily surpass the DC 15 required to hit your opponent. The creature's defenses are breached, and your attack lands with unyielding ferocity.\n\nThe damage dealt is indeed 7 points, a respectable blow that sends the creature stumbling backward. Its massive body crashes into the stone wall, the sound of scraping armor and screeching metal filling the air as it struggles to regain its footing. The creature's face is a mess of blood and bruises, its jaw already beginning to swell from the force of your attack.\n\nThe creature's eyes, however, burn with an unyielding fury, its gaze locking onto you with a malevolent intensity that sends shivers down your spine. It's far from defeated, and you sense that the battle is far from over. The creature takes a step forward, its massive fist clenched and ready to strike, as the chamber falls silent in anticipation of the next blow. What will you do next?",
+    "reference": "Nice. You clock both this creature and Fjord across the chin. No damage to you, Fjord, but you are a bit dizzy from the impact in the darkness around your face.",
+    "latency_ms": 3534,
+    "safety_pass": true,
+    "skipped": [
+      "memory"
+    ],
+    "expected_groq_calls": 4,
+    "scores": {
+      "rouge1": 0.1053,
+      "rouge2": 0.0187,
+      "rougeL": 0.0743,
+      "bertscore": 0.8151,
+      "bleu": 0.0052,
+      "chrf": 0.1612,
+      "rule_coverage": 0.1739,
+      "response_length": 285,
+      "distinct1": 0.524,
+      "distinct2": 0.89,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "Oh yeah, that hits. For sure.",
+    "input_type": "combat",
+    "response": "As you declare your confidence in the attack, the air is electric with anticipation. The dimly lit chamber, with its cold stone walls and flickering torches, seems to hold its breath in expectation of the outcome. Your comrades, standing beside you, their eyes fixed on the unfolding scene, wait with bated breath for the result of your bold claim.\n\nYou recall the Rules Arbiter's pronouncement: an Attack Roll, with a daunting DC of 15. The dice, a harbinger of fate, have been cast. The outcome hangs in the balance, as the numbers are tallied and the result is revealed.\n\nWith a roll of 12, plus your proficiency bonus of 3, your total comes out to be... 15. The crowd, if there was one, would hold its collective breath as the numbers align perfectly with the challenge. It's a hit, a direct strike that finds its mark with unerring precision.\n\nYour sword, with its finely honed edge, bites deep into the armor of your opponent. The sound of clashing steel echoes through the chamber, a testament to the ferocity of the battle. The force of the impact sends a shockwave through the air, and for a moment, time seems to stand still.\n\nThe outcome is clear: your attack has struck true, landing squarely on your opponent. The question now is, how will they respond to this sudden turn of events? Will they stumble back, reeling from the blow, or will they find a way to counter, to turn the tables on you? The battle rages on, with the next move hanging precariously in the balance.",
+    "reference": "Plus six to hit. That hits. This is a longbow, not a crossbow. My apologies. That's two plus four. You take six points of piercing damage.",
+    "latency_ms": 2211,
+    "safety_pass": true,
+    "skipped": [
+      "memory"
+    ],
+    "expected_groq_calls": 4,
+    "scores": {
+      "rouge1": 0.0751,
+      "rouge2": 0.0,
+      "rougeL": 0.0478,
+      "bertscore": 0.8141,
+      "bleu": 0.0038,
+      "chrf": 0.1152,
+      "rule_coverage": 0.1739,
+      "response_length": 264,
+      "distinct1": 0.5714,
+      "distinct2": 0.9094,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "No more of you doing my voice, Matt?",
+    "input_type": "general",
+    "response": "As you stand tall, your eyes narrowing at Matt, the dimly lit tavern falls silent. The patrons, a mix of burly dwarves and hooded figures, turn to watch the unfolding scene. The air is thick with tension, and the fire crackling in the hearth seems to be the only sound that dares to break the stillness. You take a step forward, your voice firm and commanding, \"No more of you doing my voice, Matt?\" The words hang in the air like a challenge, and Matt's eyes dart around the room before settling on you.\n\nTo see how effective your intimidation tactic is, you'll need to make an Intimidation Check. The Rules Arbiter has set the DC at 15, so you'll need to roll a d20 and add your Intimidation skill modifier to the result. If the total equals or exceeds 15, your attempt at intimidation will be successful.\n\nAs you await the roll, Matt's expression changes from amusement to unease. He shifts in his seat, his eyes locked on yours, and his voice barely above a whisper, \"A-ah, okay, no problem.\" The room holds its breath, waiting to see how this will play out.\n\nPlease roll a d20 and add your Intimidation skill modifier to the result. Will you successfully intimidate Matt, or will he call your bluff? The fate of the scene hangs in the balance, and the outcome is far from certain.",
+    "reference": "That wasn't going to happen ever again. The internet has spoken, nobody wants that.",
+    "latency_ms": 1473,
+    "safety_pass": true,
+    "skipped": [
+      "memory"
+    ],
+    "expected_groq_calls": 4,
+    "scores": {
+      "rouge1": 0.0315,
+      "rouge2": 0.0,
+      "rougeL": 0.0315,
+      "bertscore": 0.8048,
+      "bleu": 0.0036,
+      "chrf": 0.0884,
+      "rule_coverage": 0.1739,
+      "response_length": 234,
+      "distinct1": 0.5607,
+      "distinct2": 0.895,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "All right, so, question? I would like to try to use the Dispel Magic portion of my Magician's Judge. | Now? | I don't know; is that bad? | I don't know, can you get in there? Is the guts exposed? | Is there enough gut to hit?",
+    "input_type": "combat",
+    "response": "As you focus your mind and channel the arcane energies within your Magician's Judge, the air around you seems to vibrate with anticipation. Your eyes narrow, and your fingers dance across the intricate mechanisms of the device, seeking the hidden patterns and resonance that will unlock its true potential. The soft glow of luminescent runes etched into the Judge's surface begins to intensify, casting an ethereal light upon the surroundings.\n\nBefore you lies the mysterious, ancient construct – a twisted amalgamation of mechanical and magical components, its inner workings partially exposed like the innards of a dissected beast. Glimmeres of magical energy, akin to a thousand fireflies on a summer's night, flicker and pulse within the construct's core. It is here, amidst this maze of gears, wires, and arcane conduits, that you seek to apply the Dispel Magic function of your Magician's Judge.\n\nTo successfully dispel the magic, you must first understand the underlying arcane principles at play. This requires a deep dive into the realm of Arcana, a domain where magic and mystery entwine like the threads of a rich tapestry. Your Intelligence (Arcana) check will determine the efficacy of your dispelling attempt.\n\nRolling an Intelligence (Arcana) check with a DC of 15, you focus your mind, drawing upon your vast knowledge of magical theory and the practical applications thereof. The dice roll yields a result of... 18. Your understanding of Arcana proves to be more than sufficient, granting you a keen insight into the magical forces at work within the construct.\n\nWith the mechanics of the Magician's Judge humming in harmony with your arcane insights, you initiate the Dispel Magic function. A soft, pulsating glow emanates from the Judge, enveloping the construct's core. The magical energies within begin to falter, their pulsing rhythms slowing as the dispelling magic takes hold. The firefly-like glimmers of energy start to extinguish, one by one, until the construct's core lies dormant, its magical enhancements neutralized.\n\nThe immediate surroundings fall silent, the only sound the soft ticking of the Magician's Judge as it returns to its idle state. The air, once charged with magical tension, now feels lighter, as if a weight has been lifted from the environment. Your successful dispelling of the magic has not only revealed more of the construct's inner workings but has also potentially disabled any magical traps or defenses it may have possessed.\n\nAs the dust settles, both literally and metaphorically, you are left to ponder your next move. The construct, now stripped of its magical augmentations, presents a new set of challenges and opportunities. Will you proceed to inspect the construct more closely, seeking to understand its mechanical aspects, or perhaps prepare for potential repercussions of your actions, aware that dispelling magic in such a manner can sometimes have unforeseen consequences? The path ahead is fraught with possibilities, each step promising to unveil more of the mysteries that lie within this ancient, mystical device.",
+    "reference": "There are a couple of pockets where you can see inside of it, but you don't see the power source. It's risky.",
+    "latency_ms": 3395,
+    "safety_pass": true,
+    "skipped": [
+      "memory"
+    ],
+    "expected_groq_calls": 4,
+    "scores": {
+      "rouge1": 0.0499,
+      "rouge2": 0.0,
+      "rougeL": 0.0345,
+      "bertscore": 0.8001,
+      "bleu": 0.0012,
+      "chrf": 0.0645,
+      "rule_coverage": 0.2609,
+      "response_length": 487,
+      "distinct1": 0.5191,
+      "distinct2": 0.8931,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "Marisha Ray! [cheering] | Mr. Taliesin Jaffe! [cheering] | Love you. Ashly Burch! [cheering] | Hide your kids, hide your wives, hide your faces. It's Sam Riegel. [cheering] | And-- Oh no. And your, my, our beloved Dungeon Master; give it up for Matthew Mercer! [cheering]",
+    "input_type": "general",
+    "response": "As you stand atop the worn, wooden stage in the midst of the bustling tavern, the crowd's attention is drawn to you like a magnet. The air is thick with the smell of ale and roasting meat, and the fire crackling in the hearth casts a warm, golden glow over the sea of faces. With a flair for the dramatic, you launch into a passionate tribute, extolling the virtues of the esteemed personalities you've named: Marisha Ray, Taliesin Jaffe, Ashly Burch, Sam Riegel, and the incomparable Matthew Mercer.\n\nYour words are met with a mixture of confusion and curiosity, as the patrons of the tavern exchange skeptical glances. Some seem to recognize the names, while others appear perplexed by your enthusiastic declarations. Nevertheless, your infectious energy begins to win over the crowd, and soon, a smattering of applause and cheers erupts, with some even joining in, chanting the names alongside you.\n\nTo gauge the true impact of your performance, a Charisma (Performance) check is in order. With a DC of 15, the success of your action hangs in the balance. Rolling a d20 and adding your Charisma modifier and Performance skill level, you achieve a total result of... 18. Your impassioned tribute has struck a chord with the crowd, and the tavern erupts into a joyous, if somewhat bewildered, celebration.\n\nAs the applause reaches its crescendo, the tavern's patrons begin to cheer and whistle, with some even calling out for more. The atmosphere is electric, and for a moment, it seems as though the very walls of the tavern are vibrating with the collective energy of the crowd. Your performance has not only entertained the patrons but has also drawn the attention of the tavern's proprietor, who eyes you with a mixture of surprise and curiosity. It remains to be seen how this newfound attention will serve you, but for now, bask in the glory of your triumphant performance. The crowd roars on, and your name is on the lips of every patron in the tavern. What will you do next?",
+    "reference": "Wow. Holy shit, y'all! Welcome to the poor unfortunate soul that had to follow Sam Riegel out on stage. (shouting) No, don't touch it! We all know where it's been!",
+    "latency_ms": 2422,
+    "safety_pass": true,
+    "skipped": [
+      "memory"
+    ],
+    "expected_groq_calls": 4,
+    "scores": {
+      "rouge1": 0.0582,
+      "rouge2": 0.0053,
+      "rougeL": 0.037,
+      "bertscore": 0.8036,
+      "bleu": 0.003,
+      "chrf": 0.1078,
+      "rule_coverage": 0.2609,
+      "response_length": 341,
+      "distinct1": 0.5246,
+      "distinct2": 0.8837,
+      "llm_composite": 4.25,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 3
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "That's its action, correct, to break free?",
+    "input_type": "general",
+    "response": "As you stand firm, grasping the twisted, scaly limb of the behir, the air is electric with tension. The creature's eyes, like two glittering onyx stones, flash with a malevolent fury as it strains against your grip. The sound of its labored breathing and the creaking of its coils as it tries to break free fill the damp, cavernous space. The smell of damp earth and ozone hangs heavy, a reminder of the behir's ability to unleash devastating electrical attacks.\n\nYou grit your teeth, focusing on maintaining your hold as the behir's muscles ripple and flex beneath its scales. This is the moment of truth – will you be able to keep the beast contained, or will it shatter free and unleash its wrath upon you?\n\nTo determine the outcome, you must make a Strength (Athletics) check, with a DC of 15. The fate of this confrontation hangs in the balance, and the success or failure of this check will significantly impact the trajectory of this encounter.\n\nRoll a d20 and add your Strength modifier, as well as your proficiency bonus if you are proficient in Athletics. If the total equals or exceeds 15, you successfully maintain your grip, and the behir remains restrained. However, if the total falls short of 15, the behir's incredible strength proves too much, and it breaks free from your grasp, potentially turning the tables on you.\n\nThe behir's body is tensed, ready to exploit any weakness in your grip. The outcome of this check will decide whether you can keep the upper hand or if the situation will take a drastic turn for the worse. What is the result of your Strength (Athletics) check?",
+    "reference": "That's its action, correct. It will move over here to flank up right there. Beau, you do get an attack of opportunity as it moves out of the space, and if you hit it, it does prevent it from moving.",
+    "latency_ms": 2959,
+    "safety_pass": true,
+    "skipped": [
+      "memory"
+    ],
+    "expected_groq_calls": 4,
+    "scores": {
+      "rouge1": 0.1169,
+      "rouge2": 0.0186,
+      "rougeL": 0.0862,
+      "bertscore": 0.814,
+      "bleu": 0.0062,
+      "chrf": 0.1638,
+      "rule_coverage": 0.3478,
+      "response_length": 280,
+      "distinct1": 0.5317,
+      "distinct2": 0.8834,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "Dude, you just swallowed that thing whole. Like totally.",
+    "input_type": "general",
+    "response": "As you utter those fateful words, the air in the dimly lit chamber seems to thicken with anticipation. Your companion, the hapless adventurer who just swallowed the mysterious object whole, looks at you with a mix of confusion and trepidation. The sound of dripping water echoes through the cavern, and the flickering torches cast eerie shadows on the walls.\n\nThe object, a small, glowing artifact, had been lying on the ground, emitting a soft hum that seemed to be calling to your companion. Without hesitation, they picked it up and, in a moment of unbridled curiosity, swallowed it whole. The room falls silent, as if the very fate of your companion hangs in the balance.\n\nAs the seconds tick by, your companion's eyes widen, and their face contorts in a mixture of shock and discomfort. They begin to clutch at their stomach, and a low, guttural groan escapes their lips. It becomes clear that the artifact is not agreeing with them.\n\nTo determine the severity of the situation, a Constitution Saving Throw is required. The DC is 15, and the outcome will dictate the consequences of your companion's impulsive action. Rolling a d20 and adding their Constitution modifier, your companion's total result is... 12. Unfortunately, this falls short of the required DC, and the artifact's dark energy begins to take hold.\n\nThe artifact, it seems, is not just a simple trinket. It's a key component in an ancient, long-forgotten ritual, and its ingestion has triggered a catastrophic chain reaction within your companion's body. Their eyes turn glassy, and their skin takes on a sickly, pale hue. The air around them begins to distort, as if reality itself is bending to accommodate the artifact's dark power.\n\nThe consequences of this action are dire, and it's unclear what the future holds for your companion. Will they be able to withstand the artifact's influence, or will they succumb to its corrupting power? The fate of your adventure, and that of your companion, hangs precariously in the balance. What will you do next?",
+    "reference": "You guys watched as he focused on it over time, the blade seemed to fade away. It looks like the exterior begins to turn to ash and crumble, but then nothing hits the ground below it. Then it's gone.",
+    "latency_ms": 1868,
+    "safety_pass": true,
+    "skipped": [
+      "memory"
+    ],
+    "expected_groq_calls": 4,
+    "scores": {
+      "rouge1": 0.1028,
+      "rouge2": 0.0207,
+      "rougeL": 0.0771,
+      "bertscore": 0.8206,
+      "bleu": 0.0049,
+      "chrf": 0.1521,
+      "rule_coverage": 0.3043,
+      "response_length": 339,
+      "distinct1": 0.5272,
+      "distinct2": 0.8822,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No Memory",
+    "input": "I intensify the stink-eye.",
+    "input_type": "general",
+    "response": "As you intensify the stink-eye, the air around you seems to thicken with an almost palpable aura of disdain. Your gaze becomes a piercing dagger, stabbing through the shadows and fixing your target with an unyielding glare. The flickering torches in the damp, stone chamber seem to dim in response, as if even the light itself is cowed by the ferocity of your stare.\n\nYour target, a burly, battle-scarred orc, stands before you, its tusked mouth twisted into a snarl. The orc's eyes, a piercing yellow, flash with a mix of anger and uncertainty as it meets your gaze. For a moment, the two of you lock eyes, the only sound the heavy breathing of the orc and the creaking of the old wooden beams that support the chamber's vaulted ceiling.\n\nTo determine the effectiveness of your intimidation, you must make an Intimidation Check. The Rules Arbiter has set the DC at 15, a formidable challenge indeed. Your character's Intimidation skill, combined with your Charisma modifier, will be pitted against this daunting target.\n\nRolling a d20 and adding your relevant modifiers, you get... a 12. Unfortunately, this falls short of the DC 15, and your Intimidation Check is unsuccessful. The orc, while clearly unsettled by your intense stare, refuses to back down. In fact, its expression darkens, and it takes a step closer to you, its hand on the hilt of its crude, iron sword.\n\nThe orc growls, its voice like the rumbling of thunder in the distance, \"You think a nasty look will scare me, little one? I have faced the horrors of the underdark and battled the twisted creatures that lurk within. Your stink-eye is but a faint breeze compared to the tempests I have weathered.\"\n\nThe situation is now more precarious than ever. The orc's aggressive posture suggests that it is on the brink of attacking. What will you do next? Will you try to defuse the situation, or will you prepare for battle? The choice is yours.",
+    "reference": "At this point, you guys turn around and you see the rest of your party has caught up to you. Fjord covered in dry dust.",
+    "latency_ms": 2985,
+    "safety_pass": true,
+    "skipped": [
+      "memory"
+    ],
+    "expected_groq_calls": 4,
+    "scores": {
+      "rouge1": 0.0716,
+      "rouge2": 0.0111,
+      "rougeL": 0.0606,
+      "bertscore": 0.8069,
+      "bleu": 0.004,
+      "chrf": 0.1108,
+      "rule_coverage": 0.2609,
+      "response_length": 331,
+      "distinct1": 0.568,
+      "distinct2": 0.9288,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  }
+]

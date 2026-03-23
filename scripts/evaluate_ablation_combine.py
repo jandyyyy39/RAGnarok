@@ -104,6 +104,7 @@ def build_and_save_plots(
     agg: dict,
     baseline: str,
     plot_prefix: str = "final_eval_ablation_plot",
+    plots_dir: Path | None = None,
 ) -> None:
     try:
         import matplotlib
@@ -114,9 +115,11 @@ def build_and_save_plots(
         print("[Plots] Missing matplotlib/numpy. Install them and re-run.")
         return
 
-    PLOTS_DIR.mkdir(parents=True, exist_ok=True)
+    out_root = plots_dir if plots_dir is not None else PLOTS_DIR
+    out_root.mkdir(parents=True, exist_ok=True)
+
     def save_plot(stem: str) -> Path:
-        return PLOTS_DIR / f"{plot_prefix}_{stem}.png"
+        return out_root / f"{plot_prefix}_{stem}.png"
 
     # Metrics selected for the 0–1 style plots.
     candidate_metrics = [
@@ -126,7 +129,6 @@ def build_and_save_plots(
         "chrf",
         "rule_coverage",
         "distinct1",
-        "distinct2",
         "llm_composite",
     ]
     available_metrics = []
@@ -178,7 +180,7 @@ def build_and_save_plots(
 
     # 2) Delta vs baseline for key metrics
     if baseline and baseline in experiments:
-        key_metrics = [m for m in ["rougeL", "bertscore", "chrf", "distinct2"] if m in available_metrics]
+        key_metrics = [m for m in ["rougeL", "bertscore", "chrf"] if m in available_metrics]
         if key_metrics:
             base_vals = {m: mean_val(baseline, m) for m in key_metrics}
             deltas = {e: [mean_val(e, m) - base_vals[m] for m in key_metrics] for e in experiments if e != baseline}
@@ -275,10 +277,10 @@ def build_and_save_plots(
         print(f"  Saved -> {save_plot('scores_by_input_type').name}")
 
     # 6) Diversity summary (distinct-1/2 box plots)
-    if "distinct1" in available_metrics or "distinct2" in available_metrics:
+    if "distinct1" in available_metrics:
         fig, ax = plt.subplots(figsize=(10, 5))
         # Keep it lightweight: show boxplots for distinct-1 only.
-        metric = "distinct1" if "distinct1" in available_metrics else "distinct2"
+        metric = "distinct1"
         data = []
         labels = []
         for e in experiments:
@@ -579,6 +581,12 @@ if __name__ == "__main__":
     parser.add_argument("--prefix", type=str, default="eval_results", help="Per-config json prefix: data/<prefix>_*.json")
     parser.add_argument("--baseline", type=str, default="", help="Baseline experiment display name (must match stored results).")
     parser.add_argument("--plot-prefix", type=str, default="final_eval_ablation_plot", help="Output filename prefix for all generated plots.")
+    parser.add_argument(
+        "--plots-dir",
+        type=str,
+        default="",
+        help="Optional folder for PNGs (default: data/plots).",
+    )
     args = parser.parse_args()
 
     all_results = load_all_per_config_results(args.prefix)
@@ -589,6 +597,7 @@ if __name__ == "__main__":
     print(f"Baseline: {baseline}")
     print_metrics_table(all_results, experiments, agg, baseline)
 
-    build_and_save_plots(all_results, experiments, agg, baseline, plot_prefix=args.plot_prefix)
+    plots_dir = Path(args.plots_dir).resolve() if args.plots_dir.strip() else None
+    build_and_save_plots(all_results, experiments, agg, baseline, plot_prefix=args.plot_prefix, plots_dir=plots_dir)
     build_markdown_report(all_results, experiments, baseline, args.prefix)
 

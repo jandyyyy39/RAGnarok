@@ -1,0 +1,258 @@
+[
+  {
+    "experiment": "Bare DM Only",
+    "input": "Okay. | It's like getting punched with a motorcycle helmet on. | Seven damage.",
+    "input_type": "combat",
+    "response": "As you throw the punch, the sound of crunching metal and snapping leather fills the air, like the growl of a beast unleashed. Your fist, clad in the motorcycle helmet, connects with a sickening thud, sending shockwaves through the helmet and into your arm. The impact is akin to being on the receiving end of a brutal tackle, the force of which threatens to rattle your very bones.\n\nThe helmet, now a makeshift gauntlet, has amplified the impact of your blow, and your opponent staggers backward, eyes wide with surprise and pain. The force of the punch has left them reeling, their face a mask of shock and discomfort. The air is thick with tension as they struggle to regain their footing, their movements slow and labored.\n\nThe outcome of your unorthodox attack is clear: your opponent has taken a significant amount of damage, the equivalent of seven points of harm. The helmet's added weight and protection have turned your fist into a blunt instrument of considerable force, one that has left an indelible mark on your opponent's person.\n\nAs the dust settles, you notice that your opponent is now favoring one side, their movements hesitant and guarded. The punch has left them vulnerable, their defenses breached by the sheer ferocity of your attack. The question now is, how will they respond to this unexpected turn of events? Will they launch a counterattack, or will they attempt to retreat and regroup? The outcome hangs in the balance, as the scene unfolds with all the unpredictability of a maelstrom.",
+    "reference": "Nice. You clock both this creature and Fjord across the chin. No damage to you, Fjord, but you are a bit dizzy from the impact in the darkness around your face.",
+    "latency_ms": 2950,
+    "safety_pass": true,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "expected_groq_calls": 2,
+    "scores": {
+      "rouge1": 0.0962,
+      "rouge2": 0.0138,
+      "rougeL": 0.0619,
+      "bertscore": 0.8186,
+      "bleu": 0.0051,
+      "chrf": 0.149,
+      "rule_coverage": 0.1304,
+      "response_length": 258,
+      "distinct1": 0.5423,
+      "distinct2": 0.8996,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "Oh yeah, that hits. For sure.",
+    "input_type": "combat",
+    "response": "As you exclaim, \"Oh yeah, that hits. For sure,\" the air in the dimly lit tavern seems to vibrate with anticipation. The patrons, a mix of grizzled adventurers and shady locals, turn to watch the scene unfold. The fire crackling in the hearth casts flickering shadows on the walls, as if the very spirits of fate are leaning in to witness the outcome.\n\nYour declaration hangs in the air, a challenge to the universe to prove you right. And then, in a moment that seems almost inevitable, the door to the tavern bursts open, and a figure stumbles in. It's a young half-elf, dressed in worn leather armor and carrying a longsword at their side. They look like they've been traveling for days, and their eyes scan the room with a mix of desperation and determination.\n\nThe half-elf's gaze locks onto you, and they take a step forward, their hand on the hilt of their sword. \"You,\" they say, their voice firm. \"I've been searching for you. I have a message from... someone who wants to meet with you.\" The half-elf glances around the room, as if ensuring they're not being overheard. \"It's about a job. A job that requires your particular... skills.\"\n\nThe patrons of the tavern seem to sense that something important is happening, and they begin to murmur among themselves, placing bets and speculating about the nature of the job. The atmosphere in the room becomes electric, as if the very fabric of reality is bending to accommodate the possibilities that are about to unfold.\n\nAs the Rules Arbiter has decreed, I, as the DM, have full discretion in this situation. And I declare that your bold statement, \"Oh yeah, that hits. For sure,\" has indeed set events in motion. The question now is, how will you respond to this unexpected development? Will you accept the half-elf's message and hear them out, or will you dismiss them and continue with your evening as planned? The choice is yours, and the consequences of your decision will be revealed in due time.",
+    "reference": "Plus six to hit. That hits. This is a longbow, not a crossbow. My apologies. That's two plus four. You take six points of piercing damage.",
+    "latency_ms": 2255,
+    "safety_pass": true,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "expected_groq_calls": 2,
+    "scores": {
+      "rouge1": 0.0735,
+      "rouge2": 0.0053,
+      "rougeL": 0.0472,
+      "bertscore": 0.8075,
+      "bleu": 0.0029,
+      "chrf": 0.0993,
+      "rule_coverage": 0.0,
+      "response_length": 343,
+      "distinct1": 0.5254,
+      "distinct2": 0.9008,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "No more of you doing my voice, Matt?",
+    "input_type": "general",
+    "response": "As you utter the words, \"No more of you doing my voice, Matt?\" the atmosphere in the room shifts, like the gentle lapping of waves on a still pond. The air is heavy with anticipation, and the flickering candles cast eerie shadows on the walls. The other players at the table exchange knowing glances, their eyes sparkling with a mix of curiosity and amusement.\n\nMatt, the player to your left, looks up from his character sheet, a hint of a grin playing on his lips. He leans back in his chair, his eyes locked onto yours, and says, \"Ah, I see you've had enough of my... creative interpretations, have you?\" His voice is laced with a hint of mischief, and you can't help but wonder what he's planning next.\n\nAs the DM, I shall weave this development into the narrative, using my discretion to guide the story. With no mechanical ruling to constrain me, I shall craft a response that is both immersive and engaging.\n\nYou notice that the room around you has grown quieter, as if the very spirits of the land are waiting to see how this exchange will unfold. The shadows on the walls seem to be deepening, like dark tentacles reaching out to snuff out the candles. The air is thick with tension, and you can feel the weight of the story hanging in the balance.\n\nThe outcome of your action is that Matt, the player, will no longer be using your voice in his role-playing. However, this newfound awareness has also awakened a sense of unease within the group. The dynamics at the table have shifted, and you can't help but wonder what other changes this may bring.\n\nAs we continue, the story will unfold, guided by my discretion and your actions. The mechanical aspects of the game will take a backseat, and the narrative will become the primary focus. The question is, how will you proceed? Will you use this opportunity to redefine your character's voice, or will you let the story unfold in unexpected ways? The choice is yours, and the fate of the adventure hangs in the balance.",
+    "reference": "That wasn't going to happen ever again. The internet has spoken, nobody wants that.",
+    "latency_ms": 1689,
+    "safety_pass": true,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "expected_groq_calls": 2,
+    "scores": {
+      "rouge1": 0.0318,
+      "rouge2": 0.0,
+      "rougeL": 0.0265,
+      "bertscore": 0.8047,
+      "bleu": 0.0024,
+      "chrf": 0.0693,
+      "rule_coverage": 0.0435,
+      "response_length": 356,
+      "distinct1": 0.5055,
+      "distinct2": 0.8837,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "All right, so, question? I would like to try to use the Dispel Magic portion of my Magician's Judge. | Now? | I don't know; is that bad? | I don't know, can you get in there? Is the guts exposed? | Is there enough gut to hit?",
+    "input_type": "combat",
+    "response": "As you raise your Magician's Judge, the air around you seems to vibrate with anticipation. The dimly lit chamber, with its rows of ancient, dusty shelves and the faint scent of old parchment, grows quieter, as if the very shadows themselves are holding their breath. Your eyes are fixed on the mysterious, glowing construct before you, its intricate mechanisms whirring softly like a chorus of ethereal whispers.\n\nThe construct, a marvel of forgotten lore, appears to be some sort of arcane engine, its surface etched with runes that shimmer and pulse with a soft, blue light. The \"guts\" of the device, as you've referred to them, are indeed exposed, a labyrinthine tangle of crystal fibers, glowing orbs, and delicate, silver filaments that seem to hum with magical energy.\n\nAs you focus your will and attempt to use the Dispel Magic portion of your Magician's Judge, a subtle, golden glow begins to emanate from the Judge, like the first hints of dawn breaking on a summer morning. The glow envelops the construct, and for a moment, the two seem to be connected by an invisible thread of magical energy.\n\nThe outcome of your action is not immediately clear, but you sense a subtle shift in the balance of magical forces within the chamber. The construct's glowing runes seem to falter, their pulse slowing, as if the very fabric of its magic is beginning to unravel. The air around you seems to grow heavier, like the moment before a storm breaks, and you can feel the weight of the construct's enchantments beginning to lift.\n\nAnd yet, even as the magic begins to dissipate, you sense that the construct is not without its defenses. A faint, warning glow begins to emanate from the device's core, like the glow of embers from a dying fire. It is as if the construct is aware of your attempt to dispel its magic, and is preparing to respond in kind.\n\nThe question remains, will your attempt to dispel the magic be enough to disable the construct, or will it trigger a more sinister response? The shadows in the chamber seem to be watching, waiting to see how the situation will unfold. The fate of your quest, and the secrets that lie within the ancient, dusty tomes that line the shelves, hang in the balance. What will you do next?",
+    "reference": "There are a couple of pockets where you can see inside of it, but you don't see the power source. It's risky.",
+    "latency_ms": 2577,
+    "safety_pass": true,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "expected_groq_calls": 2,
+    "scores": {
+      "rouge1": 0.0616,
+      "rouge2": 0.0095,
+      "rougeL": 0.0427,
+      "bertscore": 0.8028,
+      "bleu": 0.0048,
+      "chrf": 0.0907,
+      "rule_coverage": 0.0435,
+      "response_length": 392,
+      "distinct1": 0.4698,
+      "distinct2": 0.8463,
+      "llm_composite": 4.25,
+      "narrative_quality": 5,
+      "rules_accuracy": 4,
+      "character_voice": 3,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "Marisha Ray! [cheering] | Mr. Taliesin Jaffe! [cheering] | Love you. Ashly Burch! [cheering] | Hide your kids, hide your wives, hide your faces. It's Sam Riegel. [cheering] | And-- Oh no. And your, my, our beloved Dungeon Master; give it up for Matthew Mercer! [cheering]",
+    "input_type": "general",
+    "response": "As the player's voice booms through the land, the scene erupts into a frenzy of cheers and applause. The crowd, a mix of patrons and adventurers, joins in, whistling and stomping their feet. The air is electric, filled with an infectious energy that seems to reverberate through every molecule. The very walls of the establishment appear to vibrate with the collective enthusiasm, as if the sheer force of the player's admiration might shake the rafters loose.\n\nMarisha Ray, Taliesin Jaffe, Ashly Burch, Sam Riegel, and Matthew Mercer – the objects of the player's affection – smile and wave, basking in the adoration. They seem to be savoring the moment, their faces aglow with a mix of surprise, gratitude, and amusement. As the cheering reaches a fever pitch, the group raises their hands, as if to quiet the crowd, but it only seems to fuel the frenzy.\n\nAs the player's action unfolds, the atmosphere in the room becomes increasingly charged. The crowd's excitement is palpable, and it's as if the very fabric of reality is being woven with threads of enthusiasm and admiration. In this moment, the mechanical aspects of the scene take a backseat, and the narrative is free to unfold without the constraints of rigid rules. The outcome of the player's action is not bound by the typical mechanics of the game, instead, it is guided by the whims of the moment, and the DM's discretion.\n\nAs the cheering begins to subside, the room falls into a warm, golden silence. The player's declaration has created a sense of community, a shared experience that transcends the boundaries of the game. In this moment, the players, the crowd, and the beloved personalities are all connected, united by a shared passion and enthusiasm. The scene is set, the stage is primed, and the narrative is poised to unfold in unexpected, exciting ways. The question is, what will happen next? Will the player's action have unintended consequences, or will it set the stage for a new adventure? Only time will tell, as the story continues to unfold, guided by the DM's discretion and the player's creativity.",
+    "reference": "Wow. Holy shit, y'all! Welcome to the poor unfortunate soul that had to follow Sam Riegel out on stage. (shouting) No, don't touch it! We all know where it's been!",
+    "latency_ms": 2673,
+    "safety_pass": true,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "expected_groq_calls": 2,
+    "scores": {
+      "rouge1": 0.0556,
+      "rouge2": 0.0102,
+      "rougeL": 0.0455,
+      "bertscore": 0.8039,
+      "bleu": 0.0028,
+      "chrf": 0.1036,
+      "rule_coverage": 0.0435,
+      "response_length": 353,
+      "distinct1": 0.4931,
+      "distinct2": 0.8204,
+      "llm_composite": 3.0,
+      "narrative_quality": 5,
+      "rules_accuracy": 1,
+      "character_voice": 4,
+      "relevance": 2
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "That's its action, correct, to break free?",
+    "input_type": "general",
+    "response": "As you utter the words, \"That's its action, correct, to break free?\" the air seems to thicken with anticipation. The creature, a hulking mass of twisted flesh and dark energy, strains against the bindings that hold it in place. The chains, adorned with ancient runes of containment, groan and creak under the pressure. The very fabric of reality appears to bend and warp, as if the creature's desire for freedom is a palpable force that threatens to unravel the threads of existence.\n\nYour question hangs in the air, a challenge to the creature's intentions. The beast's eyes, two burning orbs of malevolent intent, lock onto yours, and you sense a spark of understanding. It knows that you are questioning its actions, and it will not be swayed.\n\nWith a deafening roar, the creature surges forward, its massive body straining against the chains. The links shudder and tremble, and for a moment, it seems as though the creature will indeed break free. The runes on the chains flare with a faint, blue light, as if attempting to reinforce the bindings. The creature's fury is a living thing, a palpable force that crashes against the chains like a tidal wave.\n\nAnd yet, the bindings hold. The creature's action, its attempt to break free, is a testament to its unyielding ferocity. The outcome of its action is clear: the creature has attempted to escape, but the chains have held firm. The creature's fury has been momentarily contained, but the consequences of its actions will be far-reaching. The darkness that surrounds you seems to grow thicker, as if the creature's malevolent energy is seeping into the very air itself.\n\nThe scene is set, the creature's intentions are clear, and the outcome of its action is decided. The question now is, what will you do next? Will you attempt to reinforce the bindings, or will you seek to exploit the creature's momentary frustration? The choice is yours, and the fate of this forsaken place hangs in the balance.",
+    "reference": "That's its action, correct. It will move over here to flank up right there. Beau, you do get an attack of opportunity as it moves out of the space, and if you hit it, it does prevent it from moving.",
+    "latency_ms": 1534,
+    "safety_pass": true,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "expected_groq_calls": 2,
+    "scores": {
+      "rouge1": 0.1039,
+      "rouge2": 0.0313,
+      "rougeL": 0.0831,
+      "bertscore": 0.8159,
+      "bleu": 0.0154,
+      "chrf": 0.1598,
+      "rule_coverage": 0.0435,
+      "response_length": 333,
+      "distinct1": 0.4593,
+      "distinct2": 0.8163,
+      "llm_composite": 4.5,
+      "narrative_quality": 5,
+      "rules_accuracy": 4,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "Dude, you just swallowed that thing whole. Like totally.",
+    "input_type": "general",
+    "response": "As you utter those words, the dimly lit chamber falls silent, the only sound the faint hum of luminescent mushrooms growing on the damp walls. Your companion, a burly dwarf named Grimbold, looks at you with a mix of confusion and concern, his eyes squinting as if to ask, \"What in the name of Moradin's beard are you talking about?\" The air is thick with the smell of damp earth and mold, and the flickering torches cast eerie shadows on the walls.\n\nGrimbold, still chewing, looks down at his chest, where a small, pulsing creature had been attached just moments before. His eyes widen in surprise as he realizes that, indeed, he has swallowed the creature whole. The creature, a small, iridescent being known as a \"Gloopernaught,\" had been clinging to Grimbold's armor, emitting a soft, blue glow.\n\nAs the reality of the situation sets in, Grimbold's face turns a deep shade of crimson, and he begins to stumble about the room, his hands clutching at his stomach. The Gloopernaught, now inside Grimbold's belly, starts to glow even brighter, illuminating the dark recesses of the chamber. The light grows in intensity, and the air around Grimbold begins to distort, as if reality itself is bending to accommodate the creature's presence.\n\nThe room falls silent, except for the sound of Grimbold's labored breathing and the soft, pulsing hum of the Gloopernaught. The tension is palpable, and it's clear that the outcome of this situation is far from certain. Will Grimbold be able to survive the ingestion of the Gloopernaught, or will the creature's presence inside him have unforeseen consequences? Only time will tell.\n\nIn this moment, the mechanical aspects of the game take a backseat, and the focus shifts to the narrative and the consequences of Grimbold's actions. The fate of the dwarf and the Gloopernaught hangs in the balance, and the story will unfold accordingly. The scene is set, and the outcome is far from certain. What will happen next?",
+    "reference": "You guys watched as he focused on it over time, the blade seemed to fade away. It looks like the exterior begins to turn to ash and crumble, but then nothing hits the ground below it. Then it's gone.",
+    "latency_ms": 3415,
+    "safety_pass": true,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "expected_groq_calls": 2,
+    "scores": {
+      "rouge1": 0.0897,
+      "rouge2": 0.0159,
+      "rougeL": 0.0686,
+      "bertscore": 0.8162,
+      "bleu": 0.0043,
+      "chrf": 0.1511,
+      "rule_coverage": 0.0435,
+      "response_length": 330,
+      "distinct1": 0.5074,
+      "distinct2": 0.8757,
+      "llm_composite": 4.5,
+      "narrative_quality": 5,
+      "rules_accuracy": 4,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "Bare DM Only",
+    "input": "I intensify the stink-eye.",
+    "input_type": "general",
+    "response": "As you intensify the stink-eye, the air around you seems to thicken with an almost palpable sense of disdain. Your gaze becomes a piercing lance, sharpened to a fine point and aimed directly at the target of your ire. The room falls silent, as if the very atmosphere itself is holding its breath in anticipation of the outcome.\n\nThe object of your stink-eye, a burly half-orc barbarian, shifts uncomfortably under the weight of your glare. His eyes dart back and forth, as if searching for an escape from the withering intensity of your stare. His face reddens, and his thick neck begins to bulge with rising indignation.\n\nThe mechanical requirements of this situation are straightforward: the outcome of your action is entirely at my discretion as the DM. I shall weave the consequences of your intensified stink-eye into the fabric of the narrative, unencumbered by the constraints of rules or mechanics.\n\nAs the half-orc's face deepens to a rich shade of crimson, he takes a step forward, his massive fist clenched at his side. The sound of his heavy breathing fills the air, and the scent of sweat and leather wafts towards you. It becomes clear that your stink-eye has had a profound effect on the barbarian, though whether it will be enough to defuse the tension or spark a fiery confrontation remains to be seen.\n\nThe scene hangs in the balance, awaiting your next move. Will you continue to bore into the half-orc's psyche with your piercing gaze, or will you choose a different path to resolve the situation? The choice is yours, and the consequences will be mine to narrate.",
+    "reference": "At this point, you guys turn around and you see the rest of your party has caught up to you. Fjord covered in dry dust.",
+    "latency_ms": 1823,
+    "safety_pass": true,
+    "skipped": [
+      "memory",
+      "rag",
+      "npc"
+    ],
+    "expected_groq_calls": 2,
+    "scores": {
+      "rouge1": 0.0915,
+      "rouge2": 0.0066,
+      "rougeL": 0.0588,
+      "bertscore": 0.8153,
+      "bleu": 0.0047,
+      "chrf": 0.1255,
+      "rule_coverage": 0.0435,
+      "response_length": 272,
+      "distinct1": 0.573,
+      "distinct2": 0.9143,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  }
+]

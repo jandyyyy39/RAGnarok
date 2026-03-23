@@ -1,0 +1,242 @@
+[
+  {
+    "experiment": "No RAG",
+    "input": "Okay. | It's like getting punched with a motorcycle helmet on. | Seven damage.",
+    "input_type": "combat",
+    "response": "As you utter the phrase, \"Okay. It's like getting punched with a motorcycle helmet on. Seven damage,\" the atmosphere within the Yawning Portal Tavern takes a peculiar turn. The air, already thick with the tension of your intensified stink-eye, seems to ripple with anticipation. The patrons, still reeling from the earlier outburst of cheering and applause for the esteemed Dungeon Master, Matthew Mercer, now lean in with a mix of curiosity and apprehension.\n\nDurnan the Barkeep, ever vigilant, watches the scene unfold with a keen eye, his expression a mask of neutrality. The fire crackling in the hearth casts flickering shadows on the walls, as if the very spirits of the tavern are drawn into the drama.\n\nYour words hang in the air like a challenge, and for a moment, it seems as though the room holds its collective breath. Then, in a burst of unexpected movement, a figure near the back of the tavern lurches forward, as if propelled by an unseen force. It's one of the regular patrons, a burly man known for his love of ale and his penchant for getting into scrapes.\n\nThe man stumbles towards you, his face reddened, either from the ale or from some unseen agitation. He looks like he's been, indeed, punched with a motorcycle helmet on – dazed, confused, and more than a little angry. The \"seven damage\" you've declared seems to manifest as a series of red, angry welts on his face and arms, as if the very words have struck him with physical force.\n\nThe patrons gasp, some in shock, others in amusement, as the man staggers closer to you. Durnan's expression remains unreadable, but his eyes sparkle with a hint of intrigue. The scene is set for a confrontation, with the man's approach looking more like a challenge than a coincidence.\n\nAs the mechanical aspect of your declaration takes hold, the man's advance becomes a tangible, physical manifestation of your words. The \"seven damage\" seems to have awakened a latent aggression within him, drawing him into a conflict that was not there before. The question now is, how will you proceed? Will you stand your ground, or will the situation escalate further, drawing in other patrons and possibly even Durnan himself? The choice is yours, as the Yawning Portal Tavern holds its breath, awaiting the next move in this unfolding drama.",
+    "reference": "Nice. You clock both this creature and Fjord across the chin. No damage to you, Fjord, but you are a bit dizzy from the impact in the darkness around your face.",
+    "latency_ms": 1968,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.0789,
+      "rouge2": 0.014,
+      "rougeL": 0.0557,
+      "bertscore": 0.8038,
+      "bleu": 0.0042,
+      "chrf": 0.116,
+      "rule_coverage": 0.0435,
+      "response_length": 393,
+      "distinct1": 0.5125,
+      "distinct2": 0.8847,
+      "llm_composite": 3.25,
+      "narrative_quality": 5,
+      "rules_accuracy": 1,
+      "character_voice": 4,
+      "relevance": 3
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": "Oh yeah, that hits. For sure.",
+    "input_type": "combat",
+    "response": "As you say, \"Oh yeah, that hits. For sure,\" the atmosphere in the Yawning Portal Tavern becomes even more electric. The patrons, still reeling from the earlier outburst of cheers and applause, seem to be feeding off your energy. The air is thick with anticipation, and the smell of ale and roasting meat wafts through the air, mingling with the murmur of hushed conversations.\n\nDurnan the Barkeep, polishing a mug with a white apron, raises an eyebrow in your direction. A hint of a smile plays on his lips, as if he's intrigued by your bravado. The fire crackling in the hearth casts a warm glow over the scene, and the shadows on the walls seem to grow longer, as if they're leaning in to listen to your next move.\n\nAs you affirm the impact of the earlier statement, the sense of tension in the room becomes almost palpable. It's as if the patrons are waiting for something to happen, for the next shoe to drop. The mechanical requirements of the situation are clear: the scene is set, the atmosphere is charged, and the players are ready for the next development.\n\nIn this moment, the Rules Arbiter's ruling comes into play. With no mechanical ruling to guide the outcome, the direction of the story is mine to shape. The discretion is mine, and I shall wield it to craft a narrative that's both unexpected and thrilling.\n\nAs you stand there, basking in the attention of the tavern's patrons, you notice a figure emerging from the crowd. It's a hooded individual, dressed in dark, nondescript clothing, and their eyes seem to be fixed intently on you. The air around them appears to ripple, as if the very fabric of reality is bending to accommodate their presence.\n\nThe figure begins to move towards you, their pace slow and deliberate. The patrons part to let them through, their faces filled with a mix of curiosity and trepidation. It's clear that this individual is not like the others in the tavern, and their intentions are far from certain.\n\nThe scene is set, the stage is primed, and the story is ready to unfold. What will you do next, brave adventurer? Will you stand your ground, or will you take a step back, unsure of what's to come? The choice is yours, and the fate of the story hangs in the balance.",
+    "reference": "Plus six to hit. That hits. This is a longbow, not a crossbow. My apologies. That's two plus four. You take six points of piercing damage.",
+    "latency_ms": 2585,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.06,
+      "rouge2": 0.0139,
+      "rougeL": 0.0462,
+      "bertscore": 0.8048,
+      "bleu": 0.0026,
+      "chrf": 0.0933,
+      "rule_coverage": 0.0,
+      "response_length": 397,
+      "distinct1": 0.5049,
+      "distinct2": 0.8815,
+      "llm_composite": 4.25,
+      "narrative_quality": 5,
+      "rules_accuracy": 4,
+      "character_voice": 3,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": "No more of you doing my voice, Matt?",
+    "input_type": "general",
+    "response": "As you utter the words, \"No more of you doing my voice, Matt?\" the atmosphere in the Yawning Portal Tavern takes a subtle yet palpable shift. The air seems to vibrate with a mix of amusement and anticipation, as if the patrons are collectively holding their breath, waiting to see how the situation will unfold. Durnan, the barkeep, looks up from polishing a mug, his eyes twinkling with interest, his bushy eyebrows raised in a silent query.\n\nThe patrons, still reeling from the earlier commotion, exchange furtive glances, their faces a picture of curiosity and concern. The fire crackling in the hearth seems to grow quieter, as if it too is waiting with bated breath for the outcome of your statement.\n\nYour words hang in the air, a challenge, a gauntlet thrown, and the room holds its collective breath, waiting for a response. The silence is almost deafening, punctuated only by the soft clinking of glasses and the muffled murmur of hushed conversations.\n\nAs the Dungeon Master, I exercise my full discretion, and the mechanical outcome of your action is that the tension in the room becomes a palpable, almost living entity. The atmosphere is now charged with an air of anticipation, and the patrons are on the edge of their seats, waiting to see what will happen next.\n\nThe scene is set, the stage is primed, and the players are ready. The question on everyone's mind is: what will happen next? Will the situation escalate, or will it diffuse? The choice is yours, and the fate of the evening hangs in the balance.\n\nThe current state of the world remains:\n\n* Location: The Yawning Portal Tavern\n* Active NPCs: Durnan the Barkeep\n* Party Condition: Healthy\n* Recent History: Your statement, \"No more of you doing my voice, Matt?\" has become the focal point of the evening, and all eyes are on you, waiting for the next development.",
+    "reference": "That wasn't going to happen ever again. The internet has spoken, nobody wants that.",
+    "latency_ms": 1598,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.0302,
+      "rouge2": 0.0,
+      "rougeL": 0.0302,
+      "bertscore": 0.7969,
+      "bleu": 0.0027,
+      "chrf": 0.0795,
+      "rule_coverage": 0.0435,
+      "response_length": 319,
+      "distinct1": 0.5253,
+      "distinct2": 0.8571,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": "All right, so, question? I would like to try to use the Dispel Magic portion of my Magician's Judge. | Now? | I don't know; is that bad? | I don't know, can you get in there? Is the guts exposed? | Is there enough gut to hit?",
+    "input_type": "combat",
+    "response": "As you stand amidst the murmuring patrons of the Yawning Portal Tavern, the air thick with anticipation and a hint of unease, you raise your Magician's Judge, its intricate engravings glinting in the flickering candlelight. Your eyes are fixed on the individual who swallowed the mysterious object whole, a look of intense focus etched on your face. The patrons, sensing the buildup of magical energy, lean in, their faces a mixture of curiosity and concern.\n\nDurnan, the barkeep, polishes a mug with a dirty apron, his eyes darting between you and the would-be victim, his expression a mask of neutral interest. The atmosphere is heavy with the weight of unspoken questions: What will happen next? Will the Magician's Judge succeed in dispelling whatever magic is at play? And, most pressing of all, what exactly did the person swallow?\n\nAs you begin to chant the words of the Dispel Magic spell, the air around you seems to vibrate with magical energy. The words themselves are lost amidst the din of the tavern, but the intent behind them is clear: to counteract any malevolent forces that may be at work. Your hands weave intricate patterns, guiding the magical energy toward the unfortunate soul who swallowed the object.\n\nThe question of whether the guts are exposed or if there's enough gut to hit hangs in the balance, a grim reminder of the unpredictable nature of magic and the human body. The mechanical requirements of the spell dictate that you must make a successful dispel check to counteract any magical effects. Given the unusual circumstances, I shall exercise my discretion as the DM to determine the outcome.\n\nRolling a d20 and adding your relevant ability score modifier and proficiency bonus, the total result is... 14. With a successful dispel check, you manage to dispel the magical effects surrounding the swallowed object. However, the true challenge lies in the aftermath, as the object begins to take effect, causing the person's body to undergo a grotesque transformation.\n\nThe person's stomach begins to bulge, their skin taking on a pale, almost translucent quality. The patrons gasp in horror as the individual's body starts to contort, their limbs twisting in ways that defy human anatomy. It becomes clear that the object was not just any ordinary item, but a key component in a dark and malevolent ritual.\n\nThe scene is set for a chaotic and potentially deadly confrontation. The patrons are on the verge of panic, and Durnan's expression has turned from neutral to concerned. The question now is: how will you proceed? Will you attempt to intervene, or will you stand back and observe the unfolding chaos? The choice is yours, and the consequences of your actions will be far-reaching.",
+    "reference": "There are a couple of pockets where you can see inside of it, but you don't see the power source. It's risky.",
+    "latency_ms": 2287,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.0453,
+      "rouge2": 0.0,
+      "rougeL": 0.0412,
+      "bertscore": 0.7995,
+      "bleu": 0.0021,
+      "chrf": 0.0662,
+      "rule_coverage": 0.3043,
+      "response_length": 453,
+      "distinct1": 0.5303,
+      "distinct2": 0.9067,
+      "llm_composite": 4.25,
+      "narrative_quality": 5,
+      "rules_accuracy": 4,
+      "character_voice": 3,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": "Marisha Ray! [cheering] | Mr. Taliesin Jaffe! [cheering] | Love you. Ashly Burch! [cheering] | Hide your kids, hide your wives, hide your faces. It's Sam Riegel. [cheering] | And-- Oh no. And your, my, our beloved Dungeon Master; give it up for Matthew Mercer! [cheering]",
+    "input_type": "general",
+    "response": "As the player's voice booms through the Yawning Portal Tavern, the atmosphere shifts in an instant. The air, once thick with anticipation and a hint of tension, now becomes electric with excitement. Patrons turn from their drinks and conversations, eyes wide with curiosity, as the player's cheers and applause echo off the stone walls. The fire crackling in the hearth seems to dance in rhythm with the player's enthusiasm, casting flickering shadows across the faces of the gathered crowd.\n\nDurnan the Barkeep, initially taken aback by the sudden outburst, can't help but crack a hint of a smile. His eyes, a deep, knowing brown, sparkle with amusement as he polishes a mug with a white apron, his movements economical and practiced. The other patrons, a mix of adventurers, travelers, and locals, exchange glances, some of them chuckling, others looking on in confusion.\n\nThe player's words, a joyful tribute to the talents of Marisha Ray, Taliesin Jaffe, Ashly Burch, Sam Riegel, and Matthew Mercer, bring a sense of communal excitement to the tavern. Strangers become united in their shared appreciation for the mentioned individuals, and the room fills with the warm, golden glow of camaraderie.\n\nAs the player's cheering fades, the tavern erupts into a gentle, appreciative applause. The sound is like a soft rain, soothing and calming, washing away the earlier tension. Durnan, now fully embracing the moment, raises his mug in a silent toast, his eyes twinkling with delight.\n\nIn this moment, the Yawning Portal Tavern is transformed. The shadows cast by the fire seem less ominous, the air less heavy with foreboding. The player's action has created a sense of community, of shared joy, that permeates every corner of the tavern.\n\nMechanically, the player's action has no direct impact on the game world, but it has shifted the social dynamics of the scene. The atmosphere is now more relaxed, more open to conversation and connection. The player's charisma and enthusiasm have, in effect, dispelled some of the earlier tension, creating an opportunity for new interactions and alliances to form.\n\nAs the applause dies down, Durnan speaks up, his voice warm and inviting, \"Ah, it seems we have a fan of the performances in our midst! What can I get for you, my friend? A drink, perhaps, to celebrate the talents of those you admire?\" The question hangs in the air, an invitation to engage with the barkeep, and the tavern, in a new and meaningful way.",
+    "reference": "Wow. Holy shit, y'all! Welcome to the poor unfortunate soul that had to follow Sam Riegel out on stage. (shouting) No, don't touch it! We all know where it's been!",
+    "latency_ms": 2244,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.0622,
+      "rouge2": 0.0089,
+      "rougeL": 0.0356,
+      "bertscore": 0.7997,
+      "bleu": 0.0028,
+      "chrf": 0.0958,
+      "rule_coverage": 0.1304,
+      "response_length": 408,
+      "distinct1": 0.5444,
+      "distinct2": 0.8774,
+      "llm_composite": 4.25,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 3
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": "That's its action, correct, to break free?",
+    "input_type": "general",
+    "response": "As the cheers and applause for the beloved Dungeon Master, Matthew Mercer, begin to subside, the atmosphere in the Yawning Portal Tavern returns to a sense of anticipation and curiosity. The patrons, still buzzing from the outburst of enthusiasm, lean in to see how the situation will unfold. Durnan the Barkeep, ever the vigilant observer, polishes a mug with a white apron, his eyes fixed intently on the scene before him.\n\nYou turn your attention back to the matter at hand, inquiring, \"That's its action, correct, to break free?\" The question hangs in the air, and for a moment, it seems as though time itself is waiting for a response. The tavern falls silent, with all eyes on the unfolding drama.\n\nAs the Dungeon Master, I consider the context and the Rules Arbiter's ruling, which grants me full discretion in this matter. With a deep breath, I set the scene for the outcome of your action.\n\n\"You are correct,\" I say, my voice low and mysterious. \"The entity, still shrouded in mystery, is indeed attempting to break free. The air seems to vibrate with tension as it strains against its unseen bonds. The patrons of the Yawning Portal Tavern hold their collective breath, sensing that the outcome of this struggle will have far-reaching consequences.\"\n\nWith a wave of my hand, I gesture to the center of the tavern, where a faint, pulsating glow begins to emanate. The light grows in intensity, illuminating the faces of the patrons and casting eerie shadows on the walls. The atmosphere becomes electric, heavy with anticipation.\n\n\"The entity's action to break free has begun,\" I announce, my voice dripping with drama. \"The consequences of its success or failure will be revealed in due time. For now, the fate of the Yawning Portal Tavern, and perhaps even the city of Waterdeep, hangs in the balance.\"\n\nThe scene is set, and the outcome of the entity's action will be determined by the unfolding events. The question is, what will you do next? Will you attempt to intervene, or will you wait and observe the developments as they unfold? The choice is yours, and the fate of the tavern, and perhaps more, hangs in the balance.",
+    "reference": "That's its action, correct. It will move over here to flank up right there. Beau, you do get an attack of opportunity as it moves out of the space, and if you hit it, it does prevent it from moving.",
+    "latency_ms": 1701,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.087,
+      "rouge2": 0.034,
+      "rougeL": 0.0676,
+      "bertscore": 0.809,
+      "bleu": 0.0137,
+      "chrf": 0.1535,
+      "rule_coverage": 0.0435,
+      "response_length": 368,
+      "distinct1": 0.4906,
+      "distinct2": 0.8414,
+      "llm_composite": 4.5,
+      "narrative_quality": 5,
+      "rules_accuracy": 4,
+      "character_voice": 5,
+      "relevance": 4
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": "Dude, you just swallowed that thing whole. Like totally.",
+    "input_type": "general",
+    "response": "As the last echoes of applause for Matthew Mercer fade away, the Yawning Portal Tavern returns to its usual murmur, with patrons resuming their hushed conversations and clinking glasses. The air is thick with the smell of ale and roasting meat, and the fire crackles in the hearth, casting a warm glow over the room. Durnan the Barkeep, ever the attentive host, polishes a mug with a white apron, his eyes twinkling with amusement as he surveys the crowd.\n\nYour statement, \"Dude, you just swallowed that thing whole. Like totally,\" hangs in the air, drawing the attention of those nearby. A few patrons turn to look at you, their faces a mixture of confusion and curiosity. One of them, a burly man with a thick beard, lets out a guffaw, slapping his knee in amusement. \"Aye, that's a feat worthy of a talespinning bard!\" he exclaims, his voice booming across the tavern.\n\nHowever, it becomes apparent that your comment was not directed at anyone in particular, and the tavern's patrons begin to wonder what, or whom, you were referring to. The atmosphere in the tavern remains lighthearted, with the crowd's attention focused on you, waiting to see what you'll do next.\n\nAs the Rules Arbiter has decreed, there is no mechanical ruling to be made at this time, and the scene unfolds purely based on the narrative. The fate of the evening, and the direction of the conversation, rests entirely in your hands. The patrons of the Yawning Portal Tavern lean in, eager to see what you'll say or do next, as the night wears on and the fire crackles on. What will you do?",
+    "reference": "You guys watched as he focused on it over time, the blade seemed to fade away. It looks like the exterior begins to turn to ash and crumble, but then nothing hits the ground below it. Then it's gone.",
+    "latency_ms": 1404,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.1375,
+      "rouge2": 0.0314,
+      "rougeL": 0.075,
+      "bertscore": 0.8144,
+      "bleu": 0.0063,
+      "chrf": 0.1819,
+      "rule_coverage": 0.0,
+      "response_length": 275,
+      "distinct1": 0.5786,
+      "distinct2": 0.9032,
+      "llm_composite": 4.5,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 4
+    }
+  },
+  {
+    "experiment": "No RAG",
+    "input": "I intensify the stink-eye.",
+    "input_type": "general",
+    "response": "As you intensify the stink-eye, the air around you seems to thicken with an almost palpable aura of disapproval. The patrons of the Yawning Portal Tavern, still basking in the warmth of their applause for Matthew Mercer, begin to feel a chill run down their spines. The fire crackling in the hearth seems to flicker in sync with the beat of your disapproving gaze, as if the very flames are being fueled by your disdain.\n\nDurnan the Barkeep, ever the astute observer of the tavern's atmosphere, notices the shift in your demeanor and raises an eyebrow. He polishes a mug with a white apron, his eyes locked onto yours with a mixture of curiosity and caution. The murmurs of the patrons grow quieter, as if they're all waiting to see how this newfound intensity will play out.\n\nThe mechanical requirements of your action are simple: you're not rolling any dice, and there are no specific rules to follow. This is a moment of pure role-playing, where the outcome is entirely dependent on the narrative and the whims of the Dungeon Master – me.\n\nAs you continue to intensify the stink-eye, the atmosphere in the tavern becomes increasingly tense. It's as if the very fabric of the room is being stretched to its limits, waiting to see what will snap first. The patrons exchange nervous glances, and the shadows on the walls seem to grow longer and darker, as if they're trying to escape the weight of your disapproving gaze.\n\nThe question on everyone's mind is: what's next? Will you break the silence, or will the tension continue to build until it reaches a boiling point? The Yawning Portal Tavern holds its collective breath, waiting for your next move.",
+    "reference": "At this point, you guys turn around and you see the rest of your party has caught up to you. Fjord covered in dry dust.",
+    "latency_ms": 1201,
+    "safety_pass": true,
+    "skipped": [
+      "rag"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.0807,
+      "rouge2": 0.0063,
+      "rougeL": 0.0621,
+      "bertscore": 0.8113,
+      "bleu": 0.0037,
+      "chrf": 0.1195,
+      "rule_coverage": 0.087,
+      "response_length": 288,
+      "distinct1": 0.5556,
+      "distinct2": 0.8818,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  }
+]
