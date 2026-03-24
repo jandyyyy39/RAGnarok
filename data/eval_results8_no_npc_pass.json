@@ -1,0 +1,226 @@
+[
+  {
+    "experiment": "No NPC Pass",
+    "input": ") *The basilisk moves forward, now only with 6 targets to chose from* *Attack of Opportunity from Polearm Master as it moves forward.*",
+    "input_type": "combat",
+    "response": "As the basilisk moves forward, its eyes fixed on its next victim, you seize the opportunity to strike. With your polearm at the ready, you take advantage of the beast's momentary distraction to launch a swift and deadly attack. The air is electric with tension as the patrons of the Yawning Portal Tavern watch in horror, frozen in place by the unfolding drama.\n\nYou roll a d20 for your Attack Roll, adding your attack bonus with your polearm to the result. The dice clatters across the wooden table, coming to rest with a finality that seems to hang in the balance. The result is... 12. With your attack bonus of +5, your total Attack Roll is 17.\n\nThe basilisk's Armor Class is 15, and your Attack Roll of 17 exceeds this threshold. Your polearm bites deep into the basilisk's scaly hide, striking true as the creature moves forward. The force of the blow sends a shudder through the basilisk's body, and for a moment, it seems to stumble, its gaze wavering as it struggles to maintain its footing.\n\nThe tavern erupts into a mixture of gasps and cheers as the patrons realize that the tide of battle may be shifting in your favor. Durnan the Barkeep, ever the opportunist, seizes the moment to shout, \"Another round for the brave adventurer, on the house!\" The crowd's enthusiasm is short-lived, however, as the basilisk's gaze begins to refocus, its malevolent intent burning brighter than ever.\n\nThe creature's eyes lock onto you, and you sense a surge of fury and hatred emanating from it. The air seems to grow colder, heavy with the weight of the basilisk's unblinking stare. You realize that your attack, though successful, has only served to enrage the beast further. The battle is far from over, and the outcome hangs precariously in the balance. What will you do next?",
+    "reference": "*Before the creature has the chance to do anything, Ephraim's blade flies out to demolish it in one strike, having been waiting for the perfect moment to strike.* *The basilisk comes forward and gets absolutely impaled on the polearm Ephraim wields, crumbling to the ground in death* *Just as they were appreciating the bolstering feeling inside of them, as suddenly as the basilisk arrived it is dead, and Beau cheers* \"Ain't that somethin, wonderful job!\"",
+    "latency_ms": 2378,
+    "safety_pass": true,
+    "skipped": [
+      "npc"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.197,
+      "rouge2": 0.0457,
+      "rougeL": 0.1212,
+      "bertscore": 0.8183,
+      "bleu": 0.0114,
+      "chrf": 0.2732,
+      "rule_coverage": 0.2174,
+      "response_length": 310,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "*seeing as I am still stealthed, draws out shortbow*",
+    "input_type": "general",
+    "response": "As you stand amidst the chaos of the Yawning Portal Tavern, the sounds of clashing steel and the eerie gaze of the basilisk fill the air. The patrons, now dwindled to a mere six, scramble to survive against the monstrous creature. Your stealth, however, remains intact, allowing you to move unseen and unheard. With a swift, silent motion, you draw out your shortbow, its wooden frame gliding smoothly from its quiver. The action is effortless, a testament to your proficiency with the equipment.\n\nThe shortbow, now at the ready, feels reassuring in your hands. You can sense the tension in the string, waiting to be released. The Rules Arbiter's guidance confirms that this action is well within your capability, requiring no ability check, saving throw, or attack roll. The simplicity of drawing a shortbow allows you to focus on the impending battle, your mind racing with strategies to take down the basilisk.\n\nDurnan the Barkeep, though preoccupied with the mayhem, catches a glimpse of your movement. His expression, a mixture of concern and curiosity, flickers across his face. He seems to be wondering what you plan to do next, but his attention is quickly diverted back to the basilisk as it takes another step forward.\n\nThe basilisk, its gaze still fixed on its next victim, remains oblivious to your actions. Its eyes, cold and unyielding, seem to bore into the souls of the remaining patrons. The air is heavy with tension, the outcome of this battle hanging precariously in the balance.\n\nWith your shortbow at the ready, you now have a new set of options to consider. Will you use your stealth to get into position for a surprise attack, or will you reveal yourself, using the shortbow to strike from a distance? The choice is yours, and the fate of the Yawning Portal Tavern hangs in the balance.",
+    "reference": "\"First blood there prime rib.\"",
+    "latency_ms": 1838,
+    "safety_pass": true,
+    "skipped": [
+      "npc"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.0,
+      "rouge2": 0.0,
+      "rougeL": 0.0,
+      "bertscore": 0.7856,
+      "bleu": 0.001,
+      "chrf": 0.0219,
+      "rule_coverage": 0.3043,
+      "response_length": 309,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "*sees the sudden rush of the creature, he is caught off guard but quickly shoots regardless, as a tiny dart flies towards its target*",
+    "input_type": "general",
+    "response": "As the basilisk surges forward, its jaws wide open in a deadly snarl, you swiftly draw your shortbow and release a tiny dart towards the creature. The dart, no larger than a needle, flies through the air with a soft whoosh, aiming straight for the basilisk's scaled hide. The tavern's patrons, caught in the chaos, scramble to get out of the way as the creature's eyes fix on its next victim.\n\nYou take a deep breath, focusing on your shot, and roll the dice to determine the outcome of your attack. The result of your Attack Roll is... *rolls* 14. Unfortunately, this falls short of the required DC of 18, as dictated by the creature's formidable AC.\n\nThe dart, though well-aimed, veers off course, mere inches from the basilisk's left eye. It strikes the wooden beam of the tavern's supporting pillar, embedding itself with a faint thud. The basilisk, oblivious to the dart's near-miss, continues its relentless charge, its gaze fixed on its next target.\n\nThe air is thick with tension as the creature's hot breath washes over the room, and the sounds of clashing steel grow louder. Durnan, the barkeep, watches with a mixture of concern and fascination, his eyes darting between the combatants and the patrons. The basilisk's next move is imminent, and the fate of the Yawning Portal Tavern hangs in the balance.\n\nThe current situation:\n- The basilisk is now within striking distance of its next target.\n- Your shortbow is still at the ready, awaiting your next move.\n- The tavern's patrons are on edge, some attempting to flee while others watch in morbid fascination.\n\nWhat will you do next?",
+    "reference": "*he then runs 25 more feet for a total of 35*",
+    "latency_ms": 3770,
+    "safety_pass": true,
+    "skipped": [
+      "npc"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.0203,
+      "rouge2": 0.0,
+      "rougeL": 0.0203,
+      "bertscore": 0.7979,
+      "bleu": 0.0016,
+      "chrf": 0.0352,
+      "rule_coverage": 0.1304,
+      "response_length": 275,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "!cast mass -t kei -t Ed -t Ceph -t Lav",
+    "input_type": "combat",
+    "response": "As the chaos of the Yawning Portal Tavern reaches a fever pitch, with the basilisk's deadly gaze sweeping across the room and the sounds of clashing steel filling the air, you focus your mind and attempt to cast a spell. The words \"!cast mass -t kei -t Ed -t Ceph -t Lav\" escape your lips, and a faint, magical glow begins to emanate from your outstretched hand.\n\nThe air around you seems to vibrate with anticipation as you channel the raw magical energy. However, the Rules Arbiter's voice echoes in your mind, reminding you that the specifics of your spellcasting attempt are unclear. Without a clear spell name, the outcome hangs in the balance.\n\nAssuming you intend to cast a spell like \"Mass Suggestion,\" which could potentially influence the actions of those around you, including Kei, Ed, Ceph, and Lav, the magic begins to take hold. The DC for this spell, based on your Spellcasting Ability Modifier and Proficiency Bonus, would be crucial in determining the success of your casting.\n\nWith a Spellcasting Ability Modifier of, for example, +3 and a Proficiency Bonus of +2, your DC would be 10 + 3 + 2 = 15. This means that Kei, Ed, Ceph, and Lav would each need to make a Wisdom Saving Throw, rolling a d20 and adding their Wisdom Saving Throw modifier to the roll. If the total equals or exceeds 15, they would resist the effects of your spell.\n\nAs the magic swirls around you, the targets of your spell look at you with a mix of confusion and suspicion. Kei, ever the pragmatist, seems to be studying you intently, trying to discern the nature of your spell. Ed, on the other hand, appears more open to your influence, his eyes locked onto yours with a hint of curiosity. Ceph and Lav, meanwhile, seem more resistant, their faces set in determined lines as they prepare to resist your magical suggestion.\n\nThe dice are rolled, and the results are:\n\n- Kei: Rolls a 12, with a Wisdom Saving Throw modifier of +2, totaling 14. Unfortunately, this is not enough to meet the DC of 15.\n- Ed: Rolls a 16, with a Wisdom Saving Throw modifier of +1, totaling 17. Ed successfully resists the effects of your spell.\n- Ceph: Rolls a 10, with a Wisdom Saving Throw modifier of +3, totaling 13. Ceph also fails to resist the spell.\n- Lav: Rolls a 15, with a Wisdom Saving Throw modifier of +2, totaling 17. Lav resists the effects of your spell.\n\nThe magical energy washes over Kei and Ceph, and they begin to feel a subtle, creeping influence in their minds. Ed and Lav, however, seem to have shaken off the effects of your spell, their eyes narrowing as they regard you with a mixture of wariness and hostility.\n\nThe scene is set for a potentially dramatic turn of events, as the influenced individuals begin to act in accordance with your suggestions. The basilisk, still a looming threat, takes a step back, its gaze fixed on the tableau before it. Durnan the Barkeep, meanwhile, watches the scene unfold with a keen eye, his expression a mask of curiosity and concern.\n\nWhat will you do next? Will you press your advantage, using the influence you've gained over Kei and Ceph to turn the tide of the battle? Or will you seek to adapt to the changing circumstances, perhaps attempting to reason with Ed and Lav or finding an alternative strategy to defeat the basilisk? The choice is yours, and the fate of the Yawning Portal Tavern hangs in the balance.",
+    "reference": "*it tells you to attack the paladin* ||*it tells you to kill the paladin*||",
+    "latency_ms": 15015,
+    "safety_pass": true,
+    "skipped": [
+      "npc"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.0229,
+      "rouge2": 0.0,
+      "rougeL": 0.0229,
+      "bertscore": 0.7888,
+      "bleu": 0.0008,
+      "chrf": 0.0343,
+      "rule_coverage": 0.4348,
+      "response_length": 601,
+      "llm_composite": 4.25,
+      "narrative_quality": 4,
+      "rules_accuracy": 5,
+      "character_voice": 3,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "*She tries to assess who looks the worst off... deciding it's probably Karmag, she walks over and heals him a bit before they move to the next room.*",
+    "input_type": "exploration",
+    "response": "As the chaos of the Yawning Portal Tavern reaches a fever pitch, the sounds of clashing steel, shattering glass, and terrified screams fill the air. The basilisk's deadly gaze sweeps across the room, its eyes fixed on its next victim. Amidst the mayhem, you swiftly assess the condition of your companions, your trained eyes scanning the scene for any signs of distress. You notice Karmag, his armor dented and his movements slowed, looking like he's taken a beating.\n\nTo evaluate the party's condition, you focus your attention, trying to discern who's in the most dire need of aid. You make a Wisdom (Medicine) check, rolling a d20 and adding your relevant skill level and ability score modifier. The total result is... 18. With a DC of 15, you successfully assess the scene and determine that Karmag indeed looks the worst off.\n\nYou quickly move to Karmag's side, your hands weaving intricate patterns as you begin to channel healing energy. The air around you seems to shimmer with a soft, blue glow, and Karmag's wounds begin to close, his vitality slowly returning. The basilisk, still fixed on its next target, hasn't noticed your brief respite from the battle.\n\nAs you finish healing Karmag, you notice that the basilisk is now mere feet away, its gaze fixed on one of your companions. The creature's jaws are wide open, revealing rows of razor-sharp teeth, and its body is tensed, ready to strike. The room is in disarray, with overturned tables and chairs scattered everywhere. Durnan the Barkeep is nowhere to be seen, but the sounds of fighting can be heard from the next room.\n\nThe situation is far from stable, and you must decide how to proceed. Will you engage the basilisk, try to escape to the next room, or come up with a different plan to survive this ordeal? The fate of your companions and the patrons of the Yawning Portal Tavern hangs in the balance.",
+    "reference": "\"Mavil...?\" *she asks, not sure what more to say... but making it clear she noticed the spark.*",
+    "latency_ms": 9178,
+    "safety_pass": true,
+    "skipped": [
+      "npc"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.0286,
+      "rouge2": 0.0,
+      "rougeL": 0.0229,
+      "bertscore": 0.7966,
+      "bleu": 0.0051,
+      "chrf": 0.0704,
+      "rule_coverage": 0.2609,
+      "response_length": 324,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "*The violet magic came over her again, creating another shield to cover her arms, now covered in blade marks and gun shot wounds. She lowered her guard and stood there in front of her, the magic still coursing violently through her. Her voice was gruff, but calm and genuine*\n\n\"...ya think you can win?\"",
+    "input_type": "general",
+    "response": "As the violet magic washes over her, it's as if the very air around her shimmers with an otherworldly energy. The shield that manifests is a deep, rich purple, and it seems to pulse with a gentle, soothing light. The blade marks and gunshot wounds on her arms seem to fade into the background as the magic takes hold, and for a moment, it's as if the chaos of the Yawning Portal Tavern recedes, leaving only the gentle hum of the shield.\n\nHer voice, gruff but calm and genuine, cuts through the din of the tavern, and her words hang in the air like a challenge. The basilisk, its eyes fixed on her, seems to regard her with a calculating gaze, as if weighing its chances of success. Durnan the Barkeep, watching from behind the bar, raises an eyebrow, his expression a mixture of curiosity and concern.\n\nMechanically, the shield that has been cast is assumed to be a spell like Mage Armor, with a DC to dispel of 15 + the player's Spellcasting Modifier. As the player is currently under the effects of this spell, any attempts to dispel or interact with the shield will need to meet or exceed this DC. For now, the shield remains in place, its gentle hum a testament to the player's magical prowess.\n\nThe scene is set, the challenge has been issued, and the outcome hangs in the balance. The basilisk regards her with an unblinking gaze, its jaws still open in a deadly snarl. The air is thick with tension, and the patrons of the Yawning Portal Tavern hold their collective breath, waiting to see what will happen next. The question hangs in the air, echoing off the walls of the tavern: \"...ya think you can win?\" The basilisk's response, or lack thereof, will determine the course of the battle, and the fate of those present.",
+    "reference": "*That nat 20 really showed up when I didn't need it huh* *She smirked and chuckled. She walked up to her calmly and, instead of going for a grapple or a face punch, simply punched her in the stomach. Knowing she'd go down, she immediately scooped her up and made sure she wouldn't die from the blood loss, putting some bandages around her arms and head, though the wool made it particularly hard to do*\n\n*She patted her on the back with a smile, holding her close to make sure she was okay. She spoke again, somewhat jokingly*\n\n\"Woulda gone for the face, but...I wasn't gonna take that smile away from ya. Ya did good Melia, damn good\"",
+    "latency_ms": 12653,
+    "safety_pass": true,
+    "skipped": [
+      "npc"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.1814,
+      "rouge2": 0.0228,
+      "rougeL": 0.1043,
+      "bertscore": 0.8045,
+      "bleu": 0.0102,
+      "chrf": 0.2468,
+      "rule_coverage": 0.1304,
+      "response_length": 314,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "\"Fucking ell you weren't kidding about this thing being the pinnacle\"",
+    "input_type": "general",
+    "response": "As you utter the words, \"Fucking hell you weren't kidding about this thing being the pinnacle,\" your voice echoes through the chaotic atmosphere of the Yawning Portal Tavern, where the sounds of clashing steel and the eerie gaze of the basilisk still linger. The air is thick with tension, and the patrons are either fleeing in terror or frozen in awe, unsure of how to react to the sudden appearance of the deadly creature. The violet magic that had been coursing through one of your companions still shimmers in the air, a testament to the intense battle that has been unfolding.\n\nDurnan the Barkeep, his face a picture of concern and fascination, looks at you with a mix of surprise and admiration, his eyes wide with the realization that you're still standing, despite the chaos that surrounds you. The basilisk, though momentarily stunned, begins to stir once more, its malevolent gaze sweeping the room as it seeks its next victim.\n\nYour statement hangs in the air, a declaration of the sheer intensity of the situation, and the enormity of the challenge that lies before you. The words are laced with a mix of awe, fear, and determination, a testament to the unyielding spirit of adventure that drives you forward, even in the face of overwhelming danger.\n\nMechanically, your statement is a role-playing expression, devoid of any specific mechanical interaction. No Ability Check, Saving Throw, or Attack Roll is required, as the action is purely narrative in nature. The scene unfolds without any changes to the party's condition, and the world state remains largely unchanged, with the exception of the subtle shift in atmosphere, as the weight of your words settles upon the gathering.\n\nAs the moment hangs, the tavern holds its breath, waiting to see what will happen next. The basilisk's gaze begins to focus, its attention drawn to the nearest target, and the air is electric with anticipation. The question on everyone's mind is clear: what will you do next? Will you launch a fresh attack, attempt to outmaneuver the creature, or try to find a way to escape the tavern, and the clutches of the deadly basilisk? The choice is yours, and the fate of the Yawning Portal Tavern hangs in the balance.",
+    "reference": "\"Wanna see how long I can survive in this thing?\"",
+    "latency_ms": 8381,
+    "safety_pass": true,
+    "skipped": [
+      "npc"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.0256,
+      "rouge2": 0.0051,
+      "rougeL": 0.0102,
+      "bertscore": 0.7942,
+      "bleu": 0.0023,
+      "chrf": 0.0423,
+      "rule_coverage": 0.2609,
+      "response_length": 375,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  },
+  {
+    "experiment": "No NPC Pass",
+    "input": "*Immediately stabs 8 times, not even bothering to stop when the mark appeared on the third one*",
+    "input_type": "general",
+    "response": "As you unleash a flurry of stabs, the air is filled with the swift, deadly rhythm of your blade biting into the air, again and again. The tavern, already in chaos, seems to hold its breath as your weapon dances in the dim light, each strike aimed with precision and fury. The creature, its gaze still fixed on you with an unblinking stare, doesn't flinch, its body a testament to its unyielding resilience.\n\nTo determine the success of your rapid onslaught, we must consider the target's Armor Class, which, for the sake of this engagement, we'll set at 17, a formidable defense. Each of your eight stabs requires an Attack Roll, with the outcome of each determined by rolling a d20 and adding your relevant attack bonus. The goal is to meet or exceed the target's Armor Class of 17.\n\nLet's proceed with the rolls:\n\n1. **Roll 1:** *d20 roll: 14* + Attack Bonus: 3 = 17. **Hit.**\n2. **Roll 2:** *d20 roll: 10* + Attack Bonus: 3 = 13. **Miss.**\n3. **Roll 3:** *d20 roll: 18* + Attack Bonus: 3 = 21. **Hit.** (The mark appears on this strike.)\n4. **Roll 4:** *d20 roll: 7* + Attack Bonus: 3 = 10. **Miss.**\n5. **Roll 5:** *d20 roll: 15* + Attack Bonus: 3 = 18. **Hit.**\n6. **Roll 6:** *d20 roll: 12* + Attack Bonus: 3 = 15. **Miss.**\n7. **Roll 7:** *d20 roll: 19* + Attack Bonus: 3 = 22. **Hit.**\n8. **Roll 8:** *d20 roll: 6* + Attack Bonus: 3 = 9. **Miss.**\n\nThe outcome of your action is a mix of precision and fury, with 4 out of 8 stabs finding their mark. The creature, despite its formidable defenses, takes a significant beating, its body now adorned with the signs of your relentless assault. The third stab, where the mark appeared, seems to have struck something critical, as the creature's stance falters for a moment, its gaze wavering.\n\nThe basilisk, or whatever horror you're facing, doesn't go down without a fight. It retaliates, its body contorting in ways that seem impossible for any living creature. The air around you seems to chill, and you can feel the weight of its gaze, a cold, calculated hatred that promises a swift and merciless end.\n\nDurnan, ever the observant barkeep, watches from a safe distance, his eyes wide with a mix of fear and awe. \"By the gods,\" he mutters, \"you've certainly got its attention now.\"\n\nThe scene is set for a climactic showdown. The question remains: will your blade prove sharper than the creature's deadly gaze, or will the chaos of the Yawning Portal Tavern claim another victim? The choice, and the fate that comes with it, is yours.",
+    "reference": "On Kaskin's chest, right where his heart is. The mark appears *He wipes the dagger off Kaskin's shirt and begins walking away* \"Enjoy your new cool brand Kas. Its there forever\" *He says as he walks and disappears into the streets outside* Head to the Twilight dawn and get inducted",
+    "latency_ms": 11421,
+    "safety_pass": true,
+    "skipped": [
+      "npc"
+    ],
+    "expected_groq_calls": 3,
+    "scores": {
+      "rouge1": 0.0847,
+      "rouge2": 0.0121,
+      "rougeL": 0.0565,
+      "bertscore": 0.7768,
+      "bleu": 0.0042,
+      "chrf": 0.1492,
+      "rule_coverage": 0.1739,
+      "response_length": 450,
+      "llm_composite": 4.75,
+      "narrative_quality": 5,
+      "rules_accuracy": 5,
+      "character_voice": 4,
+      "relevance": 5
+    }
+  }
+]
