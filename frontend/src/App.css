@@ -465,6 +465,8 @@ body {
   margin-top: 0.625rem;
   position: relative;
   box-shadow: inset 0 0 30px rgba(201, 162, 39, 0.02);
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 /* Decorative corner on DM response */

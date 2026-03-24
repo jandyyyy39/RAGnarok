@@ -1,0 +1,454 @@
+import json
+import re
+import csv
+import time
+import os
+import sys
+from collections import defaultdict
+from typing import Any
+
+# Make imports work regardless of execution directory
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.insert(0, BASE_DIR)
+
+from config import Config
+from openai import OpenAI
+from groq import Groq
+
+from agents.rules_arbiter_hyde import RulesArbiterHyDE
+from agents.rules_arbiter_hybrid import RulesArbiterHybrid
+from agents.rules_arbiter_crag import RulesArbiterCRAG
+
+from scripts.test_rag import (
+    test_retrieval_cosine_sim,
+    test_bm25,
+    retrieve_with_rerank,
+    retrieve_bm25_with_rerank,
+    build_bm25_index,
+)
+
+EVAL_SET_PATH = os.path.join(BASE_DIR, "data", "eval_set.json")
+DB_PATH = os.path.join(BASE_DIR, "data", "chroma_db")
+RESULTS_DIR = os.path.join(BASE_DIR, "evaluation", "rag", "results_v2", "header_eval")
+WORLD_CTX = "Location: The Black Boar Tavern. Active NPCs: Thrain Blackbeard."
+K = 5
+RESULTS_DIR = "evaluation/results_v2/header_eval"
+
+# -------------- Normalisation helpers --------------
+def strip_anchor(text):
+    """Remove {#section-anchor} style fragments from header strings."""
+    if text is None:
+        return ""
+    return re.sub(r"\{#[^}]+\}", "", str(text)).strip()
+
+def normalise(text: str | None) -> str:
+    """Lowercase, strip anchors and surrounding whitespace."""
+    return strip_anchor(text).lower().strip()
+
+# -------------- Metadata extraction --------------
+def extract_metadata(result):
+    """
+    Handle multiple return shapes:
+      - LangChain Document
+      - dict with 'metadata'
+      - dict with 'doc' (where doc may be a Document)
+      - anything else -> {}
+    """
+    if result is None:
+        return {}
+
+    if isinstance(result, dict):
+        if isinstance(result.get("metadata"), dict):
+            return result["metadata"]
+
+        doc = result.get("doc")
+        if doc is not None and isinstance(getattr(doc, "metadata", None), dict):
+            return doc.metadata or {}
+
+        return {}
+
+    metadata = getattr(result, "metadata", None)
+    if isinstance(metadata, dict):
+        return metadata or {}
+
+    return {}
+
+def get_deepest_header(metadata):
+    """Return the most specific non-empty header from a chunk metadata dict."""
+    for level in ("Header 4", "Header 3", "Header 2", "Header 1"):
+        value = metadata.get(level)
+        if value is not None and str(value).strip():
+            return str(value)
+    return ""
+
+def get_all_headers(metadata):
+    """
+    Return all header values in the chain normalised.
+    A retrieved chunk is relevant if ANY level matches a gold section.
+    """
+    headers = []
+    for level in ("Header 1", "Header 2", "Header 3", "Header 4"):
+        value = metadata.get(level)
+        if value is not None and str(value).strip():
+            headers.append(normalise(value))
+    return headers
+
+def get_retrieved_headers(results):
+    """
+    Extract deepest header from each result for logging/output.
+    """
+    headers = []
+    for r in results:
+        metadata = extract_metadata(r)
+        raw_header = get_deepest_header(metadata)
+        headers.append(normalise(raw_header))
+    return headers
+
+def get_header_chain_for_logging(metadata):
+    parts = []
+    for level in ("Header 1", "Header 2", "Header 3", "Header 4"):
+        value = metadata.get(level)
+        if value is not None and str(value).strip():
+            parts.append(normalise(value))
+    return " > ".join(parts)
+
+# -------------- Relevance helpers --------------
+def build_relevance_list(results, gold_sections):
+    """
+    Binary relevance list in rank order.
+    A result is relevant if ANY header in its full chain matches a gold section.
+    Each gold section can only contribute one hit.
+    """
+    normalised_gold = {normalise(s) for s in gold_sections}
+    seen_gold_hits = set()
+    relevance = []
+
+    for r in results:
+        metadata = extract_metadata(r)
+        chain_headers = get_all_headers(metadata)
+
+        matched_gold = next(
+            (h for h in chain_headers if h in normalised_gold and h not in seen_gold_hits),
+            None
+        )
+
+        if matched_gold:
+            relevance.append(1)
+            seen_gold_hits.add(matched_gold)
+        else:
+            relevance.append(0)
+
+    return relevance
+
+# -------------- Metric calculations --------------
+def precision_at_k(relevance, k, total_relevant):
+    """
+    Precision@min(k, r), where r is total relevant.
+    """
+    cutoff = min(k, total_relevant)
+    if cutoff == 0:
+        return 0.0
+    return sum(relevance[:cutoff]) / cutoff
+
+def recall_at_k(relevance, k, total_relevant):
+    if total_relevant == 0:
+        return 0.0
+    return sum(relevance[:k]) / total_relevant
+
+def reciprocal_rank(relevance):
+    for i, rel in enumerate(relevance):
+        if rel == 1:
+            return 1.0 / (i + 1)
+    return 0.0
+
+def ndcg_at_k(relevance, k, total_relevant):
+    import math
+
+    def dcg(rels):
+        return sum(rel / math.log2(i + 2) for i, rel in enumerate(rels[:k]))
+
+    actual_dcg = dcg(relevance[:k])
+    ideal_rels = [1] * min(total_relevant, k)
+    ideal_dcg = dcg(ideal_rels)
+
+    if ideal_dcg == 0:
+        return 0.0
+    return actual_dcg / ideal_dcg
+
+def average_precision(relevance, total_relevant, k):
+    if total_relevant == 0:
+        return 0.0
+
+    hits = 0
+    precision_sum = 0.0
+
+    for i, rel in enumerate(relevance[:k]):
+        if rel == 1:
+            hits += 1
+            precision_sum += hits / (i + 1)
+
+    return precision_sum / total_relevant
+
+def f1_at_k(precision, recall):
+    if precision + recall == 0:
+        return 0.0
+    return 2 * precision * recall / (precision + recall)
+
+def hit_at_k(relevance):
+    return 1.0 if any(relevance) else 0.0
+
+def compute_metrics(relevance, total_relevant, k):
+    precision = precision_at_k(relevance, k, total_relevant)
+    recall = recall_at_k(relevance, k, total_relevant)
+
+    return {
+        "precision": precision,
+        "recall": recall,
+        "mrr": reciprocal_rank(relevance),
+        "ndcg": ndcg_at_k(relevance, k, total_relevant),
+        "f1": f1_at_k(precision, recall),
+        "hit": hit_at_k(relevance),
+        "ap": average_precision(relevance, total_relevant, k),
+    }
+
+# -------------- Retrieval wrappers --------------
+def retrieve_cosine_eval(query):
+    return test_retrieval_cosine_sim(query)
+
+def retrieve_bm25_eval(bm25, final_splits, query):
+    return test_bm25(bm25, final_splits, query)
+
+def retrieve_cosine_rerank_eval(query):
+    return retrieve_with_rerank(query=query)
+
+def retrieve_bm25_rerank_eval(bm25, final_splits, query):
+    return retrieve_bm25_with_rerank(bm25, final_splits, query=query)
+
+def retrieve_arbiter_method_eval(arbiter, query, world_ctx):
+    return arbiter.retrieve(query, world_ctx)
+
+# -------------- Debug helper --------------
+def print_canonical_headers(final_splits, output_path="canonical_headers.txt"):
+    from collections import Counter
+
+    headers = Counter()
+    for chunk in final_splits:
+        for level in ("Header 1", "Header 2", "Header 3", "Header 4"):
+            val = chunk.metadata.get(level)
+            if val:
+                headers[val.strip()] += 1
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        for header, count in headers.most_common():
+            f.write(f"{count:>4}x  {header}\n")
+
+    print(f"Canonical headers written to {output_path} ({len(headers)} unique headers)")
+
+# -------------- Summary rebuild helpers --------------
+def safe_avg(values):
+    vals = [v for v in values if isinstance(v, (int, float))]
+    return round(sum(vals) / len(vals), 4) if vals else 0.0
+
+def summarise_group(rows):
+    return {
+        "precision": safe_avg([r.get("precision", 0.0) for r in rows]),
+        "recall": safe_avg([r.get("recall", 0.0) for r in rows]),
+        "mrr": safe_avg([r.get("mrr", 0.0) for r in rows]),
+        "ndcg": safe_avg([r.get("ndcg", 0.0) for r in rows]),
+        "f1": safe_avg([r.get("f1", 0.0) for r in rows]),
+        "hit": safe_avg([r.get("hit", 0.0) for r in rows]),
+        "ap": safe_avg([r.get("ap", 0.0) for r in rows]),
+        "n": len(rows),
+    }
+
+def group_rows(rows, key_name):
+    grouped = defaultdict(list)
+
+    for row in rows:
+        key = row.get(key_name)
+        if key is not None and str(key).strip():
+            grouped[str(key)].append(row)
+
+    return {
+        group_name: summarise_group(group)
+        for group_name, group in grouped.items()
+    }
+
+def rebuild_summary_from_individual_results(results_dir):
+    summaries = []
+
+    for filename in sorted(os.listdir(results_dir)):
+        if not filename.startswith("retrieval_") or not filename.endswith(".json"):
+            continue
+        if filename == "retrieval_summary.json":
+            continue
+
+        path = os.path.join(results_dir, filename)
+
+        with open(path, "r", encoding="utf-8") as f:
+            rows = json.load(f)
+
+        if not rows:
+            continue
+
+        method_name = filename[len("retrieval_"):-len(".json")]
+
+        summary = {
+            "method": method_name,
+            "n_queries": len(rows),
+            "avg_precision_at_k": safe_avg([r.get("precision", 0.0) for r in rows]),
+            "avg_recall_at_k": safe_avg([r.get("recall", 0.0) for r in rows]),
+            "avg_mrr": safe_avg([r.get("mrr", 0.0) for r in rows]),
+            "avg_ndcg": safe_avg([r.get("ndcg", 0.0) for r in rows]),
+            "avg_f1": safe_avg([r.get("f1", 0.0) for r in rows]),
+            "avg_hit_at_k": safe_avg([r.get("hit", 0.0) for r in rows]),
+            "map": safe_avg([r.get("ap", 0.0) for r in rows]),
+            "by_category": group_rows(rows, "category"),
+            "by_query_type": group_rows(rows, "query_type"),
+        }
+
+        summaries.append(summary)
+
+    return summaries
+
+def write_summary_csv(summaries, output_csv_path):
+    fields = [
+        "method",
+        "n_queries",
+        "avg_precision_at_k",
+        "avg_recall_at_k",
+        "avg_mrr",
+        "avg_ndcg",
+        "avg_f1",
+        "avg_hit_at_k",
+        "map",
+    ]
+
+    with open(output_csv_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fields)
+        writer.writeheader()
+        for row in summaries:
+            writer.writerow({k: row.get(k) for k in fields})
+
+# -------------- Main --------------
+def main():
+    with open(EVAL_SET_PATH, "r", encoding="utf-8") as f:
+        eval_set = json.load(f)
+
+    os.makedirs(RESULTS_DIR, exist_ok=True)
+    os.makedirs(RESULTS_DIR, exist_ok=True)
+
+    print("Building BM25 index...")
+    bm25, final_splits = build_bm25_index()
+
+    # client = Groq(api_key=Config.GROQ_API_KEY)
+    # model_profile = "GROQ"
+
+    client = OpenAI(base_url=Config.OLLAMA_BASE_URL, api_key="ollama")
+    model_profile = "LOCAL"
+
+    hyde_arbiter = RulesArbiterHyDE(client, model_profile, db_path=DB_PATH)
+    hybrid_arbiter = RulesArbiterHybrid(client, model_profile, db_path=DB_PATH)
+    crag_arbiter = RulesArbiterCRAG(client, model_profile, db_path=DB_PATH)
+
+    methods = {
+        "cosine": lambda q: retrieve_cosine_eval(q),
+        "bm25": lambda q: retrieve_bm25_eval(bm25, final_splits, q),
+        "cosine_rerank": lambda q: retrieve_cosine_rerank_eval(q),
+        "bm25_rerank": lambda q: retrieve_bm25_rerank_eval(bm25, final_splits, q),
+        "hyde": lambda q: retrieve_arbiter_method_eval(hyde_arbiter, q, WORLD_CTX),
+        "hybrid": lambda q: retrieve_arbiter_method_eval(hybrid_arbiter, q, WORLD_CTX),
+        "crag": lambda q: retrieve_arbiter_method_eval(crag_arbiter, q, WORLD_CTX),
+    }
+
+    for method_name, retrieve_fn in methods.items():
+        print(f"\n{'=' * 60}")
+        print(f"Evaluating {method_name.upper()}")
+        print(f"{'=' * 60}")
+
+        results = []
+
+        for entry in eval_set:
+            query_id = entry["id"]
+            query = entry["player_action"]
+            gold_sections = entry["relevant_srd_sections"]
+            total_relevant = len(gold_sections)
+
+            start = time.time()
+            try:
+                retrieved = retrieve_fn(query)
+                retrieved = retrieved[:K]
+            except Exception as e:
+                print(f"ERROR on {method_name} / query {query_id}: {e}")
+                retrieved = []
+
+            latency = time.time() - start
+
+            retrieved_headers = get_retrieved_headers(retrieved)
+            relevance = build_relevance_list(retrieved, gold_sections)
+            metrics = compute_metrics(relevance, total_relevant, K)
+
+            results.append({
+                "id": query_id,
+                "query": query,
+                "category": entry.get("category"),
+                "query_type": entry.get("query_type"),
+                "gold_sections": gold_sections,
+                "normalised_gold_sections": [normalise(s) for s in gold_sections],
+                "num_chunks_retrieved": len(retrieved),
+                "retrieved_headers": retrieved_headers,
+                "retrieved_header_chains": [
+                    get_header_chain_for_logging(extract_metadata(r)) for r in retrieved
+                ],
+                "relevance_list": relevance,
+                "total_relevant": total_relevant,
+                "precision": round(metrics["precision"], 4),
+                "recall": round(metrics["recall"], 4),
+                "mrr": round(metrics["mrr"], 4),
+                "ndcg": round(metrics["ndcg"], 4),
+                "f1": round(metrics["f1"], 4),
+                "hit": int(metrics["hit"]),
+                "ap": round(metrics["ap"], 4),
+                "latency": round(latency, 3),
+            })
+
+            print(
+                f"[{query_id:3d}] "
+                f"P={metrics['precision']:.2f} R={metrics['recall']:.2f} "
+                f"MRR={metrics['mrr']:.2f} NDCG={metrics['ndcg']:.2f} "
+                f"F1={metrics['f1']:.2f} AP={metrics['ap']:.2f}"
+            )
+
+        with open(os.path.join(RESULTS_DIR, f"retrieval_{method_name}.json"), "w", encoding="utf-8") as f:
+            json.dump(results, f, indent=2)
+
+    summaries = rebuild_summary_from_individual_results(RESULTS_DIR)
+
+    with open(os.path.join(RESULTS_DIR, "retrieval_summary.json"), "w", encoding="utf-8") as f:
+        json.dump(summaries, f, indent=2)
+
+    fields = [
+        "method",
+        "avg_precision_at_k",
+        "avg_recall_at_k",
+        "avg_mrr",
+        "avg_ndcg",
+        "avg_f1",
+        "avg_hit_at_k",
+        "map",
+        "n_queries",
+    ]
+
+    with open("evaluation/results_v2/header_eval/retrieval_summary.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fields)
+        writer.writeheader()
+        for row in all_summaries:
+            writer.writerow({k: row[k] for k in fields})
+
+    print_canonical_headers(
+        final_splits,
+        output_path=os.path.join(RESULTS_DIR, "canonical_headers.txt"),
+    )
+
+if __name__ == "__main__":
+    main()

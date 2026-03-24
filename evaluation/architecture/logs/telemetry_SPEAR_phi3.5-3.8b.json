@@ -1,0 +1,1136 @@
+[
+    {
+        "timestamp_utc": "2026-03-23T07:45:26.949241Z",
+        "architecture": "SPEAR",
+        "latency_ms": 311747,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 5958,
+            "parallel_fetch_ms": 257285,
+            "dm_ms": 48502,
+            "post_processing_ms": 2,
+            "total_ms": 311747
+        },
+        "total_tokens": 3080,
+        "token_breakdown": {
+            "router": 390,
+            "dm": 1105,
+            "critic": 1585
+        },
+        "routing_hallucination": false,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": true,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": true
+        },
+        "retrieved_context": {
+            "rules": "SYSTEM ERROR: Cannot send a request, as the client has been closed.",
+            "npc_lore": "Thrain Blackbeard (Human Barbarian) | Motivation: Seeking the strongest drink in the land. | Knowledge: Has heard rumors of the players' prowess in battle. | Quirks: Often breaks into sea shanties and uses nautical slang.\n\nElara Moonwhisper (Half-Elf Bard) | Motivation: Becoming the most famous performer in the land. | Knowledge: Knows the players are looking for a performance to attend. | Quirks: Often speaks in rhyming couplets and uses dramatic flair.\n\nArin the Bold (Human Rogue) | Motivation: Pulling off the heist of the century. | Knowledge: Knows the players are looking for a job to do. | Quirks: Often uses slang and has a tendency to boast about his skills.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 10,
+            "narrative_coherence": 9,
+            "npc_voice_consistency": 10,
+            "reasoning": "rule_accuracy: No mechanics or rules were invoked, which is appropriate for a social interaction. narrative_coherence: Engages with the player's intent about the seas while advancing Thrain's character through nautical slang and shanty humor. npc_voice_consistency: Perfectly matches Thrain's established traits of nautical slang, sea shanties, and irreverent bravado."
+        },
+        "player_intent": "I slide a gold coin across the bar to Thrain Blackbeard. 'Tell me about the seas, old man.'",
+        "final_output": {
+            "response": "Thrain Blackbeard's eyes flicker with a mix of amusement and respect as he catches the gold coin deftly. His beard twitches as he leans in, his voice dropping to a low, gravelly tone.\n\n\"The seas, ye say? Aye, I've sailed waters that'd make a landlubber's hair turn white!\" Thrain chuckles, taking a swig of his ale. \"But what's a land-walker like yerself want to know about the briny deep for?\"",
+            "pending_action": null
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T07:47:05.658124Z",
+        "architecture": "SPEAR",
+        "latency_ms": 98700,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8319,
+            "parallel_fetch_ms": 17635,
+            "dm_ms": 72745,
+            "post_processing_ms": 2,
+            "total_ms": 98700
+        },
+        "total_tokens": 3403,
+        "token_breakdown": {
+            "router": 384,
+            "dm": 1384,
+            "critic": 1635
+        },
+        "routing_hallucination": false,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- -   [*Dancing Lights*](#dancing-lights)\n-   [*Light*](#light)\n-   [*Mage Hand*](#mage-hand)\n-   [*Mending*](#mending)\n-   [*Message*](#message)\n-   [*Minor Illusion*](#minor-illusion)\n-   [*Prestidigitation*](#prestidigitation)\n-   [*True Strike*](#true-strike)\n-   [*Vicious Mockery*](#vicious-mockery)\n- >\n> -   draw or sheathe a sword\n> -   open or close a door\n> -   withdraw a potion from your backpack\n> -   pick up a dropped axe\n> -   take a bauble from a table\n> -   remove a ring from your finger\n> -   stuff some food into your mouth\n> -   plant a banner in the ground\n> -   fish a few coins from your belt pouch\n> -   drink all the ale in a flagon\n> -   throw a lever or a switch\n> -   pull a torch from a sconce\n> -   take a book from a shelf you can reach\n> -   extinguish a small flame\n> -   don a mask\n> -   pull the hood of your cloak up and over your head\n> -   put your ear to a door\n> -   kick a small stone\n> -   turn a key in a lock\n> -   tap the floor with a 10-foot pole\n> -   hand an item to another character\n- </tr>\n<tr class=\"even\">\n<td align=\"center\">21-30</td>\n<td align=\"left\">An animate, immobile stone statue in your likeness rises. It makes verbal threats against you. If you leave it and others come near, it describes you as the most heinous of villains and directs the newcomers to find and attack you. If you are on the same plane of existence as the statue, it knows where you are. The statue becomes inanimate after 24 hours.</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"center\">31-40</td>\n<td align=\"left\">A campfire with blue flames springs forth and burns for 24 hours (or until it is extinguished).</td>\n</tr>\n<tr class=\"even\">\n<td align=\"center\">41-50</td>\n<td align=\"left\">1d6 + 6 shriekers sprout.</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"center\">51-60</td>\n<td align=\"left\">1d4 + 8 bright pink toads crawl forth. Whenever a toad is touched, it transforms into a Large or smaller monster of the GM's choice. The monster remains for 1 minute, then disappears in a puff of bright pink smoke.</td>",
+            "npc_lore": "Not retrieved.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 10,
+            "narrative_coherence": 10,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Attack Roll with Dexterity is correct for a finesse weapon (rapier) against a non-incapacitated target. narrative_coherence: An attack roll is required by the rules for melee attacks. npc_voice_consistency: No dialogue generated, so score is fixed at 5 per calibration rules."
+        },
+        "player_intent": "I draw my rapier and lunge at the drunken sailor who just insulted me!",
+        "final_output": {
+            "response": "The room holds its breath... (Roll Dexterity - Attack Roll)",
+            "pending_action": {
+                "dc": 15,
+                "internal_reasoning": "Attacking a target requires an attack roll. The DC is set at 15 assuming the sailor has average reaction time due to being drunken but not incapacitated. Using Strength or Dexterity with the corresponding weapon skill.",
+                "original_input": "I draw my rapier and lunge at the drunken sailor who just insulted me!",
+                "skill": "Attack Roll",
+                "stat": "Dexterity"
+            }
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T07:48:26.495146Z",
+        "architecture": "SPEAR",
+        "latency_ms": 80828,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8321,
+            "parallel_fetch_ms": 4262,
+            "dm_ms": 68244,
+            "post_processing_ms": 1,
+            "total_ms": 80828
+        },
+        "total_tokens": 5064,
+        "token_breakdown": {
+            "router": 380,
+            "dm": 2398,
+            "critic": 2286
+        },
+        "routing_hallucination": false,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": true
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- You can create any floor plan you like, but the space can't exceed 50 cubes, each cube being 10 feet on each side. The place is furnished and decorated as you choose. It contains sufficient food to serve a nine-course banquet for up to 100 people. A staff of 100 near-transparent servants attends all who enter. You decide the visual appearance of these servants and their attire. They are completely obedient to your orders. Each servant can perform any task a normal human servant could perform, but they can't attack or take any action that would directly harm another creature. Thus the servants can fetch things, clean, mend, fold clothes, light fires, serve food, pour wine, and so on. The servants can go anywhere in the mansion but can't leave it. Furnishings and other objects created by this spell dissipate into smoke if removed from the mansion. When the spell ends, any creatures inside the extradimensional space are expelled into the open spaces nearest to the entrance.\n- *5th-level conjuration*  \n**Classes:** [Druid](#section-druid), [Wizard](#section-wizard)  \n**Casting Time:** 1 minute  \n**Range:** 90 feet  \n**Components:** V, S, M (burning incense for air, soft clay for earth, sulfur and phosphorus for fire, or water and sand for water)  \n**Duration:** Concentration, up to 1 hour  \nYou call forth an elemental servant. Choose an area of air, earth, fire, or water that fills a 10-foot cube within range. An elemental of challenge rating 5 or lower appropriate to the area you chose appears in an unoccupied space within 10 feet of it. For example, a fire elemental emerges from a bonfire, and an earth elemental rises up from the ground.\n- *7th-level evocation*  \n**Classes:** [Cleric](#section-cleric), [Druid](#section-druid), [Sorcerer](#section-sorcerer)  \n**Casting Time:** 1 action  \n**Range:** 150 feet  \n**Components:** V, S  \n**Duration:** Instantaneous  \nA storm made up of sheets of roaring flame appears in a location you choose within range. The area of the storm consists of up to ten 10-foot cubes, which you can arrange as you wish. Each cube must have at least one face adjacent to the face of another cube. Each creature in the area must make a Dexterity saving throw. It takes 7d10 fire damage on a failed save, or half as much damage on a successful one.  \nThe fire damages objects in the area and ignites flammable objects that aren't being worn or carried. If you choose, plant life in the area is unaffected by this spell.",
+            "npc_lore": "Not retrieved.",
+            "exploration": "- ***Spyglass.*** Objects viewed through a spyglass are magnified to twice their size.  \n***Tent.*** A simple and portable canvas shelter, a tent sleeps two.  \n***Tinderbox.*** This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch\u2014or anything else with abundant, exposed fuel\u2014takes an action. Lighting any other fire takes 1 minute.  \n***Torch.*** A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage.  \n<table style=\"width:75%;\">\n<caption>Adventuring Gear</caption>\n<colgroup>\n<col width=\"41%\" />\n<col width=\"13%\" />\n<col width=\"19%\" />\n</colgroup>\n<thead>\n<tr class=\"header\">\n<th align=\"left\">Item</th>\n<th align=\"right\">Cost</th>\n<th align=\"center\">Weight</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td align=\"left\">Abacus</td>\n<td align=\"right\">2 gp</td>\n- **Senses** passive Perception 11  \n**Languages** understands Abyssal, Common, and Infernal but can't speak  \n**Challenge** 3 (700 XP)  \n***Confer Fire Resistance.*** The nightmare can grant resistance to fire damage to anyone riding it.  \n***Illumination.*** The nightmare sheds bright light in a 10-foot radius and dim light for an additional 10 feet.  \n##### Actions  \n***Hooves.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 13 (2d8 + 4) bludgeoning damage plus 7 (2d6) fire damage.  \n***Ethereal Stride.*** The nightmare and up to three willing creatures within 5 feet of it magically enter the ethereal plane from the material plane, or vice versa.\n- 2nd level (3 slots): [*detect thoughts*](#detect-thoughts), [*mirror image*](#mirror-image), [*misty step*](#misty-step)  \n3rd level (3 slots): [*counterspell*](#counterspell), [*fly*](#fly), [*lightning bolt*](#lightning-bolt)  \n4th level (3 slots): [*banishment*](#banishment), [*fire shield*](#fire-shield), [*stoneskin*](#stoneskin)  \n5th level (3 slots): [*cone of cold*](#cone-of-cold), [*scrying*](#scrying), [*wall of force*](#wall-of-force)  \n6th level (1 slot): [*globe of invulnerability*](#globe-of-invulnerability)  \n7th level (1 slot): [*teleport*](#teleport)  \n8th level (1 slot): [*mind blank*](#mind-blank)  \n9th level (1 slot): [*time stop*](#time-stop)  \n\\* *The archmage casts these spells on itself before combat.*  \n##### Actions  \n***Dagger.*** *Melee or Ranged Weapon Attack:* +6 to hit, reach 5 ft. or range 20/60 ft., one target. *Hit:* 4 (1d4 + 2) piercing damage."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 10,
+            "narrative_coherence": 10,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Investigation skill and Intelligence stat are correct for searching hidden compartments. DC 15 is reasonable for a hidden compartment in a tavern. narrative_coherence: A dice roll was genuinely required to determine success/failure of the search. npc_voice_consistency: No dialogue generated, so score remains at 5 as per calibration rules."
+        },
+        "player_intent": "I ignore the crowd and inspect the floorboards near the fireplace for hidden compartments.",
+        "final_output": {
+            "response": "The room holds its breath... (Roll Intelligence - Investigation)",
+            "pending_action": {
+                "dc": 15,
+                "internal_reasoning": "Searching for hidden compartments typically involves looking for Perception or Investigation checks. A DC of 15 is reasonable for a well-hidden compartment in a tavern.",
+                "original_input": "I ignore the crowd and inspect the floorboards near the fireplace for hidden compartments.",
+                "skill": "Investigation",
+                "stat": "Intelligence"
+            }
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T07:49:36.367865Z",
+        "architecture": "SPEAR",
+        "latency_ms": 69867,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 7981,
+            "parallel_fetch_ms": 127,
+            "dm_ms": 61757,
+            "post_processing_ms": 1,
+            "total_ms": 69867
+        },
+        "total_tokens": 4969,
+        "token_breakdown": {
+            "router": 390,
+            "dm": 2235,
+            "critic": 2344
+        },
+        "routing_hallucination": false,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": true
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- *Ring, legendary (requires [attunement](#section-attunement))*  \nWhile wearing this ring, you can speak its command word as an action to summon a particular djinni from the elemental plane of air. The djinni appears in an unoccupied space you choose within 120 feet of you. It remains as long as you concentrate (as if concentrating on a spell), to a maximum of 1 hour, or until it drops to 0 hit points. It then returns to its home plane.  \nWhile summoned, the djinni is friendly to you and your companions. It obeys any commands you give it, no matter what language you use. If you fail to command it, the djinni defends itself against attackers but takes no other actions.  \nAfter the djinni departs, it can't be summoned again for 24 hours, and the ring becomes nonmagical if the djinni dies.\n- Starting at 14th level, if you are able to hear, you are aware of the location of any hidden or [invisible](#invisible) creature within 10 feet of you.\n- *Wondrous item, rare*  \nYou can use an action to place this 1-inch metal cube on the ground and speak its command word. The cube rapidly grows into a fortress that remains until you use an action to speak the command word that dismisses it, which works only if the fortress is empty.  \nThe fortress is a square tower, 20 feet on a side and 30 feet high, with arrow slits on all sides and a battlement atop it. Its interior is divided into two floors, with a ladder running along one wall to connect them. The ladder ends at a trapdoor leading to the roof. When activated, the tower has a small door on the side facing you. The door opens only at your command, which you can speak as a bonus action. It is immune to the [*knock*](#knock) spell and similar magic, such as that of a *chime of opening*.",
+            "npc_lore": "Not retrieved.",
+            "exploration": "- -   [*Alarm*](#alarm)\n-   [*Burning Hands*](#burning-hands)\n-   [*Charm Person*](#charm-person)\n-   [*Color Spray*](#color-spray)\n-   [*Comprehend Languages*](#comprehend-languages)\n-   [*Detect Magic*](#detect-magic)\n-   [*Disguise Self*](#disguise-self)\n-   [*Expeditious Retreat*](#expeditious-retreat)\n-   [*False Life*](#false-life)\n-   [*Feather Fall*](#feather-fall)\n-   [*Find Familiar*](#find-familiar)\n-   [*Floating Disk*](#floating-disk)\n-   [*Fog Cloud*](#fog-cloud)\n-   [*Grease*](#grease)\n-   [*Hideous Laughter*](#hideous-laughter)\n-   [*Identify*](#identify)\n-   [*Illusory Script*](#illusory-script)\n-   [*Jump*](#jump)\n-   [*Longstrider*](#longstrider)\n-   [*Mage Armor*](#mage-armor)\n-   [*Magic Missile*](#magic-missile)\n-   [*Protection from Evil and Good*](#protection-from-evil-and-good)\n-   [*Shield*](#shield)\n-   [*Silent Image*](#silent-image)\n-   [*Sleep*](#sleep)\n-   [*Thunderwave*](#thunderwave)\n-   [*Unseen Servant*](#unseen-servant)\n- **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks  \n**Damage Immunities** poison  \n**Condition Immunities** [exhaustion](#exhaustion), [grappled](#grappled), [paralyzed](#paralyzed), [petrified](#petrified), [poisoned](#poisoned), [prone](#prone), [restrained](#restrained), [unconscious](#unconscious)  \n**Senses** darkvision 60 ft., passive Perception 18  \n**Languages** Auran, understands Common but doesn't speak it  \n**Challenge** 6 (2,300 XP)  \n***Invisibility.*** The stalker is [invisible](#invisible).  \n***Faultless Tracker.*** The stalker is given a quarry by its summoner. The stalker knows the direction and distance to its quarry as long as the two of them are on the same plane of existence. The stalker also knows the location of its summoner.  \n##### Actions  \n***Multiattack.*** The stalker makes two slam attacks.  \n***Slam.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 10 (2d6 + 3) bludgeoning damage.\n- </tr>\n</tbody>\n</table>  \n**Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks  \n**Damage Immunities** fire, poison  \n**Condition Immunities** [exhaustion](#exhaustion), [grappled](#grappled), [paralyzed](#paralyzed), [petrified](#petrified), [poisoned](#poisoned), [prone](#prone), [restrained](#restrained), [unconscious](#unconscious)  \n**Senses** darkvision 60 ft., passive Perception 10  \n**Languages** Ignan  \n**Challenge** 5 (1,800 XP)"
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 5,
+            "narrative_coherence": 7,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: No rules from provided context were applied (no spellcasting, item use, or combat mechanics). narrative_coherence: The response advances tension but lacks specific consequences for the player's action. npc_voice_consistency: No named NPCs appear in the response, so consistency is not applicable."
+        },
+        "player_intent": "I grab Arin by the collar, shove him against the wall, and scream: 'Where is the map?!'",
+        "final_output": {
+            "response": "The tavern's lively chatter quiets as all eyes turn to you and Arin. The rogue's expression darkens, his usual smirk fading into something more dangerous. His hand drifts toward the dagger at his belt. The air is thick with tension. What's your next move?",
+            "pending_action": null
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T07:51:04.692944Z",
+        "architecture": "SPEAR",
+        "latency_ms": 88318,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8508,
+            "parallel_fetch_ms": 125,
+            "dm_ms": 79684,
+            "post_processing_ms": 1,
+            "total_ms": 88318
+        },
+        "total_tokens": 3479,
+        "token_breakdown": {
+            "router": 388,
+            "dm": 1462,
+            "critic": 1629
+        },
+        "routing_hallucination": true,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- ***Tree.*** You must be outdoors to use this token. You can use an action to touch it to an unoccupied space on the ground. The token disappears, and in its place a nonmagical oak tree springs into existence. The tree is 60 feet tall and has a 5-foot-diameter trunk, and its branches at the top spread out in a 20-foot radius.  \n***Whip.*** You can use an action to throw the token to a point within 10 feet of you. The token disappears, and a floating whip takes its place. You can then use a bonus action to make a melee spell attack against a creature within 10 feet of the whip, with an attack bonus of +9. On a hit, the target takes 1d6 + 5 force damage.  \nAs a bonus action on your turn, you can direct the whip to fly up to 20 feet and repeat the attack against a creature within 10 feet of it. The whip disappears after 1 hour, when you use an action to dismiss it, or when you are [incapacitated](#incapacitated) or die.\n- ***Longbow.*** *Ranged Weapon Attack:* +7 to hit, range 150/600 ft., one target. *Hit:* 7 (1d8 + 3) piercing damage plus 13 (3d8) poison damage, and the target must succeed on a DC 14 Constitution saving throw or be [poisoned](#poisoned). The poison lasts until it is removed by the [*lesser restoration*](#lesser-restoration) spell or similar magic.  \n##### Reactions  \n***Parry.*** The erinyes adds 4 to its AC against one melee attack that would hit it. To do so, the erinyes must see the attacker and be wielding a melee weapon.\n- ***Claw.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 6 (1d6 + 3) piercing damage.  \n***Tail.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 10 (2d6 + 3) piercing damage.  \n***Hurl Flame.*** Ranged Spell Attack: +5 to hit, range 150 ft., one target. *Hit:* 10 (3d6) fire damage. If the target is a flammable object that isn't being worn or carried, it also catches fire.",
+            "npc_lore": "Not retrieved.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 10,
+            "narrative_coherence": 5,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Correctly used Strength (Athletics) for moving the table, which aligns with D&D 5e mechanics. narrative_coherence: Only addressed the table movement (Strength check) but not the crossbow attack (which requires Dexterity), making the roll partially required. npc_voice_consistency: No dialogue generated, so score is neutral."
+        },
+        "player_intent": "I kick over the heavy oak table to use as cover, then fire my crossbow at the bartender.",
+        "final_output": {
+            "response": "The room holds its breath... (Roll Strength - Athletics)",
+            "pending_action": {
+                "original_input": "I kick over the heavy oak table to use as cover, then fire my crossbow at the bartender.",
+                "internal_reasoning": "Kicking over a heavy oak table requires Strength, as it involves physical force. Firing a crossbow at the bartender requires a Dexterity check for the attack roll, as it involves precision and aim.",
+                "stat": "Strength",
+                "skill": "Athletics",
+                "dc": 15
+            }
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T07:53:35.521780Z",
+        "architecture": "SPEAR",
+        "latency_ms": 150820,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8505,
+            "parallel_fetch_ms": 201,
+            "dm_ms": 142114,
+            "post_processing_ms": 1,
+            "total_ms": 150820
+        },
+        "total_tokens": 6032,
+        "token_breakdown": {
+            "router": 393,
+            "dm": 2480,
+            "critic": 3159
+        },
+        "routing_hallucination": false,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": true
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- *Wondrous item, rare*  \nYou can use an action to place this 1-inch metal cube on the ground and speak its command word. The cube rapidly grows into a fortress that remains until you use an action to speak the command word that dismisses it, which works only if the fortress is empty.  \nThe fortress is a square tower, 20 feet on a side and 30 feet high, with arrow slits on all sides and a battlement atop it. Its interior is divided into two floors, with a ladder running along one wall to connect them. The ladder ends at a trapdoor leading to the roof. When activated, the tower has a small door on the side facing you. The door opens only at your command, which you can speak as a bonus action. It is immune to the [*knock*](#knock) spell and similar magic, such as that of a *chime of opening*.\n- >\n> -   draw or sheathe a sword\n> -   open or close a door\n> -   withdraw a potion from your backpack\n> -   pick up a dropped axe\n> -   take a bauble from a table\n> -   remove a ring from your finger\n> -   stuff some food into your mouth\n> -   plant a banner in the ground\n> -   fish a few coins from your belt pouch\n> -   drink all the ale in a flagon\n> -   throw a lever or a switch\n> -   pull a torch from a sconce\n> -   take a book from a shelf you can reach\n> -   extinguish a small flame\n> -   don a mask\n> -   pull the hood of your cloak up and over your head\n> -   put your ear to a door\n> -   kick a small stone\n> -   turn a key in a lock\n> -   tap the floor with a 10-foot pole\n> -   hand an item to another character\n- *Wondrous item, rare*  \nThis cape smells faintly of brimstone. While wearing it, you can use it to cast the [*dimension door*](#dimension-door) spell as an action. This property of the cape can't be used again until the next dawn.  \nWhen you disappear, you leave behind a cloud of smoke, and you appear in a similar cloud of smoke at your destination. The smoke lightly obscures the space you left and the space you appear in, and it dissipates at the end of your next turn. A light or stronger wind disperses the smoke.",
+            "npc_lore": "Not retrieved.",
+            "exploration": "- -   [*Alarm*](#alarm)\n-   [*Burning Hands*](#burning-hands)\n-   [*Charm Person*](#charm-person)\n-   [*Color Spray*](#color-spray)\n-   [*Comprehend Languages*](#comprehend-languages)\n-   [*Detect Magic*](#detect-magic)\n-   [*Disguise Self*](#disguise-self)\n-   [*Expeditious Retreat*](#expeditious-retreat)\n-   [*False Life*](#false-life)\n-   [*Feather Fall*](#feather-fall)\n-   [*Find Familiar*](#find-familiar)\n-   [*Floating Disk*](#floating-disk)\n-   [*Fog Cloud*](#fog-cloud)\n-   [*Grease*](#grease)\n-   [*Hideous Laughter*](#hideous-laughter)\n-   [*Identify*](#identify)\n-   [*Illusory Script*](#illusory-script)\n-   [*Jump*](#jump)\n-   [*Longstrider*](#longstrider)\n-   [*Mage Armor*](#mage-armor)\n-   [*Magic Missile*](#magic-missile)\n-   [*Protection from Evil and Good*](#protection-from-evil-and-good)\n-   [*Shield*](#shield)\n-   [*Silent Image*](#silent-image)\n-   [*Sleep*](#sleep)\n-   [*Thunderwave*](#thunderwave)\n-   [*Unseen Servant*](#unseen-servant)\n- -   [*Animal Messenger*](#animal-messenger)\n-   [*Blindness/Deafness*](#blindnessdeafness)\n-   [*Calm Emotions*](#calm-emotions)\n-   [*Detect Thoughts*](#detect-thoughts)\n-   [*Enhance Ability*](#enhance-ability)\n-   [*Enthrall*](#enthrall)\n-   [*Heat Metal*](#heat-metal)\n-   [*Hold Person*](#hold-person)\n-   [*Invisibility*](#invisibility)\n-   [*Knock*](#knock)\n-   [*Lesser Restoration*](#lesser-restoration)\n-   [*Locate Animals or Plants*](#locate-animals-or-plants)\n-   [*Locate Object*](#locate-object)\n-   [*Magic Mouth*](#magic-mouth)\n-   [*See Invisibility*](#see-invisibility)\n-   [*Shatter*](#shatter)\n-   [*Silence*](#silence)\n-   [*Suggestion*](#suggestion)\n-   [*Zone of Truth*](#zone-of-truth)\n- **Armor:** Light armor  \n**Weapons:** Simple weapons, hand crossbows, longswords, rapiers, shortswords  \n**Tools:** Thieves' tools  \n**Saving Throws:** Dexterity, Intelligence  \n**Skills:** Choose four from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, and Stealth"
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 4,
+            "narrative_coherence": 7,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: The response lacks engagement with any of the provided rules (spells/items) or mechanics, instead relying on generic descriptive text. narrative_coherence: The scene advances the search for the hidden switch while maintaining immersion, though it doesn't resolve the player's intent. npc_voice_consistency: Elara's actions align with an elf's traits (keen eyes, readiness), but without a retrieved profile, consistency can't be rigorously evaluated."
+        },
+        "player_intent": "While searching the tavern's cellar for the hidden switch, I whisper to Elara, 'Keep an eye on the door.'",
+        "final_output": {
+            "response": "The flickering torchlight casts long, dancing shadows across the damp stone walls of the tavern's cellar. The air is thick with the scent of aged wood and the faint, underlying tang of mildew. Barrels and crates are stacked haphazardly, leaving narrow pathways winding through the clutter. The floor is uneven, with cobblestones worn smooth by years of use, and the walls are lined with rusted iron brackets holding ancient, empty wine racks.\n\nElara Moonwhisper nods subtly in response to your whispered instruction, her keen elven eyes already focused on the narrow staircase leading back up to the tavern's main floor. Her fingers hover near the dagger at her belt, ready to react at a moment's notice.\n\nAs you continue your search, the cellar's shadows seem to deepen, as if conspiring to hide their secrets. The beam of your lantern cuts through the darkness, revealing more of the cellar's disarray. Dust motes swirl in the light, disturbed by your careful movements. The occasional scuttle of tiny paws or the distant drip of water echo through the underground space, adding to the sense of quiet urgency.\n\nThe search for the hidden switch is uncertain. (Roll Perception)",
+            "pending_action": null
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T07:56:09.816500Z",
+        "architecture": "SPEAR",
+        "latency_ms": 154287,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8798,
+            "parallel_fetch_ms": 142,
+            "dm_ms": 145346,
+            "post_processing_ms": 1,
+            "total_ms": 154287
+        },
+        "total_tokens": 3622,
+        "token_breakdown": {
+            "router": 396,
+            "dm": 1584,
+            "critic": 1642
+        },
+        "routing_hallucination": true,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- >\n> -   draw or sheathe a sword\n> -   open or close a door\n> -   withdraw a potion from your backpack\n> -   pick up a dropped axe\n> -   take a bauble from a table\n> -   remove a ring from your finger\n> -   stuff some food into your mouth\n> -   plant a banner in the ground\n> -   fish a few coins from your belt pouch\n> -   drink all the ale in a flagon\n> -   throw a lever or a switch\n> -   pull a torch from a sconce\n> -   take a book from a shelf you can reach\n> -   extinguish a small flame\n> -   don a mask\n> -   pull the hood of your cloak up and over your head\n> -   put your ear to a door\n> -   kick a small stone\n> -   turn a key in a lock\n> -   tap the floor with a 10-foot pole\n> -   hand an item to another character\n- </tr>\n<tr class=\"even\">\n<td align=\"center\">21-30</td>\n<td align=\"left\">An animate, immobile stone statue in your likeness rises. It makes verbal threats against you. If you leave it and others come near, it describes you as the most heinous of villains and directs the newcomers to find and attack you. If you are on the same plane of existence as the statue, it knows where you are. The statue becomes inanimate after 24 hours.</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"center\">31-40</td>\n<td align=\"left\">A campfire with blue flames springs forth and burns for 24 hours (or until it is extinguished).</td>\n</tr>\n<tr class=\"even\">\n<td align=\"center\">41-50</td>\n<td align=\"left\">1d6 + 6 shriekers sprout.</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"center\">51-60</td>\n<td align=\"left\">1d4 + 8 bright pink toads crawl forth. Whenever a toad is touched, it transforms into a Large or smaller monster of the GM's choice. The monster remains for 1 minute, then disappears in a puff of bright pink smoke.</td>\n- *Rod, rare (requires [attunement](#section-attunement))*  \nYou can use an action to present the rod and command obedience from each creature of your choice that you can see within 120 feet of you. Each target must succeed on a DC 15 Wisdom saving throw or be [charmed](#charmed) by you for 8 hours. While charmed in this way, the creature regards you as its trusted leader. If harmed by you or your companions, or commanded to do something contrary to its nature, a target ceases to be charmed in this way. The rod can't be used again until the next dawn.",
+            "npc_lore": "Not retrieved.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 10,
+            "narrative_coherence": 10,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Strength (Athletics) is the correct stat/skill for grappling maneuvers. narrative_coherence: A grapple attempt requires a contested check, and rolling is the correct response. npc_voice_consistency: No dialogue generated, so score is fixed at 5 per calibration rules."
+        },
+        "player_intent": "I jump off the chandelier, attempt to grapple the bandit leader, and yell 'Surrender!' to his minions.",
+        "final_output": {
+            "response": "The room holds its breath... (Roll Strength - Athletics)",
+            "pending_action": {
+                "stat": "Strength",
+                "skill": "Athletics",
+                "original_input": "I jump off the chandelier, attempt to grapple the bandit leader, and yell 'Surrender!' to his minions.",
+                "internal_reasoning": "Jumping off the chandelier and attempting to grapple the bandit leader requires a Strength (Athletics) check to see if the player can successfully execute the maneuver. Yelling 'Surrender!' to the minions could potentially influence their actions, but the primary action here is the grapple attempt.",
+                "dc": 15
+            }
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T07:57:27.510171Z",
+        "architecture": "SPEAR",
+        "latency_ms": 77684,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8684,
+            "parallel_fetch_ms": 122,
+            "dm_ms": 68877,
+            "post_processing_ms": 1,
+            "total_ms": 77684
+        },
+        "total_tokens": 2994,
+        "token_breakdown": {
+            "router": 383,
+            "dm": 1229,
+            "critic": 1382
+        },
+        "routing_hallucination": true,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- >\n> An [invisible](#invisible) creature can always try to hide. Signs of its passage might still be noticed, and it does have to stay quiet.\n>\n> In combat, most creatures stay alert for signs of danger all around, so if you come out of hiding and approach a creature, it usually sees you. However, under certain circumstances, the GM might allow you to stay hidden as you approach a creature that is distracted, allowing you to gain advantage on an attack roll before you are seen.\n>\n- Combatants often try to escape their foes' notice by hiding, casting the [*invisibility*](#invisibility) spell, or lurking in darkness.  \nWhen you attack a target that you can't see, you have disadvantage on the attack roll. This is true whether you're guessing the target's location or you're targeting a creature you can hear but not see. If the target isn't in the location you targeted, you automatically miss, but the GM typically just says that the attack missed, not whether you guessed the target's location correctly.  \nWhen a creature can't see you, you have advantage on attack rolls against it. If you are hidden\u2014both unseen and unheard\u2014when you make an attack, you give away your location when the attack hits or misses.\n- When you take the Hide action, you make a Dexterity (Stealth) check in an attempt to hide, following the rules for hiding. If you succeed, you gain certain benefits, as described in the \"[Unseen Attackers and Targets](#unseen-attackers-and-targets)\" section.",
+            "npc_lore": "Not retrieved.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 0,
+            "narrative_coherence": 0,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: The DM incorrectly requested a dice roll for an automatic advantage granted by invisibility. The rules state invisible attackers have advantage on attacks without requiring a check. narrative_coherence: No dice roll was needed as the advantage is automatic, not contingent on a check. npc_voice_consistency: 5 (not applicable for dialogue)"
+        },
+        "player_intent": "I am currently invisible and want to shoot my bow at the guard. Do I get advantage?",
+        "final_output": {
+            "response": "The room holds its breath... (Roll None - None)",
+            "pending_action": {
+                "dc": 0,
+                "internal_reasoning": "The rules state that when a creature can't see you, you have advantage on attack rolls against it. Since you're invisible, you have advantage on your attack roll against the guard.",
+                "original_input": "I am currently invisible and want to shoot my bow at the guard. Do I get advantage?",
+                "skill": "None",
+                "stat": "None"
+            }
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T07:59:06.783099Z",
+        "architecture": "SPEAR",
+        "latency_ms": 99264,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8291,
+            "parallel_fetch_ms": 134,
+            "dm_ms": 90837,
+            "post_processing_ms": 1,
+            "total_ms": 99264
+        },
+        "total_tokens": 3435,
+        "token_breakdown": {
+            "router": 384,
+            "dm": 1474,
+            "critic": 1577
+        },
+        "routing_hallucination": false,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- **Senses** passive Perception 10  \n**Languages** any one language (usually Common)  \n**Challenge** 1/8 (25 XP)  \n***Dark Devotion.*** The cultist has advantage on saving throws against being [charmed](#charmed) or [frightened](#frightened).  \n##### Actions  \n***Scimitar.*** *Melee Weapon Attack:* +3 to hit, reach 5 ft., one creature. *Hit:* 4 (1d6 + 1) slashing damage.  \n**Cultists** swear allegiance to dark powers such as elemental princes, demon lords, or archdevils. Most conceal their loyalties to avoid being ostracized, imprisoned, or executed for their beliefs. Unlike evil acolytes, cultists often show signs of insanity in their beliefs and practices.\n- ***Dagger.*** *Melee or Ranged Weapon Attack:* +4 to hit, reach 5 ft. or range 20/60 ft., one creature. *Hit:* 4 (1d4 + 2) piercing damage.  \n**Fanatics** are often part of a cult's leadership, using their charisma and dogma to influence and prey on those of weak will. Most are interested in personal power above all else.\n- When you want to grab a creature or wrestle with it, you can use the Attack action to make a special melee attack, a grapple. If you're able to make multiple attacks with the Attack action, this attack replaces one of them.  \nThe target of your grapple must be no more than one size larger than you and must be within your reach. Using at least one free hand, you try to seize the target by making a grapple check instead of an attack roll: a Strength (Athletics) check contested by the target's Strength (Athletics) or Dexterity (Acrobatics) check (the target chooses the ability to use). If you succeed, you subject the target to the [grappled](#grappled) condition. The condition specifies the things that end it, and you can release the target whenever you like (no action required).  \n***Escaping a Grapple.*** A grappled creature can use its action to escape. To do so, it must succeed on a Strength (Athletics) or Dexterity (Acrobatics) check contested by your Strength (Athletics) check.",
+            "npc_lore": "Not retrieved.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 10,
+            "narrative_coherence": 10,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Perfect match to SRD grappling mechanics (Strength Athletics check vs target's Athletics/Acrobatics). narrative_coherence: Grappling requires a contested check, so a dice roll was genuinely needed. npc_voice_consistency: No dialogue generated, so score is neutral as per instructions."
+        },
+        "player_intent": "My fighter wants to grab the cultist and wrestle him to the ground. How does that work?",
+        "final_output": {
+            "response": "The room holds its breath... (Roll Strength - Athletics)",
+            "pending_action": {
+                "internal_reasoning": "The player is attempting to grapple the cultist, which is a special melee attack that replaces an attack. The player needs to make a Strength (Athletics) check contested by the target's Strength (Athletics) or Dexterity (Acrobatics) check. The DC is set to 13, assuming the cultist is of similar size and strength.",
+                "original_input": "My fighter wants to grab the cultist and wrestle him to the ground. How does that work?",
+                "skill": "Athletics",
+                "stat": "Strength",
+                "dc": 13
+            }
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T08:00:06.097572Z",
+        "architecture": "SPEAR",
+        "latency_ms": 59306,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8182,
+            "parallel_fetch_ms": 474,
+            "dm_ms": 50648,
+            "post_processing_ms": 2,
+            "total_ms": 59306
+        },
+        "total_tokens": 3430,
+        "token_breakdown": {
+            "router": 377,
+            "dm": 1337,
+            "critic": 1716
+        },
+        "routing_hallucination": false,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- *1st-level abjuration*  \n**Classes:** [Sorcerer](#section-sorcerer), [Wizard](#section-wizard)  \n**Casting Time:** 1 reaction, which you take when you are hit by an attack or targeted by the [*magic missile*](#magic-missile) spell  \n**Range:** Self  \n**Components:** V, S  \n**Duration:** 1 round  \nAn [invisible](#invisible) barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from [*magic missile*](#magic-missile).\n- Whether you're striking with a melee weapon, firing a weapon at range, or making an attack roll as part of a spell, an attack has a simple structure.  \n1.  **Choose a target.** Pick a target within your attack's range: a creature, an object, or a location.\n2.  **Determine modifiers.** The GM determines whether the target has cover and whether you have advantage or disadvantage against the target. In addition, spells, special abilities, and other effects can apply penalties or bonuses to your attack roll.\n3.  **Resolve the attack.** You make the attack roll. On a hit, you roll damage, unless the particular attack has rules that specify otherwise. Some attacks cause special effects in addition to or instead of damage.  \nIf there's ever any question whether something you're doing counts as an attack, the rule is simple: if you're making an attack roll, you're making an attack.\n- The target of a spell must be within the spell's range. For a spell like [*magic missile*](#magic-missile), the target is a creature. For a spell like [*fireball*](#fireball), the target is the point in space where the ball of fire erupts.  \nMost spells have ranges expressed in feet. Some spells can target only a creature (including you) that you touch. Other spells, such as the [*shield*](#shield) spell, affect only you. These spells have a range of self.  \nSpells that create cones or lines of effect that originate from you also have a range of self, indicating that the [origin point](#areas-of-effect) of the spell's effect must be you.  \nOnce a spell is cast, its effects aren't limited by its range, unless the spell's description says otherwise.",
+            "npc_lore": "Not retrieved.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 10,
+            "narrative_coherence": 10,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Correctly states Magic Missile requires attack rolls per SRD rules. narrative_coherence: Directly answers player's question without narrative fluff. npc_voice_consistency: No named NPCs present, so score is 5 as per calibration rules."
+        },
+        "player_intent": "I want to cast Magic Missile. Does it require an attack roll?",
+        "final_output": {
+            "response": "Yes, casting *Magic Missile* requires an attack roll. Each missile strikes the target for force damage, and you make a separate attack roll for each missile.",
+            "pending_action": null
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T08:01:47.254712Z",
+        "architecture": "SPEAR",
+        "latency_ms": 101148,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8441,
+            "parallel_fetch_ms": 118,
+            "dm_ms": 92587,
+            "post_processing_ms": 1,
+            "total_ms": 101148
+        },
+        "total_tokens": 3108,
+        "token_breakdown": {
+            "router": 379,
+            "dm": 1114,
+            "critic": 1615
+        },
+        "routing_hallucination": true,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- When you drop to 0 hit points, you either die outright or fall [unconscious](#unconscious), as explained in the following sections.\n- If damage reduces you to 0 hit points and fails to kill you, you fall [unconscious](#unconscious). This unconsciousness ends if you regain any hit points.\n- Hit points represent a combination of physical and mental durability, the will to live, and luck. Creatures with more hit points are more difficult to kill. Those with fewer hit points are more fragile.  \nA creature's current hit points (usually just called hit points) can be any number from the creature's hit point maximum down to 0. This number changes frequently as a creature takes damage or receives healing.  \nWhenever a creature takes damage, that damage is subtracted from its hit points. The loss of hit points has no effect on a creature's capabilities until the creature drops to 0 hit points.",
+            "npc_lore": "Not retrieved.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 7,
+            "narrative_coherence": 9,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Correctly states unconsciousness but omits the 'die outright' alternative from the rules, creating a minor gap. narrative_coherence: Directly answers the player's question with clear mechanics without breaking immersion. npc_voice_consistency: No named NPCs involved, so consistency is not applicable."
+        },
+        "player_intent": "What happens to my character if I drop to exactly 0 hit points?",
+        "final_output": {
+            "response": "When your character drops to exactly 0 hit points, they fall unconscious. This unconsciousness ends if they regain any hit points.\n\nHit points represent a combination of physical and mental durability, the will to live, and luck. Creatures with more hit points are more difficult to kill. Those with fewer hit points are more fragile.\n\nA creature's current hit points can be any number from the creature's hit point maximum down to 0. This number changes frequently as a creature takes damage or receives healing. Whenever a creature takes damage, that damage is subtracted from its hit points. The loss of hit points has no effect on a creature's capabilities until the creature drops to 0 hit points.",
+            "pending_action": null
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T08:03:17.627990Z",
+        "architecture": "SPEAR",
+        "latency_ms": 90367,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8108,
+            "parallel_fetch_ms": 127,
+            "dm_ms": 82129,
+            "post_processing_ms": 3,
+            "total_ms": 90367
+        },
+        "total_tokens": 3046,
+        "token_breakdown": {
+            "router": 382,
+            "dm": 1222,
+            "critic": 1442
+        },
+        "routing_hallucination": true,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- *Ring, rare (requires [attunement](#section-attunement))*  \nThis ring has 3 charges, and it regains 1d3 expended charges daily at dawn. When you fail a Dexterity saving throw while wearing it, you can use your reaction to expend 1 of its charges to succeed on that saving throw instead.\n- *Wondrous item, uncommon (requires [attunement](#section-attunement))*  \nWhile wearing this amulet, you are hidden from divination magic. You can't be targeted by such magic or perceived through magical scrying sensors.\n- ***Sleight of Hand.*** Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an object on your person, make a Dexterity (Sleight of Hand) check. The GM might also call for a Dexterity (Sleight of Hand) check to determine whether you can lift a coin purse off another person or slip something out of another person's pocket.  \n***Stealth.*** Make a Dexterity (Stealth) check when you attempt to conceal yourself from enemies, slink past guards, slip away without being noticed, or sneak up on someone without being seen or heard.  \n***Other Dexterity Checks.*** The GM might call for a Dexterity check when you try to accomplish tasks like the following:  \n-   Control a heavily laden cart on a steep descent\n-   Steer a chariot around a tight turn\n-   Pick a lock\n-   Disable a trap\n-   Securely tie up a prisoner\n-   Wriggle free of bonds\n-   Play a stringed instrument\n-   Craft a small or detailed object",
+            "npc_lore": "Not retrieved.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 10,
+            "narrative_coherence": 10,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Correctly used Sleight of Hand skill and Dexterity stat as required by the rules. narrative_coherence: A Dexterity (Sleight of Hand) check is explicitly mandated for picking a coin purse, making the roll necessary. npc_voice_consistency: No dialogue generated, so this dimension is not applicable."
+        },
+        "player_intent": "I try to pickpocket Arin's coin purse without him noticing.",
+        "final_output": {
+            "response": "The room holds its breath... (Roll Dexterity - Sleight of Hand)",
+            "pending_action": {
+                "internal_reasoning": "The action requires a Dexterity (Sleight of Hand) check to attempt to lift a coin purse off another person without being noticed.",
+                "original_input": "I try to pickpocket Arin's coin purse without him noticing.",
+                "skill": "Sleight of Hand",
+                "stat": "Dexterity",
+                "dc": 15
+            }
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T08:04:45.922933Z",
+        "architecture": "SPEAR",
+        "latency_ms": 88289,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8671,
+            "parallel_fetch_ms": 129,
+            "dm_ms": 79487,
+            "post_processing_ms": 1,
+            "total_ms": 88289
+        },
+        "total_tokens": 2683,
+        "token_breakdown": {
+            "router": 379,
+            "dm": 1135,
+            "critic": 1169
+        },
+        "routing_hallucination": true,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- In addition to managing a crew of selfish malcontents, the **pirate captain** is a variation of the bandit captain, with a ship to protect and command. To keep the crew in line, the captain must mete out rewards and punishment on a regular basis.  \nMore than treasure, a bandit captain or pirate captain craves infamy. A prisoner who appeals to the captain's vanity or ego is more likely to be treated fairly than a prisoner who does not or claims not to know anything of the captain's colorful reputation.\n- Using the Attack action, you can make a special melee attack to shove a creature, either to knock it [prone](#prone) or push it away from you. If you're able to make multiple attacks with the Attack action, this attack replaces one of them.  \nThe target must be no more than one size larger than you and must be within your reach. Instead of making an attack roll, you make a Strength (Athletics) check contested by the target's Strength (Athletics) or Dexterity (Acrobatics) check (the target chooses the ability to use). If you win the contest, you either knock the target prone or push it 5 feet away from you.\n- A classic expression of the ranger ideal is the Hunter.",
+            "npc_lore": "Not retrieved.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 10,
+            "narrative_coherence": 10,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Correctly used Strength (Athletics) for a shove attempt per the rules. narrative_coherence: Shoving requires a contested check, so rolling is mandatory. npc_voice_consistency: No dialogue generated, so score is fixed at 5 per instructions."
+        },
+        "player_intent": "I attempt to shove the bandit captain backwards into the fireplace.",
+        "final_output": {
+            "response": "The room holds its breath... (Roll Strength - Athletics)",
+            "pending_action": {
+                "dc": 15,
+                "internal_reasoning": "Shoving the bandit captain requires a Strength (Athletics) check contested by the captain's Strength (Athletics) or Dexterity (Acrobatics) check. The DC is set at 15 assuming the captain is of similar size and strength.",
+                "original_input": "I attempt to shove the bandit captain backwards into the fireplace.",
+                "skill": "Athletics",
+                "stat": "Strength"
+            }
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T08:05:39.376203Z",
+        "architecture": "SPEAR",
+        "latency_ms": 53446,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8315,
+            "parallel_fetch_ms": 124,
+            "dm_ms": 45005,
+            "post_processing_ms": 1,
+            "total_ms": 53446
+        },
+        "total_tokens": 2602,
+        "token_breakdown": {
+            "router": 385,
+            "dm": 948,
+            "critic": 1269
+        },
+        "routing_hallucination": false,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- As a conduit for divine power, you can cast cleric spells.\n- Beginning at 18th level, you can use your action to spend 4 ki points to become [invisible](#invisible) for 1 minute. During that time, you also have resistance to all damage but force damage.  \nAdditionally, you can spend 8 ki points to cast the [*astral projection*](#astral-projection) spell, without needing material components. When you do so, you can't take any other creatures with you.\n- You can cast [*mage armor*](#mage-armor) on yourself at will, without expending a spell slot or material components.",
+            "npc_lore": "Not retrieved.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 9,
+            "narrative_coherence": 9,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Correctly states concentration can be maintained on Bless while casting Invisibility, though omitted the resistance to damage feature from the class ability. narrative_coherence: Directly addresses the player's intent with clear mechanics. npc_voice_consistency: No named NPCs involved, so consistency is not applicable."
+        },
+        "player_intent": "I'm concentrating on Bless and I want to cast Invisibility on myself. Can I do both?",
+        "final_output": {
+            "response": "Yes, you can cast *Invisibility* on yourself while concentrating on *Bless*. However, you must maintain concentration on *Bless*. If you take damage or fail a concentration check, you could lose your concentration on *Bless*.",
+            "pending_action": null
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T08:07:09.275358Z",
+        "architecture": "SPEAR",
+        "latency_ms": 89893,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8371,
+            "parallel_fetch_ms": 139,
+            "dm_ms": 81381,
+            "post_processing_ms": 1,
+            "total_ms": 89893
+        },
+        "total_tokens": 3463,
+        "token_breakdown": {
+            "router": 384,
+            "dm": 1599,
+            "critic": 1480
+        },
+        "routing_hallucination": false,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": true
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- When you take the Hide action, you make a Dexterity (Stealth) check in an attempt to hide, following the rules for hiding. If you succeed, you gain certain benefits, as described in the \"[Unseen Attackers and Targets](#unseen-attackers-and-targets)\" section.\n- Starting at 14th level, you can use the Hide action as a bonus action on your turn. Also, you can't be tracked by nonmagical means, unless you choose to leave a trail.\n- >\n> An [invisible](#invisible) creature can always try to hide. Signs of its passage might still be noticed, and it does have to stay quiet.\n>\n> In combat, most creatures stay alert for signs of danger all around, so if you come out of hiding and approach a creature, it usually sees you. However, under certain circumstances, the GM might allow you to stay hidden as you approach a creature that is distracted, allowing you to gain advantage on an attack roll before you are seen.\n>",
+            "npc_lore": "Not retrieved.",
+            "exploration": "- At the beginning of every combat, you roll initiative by making a Dexterity check. Initiative determines the order of creatures' turns in combat.  \n> #### Hiding\n>\n> The GM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are discovered or you stop hiding, that check's total is contested by the Wisdom (Perception) check of any creature that actively searches for signs of your presence.\n>\n> You can't hide from a creature that can see you clearly, and you give away your position if you make noise, such as shouting a warning or knocking over a vase.\n>\n> An [invisible](#invisible) creature can always try to hide. Signs of its passage might still be noticed, and it does have to stay quiet.\n>\n- Starting at 14th level, you can use the Hide action as a bonus action on your turn. Also, you can't be tracked by nonmagical means, unless you choose to leave a trail.\n- When you take the Hide action, you make a Dexterity (Stealth) check in an attempt to hide, following the rules for hiding. If you succeed, you gain certain benefits, as described in the \"[Unseen Attackers and Targets](#unseen-attackers-and-targets)\" section."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 10,
+            "narrative_coherence": 10,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Dexterity (Stealth) check matches the required mechanic for hiding. narrative_coherence: Hiding in combat requires an action and a contested check, making the roll mandatory. npc_voice_consistency: No dialogue generated, so consistency score is neutral."
+        },
+        "player_intent": "I want to hide behind the bar mid-combat. Do I need to take an action for that?",
+        "final_output": {
+            "response": "The room holds its breath... (Roll dexterity - stealth)",
+            "pending_action": {
+                "dc": 15,
+                "stat": "dexterity",
+                "skill": "stealth",
+                "original_input": "I want to hide behind the bar mid-combat. Do I need to take an action for that?",
+                "internal_reasoning": "Hiding is an action, and in combat, you need to take the Hide action to attempt to hide. The DC is 15 because you are trying to hide behind the bar in the middle of a tavern, which is a moderately busy and noisy environment. This could potentially draw attention or be noticed by others."
+            }
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T08:08:23.237091Z",
+        "architecture": "SPEAR",
+        "latency_ms": 73954,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8044,
+            "parallel_fetch_ms": 118,
+            "dm_ms": 65790,
+            "post_processing_ms": 1,
+            "total_ms": 73954
+        },
+        "total_tokens": 3753,
+        "token_breakdown": {
+            "router": 380,
+            "dm": 1557,
+            "critic": 1816
+        },
+        "routing_hallucination": false,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": true,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": true
+        },
+        "retrieved_context": {
+            "rules": "- In addition to managing a crew of selfish malcontents, the **pirate captain** is a variation of the bandit captain, with a ship to protect and command. To keep the crew in line, the captain must mete out rewards and punishment on a regular basis.  \nMore than treasure, a bandit captain or pirate captain craves infamy. A prisoner who appeals to the captain's vanity or ego is more likely to be treated fairly than a prisoner who does not or claims not to know anything of the captain's colorful reputation.\n- ***The Void.*** This black card spells disaster. Your soul is drawn from your body and contained in an object in a place of the GM's choice. One or more powerful beings guard the place. While your soul is trapped in this way, your body is [incapacitated](#incapacitated). A [*wish*](#wish) spell can't restore your soul, but the spell reveals the location of the object that holds it. You draw no more cards.\n- *Wondrous item, legendary*  \nThis 2-foot-diameter black sphere is a hole in the multiverse, hovering in space and stabilized by a magical field surrounding it.  \nThe sphere obliterates all matter it passes through and all matter that passes through it. [Artifacts](#section-artifacts) are the exception. Unless an artifact is susceptible to damage from a *sphere of annihilation*, it passes through the sphere unscathed. Anything else that touches the sphere but isn't wholly engulfed and obliterated by it takes 4d10 force damage.",
+            "npc_lore": "Thrain Blackbeard (Human Barbarian) | Motivation: Seeking the strongest drink in the land. | Knowledge: Has heard rumors of the players' prowess in battle. | Quirks: Often breaks into sea shanties and uses nautical slang.\n\nElara Moonwhisper (Half-Elf Bard) | Motivation: Becoming the most famous performer in the land. | Knowledge: Knows the players are looking for a performance to attend. | Quirks: Often speaks in rhyming couplets and uses dramatic flair.\n\nArin the Bold (Human Rogue) | Motivation: Pulling off the heist of the century. | Knowledge: Knows the players are looking for a job to do. | Quirks: Often uses slang and has a tendency to boast about his skills.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 4,
+            "narrative_coherence": 5,
+            "npc_voice_consistency": 7,
+            "reasoning": "rule_accuracy: No rules from the provided context were applied; the response lacks mechanical references to the Void, Sphere of Annihilation, or pirate captain mechanics. narrative_coherence: The response engages with the player's intent but doesn't advance the story or connect to world state. npc_voice_consistency: Thrain uses nautical slang and shows curiosity, aligning with his profile, but lacks dramatic flair or sea shanty elements from his established quirks."
+        },
+        "player_intent": "I ask Thrain Blackbeard about his time serving on the Starship Enterprise.",
+        "final_output": {
+            "response": "Thrain Blackbeard, a rugged human barbarian with a thick beard and a weather-beaten face, raises an eyebrow at you. \"Starship Enterprise, ye say? Never heard of it. But I've sailed the seven seas and battled kraken in waters ye wouldn't believe. What's this starship, then? Some fancy new vessel?\" He leans in, his eyes gleaming with curiosity and a hint of skepticism.",
+            "pending_action": null
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T08:09:59.359400Z",
+        "architecture": "SPEAR",
+        "latency_ms": 96115,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 7945,
+            "parallel_fetch_ms": 133,
+            "dm_ms": 88036,
+            "post_processing_ms": 1,
+            "total_ms": 96115
+        },
+        "total_tokens": 3170,
+        "token_breakdown": {
+            "router": 382,
+            "dm": 1228,
+            "critic": 1560
+        },
+        "routing_hallucination": false,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- *Ring, legendary*  \nWhile wearing this ring, you can use an action to expend 1 of its 3 charges to cast the [*wish*](#wish) spell from it. The ring becomes nonmagical when you use the last charge.\n- The stress of casting this spell to produce any effect other than duplicating another spell weakens you. After enduring that stress, each time you cast a spell until you finish a long rest, you take 1d10 necrotic damage per level of that spell. This damage can't be reduced or prevented in any way. In addition, your Strength drops to 3, if it isn't 3 or lower already, for 2d4 days. For each of those days that you spend resting and doing nothing more than light activity, your remaining recovery time decreases by 2 days. Finally, there is a 33 percent chance that you are unable to cast wish ever again if you suffer this stress.\n- You might be able to achieve something beyond the scope of the above examples. State your wish to the GM as precisely as possible. The GM has great latitude in ruling what occurs in such an instance; the greater the wish, the greater the likelihood that something goes wrong. This spell might simply fail, the effect you desire might only be partly achieved, or you might suffer some unforeseen consequence as a result of how you worded the wish. For example, wishing that a villain were dead might propel you forward in time to a period when that villain is no longer alive, effectively removing you from the game. Similarly, wishing for a legendary magic item or artifact might instantly transport you to the presence of the item's current owner.",
+            "npc_lore": "Not retrieved.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 4,
+            "narrative_coherence": 4,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: The response ignored the ring's charge depletion, stress damage, Strength penalty, and wish failure mechanics from the retrieved rules. narrative_coherence: The response failed to address the player's wish action or its consequences, offering only generic advice. npc_voice_consistency: No named NPCs appeared, so consistency is irrelevant."
+        },
+        "player_intent": "I cast a level 9 Wish spell to make the King abdicate his throne immediately.",
+        "final_output": {
+            "response": "I'm here to help with questions and guidance within the D&D 5e rules. However, casting a level 9 Wish spell to make the King abdicate his throne immediately is a complex and significant action with many potential consequences. It's best discussed with your Dungeon Master, as it will greatly impact the story and world.\n\nIf you'd like, I can help you understand the mechanics of the Wish spell or suggest some role-playing approaches to handle such a situation. How can I assist you further?",
+            "pending_action": null
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T08:11:08.779892Z",
+        "architecture": "SPEAR",
+        "latency_ms": 69416,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8312,
+            "parallel_fetch_ms": 121,
+            "dm_ms": 60982,
+            "post_processing_ms": 1,
+            "total_ms": 69416
+        },
+        "total_tokens": 2865,
+        "token_breakdown": {
+            "router": 379,
+            "dm": 1081,
+            "critic": 1405
+        },
+        "routing_hallucination": true,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- ***Longbow.*** *Ranged Weapon Attack:* +4 to hit, range 150/600 ft., one target. *Hit:* 6 (1d8 + 2) piercing damage.\n- *Weapon (warhammer), very rare (requires [attunement](#section-attunement) by a dwarf)*  \nYou gain a +3 bonus to attack and damage rolls made with this magic weapon. It has the thrown property with a normal range of 20 feet and a long range of 60 feet. When you hit with a ranged attack using this weapon, it deals an extra 1d8 damage or, if the target is a giant, 2d8 damage. Immediately after the attack, the weapon flies back to your hand.\n- **Challenge** 0 (10 XP)  \n***Keen Sight.*** The eagle has advantage on Wisdom (Perception) checks that rely on sight.  \n##### Actions  \n***Talons.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 4 (1d4 + 2) slashing damage.",
+            "npc_lore": "Not retrieved.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 7,
+            "narrative_coherence": 4,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Correctly rejects modern weapons but fails to engage with the fantasy setting's weapon rules or consequences. narrative_coherence: Ignores player intent entirely and provides no narrative context or consequences for the action. npc_voice_consistency: No named NPCs present, so consistency is irrelevant."
+        },
+        "player_intent": "I pull out my M16 assault rifle and point it at the ceiling.",
+        "final_output": {
+            "response": "I'm here to help with questions and guidance within the D&D 5e rules. However, introducing modern-day weapons like an M16 assault rifle isn't consistent with the fantasy setting of Dungeons & Dragons 5e.",
+            "pending_action": null
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T08:12:29.808773Z",
+        "architecture": "SPEAR",
+        "latency_ms": 81019,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8546,
+            "parallel_fetch_ms": 216,
+            "dm_ms": 72253,
+            "post_processing_ms": 2,
+            "total_ms": 81019
+        },
+        "total_tokens": 3929,
+        "token_breakdown": {
+            "router": 388,
+            "dm": 1731,
+            "critic": 1810
+        },
+        "routing_hallucination": false,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": true,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": true
+        },
+        "retrieved_context": {
+            "rules": "- ***Star.*** Increase one of your ability scores by 2. The score can exceed 20 but can't exceed 24.  \n***Sun.*** You gain 50,000 XP, and a wondrous item (which the GM determines randomly) appears in your hands.  \n***Talons.*** Every magic item you wear or carry disintegrates. Artifacts in your possession aren't destroyed but do vanish.  \n***Throne.*** You gain proficiency in the Persuasion skill, and you double your proficiency bonus on checks made with that skill. In addition, you gain rightful ownership of a small keep somewhere in the world. However, the keep is currently in the hands of monsters, which you must clear out before you can claim the keep as yours.  \n***Vizier.*** At any time you choose within one year of drawing this card, you can ask a question in meditation and mentally receive a truthful answer to that question. Besides information, the answer helps you solve a puzzling problem or other dilemma. In other words, the knowledge comes with wisdom on how to apply it.\n- You gain proficiency in the Deception and Persuasion skills.\n- Sometimes one character's or monster's efforts are directly opposed to another's. This can occur when both of them are trying to do the same thing and only one can succeed, such as attempting to snatch up a magic ring that has fallen on the floor. This situation also applies when one of them is trying to prevent the other one from accomplishing a goal\u2014for example, when a monster tries to force open a door that an adventurer is holding closed. In situations like these, the outcome is determined by a special form of ability check, called a contest.  \nBoth participants in a contest make ability checks appropriate to their efforts. They apply all appropriate bonuses and penalties, but instead of comparing the total to a DC, they compare the totals of their two checks. The participant with the higher check total wins the contest. That character or monster either succeeds at the action or prevents the other one from succeeding.",
+            "npc_lore": "Thrain Blackbeard (Human Barbarian) | Motivation: Seeking the strongest drink in the land. | Secret (do not reveal directly): He is actually a retired pirate captain. | Knowledge: Has heard rumors of the players' prowess in battle. | Quirks: Often breaks into sea shanties and uses nautical slang.\n\nElara Moonwhisper (Half-Elf Bard) | Motivation: Becoming the most famous performer in the land. | Secret (do not reveal directly): She has a magical voice that can charm creatures. | Knowledge: Knows the players are looking for a performance to attend. | Quirks: Often speaks in rhyming couplets and uses dramatic flair.\n\nArin the Bold (Human Rogue) | Motivation: Pulling off the heist of the century. | Secret (do not reveal directly): He is actually a noble in disguise. | Knowledge: Knows the players are looking for a job to do. | Quirks: Often uses slang and has a tendency to boast about his skills.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 5,
+            "narrative_coherence": 3,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: The DM correctly acknowledges DM discretion but fails to apply Persuasion mechanics or resolve the check, ignoring the rule that contests require comparing check totals. narrative_coherence: The response ignores the player's action entirely, providing no narrative progression or consequence for the Persuasion success. npc_voice_consistency: No NPCs appear in the response, so consistency is not applicable."
+        },
+        "player_intent": "I tell the DM that I succeed on a DC 25 Persuasion check to make the King give me his crown.",
+        "final_output": {
+            "response": "I'm here to help with questions and guidance within the D&D 5e rules. However, resolving the outcome of a Persuasion check to make the King give you his crown involves roleplaying and storytelling elements that are up to the Dungeon Master's discretion. If you have specific mechanics or rules you'd like to discuss, feel free to ask!",
+            "pending_action": null
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T08:14:20.735549Z",
+        "architecture": "SPEAR",
+        "latency_ms": 110919,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 0,
+            "parallel_fetch_ms": 1,
+            "dm_ms": 110917,
+            "post_processing_ms": 1,
+            "total_ms": 110919
+        },
+        "total_tokens": 3680,
+        "token_breakdown": {
+            "router": 0,
+            "dm": 1333,
+            "critic": 2347
+        },
+        "routing_hallucination": false,
+        "routes_fired": {
+            "rules_logic": false,
+            "npc_lore": true,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": false,
+            "kv_lookup": true
+        },
+        "retrieved_context": {
+            "rules": "Not retrieved.",
+            "npc_lore": "Thrain Blackbeard (Human Barbarian) | Motivation: Seeking the strongest drink in the land. | Knowledge: Has heard rumors of the players' prowess in battle. | Quirks: Often breaks into sea shanties and uses nautical slang.\n\nElara Moonwhisper (Half-Elf Bard) | Motivation: Becoming the most famous performer in the land. | Knowledge: Knows the players are looking for a performance to attend. | Quirks: Often speaks in rhyming couplets and uses dramatic flair.\n\nArin the Bold (Human Rogue) | Motivation: Pulling off the heist of the century. | Knowledge: Knows the players are looking for a job to do. | Quirks: Often uses slang and has a tendency to boast about his skills.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 5,
+            "narrative_coherence": 9,
+            "npc_voice_consistency": 10,
+            "reasoning": "rule_accuracy: The response incorrectly applied the Strength (Athletics) check to a Dexterity-based action (hiding behind a bar). The DM should have used Dexterity instead of Strength, violating core mechanics. narrative_coherence: The scene advances smoothly with immersive tension and NPC reactions, maintaining engagement. npc_voice_consistency: All NPCs perfectly match their profiles\u2014Thrain\u2019s nautical slang, Elara\u2019s rhyming, and Arin\u2019s rogue-like boasting\u2014without deviation."
+        },
+        "player_intent": "[SYSTEM: ROLL_RESOLUTION | STAT: Strength | SKILL: Athletics | RESULT: 18]",
+        "final_output": {
+            "response": "Your attempt to hide behind the bar is met with a mix of tension and disbelief. The room holds its breath as the dice roll determines your fate. With a roll of 18, you manage to duck behind the bar with surprising agility, avoiding the immediate danger.\n\nThrain Blackbeard, a rugged human barbarian with a thick beard and a weather-beaten face, raises an eyebrow at your question about the Starship Enterprise. \"Starship what now, mate?\" he grumbles, his voice as rough as the sea. \"I've sailed the seven seas and never heard of such a vessel. Must be a new kind of ship, aye?\" He takes a swig of his ale, his eyes narrowing as he studies you.\n\nElara Moonwhisper, a half-elf bard with an air of mystery, tilts her head and smiles. \"The starship you speak of, a tale most strange, in the night sky, does it sail and range?\" she asks, her voice melodic and rhythmic. \"Or does it sail the seas, a ship of wonder, a sight to see, a tale to ponder?\"\n\nArin the Bold, a human rogue with a mischievous gleam in his eye, leans in closer. \"I've heard of stars, but never a starship,\" he says, his voice low. \"But if it's a job you're looking for, I might know a thing or two about heists and adventures. What's in it for me, eh?\"\n\nThe tension in the room is palpable, and the other patrons watch with bated breath, waiting to see what will happen next.",
+            "pending_action": null
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T08:16:23.112832Z",
+        "architecture": "SPEAR",
+        "latency_ms": 122371,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 0,
+            "parallel_fetch_ms": 1,
+            "dm_ms": 122368,
+            "post_processing_ms": 2,
+            "total_ms": 122371
+        },
+        "total_tokens": 3374,
+        "token_breakdown": {
+            "router": 0,
+            "dm": 1186,
+            "critic": 2188
+        },
+        "routing_hallucination": false,
+        "routes_fired": {
+            "rules_logic": false,
+            "npc_lore": true,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": false,
+            "kv_lookup": true
+        },
+        "retrieved_context": {
+            "rules": "Not retrieved.",
+            "npc_lore": "Thrain Blackbeard (Human Barbarian) | Motivation: Seeking the strongest drink in the land. | Knowledge: Has heard rumors of the players' prowess in battle. | Quirks: Often breaks into sea shanties and uses nautical slang.\n\nElara Moonwhisper (Half-Elf Bard) | Motivation: Becoming the most famous performer in the land. | Knowledge: Knows the players are looking for a performance to attend. | Quirks: Often speaks in rhyming couplets and uses dramatic flair.\n\nArin the Bold (Human Rogue) | Motivation: Pulling off the heist of the century. | Knowledge: Knows the players are looking for a job to do. | Quirks: Often uses slang and has a tendency to boast about his skills.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 8,
+            "narrative_coherence": 8,
+            "npc_voice_consistency": 10,
+            "reasoning": "rule_accuracy: Correctly implies a failed Stealth check via character reactions but lacks explicit DC or result mention. narrative_coherence: Advances the story by showing character reactions and potential plot progression. npc_voice_consistency: Perfectly matches all three NPCs' established traits, dialogue, and quirks without deviation."
+        },
+        "player_intent": "[SYSTEM: ROLL_RESOLUTION | STAT: Dexterity | SKILL: Stealth | RESULT: 4]",
+        "final_output": {
+            "response": "Thrain Blackbeard's eyes widen as he sees you attempt to hide behind the bar. \"Blimey, mate! That be the worst hide I've seen since a kraken tried to play hide-and-seek with a mermaid!\" he exclaims, his deep laughter shaking the rafters.\n\nElara Moonwhisper, who has been quietly tuning her lute in the corner, looks up with a mix of amusement and concern. \"Oh, dear adventurer, so stealthy, yet seen, in the light of the tavern, you've been!\"\n\nArin the Bold, who had been eyeing the tavern's patrons with a calculating gaze, turns to you with a smirk. \"Well, isn't that just great. The king's guards could spot you from a mile away. Maybe we should stick to the original plan, huh?\"",
+            "pending_action": null
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T08:21:43.187696Z",
+        "architecture": "SPEAR",
+        "latency_ms": 320068,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 101915,
+            "parallel_fetch_ms": 0,
+            "dm_ms": 218149,
+            "post_processing_ms": 3,
+            "total_ms": 320068
+        },
+        "total_tokens": 2792,
+        "token_breakdown": {
+            "router": 379,
+            "dm": 959,
+            "critic": 1454
+        },
+        "routing_hallucination": false,
+        "routes_fired": {
+            "rules_logic": false,
+            "npc_lore": false,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": false,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "Not retrieved.",
+            "npc_lore": "Not retrieved.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 10,
+            "narrative_coherence": 10,
+            "npc_voice_consistency": 10,
+            "reasoning": "rule_accuracy: No mechanics or rules were invoked, which is appropriate for a narrative setup. narrative_coherence: The response advances the story by showing how the player's inaction affects the environment and NPCs, maintaining immersion. npc_voice_consistency: Thrain, Elara, and Arin are described with distinct, consistent traits that align with typical NPC archetypes without contradiction."
+        },
+        "player_intent": "I sit quietly in the corner, sip my ale, and do absolutely nothing.",
+        "final_output": {
+            "response": "The tavern's rowdy atmosphere seems to quiet down as you settle into the corner, nursing your ale. The warm, dimly lit space hums with the low murmur of conversations and the occasional clinking of mugs. Thrain Blackbeard, a burly figure with a thick beard, leans against the bar, eyeing you with a mix of curiosity and amusement. Elara Moonwhisper, her elven features illuminated by the flickering torchlight, strums her lute softly, her melodic tunes weaving through the air. Arin the Bold, ever the rogue, keeps a watchful eye on the room, his fingers idly tracing the edge of his dagger.\n\nThe tension that had been building in the room seems to dissipate slightly, replaced by a sense of uneasy calm. The patrons, sensing the shift, return to their drinks and conversations, though the occasional glance in your direction betray their lingering interest. The king's abrupt abdication and the subsequent chaos have left the tavern in a state of flux, and it seems that everyone is waiting to see what happens next.\n\nAs you sit quietly, the weight of the recent events settles over you. The king's crown, now in your possession, feels heavy in your pocket, a constant reminder of the power and responsibility that comes with it. The fate of the kingdom now hangs in the balance, and the choices you make in the coming days will shape its future. For now, though, you allow yourself a moment of respite, taking solace in the simple pleasure of a well-crafted ale and the comforting presence of your companions.",
+            "pending_action": null
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T08:23:03.449418Z",
+        "architecture": "SPEAR",
+        "latency_ms": 80256,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8722,
+            "parallel_fetch_ms": 5,
+            "dm_ms": 71528,
+            "post_processing_ms": 1,
+            "total_ms": 80256
+        },
+        "total_tokens": 3190,
+        "token_breakdown": {
+            "router": 375,
+            "dm": 1071,
+            "critic": 1744
+        },
+        "routing_hallucination": false,
+        "routes_fired": {
+            "rules_logic": false,
+            "npc_lore": true,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": false,
+            "kv_lookup": true
+        },
+        "retrieved_context": {
+            "rules": "Not retrieved.",
+            "npc_lore": "Thrain Blackbeard (Human Barbarian) | Motivation: Seeking the strongest drink in the land. | Knowledge: Has heard rumors of the players' prowess in battle. | Quirks: Often breaks into sea shanties and uses nautical slang.\n\nElara Moonwhisper (Half-Elf Bard) | Motivation: Becoming the most famous performer in the land. | Knowledge: Knows the players are looking for a performance to attend. | Quirks: Often speaks in rhyming couplets and uses dramatic flair.\n\nArin the Bold (Human Rogue) | Motivation: Pulling off the heist of the century. | Knowledge: Knows the players are looking for a job to do. | Quirks: Often uses slang and has a tendency to boast about his skills.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 10,
+            "narrative_coherence": 10,
+            "npc_voice_consistency": 8,
+            "reasoning": "rule_accuracy: No D&D mechanics or rules were violated, and no meta-terms were leaked. narrative_coherence: Directly addresses player intent about Arin's name while advancing the plot with a job offer. npc_voice_consistency: Arin's slang and boastful tone align with his profile, but the dialogue feels slightly generic compared to his established traits."
+        },
+        "player_intent": "Wait, what did Arin just say his name was again?",
+        "final_output": {
+            "response": "Arin the Bold, the human rogue, introduces himself with a sly grin, \"They call me Arin the Bold\u2014though I reckon you might\u2019ve heard of me. Pull up a chair if you\u2019re lookin\u2019 for a bit of excitement, or maybe a job that pays well. Just sayin\u2019.\"",
+            "pending_action": null
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T08:24:51.897546Z",
+        "architecture": "SPEAR",
+        "latency_ms": 108436,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8846,
+            "parallel_fetch_ms": 244,
+            "dm_ms": 99345,
+            "post_processing_ms": 1,
+            "total_ms": 108436
+        },
+        "total_tokens": 3076,
+        "token_breakdown": {
+            "router": 380,
+            "dm": 1245,
+            "critic": 1451
+        },
+        "routing_hallucination": true,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- -   You allow up to twenty creatures that you can see to regain all hit points, and you end all effects on them described in the [*greater restoration*](#greater-restoration) spell.\n-   You grant up to ten creatures that you can see resistance to a damage type you choose.\n-   You grant up to ten creatures you can see immunity to a single spell or other magical effect for 8 hours. For instance, you could make yourself and all your companions immune to a lich's life drain attack.\n-   You undo a single recent event by forcing a reroll of any roll made within the last round (including your last turn). Reality reshapes itself to accommodate the new result. For example, a [*wish*](#wish) spell could undo an opponent's successful save, a foe's critical hit, or a friend's failed save. You can force the reroll to be made with advantage or disadvantage, and you can choose whether to use the reroll or the original roll.\n- -   [*Foresight*](#foresight)\n-   [*Shapechange*](#shapechange)\n-   [*Storm of Vengeance*](#storm-of-vengeance)\n-   [*True Resurrection*](#true-resurrection)\n- Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can't use this feature again until you finish a long rest.  \nYou can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level.",
+            "npc_lore": "Not retrieved.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 7,
+            "narrative_coherence": 4,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Correctly states inability to alter past events, but could have referenced specific rules like *Wish* or *Foresight* for clarity. narrative_coherence: Fails to engage with player's intent to explore alternative approaches, offering only a generic refusal. npc_voice_consistency: Not applicable due to no named NPCs involved."
+        },
+        "player_intent": "Actually, can we retcon what just happened? I want to try a different approach.",
+        "final_output": {
+            "response": "I'm here to help with questions and guidance within the D&D 5e rules, but I'm unable to alter past events or retcon actions that have already taken place in your game. Each decision and outcome contributes to the story and can lead to new opportunities and challenges. If you have any other questions or need assistance with new strategies, feel free to ask!",
+            "pending_action": null
+        }
+    }
+]

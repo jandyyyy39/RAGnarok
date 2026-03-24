@@ -36,8 +36,8 @@ class SPEAROrchestrator:
         self.client = client
         self.model = Config.LLM_MODEL[model_profile]
         
-        self.fast_model = Config.LLM_MODEL.get(
-            "LOCAL_FAST" if model_profile == "LOCAL" else "GROQ_FAST"
+        self.router_model = Config.LLM_MODEL.get(
+            "LOCAL_ROUTER" if model_profile == "LOCAL" else "GROQ_ROUTER"
         )
 
         self.critic_model = Config.LLM_MODEL.get(
@@ -49,7 +49,7 @@ class SPEAROrchestrator:
 
         os.makedirs("data/history", exist_ok=True) 
         # self.log_file = "data/history/spear_architecture_log.json"
-        self.log_file = f"data/history/spear_{self.model}-{self.fast_model}.json"
+        self.log_file = f"data/history/spear_{self.router_model}.json"
         
         with telemetry_lock:
             with open(self.log_file, "w", encoding="utf-8") as f:
@@ -140,7 +140,7 @@ class SPEAROrchestrator:
                 """
                 route_response = self.client.chat.completions.create(
                     messages=[{"role": "user", "content": router_prompt}],
-                    model=self.fast_model,
+                    model=self.router_model,
                     temperature=Config.ROUTER_TEMPERATURE,
                     response_format={"type": "json_object"}
                 )
@@ -300,7 +300,7 @@ def get_info():
     return jsonify({
         'architecture': 'SPEAR',
         'model':        game.model,
-        'fast_model':   game.fast_model,
+        'router_model':   game.router_model,
         'critic_model': game.critic_model,
         'log_file':     game.log_file,
     })
