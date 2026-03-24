@@ -1,352 +1,3550 @@
 [
     {
-        "id": 1, "query": "I try to grapple the guard",
-        "category": "combat", "query_type": "precise",
+        "id": 1,
+        "query": "I try to grapple the guard",
+        "category": "combat",
+        "query_type": "precise",
         "description": "Grappling rules",
-        "primary_keywords": ["grapple"],
-        "supporting_keywords": ["athletics", "contested", "acrobatics"]
+        "primary_keywords": [
+            "grapple"
+        ],
+        "supporting_keywords": [
+            "athletics",
+            "contested",
+            "acrobatics"
+        ]
     },
     {
-        "id": 2, "query": "I want to sneak past the sleeping guards",
-        "category": "exploration", "query_type": "precise",
+        "id": 2,
+        "query": "I want to sneak past the sleeping guards",
+        "category": "exploration",
+        "query_type": "precise",
         "description": "Stealth check",
-        "primary_keywords": ["stealth", "hiding"],
-        "supporting_keywords": ["dexterity"]
+        "primary_keywords": [
+            "stealth",
+            "hiding"
+        ],
+        "supporting_keywords": [
+            "dexterity"
+        ]
     },
     {
-        "id": 3, "query": "I try to intimidate the shopkeeper into giving me a discount",
-        "category": "social", "query_type": "precise",
+        "id": 3,
+        "query": "I try to intimidate the shopkeeper into giving me a discount",
+        "category": "social",
+        "query_type": "precise",
         "description": "Intimidation skill",
-        "primary_keywords": ["intimidation"],
-        "supporting_keywords": ["charisma"]
+        "primary_keywords": [
+            "intimidation"
+        ],
+        "supporting_keywords": [
+            "charisma"
+        ]
     },
     {
-        "id": 4, "query": "I shove the orc off the bridge",
-        "category": "combat", "query_type": "precise",
+        "id": 4,
+        "query": "I shove the orc off the bridge",
+        "category": "combat",
+        "query_type": "precise",
         "description": "Shoving rules",
-        "primary_keywords": ["shove"],
-        "supporting_keywords": ["prone", "athletics", "contested"]
+        "primary_keywords": [
+            "shove"
+        ],
+        "supporting_keywords": [
+            "prone",
+            "athletics",
+            "contested"
+        ]
     },
     {
-        "id": 5, "query": "I persuade the king to lend us his army",
-        "category": "social", "query_type": "precise",
+        "id": 5,
+        "query": "I persuade the king to lend us his army",
+        "category": "social",
+        "query_type": "precise",
         "description": "Persuasion skill",
-        "primary_keywords": ["persuasion"],
-        "supporting_keywords": ["charisma"]
+        "primary_keywords": [
+            "persuasion"
+        ],
+        "supporting_keywords": [
+            "charisma"
+        ]
     },
     {
-        "id": 6, "query": "I want to climb the castle wall",
-        "category": "exploration", "query_type": "precise",
+        "id": 6,
+        "query": "I want to climb the castle wall",
+        "category": "exploration",
+        "query_type": "precise",
         "description": "Athletics for climbing",
-        "primary_keywords": ["athletics", "climbing"],
-        "supporting_keywords": ["strength"]
+        "primary_keywords": [
+            "athletics",
+            "climbing"
+        ],
+        "supporting_keywords": [
+            "strength"
+        ]
     },
     {
-        "id": 7, "query": "I try to lie to the guard about why we're here",
-        "category": "social", "query_type": "precise",
+        "id": 7,
+        "query": "I try to lie to the guard about why we're here",
+        "category": "social",
+        "query_type": "precise",
         "description": "Deception skill",
-        "primary_keywords": ["deception"],
-        "supporting_keywords": ["charisma"]
+        "primary_keywords": [
+            "deception"
+        ],
+        "supporting_keywords": [
+            "charisma"
+        ]
     },
     {
-        "id": 8, "query": "I look around the room for traps",
-        "category": "exploration", "query_type": "precise",
+        "id": 8,
+        "query": "I look around the room for traps",
+        "category": "exploration",
+        "query_type": "precise",
         "description": "Perception for traps",
-        "primary_keywords": ["perception", "trap"],
-        "supporting_keywords": ["wisdom"]
+        "primary_keywords": [
+            "perception",
+            "trap"
+        ],
+        "supporting_keywords": [
+            "wisdom"
+        ]
     },
     {
-        "id": 9, "query": "I want to see if the merchant is lying to me",
-        "category": "social", "query_type": "precise",
+        "id": 9,
+        "query": "I want to see if the merchant is lying to me",
+        "category": "social",
+        "query_type": "precise",
         "description": "Insight for lies",
-        "primary_keywords": ["insight"],
-        "supporting_keywords": ["wisdom", "intentions"]
+        "primary_keywords": [
+            "insight"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "intentions"
+        ]
     },
     {
-        "id": 10, "query": "I try to balance across the narrow beam",
-        "category": "exploration", "query_type": "precise",
+        "id": 10,
+        "query": "I try to balance across the narrow beam",
+        "category": "exploration",
+        "query_type": "precise",
         "description": "Acrobatics for balance",
-        "primary_keywords": ["acrobatics", "balance"],
-        "supporting_keywords": ["dexterity"]
+        "primary_keywords": [
+            "acrobatics",
+            "balance"
+        ],
+        "supporting_keywords": [
+            "dexterity"
+        ]
     },
     {
-        "id": 11, "query": "I try to pickpocket the nobleman",
-        "category": "social", "query_type": "precise",
+        "id": 11,
+        "query": "I try to pickpocket the nobleman",
+        "category": "social",
+        "query_type": "precise",
         "description": "Sleight of Hand",
-        "primary_keywords": ["sleight of hand"],
-        "supporting_keywords": ["dexterity"]
+        "primary_keywords": [
+            "sleight of hand"
+        ],
+        "supporting_keywords": [
+            "dexterity"
+        ]
     },
     {
-        "id": 12, "query": "I want to play a song at the tavern to earn coin",
-        "category": "social", "query_type": "precise",
+        "id": 12,
+        "query": "I want to play a song at the tavern to earn coin",
+        "category": "social",
+        "query_type": "precise",
         "description": "Performance skill",
-        "primary_keywords": ["performance"],
-        "supporting_keywords": ["charisma"]
+        "primary_keywords": [
+            "performance"
+        ],
+        "supporting_keywords": [
+            "charisma"
+        ]
     },
     {
-        "id": 13, "query": "I try to track the goblins through the forest",
-        "category": "exploration", "query_type": "precise",
+        "id": 13,
+        "query": "I try to track the goblins through the forest",
+        "category": "exploration",
+        "query_type": "precise",
         "description": "Survival for tracking",
-        "primary_keywords": ["survival", "tracks"],
-        "supporting_keywords": ["wisdom"]
+        "primary_keywords": [
+            "survival",
+            "tracks"
+        ],
+        "supporting_keywords": [
+            "wisdom"
+        ]
     },
     {
-        "id": 14, "query": "I try to calm down the angry wolf",
-        "category": "social", "query_type": "precise",
+        "id": 14,
+        "query": "I try to calm down the angry wolf",
+        "category": "social",
+        "query_type": "precise",
         "description": "Animal Handling",
-        "primary_keywords": ["animal handling"],
-        "supporting_keywords": ["wisdom"]
+        "primary_keywords": [
+            "animal handling"
+        ],
+        "supporting_keywords": [
+            "wisdom"
+        ]
     },
     {
-        "id": 15, "query": "I want to stabilize my dying companion",
-        "category": "combat", "query_type": "precise",
+        "id": 15,
+        "query": "I want to stabilize my dying companion",
+        "category": "combat",
+        "query_type": "precise",
         "description": "Medicine to stabilize",
-        "primary_keywords": ["medicine", "stabilize"],
-        "supporting_keywords": ["wisdom"]
+        "primary_keywords": [
+            "medicine",
+            "stabilize"
+        ],
+        "supporting_keywords": [
+            "wisdom"
+        ]
     },
     {
-        "id": 16, "query": "I want to recall what I know about undead",
-        "category": "knowledge", "query_type": "precise",
+        "id": 16,
+        "query": "I want to recall what I know about undead",
+        "category": "knowledge",
+        "query_type": "precise",
         "description": "Religion for undead lore",
-        "primary_keywords": ["religion"],
-        "supporting_keywords": ["intelligence", "undead"]
+        "primary_keywords": [
+            "religion"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "undead"
+        ]
     },
     {
-        "id": 17, "query": "I examine the wound to determine the weapon",
-        "category": "knowledge", "query_type": "precise",
+        "id": 17,
+        "query": "I examine the wound to determine the weapon",
+        "category": "knowledge",
+        "query_type": "precise",
         "description": "Investigation",
-        "primary_keywords": ["investigation"],
-        "supporting_keywords": ["intelligence"]
+        "primary_keywords": [
+            "investigation"
+        ],
+        "supporting_keywords": [
+            "intelligence"
+        ]
     },
     {
-        "id": 18, "query": "Can I identify what type of plant this is",
-        "category": "knowledge", "query_type": "colloquial",
+        "id": 18,
+        "query": "Can I identify what type of plant this is",
+        "category": "knowledge",
+        "query_type": "colloquial",
         "description": "Nature for plants",
-        "primary_keywords": ["nature"],
-        "supporting_keywords": ["intelligence"]
+        "primary_keywords": [
+            "nature"
+        ],
+        "supporting_keywords": [
+            "intelligence"
+        ]
     },
     {
-        "id": 19, "query": "do I recognize this holy symbol on the robe",
-        "category": "knowledge", "query_type": "colloquial",
+        "id": 19,
+        "query": "do I recognize this holy symbol on the robe",
+        "category": "knowledge",
+        "query_type": "colloquial",
         "description": "Religion for symbols",
-        "primary_keywords": ["religion"],
-        "supporting_keywords": ["intelligence", "holy"]
+        "primary_keywords": [
+            "religion"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "holy"
+        ]
     },
     {
-        "id": 20, "query": "I want to recall lore about this ancient kingdom",
-        "category": "knowledge", "query_type": "precise",
+        "id": 20,
+        "query": "I want to recall lore about this ancient kingdom",
+        "category": "knowledge",
+        "query_type": "precise",
         "description": "History for lore",
-        "primary_keywords": ["history"],
-        "supporting_keywords": ["intelligence"]
+        "primary_keywords": [
+            "history"
+        ],
+        "supporting_keywords": [
+            "intelligence"
+        ]
     },
     {
-        "id": 21, "query": "What do I know about this magical artifact",
-        "category": "knowledge", "query_type": "colloquial",
+        "id": 21,
+        "query": "What do I know about this magical artifact",
+        "category": "knowledge",
+        "query_type": "colloquial",
         "description": "Arcana for magic knowledge",
-        "primary_keywords": ["arcana"],
-        "supporting_keywords": ["intelligence"]
+        "primary_keywords": [
+            "arcana"
+        ],
+        "supporting_keywords": [
+            "intelligence"
+        ]
     },
     {
-        "id": 22, "query": "I try to wrestle the weapon from the bandit",
-        "category": "combat", "query_type": "colloquial",
+        "id": 22,
+        "query": "I try to wrestle the weapon from the bandit",
+        "category": "combat",
+        "query_type": "colloquial",
         "description": "Disarm via grapple",
-        "primary_keywords": ["grapple"],
-        "supporting_keywords": ["athletics", "contested"]
+        "primary_keywords": [
+            "grapple"
+        ],
+        "supporting_keywords": [
+            "athletics",
+            "contested"
+        ]
     },
     {
-        "id": 23, "query": "do I get a free swing at the goblin running away",
-        "category": "combat", "query_type": "colloquial",
+        "id": 23,
+        "query": "do I get a free swing at the goblin running away",
+        "category": "combat",
+        "query_type": "colloquial",
         "description": "Opportunity attack",
-        "primary_keywords": ["opportunity"],
-        "supporting_keywords": ["reaction"]
+        "primary_keywords": [
+            "opportunity"
+        ],
+        "supporting_keywords": [
+            "reaction"
+        ]
     },
     {
-        "id": 24, "query": "I want to knock the goblin out not kill it",
-        "category": "combat", "query_type": "colloquial",
+        "id": 24,
+        "query": "I want to knock the goblin out not kill it",
+        "category": "combat",
+        "query_type": "colloquial",
         "description": "Nonlethal knockout",
-        "primary_keywords": ["unconscious", "knocking"],
-        "supporting_keywords": ["melee"]
+        "primary_keywords": [
+            "unconscious",
+            "knocking"
+        ],
+        "supporting_keywords": [
+            "melee"
+        ]
     },
     {
-        "id": 25, "query": "I attack with my off-hand dagger as a bonus action",
-        "category": "combat", "query_type": "precise",
+        "id": 25,
+        "query": "I attack with my off-hand dagger as a bonus action",
+        "category": "combat",
+        "query_type": "precise",
         "description": "Two-weapon fighting",
-        "primary_keywords": ["two-weapon", "bonus action"],
-        "supporting_keywords": ["light"]
+        "primary_keywords": [
+            "two-weapon",
+            "bonus action"
+        ],
+        "supporting_keywords": [
+            "light"
+        ]
     },
     {
-        "id": 26, "query": "I want to trip the enemy",
-        "category": "combat", "query_type": "colloquial",
+        "id": 26,
+        "query": "I want to trip the enemy",
+        "category": "combat",
+        "query_type": "colloquial",
         "description": "Trip via shove",
-        "primary_keywords": ["shove", "prone"],
-        "supporting_keywords": ["athletics"]
+        "primary_keywords": [
+            "shove",
+            "prone"
+        ],
+        "supporting_keywords": [
+            "athletics"
+        ]
     },
     {
-        "id": 27, "query": "I try to hide behind the pillar during combat",
-        "category": "combat", "query_type": "precise",
+        "id": 27,
+        "query": "I try to hide behind the pillar during combat",
+        "category": "combat",
+        "query_type": "precise",
         "description": "Hide action",
-        "primary_keywords": ["stealth", "hide"],
-        "supporting_keywords": ["dexterity"]
+        "primary_keywords": [
+            "stealth",
+            "hide"
+        ],
+        "supporting_keywords": [
+            "dexterity"
+        ]
     },
     {
-        "id": 28, "query": "I concentrate on maintaining my spell while fighting",
-        "category": "magic", "query_type": "precise",
+        "id": 28,
+        "query": "I concentrate on maintaining my spell while fighting",
+        "category": "magic",
+        "query_type": "precise",
         "description": "Concentration rules",
-        "primary_keywords": ["concentration"],
-        "supporting_keywords": ["constitution", "saving throw"]
+        "primary_keywords": [
+            "concentration"
+        ],
+        "supporting_keywords": [
+            "constitution",
+            "saving throw"
+        ]
     },
     {
-        "id": 29, "query": "can I throw some acid at that guy",
-        "category": "magic", "query_type": "colloquial",
+        "id": 29,
+        "query": "can I throw some acid at that guy",
+        "category": "magic",
+        "query_type": "colloquial",
         "description": "Acid splash",
-        "primary_keywords": ["acid"],
-        "supporting_keywords": ["dexterity", "damage"]
+        "primary_keywords": [
+            "acid"
+        ],
+        "supporting_keywords": [
+            "dexterity",
+            "damage"
+        ]
     },
     {
-        "id": 30, "query": "I want to eavesdrop on the conversation next door",
-        "category": "exploration", "query_type": "precise",
+        "id": 30,
+        "query": "I want to eavesdrop on the conversation next door",
+        "category": "exploration",
+        "query_type": "precise",
         "description": "Perception for hearing",
-        "primary_keywords": ["perception"],
-        "supporting_keywords": ["wisdom", "passive"]
+        "primary_keywords": [
+            "perception"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "passive"
+        ]
     },
     {
-        "id": 31, "query": "I try to wriggle free from the ropes",
-        "category": "exploration", "query_type": "precise",
+        "id": 31,
+        "query": "I try to wriggle free from the ropes",
+        "category": "exploration",
+        "query_type": "precise",
         "description": "Escape bonds",
-        "primary_keywords": ["acrobatics", "bonds"],
-        "supporting_keywords": ["dexterity", "escape"]
+        "primary_keywords": [
+            "acrobatics",
+            "bonds"
+        ],
+        "supporting_keywords": [
+            "dexterity",
+            "escape"
+        ]
     },
     {
-        "id": 32, "query": "I try to break down the reinforced door",
-        "category": "exploration", "query_type": "precise",
+        "id": 32,
+        "query": "I try to break down the reinforced door",
+        "category": "exploration",
+        "query_type": "precise",
         "description": "Strength to break",
-        "primary_keywords": ["strength", "force"],
-        "supporting_keywords": ["break", "door"]
+        "primary_keywords": [
+            "strength",
+            "force"
+        ],
+        "supporting_keywords": [
+            "break",
+            "door"
+        ]
     },
     {
-        "id": 33, "query": "I search the room for hidden compartments",
-        "category": "exploration", "query_type": "precise",
+        "id": 33,
+        "query": "I search the room for hidden compartments",
+        "category": "exploration",
+        "query_type": "precise",
         "description": "Investigation for search",
-        "primary_keywords": ["investigation", "hidden"],
-        "supporting_keywords": ["intelligence"]
+        "primary_keywords": [
+            "investigation",
+            "hidden"
+        ],
+        "supporting_keywords": [
+            "intelligence"
+        ]
     },
     {
-        "id": 34, "query": "I want to swim across the river",
-        "category": "exploration", "query_type": "precise",
+        "id": 34,
+        "query": "I want to swim across the river",
+        "category": "exploration",
+        "query_type": "precise",
         "description": "Athletics for swimming",
-        "primary_keywords": ["athletics", "swimming"],
-        "supporting_keywords": ["strength"]
+        "primary_keywords": [
+            "athletics",
+            "swimming"
+        ],
+        "supporting_keywords": [
+            "strength"
+        ]
     },
     {
-        "id": 35, "query": "can I tell if the prisoner is withholding info",
-        "category": "social", "query_type": "colloquial",
+        "id": 35,
+        "query": "can I tell if the prisoner is withholding info",
+        "category": "social",
+        "query_type": "colloquial",
         "description": "Insight check",
-        "primary_keywords": ["insight"],
-        "supporting_keywords": ["wisdom", "intentions"]
+        "primary_keywords": [
+            "insight"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "intentions"
+        ]
     },
     {
-        "id": 36, "query": "I try to fast-talk the guard into letting me through",
-        "category": "social", "query_type": "colloquial",
+        "id": 36,
+        "query": "I try to fast-talk the guard into letting me through",
+        "category": "social",
+        "query_type": "colloquial",
         "description": "Deception - SRD example",
-        "primary_keywords": ["deception"],
-        "supporting_keywords": ["charisma"]
+        "primary_keywords": [
+            "deception"
+        ],
+        "supporting_keywords": [
+            "charisma"
+        ]
     },
     {
-        "id": 37, "query": "I tell the thugs to back down or else",
-        "category": "social", "query_type": "colloquial",
+        "id": 37,
+        "query": "I tell the thugs to back down or else",
+        "category": "social",
+        "query_type": "colloquial",
         "description": "Intimidation - SRD example",
-        "primary_keywords": ["intimidation"],
-        "supporting_keywords": ["charisma"]
+        "primary_keywords": [
+            "intimidation"
+        ],
+        "supporting_keywords": [
+            "charisma"
+        ]
     },
     {
-        "id": 38, "query": "I want to inspire the townsfolk to fight",
-        "category": "social", "query_type": "precise",
+        "id": 38,
+        "query": "I want to inspire the townsfolk to fight",
+        "category": "social",
+        "query_type": "precise",
         "description": "Persuasion - SRD example",
-        "primary_keywords": ["persuasion"],
-        "supporting_keywords": ["charisma"]
+        "primary_keywords": [
+            "persuasion"
+        ],
+        "supporting_keywords": [
+            "charisma"
+        ]
     },
     {
-        "id": 39, "query": "I disguise myself as a guard to sneak in",
-        "category": "social", "query_type": "precise",
+        "id": 39,
+        "query": "I disguise myself as a guard to sneak in",
+        "category": "social",
+        "query_type": "precise",
         "description": "Deception for disguise",
-        "primary_keywords": ["deception", "disguise"],
-        "supporting_keywords": ["charisma"]
+        "primary_keywords": [
+            "deception",
+            "disguise"
+        ],
+        "supporting_keywords": [
+            "charisma"
+        ]
     },
     {
-        "id": 40, "query": "I haggle for a better price on the sword",
-        "category": "social", "query_type": "precise",
+        "id": 40,
+        "query": "I haggle for a better price on the sword",
+        "category": "social",
+        "query_type": "precise",
         "description": "Persuasion for haggling",
-        "primary_keywords": ["persuasion"],
-        "supporting_keywords": ["charisma"]
+        "primary_keywords": [
+            "persuasion"
+        ],
+        "supporting_keywords": [
+            "charisma"
+        ]
     },
     {
-        "id": 41, "query": "have I heard of this kingdom before",
-        "category": "knowledge", "query_type": "colloquial",
+        "id": 41,
+        "query": "have I heard of this kingdom before",
+        "category": "knowledge",
+        "query_type": "colloquial",
         "description": "History recall",
-        "primary_keywords": ["history"],
-        "supporting_keywords": ["intelligence"]
+        "primary_keywords": [
+            "history"
+        ],
+        "supporting_keywords": [
+            "intelligence"
+        ]
     },
     {
-        "id": 42, "query": "Can I estimate this gemstone's value",
-        "category": "knowledge", "query_type": "colloquial",
+        "id": 42,
+        "query": "Can I estimate this gemstone's value",
+        "category": "knowledge",
+        "query_type": "colloquial",
         "description": "Intelligence check - SRD example",
-        "primary_keywords": ["intelligence"],
-        "supporting_keywords": ["appraise", "jeweler"]
+        "primary_keywords": [
+            "intelligence"
+        ],
+        "supporting_keywords": [
+            "appraise",
+            "jeweler"
+        ]
     },
     {
-        "id": 43, "query": "I steer the cart down the steep hill",
-        "category": "exploration", "query_type": "precise",
+        "id": 43,
+        "query": "I steer the cart down the steep hill",
+        "category": "exploration",
+        "query_type": "precise",
         "description": "Dexterity - SRD example",
-        "primary_keywords": ["dexterity"],
-        "supporting_keywords": ["vehicle", "control"]
+        "primary_keywords": [
+            "dexterity"
+        ],
+        "supporting_keywords": [
+            "vehicle",
+            "control"
+        ]
     },
     {
-        "id": 44, "query": "I tie up the captured bandit securely",
-        "category": "exploration", "query_type": "precise",
+        "id": 44,
+        "query": "I tie up the captured bandit securely",
+        "category": "exploration",
+        "query_type": "precise",
         "description": "Dexterity - SRD example",
-        "primary_keywords": ["dexterity"],
-        "supporting_keywords": ["knot", "tie"]
+        "primary_keywords": [
+            "dexterity"
+        ],
+        "supporting_keywords": [
+            "knot",
+            "tie"
+        ]
     },
     {
-        "id": 45, "query": "I show forged papers to convince the guard",
-        "category": "social", "query_type": "multi_part",
+        "id": 45,
+        "query": "I show forged papers to convince the guard",
+        "category": "social",
+        "query_type": "multi_part",
         "description": "Deception with forgery",
-        "primary_keywords": ["deception"],
-        "supporting_keywords": ["charisma", "forgery"]
+        "primary_keywords": [
+            "deception"
+        ],
+        "supporting_keywords": [
+            "charisma",
+            "forgery"
+        ]
     },
     {
-        "id": 46, "query": "I blend into the crowd and listen for rumors",
-        "category": "social", "query_type": "multi_part",
+        "id": 46,
+        "query": "I blend into the crowd and listen for rumors",
+        "category": "social",
+        "query_type": "multi_part",
         "description": "Charisma - SRD example",
-        "primary_keywords": ["charisma"],
-        "supporting_keywords": ["gather", "information"]
+        "primary_keywords": [
+            "charisma"
+        ],
+        "supporting_keywords": [
+            "gather",
+            "information"
+        ]
     },
     {
-        "id": 47, "query": "we march through the night without rest",
-        "category": "exploration", "query_type": "colloquial",
+        "id": 47,
+        "query": "we march through the night without rest",
+        "category": "exploration",
+        "query_type": "colloquial",
         "description": "Forced march / Constitution",
-        "primary_keywords": ["constitution", "exhaustion"],
-        "supporting_keywords": ["forced march"]
+        "primary_keywords": [
+            "constitution",
+            "exhaustion"
+        ],
+        "supporting_keywords": [
+            "forced march"
+        ]
     },
     {
-        "id": 48, "query": "I jump across the wide gap",
-        "category": "exploration", "query_type": "precise",
+        "id": 48,
+        "query": "I jump across the wide gap",
+        "category": "exploration",
+        "query_type": "precise",
         "description": "Athletics for jumping",
-        "primary_keywords": ["athletics", "jumping"],
-        "supporting_keywords": ["strength"]
+        "primary_keywords": [
+            "athletics",
+            "jumping"
+        ],
+        "supporting_keywords": [
+            "strength"
+        ]
     },
     {
-        "id": 49, "query": "I disarm the trap carefully",
-        "category": "exploration", "query_type": "precise",
+        "id": 49,
+        "query": "I disarm the trap carefully",
+        "category": "exploration",
+        "query_type": "precise",
         "description": "Trap disarming",
-        "primary_keywords": ["trap", "thieves"],
-        "supporting_keywords": ["dexterity"]
+        "primary_keywords": [
+            "trap",
+            "thieves"
+        ],
+        "supporting_keywords": [
+            "dexterity"
+        ]
     },
     {
-        "id": 50, "query": "I pick the lock on the chest",
-        "category": "exploration", "query_type": "precise",
+        "id": 50,
+        "query": "I pick the lock on the chest",
+        "category": "exploration",
+        "query_type": "precise",
         "description": "Lockpicking",
-        "primary_keywords": ["thieves", "lock"],
-        "supporting_keywords": ["dexterity"]
+        "primary_keywords": [
+            "thieves",
+            "lock"
+        ],
+        "supporting_keywords": [
+            "dexterity"
+        ]
+    },
+    {
+        "id": 51,
+        "query": "I use my reaction to make an attack of opportunity",
+        "category": "combat",
+        "query_type": "precise",
+        "description": "Opportunity attack mechanics",
+        "primary_keywords": [
+            "opportunity attack",
+            "reaction",
+            "melee"
+        ],
+        "supporting_keywords": [
+            "leaving reach",
+            "provoke",
+            "movement",
+            "5 feet",
+            "trigger",
+            "weapon"
+        ]
+    },
+    {
+        "id": 52,
+        "query": "I attack recklessly to get advantage on my rolls",
+        "category": "combat",
+        "query_type": "precise",
+        "description": "Reckless attack barbarian feature",
+        "primary_keywords": [
+            "reckless attack",
+            "advantage",
+            "barbarian"
+        ],
+        "supporting_keywords": [
+            "strength",
+            "melee",
+            "attack rolls",
+            "disadvantage",
+            "aggressive",
+            "rage"
+        ]
+    },
+    {
+        "id": 53,
+        "query": "I use my cunning action to dash as a bonus action",
+        "category": "combat",
+        "query_type": "precise",
+        "description": "Rogue cunning action",
+        "primary_keywords": [
+            "cunning action",
+            "bonus action",
+            "rogue"
+        ],
+        "supporting_keywords": [
+            "dash",
+            "disengage",
+            "hide",
+            "movement",
+            "speed",
+            "agility"
+        ]
+    },
+    {
+        "id": 54,
+        "query": "I take the dodge action to make myself harder to hit",
+        "category": "combat",
+        "query_type": "precise",
+        "description": "Dodge action mechanics",
+        "primary_keywords": [
+            "dodge",
+            "action",
+            "disadvantage"
+        ],
+        "supporting_keywords": [
+            "attack rolls",
+            "dexterity saving throw",
+            "advantage",
+            "defensive",
+            "evasion"
+        ]
+    },
+    {
+        "id": 55,
+        "query": "I want to use my lay on hands to heal my companion",
+        "category": "combat",
+        "query_type": "precise",
+        "description": "Paladin lay on hands healing",
+        "primary_keywords": [
+            "lay on hands",
+            "paladin",
+            "healing"
+        ],
+        "supporting_keywords": [
+            "hit points",
+            "pool",
+            "action",
+            "touch",
+            "restore",
+            "divine"
+        ]
+    },
+    {
+        "id": 56,
+        "query": "I riposte with my superiority die when the enemy misses me",
+        "category": "combat",
+        "query_type": "precise",
+        "description": "Riposte maneuver timing",
+        "primary_keywords": [
+            "riposte",
+            "maneuver",
+            "superiority die"
+        ],
+        "supporting_keywords": [
+            "reaction",
+            "miss",
+            "melee attack",
+            "fighter",
+            "counterattack",
+            "battle master"
+        ]
+    },
+    {
+        "id": 57,
+        "query": "I try to calm the frightened horse so we can approach",
+        "category": "combat",
+        "query_type": "precise",
+        "description": "Animal Handling for calming in combat",
+        "primary_keywords": [
+            "animal handling",
+            "calm",
+            "horse"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "frightened",
+            "soothe",
+            "approach",
+            "tame",
+            "mount"
+        ]
+    },
+    {
+        "id": 58,
+        "query": "can I sneak attack with my crossbow this turn",
+        "category": "combat",
+        "query_type": "colloquial",
+        "description": "Sneak attack requirements",
+        "primary_keywords": [
+            "sneak attack",
+            "rogue",
+            "crossbow"
+        ],
+        "supporting_keywords": [
+            "advantage",
+            "ally",
+            "finesse",
+            "ranged",
+            "once per turn",
+            "damage"
+        ]
+    },
+    {
+        "id": 59,
+        "query": "do I add my proficiency bonus to damage rolls",
+        "category": "combat",
+        "query_type": "colloquial",
+        "description": "Damage roll calculation",
+        "primary_keywords": [
+            "proficiency bonus",
+            "damage",
+            "attack"
+        ],
+        "supporting_keywords": [
+            "ability modifier",
+            "roll",
+            "weapon",
+            "calculation",
+            "add",
+            "bonus"
+        ]
+    },
+    {
+        "id": 60,
+        "query": "can I make an unarmed strike as a bonus action",
+        "category": "combat",
+        "query_type": "colloquial",
+        "description": "Monk martial arts bonus attack",
+        "primary_keywords": [
+            "unarmed strike",
+            "bonus action",
+            "monk"
+        ],
+        "supporting_keywords": [
+            "martial arts",
+            "attack action",
+            "dexterity",
+            "strength",
+            "fist",
+            "kick"
+        ]
+    },
+    {
+        "id": 61,
+        "query": "does my hunter's mark move if I kill my target",
+        "category": "combat",
+        "query_type": "colloquial",
+        "description": "Hunter's mark transfer",
+        "primary_keywords": [
+            "hunter's mark",
+            "bonus action",
+            "transfer"
+        ],
+        "supporting_keywords": [
+            "new target",
+            "concentration",
+            "ranger",
+            "damage",
+            "move",
+            "spell"
+        ]
+    },
+    {
+        "id": 62,
+        "query": "can I use my flurry of blows after attacking twice",
+        "category": "combat",
+        "query_type": "colloquial",
+        "description": "Monk flurry of blows timing",
+        "primary_keywords": [
+            "flurry of blows",
+            "monk",
+            "bonus action"
+        ],
+        "supporting_keywords": [
+            "ki point",
+            "attack action",
+            "unarmed strike",
+            "two attacks",
+            "martial arts"
+        ]
+    },
+    {
+        "id": 63,
+        "query": "can I smite with both attacks if I have extra attack",
+        "category": "combat",
+        "query_type": "colloquial",
+        "description": "Divine smite multiple uses",
+        "primary_keywords": [
+            "divine smite",
+            "extra attack",
+            "paladin"
+        ],
+        "supporting_keywords": [
+            "spell slot",
+            "multiple",
+            "melee",
+            "damage",
+            "radiant",
+            "hit"
+        ]
+    },
+    {
+        "id": 64,
+        "query": "does my dueling fighting style work with a shield",
+        "category": "combat",
+        "query_type": "colloquial",
+        "description": "Dueling fighting style requirements",
+        "primary_keywords": [
+            "dueling",
+            "fighting style",
+            "shield"
+        ],
+        "supporting_keywords": [
+            "one handed",
+            "weapon",
+            "+2 damage",
+            "melee",
+            "bonus"
+        ]
+    },
+    {
+        "id": 65,
+        "query": "can I ready my action to attack when the door opens",
+        "category": "combat",
+        "query_type": "colloquial",
+        "description": "Ready action trigger",
+        "primary_keywords": [
+            "ready action",
+            "trigger",
+            "reaction"
+        ],
+        "supporting_keywords": [
+            "perceivable circumstance",
+            "action",
+            "attack",
+            "spell",
+            "hold"
+        ]
+    },
+    {
+        "id": 66,
+        "query": "does great weapon master apply to versatile weapons",
+        "category": "combat",
+        "query_type": "colloquial",
+        "description": "Great weapon master feat requirements",
+        "primary_keywords": [
+            "great weapon master",
+            "feat",
+            "versatile"
+        ],
+        "supporting_keywords": [
+            "heavy",
+            "melee",
+            "two-handed",
+            "damage",
+            "penalty",
+            "-5/+10"
+        ]
+    },
+    {
+        "id": 67,
+        "query": "can I use uncanny dodge to halve the trap damage",
+        "category": "combat",
+        "query_type": "colloquial",
+        "description": "Uncanny dodge against traps",
+        "primary_keywords": [
+            "uncanny dodge",
+            "rogue",
+            "reaction"
+        ],
+        "supporting_keywords": [
+            "halve damage",
+            "attacker",
+            "see",
+            "trap",
+            "reduce"
+        ]
+    },
+    {
+        "id": 68,
+        "query": "does sharpshooter work with thrown weapons like daggers",
+        "category": "combat",
+        "query_type": "colloquial",
+        "description": "Sharpshooter feat weapon types",
+        "primary_keywords": [
+            "sharpshooter",
+            "feat",
+            "thrown"
+        ],
+        "supporting_keywords": [
+            "ranged weapon",
+            "attack",
+            "dagger",
+            "limitation",
+            "penalty"
+        ]
+    },
+    {
+        "id": 69,
+        "query": "I use my Action Surge to cast two spells in one turn",
+        "category": "combat",
+        "query_type": "multi_part",
+        "description": "Action surge spell casting limitation",
+        "primary_keywords": [
+            "action surge",
+            "spell",
+            "fighter"
+        ],
+        "supporting_keywords": [
+            "additional action",
+            "bonus action",
+            "cantrip",
+            "limitation",
+            "casting"
+        ]
+    },
+    {
+        "id": 70,
+        "query": "I rage as a bonus action then attack with my greataxe",
+        "category": "combat",
+        "query_type": "multi_part",
+        "description": "Barbarian rage activation",
+        "primary_keywords": [
+            "rage",
+            "barbarian",
+            "bonus action"
+        ],
+        "supporting_keywords": [
+            "damage resistance",
+            "attack",
+            "strength",
+            "advantage",
+            "hit"
+        ]
+    },
+    {
+        "id": 71,
+        "query": "I want to use my divine smite after I hit with my attack",
+        "category": "combat",
+        "query_type": "multi_part",
+        "description": "Paladin divine smite timing",
+        "primary_keywords": [
+            "divine smite",
+            "paladin",
+            "attack"
+        ],
+        "supporting_keywords": [
+            "spell slot",
+            "radiant damage",
+            "melee",
+            "after hit",
+            "expend"
+        ]
+    },
+    {
+        "id": 72,
+        "query": "I use my superiority die to trip the enemy with my attack",
+        "category": "combat",
+        "query_type": "multi_part",
+        "description": "Battle master maneuver",
+        "primary_keywords": [
+            "superiority die",
+            "maneuver",
+            "fighter"
+        ],
+        "supporting_keywords": [
+            "trip attack",
+            "prone",
+            "saving throw",
+            "damage",
+            "battle master"
+        ]
+    },
+    {
+        "id": 73,
+        "query": "I want to use my battlemaster maneuver to disarm the knight",
+        "category": "combat",
+        "query_type": "multi_part",
+        "description": "Disarming attack maneuver",
+        "primary_keywords": [
+            "disarming attack",
+            "maneuver",
+            "superiority die"
+        ],
+        "supporting_keywords": [
+            "fighter",
+            "saving throw",
+            "drop",
+            "weapon",
+            "strength"
+        ]
+    },
+    {
+        "id": 74,
+        "query": "I want to use my bardic inspiration on my ally's attack roll",
+        "category": "combat",
+        "query_type": "multi_part",
+        "description": "Bardic inspiration usage",
+        "primary_keywords": [
+            "bardic inspiration",
+            "bard",
+            "bonus action"
+        ],
+        "supporting_keywords": [
+            "die",
+            "ability check",
+            "attack roll",
+            "saving throw",
+            "ally"
+        ]
+    },
+    {
+        "id": 75,
+        "query": "I use patient defense to dodge as a bonus action",
+        "category": "combat",
+        "query_type": "multi_part",
+        "description": "Monk patient defense",
+        "primary_keywords": [
+            "patient defense",
+            "monk",
+            "bonus action"
+        ],
+        "supporting_keywords": [
+            "ki point",
+            "dodge",
+            "disadvantage",
+            "advantage",
+            "defensive"
+        ]
+    },
+    {
+        "id": 76,
+        "query": "I use my second wind to recover hit points mid-combat",
+        "category": "combat",
+        "query_type": "multi_part",
+        "description": "Fighter second wind",
+        "primary_keywords": [
+            "second wind",
+            "fighter",
+            "bonus action"
+        ],
+        "supporting_keywords": [
+            "healing",
+            "hit points",
+            "1d10",
+            "level",
+            "recover"
+        ]
+    },
+    {
+        "id": 77,
+        "query": "I want to disengage and move away without provoking attacks",
+        "category": "combat",
+        "query_type": "multi_part",
+        "description": "Disengage action usage",
+        "primary_keywords": [
+            "disengage",
+            "action",
+            "movement"
+        ],
+        "supporting_keywords": [
+            "opportunity attack",
+            "provoke",
+            "reach",
+            "safe",
+            "withdraw"
+        ]
+    },
+    {
+        "id": 78,
+        "query": "I hold my attack until the wizard casts haste on me",
+        "category": "combat",
+        "query_type": "multi_part",
+        "description": "Holding action for specific trigger",
+        "primary_keywords": [
+            "ready action",
+            "trigger",
+            "reaction"
+        ],
+        "supporting_keywords": [
+            "perceivable",
+            "haste",
+            "attack",
+            "coordination",
+            "hold"
+        ]
+    },
+    {
+        "id": 79,
+        "query": "I want to use my shield master feat to knock enemies prone",
+        "category": "combat",
+        "query_type": "multi_part",
+        "description": "Shield master shove bonus action",
+        "primary_keywords": [
+            "shield master",
+            "feat",
+            "shove"
+        ],
+        "supporting_keywords": [
+            "bonus action",
+            "prone",
+            "attack action",
+            "athletics",
+            "push"
+        ]
+    },
+    {
+        "id": 80,
+        "query": "I cast shield as a reaction when the arrow hits me",
+        "category": "magic",
+        "query_type": "precise",
+        "description": "Reaction spell casting timing",
+        "primary_keywords": [
+            "shield",
+            "reaction",
+            "spell"
+        ],
+        "supporting_keywords": [
+            "armor class",
+            "AC",
+            "defensive",
+            "casting time",
+            "instantaneous",
+            "+5"
+        ]
+    },
+    {
+        "id": 81,
+        "query": "I use my sorcery points to convert into a spell slot",
+        "category": "magic",
+        "query_type": "precise",
+        "description": "Sorcerer flexible casting",
+        "primary_keywords": [
+            "sorcery points",
+            "flexible casting",
+            "spell slot"
+        ],
+        "supporting_keywords": [
+            "sorcerer",
+            "font of magic",
+            "conversion",
+            "bonus action",
+            "metamagic"
+        ]
+    },
+    {
+        "id": 82,
+        "query": "I want to use my wild shape to turn into a bear",
+        "category": "magic",
+        "query_type": "precise",
+        "description": "Druid wild shape transformation",
+        "primary_keywords": [
+            "wild shape",
+            "druid",
+            "transformation"
+        ],
+        "supporting_keywords": [
+            "beast",
+            "challenge rating",
+            "action",
+            "hit points",
+            "form"
+        ]
+    },
+    {
+        "id": 83,
+        "query": "I use my Channel Divinity to Turn Undead on the zombies",
+        "category": "magic",
+        "query_type": "precise",
+        "description": "Cleric channel divinity",
+        "primary_keywords": [
+            "channel divinity",
+            "turn undead",
+            "cleric"
+        ],
+        "supporting_keywords": [
+            "action",
+            "30 feet",
+            "wisdom saving throw",
+            "frightened",
+            "flee"
+        ]
+    },
+    {
+        "id": 84,
+        "query": "I activate my hexblade's curse on the enemy champion",
+        "category": "magic",
+        "query_type": "precise",
+        "description": "Hexblade's Curse feature",
+        "primary_keywords": [
+            "hexblade's curse",
+            "warlock",
+            "bonus action"
+        ],
+        "supporting_keywords": [
+            "proficiency bonus",
+            "damage",
+            "critical",
+            "heal",
+            "target"
+        ]
+    },
+    {
+        "id": 85,
+        "query": "I use my bladesong feature to increase my AC in combat",
+        "category": "magic",
+        "query_type": "precise",
+        "description": "Bladesinger Bladesong activation",
+        "primary_keywords": [
+            "bladesong",
+            "wizard",
+            "bonus action"
+        ],
+        "supporting_keywords": [
+            "AC",
+            "concentration",
+            "intelligence",
+            "movement",
+            "speed"
+        ]
+    },
+    {
+        "id": 86,
+        "query": "I try to calm the frightened child during the magical attack",
+        "category": "magic",
+        "query_type": "precise",
+        "description": "Calm Emotions spell usage",
+        "primary_keywords": [
+            "calm emotions",
+            "spell",
+            "cleric"
+        ],
+        "supporting_keywords": [
+            "bard",
+            "suppress",
+            "charmed",
+            "frightened",
+            "concentration"
+        ]
+    },
+    {
+        "id": 87,
+        "query": "can I counterspell the fireball coming at us",
+        "category": "magic",
+        "query_type": "colloquial",
+        "description": "Counterspell mechanics",
+        "primary_keywords": [
+            "counterspell",
+            "reaction"
+        ],
+        "supporting_keywords": [
+            "spell",
+            "interrupt",
+            "spellcasting",
+            "range",
+            "60 feet",
+            "ability check"
+        ]
+    },
+    {
+        "id": 88,
+        "query": "do I need line of sight to teleport with misty step",
+        "category": "magic",
+        "query_type": "colloquial",
+        "description": "Teleportation spell requirements",
+        "primary_keywords": [
+            "misty step",
+            "teleportation",
+            "line of sight"
+        ],
+        "supporting_keywords": [
+            "bonus action",
+            "range",
+            "unoccupied space",
+            "spell",
+            "visibility"
+        ]
+    },
+    {
+        "id": 89,
+        "query": "can I twin spell this charm person to affect two guards",
+        "category": "magic",
+        "query_type": "colloquial",
+        "description": "Metamagic twinned spell",
+        "primary_keywords": [
+            "twin spell",
+            "metamagic",
+            "targets"
+        ],
+        "supporting_keywords": [
+            "sorcery points",
+            "single target",
+            "sorcerer",
+            "charm person",
+            "multiple"
+        ]
+    },
+    {
+        "id": 90,
+        "query": "does my spiritual weapon move and attack on the same turn",
+        "category": "magic",
+        "query_type": "colloquial",
+        "description": "Spiritual weapon movement and attacks",
+        "primary_keywords": [
+            "spiritual weapon",
+            "bonus action",
+            "movement"
+        ],
+        "supporting_keywords": [
+            "spell attack",
+            "floating",
+            "range",
+            "concentration",
+            "20 feet"
+        ]
+    },
+    {
+        "id": 91,
+        "query": "can my familiar deliver a touch spell for me",
+        "category": "magic",
+        "query_type": "colloquial",
+        "description": "Familiar spell delivery",
+        "primary_keywords": [
+            "familiar",
+            "touch spell",
+            "delivery"
+        ],
+        "supporting_keywords": [
+            "find familiar",
+            "reaction",
+            "range",
+            "wizard",
+            "transfer"
+        ]
+    },
+    {
+        "id": 92,
+        "query": "how long does my mage armor last after I cast it",
+        "category": "magic",
+        "query_type": "colloquial",
+        "description": "Spell duration",
+        "primary_keywords": [
+            "mage armor",
+            "duration",
+            "spell"
+        ],
+        "supporting_keywords": [
+            "8 hours",
+            "AC",
+            "armor class",
+            "calculation",
+            "base"
+        ]
+    },
+    {
+        "id": 93,
+        "query": "can I maintain concentration on two spells at once",
+        "category": "magic",
+        "query_type": "colloquial",
+        "description": "Concentration limitations",
+        "primary_keywords": [
+            "concentration",
+            "multiple spells",
+            "limitation"
+        ],
+        "supporting_keywords": [
+            "drop",
+            "one spell",
+            "casting",
+            "maintaining",
+            "end"
+        ]
+    },
+    {
+        "id": 94,
+        "query": "does hex damage apply to each magic missile dart",
+        "category": "magic",
+        "query_type": "colloquial",
+        "description": "Spell interaction mechanics",
+        "primary_keywords": [
+            "hex",
+            "magic missile",
+            "damage"
+        ],
+        "supporting_keywords": [
+            "additional",
+            "darts",
+            "separate",
+            "attack",
+            "necrotic"
+        ]
+    },
+    {
+        "id": 95,
+        "query": "can I use prestidigitation to create a distraction",
+        "category": "magic",
+        "query_type": "colloquial",
+        "description": "Cantrip creative use",
+        "primary_keywords": [
+            "prestidigitation",
+            "cantrip",
+            "utility"
+        ],
+        "supporting_keywords": [
+            "minor effect",
+            "action",
+            "sensory",
+            "harmless",
+            "tricks"
+        ]
+    },
+    {
+        "id": 96,
+        "query": "does my hex stay active if I knock the target unconscious",
+        "category": "magic",
+        "query_type": "colloquial",
+        "description": "Spell effect continuation",
+        "primary_keywords": [
+            "hex",
+            "unconscious",
+            "concentration"
+        ],
+        "supporting_keywords": [
+            "target",
+            "drop",
+            "incapacitated",
+            "spell",
+            "maintain"
+        ]
+    },
+    {
+        "id": 97,
+        "query": "does toll the dead do more damage if the target is wounded",
+        "category": "magic",
+        "query_type": "colloquial",
+        "description": "Toll the Dead scaling damage",
+        "primary_keywords": [
+            "toll the dead",
+            "cantrip",
+            "damage"
+        ],
+        "supporting_keywords": [
+            "wounded",
+            "missing hit points",
+            "d8",
+            "d12",
+            "necrotic"
+        ]
+    },
+    {
+        "id": 98,
+        "query": "I want to cast healing word on my ally then attack with my sword",
+        "category": "magic",
+        "query_type": "multi_part",
+        "description": "Bonus action spell and action economy",
+        "primary_keywords": [
+            "bonus action",
+            "spell",
+            "action economy"
+        ],
+        "supporting_keywords": [
+            "healing word",
+            "cantrip",
+            "attack",
+            "turn structure",
+            "casting"
+        ]
+    },
+    {
+        "id": 99,
+        "query": "I ritual cast detect magic to save a spell slot",
+        "category": "magic",
+        "query_type": "multi_part",
+        "description": "Ritual casting mechanics",
+        "primary_keywords": [
+            "ritual casting",
+            "detect magic",
+            "spell slot"
+        ],
+        "supporting_keywords": [
+            "10 minutes",
+            "casting time",
+            "longer",
+            "prepared",
+            "ritual tag"
+        ]
+    },
+    {
+        "id": 100,
+        "query": "I upcast magic missile using a 3rd level slot",
+        "category": "magic",
+        "query_type": "multi_part",
+        "description": "Upcasting spell mechanics",
+        "primary_keywords": [
+            "upcast",
+            "magic missile",
+            "spell slot"
+        ],
+        "supporting_keywords": [
+            "higher level",
+            "additional darts",
+            "damage",
+            "scaling",
+            "1d4"
+        ]
+    },
+    {
+        "id": 101,
+        "query": "I want to cast a spell then use quickened spell to cast another",
+        "category": "magic",
+        "query_type": "multi_part",
+        "description": "Quickened spell metamagic restrictions",
+        "primary_keywords": [
+            "quickened spell",
+            "metamagic",
+            "bonus action"
+        ],
+        "supporting_keywords": [
+            "cantrip",
+            "action spell",
+            "sorcerer",
+            "limitation",
+            "casting"
+        ]
+    },
+    {
+        "id": 102,
+        "query": "I cast polymorph on myself to become a T-Rex",
+        "category": "magic",
+        "query_type": "multi_part",
+        "description": "Polymorph self-targeting",
+        "primary_keywords": [
+            "polymorph",
+            "self",
+            "transformation"
+        ],
+        "supporting_keywords": [
+            "beast",
+            "hit points",
+            "concentration",
+            "willing",
+            "dinosaur"
+        ]
+    },
+    {
+        "id": 103,
+        "query": "I use my warlock spell slot then take a short rest to recover it",
+        "category": "magic",
+        "query_type": "multi_part",
+        "description": "Warlock pact magic recovery",
+        "primary_keywords": [
+            "warlock",
+            "spell slot",
+            "short rest"
+        ],
+        "supporting_keywords": [
+            "pact magic",
+            "recovery",
+            "1 hour",
+            "regain",
+            "refresh"
+        ]
+    },
+    {
+        "id": 104,
+        "query": "I want to identify the components needed for this ritual spell",
+        "category": "magic",
+        "query_type": "multi_part",
+        "description": "Arcana for ritual components",
+        "primary_keywords": [
+            "arcana",
+            "ritual",
+            "components"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "spell",
+            "materials",
+            "identify",
+            "requirements"
+        ]
+    },
+    {
+        "id": 105,
+        "query": "I cast darkness then activate my devil's sight to see through it",
+        "category": "magic",
+        "query_type": "multi_part",
+        "description": "Darkness spell with Devil's Sight",
+        "primary_keywords": [
+            "darkness",
+            "devil's sight",
+            "warlock"
+        ],
+        "supporting_keywords": [
+            "spell",
+            "invocation",
+            "magical darkness",
+            "see",
+            "vision"
+        ]
+    },
+    {
+        "id": 106,
+        "query": "I want to dispel the magical effect on my cursed companion",
+        "category": "magic",
+        "query_type": "multi_part",
+        "description": "Dispel Magic or Remove Curse",
+        "primary_keywords": [
+            "dispel magic",
+            "remove curse",
+            "spell"
+        ],
+        "supporting_keywords": [
+            "cursed",
+            "magical effect",
+            "end",
+            "ability check",
+            "caster level"
+        ]
+    },
+    {
+        "id": 107,
+        "query": "I want to cast bless on my party before the big fight",
+        "category": "magic",
+        "query_type": "multi_part",
+        "description": "Bless spell prebuffing",
+        "primary_keywords": [
+            "bless",
+            "spell",
+            "buff"
+        ],
+        "supporting_keywords": [
+            "concentration",
+            "1d4",
+            "attack rolls",
+            "saving throws",
+            "support"
+        ]
+    },
+    {
+        "id": 108,
+        "query": "I want to activate my rage then cast a concentration spell",
+        "category": "magic",
+        "query_type": "multi_part",
+        "description": "Rage and spellcasting interaction",
+        "primary_keywords": [
+            "rage",
+            "concentration",
+            "spell"
+        ],
+        "supporting_keywords": [
+            "barbarian",
+            "cannot cast",
+            "maintain",
+            "limitation",
+            "restriction"
+        ]
+    },
+    {
+        "id": 109,
+        "query": "I use my arcane recovery to regain spell slots during short rest",
+        "category": "magic",
+        "query_type": "multi_part",
+        "description": "Wizard Arcane Recovery",
+        "primary_keywords": [
+            "arcane recovery",
+            "wizard",
+            "spell slot"
+        ],
+        "supporting_keywords": [
+            "short rest",
+            "regain",
+            "once per day",
+            "level",
+            "refresh"
+        ]
+    },
+    {
+        "id": 110,
+        "query": "I want to use my Channel Divinity to maximize healing",
+        "category": "magic",
+        "query_type": "multi_part",
+        "description": "Life Domain Channel Divinity",
+        "primary_keywords": [
+            "channel divinity",
+            "healing",
+            "cleric"
+        ],
+        "supporting_keywords": [
+            "life domain",
+            "maximize",
+            "spell",
+            "restore",
+            "hit points"
+        ]
+    },
+    {
+        "id": 111,
+        "query": "I try to use eldritch blast to push the enemy off the cliff",
+        "category": "magic",
+        "query_type": "multi_part",
+        "description": "Eldritch Blast with Repelling Blast",
+        "primary_keywords": [
+            "eldritch blast",
+            "push",
+            "invocation"
+        ],
+        "supporting_keywords": [
+            "warlock",
+            "repelling blast",
+            "10 feet",
+            "forced movement",
+            "cantrip"
+        ]
+    },
+    {
+        "id": 112,
+        "query": "I want to summon my spiritual weapon then move it and attack",
+        "category": "magic",
+        "query_type": "multi_part",
+        "description": "Spiritual weapon summoning and control",
+        "primary_keywords": [
+            "spiritual weapon",
+            "summon",
+            "bonus action"
+        ],
+        "supporting_keywords": [
+            "spell attack",
+            "move",
+            "20 feet",
+            "range",
+            "attack"
+        ]
+    },
+    {
+        "id": 113,
+        "query": "I cast cure wounds at 2nd level to heal more hit points",
+        "category": "magic",
+        "query_type": "multi_part",
+        "description": "Upcasting healing spells",
+        "primary_keywords": [
+            "cure wounds",
+            "upcast",
+            "spell slot"
+        ],
+        "supporting_keywords": [
+            "2nd level",
+            "healing",
+            "1d8",
+            "additional",
+            "hit points"
+        ]
+    },
+    {
+        "id": 114,
+        "query": "I want to use metamagic to extend the duration of my spell",
+        "category": "magic",
+        "query_type": "multi_part",
+        "description": "Extended Spell metamagic",
+        "primary_keywords": [
+            "extended spell",
+            "metamagic",
+            "duration"
+        ],
+        "supporting_keywords": [
+            "sorcery points",
+            "double",
+            "sorcerer",
+            "concentration",
+            "time"
+        ]
+    },
+    {
+        "id": 115,
+        "query": "I cast invisibility on myself then try to hide from the guards",
+        "category": "magic",
+        "query_type": "multi_part",
+        "description": "Invisibility spell and stealth synergy",
+        "primary_keywords": [
+            "invisibility",
+            "spell",
+            "hide"
+        ],
+        "supporting_keywords": [
+            "stealth",
+            "advantage",
+            "concentration",
+            "unseen",
+            "guards"
+        ]
+    },
+    {
+        "id": 116,
+        "query": "I want to wild shape into a giant eagle to fly my allies over the chasm",
+        "category": "magic",
+        "query_type": "multi_part",
+        "description": "Wild shape flight and carrying capacity",
+        "primary_keywords": [
+            "wild shape",
+            "giant eagle",
+            "fly"
+        ],
+        "supporting_keywords": [
+            "druid",
+            "carrying capacity",
+            "allies",
+            "flight",
+            "transformation"
+        ]
+    },
+    {
+        "id": 117,
+        "query": "can I identify what school of magic this spell belongs to",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "description": "Arcana for spell identification",
+        "primary_keywords": [
+            "arcana",
+            "identify",
+            "spell"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "school of magic",
+            "abjuration",
+            "evocation",
+            "recognize"
+        ]
+    },
+    {
+        "id": 118,
+        "query": "do I know anything about the customs of this foreign culture",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "description": "History or Religion for customs",
+        "primary_keywords": [
+            "history",
+            "customs",
+            "culture"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "religion",
+            "traditions",
+            "society",
+            "foreign"
+        ]
+    },
+    {
+        "id": 119,
+        "query": "can I tell what creature made these massive claw marks",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "description": "Nature for creature identification",
+        "primary_keywords": [
+            "nature",
+            "creature",
+            "tracks"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "claw marks",
+            "identify",
+            "beast",
+            "monster"
+        ]
+    },
+    {
+        "id": 120,
+        "query": "do I recognize the significance of this religious icon",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "description": "Religion for icon recognition",
+        "primary_keywords": [
+            "religion",
+            "icon",
+            "significance"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "deity",
+            "holy",
+            "symbol",
+            "worship"
+        ]
+    },
+    {
+        "id": 121,
+        "query": "can I determine the age and origin of this architectural style",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "description": "History for architecture",
+        "primary_keywords": [
+            "history",
+            "architecture",
+            "origin"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "age",
+            "style",
+            "culture",
+            "building"
+        ]
+    },
+    {
+        "id": 122,
+        "query": "do I know which herbs can counteract this poison",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "description": "Nature or Medicine for herbology",
+        "primary_keywords": [
+            "nature",
+            "medicine",
+            "herbs"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "poison",
+            "antidote",
+            "plants",
+            "remedy"
+        ]
+    },
+    {
+        "id": 123,
+        "query": "can I tell if this gemstone is real or fake",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "description": "Investigation for appraisal",
+        "primary_keywords": [
+            "investigation",
+            "gemstone",
+            "appraisal"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "fake",
+            "value",
+            "authenticity",
+            "jewel"
+        ]
+    },
+    {
+        "id": 124,
+        "query": "do I know anything about the legendary hero mentioned in this tapestry",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "description": "History for legendary figures",
+        "primary_keywords": [
+            "history",
+            "legendary",
+            "hero"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "lore",
+            "tapestry",
+            "past",
+            "famous"
+        ]
+    },
+    {
+        "id": 125,
+        "query": "can I recognize the noble family crest on the shield",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "description": "History for heraldry",
+        "primary_keywords": [
+            "history",
+            "heraldry",
+            "crest"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "noble",
+            "family",
+            "symbol",
+            "coat of arms"
+        ]
+    },
+    {
+        "id": 126,
+        "query": "do I know the proper rituals for consecrating this temple",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "description": "Religion for rituals",
+        "primary_keywords": [
+            "religion",
+            "rituals",
+            "consecrating"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "temple",
+            "holy",
+            "ceremony",
+            "sacred"
+        ]
+    },
+    {
+        "id": 127,
+        "query": "can I tell if this creature is a fey or a celestial",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "description": "Arcana or Religion for creature type",
+        "primary_keywords": [
+            "arcana",
+            "religion",
+            "creature type"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "fey",
+            "celestial",
+            "identify",
+            "outsider"
+        ]
+    },
+    {
+        "id": 128,
+        "query": "I examine the ancient runes carved into the doorway",
+        "category": "knowledge",
+        "query_type": "precise",
+        "description": "Arcana or History for runes",
+        "primary_keywords": [
+            "arcana",
+            "runes",
+            "ancient"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "history",
+            "magical",
+            "symbols",
+            "decipher"
+        ]
+    },
+    {
+        "id": 129,
+        "query": "I try to recall legends about this cursed forest",
+        "category": "knowledge",
+        "query_type": "precise",
+        "description": "History for legends and lore",
+        "primary_keywords": [
+            "history",
+            "legends",
+            "lore"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "recall",
+            "curse",
+            "forest",
+            "tales"
+        ]
+    },
+    {
+        "id": 130,
+        "query": "I examine the corpse to determine the cause of death",
+        "category": "knowledge",
+        "query_type": "precise",
+        "description": "Medicine or Investigation for autopsy",
+        "primary_keywords": [
+            "medicine",
+            "investigation",
+            "cause of death"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "wisdom",
+            "corpse",
+            "examination",
+            "wounds"
+        ]
+    },
+    {
+        "id": 131,
+        "query": "I try to decipher the meaning of these coded symbols",
+        "category": "knowledge",
+        "query_type": "precise",
+        "description": "Investigation for code-breaking",
+        "primary_keywords": [
+            "investigation",
+            "decipher",
+            "code"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "symbols",
+            "cipher",
+            "meaning",
+            "cryptography"
+        ]
+    },
+    {
+        "id": 132,
+        "query": "I try to determine what plane of existence this portal leads to",
+        "category": "knowledge",
+        "query_type": "precise",
+        "description": "Arcana for planar knowledge",
+        "primary_keywords": [
+            "arcana",
+            "planar",
+            "portal"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "plane",
+            "dimension",
+            "magic",
+            "extraplanar"
+        ]
+    },
+    {
+        "id": 133,
+        "query": "I examine the battle tactics used in this historical painting",
+        "category": "knowledge",
+        "query_type": "precise",
+        "description": "History for military knowledge",
+        "primary_keywords": [
+            "history",
+            "battle",
+            "tactics"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "military",
+            "warfare",
+            "strategy",
+            "formations"
+        ]
+    },
+    {
+        "id": 134,
+        "query": "I try to recall the properties of different metals and alloys",
+        "category": "knowledge",
+        "query_type": "precise",
+        "description": "Arcana or Nature for materials",
+        "primary_keywords": [
+            "arcana",
+            "nature",
+            "metals"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "properties",
+            "alloys",
+            "materials",
+            "silver"
+        ]
+    },
+    {
+        "id": 135,
+        "query": "I want to determine if this water is safe to drink",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "description": "Nature or Survival for water safety",
+        "primary_keywords": [
+            "nature",
+            "survival",
+            "water"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "wisdom",
+            "poison",
+            "safe",
+            "contaminated"
+        ]
+    },
+    {
+        "id": 136,
+        "query": "I want to recall what I know about vampire weaknesses",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "description": "Religion for undead knowledge",
+        "primary_keywords": [
+            "religion",
+            "vampire",
+            "weaknesses"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "undead",
+            "lore",
+            "vulnerabilities",
+            "sunlight"
+        ]
+    },
+    {
+        "id": 137,
+        "query": "I want to identify what type of dragon scale this is",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "description": "Arcana or Nature for dragon identification",
+        "primary_keywords": [
+            "arcana",
+            "nature",
+            "dragon"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "scale",
+            "type",
+            "chromatic",
+            "metallic"
+        ]
+    },
+    {
+        "id": 138,
+        "query": "I want to recall information about the Elemental Plane of Fire",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "description": "Arcana for elemental planes",
+        "primary_keywords": [
+            "arcana",
+            "elemental plane",
+            "fire"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "planar",
+            "environment",
+            "denizens",
+            "efreeti"
+        ]
+    },
+    {
+        "id": 139,
+        "query": "I want to know if this mushroom is edible or poisonous",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "description": "Nature for fungi identification",
+        "primary_keywords": [
+            "nature",
+            "mushroom",
+            "poisonous"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "edible",
+            "fungi",
+            "identify",
+            "toxic"
+        ]
+    },
+    {
+        "id": 140,
+        "query": "I want to identify what type of construct this automaton is",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "description": "Arcana for construct identification",
+        "primary_keywords": [
+            "arcana",
+            "construct",
+            "automaton"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "identify",
+            "mechanical",
+            "magic",
+            "golem"
+        ]
+    },
+    {
+        "id": 141,
+        "query": "I try to recall the weaknesses of lycanthropes",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "description": "Arcana or Religion for curse knowledge",
+        "primary_keywords": [
+            "arcana",
+            "religion",
+            "lycanthropes"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "weaknesses",
+            "curse",
+            "werewolf",
+            "silver"
+        ]
+    },
+    {
+        "id": 142,
+        "query": "I want to know if this relic is authentic or a forgery",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "description": "Investigation or History for authentication",
+        "primary_keywords": [
+            "investigation",
+            "history",
+            "authentic"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "relic",
+            "forgery",
+            "examination",
+            "fake"
+        ]
+    },
+    {
+        "id": 143,
+        "query": "I want to decipher the ancient script on this magical tome",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "description": "Arcana and History for ancient texts",
+        "primary_keywords": [
+            "arcana",
+            "history",
+            "decipher"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "ancient",
+            "script",
+            "tome",
+            "magical"
+        ]
+    },
+    {
+        "id": 144,
+        "query": "I try to identify the poison used based on the symptoms",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "description": "Medicine or Nature for toxicology",
+        "primary_keywords": [
+            "medicine",
+            "nature",
+            "poison"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "symptoms",
+            "identify",
+            "toxin",
+            "diagnosis"
+        ]
+    },
+    {
+        "id": 145,
+        "query": "I want to recall the creation myths of this pantheon of gods",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "description": "Religion for mythology",
+        "primary_keywords": [
+            "religion",
+            "mythology",
+            "creation"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "pantheon",
+            "gods",
+            "myths",
+            "origin"
+        ]
+    },
+    {
+        "id": 146,
+        "query": "I examine the craftsmanship to determine which civilization made this artifact",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "description": "History for artifact analysis",
+        "primary_keywords": [
+            "history",
+            "craftsmanship",
+            "artifact"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "civilization",
+            "origin",
+            "culture",
+            "ancient"
+        ]
+    },
+    {
+        "id": 147,
+        "query": "I want to analyze the spell residue to identify what magic was cast here",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "description": "Arcana for magical forensics",
+        "primary_keywords": [
+            "arcana",
+            "spell",
+            "residue"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "identify",
+            "magic",
+            "cast",
+            "traces"
+        ]
+    },
+    {
+        "id": 148,
+        "query": "I try to remember the weaknesses and behaviors of mind flayers",
+        "category": "magic",
+        "query_type": "precise",
+        "description": "Spell slot recovery mechanics",
+        "primary_keywords": [
+            "spell slot",
+            "recovery",
+            "long rest"
+        ],
+        "supporting_keywords": [
+            "regain",
+            "wizard",
+            "sorcerer",
+            "refresh"
+        ]
+    },
+    {
+        "id": 149,
+        "query": "can I hear guards approaching down the corridor",
+        "category": "exploration",
+        "query_type": "colloquial",
+        "description": "Passive or active Perception",
+        "primary_keywords": [
+            "perception",
+            "hearing",
+            "passive"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "sound",
+            "approach",
+            "distance",
+            "listen"
+        ]
+    },
+    {
+        "id": 150,
+        "query": "do I notice the concealed door behind the bookshelf",
+        "category": "exploration",
+        "query_type": "colloquial",
+        "description": "Perception for hidden features",
+        "primary_keywords": [
+            "perception",
+            "concealed",
+            "hidden"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "door",
+            "secret",
+            "notice",
+            "spot"
+        ]
+    },
+    {
+        "id": 151,
+        "query": "can I squeeze through the narrow gap in the wall",
+        "category": "exploration",
+        "query_type": "colloquial",
+        "description": "Acrobatics for squeezing",
+        "primary_keywords": [
+            "acrobatics",
+            "squeeze",
+            "narrow"
+        ],
+        "supporting_keywords": [
+            "dexterity",
+            "space",
+            "tight",
+            "fit",
+            "small"
+        ]
+    },
+    {
+        "id": 152,
+        "query": "do I spot the tripwire before I step on it",
+        "category": "exploration",
+        "query_type": "colloquial",
+        "description": "Perception for traps",
+        "primary_keywords": [
+            "perception",
+            "tripwire",
+            "trap"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "notice",
+            "spot",
+            "passive",
+            "trigger"
+        ]
+    },
+    {
+        "id": 153,
+        "query": "can I maintain my balance on the icy ledge",
+        "category": "exploration",
+        "query_type": "colloquial",
+        "description": "Acrobatics for difficult terrain balance",
+        "primary_keywords": [
+            "acrobatics",
+            "balance",
+            "icy"
+        ],
+        "supporting_keywords": [
+            "dexterity",
+            "ledge",
+            "slippery",
+            "terrain",
+            "footing"
+        ]
+    },
+    {
+        "id": 154,
+        "query": "do I recognize any landmarks to orient myself",
+        "category": "exploration",
+        "query_type": "colloquial",
+        "description": "Survival for orientation",
+        "primary_keywords": [
+            "survival",
+            "landmarks",
+            "navigation"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "orient",
+            "direction",
+            "recognize",
+            "lost"
+        ]
+    },
+    {
+        "id": 155,
+        "query": "can I land safely after jumping from the second floor",
+        "category": "exploration",
+        "query_type": "colloquial",
+        "description": "Acrobatics for safe landing",
+        "primary_keywords": [
+            "acrobatics",
+            "landing",
+            "fall"
+        ],
+        "supporting_keywords": [
+            "dexterity",
+            "jump",
+            "damage",
+            "reduce",
+            "roll"
+        ]
+    },
+    {
+        "id": 156,
+        "query": "do I find any useful items while searching the room thoroughly",
+        "category": "exploration",
+        "query_type": "colloquial",
+        "description": "Investigation for thorough search",
+        "primary_keywords": [
+            "investigation",
+            "search",
+            "items"
+        ],
+        "supporting_keywords": [
+            "intelligence",
+            "thoroughly",
+            "find",
+            "useful",
+            "loot"
+        ]
+    },
+    {
+        "id": 157,
+        "query": "can I tell how long ago this campfire was used",
+        "category": "exploration",
+        "query_type": "colloquial",
+        "description": "Survival for time estimation",
+        "primary_keywords": [
+            "survival",
+            "campfire",
+            "time"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "age",
+            "recent",
+            "estimate",
+            "ashes"
+        ]
+    },
+    {
+        "id": 158,
+        "query": "do I sense anything unusual about this area",
+        "category": "exploration",
+        "query_type": "colloquial",
+        "description": "Perception or Insight for unease",
+        "primary_keywords": [
+            "perception",
+            "insight",
+            "unusual"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "sense",
+            "danger",
+            "intuition",
+            "wrong"
+        ]
+    },
+    {
+        "id": 159,
+        "query": "I try to move silently across the creaky wooden floor",
+        "category": "exploration",
+        "query_type": "precise",
+        "description": "Stealth for silent movement",
+        "primary_keywords": [
+            "stealth",
+            "silent",
+            "movement"
+        ],
+        "supporting_keywords": [
+            "dexterity",
+            "creaky",
+            "floor",
+            "quietly",
+            "sneak"
+        ]
+    },
+    {
+        "id": 160,
+        "query": "I try to identify which tracks are freshest",
+        "category": "exploration",
+        "query_type": "precise",
+        "description": "Survival for tracking freshness",
+        "primary_keywords": [
+            "survival",
+            "tracks",
+            "fresh"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "age",
+            "recent",
+            "identify",
+            "footprints"
+        ]
+    },
+    {
+        "id": 161,
+        "query": "I try to hold my breath while swimming underwater",
+        "category": "exploration",
+        "query_type": "precise",
+        "description": "Constitution for breath holding",
+        "primary_keywords": [
+            "constitution",
+            "breath",
+            "swimming"
+        ],
+        "supporting_keywords": [
+            "underwater",
+            "suffocating",
+            "minutes",
+            "hold",
+            "dive"
+        ]
+    },
+    {
+        "id": 162,
+        "query": "I try to notice if anyone is following us",
+        "category": "exploration",
+        "query_type": "precise",
+        "description": "Perception or Insight for surveillance",
+        "primary_keywords": [
+            "perception",
+            "insight",
+            "following"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "tail",
+            "surveillance",
+            "notice",
+            "shadow"
+        ]
+    },
+    {
+        "id": 163,
+        "query": "I try to walk across the tightrope without falling",
+        "category": "exploration",
+        "query_type": "precise",
+        "description": "Acrobatics for tightrope walking",
+        "primary_keywords": [
+            "acrobatics",
+            "tightrope",
+            "balance"
+        ],
+        "supporting_keywords": [
+            "dexterity",
+            "falling",
+            "careful",
+            "difficult",
+            "rope"
+        ]
+    },
+    {
+        "id": 164,
+        "query": "I sense if there are any aberrations or undead nearby",
+        "category": "exploration",
+        "query_type": "multi_part",
+        "description": "Divine Sense or perception",
+        "primary_keywords": [
+            "divine sense",
+            "perception",
+            "undead"
+        ],
+        "supporting_keywords": [
+            "paladin",
+            "aberration",
+            "detect",
+            "60 feet",
+            "celestial"
+        ]
+    },
+    {
+        "id": 165,
+        "query": "I want to find the best path through the dense undergrowth",
+        "category": "exploration",
+        "query_type": "multi_part",
+        "description": "Survival for navigation",
+        "primary_keywords": [
+            "survival",
+            "navigation",
+            "path"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "undergrowth",
+            "travel",
+            "terrain",
+            "forest"
+        ]
+    },
+    {
+        "id": 166,
+        "query": "I want to climb down the cliff face without falling",
+        "category": "exploration",
+        "query_type": "multi_part",
+        "description": "Athletics for climbing down",
+        "primary_keywords": [
+            "athletics",
+            "climbing",
+            "cliff"
+        ],
+        "supporting_keywords": [
+            "strength",
+            "descent",
+            "falling",
+            "careful",
+            "rappel"
+        ]
+    },
+    {
+        "id": 167,
+        "query": "I want to forage for food and water in this area",
+        "category": "exploration",
+        "query_type": "multi_part",
+        "description": "Survival for foraging",
+        "primary_keywords": [
+            "survival",
+            "forage",
+            "food"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "water",
+            "wilderness",
+            "gather",
+            "provisions"
+        ]
+    },
+    {
+        "id": 168,
+        "query": "I want to predict the weather for our journey tomorrow",
+        "category": "exploration",
+        "query_type": "multi_part",
+        "description": "Survival for weather prediction",
+        "primary_keywords": [
+            "survival",
+            "weather",
+            "predict"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "forecast",
+            "conditions",
+            "journey",
+            "storm"
+        ]
+    },
+    {
+        "id": 169,
+        "query": "I try to remain hidden while the patrol passes by",
+        "category": "exploration",
+        "query_type": "multi_part",
+        "description": "Stealth to remain hidden",
+        "primary_keywords": [
+            "stealth",
+            "hidden",
+            "patrol"
+        ],
+        "supporting_keywords": [
+            "dexterity",
+            "maintain",
+            "cover",
+            "quiet",
+            "concealment"
+        ]
+    },
+    {
+        "id": 170,
+        "query": "I want to rappel down the tower wall using rope",
+        "category": "exploration",
+        "query_type": "multi_part",
+        "description": "Athletics or Acrobatics for rappelling",
+        "primary_keywords": [
+            "athletics",
+            "acrobatics",
+            "rappel"
+        ],
+        "supporting_keywords": [
+            "dexterity",
+            "strength",
+            "rope",
+            "descent",
+            "climb"
+        ]
+    },
+    {
+        "id": 171,
+        "query": "I want to set up a safe campsite in this dangerous wilderness",
+        "category": "exploration",
+        "query_type": "multi_part",
+        "description": "Survival for campsite selection",
+        "primary_keywords": [
+            "survival",
+            "campsite",
+            "safe"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "wilderness",
+            "dangerous",
+            "shelter",
+            "secure"
+        ]
+    },
+    {
+        "id": 172,
+        "query": "I try to disarm the complex mechanical trap on the chest",
+        "category": "exploration",
+        "query_type": "multi_part",
+        "description": "Thieves' tools for trap disarming",
+        "primary_keywords": [
+            "thieves' tools",
+            "trap",
+            "disarm"
+        ],
+        "supporting_keywords": [
+            "dexterity",
+            "complex",
+            "mechanical",
+            "chest",
+            "careful"
+        ]
+    },
+    {
+        "id": 173,
+        "query": "can I tell if the innkeeper is hiding something from us",
+        "category": "social",
+        "query_type": "colloquial",
+        "description": "Insight for deception detection",
+        "primary_keywords": [
+            "insight",
+            "hiding",
+            "deception"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "intentions",
+            "truth",
+            "suspicious",
+            "lie"
+        ]
+    },
+    {
+        "id": 174,
+        "query": "do I sense the noble's true feelings about our proposal",
+        "category": "social",
+        "query_type": "colloquial",
+        "description": "Insight for emotional reading",
+        "primary_keywords": [
+            "insight",
+            "feelings",
+            "intentions"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "sense",
+            "emotions",
+            "true",
+            "motives"
+        ]
+    },
+    {
+        "id": 175,
+        "query": "can I charm my way past the bouncer at the exclusive club",
+        "category": "social",
+        "query_type": "colloquial",
+        "description": "Persuasion or Deception for access",
+        "primary_keywords": [
+            "persuasion",
+            "deception",
+            "charm"
+        ],
+        "supporting_keywords": [
+            "charisma",
+            "talk",
+            "convince",
+            "entry",
+            "sweet-talk"
+        ]
+    },
+    {
+        "id": 176,
+        "query": "do I read the crowd's mood before making my speech",
+        "category": "social",
+        "query_type": "colloquial",
+        "description": "Insight for crowd reading",
+        "primary_keywords": [
+            "insight",
+            "crowd",
+            "mood"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "read",
+            "atmosphere",
+            "audience",
+            "temperament"
+        ]
+    },
+    {
+        "id": 177,
+        "query": "can I convince the guard that we're supposed to be here",
+        "category": "social",
+        "query_type": "colloquial",
+        "description": "Deception or Persuasion for access",
+        "primary_keywords": [
+            "deception",
+            "persuasion",
+            "convince"
+        ],
+        "supporting_keywords": [
+            "charisma",
+            "guard",
+            "authority",
+            "belonging",
+            "talk"
+        ]
+    },
+    {
+        "id": 178,
+        "query": "do I notice the subtle tells that reveal the spy among us",
+        "category": "social",
+        "query_type": "colloquial",
+        "description": "Insight for spy detection",
+        "primary_keywords": [
+            "insight",
+            "spy",
+            "detect"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "subtle",
+            "tells",
+            "behavior",
+            "traitor"
+        ]
+    },
+    {
+        "id": 179,
+        "query": "can I rally the frightened townsfolk to stand and fight",
+        "category": "social",
+        "query_type": "colloquial",
+        "description": "Persuasion for rallying courage",
+        "primary_keywords": [
+            "persuasion",
+            "rally",
+            "courage"
+        ],
+        "supporting_keywords": [
+            "charisma",
+            "inspire",
+            "fight",
+            "morale",
+            "speech"
+        ]
+    },
+    {
+        "id": 180,
+        "query": "do I detect any nervousness when the suspect answers my questions",
+        "category": "social",
+        "query_type": "colloquial",
+        "description": "Insight for lie detection",
+        "primary_keywords": [
+            "insight",
+            "nervousness",
+            "detect"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "lying",
+            "answers",
+            "behavior",
+            "tells"
+        ]
+    },
+    {
+        "id": 181,
+        "query": "can I spread rumors to damage the rival's reputation",
+        "category": "social",
+        "query_type": "colloquial",
+        "description": "Deception for rumor-mongering",
+        "primary_keywords": [
+            "deception",
+            "rumors",
+            "reputation"
+        ],
+        "supporting_keywords": [
+            "charisma",
+            "spread",
+            "damage",
+            "slander",
+            "gossip"
+        ]
+    },
+    {
+        "id": 182,
+        "query": "do I sense whether the prisoner is telling the whole truth",
+        "category": "social",
+        "query_type": "colloquial",
+        "description": "Insight for partial truth detection",
+        "primary_keywords": [
+            "insight",
+            "truth",
+            "withholding"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "sense",
+            "complete",
+            "honesty",
+            "partial"
+        ]
+    },
+    {
+        "id": 183,
+        "query": "I try to blend in with the crowd at the festival",
+        "category": "social",
+        "query_type": "precise",
+        "description": "Deception or Stealth for blending",
+        "primary_keywords": [
+            "deception",
+            "stealth",
+            "blend"
+        ],
+        "supporting_keywords": [
+            "charisma",
+            "dexterity",
+            "crowd",
+            "inconspicuous",
+            "disguise"
+        ]
+    },
+    {
+        "id": 184,
+        "query": "I try to impersonate a guard using their uniform and mannerisms",
+        "category": "social",
+        "query_type": "precise",
+        "description": "Deception for impersonation",
+        "primary_keywords": [
+            "deception",
+            "impersonate",
+            "disguise"
+        ],
+        "supporting_keywords": [
+            "charisma",
+            "performance",
+            "act",
+            "convincing",
+            "uniform"
+        ]
+    },
+    {
+        "id": 185,
+        "query": "I try to calm the frightened animal so we can pass safely",
+        "category": "social",
+        "query_type": "precise",
+        "description": "Animal Handling for calming",
+        "primary_keywords": [
+            "animal handling",
+            "calm",
+            "animal"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "frightened",
+            "soothe",
+            "approach",
+            "tame"
+        ]
+    },
+    {
+        "id": 186,
+        "query": "I try to keep the frightened child calm during the danger",
+        "category": "social",
+        "query_type": "precise",
+        "description": "Persuasion or Insight for reassurance",
+        "primary_keywords": [
+            "persuasion",
+            "insight",
+            "calm"
+        ],
+        "supporting_keywords": [
+            "charisma",
+            "wisdom",
+            "reassure",
+            "comfort",
+            "soothe"
+        ]
+    },
+    {
+        "id": 187,
+        "query": "I convince the merchant to give us a discount on supplies",
+        "category": "combat",
+        "query_type": "precise",
+        "description": "Great Weapon Master bonus attack",
+        "primary_keywords": [
+            "great weapon master",
+            "feat",
+            "bonus action"
+        ],
+        "supporting_keywords": [
+            "critical hit",
+            "kill",
+            "bonus attack",
+            "melee"
+        ]
+    },
+    {
+        "id": 188,
+        "query": "I want to intimidate the bandit into revealing their hideout",
+        "category": "social",
+        "query_type": "multi_part",
+        "description": "Intimidation for information extraction",
+        "primary_keywords": [
+            "intimidation",
+            "threaten",
+            "information"
+        ],
+        "supporting_keywords": [
+            "charisma",
+            "force",
+            "reveal",
+            "hideout",
+            "scare"
+        ]
+    },
+    {
+        "id": 189,
+        "query": "I want to entertain the tavern guests with a dramatic performance",
+        "category": "social",
+        "query_type": "multi_part",
+        "description": "Performance for entertainment",
+        "primary_keywords": [
+            "performance",
+            "entertain",
+            "dramatic"
+        ],
+        "supporting_keywords": [
+            "charisma",
+            "tavern",
+            "act",
+            "audience",
+            "show"
+        ]
+    },
+    {
+        "id": 190,
+        "query": "I want to plant false information to mislead our enemies",
+        "category": "social",
+        "query_type": "multi_part",
+        "description": "Deception for misinformation",
+        "primary_keywords": [
+            "deception",
+            "false information",
+            "mislead"
+        ],
+        "supporting_keywords": [
+            "charisma",
+            "lie",
+            "believable",
+            "plant",
+            "disinformation"
+        ]
+    },
+    {
+        "id": 191,
+        "query": "I try to train the wolf pup to follow basic commands",
+        "category": "social",
+        "query_type": "multi_part",
+        "description": "Animal Handling for training",
+        "primary_keywords": [
+            "animal handling",
+            "train",
+            "commands"
+        ],
+        "supporting_keywords": [
+            "wisdom",
+            "wolf",
+            "teach",
+            "obedience",
+            "domesticate"
+        ]
+    },
+    {
+        "id": 192,
+        "query": "I want to negotiate a peace treaty between the warring factions",
+        "category": "combat",
+        "query_type": "precise",
+        "description": "Sentinel feat opportunity attack",
+        "primary_keywords": [
+            "sentinel",
+            "feat",
+            "opportunity attack"
+        ],
+        "supporting_keywords": [
+            "reaction",
+            "reach",
+            "movement",
+            "stop"
+        ]
+    },
+    {
+        "id": 193,
+        "query": "I want to make the dragon think we're not a threat",
+        "category": "social",
+        "query_type": "multi_part",
+        "description": "Persuasion or Deception for dragons",
+        "primary_keywords": [
+            "persuasion",
+            "deception",
+            "dragon"
+        ],
+        "supporting_keywords": [
+            "charisma",
+            "convince",
+            "threat",
+            "diplomacy",
+            "negotiate"
+        ]
+    },
+    {
+        "id": 194,
+        "query": "I try to forge the official seal on this document",
+        "category": "social",
+        "query_type": "multi_part",
+        "description": "Sleight of Hand or Deception for forgery",
+        "primary_keywords": [
+            "sleight of hand",
+            "deception",
+            "forgery"
+        ],
+        "supporting_keywords": [
+            "dexterity",
+            "charisma",
+            "seal",
+            "document",
+            "fake"
+        ]
+    },
+    {
+        "id": 195,
+        "query": "I want to pose as a wealthy noble to gain entry to the gala",
+        "category": "social",
+        "query_type": "multi_part",
+        "description": "Deception and Performance for imposture",
+        "primary_keywords": [
+            "deception",
+            "performance",
+            "disguise"
+        ],
+        "supporting_keywords": [
+            "charisma",
+            "noble",
+            "act",
+            "convincing",
+            "impersonate"
+        ]
+    },
+    {
+        "id": 196,
+        "query": "I want to use my status as a cleric to gain the trust of the temple guards",
+        "category": "social",
+        "query_type": "multi_part",
+        "description": "Persuasion with religious authority",
+        "primary_keywords": [
+            "persuasion",
+            "cleric",
+            "trust"
+        ],
+        "supporting_keywords": [
+            "charisma",
+            "temple",
+            "guards",
+            "authority",
+            "religious"
+        ]
+    },
+    {
+        "id": 197,
+        "query": "I try to calm the angry mob before they turn violent",
+        "category": "social",
+        "query_type": "multi_part",
+        "description": "Persuasion or Intimidation for crowd control",
+        "primary_keywords": [
+            "persuasion",
+            "intimidation",
+            "mob"
+        ],
+        "supporting_keywords": [
+            "charisma",
+            "calm",
+            "angry",
+            "crowd",
+            "violence"
+        ]
+    },
+    {
+        "id": 198,
+        "query": "I want to befriend the lonely guard to learn their patrol schedule",
+        "category": "social",
+        "query_type": "multi_part",
+        "description": "Persuasion for social engineering",
+        "primary_keywords": [
+            "persuasion",
+            "befriend",
+            "information"
+        ],
+        "supporting_keywords": [
+            "charisma",
+            "guard",
+            "lonely",
+            "patrol",
+            "schedule"
+        ]
+    },
+    {
+        "id": 199,
+        "query": "I try to use my bardic performance to distract the guards while my allies sneak past",
+        "category": "social",
+        "query_type": "multi_part",
+        "description": "Performance for distraction",
+        "primary_keywords": [
+            "performance",
+            "distract",
+            "bard"
+        ],
+        "supporting_keywords": [
+            "charisma",
+            "guards",
+            "allies",
+            "sneak",
+            "entertainment"
+        ]
+    },
+    {
+        "id": 200,
+        "query": "I try to identify the magical aura surrounding this ancient artifact",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "description": "Detect Magic and Arcana check",
+        "primary_keywords": [
+            "detect magic",
+            "arcana",
+            "identify"
+        ],
+        "supporting_keywords": [
+            "spell",
+            "intelligence",
+            "aura",
+            "school of magic",
+            "artifact"
+        ]
     }
 ]

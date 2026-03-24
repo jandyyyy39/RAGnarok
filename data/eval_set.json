@@ -1,1023 +1,2265 @@
 [
     {
         "id": 1,
-        "player_action": "My fighter wants to grab the cultist and wrestle him to the ground",
-        "category": "combat_mechanical",
-        "requires_roll": true,
+        "player_action": "I try to grapple the guard",
+        "category": "combat",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Melee Attacks",
             "Grappling",
-            "Being Prone"
+            "Contests",
+            "Athletics"
         ]
     },
     {
         "id": 2,
-        "player_action": "Can I shoot my bow if there's an enemy right in my face?",
-        "category": "combat_mechanical",
-        "requires_roll": true,
+        "player_action": "I want to sneak past the sleeping guards",
+        "category": "exploration",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Ranged Attacks",
-            "Ranged Attacks in Close Combat",
-            "Disadvantage"
+            "Dexterity",
+            "Stealth",
+            "Ability Checks"
         ]
     },
     {
         "id": 3,
-        "player_action": "I'm invisible and attacking from hiding. How does that work?",
-        "category": "combat_mechanical",
-        "requires_roll": true,
+        "player_action": "I try to intimidate the shopkeeper into giving me a discount",
+        "category": "social",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Unseen Attackers and Targets",
-            "Hide",
-            "Advantage and Disadvantage",
-            "Attack Rolls"
+            "Charisma",
+            "Intimidation",
+            "Ability Checks"
         ]
     },
     {
         "id": 4,
-        "player_action": "The orc has me pinned. How do I break free?",
-        "category": "combat_mechanical",
-        "requires_roll": true,
+        "player_action": "I shove the orc off the bridge",
+        "category": "combat",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Grappling",
+            "Shoving a Creature",
             "Contests",
-            "Strength",
-            "Dexterity"
+            "Athletics",
+            "Being Prone"
         ]
     },
     {
         "id": 5,
-        "player_action": "I want to run up, stab the guard, then keep running to the door",
-        "category": "combat_mechanical",
-        "requires_roll": true,
+        "player_action": "I persuade the king to lend us his army",
+        "category": "social",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Breaking Up Your Move",
-            "Melee Attacks",
-            "Opportunity Attacks"
+            "Charisma",
+            "Persuasion",
+            "Ability Checks"
         ]
     },
     {
         "id": 6,
-        "player_action": "There's a guy behind a barrel. Does that make him harder to hit?",
-        "category": "combat_mechanical",
-        "requires_roll": true,
+        "player_action": "I want to climb the castle wall",
+        "category": "exploration",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Cover",
-            "Attack Rolls"
+            "Strength",
+            "Athletics",
+            "Ability Checks"
         ]
     },
     {
         "id": 7,
-        "player_action": "I'm down to 3 HP. If I get hit for 10 damage, what happens?",
-        "category": "combat_mechanical",
-        "requires_roll": false,
+        "player_action": "I try to lie to the guard about why we're here",
+        "category": "social",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Dropping to 0 Hit Points",
-            "Instant Death",
-            "Death Saving Throws"
+            "Charisma",
+            "Deception",
+            "Ability Checks"
         ]
     },
     {
         "id": 8,
-        "player_action": "My wizard is at 0 HP and unconscious. Can enemies just execute her?",
-        "category": "combat_mechanical",
-        "requires_roll": false,
+        "player_action": "I look around the room for traps",
+        "category": "exploration",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Dropping to 0 Hit Points",
-            "Death Saving Throws",
-            "Instant Death",
-            "Unconscious"
+            "Wisdom",
+            "Perception",
+            "Ability Checks"
         ]
     },
     {
         "id": 9,
-        "player_action": "I dash toward the enemy but the floor is covered in rubble and debris",
-        "category": "combat_mechanical",
-        "requires_roll": false,
+        "player_action": "I want to see if the merchant is lying to me",
+        "category": "social",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Dash",
-            "Difficult Terrain",
-            "Movement and Position"
+            "Wisdom",
+            "Insight",
+            "Ability Checks"
         ]
     },
     {
         "id": 10,
-        "player_action": "I got knocked flat on my back. What does that do to me in combat?",
-        "category": "combat_mechanical",
-        "requires_roll": false,
+        "player_action": "I try to balance across the narrow beam",
+        "category": "exploration",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Being Prone",
-            "Movement and Position"
+            "Dexterity",
+            "Acrobatics",
+            "Ability Checks"
         ]
     },
     {
         "id": 11,
-        "player_action": "I swing my greatsword at the dragon. What do I roll?",
-        "category": "combat_mechanical",
-        "requires_roll": true,
+        "player_action": "I try to pickpocket the nobleman",
+        "category": "social",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Attack Rolls",
-            "Melee Attacks",
-            "Damage Rolls"
+            "Dexterity",
+            "Sleight of Hand",
+            "Ability Checks"
         ]
     },
     {
         "id": 12,
-        "player_action": "The rogue is helping me attack the troll. Do I get any bonus?",
-        "category": "combat_mechanical",
-        "requires_roll": true,
+        "player_action": "I want to play a song at the tavern to earn coin",
+        "category": "social",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Help",
-            "Advantage and Disadvantage",
-            "Attack Rolls"
+            "Charisma",
+            "Performance",
+            "Ability Checks"
         ]
     },
     {
         "id": 13,
-        "player_action": "I want to focus purely on defense this turn and avoid getting hit",
-        "category": "combat_mechanical",
-        "requires_roll": false,
+        "player_action": "I try to track the goblins through the forest",
+        "category": "exploration",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Dodge"
+            "Wisdom",
+            "Survival",
+            "Ability Checks"
         ]
     },
     {
         "id": 14,
-        "player_action": "Can I move away from the ogre without getting smacked?",
-        "category": "combat_mechanical",
-        "requires_roll": false,
+        "player_action": "I try to calm down the angry wolf",
+        "category": "social",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Disengage",
-            "Opportunity Attacks"
+            "Wisdom",
+            "Animal Handling",
+            "Ability Checks"
         ]
     },
     {
         "id": 15,
-        "player_action": "I'm waiting by the door to ambush whoever comes through",
-        "category": "combat_mechanical",
-        "requires_roll": false,
+        "player_action": "I want to stabilize my dying companion",
+        "category": "combat",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Ready",
-            "Reactions"
+            "Wisdom",
+            "Medicine",
+            "Ability Checks",
+            "Dropping to 0 Hit Points"
         ]
     },
     {
         "id": 16,
-        "player_action": "My paladin got hit by a fireball. What do I roll to try to avoid it?",
-        "category": "combat_mechanical",
-        "requires_roll": true,
+        "player_action": "I want to recall what I know about undead",
+        "category": "knowledge",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Saving Throws",
-            "Dexterity"
+            "Intelligence",
+            "Religion",
+            "Ability Checks"
         ]
     },
     {
         "id": 17,
-        "player_action": "I cast Sacred Flame on the cultist. Does he roll to avoid it?",
-        "category": "spellcasting",
-        "requires_roll": true,
+        "player_action": "I examine the wound to determine the weapon",
+        "category": "knowledge",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Saving Throws",
-            "Attack Rolls",
-            "Casting a Spell"
+            "Intelligence",
+            "Investigation",
+            "Ability Checks"
         ]
     },
     {
         "id": 18,
-        "player_action": "I'm casting a spell that takes 1 minute. Can I do that in combat?",
-        "category": "spellcasting",
-        "requires_roll": false,
+        "player_action": "Can I identify what type of plant this is",
+        "category": "knowledge",
+        "query_type": "colloquial",
         "relevant_srd_sections": [
-            "Casting Time",
-            "Longer Casting Times"
+            "Intelligence",
+            "Nature",
+            "Ability Checks"
         ]
     },
     {
         "id": 19,
-        "player_action": "I want to cast Shield when the goblin shoots me with an arrow",
-        "category": "spellcasting",
-        "requires_roll": false,
+        "player_action": "do I recognize this holy symbol on the robe",
+        "category": "knowledge",
+        "query_type": "colloquial",
         "relevant_srd_sections": [
-            "Reactions",
-            "Casting Time"
+            "Intelligence",
+            "Religion",
+            "Ability Checks"
         ]
     },
     {
         "id": 20,
-        "player_action": "Can I move while concentrating on Bless or does that break it?",
-        "category": "spellcasting",
-        "requires_roll": false,
+        "player_action": "I want to recall lore about this ancient kingdom",
+        "category": "knowledge",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Concentration",
-            "Duration"
+            "Intelligence",
+            "History",
+            "Ability Checks"
         ]
     },
     {
         "id": 21,
-        "player_action": "I got punched while maintaining Fog Cloud. Do I lose the spell?",
-        "category": "spellcasting",
-        "requires_roll": true,
+        "player_action": "What do I know about this magical artifact",
+        "category": "knowledge",
+        "query_type": "colloquial",
         "relevant_srd_sections": [
-            "Concentration",
-            "Damage and Healing",
-            "Saving Throws"
+            "Intelligence",
+            "Arcana",
+            "Ability Checks"
         ]
     },
     {
         "id": 22,
-        "player_action": "I'm trying to Counterspell the enemy wizard. How do I know if it works?",
-        "category": "spellcasting",
-        "requires_roll": true,
+        "player_action": "I try to wrestle the weapon from the bandit",
+        "category": "combat",
+        "query_type": "colloquial",
         "relevant_srd_sections": [
-            "Reactions",
-            "Casting a Spell",
-            "Ability Checks"
+            "Grappling",
+            "Contests",
+            "Athletics"
         ]
     },
     {
         "id": 23,
-        "player_action": "I want to cast Mage Armor on myself before we enter the dungeon",
-        "category": "spellcasting",
-        "requires_roll": false,
+        "player_action": "do I get a free swing at the goblin running away",
+        "category": "combat",
+        "query_type": "colloquial",
         "relevant_srd_sections": [
-            "Casting a Spell",
-            "Duration",
-            "Targets"
+            "Opportunity Attacks",
+            "Reactions",
+            "Melee Attacks"
         ]
     },
     {
         "id": 24,
-        "player_action": "The cleric wants to cast Cure Wounds on me during a fight",
-        "category": "spellcasting",
-        "requires_roll": false,
+        "player_action": "I want to knock the goblin out not kill it",
+        "category": "combat",
+        "query_type": "colloquial",
         "relevant_srd_sections": [
-            "Casting a Spell",
-            "Healing",
-            "Targets"
+            "Knocking a Creature Out",
+            "Melee Attacks",
+            "Unconscious"
         ]
     },
     {
         "id": 25,
-        "player_action": "Can I cast Fireball and Misty Step on the same turn?",
-        "category": "spellcasting",
-        "requires_roll": false,
+        "player_action": "I attack with my off-hand dagger as a bonus action",
+        "category": "combat",
+        "query_type": "precise",
         "relevant_srd_sections": [
+            "Two-Weapon Fighting",
             "Bonus Actions",
-            "Casting Time"
+            "Melee Attacks"
         ]
     },
     {
         "id": 26,
-        "player_action": "I'm a 5th level wizard. How many spell slots do I have?",
-        "category": "spellcasting",
-        "requires_roll": false,
+        "player_action": "I want to trip the enemy",
+        "category": "combat",
+        "query_type": "colloquial",
         "relevant_srd_sections": [
-            "Spell Slots"
+            "Shoving a Creature",
+            "Being Prone",
+            "Contests"
         ]
     },
     {
         "id": 27,
-        "player_action": "Can I upcast Magic Missile using a 3rd level slot?",
-        "category": "spellcasting",
-        "requires_roll": false,
+        "player_action": "I try to hide behind the pillar during combat",
+        "category": "combat",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Spell Slots",
-            "Casting a Spell at a Higher Level"
+            "Hide",
+            "Dexterity",
+            "Actions in Combat"
         ]
     },
     {
         "id": 28,
-        "player_action": "I'm trying to sneak past the guards without being seen",
-        "category": "exploration",
-        "requires_roll": true,
+        "player_action": "I concentrate on maintaining my spell while fighting",
+        "category": "magic",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Dexterity",
-            "Ability Checks",
-            "Using Ability Scores"
+            "Concentration",
+            "Duration",
+            "Saving Throws"
         ]
     },
     {
         "id": 29,
-        "player_action": "I want to break down this locked wooden door with my shoulder",
-        "category": "exploration",
-        "requires_roll": true,
+        "player_action": "can I throw some acid at that guy",
+        "category": "magic",
+        "query_type": "colloquial",
         "relevant_srd_sections": [
-            "Strength",
-            "Breaking Objects",
-            "Ability Checks"
+            "Casting a Spell",
+            "Attack Rolls",
+            "Damage and Healing"
         ]
     },
     {
         "id": 30,
-        "player_action": "I'm searching the room for hidden compartments and secret doors",
+        "player_action": "I want to eavesdrop on the conversation next door",
         "category": "exploration",
-        "requires_roll": true,
+        "query_type": "precise",
         "relevant_srd_sections": [
             "Wisdom",
-            "Intelligence",
+            "Perception",
             "Ability Checks"
         ]
     },
     {
         "id": 31,
-        "player_action": "We're taking a quick breather to bandage wounds and catch our breath",
+        "player_action": "I try to wriggle free from the ropes",
         "category": "exploration",
-        "requires_roll": false,
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Short Rest",
-            "Hit Dice"
+            "Dexterity",
+            "Acrobatics",
+            "Ability Checks",
+            "Restrained"
         ]
     },
     {
         "id": 32,
-        "player_action": "We want to set up camp for the night and get a full sleep",
+        "player_action": "I try to break down the reinforced door",
         "category": "exploration",
-        "requires_roll": false,
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Long Rest",
-            "Hit Points and Hit Dice"
+            "Strength",
+            "Ability Checks",
+            "Objects"
         ]
     },
     {
         "id": 33,
-        "player_action": "I jump off the 50-foot cliff into the water below",
+        "player_action": "I search the room for hidden compartments",
         "category": "exploration",
-        "requires_roll": false,
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Falling",
-            "Damage and Healing"
-        ]
-    },
-    {
-        "id": 34,
-        "player_action": "I'm underwater and running out of breath. How long can I hold it?",
-        "category": "exploration",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Suffocating",
-            "Constitution"
-        ]
-    },
-    {
-        "id": 35,
-        "player_action": "It's completely dark and I don't have darkvision. Can I see anything?",
-        "category": "exploration",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Vision and Light",
-            "Blinded"
-        ]
-    },
-    {
-        "id": 36,
-        "player_action": "My elf has darkvision. What does that let me do in darkness?",
-        "category": "exploration",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Vision and Light",
-            "Darkvision"
-        ]
-    },
-    {
-        "id": 37,
-        "player_action": "We haven't eaten in three days. Does starvation hurt us mechanically?",
-        "category": "exploration",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Food and Water",
-            "Exhaustion"
-        ]
-    },
-    {
-        "id": 38,
-        "player_action": "I stepped on a pressure plate and triggered a trap. What happens?",
-        "category": "exploration",
-        "requires_roll": true,
-        "relevant_srd_sections": [
-            "Traps",
-            "Saving Throws"
-        ]
-    },
-    {
-        "id": 39,
-        "player_action": "I got bitten by a diseased rat. How do diseases work?",
-        "category": "exploration",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Diseases",
-            "Constitution"
-        ]
-    },
-    {
-        "id": 40,
-        "player_action": "The spider bit me and I think it's poisoned. What does that do?",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Poisoned",
-            "Conditions"
-        ]
-    },
-    {
-        "id": 41,
-        "player_action": "The medusa's gaze turned me to stone. Can I do anything?",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Petrified",
-            "Conditions"
-        ]
-    },
-    {
-        "id": 42,
-        "player_action": "The vampire paralyzed me. Am I completely helpless?",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Paralyzed",
-            "Conditions"
-        ]
-    },
-    {
-        "id": 43,
-        "player_action": "I'm stunned. Can I still move or take actions?",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Stunned",
-            "Conditions"
-        ]
-    },
-    {
-        "id": 44,
-        "player_action": "The banshee frightened me. What happens when I'm scared?",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Frightened",
-            "Conditions"
-        ]
-    },
-    {
-        "id": 45,
-        "player_action": "My barbarian enters a rage and charges into battle",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Rage",
-            "Damage Resistance and Vulnerability"
-        ]
-    },
-    {
-        "id": 46,
-        "player_action": "I want to sneak attack the guard while my ally is next to him",
-        "category": "combat_mechanical",
-        "requires_roll": true,
-        "relevant_srd_sections": [
-            "Sneak Attack",
-            "Advantage and Disadvantage"
-        ]
-    },
-    {
-        "id": 47,
-        "player_action": "I smite the fiend after hitting it with my longsword",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Divine Smite",
-            "Spell Slots"
-        ]
-    },
-    {
-        "id": 48,
-        "player_action": "I transform into a brown bear using Wild Shape",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Wild Shape",
-            "Hit Points and Hit Dice"
-        ]
-    },
-    {
-        "id": 49,
-        "player_action": "I give the bard inspiration to help with her persuasion check",
-        "category": "exploration",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Bardic Inspiration"
-        ]
-    },
-    {
-        "id": 50,
-        "player_action": "I found a flaming sword. How do I attune to magical items?",
-        "category": "rules_clarification",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Attunement",
-            "Magic Items"
-        ]
-    },
-    {
-        "id": 51,
-        "player_action": "How many magic items can I be attuned to at once?",
-        "category": "rules_clarification",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Attunement"
-        ]
-    },
-    {
-        "id": 52,
-        "player_action": "I'm wearing chainmail but I'm not proficient with it",
-        "category": "rules_clarification",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Armor Proficiency",
-            "Medium Armor"
-        ]
-    },
-    {
-        "id": 53,
-        "player_action": "How long does it take to put on my plate armor?",
-        "category": "rules_clarification",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Getting Into and Out of Armor",
-            "Heavy Armor"
-        ]
-    },
-    {
-        "id": 54,
-        "player_action": "I'm trying to use a greatsword but I'm not proficient with martial weapons",
-        "category": "rules_clarification",
-        "requires_roll": true,
-        "relevant_srd_sections": [
-            "Weapon Proficiency",
-            "Attack Rolls"
-        ]
-    },
-    {
-        "id": 55,
-        "player_action": "My monk uses a ki point to dodge as a bonus action",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Ki",
-            "Patient Defense"
-        ]
-    },
-    {
-        "id": 56,
-        "player_action": "After I attack, I want to punch with my off-hand as a bonus action",
-        "category": "combat_mechanical",
-        "requires_roll": true,
-        "relevant_srd_sections": [
-            "Two-Weapon Fighting",
-            "Bonus Actions"
-        ]
-    },
-    {
-        "id": 57,
-        "player_action": "I'm dual wielding shortswords. How does that work?",
-        "category": "combat_mechanical",
-        "requires_roll": true,
-        "relevant_srd_sections": [
-            "Two-Weapon Fighting",
-            "Light"
-        ]
-    },
-    {
-        "id": 58,
-        "player_action": "I attack the skeleton with my warhammer but I'm underwater",
-        "category": "combat_mechanical",
-        "requires_roll": true,
-        "relevant_srd_sections": [
-            "Underwater Combat",
-            "Attack Rolls",
-            "Disadvantage"
-        ]
-    },
-    {
-        "id": 59,
-        "player_action": "I'm mounted on my horse and charging the enemy",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Mounted Combat",
-            "Movement and Position"
-        ]
-    },
-    {
-        "id": 60,
-        "player_action": "My horse got hit by an arrow. What happens to my mount?",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Mounted Combat",
-            "Dropping to 0 Hit Points"
-        ]
-    },
-    {
-        "id": 61,
-        "player_action": "I'm a halfling hiding behind the half-orc fighter",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Cover",
-            "Hide"
-        ]
-    },
-    {
-        "id": 62,
-        "player_action": "I want to squeeze through the narrow tunnel that's too small for me",
-        "category": "exploration",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Squeezing into a Smaller Space",
-            "Movement and Position"
-        ]
-    },
-    {
-        "id": 63,
-        "player_action": "I'm climbing up the cliff face using my hands and feet",
-        "category": "exploration",
-        "requires_roll": true,
-        "relevant_srd_sections": [
-            "Climbing",
-            "Strength",
+            "Intelligence",
+            "Investigation",
             "Ability Checks"
         ]
     },
     {
-        "id": 64,
-        "player_action": "I jump across the 15-foot gap to the other rooftop",
+        "id": 34,
+        "player_action": "I want to swim across the river",
         "category": "exploration",
-        "requires_roll": true,
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Jumping",
             "Strength",
-            "Movement and Position"
+            "Athletics",
+            "Ability Checks"
         ]
     },
     {
-        "id": 65,
-        "player_action": "We're chasing the thief through the crowded market",
-        "category": "exploration",
-        "requires_roll": false,
+        "id": 35,
+        "player_action": "can I tell if the prisoner is withholding info",
+        "category": "social",
+        "query_type": "colloquial",
         "relevant_srd_sections": [
-            "Travel Pace",
-            "Dash"
+            "Wisdom",
+            "Insight",
+            "Ability Checks"
         ]
     },
     {
-        "id": 66,
-        "player_action": "The dragon breathes fire on me. What do I do?",
-        "category": "combat_mechanical",
-        "requires_roll": true,
+        "id": 36,
+        "player_action": "I try to fast-talk the guard into letting me through",
+        "category": "social",
+        "query_type": "colloquial",
         "relevant_srd_sections": [
-            "Saving Throws",
-            "Dexterity",
-            "Damage and Healing"
+            "Charisma",
+            "Deception",
+            "Ability Checks"
         ]
     },
     {
-        "id": 67,
-        "player_action": "I have resistance to fire damage. How does that work?",
-        "category": "rules_clarification",
-        "requires_roll": false,
+        "id": 37,
+        "player_action": "I tell the thugs to back down or else",
+        "category": "social",
+        "query_type": "colloquial",
         "relevant_srd_sections": [
-            "Damage Resistance and Vulnerability"
+            "Charisma",
+            "Intimidation",
+            "Ability Checks"
         ]
     },
     {
-        "id": 68,
-        "player_action": "The troll is vulnerable to fire. What does that mean for my fireball?",
-        "category": "combat_mechanical",
-        "requires_roll": false,
+        "id": 38,
+        "player_action": "I want to inspire the townsfolk to fight",
+        "category": "social",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Damage Resistance and Vulnerability"
+            "Charisma",
+            "Persuasion",
+            "Ability Checks"
         ]
     },
     {
-        "id": 69,
-        "player_action": "I'm immune to poison damage. Does the poison still hurt me?",
-        "category": "rules_clarification",
-        "requires_roll": false,
+        "id": 39,
+        "player_action": "I disguise myself as a guard to sneak in",
+        "category": "social",
+        "query_type": "precise",
         "relevant_srd_sections": [
-            "Damage Resistance and Vulnerability"
-        ]
-    },
-    {
-        "id": 70,
-        "player_action": "I critically hit the goblin with my axe! What happens?",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Critical Hits",
-            "Damage Rolls"
-        ]
-    },
-    {
-        "id": 71,
-        "player_action": "I rolled a natural 1 on my attack. Did I critically fail?",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Attack Rolls",
-            "Rolling 1 or 20"
-        ]
-    },
-    {
-        "id": 72,
-        "player_action": "I'm exhausted from forced marching. What penalties do I have?",
-        "category": "exploration",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Exhaustion",
-            "Conditions"
-        ]
-    },
-    {
-        "id": 73,
-        "player_action": "I want to shove the enemy off the bridge into the river below",
-        "category": "combat_mechanical",
-        "requires_roll": true,
-        "relevant_srd_sections": [
-            "Shoving a Creature",
-            "Melee Attacks",
-            "Contests"
-        ]
-    },
-    {
-        "id": 74,
-        "player_action": "I'm going to tackle the wizard and pin him down",
-        "category": "combat_mechanical",
-        "requires_roll": true,
-        "relevant_srd_sections": [
-            "Grappling",
-            "Melee Attacks",
-            "Contests",
-            "Being Prone"
-        ]
-    },
-    {
-        "id": 75,
-        "player_action": "Can I walk through my allies' spaces during combat?",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Moving Around Other Creatures"
-        ]
-    },
-    {
-        "id": 76,
-        "player_action": "The enemy is tiny and I'm trying to move through its space",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Moving Around Other Creatures",
-            "Creature Size"
-        ]
-    },
-    {
-        "id": 77,
-        "player_action": "I fly up 30 feet to avoid the melee",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Flying Movement",
-            "Movement and Position"
-        ]
-    },
-    {
-        "id": 78,
-        "player_action": "My flying speed drops to 0 while I'm in the air. Do I fall?",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Flying Movement",
-            "Falling"
-        ]
-    },
-    {
-        "id": 79,
-        "player_action": "I use Action Surge to attack twice in one turn",
-        "category": "combat_mechanical",
-        "requires_roll": true,
-        "relevant_srd_sections": [
-            "Action Surge",
-            "Extra Attack"
-        ]
-    },
-    {
-        "id": 80,
-        "player_action": "I have Extra Attack. Can I attack twice and then move?",
-        "category": "combat_mechanical",
-        "requires_roll": true,
-        "relevant_srd_sections": [
-            "Extra Attack",
-            "Breaking Up Your Move"
-        ]
-    },
-    {
-        "id": 81,
-        "player_action": "There's bright sunlight. Does that affect anything for combat?",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Vision and Light"
-        ]
-    },
-    {
-        "id": 82,
-        "player_action": "I'm in dim light trying to see the enemy",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Vision and Light",
-            "Lightly Obscured"
-        ]
-    },
-    {
-        "id": 83,
-        "player_action": "Heavy fog is everywhere. Can I see through it?",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Vision and Light",
-            "Heavily Obscured",
-            "Blinded"
-        ]
-    },
-    {
-        "id": 84,
-        "player_action": "I'm deafened by the thunderwave. What does that do to me?",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Deafened",
-            "Conditions"
-        ]
-    },
-    {
-        "id": 85,
-        "player_action": "The spell charmed me. What can I and can't I do?",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Charmed",
-            "Conditions"
-        ]
-    },
-    {
-        "id": 86,
-        "player_action": "I'm restrained by vines. Can I still attack?",
-        "category": "combat_mechanical",
-        "requires_roll": true,
-        "relevant_srd_sections": [
-            "Restrained",
-            "Conditions",
-            "Disadvantage"
-        ]
-    },
-    {
-        "id": 87,
-        "player_action": "The beholder's ray incapacitated me. What does that mean?",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Incapacitated",
-            "Conditions"
-        ]
-    },
-    {
-        "id": 88,
-        "player_action": "I want to use my inspiration die the DM gave me on this roll",
-        "category": "rules_clarification",
-        "requires_roll": true,
-        "relevant_srd_sections": [
-            "Inspiration"
-        ]
-    },
-    {
-        "id": 89,
-        "player_action": "What's my carrying capacity? I'm trying to haul this treasure",
-        "category": "exploration",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Lifting and Carrying",
-            "Strength"
-        ]
-    },
-    {
-        "id": 90,
-        "player_action": "I'm carrying way too much equipment. Does that slow me down?",
-        "category": "exploration",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Lifting and Carrying",
-            "Speed"
-        ]
-    },
-    {
-        "id": 91,
-        "player_action": "I want to drag the unconscious paladin to safety",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Lifting and Carrying",
-            "Movement and Position"
-        ]
-    },
-    {
-        "id": 92,
-        "player_action": "I drink a healing potion in the middle of combat",
-        "category": "combat_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": [
-            "Use an Object",
-            "Healing",
-            "Actions in Combat"
-        ]
-    },
-    {
-        "id": 93,
-        "player_action": "I'm trying to pick the lock on the treasure chest",
-        "category": "exploration",
-        "requires_roll": true,
-        "relevant_srd_sections": [
-            "Dexterity",
+            "Charisma",
+            "Deception",
             "Ability Checks",
-            "Proficiency Bonus"
+            "Disguise Kit"
         ]
     },
     {
-        "id": 94,
-        "player_action": "I'm trying to recall lore about this ancient ruin",
-        "category": "exploration",
-        "requires_roll": true,
+        "id": 40,
+        "player_action": "I haggle for a better price on the sword",
+        "category": "social",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Charisma",
+            "Persuasion",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 41,
+        "player_action": "have I heard of this kingdom before",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "History",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 42,
+        "player_action": "Can I estimate this gemstone's value",
+        "category": "knowledge",
+        "query_type": "colloquial",
         "relevant_srd_sections": [
             "Intelligence",
             "Ability Checks"
         ]
     },
     {
-        "id": 95,
-        "player_action": "I want to track the bandits through the forest",
+        "id": 43,
+        "player_action": "I steer the cart down the steep hill",
         "category": "exploration",
-        "requires_roll": true,
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Dexterity",
+            "Ability Checks",
+            "Vehicles"
+        ]
+    },
+    {
+        "id": 44,
+        "player_action": "I tie up the captured bandit securely",
+        "category": "exploration",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Dexterity",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 45,
+        "player_action": "I show forged papers to convince the guard",
+        "category": "social",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Charisma",
+            "Deception",
+            "Ability Checks",
+            "Forgery Kit"
+        ]
+    },
+    {
+        "id": 46,
+        "player_action": "I blend into the crowd and listen for rumors",
+        "category": "social",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Charisma",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 47,
+        "player_action": "we march through the night without rest",
+        "category": "exploration",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Constitution",
+            "Ability Checks",
+            "Exhaustion"
+        ]
+    },
+    {
+        "id": 48,
+        "player_action": "I jump across the wide gap",
+        "category": "exploration",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Strength",
+            "Athletics",
+            "Ability Checks",
+            "Jumping"
+        ]
+    },
+    {
+        "id": 49,
+        "player_action": "I disarm the trap carefully",
+        "category": "exploration",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Dexterity",
+            "Ability Checks",
+            "Thieves' Tools"
+        ]
+    },
+    {
+        "id": 50,
+        "player_action": "I pick the lock on the chest",
+        "category": "exploration",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Dexterity",
+            "Ability Checks",
+            "Thieves' Tools"
+        ]
+    },
+    {
+        "id": 51,
+        "player_action": "I use my reaction to make an attack of opportunity",
+        "category": "combat",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Opportunity Attacks",
+            "Reactions",
+            "Melee Attacks"
+        ]
+    },
+    {
+        "id": 52,
+        "player_action": "I attack recklessly to get advantage on my rolls",
+        "category": "combat",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Reckless Attack",
+            "Barbarian",
+            "Advantage and Disadvantage"
+        ]
+    },
+    {
+        "id": 53,
+        "player_action": "I use my cunning action to dash as a bonus action",
+        "category": "combat",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Cunning Action",
+            "Rogue",
+            "Bonus Actions",
+            "Movement and Position"
+        ]
+    },
+    {
+        "id": 54,
+        "player_action": "I take the dodge action to make myself harder to hit",
+        "category": "combat",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Dodge",
+            "Actions in Combat",
+            "Advantage and Disadvantage"
+        ]
+    },
+    {
+        "id": 55,
+        "player_action": "I want to use my lay on hands to heal my companion",
+        "category": "combat",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Lay on Hands",
+            "Paladin",
+            "Healing"
+        ]
+    },
+    {
+        "id": 56,
+        "player_action": "I riposte with my superiority die when the enemy misses me",
+        "category": "combat",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Riposte",
+            "Battle Master",
+            "Fighter",
+            "Reactions"
+        ]
+    },
+    {
+        "id": 57,
+        "player_action": "I try to calm the frightened horse so we can approach",
+        "category": "combat",
+        "query_type": "precise",
         "relevant_srd_sections": [
             "Wisdom",
+            "Animal Handling",
             "Ability Checks"
         ]
     },
     {
-        "id": 96,
-        "player_action": "I'm trying to intimidate the guard into letting us pass",
-        "category": "exploration",
-        "requires_roll": true,
+        "id": 58,
+        "player_action": "can I sneak attack with my crossbow this turn",
+        "category": "combat",
+        "query_type": "colloquial",
         "relevant_srd_sections": [
-            "Charisma",
-            "Ability Checks"
+            "Sneak Attack",
+            "Rogue",
+            "Ranged Attacks"
         ]
     },
     {
-        "id": 97,
-        "player_action": "I lie to the merchant about the quality of the gems",
-        "category": "exploration",
-        "requires_roll": true,
+        "id": 59,
+        "player_action": "do I add my proficiency bonus to damage rolls",
+        "category": "combat",
+        "query_type": "colloquial",
         "relevant_srd_sections": [
-            "Charisma",
-            "Ability Checks",
+            "Proficiency Bonus",
+            "Damage Rolls",
+            "Attack Rolls"
+        ]
+    },
+    {
+        "id": 60,
+        "player_action": "can I make an unarmed strike as a bonus action",
+        "category": "combat",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Martial Arts",
+            "Monk",
+            "Bonus Actions",
+            "Unarmed Strike"
+        ]
+    },
+    {
+        "id": 61,
+        "player_action": "does my hunter's mark move if I kill my target",
+        "category": "combat",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Hunter's Mark",
+            "Ranger",
+            "Concentration",
+            "Bonus Actions"
+        ]
+    },
+    {
+        "id": 62,
+        "player_action": "can I use my flurry of blows after attacking twice",
+        "category": "combat",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Flurry of Blows",
+            "Monk",
+            "Bonus Actions",
+            "Ki"
+        ]
+    },
+    {
+        "id": 63,
+        "player_action": "can I smite with both attacks if I have extra attack",
+        "category": "combat",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Divine Smite",
+            "Paladin",
+            "Extra Attack"
+        ]
+    },
+    {
+        "id": 64,
+        "player_action": "does my dueling fighting style work with a shield",
+        "category": "combat",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Dueling",
+            "Fighting Style",
+            "Armor and Shields"
+        ]
+    },
+    {
+        "id": 65,
+        "player_action": "can I ready my action to attack when the door opens",
+        "category": "combat",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Ready",
+            "Actions in Combat",
+            "Reactions"
+        ]
+    },
+    {
+        "id": 66,
+        "player_action": "does great weapon master apply to versatile weapons",
+        "category": "combat",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Great Weapon Master",
+            "Feats",
+            "Weapon Properties"
+        ]
+    },
+    {
+        "id": 67,
+        "player_action": "can I use uncanny dodge to halve the trap damage",
+        "category": "combat",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Uncanny Dodge",
+            "Rogue",
+            "Reactions",
+            "Damage and Healing"
+        ]
+    },
+    {
+        "id": 68,
+        "player_action": "does sharpshooter work with thrown weapons like daggers",
+        "category": "combat",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Sharpshooter",
+            "Feats",
+            "Weapon Properties"
+        ]
+    },
+    {
+        "id": 69,
+        "player_action": "I use my Action Surge to cast two spells in one turn",
+        "category": "combat",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Action Surge",
+            "Fighter",
+            "Casting a Spell",
+            "Bonus Actions"
+        ]
+    },
+    {
+        "id": 70,
+        "player_action": "I rage as a bonus action then attack with my greataxe",
+        "category": "combat",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Rage",
+            "Barbarian",
+            "Bonus Actions",
+            "Melee Attacks"
+        ]
+    },
+    {
+        "id": 71,
+        "player_action": "I want to use my divine smite after I hit with my attack",
+        "category": "combat",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Divine Smite",
+            "Paladin",
+            "Melee Attacks",
+            "Damage and Healing"
+        ]
+    },
+    {
+        "id": 72,
+        "player_action": "I use my superiority die to trip the enemy with my attack",
+        "category": "combat",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Trip Attack",
+            "Battle Master",
+            "Fighter",
+            "Being Prone"
+        ]
+    },
+    {
+        "id": 73,
+        "player_action": "I want to use my battlemaster maneuver to disarm the knight",
+        "category": "combat",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Disarming Attack",
+            "Battle Master",
+            "Fighter",
             "Contests"
         ]
     },
     {
-        "id": 98,
-        "player_action": "I perform a song to earn coin in the tavern",
-        "category": "exploration",
-        "requires_roll": true,
+        "id": 74,
+        "player_action": "I want to use my bardic inspiration on my ally's attack roll",
+        "category": "combat",
+        "query_type": "multi_part",
         "relevant_srd_sections": [
-            "Charisma",
+            "Bardic Inspiration",
+            "Bard",
+            "Bonus Actions",
+            "Attack Rolls"
+        ]
+    },
+    {
+        "id": 75,
+        "player_action": "I use patient defense to dodge as a bonus action",
+        "category": "combat",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Patient Defense",
+            "Monk",
+            "Bonus Actions",
+            "Ki"
+        ]
+    },
+    {
+        "id": 76,
+        "player_action": "I use my second wind to recover hit points mid-combat",
+        "category": "combat",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Second Wind",
+            "Fighter",
+            "Bonus Actions",
+            "Healing"
+        ]
+    },
+    {
+        "id": 77,
+        "player_action": "I want to disengage and move away without provoking attacks",
+        "category": "combat",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Disengage",
+            "Actions in Combat",
+            "Movement and Position",
+            "Opportunity Attacks"
+        ]
+    },
+    {
+        "id": 78,
+        "player_action": "I hold my attack until the wizard casts haste on me",
+        "category": "combat",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Ready",
+            "Actions in Combat",
+            "Reactions"
+        ]
+    },
+    {
+        "id": 79,
+        "player_action": "I want to use my shield master feat to knock enemies prone",
+        "category": "combat",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Shield Master",
+            "Feats",
+            "Shoving a Creature",
+            "Being Prone"
+        ]
+    },
+    {
+        "id": 80,
+        "player_action": "I cast shield as a reaction when the arrow hits me",
+        "category": "magic",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Shield",
+            "Spells",
+            "Reactions",
+            "Armor Class"
+        ]
+    },
+    {
+        "id": 81,
+        "player_action": "I use my sorcery points to convert into a spell slot",
+        "category": "magic",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Flexible Casting",
+            "Sorcerer",
+            "Spell Slots"
+        ]
+    },
+    {
+        "id": 82,
+        "player_action": "I want to use my wild shape to turn into a bear",
+        "category": "magic",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Wild Shape",
+            "Druid",
+            "Beast Shapes"
+        ]
+    },
+    {
+        "id": 83,
+        "player_action": "I use my Channel Divinity to Turn Undead on the zombies",
+        "category": "magic",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Channel Divinity",
+            "Turn Undead",
+            "Cleric",
+            "Saving Throws"
+        ]
+    },
+    {
+        "id": 84,
+        "player_action": "I activate my hexblade's curse on the enemy champion",
+        "category": "magic",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Hexblade's Curse",
+            "Warlock",
+            "Bonus Actions"
+        ]
+    },
+    {
+        "id": 85,
+        "player_action": "I use my bladesong feature to increase my AC in combat",
+        "category": "magic",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Bladesong",
+            "Wizard",
+            "Bonus Actions",
+            "Armor Class"
+        ]
+    },
+    {
+        "id": 86,
+        "player_action": "I try to calm the frightened child during the magical attack",
+        "category": "magic",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Calm Emotions",
+            "Spells",
+            "Concentration"
+        ]
+    },
+    {
+        "id": 87,
+        "player_action": "can I counterspell the fireball coming at us",
+        "category": "magic",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Counterspell",
+            "Spells",
+            "Reactions",
             "Ability Checks"
+        ]
+    },
+    {
+        "id": 88,
+        "player_action": "do I need line of sight to teleport with misty step",
+        "category": "magic",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Misty Step",
+            "Spells",
+            "Teleportation"
+        ]
+    },
+    {
+        "id": 89,
+        "player_action": "can I twin spell this charm person to affect two guards",
+        "category": "magic",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Twinned Spell",
+            "Metamagic",
+            "Sorcerer",
+            "Spell Targets"
+        ]
+    },
+    {
+        "id": 90,
+        "player_action": "does my spiritual weapon move and attack on the same turn",
+        "category": "magic",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Spiritual Weapon",
+            "Spells",
+            "Bonus Actions"
+        ]
+    },
+    {
+        "id": 91,
+        "player_action": "can my familiar deliver a touch spell for me",
+        "category": "magic",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Find Familiar",
+            "Spells",
+            "Touch Spells"
+        ]
+    },
+    {
+        "id": 92,
+        "player_action": "how long does my mage armor last after I cast it",
+        "category": "magic",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Mage Armor",
+            "Spells",
+            "Duration"
+        ]
+    },
+    {
+        "id": 93,
+        "player_action": "can I maintain concentration on two spells at once",
+        "category": "magic",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Concentration",
+            "Casting a Spell",
+            "Duration"
+        ]
+    },
+    {
+        "id": 94,
+        "player_action": "does hex damage apply to each magic missile dart",
+        "category": "magic",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Hex",
+            "Magic Missile",
+            "Spells",
+            "Damage and Healing"
+        ]
+    },
+    {
+        "id": 95,
+        "player_action": "can I use prestidigitation to create a distraction",
+        "category": "magic",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Prestidigitation",
+            "Spells",
+            "Cantrips"
+        ]
+    },
+    {
+        "id": 96,
+        "player_action": "does my hex stay active if I knock the target unconscious",
+        "category": "magic",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Hex",
+            "Spells",
+            "Concentration",
+            "Unconscious"
+        ]
+    },
+    {
+        "id": 97,
+        "player_action": "does toll the dead do more damage if the target is wounded",
+        "category": "magic",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Toll the Dead",
+            "Spells",
+            "Damage and Healing"
+        ]
+    },
+    {
+        "id": 98,
+        "player_action": "I want to cast healing word on my ally then attack with my sword",
+        "category": "magic",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Healing Word",
+            "Bonus Actions",
+            "Casting a Spell",
+            "Melee Attacks"
         ]
     },
     {
         "id": 99,
-        "player_action": "I'm in a drinking contest with the dwarf. Who wins?",
-        "category": "exploration",
-        "requires_roll": true,
+        "player_action": "I ritual cast detect magic to save a spell slot",
+        "category": "magic",
+        "query_type": "multi_part",
         "relevant_srd_sections": [
-            "Constitution",
-            "Contests",
-            "Ability Checks"
+            "Detect Magic",
+            "Ritual Casting",
+            "Spell Slots"
         ]
     },
     {
         "id": 100,
-        "player_action": "hey there!",
-        "category": "non_mechanical",
-        "requires_roll": false,
-        "relevant_srd_sections": []
+        "player_action": "I upcast magic missile using a 3rd level slot",
+        "category": "magic",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Magic Missile",
+            "Spells",
+            "Spell Slots",
+            "Casting at Higher Levels"
+        ]
+    },
+    {
+        "id": 101,
+        "player_action": "I want to cast a spell then use quickened spell to cast another",
+        "category": "magic",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Quickened Spell",
+            "Metamagic",
+            "Bonus Actions",
+            "Casting a Spell"
+        ]
+    },
+    {
+        "id": 102,
+        "player_action": "I cast polymorph on myself to become a T-Rex",
+        "category": "magic",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Polymorph",
+            "Spells",
+            "Concentration",
+            "Beast Shapes"
+        ]
+    },
+    {
+        "id": 103,
+        "player_action": "I use my warlock spell slot then take a short rest to recover it",
+        "category": "magic",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Pact Magic",
+            "Warlock",
+            "Spell Slots",
+            "Short Rest"
+        ]
+    },
+    {
+        "id": 104,
+        "player_action": "I want to identify the components needed for this ritual spell",
+        "category": "magic",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Arcana",
+            "Ritual Casting",
+            "Spell Components"
+        ]
+    },
+    {
+        "id": 105,
+        "player_action": "I cast darkness then activate my devil's sight to see through it",
+        "category": "magic",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Darkness",
+            "Devil's Sight",
+            "Warlock",
+            "Vision and Light"
+        ]
+    },
+    {
+        "id": 106,
+        "player_action": "I want to dispel the magical effect on my cursed companion",
+        "category": "magic",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Dispel Magic",
+            "Remove Curse",
+            "Spells",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 107,
+        "player_action": "I want to cast bless on my party before the big fight",
+        "category": "magic",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Bless",
+            "Spells",
+            "Concentration",
+            "Attack Rolls"
+        ]
+    },
+    {
+        "id": 108,
+        "player_action": "I want to activate my rage then cast a concentration spell",
+        "category": "magic",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Rage",
+            "Barbarian",
+            "Concentration",
+            "Casting a Spell"
+        ]
+    },
+    {
+        "id": 109,
+        "player_action": "I use my arcane recovery to regain spell slots during short rest",
+        "category": "magic",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Arcane Recovery",
+            "Wizard",
+            "Spell Slots",
+            "Short Rest"
+        ]
+    },
+    {
+        "id": 110,
+        "player_action": "I want to use my Channel Divinity to maximize healing",
+        "category": "magic",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Channel Divinity",
+            "Preserve Life",
+            "Cleric",
+            "Healing"
+        ]
+    },
+    {
+        "id": 111,
+        "player_action": "I try to use eldritch blast to push the enemy off the cliff",
+        "category": "magic",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Eldritch Blast",
+            "Repelling Blast",
+            "Warlock",
+            "Forced Movement"
+        ]
+    },
+    {
+        "id": 112,
+        "player_action": "I want to summon my spiritual weapon then move it and attack",
+        "category": "magic",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Spiritual Weapon",
+            "Spells",
+            "Bonus Actions",
+            "Movement and Position"
+        ]
+    },
+    {
+        "id": 113,
+        "player_action": "I cast cure wounds at 2nd level to heal more hit points",
+        "category": "magic",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Cure Wounds",
+            "Spells",
+            "Casting at Higher Levels",
+            "Healing"
+        ]
+    },
+    {
+        "id": 114,
+        "player_action": "I want to use metamagic to extend the duration of my spell",
+        "category": "magic",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Extended Spell",
+            "Metamagic",
+            "Sorcerer",
+            "Duration"
+        ]
+    },
+    {
+        "id": 115,
+        "player_action": "I cast invisibility on myself then try to hide from the guards",
+        "category": "magic",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Invisibility",
+            "Spells",
+            "Hide",
+            "Unseen Attackers"
+        ]
+    },
+    {
+        "id": 116,
+        "player_action": "I want to wild shape into a giant eagle to fly my allies over the chasm",
+        "category": "magic",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Wild Shape",
+            "Druid",
+            "Beast Shapes",
+            "Flying"
+        ]
+    },
+    {
+        "id": 117,
+        "player_action": "can I identify what school of magic this spell belongs to",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Arcana",
+            "Ability Checks",
+            "Schools of Magic"
+        ]
+    },
+    {
+        "id": 118,
+        "player_action": "do I know anything about the customs of this foreign culture",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "History",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 119,
+        "player_action": "can I tell what creature made these massive claw marks",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Nature",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 120,
+        "player_action": "do I recognize the significance of this religious icon",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Religion",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 121,
+        "player_action": "can I determine the age and origin of this architectural style",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "History",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 122,
+        "player_action": "do I know which herbs can counteract this poison",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Nature",
+            "Ability Checks",
+            "Poisoned"
+        ]
+    },
+    {
+        "id": 123,
+        "player_action": "can I tell if this gemstone is real or fake",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Investigation",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 124,
+        "player_action": "do I know anything about the legendary hero mentioned in this tapestry",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "History",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 125,
+        "player_action": "can I recognize the noble family crest on the shield",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "History",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 126,
+        "player_action": "do I know the proper rituals for consecrating this temple",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Religion",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 127,
+        "player_action": "can I tell if this creature is a fey or a celestial",
+        "category": "knowledge",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Arcana",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 128,
+        "player_action": "I examine the ancient runes carved into the doorway",
+        "category": "knowledge",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Arcana",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 129,
+        "player_action": "I try to recall legends about this cursed forest",
+        "category": "knowledge",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "History",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 130,
+        "player_action": "I examine the corpse to determine the cause of death",
+        "category": "knowledge",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Medicine",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 131,
+        "player_action": "I try to decipher the meaning of these coded symbols",
+        "category": "knowledge",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Investigation",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 132,
+        "player_action": "I try to determine what plane of existence this portal leads to",
+        "category": "knowledge",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Arcana",
+            "Ability Checks",
+            "The Planes"
+        ]
+    },
+    {
+        "id": 133,
+        "player_action": "I examine the battle tactics used in this historical painting",
+        "category": "knowledge",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "History",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 134,
+        "player_action": "I try to recall the properties of different metals and alloys",
+        "category": "knowledge",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Arcana",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 135,
+        "player_action": "I want to determine if this water is safe to drink",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Nature",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 136,
+        "player_action": "I want to recall what I know about vampire weaknesses",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Religion",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 137,
+        "player_action": "I want to identify what type of dragon scale this is",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Arcana",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 138,
+        "player_action": "I want to recall information about the Elemental Plane of Fire",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Arcana",
+            "Ability Checks",
+            "The Planes"
+        ]
+    },
+    {
+        "id": 139,
+        "player_action": "I want to know if this mushroom is edible or poisonous",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Nature",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 140,
+        "player_action": "I want to identify what type of construct this automaton is",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Arcana",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 141,
+        "player_action": "I try to recall the weaknesses of lycanthropes",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Arcana",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 142,
+        "player_action": "I want to know if this relic is authentic or a forgery",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Investigation",
+            "Ability Checks",
+            "History"
+        ]
+    },
+    {
+        "id": 143,
+        "player_action": "I want to decipher the ancient script on this magical tome",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Arcana",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 144,
+        "player_action": "I try to identify the poison used based on the symptoms",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Medicine",
+            "Ability Checks",
+            "Poisoned"
+        ]
+    },
+    {
+        "id": 145,
+        "player_action": "I want to recall the creation myths of this pantheon of gods",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Religion",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 146,
+        "player_action": "I examine the craftsmanship to determine which civilization made this artifact",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "History",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 147,
+        "player_action": "I want to analyze the spell residue to identify what magic was cast here",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Arcana",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 148,
+        "player_action": "I try to remember the weaknesses and behaviors of mind flayers",
+        "category": "magic",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Long Rest",
+            "Spell Slots",
+            "Spellcasting"
+        ]
+    },
+    {
+        "id": 149,
+        "player_action": "can I hear guards approaching down the corridor",
+        "category": "exploration",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Perception",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 150,
+        "player_action": "do I notice the concealed door behind the bookshelf",
+        "category": "exploration",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Perception",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 151,
+        "player_action": "can I squeeze through the narrow gap in the wall",
+        "category": "exploration",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Dexterity",
+            "Acrobatics",
+            "Ability Checks",
+            "Squeezing"
+        ]
+    },
+    {
+        "id": 152,
+        "player_action": "do I spot the tripwire before I step on it",
+        "category": "exploration",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Perception",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 153,
+        "player_action": "can I maintain my balance on the icy ledge",
+        "category": "exploration",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Dexterity",
+            "Acrobatics",
+            "Ability Checks",
+            "Difficult Terrain"
+        ]
+    },
+    {
+        "id": 154,
+        "player_action": "do I recognize any landmarks to orient myself",
+        "category": "exploration",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Survival",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 155,
+        "player_action": "can I land safely after jumping from the second floor",
+        "category": "exploration",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Dexterity",
+            "Acrobatics",
+            "Ability Checks",
+            "Falling"
+        ]
+    },
+    {
+        "id": 156,
+        "player_action": "do I find any useful items while searching the room thoroughly",
+        "category": "exploration",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Intelligence",
+            "Investigation",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 157,
+        "player_action": "can I tell how long ago this campfire was used",
+        "category": "exploration",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Survival",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 158,
+        "player_action": "do I sense anything unusual about this area",
+        "category": "exploration",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Perception",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 159,
+        "player_action": "I try to move silently across the creaky wooden floor",
+        "category": "exploration",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Dexterity",
+            "Stealth",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 160,
+        "player_action": "I try to identify which tracks are freshest",
+        "category": "exploration",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Survival",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 161,
+        "player_action": "I try to hold my breath while swimming underwater",
+        "category": "exploration",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Constitution",
+            "Ability Checks",
+            "Suffocating"
+        ]
+    },
+    {
+        "id": 162,
+        "player_action": "I try to notice if anyone is following us",
+        "category": "exploration",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Perception",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 163,
+        "player_action": "I try to walk across the tightrope without falling",
+        "category": "exploration",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Dexterity",
+            "Acrobatics",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 164,
+        "player_action": "I sense if there are any aberrations or undead nearby",
+        "category": "exploration",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Divine Sense",
+            "Paladin",
+            "Detection"
+        ]
+    },
+    {
+        "id": 165,
+        "player_action": "I want to find the best path through the dense undergrowth",
+        "category": "exploration",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Survival",
+            "Ability Checks",
+            "Difficult Terrain"
+        ]
+    },
+    {
+        "id": 166,
+        "player_action": "I want to climb down the cliff face without falling",
+        "category": "exploration",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Strength",
+            "Athletics",
+            "Ability Checks",
+            "Climbing"
+        ]
+    },
+    {
+        "id": 167,
+        "player_action": "I want to forage for food and water in this area",
+        "category": "exploration",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Survival",
+            "Ability Checks",
+            "Foraging"
+        ]
+    },
+    {
+        "id": 168,
+        "player_action": "I want to predict the weather for our journey tomorrow",
+        "category": "exploration",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Survival",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 169,
+        "player_action": "I try to remain hidden while the patrol passes by",
+        "category": "exploration",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Dexterity",
+            "Stealth",
+            "Ability Checks",
+            "Hiding"
+        ]
+    },
+    {
+        "id": 170,
+        "player_action": "I want to rappel down the tower wall using rope",
+        "category": "exploration",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Strength",
+            "Athletics",
+            "Ability Checks",
+            "Climbing"
+        ]
+    },
+    {
+        "id": 171,
+        "player_action": "I want to set up a safe campsite in this dangerous wilderness",
+        "category": "exploration",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Survival",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 172,
+        "player_action": "I try to disarm the complex mechanical trap on the chest",
+        "category": "exploration",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Dexterity",
+            "Ability Checks",
+            "Thieves' Tools"
+        ]
+    },
+    {
+        "id": 173,
+        "player_action": "can I tell if the innkeeper is hiding something from us",
+        "category": "social",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Insight",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 174,
+        "player_action": "do I sense the noble's true feelings about our proposal",
+        "category": "social",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Insight",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 175,
+        "player_action": "can I charm my way past the bouncer at the exclusive club",
+        "category": "social",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Charisma",
+            "Persuasion",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 176,
+        "player_action": "do I read the crowd's mood before making my speech",
+        "category": "social",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Insight",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 177,
+        "player_action": "can I convince the guard that we're supposed to be here",
+        "category": "social",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Charisma",
+            "Deception",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 178,
+        "player_action": "do I notice the subtle tells that reveal the spy among us",
+        "category": "social",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Insight",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 179,
+        "player_action": "can I rally the frightened townsfolk to stand and fight",
+        "category": "social",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Charisma",
+            "Persuasion",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 180,
+        "player_action": "do I detect any nervousness when the suspect answers my questions",
+        "category": "social",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Insight",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 181,
+        "player_action": "can I spread rumors to damage the rival's reputation",
+        "category": "social",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Charisma",
+            "Deception",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 182,
+        "player_action": "do I sense whether the prisoner is telling the whole truth",
+        "category": "social",
+        "query_type": "colloquial",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Insight",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 183,
+        "player_action": "I try to blend in with the crowd at the festival",
+        "category": "social",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Charisma",
+            "Deception",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 184,
+        "player_action": "I try to impersonate a guard using their uniform and mannerisms",
+        "category": "social",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Charisma",
+            "Deception",
+            "Ability Checks",
+            "Disguise Kit"
+        ]
+    },
+    {
+        "id": 185,
+        "player_action": "I try to calm the frightened animal so we can pass safely",
+        "category": "social",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Animal Handling",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 186,
+        "player_action": "I try to keep the frightened child calm during the danger",
+        "category": "social",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Charisma",
+            "Persuasion",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 187,
+        "player_action": "I convince the merchant to give us a discount on supplies",
+        "category": "combat",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Great Weapon Master",
+            "Feats",
+            "Bonus Actions"
+        ]
+    },
+    {
+        "id": 188,
+        "player_action": "I want to intimidate the bandit into revealing their hideout",
+        "category": "social",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Charisma",
+            "Intimidation",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 189,
+        "player_action": "I want to entertain the tavern guests with a dramatic performance",
+        "category": "social",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Charisma",
+            "Performance",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 190,
+        "player_action": "I want to plant false information to mislead our enemies",
+        "category": "social",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Charisma",
+            "Deception",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 191,
+        "player_action": "I try to train the wolf pup to follow basic commands",
+        "category": "social",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Wisdom",
+            "Animal Handling",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 192,
+        "player_action": "I want to negotiate a peace treaty between the warring factions",
+        "category": "combat",
+        "query_type": "precise",
+        "relevant_srd_sections": [
+            "Sentinel",
+            "Feats",
+            "Opportunity Attacks",
+            "Reactions"
+        ]
+    },
+    {
+        "id": 193,
+        "player_action": "I want to make the dragon think we're not a threat",
+        "category": "social",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Charisma",
+            "Persuasion",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 194,
+        "player_action": "I try to forge the official seal on this document",
+        "category": "social",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Dexterity",
+            "Sleight of Hand",
+            "Ability Checks",
+            "Forgery Kit"
+        ]
+    },
+    {
+        "id": 195,
+        "player_action": "I want to pose as a wealthy noble to gain entry to the gala",
+        "category": "social",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Charisma",
+            "Deception",
+            "Ability Checks",
+            "Disguise Kit"
+        ]
+    },
+    {
+        "id": 196,
+        "player_action": "I want to use my status as a cleric to gain the trust of the temple guards",
+        "category": "social",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Charisma",
+            "Persuasion",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 197,
+        "player_action": "I try to calm the angry mob before they turn violent",
+        "category": "social",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Charisma",
+            "Persuasion",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 198,
+        "player_action": "I want to befriend the lonely guard to learn their patrol schedule",
+        "category": "social",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Charisma",
+            "Persuasion",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 199,
+        "player_action": "I try to use my bardic performance to distract the guards while my allies sneak past",
+        "category": "social",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Charisma",
+            "Performance",
+            "Ability Checks"
+        ]
+    },
+    {
+        "id": 200,
+        "player_action": "I try to identify the magical aura surrounding this ancient artifact",
+        "category": "knowledge",
+        "query_type": "multi_part",
+        "relevant_srd_sections": [
+            "Detect Magic",
+            "Intelligence",
+            "Arcana",
+            "Ability Checks"
+        ]
     }
 ]
