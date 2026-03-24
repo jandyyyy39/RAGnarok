@@ -11,6 +11,7 @@ from groq import Groq
 from openai import OpenAI
 
 from config import Config
+from agents.hyde_retriever import HyDERetriever
 from agents.dm_spear import DMSpearAgent
 from agents.memory import MemoryAgent
 from skills.rules_logic.scripts import fetch_rules
@@ -30,11 +31,14 @@ def deterministic_guard(narrative: str) -> bool:
     return not bool(meta_game_terms.findall(narrative))
 
 # --- SPEAR ORCHESTRATOR ---
-class SPEAROrchestrator:
+class SpearHyDEOrchestrator:
     def __init__(self, client, model_profile: str):
         print(f"Initializing SPEAR Architecture [{model_profile}]...")
         self.client = client
         self.model = Config.LLM_MODEL[model_profile]
+
+        self.hyde_rules = HyDERetriever(client, model_profile, mode="rules")
+        self.hyde_exploration = HyDERetriever(client, model_profile, mode="exploration")
         
         self.router_model = Config.LLM_MODEL.get(
             "LOCAL_ROUTER" if model_profile == "LOCAL" else "GROQ_ROUTER"
@@ -43,13 +47,17 @@ class SPEAROrchestrator:
         self.critic_model = Config.LLM_MODEL.get(
             "LOCAL_CRITIC" if model_profile == "LOCAL" else "GROQ_CRITIC"
         )
+
+        self.hyde_model = Config.LLM_MODEL.get(
+            "LOCAL_HYDE" if model_profile == "LOCAL" else "GROQ_HYDE"
+        )
         
         self.memory = MemoryAgent()
         self.dm = DMSpearAgent(client, model_profile)
 
-        os.makedirs("data/history", exist_ok=True) 
-        # self.log_file = "data/history/spear_architecture_log.json"
-        self.log_file = f"data/history/spear_{self.router_model}.json"
+        os.makedirs("data/history", exist_ok=True)
+        
+        self.log_file = f"data/history/spear_hyde_{self.hyde_model}.json"
         
         with telemetry_lock:
             with open(self.log_file, "w", encoding="utf-8") as f:
@@ -99,6 +107,8 @@ class SPEAROrchestrator:
         latency_breakdown = {}
         router_tokens = 0
         dm_tokens = 0
+        hyde_rules_tokens = 0
+        hyde_explore_tokens = 0
         print("\n" + "▼"*50)
         print(f"[SPEAR] Intent: '{player_input}'")
 
@@ -179,13 +189,17 @@ class SPEAROrchestrator:
         dynamic_instructions = []
         t = time()
         with ThreadPoolExecutor(max_workers=3) as executor:
-            future_rules = executor.submit(fetch_rules.search_rules, player_input) if routes.get("rules_logic") else None
+            future_rules = executor.submit(self.hyde_rules.retrieve, player_input, world_state.get("current_location", "")) if routes.get("rules_logic") else None
             future_npc = executor.submit(fetch_npc.fetch_profile, player_input + " " + " ".join(active_npcs)) if routes.get("npc_lore") else None
-            future_explore = executor.submit(fetch_exploration.search_exploration, player_input) if routes.get("world_exploration") else None
+            future_explore = executor.submit(self.hyde_exploration.retrieve, player_input, world_state.get("current_location", "")) if routes.get("world_exploration") else None
+            
+            raw_rules_docs, hyde_rules_tokens = future_rules.result() if future_rules else ([], 0)
+            raw_explore_docs, hyde_explore_tokens = future_explore.result() if future_explore else ([], 0)
             
             npc_result = future_npc.result() if future_npc else ""
-            rules_result = future_rules.result() if future_rules else ""
-            explore_result = future_explore.result() if future_explore else ""
+           
+            rules_result = "\n\n".join(doc.page_content for doc in raw_rules_docs if doc.page_content)
+            explore_result = "\n\n".join(doc.page_content for doc in raw_explore_docs if doc.page_content)
 
             if rules_result:
                 dynamic_instructions.append(self._read_skill_instructions("rules_logic"))
@@ -232,14 +246,16 @@ class SPEAROrchestrator:
 
         turn_data = {
             "timestamp_utc": datetime.utcnow().isoformat() + "Z",
-            "architecture": "SPEAR",
+            "architecture": "SPEAR+HyDE",
             "latency_ms": round(latency_ms),
             "latency_breakdown": latency_breakdown,
-            "total_tokens": router_tokens + dm_tokens,
+            "total_tokens": router_tokens + hyde_rules_tokens + hyde_explore_tokens + dm_tokens,
             "token_breakdown": {
                 "router": router_tokens,
+                "hyde_rules": hyde_rules_tokens,
+                "hyde_exploration": hyde_explore_tokens,
                 "dm": dm_tokens,
-                "critic": 0,  # backfilled by async_critic_evaluation
+                "critic": 0,
             },
             "routing_hallucination": routing_hallucination,
             "routes_fired": routes,
@@ -298,10 +314,11 @@ def get_game_state():
 @app.route('/api/info', methods=['GET'])
 def get_info():
     return jsonify({
-        'architecture': 'SPEAR',
+        'architecture': 'SPEAR_HYDE',
         'model':        game.model,
         'router_model':   game.router_model,
         'critic_model': game.critic_model,
+        'hyde_model':   game.hyde_model,
         'log_file':     game.log_file,
     })
 
@@ -333,7 +350,7 @@ if __name__ == "__main__":
         client = Groq(api_key=Config.GROQ_API_KEY)
         model_profile = "GROQ"
 
-    game = SPEAROrchestrator(client=client, model_profile=model_profile)
+    game = SpearHyDEOrchestrator(client=client, model_profile=model_profile)
     
     # Initialize World
     game.memory.update_state({

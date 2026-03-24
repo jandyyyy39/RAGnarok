@@ -1,21 +1,21 @@
 [
     {
-        "timestamp_utc": "2026-03-21T09:56:28.234913Z",
+        "timestamp_utc": "2026-03-23T07:45:26.949241Z",
         "architecture": "SPEAR",
-        "latency_ms": 71275,
+        "latency_ms": 311747,
         "latency_breakdown": {
             "safety_filter_ms": 0,
-            "router_ms": 5860,
-            "parallel_fetch_ms": 5951,
-            "dm_ms": 59463,
-            "post_processing_ms": 1,
-            "total_ms": 71275
+            "router_ms": 5958,
+            "parallel_fetch_ms": 257285,
+            "dm_ms": 48502,
+            "post_processing_ms": 2,
+            "total_ms": 311747
         },
-        "total_tokens": 3485,
+        "total_tokens": 3080,
         "token_breakdown": {
             "router": 390,
-            "dm": 1757,
-            "critic": 1338
+            "dm": 1105,
+            "critic": 1585
         },
         "routing_hallucination": false,
         "routes_fired": {
@@ -28,39 +28,39 @@
             "kv_lookup": true
         },
         "retrieved_context": {
-            "rules": "- One silver piece is worth ten copper pieces, which are common among laborers and beggars. A single copper piece buys a candle, a torch, or a piece of chalk.  \nIn addition, unusual coins made of other precious metals sometimes appear in treasure hoards. The electrum piece (ep) and the platinum piece (pp) originate from fallen empires and lost kingdoms, and they sometimes arouse suspicion and skepticism when used in transactions. An electrum piece is worth five silver pieces, and a platinum piece is worth ten gold pieces.  \nA standard coin weighs about a third of an ounce, so fifty coins weigh a pound.  \n<table style=\"width:68%;\">\n<caption>Standard Exchange Rates</caption>\n<colgroup>\n<col width=\"20%\" />\n<col width=\"9%\" />\n<col width=\"8%\" />\n<col width=\"8%\" />\n<col width=\"9%\" />\n<col width=\"11%\" />\n</colgroup>\n<thead>\n<tr class=\"header\">\n<th align=\"left\">Coin</th>\n<th align=\"right\">CP</th>\n<th align=\"right\">SP</th>\n<th align=\"right\">EP</th>\n<th align=\"right\">GP</th>\n- Common coins come in several different denominations based on the relative worth of the metal from which they are made. The three most common coins are the gold piece (gp), the silver piece (sp), and the copper piece (cp).  \nWith one gold piece, a character can buy a bedroll, 50 feet of good rope, or a goat. A skilled (but not exceptional) artisan can earn one gold piece a day. The gold piece is the standard unit of measure for wealth, even if the coin itself is not commonly used. When merchants discuss deals that involve goods or services worth hundreds or thousands of gold pieces, the transactions don't usually involve the exchange of individual coins. Rather, the gold piece is a standard measure of value, and the actual exchange is in gold bars, letters of credit, or valuable goods.  \nOne gold piece is worth ten silver pieces, the most prevalent coin among commoners. A silver piece buys a laborer's work for half a day, a flask of lamp oil, or a night's rest in a poor inn.\n- <td align=\"center\">CN</td>\n<td align=\"left\">Tempest</td>\n<td align=\"left\">Trident</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">Tyche, goddess of good fortune</td>\n<td align=\"center\">N</td>\n<td align=\"left\">Trickery</td>\n<td align=\"left\">Red pentagram</td>\n</tr>\n</tbody>\n</table>  \nThe gods of Olympus make themselves known with the gentle lap of waves against the shores and the crash of the thunder among the cloud-enshrouded peaks. The thick boar-infested woods and the sere, olive-covered hillsides hold evidence of their passing. Every aspect of nature echoes with their presence, and they've made a place for themselves inside the human heart, too.",
+            "rules": "SYSTEM ERROR: Cannot send a request, as the client has been closed.",
             "npc_lore": "Thrain Blackbeard (Human Barbarian) | Motivation: Seeking the strongest drink in the land. | Knowledge: Has heard rumors of the players' prowess in battle. | Quirks: Often breaks into sea shanties and uses nautical slang.\n\nElara Moonwhisper (Half-Elf Bard) | Motivation: Becoming the most famous performer in the land. | Knowledge: Knows the players are looking for a performance to attend. | Quirks: Often speaks in rhyming couplets and uses dramatic flair.\n\nArin the Bold (Human Rogue) | Motivation: Pulling off the heist of the century. | Knowledge: Knows the players are looking for a job to do. | Quirks: Often uses slang and has a tendency to boast about his skills.",
             "exploration": "Not retrieved."
         },
         "async_critic_scores": {
-            "rule_accuracy": 9,
-            "narrative_coherence": 8,
-            "npc_voice_consistency": 9,
-            "reasoning": "The DM response accurately reflects the rules context, as the gold coin is a standard unit of measure for wealth and can be used to buy a variety of goods. The story advances meaningfully, as the player's intent to gather information about the seas is fulfilled. Thrain Blackbeard's response is consistent with his NPC profile, as he is enthusiastic and uses nautical slang."
+            "rule_accuracy": 10,
+            "narrative_coherence": 9,
+            "npc_voice_consistency": 10,
+            "reasoning": "rule_accuracy: No mechanics or rules were invoked, which is appropriate for a social interaction. narrative_coherence: Engages with the player's intent about the seas while advancing Thrain's character through nautical slang and shanty humor. npc_voice_consistency: Perfectly matches Thrain's established traits of nautical slang, sea shanties, and irreverent bravado."
         },
         "player_intent": "I slide a gold coin across the bar to Thrain Blackbeard. 'Tell me about the seas, old man.'",
         "final_output": {
-            "response": "Thrain Blackbeard's eyes light up at the sight of the gold coin. He catches it deftly and grins, his beard bristling with excitement. \"Arr, the seas be a fickle mistress, she is!\" he booms, leaning in. \"But for a shiny piece like this, I'll spin ye a yarn worth more than its weight in gold. What's it ye want to know, lad? The storms that'd make ye piss yer breeches, or the treasures that'd make ye the richest soul in all the land?\"",
+            "response": "Thrain Blackbeard's eyes flicker with a mix of amusement and respect as he catches the gold coin deftly. His beard twitches as he leans in, his voice dropping to a low, gravelly tone.\n\n\"The seas, ye say? Aye, I've sailed waters that'd make a landlubber's hair turn white!\" Thrain chuckles, taking a swig of his ale. \"But what's a land-walker like yerself want to know about the briny deep for?\"",
             "pending_action": null
         }
     },
     {
-        "timestamp_utc": "2026-03-21T09:57:36.304397Z",
+        "timestamp_utc": "2026-03-23T07:47:05.658124Z",
         "architecture": "SPEAR",
-        "latency_ms": 68060,
+        "latency_ms": 98700,
         "latency_breakdown": {
             "safety_filter_ms": 0,
-            "router_ms": 8676,
-            "parallel_fetch_ms": 133,
-            "dm_ms": 59250,
-            "post_processing_ms": 1,
-            "total_ms": 68060
+            "router_ms": 8319,
+            "parallel_fetch_ms": 17635,
+            "dm_ms": 72745,
+            "post_processing_ms": 2,
+            "total_ms": 98700
         },
-        "total_tokens": 2750,
+        "total_tokens": 3403,
         "token_breakdown": {
             "router": 384,
-            "dm": 1377,
-            "critic": 989
+            "dm": 1384,
+            "critic": 1635
         },
         "routing_hallucination": false,
         "routes_fired": {
@@ -78,40 +78,40 @@
             "exploration": "Not retrieved."
         },
         "async_critic_scores": {
-            "rule_accuracy": 0,
-            "narrative_coherence": 0,
-            "npc_voice_consistency": 10,
-            "reasoning": "The player's action of drawing a rapier and lunging at the drunken sailor is a physical action that does not require a dice roll. According to the RULES context, drawing a sword is a simple action that does not require a roll. The DM's response to call for a Dexterity - Attack with a Rapier roll is incorrect."
+            "rule_accuracy": 10,
+            "narrative_coherence": 10,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Attack Roll with Dexterity is correct for a finesse weapon (rapier) against a non-incapacitated target. narrative_coherence: An attack roll is required by the rules for melee attacks. npc_voice_consistency: No dialogue generated, so score is fixed at 5 per calibration rules."
         },
         "player_intent": "I draw my rapier and lunge at the drunken sailor who just insulted me!",
         "final_output": {
-            "response": "The room holds its breath... (Roll Dexterity - Attack with a Rapier)",
+            "response": "The room holds its breath... (Roll Dexterity - Attack Roll)",
             "pending_action": {
-                "internal_reasoning": "Attacking a target requires an attack roll. Using a rapier typically requires the use of the Dexterity stat and the Attack with a Rapier skill.",
+                "dc": 15,
+                "internal_reasoning": "Attacking a target requires an attack roll. The DC is set at 15 assuming the sailor has average reaction time due to being drunken but not incapacitated. Using Strength or Dexterity with the corresponding weapon skill.",
                 "original_input": "I draw my rapier and lunge at the drunken sailor who just insulted me!",
-                "stat": "Dexterity",
-                "skill": "Attack with a Rapier",
-                "dc": 15
+                "skill": "Attack Roll",
+                "stat": "Dexterity"
             }
         }
     },
     {
-        "timestamp_utc": "2026-03-21T09:58:29.358790Z",
+        "timestamp_utc": "2026-03-23T07:48:26.495146Z",
         "architecture": "SPEAR",
-        "latency_ms": 53048,
+        "latency_ms": 80828,
         "latency_breakdown": {
             "safety_filter_ms": 0,
-            "router_ms": 8644,
-            "parallel_fetch_ms": 4091,
-            "dm_ms": 40310,
-            "post_processing_ms": 2,
-            "total_ms": 53048
+            "router_ms": 8321,
+            "parallel_fetch_ms": 4262,
+            "dm_ms": 68244,
+            "post_processing_ms": 1,
+            "total_ms": 80828
         },
-        "total_tokens": 4474,
+        "total_tokens": 5064,
         "token_breakdown": {
             "router": 380,
-            "dm": 2354,
-            "critic": 1740
+            "dm": 2398,
+            "critic": 2286
         },
         "routing_hallucination": false,
         "routes_fired": {
@@ -129,34 +129,40 @@
             "exploration": "- ***Spyglass.*** Objects viewed through a spyglass are magnified to twice their size.  \n***Tent.*** A simple and portable canvas shelter, a tent sleeps two.  \n***Tinderbox.*** This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch\u2014or anything else with abundant, exposed fuel\u2014takes an action. Lighting any other fire takes 1 minute.  \n***Torch.*** A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage.  \n<table style=\"width:75%;\">\n<caption>Adventuring Gear</caption>\n<colgroup>\n<col width=\"41%\" />\n<col width=\"13%\" />\n<col width=\"19%\" />\n</colgroup>\n<thead>\n<tr class=\"header\">\n<th align=\"left\">Item</th>\n<th align=\"right\">Cost</th>\n<th align=\"center\">Weight</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td align=\"left\">Abacus</td>\n<td align=\"right\">2 gp</td>\n- **Senses** passive Perception 11  \n**Languages** understands Abyssal, Common, and Infernal but can't speak  \n**Challenge** 3 (700 XP)  \n***Confer Fire Resistance.*** The nightmare can grant resistance to fire damage to anyone riding it.  \n***Illumination.*** The nightmare sheds bright light in a 10-foot radius and dim light for an additional 10 feet.  \n##### Actions  \n***Hooves.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 13 (2d8 + 4) bludgeoning damage plus 7 (2d6) fire damage.  \n***Ethereal Stride.*** The nightmare and up to three willing creatures within 5 feet of it magically enter the ethereal plane from the material plane, or vice versa.\n- 2nd level (3 slots): [*detect thoughts*](#detect-thoughts), [*mirror image*](#mirror-image), [*misty step*](#misty-step)  \n3rd level (3 slots): [*counterspell*](#counterspell), [*fly*](#fly), [*lightning bolt*](#lightning-bolt)  \n4th level (3 slots): [*banishment*](#banishment), [*fire shield*](#fire-shield), [*stoneskin*](#stoneskin)  \n5th level (3 slots): [*cone of cold*](#cone-of-cold), [*scrying*](#scrying), [*wall of force*](#wall-of-force)  \n6th level (1 slot): [*globe of invulnerability*](#globe-of-invulnerability)  \n7th level (1 slot): [*teleport*](#teleport)  \n8th level (1 slot): [*mind blank*](#mind-blank)  \n9th level (1 slot): [*time stop*](#time-stop)  \n\\* *The archmage casts these spells on itself before combat.*  \n##### Actions  \n***Dagger.*** *Melee or Ranged Weapon Attack:* +6 to hit, reach 5 ft. or range 20/60 ft., one target. *Hit:* 4 (1d4 + 2) piercing damage."
         },
         "async_critic_scores": {
-            "rule_accuracy": 0,
-            "narrative_coherence": 0,
-            "npc_voice_consistency": 10,
-            "reasoning": "The DM response does not accurately reflect the rules context. The player's intent is to inspect the floorboards near the fireplace for hidden compartments, but the DM response does not acknowledge this or provide a suitable response. The story does not advance meaningfully given the player's intent."
+            "rule_accuracy": 10,
+            "narrative_coherence": 10,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Investigation skill and Intelligence stat are correct for searching hidden compartments. DC 15 is reasonable for a hidden compartment in a tavern. narrative_coherence: A dice roll was genuinely required to determine success/failure of the search. npc_voice_consistency: No dialogue generated, so score remains at 5 as per calibration rules."
         },
         "player_intent": "I ignore the crowd and inspect the floorboards near the fireplace for hidden compartments.",
         "final_output": {
-            "response": "I'm sorry, but I don't have the necessary tools to assist with that specific request. However, I'm here to help with any other questions or information you might need!",
-            "pending_action": null
+            "response": "The room holds its breath... (Roll Intelligence - Investigation)",
+            "pending_action": {
+                "dc": 15,
+                "internal_reasoning": "Searching for hidden compartments typically involves looking for Perception or Investigation checks. A DC of 15 is reasonable for a well-hidden compartment in a tavern.",
+                "original_input": "I ignore the crowd and inspect the floorboards near the fireplace for hidden compartments.",
+                "skill": "Investigation",
+                "stat": "Intelligence"
+            }
         }
     },
     {
-        "timestamp_utc": "2026-03-21T09:59:42.567629Z",
+        "timestamp_utc": "2026-03-23T07:49:36.367865Z",
         "architecture": "SPEAR",
-        "latency_ms": 73201,
+        "latency_ms": 69867,
         "latency_breakdown": {
             "safety_filter_ms": 0,
-            "router_ms": 8022,
-            "parallel_fetch_ms": 136,
-            "dm_ms": 65043,
+            "router_ms": 7981,
+            "parallel_fetch_ms": 127,
+            "dm_ms": 61757,
             "post_processing_ms": 1,
-            "total_ms": 73201
+            "total_ms": 69867
         },
-        "total_tokens": 4244,
+        "total_tokens": 4969,
         "token_breakdown": {
             "router": 390,
-            "dm": 2291,
-            "critic": 1563
+            "dm": 2235,
+            "critic": 2344
         },
         "routing_hallucination": false,
         "routes_fired": {
@@ -174,40 +180,34 @@
             "exploration": "- -   [*Alarm*](#alarm)\n-   [*Burning Hands*](#burning-hands)\n-   [*Charm Person*](#charm-person)\n-   [*Color Spray*](#color-spray)\n-   [*Comprehend Languages*](#comprehend-languages)\n-   [*Detect Magic*](#detect-magic)\n-   [*Disguise Self*](#disguise-self)\n-   [*Expeditious Retreat*](#expeditious-retreat)\n-   [*False Life*](#false-life)\n-   [*Feather Fall*](#feather-fall)\n-   [*Find Familiar*](#find-familiar)\n-   [*Floating Disk*](#floating-disk)\n-   [*Fog Cloud*](#fog-cloud)\n-   [*Grease*](#grease)\n-   [*Hideous Laughter*](#hideous-laughter)\n-   [*Identify*](#identify)\n-   [*Illusory Script*](#illusory-script)\n-   [*Jump*](#jump)\n-   [*Longstrider*](#longstrider)\n-   [*Mage Armor*](#mage-armor)\n-   [*Magic Missile*](#magic-missile)\n-   [*Protection from Evil and Good*](#protection-from-evil-and-good)\n-   [*Shield*](#shield)\n-   [*Silent Image*](#silent-image)\n-   [*Sleep*](#sleep)\n-   [*Thunderwave*](#thunderwave)\n-   [*Unseen Servant*](#unseen-servant)\n- **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks  \n**Damage Immunities** poison  \n**Condition Immunities** [exhaustion](#exhaustion), [grappled](#grappled), [paralyzed](#paralyzed), [petrified](#petrified), [poisoned](#poisoned), [prone](#prone), [restrained](#restrained), [unconscious](#unconscious)  \n**Senses** darkvision 60 ft., passive Perception 18  \n**Languages** Auran, understands Common but doesn't speak it  \n**Challenge** 6 (2,300 XP)  \n***Invisibility.*** The stalker is [invisible](#invisible).  \n***Faultless Tracker.*** The stalker is given a quarry by its summoner. The stalker knows the direction and distance to its quarry as long as the two of them are on the same plane of existence. The stalker also knows the location of its summoner.  \n##### Actions  \n***Multiattack.*** The stalker makes two slam attacks.  \n***Slam.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 10 (2d6 + 3) bludgeoning damage.\n- </tr>\n</tbody>\n</table>  \n**Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks  \n**Damage Immunities** fire, poison  \n**Condition Immunities** [exhaustion](#exhaustion), [grappled](#grappled), [paralyzed](#paralyzed), [petrified](#petrified), [poisoned](#poisoned), [prone](#prone), [restrained](#restrained), [unconscious](#unconscious)  \n**Senses** darkvision 60 ft., passive Perception 10  \n**Languages** Ignan  \n**Challenge** 5 (1,800 XP)"
         },
         "async_critic_scores": {
-            "rule_accuracy": 0,
-            "narrative_coherence": 0,
-            "npc_voice_consistency": 10,
-            "reasoning": "The player's intent is to intimidate Arin, but the DM calls for a Deception roll, which is not relevant to the situation. The DM should have responded with a more fitting action, such as the stalker attacking Arin or reacting to the threat."
+            "rule_accuracy": 5,
+            "narrative_coherence": 7,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: No rules from provided context were applied (no spellcasting, item use, or combat mechanics). narrative_coherence: The response advances tension but lacks specific consequences for the player's action. npc_voice_consistency: No named NPCs appear in the response, so consistency is not applicable."
         },
         "player_intent": "I grab Arin by the collar, shove him against the wall, and scream: 'Where is the map?!'",
         "final_output": {
-            "response": "The room holds its breath... (Roll CHA - Deception)",
-            "pending_action": {
-                "dc": 15,
-                "internal_reasoning": "Arin is a human rogue, so he has proficiency in Deception. Intimidation checks against another character typically use Charisma as the ability score.",
-                "original_input": "I grab Arin by the collar, shove him against the wall, and scream: 'Where is the map?!'",
-                "skill": "Deception",
-                "stat": "CHA"
-            }
+            "response": "The tavern's lively chatter quiets as all eyes turn to you and Arin. The rogue's expression darkens, his usual smirk fading into something more dangerous. His hand drifts toward the dagger at his belt. The air is thick with tension. What's your next move?",
+            "pending_action": null
         }
     },
     {
-        "timestamp_utc": "2026-03-21T10:00:56.046709Z",
+        "timestamp_utc": "2026-03-23T07:51:04.692944Z",
         "architecture": "SPEAR",
-        "latency_ms": 73471,
+        "latency_ms": 88318,
         "latency_breakdown": {
             "safety_filter_ms": 0,
-            "router_ms": 8498,
-            "parallel_fetch_ms": 117,
-            "dm_ms": 64856,
+            "router_ms": 8508,
+            "parallel_fetch_ms": 125,
+            "dm_ms": 79684,
             "post_processing_ms": 1,
-            "total_ms": 73471
+            "total_ms": 88318
         },
-        "total_tokens": 2785,
+        "total_tokens": 3479,
         "token_breakdown": {
             "router": 388,
-            "dm": 1476,
-            "critic": 921
+            "dm": 1462,
+            "critic": 1629
         },
         "routing_hallucination": true,
         "routes_fired": {
@@ -225,40 +225,40 @@
             "exploration": "Not retrieved."
         },
         "async_critic_scores": {
-            "rule_accuracy": 0,
-            "narrative_coherence": 0,
-            "npc_voice_consistency": 10,
-            "reasoning": "The player's intent was to kick over a table and fire a crossbow, but there is no mention of a crossbow in the provided rules. The DM's response to call for a dice roll using STR - Athletics is also incorrect, as there is no indication that Athletics is relevant to the action. A more accurate response would be to clarify the player's intent and determine the relevant rules or skills to apply."
+            "rule_accuracy": 10,
+            "narrative_coherence": 5,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Correctly used Strength (Athletics) for moving the table, which aligns with D&D 5e mechanics. narrative_coherence: Only addressed the table movement (Strength check) but not the crossbow attack (which requires Dexterity), making the roll partially required. npc_voice_consistency: No dialogue generated, so score is neutral."
         },
         "player_intent": "I kick over the heavy oak table to use as cover, then fire my crossbow at the bartender.",
         "final_output": {
-            "response": "The room holds its breath... (Roll STR - Athletics)",
+            "response": "The room holds its breath... (Roll Strength - Athletics)",
             "pending_action": {
-                "internal_reasoning": "Kicking over a heavy oak table requires STR and the Athletics skill to determine if you can move it effectively as cover. Firing a crossbow at the bartender requires a DEX-based attack roll with the crossbow's attack bonus.",
                 "original_input": "I kick over the heavy oak table to use as cover, then fire my crossbow at the bartender.",
+                "internal_reasoning": "Kicking over a heavy oak table requires Strength, as it involves physical force. Firing a crossbow at the bartender requires a Dexterity check for the attack roll, as it involves precision and aim.",
+                "stat": "Strength",
                 "skill": "Athletics",
-                "stat": "STR",
                 "dc": 15
             }
         }
     },
     {
-        "timestamp_utc": "2026-03-21T10:02:23.300130Z",
+        "timestamp_utc": "2026-03-23T07:53:35.521780Z",
         "architecture": "SPEAR",
-        "latency_ms": 87246,
+        "latency_ms": 150820,
         "latency_breakdown": {
             "safety_filter_ms": 0,
-            "router_ms": 8612,
-            "parallel_fetch_ms": 121,
-            "dm_ms": 78512,
+            "router_ms": 8505,
+            "parallel_fetch_ms": 201,
+            "dm_ms": 142114,
             "post_processing_ms": 1,
-            "total_ms": 87246
+            "total_ms": 150820
         },
-        "total_tokens": 4530,
+        "total_tokens": 6032,
         "token_breakdown": {
             "router": 393,
-            "dm": 2375,
-            "critic": 1762
+            "dm": 2480,
+            "critic": 3159
         },
         "routing_hallucination": false,
         "routes_fired": {
@@ -276,34 +276,34 @@
             "exploration": "- -   [*Alarm*](#alarm)\n-   [*Burning Hands*](#burning-hands)\n-   [*Charm Person*](#charm-person)\n-   [*Color Spray*](#color-spray)\n-   [*Comprehend Languages*](#comprehend-languages)\n-   [*Detect Magic*](#detect-magic)\n-   [*Disguise Self*](#disguise-self)\n-   [*Expeditious Retreat*](#expeditious-retreat)\n-   [*False Life*](#false-life)\n-   [*Feather Fall*](#feather-fall)\n-   [*Find Familiar*](#find-familiar)\n-   [*Floating Disk*](#floating-disk)\n-   [*Fog Cloud*](#fog-cloud)\n-   [*Grease*](#grease)\n-   [*Hideous Laughter*](#hideous-laughter)\n-   [*Identify*](#identify)\n-   [*Illusory Script*](#illusory-script)\n-   [*Jump*](#jump)\n-   [*Longstrider*](#longstrider)\n-   [*Mage Armor*](#mage-armor)\n-   [*Magic Missile*](#magic-missile)\n-   [*Protection from Evil and Good*](#protection-from-evil-and-good)\n-   [*Shield*](#shield)\n-   [*Silent Image*](#silent-image)\n-   [*Sleep*](#sleep)\n-   [*Thunderwave*](#thunderwave)\n-   [*Unseen Servant*](#unseen-servant)\n- -   [*Animal Messenger*](#animal-messenger)\n-   [*Blindness/Deafness*](#blindnessdeafness)\n-   [*Calm Emotions*](#calm-emotions)\n-   [*Detect Thoughts*](#detect-thoughts)\n-   [*Enhance Ability*](#enhance-ability)\n-   [*Enthrall*](#enthrall)\n-   [*Heat Metal*](#heat-metal)\n-   [*Hold Person*](#hold-person)\n-   [*Invisibility*](#invisibility)\n-   [*Knock*](#knock)\n-   [*Lesser Restoration*](#lesser-restoration)\n-   [*Locate Animals or Plants*](#locate-animals-or-plants)\n-   [*Locate Object*](#locate-object)\n-   [*Magic Mouth*](#magic-mouth)\n-   [*See Invisibility*](#see-invisibility)\n-   [*Shatter*](#shatter)\n-   [*Silence*](#silence)\n-   [*Suggestion*](#suggestion)\n-   [*Zone of Truth*](#zone-of-truth)\n- **Armor:** Light armor  \n**Weapons:** Simple weapons, hand crossbows, longswords, rapiers, shortswords  \n**Tools:** Thieves' tools  \n**Saving Throws:** Dexterity, Intelligence  \n**Skills:** Choose four from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, and Stealth"
         },
         "async_critic_scores": {
-            "rule_accuracy": 10,
-            "narrative_coherence": 9,
-            "npc_voice_consistency": 10,
-            "reasoning": "The DM response accurately reflects the rules context, as the player's intent to whisper to Elara is acknowledged and the scene is set for further exploration. The story advances meaningfully as the player is given a chance to continue searching for the hidden switch. Elara's presence is acknowledged, but she does not speak or act, so her NPC voice consistency is neutral."
+            "rule_accuracy": 4,
+            "narrative_coherence": 7,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: The response lacks engagement with any of the provided rules (spells/items) or mechanics, instead relying on generic descriptive text. narrative_coherence: The scene advances the search for the hidden switch while maintaining immersion, though it doesn't resolve the player's intent. npc_voice_consistency: Elara's actions align with an elf's traits (keen eyes, readiness), but without a retrieved profile, consistency can't be rigorously evaluated."
         },
         "player_intent": "While searching the tavern's cellar for the hidden switch, I whisper to Elara, 'Keep an eye on the door.'",
         "final_output": {
-            "response": "The dim torchlight flickers against the damp stone walls of the tavern's cellar, casting long, dancing shadows. The air is thick with the scent of aged wine and damp earth. Barrels and crates are stacked haphazardly, leaving narrow pathways to navigate through. Elara nods subtly in acknowledgment of your whisper, her eyes shifting toward the stairway leading up to the tavern's main floor. The cellar is quiet, save for the occasional drip of water from the ceiling and the distant murmur of voices upstairs. The hidden switch could be anywhere\u2014behind a barrel, under a crate, or perhaps concealed within a crack in the wall. What do you do next?",
+            "response": "The flickering torchlight casts long, dancing shadows across the damp stone walls of the tavern's cellar. The air is thick with the scent of aged wood and the faint, underlying tang of mildew. Barrels and crates are stacked haphazardly, leaving narrow pathways winding through the clutter. The floor is uneven, with cobblestones worn smooth by years of use, and the walls are lined with rusted iron brackets holding ancient, empty wine racks.\n\nElara Moonwhisper nods subtly in response to your whispered instruction, her keen elven eyes already focused on the narrow staircase leading back up to the tavern's main floor. Her fingers hover near the dagger at her belt, ready to react at a moment's notice.\n\nAs you continue your search, the cellar's shadows seem to deepen, as if conspiring to hide their secrets. The beam of your lantern cuts through the darkness, revealing more of the cellar's disarray. Dust motes swirl in the light, disturbed by your careful movements. The occasional scuttle of tiny paws or the distant drip of water echo through the underground space, adding to the sense of quiet urgency.\n\nThe search for the hidden switch is uncertain. (Roll Perception)",
             "pending_action": null
         }
     },
     {
-        "timestamp_utc": "2026-03-21T10:03:34.160753Z",
+        "timestamp_utc": "2026-03-23T07:56:09.816500Z",
         "architecture": "SPEAR",
-        "latency_ms": 70853,
+        "latency_ms": 154287,
         "latency_breakdown": {
             "safety_filter_ms": 0,
-            "router_ms": 8560,
-            "parallel_fetch_ms": 124,
-            "dm_ms": 62169,
+            "router_ms": 8798,
+            "parallel_fetch_ms": 142,
+            "dm_ms": 145346,
             "post_processing_ms": 1,
-            "total_ms": 70853
+            "total_ms": 154287
         },
-        "total_tokens": 3011,
+        "total_tokens": 3622,
         "token_breakdown": {
             "router": 396,
-            "dm": 1559,
-            "critic": 1056
+            "dm": 1584,
+            "critic": 1642
         },
         "routing_hallucination": true,
         "routes_fired": {
@@ -321,40 +321,40 @@
             "exploration": "Not retrieved."
         },
         "async_critic_scores": {
-            "rule_accuracy": 0,
-            "narrative_coherence": 0,
-            "npc_voice_consistency": 10,
-            "reasoning": "The player's action of jumping off the chandelier, grappling the bandit leader, and yelling 'Surrender!' does not match any of the rules listed in the context. The rules only cover simple actions like drawing a sword or taking a potion, not complex actions like grappling or jumping. Therefore, the tool call should not have used a Dexterity - Acrobatics roll. Additionally, a roll was not necessary to resolve the player's intent, as the DM could have simply described the outcome of the player's actions."
+            "rule_accuracy": 10,
+            "narrative_coherence": 10,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Strength (Athletics) is the correct stat/skill for grappling maneuvers. narrative_coherence: A grapple attempt requires a contested check, and rolling is the correct response. npc_voice_consistency: No dialogue generated, so score is fixed at 5 per calibration rules."
         },
         "player_intent": "I jump off the chandelier, attempt to grapple the bandit leader, and yell 'Surrender!' to his minions.",
         "final_output": {
-            "response": "The room holds its breath... (Roll Dexterity - Acrobatics)",
+            "response": "The room holds its breath... (Roll Strength - Athletics)",
             "pending_action": {
-                "dc": 15,
-                "internal_reasoning": "Attempting to grapple the bandit leader requires a Dexterity check to see if you can successfully grapple him after jumping off the chandelier.",
+                "stat": "Strength",
+                "skill": "Athletics",
                 "original_input": "I jump off the chandelier, attempt to grapple the bandit leader, and yell 'Surrender!' to his minions.",
-                "skill": "Acrobatics",
-                "stat": "Dexterity"
+                "internal_reasoning": "Jumping off the chandelier and attempting to grapple the bandit leader requires a Strength (Athletics) check to see if the player can successfully execute the maneuver. Yelling 'Surrender!' to the minions could potentially influence their actions, but the primary action here is the grapple attempt.",
+                "dc": 15
             }
         }
     },
     {
-        "timestamp_utc": "2026-03-21T10:04:40.284454Z",
+        "timestamp_utc": "2026-03-23T07:57:27.510171Z",
         "architecture": "SPEAR",
-        "latency_ms": 66115,
+        "latency_ms": 77684,
         "latency_breakdown": {
             "safety_filter_ms": 0,
-            "router_ms": 8716,
-            "parallel_fetch_ms": 143,
-            "dm_ms": 57255,
+            "router_ms": 8684,
+            "parallel_fetch_ms": 122,
+            "dm_ms": 68877,
             "post_processing_ms": 1,
-            "total_ms": 66115
+            "total_ms": 77684
         },
-        "total_tokens": 2325,
+        "total_tokens": 2994,
         "token_breakdown": {
             "router": 383,
-            "dm": 1227,
-            "critic": 715
+            "dm": 1229,
+            "critic": 1382
         },
         "routing_hallucination": true,
         "routes_fired": {
@@ -374,38 +374,38 @@
         "async_critic_scores": {
             "rule_accuracy": 0,
             "narrative_coherence": 0,
-            "npc_voice_consistency": 10,
-            "reasoning": "The player is asking about advantage on an attack roll, but the DM is asking for a Dexterity (Archery) roll, which is incorrect. The correct stat/skill for this action is Dexterity (Stealth), as the player is invisible and wants to attack a guard. Additionally, a dice roll is not necessary to answer the player's question about advantage."
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: The DM incorrectly requested a dice roll for an automatic advantage granted by invisibility. The rules state invisible attackers have advantage on attacks without requiring a check. narrative_coherence: No dice roll was needed as the advantage is automatic, not contingent on a check. npc_voice_consistency: 5 (not applicable for dialogue)"
         },
         "player_intent": "I am currently invisible and want to shoot my bow at the guard. Do I get advantage?",
         "final_output": {
-            "response": "The room holds its breath... (Roll dexterity - Archery)",
+            "response": "The room holds its breath... (Roll None - None)",
             "pending_action": {
-                "skill": "Archery",
-                "dc": 15,
+                "dc": 0,
+                "internal_reasoning": "The rules state that when a creature can't see you, you have advantage on attack rolls against it. Since you're invisible, you have advantage on your attack roll against the guard.",
                 "original_input": "I am currently invisible and want to shoot my bow at the guard. Do I get advantage?",
-                "internal_reasoning": "You are invisible, therefore you have advantage on the attack roll. I need a d20 roll to determine success.",
-                "stat": "dexterity"
+                "skill": "None",
+                "stat": "None"
             }
         }
     },
     {
-        "timestamp_utc": "2026-03-21T10:05:48.122627Z",
+        "timestamp_utc": "2026-03-23T07:59:06.783099Z",
         "architecture": "SPEAR",
-        "latency_ms": 67831,
+        "latency_ms": 99264,
         "latency_breakdown": {
             "safety_filter_ms": 0,
-            "router_ms": 8329,
-            "parallel_fetch_ms": 114,
-            "dm_ms": 59387,
+            "router_ms": 8291,
+            "parallel_fetch_ms": 134,
+            "dm_ms": 90837,
             "post_processing_ms": 1,
-            "total_ms": 67831
+            "total_ms": 99264
         },
-        "total_tokens": 2726,
+        "total_tokens": 3435,
         "token_breakdown": {
             "router": 384,
-            "dm": 1434,
-            "critic": 908
+            "dm": 1474,
+            "critic": 1577
         },
         "routing_hallucination": false,
         "routes_fired": {
@@ -423,40 +423,40 @@
             "exploration": "Not retrieved."
         },
         "async_critic_scores": {
-            "rule_accuracy": 8,
+            "rule_accuracy": 10,
             "narrative_coherence": 10,
-            "npc_voice_consistency": 10,
-            "reasoning": "The DM's response was accurate in calling for a Strength (Athletics) roll to determine the outcome of the grapple. However, the DM could have been more explicit in stating that the roll was to determine the success of the grapple, rather than just stating 'Roll Strength - Athletics'. The narrative coherence score is 10 because a dice roll is indeed necessary to resolve the player's intent. The NPC voice consistency score is 10 because no dialogue was generated."
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Perfect match to SRD grappling mechanics (Strength Athletics check vs target's Athletics/Acrobatics). narrative_coherence: Grappling requires a contested check, so a dice roll was genuinely needed. npc_voice_consistency: No dialogue generated, so score is neutral as per instructions."
         },
         "player_intent": "My fighter wants to grab the cultist and wrestle him to the ground. How does that work?",
         "final_output": {
             "response": "The room holds its breath... (Roll Strength - Athletics)",
             "pending_action": {
-                "dc": 10,
-                "internal_reasoning": "The player is attempting to grapple the target. This requires a Strength (Athletics) check contested by the target's Strength (Athletics) or Dexterity (Acrobatics) check.",
+                "internal_reasoning": "The player is attempting to grapple the cultist, which is a special melee attack that replaces an attack. The player needs to make a Strength (Athletics) check contested by the target's Strength (Athletics) or Dexterity (Acrobatics) check. The DC is set to 13, assuming the cultist is of similar size and strength.",
                 "original_input": "My fighter wants to grab the cultist and wrestle him to the ground. How does that work?",
+                "skill": "Athletics",
                 "stat": "Strength",
-                "skill": "Athletics"
+                "dc": 13
             }
         }
     },
     {
-        "timestamp_utc": "2026-03-21T10:06:51.956345Z",
+        "timestamp_utc": "2026-03-23T08:00:06.097572Z",
         "architecture": "SPEAR",
-        "latency_ms": 63826,
+        "latency_ms": 59306,
         "latency_breakdown": {
             "safety_filter_ms": 0,
-            "router_ms": 8398,
-            "parallel_fetch_ms": 375,
-            "dm_ms": 55050,
-            "post_processing_ms": 3,
-            "total_ms": 63826
+            "router_ms": 8182,
+            "parallel_fetch_ms": 474,
+            "dm_ms": 50648,
+            "post_processing_ms": 2,
+            "total_ms": 59306
         },
-        "total_tokens": 2755,
+        "total_tokens": 3430,
         "token_breakdown": {
             "router": 377,
-            "dm": 1396,
-            "critic": 982
+            "dm": 1337,
+            "critic": 1716
         },
         "routing_hallucination": false,
         "routes_fired": {
@@ -474,34 +474,34 @@
             "exploration": "Not retrieved."
         },
         "async_critic_scores": {
-            "rule_accuracy": 8,
-            "narrative_coherence": 9,
-            "npc_voice_consistency": 10,
-            "reasoning": "The DM response accurately reflects the rules context, stating that casting Magic Missile requires attack rolls. The story advances meaningfully as the player is clarifying the rules for their spellcasting. Since there are no named NPCs, the NPC voice consistency score is 10."
+            "rule_accuracy": 10,
+            "narrative_coherence": 10,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Correctly states Magic Missile requires attack rolls per SRD rules. narrative_coherence: Directly answers player's question without narrative fluff. npc_voice_consistency: No named NPCs present, so score is 5 as per calibration rules."
         },
         "player_intent": "I want to cast Magic Missile. Does it require an attack roll?",
         "final_output": {
-            "response": "Yes, casting *magic missile* requires attack rolls. Each missile strikes a single target of your choice that you have a clear path to and that is within the spell\u2019s range. The target must be within the spell\u2019s range\u2014typically 120 feet for *magic missile*. For each missile, make a separate attack roll, and the target has no opportunity to dodge or defend against the missiles.",
+            "response": "Yes, casting *Magic Missile* requires an attack roll. Each missile strikes the target for force damage, and you make a separate attack roll for each missile.",
             "pending_action": null
         }
     },
     {
-        "timestamp_utc": "2026-03-21T10:08:32.454153Z",
+        "timestamp_utc": "2026-03-23T08:01:47.254712Z",
         "architecture": "SPEAR",
-        "latency_ms": 100489,
+        "latency_ms": 101148,
         "latency_breakdown": {
             "safety_filter_ms": 0,
-            "router_ms": 8425,
-            "parallel_fetch_ms": 124,
-            "dm_ms": 91938,
+            "router_ms": 8441,
+            "parallel_fetch_ms": 118,
+            "dm_ms": 92587,
             "post_processing_ms": 1,
-            "total_ms": 100489
+            "total_ms": 101148
         },
-        "total_tokens": 2345,
+        "total_tokens": 3108,
         "token_breakdown": {
             "router": 379,
-            "dm": 1193,
-            "critic": 773
+            "dm": 1114,
+            "critic": 1615
         },
         "routing_hallucination": true,
         "routes_fired": {
@@ -519,34 +519,232 @@
             "exploration": "Not retrieved."
         },
         "async_critic_scores": {
-            "rule_accuracy": 10,
-            "narrative_coherence": 10,
-            "npc_voice_consistency": 10,
-            "reasoning": "The DM response accurately reflects the rules context, the story advances meaningfully by clarifying the outcome of dropping to 0 hit points, and there are no named NPCs in the intent or response."
+            "rule_accuracy": 7,
+            "narrative_coherence": 9,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Correctly states unconsciousness but omits the 'die outright' alternative from the rules, creating a minor gap. narrative_coherence: Directly answers the player's question with clear mechanics without breaking immersion. npc_voice_consistency: No named NPCs involved, so consistency is not applicable."
         },
         "player_intent": "What happens to my character if I drop to exactly 0 hit points?",
         "final_output": {
-            "response": "If your character drops to exactly 0 hit points, they fall unconscious. This unconsciousness ends if you regain any hit points. The specific rules are as follows:\n\n- When you drop to 0 hit points, you either die outright or fall unconscious, depending on how precise the killing blow or blows were.\n- If damage reduces you to 0 hit points and fails to kill you, you fall unconscious. This unconsciousness ends if you regain any hit points.\n- Hit points represent a combination of physical and mental durability, the will to live, and luck. Creatures with more hit points are more difficult to kill. Those with fewer hit points are more fragile.\n- A creature's current hit points can be any number from the creature's hit point maximum down to 0. This number changes frequently as a creature takes damage or receives healing.\n- Whenever a creature takes damage, that damage is subtracted from its hit points. The loss of hit points has no effect on a creature's capabilities until the creature drops to 0 hit points.",
+            "response": "When your character drops to exactly 0 hit points, they fall unconscious. This unconsciousness ends if they regain any hit points.\n\nHit points represent a combination of physical and mental durability, the will to live, and luck. Creatures with more hit points are more difficult to kill. Those with fewer hit points are more fragile.\n\nA creature's current hit points can be any number from the creature's hit point maximum down to 0. This number changes frequently as a creature takes damage or receives healing. Whenever a creature takes damage, that damage is subtracted from its hit points. The loss of hit points has no effect on a creature's capabilities until the creature drops to 0 hit points.",
             "pending_action": null
         }
     },
     {
-        "timestamp_utc": "2026-03-21T10:09:12.469695Z",
+        "timestamp_utc": "2026-03-23T08:03:17.627990Z",
         "architecture": "SPEAR",
-        "latency_ms": 40009,
+        "latency_ms": 90367,
         "latency_breakdown": {
             "safety_filter_ms": 0,
-            "router_ms": 7867,
-            "parallel_fetch_ms": 222,
-            "dm_ms": 31917,
-            "post_processing_ms": 2,
-            "total_ms": 40009
+            "router_ms": 8108,
+            "parallel_fetch_ms": 127,
+            "dm_ms": 82129,
+            "post_processing_ms": 3,
+            "total_ms": 90367
         },
-        "total_tokens": 2793,
+        "total_tokens": 3046,
+        "token_breakdown": {
+            "router": 382,
+            "dm": 1222,
+            "critic": 1442
+        },
+        "routing_hallucination": true,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- *Ring, rare (requires [attunement](#section-attunement))*  \nThis ring has 3 charges, and it regains 1d3 expended charges daily at dawn. When you fail a Dexterity saving throw while wearing it, you can use your reaction to expend 1 of its charges to succeed on that saving throw instead.\n- *Wondrous item, uncommon (requires [attunement](#section-attunement))*  \nWhile wearing this amulet, you are hidden from divination magic. You can't be targeted by such magic or perceived through magical scrying sensors.\n- ***Sleight of Hand.*** Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an object on your person, make a Dexterity (Sleight of Hand) check. The GM might also call for a Dexterity (Sleight of Hand) check to determine whether you can lift a coin purse off another person or slip something out of another person's pocket.  \n***Stealth.*** Make a Dexterity (Stealth) check when you attempt to conceal yourself from enemies, slink past guards, slip away without being noticed, or sneak up on someone without being seen or heard.  \n***Other Dexterity Checks.*** The GM might call for a Dexterity check when you try to accomplish tasks like the following:  \n-   Control a heavily laden cart on a steep descent\n-   Steer a chariot around a tight turn\n-   Pick a lock\n-   Disable a trap\n-   Securely tie up a prisoner\n-   Wriggle free of bonds\n-   Play a stringed instrument\n-   Craft a small or detailed object",
+            "npc_lore": "Not retrieved.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 10,
+            "narrative_coherence": 10,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Correctly used Sleight of Hand skill and Dexterity stat as required by the rules. narrative_coherence: A Dexterity (Sleight of Hand) check is explicitly mandated for picking a coin purse, making the roll necessary. npc_voice_consistency: No dialogue generated, so this dimension is not applicable."
+        },
+        "player_intent": "I try to pickpocket Arin's coin purse without him noticing.",
+        "final_output": {
+            "response": "The room holds its breath... (Roll Dexterity - Sleight of Hand)",
+            "pending_action": {
+                "internal_reasoning": "The action requires a Dexterity (Sleight of Hand) check to attempt to lift a coin purse off another person without being noticed.",
+                "original_input": "I try to pickpocket Arin's coin purse without him noticing.",
+                "skill": "Sleight of Hand",
+                "stat": "Dexterity",
+                "dc": 15
+            }
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T08:04:45.922933Z",
+        "architecture": "SPEAR",
+        "latency_ms": 88289,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8671,
+            "parallel_fetch_ms": 129,
+            "dm_ms": 79487,
+            "post_processing_ms": 1,
+            "total_ms": 88289
+        },
+        "total_tokens": 2683,
+        "token_breakdown": {
+            "router": 379,
+            "dm": 1135,
+            "critic": 1169
+        },
+        "routing_hallucination": true,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- In addition to managing a crew of selfish malcontents, the **pirate captain** is a variation of the bandit captain, with a ship to protect and command. To keep the crew in line, the captain must mete out rewards and punishment on a regular basis.  \nMore than treasure, a bandit captain or pirate captain craves infamy. A prisoner who appeals to the captain's vanity or ego is more likely to be treated fairly than a prisoner who does not or claims not to know anything of the captain's colorful reputation.\n- Using the Attack action, you can make a special melee attack to shove a creature, either to knock it [prone](#prone) or push it away from you. If you're able to make multiple attacks with the Attack action, this attack replaces one of them.  \nThe target must be no more than one size larger than you and must be within your reach. Instead of making an attack roll, you make a Strength (Athletics) check contested by the target's Strength (Athletics) or Dexterity (Acrobatics) check (the target chooses the ability to use). If you win the contest, you either knock the target prone or push it 5 feet away from you.\n- A classic expression of the ranger ideal is the Hunter.",
+            "npc_lore": "Not retrieved.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 10,
+            "narrative_coherence": 10,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Correctly used Strength (Athletics) for a shove attempt per the rules. narrative_coherence: Shoving requires a contested check, so rolling is mandatory. npc_voice_consistency: No dialogue generated, so score is fixed at 5 per instructions."
+        },
+        "player_intent": "I attempt to shove the bandit captain backwards into the fireplace.",
+        "final_output": {
+            "response": "The room holds its breath... (Roll Strength - Athletics)",
+            "pending_action": {
+                "dc": 15,
+                "internal_reasoning": "Shoving the bandit captain requires a Strength (Athletics) check contested by the captain's Strength (Athletics) or Dexterity (Acrobatics) check. The DC is set at 15 assuming the captain is of similar size and strength.",
+                "original_input": "I attempt to shove the bandit captain backwards into the fireplace.",
+                "skill": "Athletics",
+                "stat": "Strength"
+            }
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T08:05:39.376203Z",
+        "architecture": "SPEAR",
+        "latency_ms": 53446,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8315,
+            "parallel_fetch_ms": 124,
+            "dm_ms": 45005,
+            "post_processing_ms": 1,
+            "total_ms": 53446
+        },
+        "total_tokens": 2602,
+        "token_breakdown": {
+            "router": 385,
+            "dm": 948,
+            "critic": 1269
+        },
+        "routing_hallucination": false,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- As a conduit for divine power, you can cast cleric spells.\n- Beginning at 18th level, you can use your action to spend 4 ki points to become [invisible](#invisible) for 1 minute. During that time, you also have resistance to all damage but force damage.  \nAdditionally, you can spend 8 ki points to cast the [*astral projection*](#astral-projection) spell, without needing material components. When you do so, you can't take any other creatures with you.\n- You can cast [*mage armor*](#mage-armor) on yourself at will, without expending a spell slot or material components.",
+            "npc_lore": "Not retrieved.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 9,
+            "narrative_coherence": 9,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Correctly states concentration can be maintained on Bless while casting Invisibility, though omitted the resistance to damage feature from the class ability. narrative_coherence: Directly addresses the player's intent with clear mechanics. npc_voice_consistency: No named NPCs involved, so consistency is not applicable."
+        },
+        "player_intent": "I'm concentrating on Bless and I want to cast Invisibility on myself. Can I do both?",
+        "final_output": {
+            "response": "Yes, you can cast *Invisibility* on yourself while concentrating on *Bless*. However, you must maintain concentration on *Bless*. If you take damage or fail a concentration check, you could lose your concentration on *Bless*.",
+            "pending_action": null
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T08:07:09.275358Z",
+        "architecture": "SPEAR",
+        "latency_ms": 89893,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8371,
+            "parallel_fetch_ms": 139,
+            "dm_ms": 81381,
+            "post_processing_ms": 1,
+            "total_ms": 89893
+        },
+        "total_tokens": 3463,
+        "token_breakdown": {
+            "router": 384,
+            "dm": 1599,
+            "critic": 1480
+        },
+        "routing_hallucination": false,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": true
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- When you take the Hide action, you make a Dexterity (Stealth) check in an attempt to hide, following the rules for hiding. If you succeed, you gain certain benefits, as described in the \"[Unseen Attackers and Targets](#unseen-attackers-and-targets)\" section.\n- Starting at 14th level, you can use the Hide action as a bonus action on your turn. Also, you can't be tracked by nonmagical means, unless you choose to leave a trail.\n- >\n> An [invisible](#invisible) creature can always try to hide. Signs of its passage might still be noticed, and it does have to stay quiet.\n>\n> In combat, most creatures stay alert for signs of danger all around, so if you come out of hiding and approach a creature, it usually sees you. However, under certain circumstances, the GM might allow you to stay hidden as you approach a creature that is distracted, allowing you to gain advantage on an attack roll before you are seen.\n>",
+            "npc_lore": "Not retrieved.",
+            "exploration": "- At the beginning of every combat, you roll initiative by making a Dexterity check. Initiative determines the order of creatures' turns in combat.  \n> #### Hiding\n>\n> The GM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are discovered or you stop hiding, that check's total is contested by the Wisdom (Perception) check of any creature that actively searches for signs of your presence.\n>\n> You can't hide from a creature that can see you clearly, and you give away your position if you make noise, such as shouting a warning or knocking over a vase.\n>\n> An [invisible](#invisible) creature can always try to hide. Signs of its passage might still be noticed, and it does have to stay quiet.\n>\n- Starting at 14th level, you can use the Hide action as a bonus action on your turn. Also, you can't be tracked by nonmagical means, unless you choose to leave a trail.\n- When you take the Hide action, you make a Dexterity (Stealth) check in an attempt to hide, following the rules for hiding. If you succeed, you gain certain benefits, as described in the \"[Unseen Attackers and Targets](#unseen-attackers-and-targets)\" section."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 10,
+            "narrative_coherence": 10,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Dexterity (Stealth) check matches the required mechanic for hiding. narrative_coherence: Hiding in combat requires an action and a contested check, making the roll mandatory. npc_voice_consistency: No dialogue generated, so consistency score is neutral."
+        },
+        "player_intent": "I want to hide behind the bar mid-combat. Do I need to take an action for that?",
+        "final_output": {
+            "response": "The room holds its breath... (Roll dexterity - stealth)",
+            "pending_action": {
+                "dc": 15,
+                "stat": "dexterity",
+                "skill": "stealth",
+                "original_input": "I want to hide behind the bar mid-combat. Do I need to take an action for that?",
+                "internal_reasoning": "Hiding is an action, and in combat, you need to take the Hide action to attempt to hide. The DC is 15 because you are trying to hide behind the bar in the middle of a tavern, which is a moderately busy and noisy environment. This could potentially draw attention or be noticed by others."
+            }
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T08:08:23.237091Z",
+        "architecture": "SPEAR",
+        "latency_ms": 73954,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8044,
+            "parallel_fetch_ms": 118,
+            "dm_ms": 65790,
+            "post_processing_ms": 1,
+            "total_ms": 73954
+        },
+        "total_tokens": 3753,
         "token_breakdown": {
             "router": 380,
-            "dm": 1500,
-            "critic": 913
+            "dm": 1557,
+            "critic": 1816
         },
         "routing_hallucination": false,
         "routes_fired": {
@@ -564,79 +762,79 @@
             "exploration": "Not retrieved."
         },
         "async_critic_scores": {
-            "rule_accuracy": 0,
-            "narrative_coherence": 0,
-            "npc_voice_consistency": 10,
-            "reasoning": "The DM response does not reflect the RULES context, as it is not related to the pirate captain or the Void. The story does not advance meaningfully given the player intent, as it is unrelated to the context. Thrain Blackbeard is present but silent, so the NPC voice consistency score is neutral."
+            "rule_accuracy": 4,
+            "narrative_coherence": 5,
+            "npc_voice_consistency": 7,
+            "reasoning": "rule_accuracy: No rules from the provided context were applied; the response lacks mechanical references to the Void, Sphere of Annihilation, or pirate captain mechanics. narrative_coherence: The response engages with the player's intent but doesn't advance the story or connect to world state. npc_voice_consistency: Thrain uses nautical slang and shows curiosity, aligning with his profile, but lacks dramatic flair or sea shanty elements from his established quirks."
         },
         "player_intent": "I ask Thrain Blackbeard about his time serving on the Starship Enterprise.",
         "final_output": {
-            "response": "I'm sorry, but I can't assist with that. How can I help you with your tabletop RPG session?",
+            "response": "Thrain Blackbeard, a rugged human barbarian with a thick beard and a weather-beaten face, raises an eyebrow at you. \"Starship Enterprise, ye say? Never heard of it. But I've sailed the seven seas and battled kraken in waters ye wouldn't believe. What's this starship, then? Some fancy new vessel?\" He leans in, his eyes gleaming with curiosity and a hint of skepticism.",
             "pending_action": null
         }
     },
     {
-        "timestamp_utc": "2026-03-21T10:09:56.637188Z",
+        "timestamp_utc": "2026-03-23T08:09:59.359400Z",
         "architecture": "SPEAR",
-        "latency_ms": 44160,
+        "latency_ms": 96115,
         "latency_breakdown": {
             "safety_filter_ms": 0,
-            "router_ms": 8316,
-            "parallel_fetch_ms": 166,
-            "dm_ms": 35677,
+            "router_ms": 7945,
+            "parallel_fetch_ms": 133,
+            "dm_ms": 88036,
             "post_processing_ms": 1,
-            "total_ms": 44160
+            "total_ms": 96115
         },
-        "total_tokens": 3895,
+        "total_tokens": 3170,
         "token_breakdown": {
-            "router": 384,
-            "dm": 2072,
-            "critic": 1439
+            "router": 382,
+            "dm": 1228,
+            "critic": 1560
         },
         "routing_hallucination": false,
         "routes_fired": {
             "rules_logic": true,
             "npc_lore": false,
-            "world_exploration": true
+            "world_exploration": false
         },
         "retrieval_types": {
             "rag_vector": true,
             "kv_lookup": false
         },
         "retrieved_context": {
-            "rules": "- *Potion, rare*  \nWhen you drink this potion, you gain the effect of the [*gaseous form*](#gaseous-form) spell for 1 hour (no concentration required) or until you end the effect as a bonus action. This potion's container seems to hold fog that moves and pours like water.\n- ***At Higher Levels.*** When you cast this spell using a spell slot of 6th level or higher, the spell lasts until dispelled, without requiring your concentration.\n- *1st-level transmutation*  \n**Classes:** [Cleric](#section-cleric), [Druid](#section-druid)  \n**Casting Time:** 1 action  \n**Range:** 30 feet  \n**Components:** V, S, M (a drop of water if creating water or a few grains of sand if destroying it)  \n**Duration:** Instantaneous  \nYou either create or destroy water.  \n***Create Water.*** You create up to 10 gallons of clean water within range in an open container. Alternatively, the water falls as rain in a 30-foot cube within range, extinguishing exposed flames in the area.  \n***Destroy Water.*** You destroy up to 10 gallons of water in an open container within range. Alternatively, you destroy fog in a 30-foot cube within range.  \n***At Higher Levels.*** When you cast this spell using a spell slot of 2nd level or higher, you create or destroy 10 additional gallons of water, or the size of the cube increases by 5 feet, for each slot level above 1st.",
+            "rules": "- *Ring, legendary*  \nWhile wearing this ring, you can use an action to expend 1 of its 3 charges to cast the [*wish*](#wish) spell from it. The ring becomes nonmagical when you use the last charge.\n- The stress of casting this spell to produce any effect other than duplicating another spell weakens you. After enduring that stress, each time you cast a spell until you finish a long rest, you take 1d10 necrotic damage per level of that spell. This damage can't be reduced or prevented in any way. In addition, your Strength drops to 3, if it isn't 3 or lower already, for 2d4 days. For each of those days that you spend resting and doing nothing more than light activity, your remaining recovery time decreases by 2 days. Finally, there is a 33 percent chance that you are unable to cast wish ever again if you suffer this stress.\n- You might be able to achieve something beyond the scope of the above examples. State your wish to the GM as precisely as possible. The GM has great latitude in ruling what occurs in such an instance; the greater the wish, the greater the likelihood that something goes wrong. This spell might simply fail, the effect you desire might only be partly achieved, or you might suffer some unforeseen consequence as a result of how you worded the wish. For example, wishing that a villain were dead might propel you forward in time to a period when that villain is no longer alive, effectively removing you from the game. Similarly, wishing for a legendary magic item or artifact might instantly transport you to the presence of the item's current owner.",
             "npc_lore": "Not retrieved.",
-            "exploration": "- 2nd level (3 slots): [*detect thoughts*](#detect-thoughts), [*mirror image*](#mirror-image), [*misty step*](#misty-step)  \n3rd level (3 slots): [*counterspell*](#counterspell), [*fly*](#fly), [*lightning bolt*](#lightning-bolt)  \n4th level (3 slots): [*banishment*](#banishment), [*fire shield*](#fire-shield), [*stoneskin*](#stoneskin)  \n5th level (3 slots): [*cone of cold*](#cone-of-cold), [*scrying*](#scrying), [*wall of force*](#wall-of-force)  \n6th level (1 slot): [*globe of invulnerability*](#globe-of-invulnerability)  \n7th level (1 slot): [*teleport*](#teleport)  \n8th level (1 slot): [*mind blank*](#mind-blank)  \n9th level (1 slot): [*time stop*](#time-stop)  \n\\* *The archmage casts these spells on itself before combat.*  \n##### Actions  \n***Dagger.*** *Melee or Ranged Weapon Attack:* +6 to hit, reach 5 ft. or range 20/60 ft., one target. *Hit:* 4 (1d4 + 2) piercing damage.\n- **Damage Resistances** acid, cold, fire, necrotic, thunder; bludgeoning, piercing, and slashing from nonmagical attacks  \n**Condition Immunities** [exhaustion](#exhaustion), [grappled](#grappled), [paralyzed](#paralyzed), [poisoned](#poisoned), [prone](#prone), [restrained](#restrained), [unconscious](#unconscious)  \n**Senses** darkvision 120 ft., passive Perception 12  \n**Languages** the languages it knew in life  \n**Challenge** 2 (450 XP)  \n***Consume Life.*** As a bonus action, the will-o'-wisp can target one creature it can see within 5 feet of it that has 0 hit points and is still alive. The target must succeed on a DC 10 Constitution saving throw against this magic or die. If the target dies, the will-o'-wisp regains 10 (3d6) hit points.  \n***Ephemeral.*** The will-o'-wisp can't wear or carry anything.\n- </tr>\n</tbody>\n</table>  \n**Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks  \n**Damage Immunities** fire, poison  \n**Condition Immunities** [exhaustion](#exhaustion), [grappled](#grappled), [paralyzed](#paralyzed), [petrified](#petrified), [poisoned](#poisoned), [prone](#prone), [restrained](#restrained), [unconscious](#unconscious)  \n**Senses** darkvision 60 ft., passive Perception 10  \n**Languages** Ignan  \n**Challenge** 5 (1,800 XP)"
+            "exploration": "Not retrieved."
         },
         "async_critic_scores": {
-            "rule_accuracy": 0,
-            "narrative_coherence": 0,
-            "npc_voice_consistency": 10,
-            "reasoning": "The DM response does not address the player's intent to cast a Level 12 spell, which is not a valid spell in the context provided. The story does not advance meaningfully because the DM does not engage with the player's intent. There are no named NPCs in the intent or response, so the NPC voice consistency score is 10."
+            "rule_accuracy": 4,
+            "narrative_coherence": 4,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: The response ignored the ring's charge depletion, stress damage, Strength penalty, and wish failure mechanics from the retrieved rules. narrative_coherence: The response failed to address the player's wish action or its consequences, offering only generic advice. npc_voice_consistency: No named NPCs appeared, so consistency is irrelevant."
         },
-        "player_intent": "I cast a Level 12 spell to completely vaporize the entire tavern and everyone in it.",
+        "player_intent": "I cast a level 9 Wish spell to make the King abdicate his throne immediately.",
         "final_output": {
-            "response": "I'm sorry, but I can't assist with that. How can I help you with your tabletop RPG session?",
+            "response": "I'm here to help with questions and guidance within the D&D 5e rules. However, casting a level 9 Wish spell to make the King abdicate his throne immediately is a complex and significant action with many potential consequences. It's best discussed with your Dungeon Master, as it will greatly impact the story and world.\n\nIf you'd like, I can help you understand the mechanics of the Wish spell or suggest some role-playing approaches to handle such a situation. How can I assist you further?",
             "pending_action": null
         }
     },
     {
-        "timestamp_utc": "2026-03-21T10:10:45.576839Z",
+        "timestamp_utc": "2026-03-23T08:11:08.779892Z",
         "architecture": "SPEAR",
-        "latency_ms": 48930,
+        "latency_ms": 69416,
         "latency_breakdown": {
             "safety_filter_ms": 0,
-            "router_ms": 8528,
-            "parallel_fetch_ms": 144,
-            "dm_ms": 40258,
+            "router_ms": 8312,
+            "parallel_fetch_ms": 121,
+            "dm_ms": 60982,
             "post_processing_ms": 1,
-            "total_ms": 48930
+            "total_ms": 69416
         },
-        "total_tokens": 2128,
+        "total_tokens": 2865,
         "token_breakdown": {
             "router": 379,
-            "dm": 1074,
-            "critic": 675
+            "dm": 1081,
+            "critic": 1405
         },
         "routing_hallucination": true,
         "routes_fired": {
@@ -654,34 +852,34 @@
             "exploration": "Not retrieved."
         },
         "async_critic_scores": {
-            "rule_accuracy": 10,
-            "narrative_coherence": 0,
-            "npc_voice_consistency": 10,
-            "reasoning": "The DM response accurately reflects the rules context, as the M16 assault rifle is not a valid item in the setting. However, the story does not advance meaningfully, as the player's intent is not acknowledged or addressed in a way that contributes to the narrative. Since there are no named NPCs, the NPC voice consistency score is 10."
+            "rule_accuracy": 7,
+            "narrative_coherence": 4,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Correctly rejects modern weapons but fails to engage with the fantasy setting's weapon rules or consequences. narrative_coherence: Ignores player intent entirely and provides no narrative context or consequences for the action. npc_voice_consistency: No named NPCs present, so consistency is irrelevant."
         },
         "player_intent": "I pull out my M16 assault rifle and point it at the ceiling.",
         "final_output": {
-            "response": "I'm sorry, but items like M16 assault rifles don't exist in this fantasy tabletop RPG setting. How can I assist you with your adventure in the world of the Black Boar Tavern?",
+            "response": "I'm here to help with questions and guidance within the D&D 5e rules. However, introducing modern-day weapons like an M16 assault rifle isn't consistent with the fantasy setting of Dungeons & Dragons 5e.",
             "pending_action": null
         }
     },
     {
-        "timestamp_utc": "2026-03-21T10:11:52.468561Z",
+        "timestamp_utc": "2026-03-23T08:12:29.808773Z",
         "architecture": "SPEAR",
-        "latency_ms": 66866,
+        "latency_ms": 81019,
         "latency_breakdown": {
             "safety_filter_ms": 0,
-            "router_ms": 8377,
-            "parallel_fetch_ms": 223,
-            "dm_ms": 58265,
-            "post_processing_ms": 1,
-            "total_ms": 66866
+            "router_ms": 8546,
+            "parallel_fetch_ms": 216,
+            "dm_ms": 72253,
+            "post_processing_ms": 2,
+            "total_ms": 81019
         },
-        "total_tokens": 3148,
+        "total_tokens": 3929,
         "token_breakdown": {
             "router": 388,
-            "dm": 1749,
-            "critic": 1011
+            "dm": 1731,
+            "critic": 1810
         },
         "routing_hallucination": false,
         "routes_fired": {
@@ -699,40 +897,34 @@
             "exploration": "Not retrieved."
         },
         "async_critic_scores": {
-            "rule_accuracy": 0,
-            "narrative_coherence": 0,
-            "npc_voice_consistency": 10,
-            "reasoning": "The player's intent to take the King's crown does not involve any skills or abilities that would require a Persuasion check. The correct response from the DM should be to clarify the player's intent or to explain the consequences of taking the crown, rather than calling for a dice roll."
+            "rule_accuracy": 5,
+            "narrative_coherence": 3,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: The DM correctly acknowledges DM discretion but fails to apply Persuasion mechanics or resolve the check, ignoring the rule that contests require comparing check totals. narrative_coherence: The response ignores the player's action entirely, providing no narrative progression or consequence for the Persuasion success. npc_voice_consistency: No NPCs appear in the response, so consistency is not applicable."
         },
         "player_intent": "I tell the DM that I succeed on a DC 25 Persuasion check to make the King give me his crown.",
         "final_output": {
-            "response": "The room holds its breath... (Roll Charisma - Persuasion)",
-            "pending_action": {
-                "dc": 25,
-                "internal_reasoning": "Persuasion is the relevant skill for convincing the King to give you his crown. The DC is set by the DM based on the difficulty of the task.",
-                "original_input": "I tell the DM that I succeed on a DC 25 Persuasion check to make the King give me his crown.",
-                "skill": "Persuasion",
-                "stat": "Charisma"
-            }
+            "response": "I'm here to help with questions and guidance within the D&D 5e rules. However, resolving the outcome of a Persuasion check to make the King give you his crown involves roleplaying and storytelling elements that are up to the Dungeon Master's discretion. If you have specific mechanics or rules you'd like to discuss, feel free to ask!",
+            "pending_action": null
         }
     },
     {
-        "timestamp_utc": "2026-03-21T10:12:58.742316Z",
+        "timestamp_utc": "2026-03-23T08:14:20.735549Z",
         "architecture": "SPEAR",
-        "latency_ms": 66266,
+        "latency_ms": 110919,
         "latency_breakdown": {
             "safety_filter_ms": 0,
             "router_ms": 0,
             "parallel_fetch_ms": 1,
-            "dm_ms": 66265,
-            "post_processing_ms": 0,
-            "total_ms": 66266
+            "dm_ms": 110917,
+            "post_processing_ms": 1,
+            "total_ms": 110919
         },
-        "total_tokens": 1992,
+        "total_tokens": 3680,
         "token_breakdown": {
             "router": 0,
-            "dm": 1191,
-            "critic": 801
+            "dm": 1333,
+            "critic": 2347
         },
         "routing_hallucination": false,
         "routes_fired": {
@@ -750,34 +942,34 @@
             "exploration": "Not retrieved."
         },
         "async_critic_scores": {
-            "rule_accuracy": 0,
+            "rule_accuracy": 5,
             "narrative_coherence": 9,
-            "npc_voice_consistency": 8,
-            "reasoning": "The DM response does not accurately reflect the rules context, as there is no mention of Thrain Blackbeard's ability to drink or his motivation to find the strongest drink in the land. However, the story does advance meaningfully given the player intent, as the DM response acknowledges the player's display of strength and sets the stage for potential job opportunities. Thrain Blackbeard's voice is consistent with his NPC profile, as he uses nautical slang and breaks into a sea shanty-like phrase."
+            "npc_voice_consistency": 10,
+            "reasoning": "rule_accuracy: The response incorrectly applied the Strength (Athletics) check to a Dexterity-based action (hiding behind a bar). The DM should have used Dexterity instead of Strength, violating core mechanics. narrative_coherence: The scene advances smoothly with immersive tension and NPC reactions, maintaining engagement. npc_voice_consistency: All NPCs perfectly match their profiles\u2014Thrain\u2019s nautical slang, Elara\u2019s rhyming, and Arin\u2019s rogue-like boasting\u2014without deviation."
         },
         "player_intent": "[SYSTEM: ROLL_RESOLUTION | STAT: Strength | SKILL: Athletics | RESULT: 18]",
         "final_output": {
-            "response": "Thrain Blackbeard raises an eyebrow, impressed by your display of strength. \"By the Davy Jones' locker, that's a feat worthy of a seasoned sailor!\" he exclaims, his voice booming above the tavern's chatter. \"I've seen lads half your size struggle with half the weight. You've got the gusto of a storm-tossed captain!\"\n\nElara Moonwhisper claps her hands delightedly, her laughter like a silver bell. \"Oh, what a show of might and main! The tavern's walls do shake and strain! Tell me, dear adventurer, do you have a name that's just as grand?\"\n\nArin the Bold leans in, a sly grin playing on his lips. \"Nice work, big guy. You're a regular strongman. But tell me, can you handle more than just heavy lifting? We might have a job that needs a bit of muscle... and a lot of finesse.\"",
+            "response": "Your attempt to hide behind the bar is met with a mix of tension and disbelief. The room holds its breath as the dice roll determines your fate. With a roll of 18, you manage to duck behind the bar with surprising agility, avoiding the immediate danger.\n\nThrain Blackbeard, a rugged human barbarian with a thick beard and a weather-beaten face, raises an eyebrow at your question about the Starship Enterprise. \"Starship what now, mate?\" he grumbles, his voice as rough as the sea. \"I've sailed the seven seas and never heard of such a vessel. Must be a new kind of ship, aye?\" He takes a swig of his ale, his eyes narrowing as he studies you.\n\nElara Moonwhisper, a half-elf bard with an air of mystery, tilts her head and smiles. \"The starship you speak of, a tale most strange, in the night sky, does it sail and range?\" she asks, her voice melodic and rhythmic. \"Or does it sail the seas, a ship of wonder, a sight to see, a tale to ponder?\"\n\nArin the Bold, a human rogue with a mischievous gleam in his eye, leans in closer. \"I've heard of stars, but never a starship,\" he says, his voice low. \"But if it's a job you're looking for, I might know a thing or two about heists and adventures. What's in it for me, eh?\"\n\nThe tension in the room is palpable, and the other patrons watch with bated breath, waiting to see what will happen next.",
             "pending_action": null
         }
     },
     {
-        "timestamp_utc": "2026-03-21T10:14:29.842146Z",
+        "timestamp_utc": "2026-03-23T08:16:23.112832Z",
         "architecture": "SPEAR",
-        "latency_ms": 91095,
+        "latency_ms": 122371,
         "latency_breakdown": {
             "safety_filter_ms": 0,
             "router_ms": 0,
             "parallel_fetch_ms": 1,
-            "dm_ms": 91092,
+            "dm_ms": 122368,
             "post_processing_ms": 2,
-            "total_ms": 91095
+            "total_ms": 122371
         },
-        "total_tokens": 2033,
+        "total_tokens": 3374,
         "token_breakdown": {
             "router": 0,
-            "dm": 1206,
-            "critic": 827
+            "dm": 1186,
+            "critic": 2188
         },
         "routing_hallucination": false,
         "routes_fired": {
@@ -795,34 +987,34 @@
             "exploration": "Not retrieved."
         },
         "async_critic_scores": {
-            "rule_accuracy": 0,
+            "rule_accuracy": 8,
             "narrative_coherence": 8,
-            "npc_voice_consistency": 9,
-            "reasoning": "The DM response does not accurately reflect the rules context, as there is no indication of any rules being broken or referenced. The story advances meaningfully as the player's attempt at stealth is foiled, and the NPCs react accordingly. Thrain Blackbeard's response is consistent with his NPC profile, using nautical slang and breaking into a sea shanty. Elara Moonwhisper's response is also consistent, using rhyming couplets and dramatic flair. Arin the Bold's response is somewhat inconsistent, as his NPC profile suggests he would use slang and boast about his skills, but he instead uses a more formal tone."
+            "npc_voice_consistency": 10,
+            "reasoning": "rule_accuracy: Correctly implies a failed Stealth check via character reactions but lacks explicit DC or result mention. narrative_coherence: Advances the story by showing character reactions and potential plot progression. npc_voice_consistency: Perfectly matches all three NPCs' established traits, dialogue, and quirks without deviation."
         },
         "player_intent": "[SYSTEM: ROLL_RESOLUTION | STAT: Dexterity | SKILL: Stealth | RESULT: 4]",
         "final_output": {
-            "response": "Thrain Blackbeard, ever the boisterous presence, seems oblivious to your clumsy attempt at stealth. You manage to trip over a chair, sending it clattering to the ground. The tavern's patrons turn to stare, and Thrain chuckles, raising his tankard in your direction. \"Well, blow me down! Someone's tryin' to sneak about!\" he bellows, his laughter echoing through the tavern. Elara Moonwhisper, meanwhile, watches with amusement, a knowing smile playing on her lips. \"A stealthy soul, or so it seems, yet noise betrays their silent dreams,\" she quips, her eyes twinkling with mischief. Arin the Bold, ever the opportunist, sees this as a chance to show off his own skills. \"Well, well, well,\" he drawls, leaning against the bar. \"Looks like I'm not the only one with a flair for the dramatic.\"",
+            "response": "Thrain Blackbeard's eyes widen as he sees you attempt to hide behind the bar. \"Blimey, mate! That be the worst hide I've seen since a kraken tried to play hide-and-seek with a mermaid!\" he exclaims, his deep laughter shaking the rafters.\n\nElara Moonwhisper, who has been quietly tuning her lute in the corner, looks up with a mix of amusement and concern. \"Oh, dear adventurer, so stealthy, yet seen, in the light of the tavern, you've been!\"\n\nArin the Bold, who had been eyeing the tavern's patrons with a calculating gaze, turns to you with a smirk. \"Well, isn't that just great. The king's guards could spot you from a mile away. Maybe we should stick to the original plan, huh?\"",
             "pending_action": null
         }
     },
     {
-        "timestamp_utc": "2026-03-21T10:17:10.157342Z",
+        "timestamp_utc": "2026-03-23T08:21:43.187696Z",
         "architecture": "SPEAR",
-        "latency_ms": 160308,
+        "latency_ms": 320068,
         "latency_breakdown": {
             "safety_filter_ms": 0,
-            "router_ms": 25684,
+            "router_ms": 101915,
             "parallel_fetch_ms": 0,
-            "dm_ms": 134623,
-            "post_processing_ms": 1,
-            "total_ms": 160308
+            "dm_ms": 218149,
+            "post_processing_ms": 3,
+            "total_ms": 320068
         },
-        "total_tokens": 2101,
+        "total_tokens": 2792,
         "token_breakdown": {
             "router": 379,
-            "dm": 970,
-            "critic": 752
+            "dm": 959,
+            "critic": 1454
         },
         "routing_hallucination": false,
         "routes_fired": {
@@ -841,33 +1033,33 @@
         },
         "async_critic_scores": {
             "rule_accuracy": 10,
-            "narrative_coherence": 9,
+            "narrative_coherence": 10,
             "npc_voice_consistency": 10,
-            "reasoning": "The DM response accurately reflects the rules context, as no specific rules were mentioned. The story advances meaningfully, as the player's intent to observe the scene is fulfilled, and the DM provides a rich description of the tavern's atmosphere. The tavern keeper's actions are consistent with the player's intent, and the other NPCs are also consistent with their typical behaviors in a tavern setting."
+            "reasoning": "rule_accuracy: No mechanics or rules were invoked, which is appropriate for a narrative setup. narrative_coherence: The response advances the story by showing how the player's inaction affects the environment and NPCs, maintaining immersion. npc_voice_consistency: Thrain, Elara, and Arin are described with distinct, consistent traits that align with typical NPC archetypes without contradiction."
         },
         "player_intent": "I sit quietly in the corner, sip my ale, and do absolutely nothing.",
         "final_output": {
-            "response": "The tavern is alive with the usual hum of boisterous conversations and the clanking of mugs. Thrain Blackbeard, the burly barbarian, is holding court with a tale of his latest exploit, his deep voice booming over the din. Elara Moonwhisper, the half-elf bard, strums her lute in the corner, her melodious voice weaving through the air. Arin the Bold, the rogue, leans against the bar, keeping a watchful eye on the patrons.\n\nYou sit quietly in the corner, sipping your ale, content to observe the scene unfolding before you. The ale is dark and rich, with a hint of smokiness that lingers on your tongue. The warmth of the tavern and the comfort of your seat make it easy to relax and soak in the atmosphere.\n\nAs you watch, you notice the dynamics between the patrons. Thrain's laughter echoes through the tavern, drawing smiles and nods from the other patrons. Elara's song shifts from a lively jig to a softer ballad, her voice casting a spell of tranquility over the room. Arin's eyes dart around, taking in every detail, his sharp gaze missing nothing.\n\nThe tavern keeper, a stout man with a thick beard and a friendly smile, wipes down the bar with a cloth, his eyes occasionally flicking to you. He seems content to let you be, allowing you to enjoy your ale in peace.\n\nFor now, the night is young, and the tavern is a place of respite and camaraderie. You can't help but feel a sense of contentment, watching the world go by from the safety of your corner.",
+            "response": "The tavern's rowdy atmosphere seems to quiet down as you settle into the corner, nursing your ale. The warm, dimly lit space hums with the low murmur of conversations and the occasional clinking of mugs. Thrain Blackbeard, a burly figure with a thick beard, leans against the bar, eyeing you with a mix of curiosity and amusement. Elara Moonwhisper, her elven features illuminated by the flickering torchlight, strums her lute softly, her melodic tunes weaving through the air. Arin the Bold, ever the rogue, keeps a watchful eye on the room, his fingers idly tracing the edge of his dagger.\n\nThe tension that had been building in the room seems to dissipate slightly, replaced by a sense of uneasy calm. The patrons, sensing the shift, return to their drinks and conversations, though the occasional glance in your direction betray their lingering interest. The king's abrupt abdication and the subsequent chaos have left the tavern in a state of flux, and it seems that everyone is waiting to see what happens next.\n\nAs you sit quietly, the weight of the recent events settles over you. The king's crown, now in your possession, feels heavy in your pocket, a constant reminder of the power and responsibility that comes with it. The fate of the kingdom now hangs in the balance, and the choices you make in the coming days will shape its future. For now, though, you allow yourself a moment of respite, taking solace in the simple pleasure of a well-crafted ale and the comforting presence of your companions.",
             "pending_action": null
         }
     },
     {
-        "timestamp_utc": "2026-03-21T10:18:11.995801Z",
+        "timestamp_utc": "2026-03-23T08:23:03.449418Z",
         "architecture": "SPEAR",
-        "latency_ms": 61832,
+        "latency_ms": 80256,
         "latency_breakdown": {
             "safety_filter_ms": 0,
-            "router_ms": 8447,
-            "parallel_fetch_ms": 4,
-            "dm_ms": 53380,
+            "router_ms": 8722,
+            "parallel_fetch_ms": 5,
+            "dm_ms": 71528,
             "post_processing_ms": 1,
-            "total_ms": 61832
+            "total_ms": 80256
         },
-        "total_tokens": 2113,
+        "total_tokens": 3190,
         "token_breakdown": {
             "router": 375,
-            "dm": 1087,
-            "critic": 651
+            "dm": 1071,
+            "critic": 1744
         },
         "routing_hallucination": false,
         "routes_fired": {
@@ -885,14 +1077,59 @@
             "exploration": "Not retrieved."
         },
         "async_critic_scores": {
-            "rule_accuracy": 0,
-            "narrative_coherence": 8,
-            "npc_voice_consistency": 9,
-            "reasoning": "The DM response does not accurately reflect the rules context, as there is no mention of Thrain Blackbeard. The story advances meaningfully as the player's intent is addressed and Arin's name is confirmed. Elara's response is consistent with her NPC profile, using rhyming couplets and dramatic flair."
+            "rule_accuracy": 10,
+            "narrative_coherence": 10,
+            "npc_voice_consistency": 8,
+            "reasoning": "rule_accuracy: No D&D mechanics or rules were violated, and no meta-terms were leaked. narrative_coherence: Directly addresses player intent about Arin's name while advancing the plot with a job offer. npc_voice_consistency: Arin's slang and boastful tone align with his profile, but the dialogue feels slightly generic compared to his established traits."
         },
         "player_intent": "Wait, what did Arin just say his name was again?",
         "final_output": {
-            "response": "Elara Moonwhisper turns to you with a melodic chuckle. \"Why, it's Arin the Bold, a name that's told with a swagger and a spin, like a coin tossed in the wind, never quite where it's been!\" She gestures towards the rogue, who tips his hat with a grin. \"A dashing fellow, isn't he? Always ready with a tale or a trick up his sleeve.\"",
+            "response": "Arin the Bold, the human rogue, introduces himself with a sly grin, \"They call me Arin the Bold\u2014though I reckon you might\u2019ve heard of me. Pull up a chair if you\u2019re lookin\u2019 for a bit of excitement, or maybe a job that pays well. Just sayin\u2019.\"",
+            "pending_action": null
+        }
+    },
+    {
+        "timestamp_utc": "2026-03-23T08:24:51.897546Z",
+        "architecture": "SPEAR",
+        "latency_ms": 108436,
+        "latency_breakdown": {
+            "safety_filter_ms": 0,
+            "router_ms": 8846,
+            "parallel_fetch_ms": 244,
+            "dm_ms": 99345,
+            "post_processing_ms": 1,
+            "total_ms": 108436
+        },
+        "total_tokens": 3076,
+        "token_breakdown": {
+            "router": 380,
+            "dm": 1245,
+            "critic": 1451
+        },
+        "routing_hallucination": true,
+        "routes_fired": {
+            "rules_logic": true,
+            "npc_lore": false,
+            "world_exploration": false
+        },
+        "retrieval_types": {
+            "rag_vector": true,
+            "kv_lookup": false
+        },
+        "retrieved_context": {
+            "rules": "- -   You allow up to twenty creatures that you can see to regain all hit points, and you end all effects on them described in the [*greater restoration*](#greater-restoration) spell.\n-   You grant up to ten creatures that you can see resistance to a damage type you choose.\n-   You grant up to ten creatures you can see immunity to a single spell or other magical effect for 8 hours. For instance, you could make yourself and all your companions immune to a lich's life drain attack.\n-   You undo a single recent event by forcing a reroll of any roll made within the last round (including your last turn). Reality reshapes itself to accommodate the new result. For example, a [*wish*](#wish) spell could undo an opponent's successful save, a foe's critical hit, or a friend's failed save. You can force the reroll to be made with advantage or disadvantage, and you can choose whether to use the reroll or the original roll.\n- -   [*Foresight*](#foresight)\n-   [*Shapechange*](#shapechange)\n-   [*Storm of Vengeance*](#storm-of-vengeance)\n-   [*True Resurrection*](#true-resurrection)\n- Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can't use this feature again until you finish a long rest.  \nYou can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level.",
+            "npc_lore": "Not retrieved.",
+            "exploration": "Not retrieved."
+        },
+        "async_critic_scores": {
+            "rule_accuracy": 7,
+            "narrative_coherence": 4,
+            "npc_voice_consistency": 5,
+            "reasoning": "rule_accuracy: Correctly states inability to alter past events, but could have referenced specific rules like *Wish* or *Foresight* for clarity. narrative_coherence: Fails to engage with player's intent to explore alternative approaches, offering only a generic refusal. npc_voice_consistency: Not applicable due to no named NPCs involved."
+        },
+        "player_intent": "Actually, can we retcon what just happened? I want to try a different approach.",
+        "final_output": {
+            "response": "I'm here to help with questions and guidance within the D&D 5e rules, but I'm unable to alter past events or retcon actions that have already taken place in your game. Each decision and outcome contributes to the story and can lead to new opportunities and challenges. If you have any other questions or need assistance with new strategies, feel free to ask!",
             "pending_action": null
         }
     }

@@ -27,10 +27,6 @@ class RAGnarokOrchestrator:
         
         self.client = client
         self.model = Config.LLM_MODEL[model_profile]
-        # Use a smaller/faster model for the Supervisor if available (e.g., Llama 3 8B)
-        self.fast_model = Config.LLM_MODEL.get(
-            "LOCAL_FAST" if model_profile == "LOCAL" else "GROQ_FAST"
-        )
 
         self.critic_model = Config.LLM_MODEL.get(
             "LOCAL_CRITIC" if model_profile == "LOCAL" else "GROQ_CRITIC"
@@ -40,7 +36,7 @@ class RAGnarokOrchestrator:
         os.makedirs("data/history", exist_ok=True) 
         
         # session_id = datetime.now().strftime("%Y%m%d_%H%M%S")
-        self.log_file = f"data/history/baseline_architecture_log.json" 
+        self.log_file = f"data/history/baseline_{self.model}.json" 
 
         # Initialize thread-safely
         with telemetry_lock:
@@ -280,7 +276,6 @@ def get_info():
     return jsonify({
         'architecture': 'baseline',
         'model':        game.model,
-        'fast_model':   game.fast_model,
         'critic_model': game.critic_model,
         'log_file':     game.log_file,
     })
