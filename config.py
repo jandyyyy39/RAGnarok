@@ -15,18 +15,18 @@ class Config:
     # --- Models ---
     LLM_MODEL = {
         # GROQ
-        'GROQ':       "llama-3.3-70b-versatile",
-        'GROQ_FAST':  "llama-3.1-8b-instant",
-        'GROQ_CRITIC': "llama-3.3-70b-versatile",
-        'GROQ_ROUTER': "llama-3.1-8b-instant",
-        'GROQ_HYDE': "llama-3.1-8b-instant",
+        'GROQ':         "qwen/qwen3-32b",
+        'GROQ_FAST':    "llama-3.1-8b-instant",
+        'GROQ_CRITIC':  "llama-3.3-70b-versatile",
+        'GROQ_ROUTER':  "llama-3.1-8b-instant",
+        'GROQ_HYDE':    "qwen/qwen3-32b",
 
         # LOCAL
-        'LOCAL':      "mistral-small3.2",
-        'LOCAL_FAST': "llama3.2",
+        'LOCAL':        "mistral-small3.2",
+        'LOCAL_FAST':   "llama3.2",
         'LOCAL_CRITIC': "qwen3:8b",
         'LOCAL_ROUTER': "phi3.5:3.8b", # llama3.2, phi3.5:3.8b, gemma3:4b
-        'LOCAL_HYDE': "qwen2.5:7b", # qwen2.5:7b, phi3.5:3.8b, llama3.2
+        'LOCAL_HYDE':   "qwen2.5:7b", # qwen2.5:7b, phi3.5:3.8b, llama3.2
     }
 
     # --- Inference ---

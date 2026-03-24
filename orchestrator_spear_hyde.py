@@ -57,7 +57,8 @@ class SpearHyDEOrchestrator:
 
         os.makedirs("data/history", exist_ok=True)
         
-        self.log_file = f"data/history/spear_hyde_{self.hyde_model}.json"
+        safe_model_name = self.hyde_model.replace("/", "_").replace(":", "_")
+        self.log_file = f"data/history/spear_hyde_{safe_model_name}.json"
         
         with telemetry_lock:
             with open(self.log_file, "w", encoding="utf-8") as f:
