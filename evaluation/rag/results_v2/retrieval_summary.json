@@ -1,0 +1,674 @@
+[
+  {
+    "method": "bm25",
+    "model_profile": "LOCAL",
+    "n_queries": 200,
+    "avg_precision_at_k": 0.141,
+    "avg_recall_at_k": 0.3225,
+    "avg_mrr": 0.2523,
+    "avg_ndcg": 0.2832,
+    "avg_f1": 0.1634,
+    "avg_hit_at_k": 0.4,
+    "map": 0.2375,
+    "by_category": {
+      "combat": {
+        "precision": 0.135,
+        "recall": 0.375,
+        "mrr": 0.1896,
+        "ndcg": 0.2384,
+        "f1": 0.1798,
+        "hit": 0.4,
+        "ap": 0.1794,
+        "n": 40
+      },
+      "exploration": {
+        "precision": 0.16,
+        "recall": 0.4083,
+        "mrr": 0.3404,
+        "ndcg": 0.395,
+        "f1": 0.204,
+        "hit": 0.575,
+        "ap": 0.3317,
+        "n": 40
+      },
+      "social": {
+        "precision": 0.065,
+        "recall": 0.2542,
+        "mrr": 0.1267,
+        "ndcg": 0.1587,
+        "f1": 0.086,
+        "hit": 0.25,
+        "ap": 0.1289,
+        "n": 40
+      },
+      "knowledge": {
+        "precision": 0.135,
+        "recall": 0.2833,
+        "mrr": 0.2862,
+        "ndcg": 0.2881,
+        "f1": 0.1552,
+        "hit": 0.375,
+        "ap": 0.2447,
+        "n": 40
+      },
+      "magic": {
+        "precision": 0.21,
+        "recall": 0.2917,
+        "mrr": 0.3187,
+        "ndcg": 0.3359,
+        "f1": 0.192,
+        "hit": 0.4,
+        "ap": 0.303,
+        "n": 40
+      }
+    },
+    "by_query_type": {
+      "precise": {
+        "precision": 0.1343,
+        "recall": 0.4677,
+        "mrr": 0.2617,
+        "ndcg": 0.3014,
+        "f1": 0.1836,
+        "hit": 0.4627,
+        "ap": 0.2409,
+        "n": 67
+      },
+      "colloquial": {
+        "precision": 0.1254,
+        "recall": 0.2363,
+        "mrr": 0.209,
+        "ndcg": 0.2365,
+        "f1": 0.1339,
+        "hit": 0.3284,
+        "ap": 0.2,
+        "n": 67
+      },
+      "multi_part": {
+        "precision": 0.1636,
+        "recall": 0.2626,
+        "mrr": 0.2869,
+        "ndcg": 0.3121,
+        "f1": 0.1727,
+        "hit": 0.4091,
+        "ap": 0.2723,
+        "n": 66
+      }
+    }
+  },
+  {
+    "method": "bm25_rerank",
+    "model_profile": "LOCAL",
+    "n_queries": 200,
+    "avg_precision_at_k": 0.291,
+    "avg_recall_at_k": 0.5158,
+    "avg_mrr": 0.5507,
+    "avg_ndcg": 0.5739,
+    "avg_f1": 0.3167,
+    "avg_hit_at_k": 0.685,
+    "map": 0.5268,
+    "by_category": {
+      "combat": {
+        "precision": 0.31,
+        "recall": 0.5667,
+        "mrr": 0.605,
+        "ndcg": 0.6194,
+        "f1": 0.3441,
+        "hit": 0.7,
+        "ap": 0.583,
+        "n": 40
+      },
+      "exploration": {
+        "precision": 0.3,
+        "recall": 0.6,
+        "mrr": 0.6021,
+        "ndcg": 0.6254,
+        "f1": 0.3522,
+        "hit": 0.75,
+        "ap": 0.57,
+        "n": 40
+      },
+      "social": {
+        "precision": 0.14,
+        "recall": 0.3958,
+        "mrr": 0.35,
+        "ndcg": 0.4087,
+        "f1": 0.1883,
+        "hit": 0.6,
+        "ap": 0.3404,
+        "n": 40
+      },
+      "knowledge": {
+        "precision": 0.265,
+        "recall": 0.5,
+        "mrr": 0.5375,
+        "ndcg": 0.5582,
+        "f1": 0.2849,
+        "hit": 0.65,
+        "ap": 0.521,
+        "n": 40
+      },
+      "magic": {
+        "precision": 0.44,
+        "recall": 0.5167,
+        "mrr": 0.6592,
+        "ndcg": 0.658,
+        "f1": 0.4142,
+        "hit": 0.725,
+        "ap": 0.6196,
+        "n": 40
+      }
+    },
+    "by_query_type": {
+      "precise": {
+        "precision": 0.2776,
+        "recall": 0.6045,
+        "mrr": 0.5386,
+        "ndcg": 0.5578,
+        "f1": 0.3316,
+        "hit": 0.6716,
+        "ap": 0.5054,
+        "n": 67
+      },
+      "colloquial": {
+        "precision": 0.2299,
+        "recall": 0.4527,
+        "mrr": 0.4458,
+        "ndcg": 0.472,
+        "f1": 0.2417,
+        "hit": 0.5821,
+        "ap": 0.4286,
+        "n": 67
+      },
+      "multi_part": {
+        "precision": 0.3667,
+        "recall": 0.4899,
+        "mrr": 0.6697,
+        "ndcg": 0.6937,
+        "f1": 0.3778,
+        "hit": 0.803,
+        "ap": 0.6483,
+        "n": 66
+      }
+    }
+  },
+  {
+    "method": "cosine",
+    "model_profile": "LOCAL",
+    "n_queries": 200,
+    "avg_precision_at_k": 0.239,
+    "avg_recall_at_k": 0.4433,
+    "avg_mrr": 0.4135,
+    "avg_ndcg": 0.4417,
+    "avg_f1": 0.2652,
+    "avg_hit_at_k": 0.55,
+    "map": 0.3954,
+    "by_category": {
+      "combat": {
+        "precision": 0.3,
+        "recall": 0.575,
+        "mrr": 0.525,
+        "ndcg": 0.5488,
+        "f1": 0.3507,
+        "hit": 0.65,
+        "ap": 0.4992,
+        "n": 40
+      },
+      "exploration": {
+        "precision": 0.22,
+        "recall": 0.4875,
+        "mrr": 0.4629,
+        "ndcg": 0.4872,
+        "f1": 0.2587,
+        "hit": 0.6,
+        "ap": 0.4411,
+        "n": 40
+      },
+      "social": {
+        "precision": 0.08,
+        "recall": 0.3125,
+        "mrr": 0.165,
+        "ndcg": 0.2026,
+        "f1": 0.1081,
+        "hit": 0.325,
+        "ap": 0.1596,
+        "n": 40
+      },
+      "knowledge": {
+        "precision": 0.165,
+        "recall": 0.2833,
+        "mrr": 0.2979,
+        "ndcg": 0.3322,
+        "f1": 0.165,
+        "hit": 0.425,
+        "ap": 0.298,
+        "n": 40
+      },
+      "magic": {
+        "precision": 0.43,
+        "recall": 0.5583,
+        "mrr": 0.6167,
+        "ndcg": 0.6378,
+        "f1": 0.4436,
+        "hit": 0.75,
+        "ap": 0.5792,
+        "n": 40
+      }
+    },
+    "by_query_type": {
+      "precise": {
+        "precision": 0.197,
+        "recall": 0.4602,
+        "mrr": 0.351,
+        "ndcg": 0.3756,
+        "f1": 0.2372,
+        "hit": 0.4776,
+        "ap": 0.3336,
+        "n": 67
+      },
+      "colloquial": {
+        "precision": 0.2119,
+        "recall": 0.3657,
+        "mrr": 0.3637,
+        "ndcg": 0.3973,
+        "f1": 0.2276,
+        "hit": 0.5075,
+        "ap": 0.3501,
+        "n": 67
+      },
+      "multi_part": {
+        "precision": 0.3091,
+        "recall": 0.505,
+        "mrr": 0.5275,
+        "ndcg": 0.5539,
+        "f1": 0.3318,
+        "hit": 0.6667,
+        "ap": 0.5043,
+        "n": 66
+      }
+    }
+  },
+  {
+    "method": "cosine_rerank",
+    "model_profile": "LOCAL",
+    "n_queries": 200,
+    "avg_precision_at_k": 0.279,
+    "avg_recall_at_k": 0.4783,
+    "avg_mrr": 0.5022,
+    "avg_ndcg": 0.522,
+    "avg_f1": 0.3037,
+    "avg_hit_at_k": 0.62,
+    "map": 0.4763,
+    "by_category": {
+      "combat": {
+        "precision": 0.35,
+        "recall": 0.6,
+        "mrr": 0.6708,
+        "ndcg": 0.6735,
+        "f1": 0.3987,
+        "hit": 0.75,
+        "ap": 0.6271,
+        "n": 40
+      },
+      "exploration": {
+        "precision": 0.285,
+        "recall": 0.475,
+        "mrr": 0.4683,
+        "ndcg": 0.5051,
+        "f1": 0.3032,
+        "hit": 0.65,
+        "ap": 0.4467,
+        "n": 40
+      },
+      "social": {
+        "precision": 0.105,
+        "recall": 0.3708,
+        "mrr": 0.2758,
+        "ndcg": 0.2946,
+        "f1": 0.1444,
+        "hit": 0.375,
+        "ap": 0.2606,
+        "n": 40
+      },
+      "knowledge": {
+        "precision": 0.19,
+        "recall": 0.325,
+        "mrr": 0.3312,
+        "ndcg": 0.3617,
+        "f1": 0.1827,
+        "hit": 0.45,
+        "ap": 0.3261,
+        "n": 40
+      },
+      "magic": {
+        "precision": 0.465,
+        "recall": 0.6208,
+        "mrr": 0.7646,
+        "ndcg": 0.7751,
+        "f1": 0.4894,
+        "hit": 0.875,
+        "ap": 0.7209,
+        "n": 40
+      }
+    },
+    "by_query_type": {
+      "precise": {
+        "precision": 0.2328,
+        "recall": 0.5025,
+        "mrr": 0.4381,
+        "ndcg": 0.4553,
+        "f1": 0.2777,
+        "hit": 0.5672,
+        "ap": 0.4029,
+        "n": 67
+      },
+      "colloquial": {
+        "precision": 0.2537,
+        "recall": 0.398,
+        "mrr": 0.4838,
+        "ndcg": 0.5042,
+        "f1": 0.2568,
+        "hit": 0.5821,
+        "ap": 0.4682,
+        "n": 67
+      },
+      "multi_part": {
+        "precision": 0.3515,
+        "recall": 0.5354,
+        "mrr": 0.5859,
+        "ndcg": 0.6078,
+        "f1": 0.3777,
+        "hit": 0.7121,
+        "ap": 0.559,
+        "n": 66
+      }
+    }
+  },
+  {
+    "method": "crag",
+    "model_profile": "LOCAL",
+    "n_queries": 200,
+    "avg_precision_at_k": 0.244,
+    "avg_recall_at_k": 0.4517,
+    "avg_mrr": 0.4357,
+    "avg_ndcg": 0.4614,
+    "avg_f1": 0.2703,
+    "avg_hit_at_k": 0.57,
+    "map": 0.4143,
+    "by_category": {
+      "combat": {
+        "precision": 0.315,
+        "recall": 0.5833,
+        "mrr": 0.5458,
+        "ndcg": 0.5699,
+        "f1": 0.3614,
+        "hit": 0.675,
+        "ap": 0.5178,
+        "n": 40
+      },
+      "exploration": {
+        "precision": 0.225,
+        "recall": 0.4792,
+        "mrr": 0.4854,
+        "ndcg": 0.4978,
+        "f1": 0.2629,
+        "hit": 0.6,
+        "ap": 0.4514,
+        "n": 40
+      },
+      "social": {
+        "precision": 0.095,
+        "recall": 0.3208,
+        "mrr": 0.1983,
+        "ndcg": 0.2396,
+        "f1": 0.1273,
+        "hit": 0.375,
+        "ap": 0.1921,
+        "n": 40
+      },
+      "knowledge": {
+        "precision": 0.145,
+        "recall": 0.3083,
+        "mrr": 0.3271,
+        "ndcg": 0.3526,
+        "f1": 0.1479,
+        "hit": 0.425,
+        "ap": 0.3271,
+        "n": 40
+      },
+      "magic": {
+        "precision": 0.44,
+        "recall": 0.5667,
+        "mrr": 0.6217,
+        "ndcg": 0.647,
+        "f1": 0.4522,
+        "hit": 0.775,
+        "ap": 0.583,
+        "n": 40
+      }
+    },
+    "by_query_type": {
+      "precise": {
+        "precision": 0.203,
+        "recall": 0.4701,
+        "mrr": 0.3647,
+        "ndcg": 0.3904,
+        "f1": 0.2434,
+        "hit": 0.5075,
+        "ap": 0.3422,
+        "n": 67
+      },
+      "colloquial": {
+        "precision": 0.2209,
+        "recall": 0.3806,
+        "mrr": 0.3943,
+        "ndcg": 0.4208,
+        "f1": 0.2351,
+        "hit": 0.5224,
+        "ap": 0.3748,
+        "n": 67
+      },
+      "multi_part": {
+        "precision": 0.3091,
+        "recall": 0.505,
+        "mrr": 0.5497,
+        "ndcg": 0.5747,
+        "f1": 0.3335,
+        "hit": 0.6818,
+        "ap": 0.5274,
+        "n": 66
+      }
+    }
+  },
+  {
+    "method": "hybrid",
+    "model_profile": "LOCAL",
+    "n_queries": 200,
+    "avg_precision_at_k": 0.316,
+    "avg_recall_at_k": 0.5175,
+    "avg_mrr": 0.5644,
+    "avg_ndcg": 0.5855,
+    "avg_f1": 0.3452,
+    "avg_hit_at_k": 0.69,
+    "map": 0.537,
+    "by_category": {
+      "combat": {
+        "precision": 0.365,
+        "recall": 0.5667,
+        "mrr": 0.6717,
+        "ndcg": 0.6756,
+        "f1": 0.4089,
+        "hit": 0.75,
+        "ap": 0.6328,
+        "n": 40
+      },
+      "exploration": {
+        "precision": 0.315,
+        "recall": 0.6042,
+        "mrr": 0.6175,
+        "ndcg": 0.6364,
+        "f1": 0.3567,
+        "hit": 0.75,
+        "ap": 0.5849,
+        "n": 40
+      },
+      "social": {
+        "precision": 0.13,
+        "recall": 0.3625,
+        "mrr": 0.3292,
+        "ndcg": 0.3422,
+        "f1": 0.1696,
+        "hit": 0.425,
+        "ap": 0.3026,
+        "n": 40
+      },
+      "knowledge": {
+        "precision": 0.27,
+        "recall": 0.4083,
+        "mrr": 0.4821,
+        "ndcg": 0.5231,
+        "f1": 0.2773,
+        "hit": 0.65,
+        "ap": 0.4734,
+        "n": 40
+      },
+      "magic": {
+        "precision": 0.5,
+        "recall": 0.6458,
+        "mrr": 0.7217,
+        "ndcg": 0.7504,
+        "f1": 0.5132,
+        "hit": 0.875,
+        "ap": 0.6916,
+        "n": 40
+      }
+    },
+    "by_query_type": {
+      "precise": {
+        "precision": 0.2627,
+        "recall": 0.5896,
+        "mrr": 0.544,
+        "ndcg": 0.5554,
+        "f1": 0.3212,
+        "hit": 0.6418,
+        "ap": 0.5107,
+        "n": 67
+      },
+      "colloquial": {
+        "precision": 0.2746,
+        "recall": 0.403,
+        "mrr": 0.5085,
+        "ndcg": 0.5304,
+        "f1": 0.2801,
+        "hit": 0.6418,
+        "ap": 0.4827,
+        "n": 67
+      },
+      "multi_part": {
+        "precision": 0.4121,
+        "recall": 0.5606,
+        "mrr": 0.6419,
+        "ndcg": 0.672,
+        "f1": 0.4356,
+        "hit": 0.7879,
+        "ap": 0.619,
+        "n": 66
+      }
+    }
+  },
+  {
+    "method": "hyde",
+    "model_profile": "LOCAL",
+    "n_queries": 200,
+    "avg_precision_at_k": 0.365,
+    "avg_recall_at_k": 0.6092,
+    "avg_mrr": 0.6797,
+    "avg_ndcg": 0.6883,
+    "avg_f1": 0.4033,
+    "avg_hit_at_k": 0.79,
+    "map": 0.6376,
+    "by_category": {
+      "combat": {
+        "precision": 0.42,
+        "recall": 0.6292,
+        "mrr": 0.7063,
+        "ndcg": 0.7139,
+        "f1": 0.4577,
+        "hit": 0.775,
+        "ap": 0.6804,
+        "n": 40
+      },
+      "exploration": {
+        "precision": 0.365,
+        "recall": 0.675,
+        "mrr": 0.7271,
+        "ndcg": 0.7263,
+        "f1": 0.4479,
+        "hit": 0.85,
+        "ap": 0.6583,
+        "n": 40
+      },
+      "social": {
+        "precision": 0.22,
+        "recall": 0.65,
+        "mrr": 0.5858,
+        "ndcg": 0.5982,
+        "f1": 0.3057,
+        "hit": 0.725,
+        "ap": 0.5403,
+        "n": 40
+      },
+      "knowledge": {
+        "precision": 0.305,
+        "recall": 0.5083,
+        "mrr": 0.6317,
+        "ndcg": 0.6555,
+        "f1": 0.3131,
+        "hit": 0.775,
+        "ap": 0.6074,
+        "n": 40
+      },
+      "magic": {
+        "precision": 0.515,
+        "recall": 0.5833,
+        "mrr": 0.7475,
+        "ndcg": 0.7475,
+        "f1": 0.4923,
+        "hit": 0.825,
+        "ap": 0.7015,
+        "n": 40
+      }
+    },
+    "by_query_type": {
+      "precise": {
+        "precision": 0.391,
+        "recall": 0.7488,
+        "mrr": 0.7697,
+        "ndcg": 0.766,
+        "f1": 0.4627,
+        "hit": 0.8507,
+        "ap": 0.716,
+        "n": 67
+      },
+      "colloquial": {
+        "precision": 0.2925,
+        "recall": 0.5025,
+        "mrr": 0.5699,
+        "ndcg": 0.5905,
+        "f1": 0.3189,
+        "hit": 0.7164,
+        "ap": 0.5343,
+        "n": 67
+      },
+      "multi_part": {
+        "precision": 0.4121,
+        "recall": 0.5758,
+        "mrr": 0.6997,
+        "ndcg": 0.7086,
+        "f1": 0.4288,
+        "hit": 0.803,
+        "ap": 0.6628,
+        "n": 66
+      }
+    }
+  }
+]
