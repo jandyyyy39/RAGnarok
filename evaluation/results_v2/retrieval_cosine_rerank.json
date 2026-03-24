@@ -19,7 +19,7 @@
     "f1": 0.5714,
     "hit": 1,
     "ap": 0.5,
-    "latency": 0.269
+    "latency": 0.262
   },
   {
     "id": 2,
@@ -41,7 +41,7 @@
     "f1": 0.3333,
     "hit": 1,
     "ap": 0.25,
-    "latency": 0.261
+    "latency": 0.25
   },
   {
     "id": 3,
@@ -63,7 +63,7 @@
     "f1": 0.3333,
     "hit": 1,
     "ap": 1.0,
-    "latency": 0.158
+    "latency": 0.155
   },
   {
     "id": 4,
@@ -73,19 +73,19 @@
     "num_chunks_retrieved": 5,
     "chunks_preview": [
       "**Challenge** 1/2 (100 XP)  \n***Aggressive.*** As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.  \n##### ",
+      "Using the Attack action, you can make a special melee attack to shove a creature, either to knock it [prone](#prone) or push it away from you. If you'",
       "***Key.*** A rare or rarer magic weapon with which you are proficient appears in your hands. The GM chooses the weapon.  \n***Knight.*** You gain the s",
       "***Fan.*** If you are on a boat or ship, you can use an action to toss the token up to 10 feet in the air. The token disappears, and a giant flapping ",
-      "*Prerequisite: [*eldritch blast*](#eldritch-blast) cantrip*  \nWhen you hit a creature with *eldritch blast*, you can push the creature up to 10 feet a",
-      "*Wondrous item, rare*  \nThis rope is 30 feet long and weighs 3 pounds. If you hold one end of the rope and use an action to speak its command word, th"
+      "*Prerequisite: [*eldritch blast*](#eldritch-blast) cantrip*  \nWhen you hit a creature with *eldritch blast*, you can push the creature up to 10 feet a"
     ],
-    "precision": 0.0,
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "f1": 0.0,
-    "hit": 0,
-    "ap": 0.0,
-    "latency": 0.13
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "ndcg": 0.6309,
+    "f1": 0.3333,
+    "hit": 1,
+    "ap": 0.5,
+    "latency": 0.131
   },
   {
     "id": 5,
@@ -107,7 +107,7 @@
     "f1": 0.3333,
     "hit": 1,
     "ap": 1.0,
-    "latency": 0.193
+    "latency": 0.197
   },
   {
     "id": 6,
@@ -129,7 +129,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.462
+    "latency": 0.415
   },
   {
     "id": 7,
@@ -139,19 +139,19 @@
     "num_chunks_retrieved": 5,
     "chunks_preview": [
       "A Charisma check might arise when you try to influence or entertain others, when you try to make an impression or tell a convincing lie, or when you a",
-      "\"False destination\" is a place that doesn't exist. Perhaps you tried to scry an enemy's sanctum but instead viewed an illusion, or you are attempting ",
       "Combatants often try to escape their foes' notice by hiding, casting the [*invisibility*](#invisibility) spell, or lurking in darkness.  \nWhen you att",
       "<td align=\"center\">16\u201325</td>\n<td align=\"left\">&quot;I keep whatever I find.&quot;</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"center\">26\u201330</td>\n<td align",
-      "*2nd-level enchantment*  \n**Classes:** [Bard](#section-bard), [Cleric](#section-cleric), [Paladin](#section-paladin)  \n**Casting Time:** 1 action  \n**"
+      "*2nd-level enchantment*  \n**Classes:** [Bard](#section-bard), [Cleric](#section-cleric), [Paladin](#section-paladin)  \n**Casting Time:** 1 action  \n**",
+      "Starting at 10th level, you can spend 1 minute creating camouflage for yourself. You must have access to fresh mud, dirt, plants, soot, and other natu"
     ],
     "precision": 0.4,
     "recall": 1.0,
     "mrr": 1.0,
-    "ndcg": 0.8503,
+    "ndcg": 0.8772,
     "f1": 0.5714,
     "hit": 1,
-    "ap": 0.7,
-    "latency": 0.227
+    "ap": 0.75,
+    "latency": 0.258
   },
   {
     "id": 8,
@@ -173,7 +173,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.146
+    "latency": 0.121
   },
   {
     "id": 9,
@@ -195,7 +195,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.147
+    "latency": 0.139
   },
   {
     "id": 10,
@@ -208,7 +208,7 @@
       "**Senses** blindsight 60 ft. (blind beyond this radius), passive Perception 8  \n**Languages** \u2014  \n**Challenge** 2 (450 XP)  \n***Amorphous.*** The jell",
       "*Ring, uncommon*  \nWhile wearing this ring, you can stand on and move across any liquid surface as if it were solid ground.",
       "*Evocation cantrip*  \n**Class:** [Warlock](#section-warlock)  \n**Casting Time:** 1 action  \n**Range:** 120 feet  \n**Components:** V, S  \n**Duration:**",
-      "<td align=\"left\">2 sp</td>\n<td align=\"left\">1d8 bludgeoning</td>\n<td align=\"left\">10 lb.</td>\n<td align=\"left\">Two-handed</td>\n</tr>\n<tr class=\"odd\">\n"
+      "***Clenched Fist.*** The hand strikes one creature or object within 5 feet of it. Make a melee spell attack for the hand using your game statistics. O"
     ],
     "precision": 0.0,
     "recall": 0.0,
@@ -217,7 +217,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.289
+    "latency": 0.211
   },
   {
     "id": 11,
@@ -239,7 +239,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.199
+    "latency": 0.203
   },
   {
     "id": 12,
@@ -261,7 +261,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.337
+    "latency": 0.297
   },
   {
     "id": 13,
@@ -283,7 +283,7 @@
     "f1": 0.3333,
     "hit": 1,
     "ap": 0.5,
-    "latency": 0.207
+    "latency": 0.181
   },
   {
     "id": 14,
@@ -305,7 +305,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.171
+    "latency": 0.17
   },
   {
     "id": 15,
@@ -327,7 +327,7 @@
     "f1": 0.3333,
     "hit": 1,
     "ap": 0.5,
-    "latency": 0.156
+    "latency": 0.138
   },
   {
     "id": 16,
@@ -349,7 +349,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.189
+    "latency": 0.186
   },
   {
     "id": 17,
@@ -362,7 +362,7 @@
       "***Fork.*** *Melee Weapon Attack:* +10 to hit, reach 10 ft., one target. *Hit:* 15 (2d8 + 6) piercing damage.  \n***Tail.*** *Melee Weapon Attack:* +10",
       "***Glaive.*** *Melee Weapon Attack:* +5 to hit, reach 10 ft., one target. *Hit:* 8 (1d10 + 3) slashing damage. If the target is a creature other than ",
       "*Weapon (any sword that deals slashing damage), very rare (requires [attunement](#section-attunement))*  \nWhen you attack an object with this magic sw",
-      "***Longbow.*** *Ranged Weapon Attack:* +4 to hit, range 150/600 ft., one target. *Hit:* 6 (1d8 + 2) piercing damage."
+      "***Bite.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 4 (1d4 + 2) piercing damage. If the target is a creature, it must succee"
     ],
     "precision": 0.0,
     "recall": 0.0,
@@ -371,7 +371,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.251
+    "latency": 0.243
   },
   {
     "id": 18,
@@ -393,7 +393,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.352
+    "latency": 0.27
   },
   {
     "id": 19,
@@ -415,7 +415,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.339
+    "latency": 0.276
   },
   {
     "id": 20,
@@ -437,7 +437,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.265
+    "latency": 0.233
   },
   {
     "id": 21,
@@ -459,7 +459,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.153
+    "latency": 0.142
   },
   {
     "id": 22,
@@ -481,7 +481,7 @@
     "f1": 0.3333,
     "hit": 1,
     "ap": 1.0,
-    "latency": 0.119
+    "latency": 0.122
   },
   {
     "id": 23,
@@ -503,7 +503,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.143
+    "latency": 0.144
   },
   {
     "id": 24,
@@ -512,20 +512,20 @@
     "query_type": "colloquial",
     "num_chunks_retrieved": 5,
     "chunks_preview": [
+      "Sometimes an attacker wants to incapacitate a foe, rather than deal a killing blow. When an attacker reduces a creature to 0 hit points with a melee a",
       "</table>  \n**Skills** Stealth +6  \n**Senses** darkvision 60 ft., passive Perception 9  \n**Languages** Common, Goblin  \n**Challenge** 1/4 (50 XP)  \n***",
-      "Sometimes you want to get the jump on a foe or wait for a particular circumstance before you act. To do so, you can take the Ready action on your turn",
       "</tr>\n</tbody>\n</table>  \n**Senses** darkvision 60 ft., passive Perception 10  \n**Languages** Common, Goblin  \n**Challenge** 1/2 (100 XP)  \n***Martial",
       "If the kraken takes 50 damage or more on a single turn from a creature inside it, the kraken must succeed on a DC 25 Constitution saving throw at the ",
       "If the worm takes 30 damage or more on a single turn from a creature inside it, the worm must succeed on a DC 21 Constitution saving throw at the end "
     ],
-    "precision": 0.0,
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "f1": 0.0,
-    "hit": 0,
-    "ap": 0.0,
-    "latency": 0.129
+    "precision": 0.2,
+    "recall": 0.5,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.2857,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.13
   },
   {
     "id": 25,
@@ -547,7 +547,7 @@
     "f1": 0.2857,
     "hit": 1,
     "ap": 1.0,
-    "latency": 0.12
+    "latency": 0.125
   },
   {
     "id": 26,
@@ -569,7 +569,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.146
+    "latency": 0.149
   },
   {
     "id": 27,
@@ -591,7 +591,7 @@
     "f1": 0.75,
     "hit": 1,
     "ap": 0.7556,
-    "latency": 0.092
+    "latency": 0.094
   },
   {
     "id": 28,
@@ -613,7 +613,7 @@
     "f1": 0.3333,
     "hit": 1,
     "ap": 1.0,
-    "latency": 0.091
+    "latency": 0.094
   },
   {
     "id": 29,
@@ -635,7 +635,7 @@
     "f1": 1.0,
     "hit": 1,
     "ap": 1.0,
-    "latency": 0.169
+    "latency": 0.172
   },
   {
     "id": 30,
@@ -657,7 +657,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.164
+    "latency": 0.161
   },
   {
     "id": 31,
@@ -679,7 +679,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.131
+    "latency": 0.143
   },
   {
     "id": 32,
@@ -701,7 +701,7 @@
     "f1": 0.5714,
     "hit": 1,
     "ap": 0.75,
-    "latency": 0.198
+    "latency": 0.216
   },
   {
     "id": 33,
@@ -711,19 +711,19 @@
     "num_chunks_retrieved": 5,
     "chunks_preview": [
       "*Wondrous item, uncommon*  \nEach of the quiver's three compartments connects to an extradimensional space that allows the quiver to hold numerous item",
-      "Starting at 14th level, if you are able to hear, you are aware of the location of any hidden or [invisible](#invisible) creature within 10 feet of you",
       "At the beginning of every combat, you roll initiative by making a Dexterity check. Initiative determines the order of creatures' turns in combat.  \n> ",
       "</tr>\n<tr class=\"odd\">\n<td align=\"left\">Clothes, fine</td>\n<td align=\"right\">15 gp</td>\n<td align=\"center\">6 lb.</td>\n</tr>\n<tr class=\"even\">\n<td alig",
-      "Placing a bag of holding inside an extradimensional space created by a handy haversack, portable hole, or similar item instantly destroys both items a"
+      "Placing a bag of holding inside an extradimensional space created by a handy haversack, portable hole, or similar item instantly destroys both items a",
+      "When you take the Search action, you devote your attention to finding something. Depending on the nature of your search, the GM might have you make a "
     ],
-    "precision": 0.0,
+    "precision": 0.2,
     "recall": 0.5,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "f1": 0.0,
-    "hit": 0,
-    "ap": 0.0,
-    "latency": 0.287
+    "mrr": 0.2,
+    "ndcg": 0.3869,
+    "f1": 0.2857,
+    "hit": 1,
+    "ap": 0.2,
+    "latency": 0.278
   },
   {
     "id": 34,
@@ -745,7 +745,7 @@
     "f1": 0.3333,
     "hit": 1,
     "ap": 0.3333,
-    "latency": 0.183
+    "latency": 0.184
   },
   {
     "id": 35,
@@ -767,7 +767,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.107
+    "latency": 0.111
   },
   {
     "id": 36,
@@ -789,7 +789,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.149
+    "latency": 0.194
   },
   {
     "id": 37,
@@ -833,7 +833,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.254
+    "latency": 0.248
   },
   {
     "id": 39,
@@ -855,7 +855,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.188
+    "latency": 0.192
   },
   {
     "id": 40,
@@ -877,7 +877,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.123
+    "latency": 0.247
   },
   {
     "id": 41,
@@ -899,7 +899,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.213
+    "latency": 0.216
   },
   {
     "id": 42,
@@ -921,7 +921,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.341
+    "latency": 0.436
   },
   {
     "id": 43,
@@ -932,9 +932,9 @@
     "chunks_preview": [
       "The target can move only by pushing or pulling against a fixed object or surface within reach (such as a wall or a ceiling), which allows it to move a",
       "</tr>\n<tr class=\"even\">\n<td align=\"left\">Cart</td>\n<td align=\"center\">250 gp</td>\n<td align=\"center\">200 lb.</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"le",
+      "<td align=\"center\">40 ft.</td>\n<td align=\"center\">225 lb.</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">Warhorse</td>\n<td align=\"right\">400 gp</td>\n<t",
       "As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience.  \n***Ability Score Increase.*** Your Wisdom score increases by 1.  \n",
-      "You can break up your movement on your turn, using some of your speed before and after your action. For example, if you have a speed of 30 feet, you c",
-      "</tr>\n<tr class=\"even\">\n<td align=\"left\">Donkey or mule</td>\n<td align=\"right\">8 gp</td>\n<td align=\"center\">40 ft.</td>\n<td align=\"center\">420 lb.</td"
+      "You can break up your movement on your turn, using some of your speed before and after your action. For example, if you have a speed of 30 feet, you c"
     ],
     "precision": 0.0,
     "recall": 0.0,
@@ -943,7 +943,7 @@
     "f1": 0.0,
     "hit": 0,
     "ap": 0.0,
-    "latency": 0.338
+    "latency": 0.279
   },
   {
     "id": 44,
@@ -965,7 +965,7 @@
     "f1": 0.3333,
     "hit": 1,
     "ap": 0.2,
-    "latency": 0.21
+    "latency": 0.202
   },
   {
     "id": 45,
@@ -987,7 +987,7 @@
     "f1": 0.3333,
     "hit": 1,
     "ap": 0.5,
-    "latency": 0.196
+    "latency": 0.191
   },
   {
     "id": 46,
@@ -998,18 +998,18 @@
     "chunks_preview": [
       "***Persuasion.*** When you attempt to influence someone or a group of people with tact, social graces, or good nature, the GM might ask you to make a ",
       "The time between adventures is a great chance to perform research, gaining insight into mysteries that have unfurled over the course of the campaign. ",
-      "</tr>\n<tr class=\"odd\">\n<td align=\"center\">3</td>\n<td align=\"left\">I see omens in every event and action. The gods try to speak to us, we just need to ",
       "You gain proficiency in the Deception and Persuasion skills.",
-      "***Intimidation.*** When you attempt to influence someone through overt threats, hostile actions, and physical violence, the GM might ask you to make "
+      "***Intimidation.*** When you attempt to influence someone through overt threats, hostile actions, and physical violence, the GM might ask you to make ",
+      "A Charisma check might arise when you try to influence or entertain others, when you try to make an impression or tell a convincing lie, or when you a"
     ],
     "precision": 0.4,
     "recall": 1.0,
     "mrr": 0.5,
-    "ndcg": 0.6241,
+    "ndcg": 0.6509,
     "f1": 0.5714,
     "hit": 1,
-    "ap": 0.45,
-    "latency": 0.228
+    "ap": 0.5,
+    "latency": 0.215
   },
   {
     "id": 47,
@@ -1031,7 +1031,7 @@
     "f1": 0.5714,
     "hit": 1,
     "ap": 0.4167,
-    "latency": 0.134
+    "latency": 0.125
   },
   {
     "id": 48,
@@ -1053,7 +1053,7 @@
     "f1": 0.4444,
     "hit": 1,
     "ap": 1.0,
-    "latency": 0.22
+    "latency": 0.189
   },
   {
     "id": 49,
@@ -1075,7 +1075,7 @@
     "f1": 0.5714,
     "hit": 1,
     "ap": 0.75,
-    "latency": 0.121
+    "latency": 0.125
   },
   {
     "id": 50,
@@ -1088,15 +1088,3315 @@
       "*4th-level conjuration*  \n**Classes:** [Wizard](#section-wizard)  \n**Casting Time:** 1 action  \n**Range:** Touch  \n**Components:** V, S, M (an exquisi",
       ">\n> -   draw or sheathe a sword\n> -   open or close a door\n> -   withdraw a potion from your backpack\n> -   pick up a dropped axe\n> -   take a bauble ",
       "Once the pit trap is detected, an iron spike or similar object can be wedged between the pit's cover and the surrounding floor in such a way as to pre",
-      "<colgroup>\n<col width=\"26%\" />\n<col width=\"40%\" />\n</colgroup>\n<thead>\n<tr class=\"header\">\n<th align=\"left\">Playing Card</th>\n<th align=\"left\">Illusio"
+      "Starting at 3rd level, you can use the bonus action granted by your Cunning Action to make a Dexterity (Sleight of Hand) check, use your thieves' tool"
+    ],
+    "precision": 0.6,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.8529,
+    "f1": 0.75,
+    "hit": 1,
+    "ap": 0.7,
+    "latency": 0.144
+  },
+  {
+    "id": 51,
+    "query": "I use my reaction to make an attack of opportunity",
+    "category": "combat",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "In a fight, everyone is constantly watching for a chance to strike an enemy who is fleeing or passing by. Such a strike is called an opportunity attac",
+      "Certain special abilities, spells, and situations allow you to take a special action called a reaction. A reaction is an instant response to a trigger",
+      "A creature that can make multiple attacks on its turn has the Multiattack action. A creature can't use Multiattack when making an opportunity attack, ",
+      "If you take the Disengage action, your movement doesn't provoke opportunity attacks for the rest of the turn.",
+      "Starting at 5th level, when an attacker that you can see hits you with an attack, you can use your reaction to halve the attack's damage against you."
+    ],
+    "precision": 0.6,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9675,
+    "f1": 0.75,
+    "hit": 1,
+    "ap": 0.9167,
+    "latency": 0.083
+  },
+  {
+    "id": 52,
+    "query": "I attack recklessly to get advantage on my rolls",
+    "category": "combat",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, yo",
+      "Beginning at 1st level, you know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra 1d6 damage to one creature",
+      "Beginning at 18th level, you are so evasive that attackers rarely gain the upper hand against you. No attack roll has advantage against you while you ",
+      "When you take the Dodge action, you focus entirely on avoiding attacks. Until the start of your next turn, any attack roll made against you has disadv",
+      "Sometimes a special ability or spell tells you that you have advantage or disadvantage on an ability check, a saving throw, or an attack roll. When th"
+    ],
+    "precision": 0.8,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 0.9558,
+    "f1": 0.4706,
+    "hit": 1,
+    "ap": 0.8875,
+    "latency": 0.099
+  },
+  {
+    "id": 53,
+    "query": "I use my cunning action to dash as a bonus action",
+    "category": "combat",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Starting at 3rd level, you can use the bonus action granted by your Cunning Action to make a Dexterity (Sleight of Hand) check, use your thieves' tool",
+      "Various class features, spells, and other abilities let you take an additional action on your turn called a bonus action. The Cunning Action feature, ",
+      "**Senses** passive Perception 16  \n**Languages** any two languages  \n**Challenge** 1 (200 XP)  \n***Cunning Action.*** On each of its turns, the spy ca",
+      "You can spend 1 ki point to take the Disengage or Dash action as a bonus action on your turn, and your jump distance is doubled for the turn.",
+      "Starting at 2nd level, your quick thinking and agility allow you to move and act quickly. You can take a bonus action on each of your turns in combat."
+    ],
+    "precision": 0.6,
+    "recall": 1.0,
+    "mrr": 0.3333,
+    "ndcg": 0.6183,
+    "f1": 0.75,
+    "hit": 1,
+    "ap": 0.4778,
+    "latency": 0.125
+  },
+  {
+    "id": 54,
+    "query": "I take the dodge action to make myself harder to hit",
+    "category": "combat",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "When you take the Dodge action, you focus entirely on avoiding attacks. Until the start of your next turn, any attack roll made against you has disadv",
+      "You can spend 1 ki point to take the Dodge action as a bonus action on your turn.",
+      "On your turn, you can **move** a distance up to your speed and **take one action**. You decide whether to move first or take your action first. Your s",
+      "As an action, you present your holy symbol and speak a prayer censuring the undead. Each undead that can see or hear you within 30 feet of you must ma",
+      "At 15th level, you gain one of the following features of your choice.  \n***Evasion.*** When you are subjected to an effect, such as a red dragon's fie"
     ],
     "precision": 0.4,
     "recall": 1.0,
     "mrr": 1.0,
-    "ndcg": 0.8772,
+    "ndcg": 0.8503,
     "f1": 0.5714,
     "hit": 1,
-    "ap": 0.75,
+    "ap": 0.7,
+    "latency": 0.09
+  },
+  {
+    "id": 55,
+    "query": "I want to use my lay on hands to heal my companion",
+    "category": "combat",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you take a long rest. With that pool, you can restore a tot",
+      "Starting at 2nd level, you can use your Channel Divinity to heal the badly injured.  \nAs an action, you present your holy symbol and evoke healing ene",
+      "***Grasping Hand.*** The hand attempts to grapple a Huge or smaller creature within 5 feet of it. You use the hand's Strength score to resolve the gra",
+      "*3rd-level necromancy*  \n**Classes:** [Warlock](#section-warlock), [Wizard](#section-wizard)  \n**Casting Time:** 1 action  \n**Range:** Self  \n**Compon",
+      "Monks of the Way of the Open Hand are the ultimate masters of martial arts combat, whether armed or unarmed. They learn techniques to push and trip th"
+    ],
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.5714,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.111
+  },
+  {
+    "id": 56,
+    "query": "I riposte with my superiority die when the enemy misses me",
+    "category": "combat",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Weapon (longbow), very rare (requires [attunement](#section-attunement))*  \nWhen you nock an arrow on this bow, it whispers in Elvish, \"Swift defeat ",
+      "At 15th level, you gain one of the following features of your choice.  \n***Evasion.*** When you are subjected to an effect, such as a red dragon's fie",
+      "At 20th level, you have an uncanny knack for succeeding when you need to. If your attack misses a target within range, you can turn the miss into a hi",
+      "<td align=\"left\">&quot;I don't like the way people judge me all the time.&quot;</td>\n</tr>\n<tr class=\"even\">\n<td align=\"center\">56\u201370</td>\n<td align=\"",
+      "***Key.*** A rare or rarer magic weapon with which you are proficient appears in your hands. The GM chooses the weapon.  \n***Knight.*** You gain the s"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.203
+  },
+  {
+    "id": 57,
+    "query": "I try to calm the frightened horse so we can approach",
+    "category": "combat",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see",
+      "***Panicked.*** The target is [frightened](#frightened) of you. On each of its turns, the frightened creature must take the Dash action and move away ",
+      "***Cone of Fear.*** While holding the wand, you can use an action to expend 2 charges, causing the wand's tip to emit a 60-foot cone of amber light. E",
+      "***Antipathy.*** The enchantment causes creatures of the kind you designated to feel an intense urge to leave the area and avoid the target. When such",
+      "Starting at 7th level, you can use your action to end one effect on yourself that is causing you to be [charmed](#charmed) or [frightened](#frightened"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.18
+  },
+  {
+    "id": 58,
+    "query": "can I sneak attack with my crossbow this turn",
+    "category": "combat",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "**Senses** passive Perception 16  \n**Languages** any two languages  \n**Challenge** 1 (200 XP)  \n***Cunning Action.*** On each of its turns, the spy ca",
+      "Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, yo",
+      "When you make a ranged attack, you fire a bow or a crossbow, hurl a handaxe, or otherwise send projectiles to strike a foe at a distance. A monster mi",
+      "When you reach 17th level, you have become adept at laying ambushes and quickly escaping danger. You can take two turns during the first round of any ",
+      "*Weapon (longbow), very rare (requires [attunement](#section-attunement))*  \nWhen you nock an arrow on this bow, it whispers in Elvish, \"Swift defeat "
+    ],
+    "precision": 0.4,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 0.9197,
+    "f1": 0.5,
+    "hit": 1,
+    "ap": 0.8333,
+    "latency": 0.126
+  },
+  {
+    "id": 59,
+    "query": "do I add my proficiency bonus to damage rolls",
+    "category": "combat",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Characters have a proficiency bonus determined by level. Monsters also have this bonus, which is incorporated in their stat blocks. The bonus is used ",
+      "By the same token, if a feature or effect allows you to multiply your proficiency bonus when making an ability check that wouldn't normally benefit fr",
+      "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.",
+      "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.",
+      "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon."
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 1.0,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.091
+  },
+  {
+    "id": 60,
+    "query": "can I make an unarmed strike as a bonus action",
+    "category": "combat",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "-   When you use the Attack action with an unarmed strike or a monk weapon on your turn, you can make one unarmed strike as a bonus action. For exampl",
+      "Immediately after you take the Attack action on your turn, you can spend 1 ki point to make two unarmed strikes as a bonus action.",
+      "***Natural Weapons.*** You grow claws, fangs, spines, horns, or a different natural weapon of your choice. Your unarmed strikes deal 1d6 bludgeoning, ",
+      "When you take the Attack action and attack with a light melee weapon that you're holding in one hand, you can use a bonus action to attack with a diff",
+      "At 17th level, you gain the ability to set up lethal vibrations in someone's body. When you hit a creature with an unarmed strike, you can spend 3 ki "
+    ],
+    "precision": 0.6,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9675,
+    "f1": 0.75,
+    "hit": 1,
+    "ap": 0.9167,
+    "latency": 0.101
+  },
+  {
+    "id": 61,
+    "query": "does my hunter's mark move if I kill my target",
+    "category": "combat",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "The target can move only by pushing or pulling against a fixed object or surface within reach (such as a wall or a ceiling), which allows it to move a",
+      "***Panicked.*** The target is [frightened](#frightened) of you. On each of its turns, the frightened creature must take the Dash action and move away ",
+      "**Senses** passive Perception 14  \n**Languages** Giant Elk, understands Common, Elvish, and Sylvan but can't speak them  \n**Challenge** 2 (450 XP)  \n*",
+      "<td align=\"center\">6 (\u22122)</td>\n</tr>\n</tbody>\n</table>  \n**Senses** passive Perception 10  \n**Languages** \u2014  \n**Challenge** 1/4 (50 XP)  \n***Charge.**",
+      "***Bite.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one willing creature, or a creature that is [grappled](#grappled) by the vampire, [incapaci"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.098
+  },
+  {
+    "id": 62,
+    "query": "can I use my flurry of blows after attacking twice",
+    "category": "combat",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Starting when you choose this tradition at 3rd level, you can manipulate your enemy's ki when you harness your own. Whenever you hit a creature with o",
+      "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
+      "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
+      "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
+      "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn."
+    ],
+    "precision": 0.0,
+    "recall": 0.3333,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.071
+  },
+  {
+    "id": 63,
+    "query": "can I smite with both attacks if I have extra attack",
+    "category": "combat",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "If you gain the Extra Attack class feature from more than one class, the features don't add together. You can't make more than two attacks with this f",
+      "By 11th level, you are so suffused with righteous might that all your melee weapon strikes carry divine power with them. Whenever you hit a creature w",
+      "If you take an action that includes more than one weapon attack, you can break up your movement even further by moving between those attacks. For exam",
+      "Starting at 2nd level, when you hit a creature with a melee weapon attack, you can expend one spell slot to deal radiant damage to the target, in addi",
+      "When you take the Attack action and attack with a light melee weapon that you're holding in one hand, you can use a bonus action to attack with a diff"
+    ],
+    "precision": 0.2,
+    "recall": 0.6667,
+    "mrr": 0.5,
+    "ndcg": 0.6309,
+    "f1": 0.3077,
+    "hit": 1,
+    "ap": 0.5,
+    "latency": 0.065
+  },
+  {
+    "id": 64,
+    "query": "does my dueling fighting style work with a shield",
+    "category": "combat",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Armor (shield), rare (requires [attunement](#section-attunement))*  \nYou gain a +2 bonus to AC against ranged attacks while you wield this shield. Th",
+      "At 2nd level, you adopt a style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than o",
+      "At 2nd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option ",
+      "*Armor (shield), very rare (requires [attunement](#section-attunement))*  \nWhile holding this shield, you have advantage on saving throws against spel",
+      "***Armor Class (AC).*** Armor protects its wearer from attacks. The armor (and shield) you wear determines your base Armor Class.  \n***Heavy Armor.***"
+    ],
+    "precision": 0.2,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.3077,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.114
+  },
+  {
+    "id": 65,
+    "query": "can I ready my action to attack when the door opens",
+    "category": "combat",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Your turn can include a variety of flourishes that require neither your action nor your move.  \nYou can communicate however you are able, through brie",
+      "Sometimes you want to get the jump on a foe or wait for a particular circumstance before you act. To do so, you can take the Ready action on your turn",
+      "*Wondrous item, rare*  \nYou can use an action to place this 1-inch metal cube on the ground and speak its command word. The cube rapidly grows into a ",
+      "*2nd-level abjuration*  \n**Classes:** [Wizard](#section-wizard)  \n**Casting Time:** 1 action  \n**Range:** Touch  \n**Components:** V, S, M (gold dust w",
+      "Starting at 3rd level, you can use the bonus action granted by your Cunning Action to make a Dexterity (Sleight of Hand) check, use your thieves' tool"
+    ],
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "ndcg": 0.6309,
+    "f1": 0.3333,
+    "hit": 1,
+    "ap": 0.5,
+    "latency": 0.152
+  },
+  {
+    "id": 66,
+    "query": "does great weapon master apply to versatile weapons",
+    "category": "combat",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Two-Handed.*** This weapon requires two hands when you attack with it.  \n***Versatile.*** This weapon can be used with one or two hands. A damage v",
+      "Your race, class, and feats can grant you proficiency with certain weapons or categories of weapons. The two categories are **simple** and **martial**",
+      ">\n> For example, a hill giant typically wears hide armor and wields a greatclub. You could equip a hill giant with chain mail and a greataxe instead, ",
+      "Your class grants proficiency in certain weapons, reflecting both the class's focus and the tools you are most likely to use. Whether you favor a long",
+      "**Damage Immunities** fire  \n**Senses** passive Perception 16  \n**Languages** Giant  \n**Challenge** 9 (5,000 XP)  \n##### Actions  \n***Multiattack.*** "
+    ],
+    "precision": 0.2,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.3077,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.107
+  },
+  {
+    "id": 67,
+    "query": "can I use uncanny dodge to halve the trap damage",
+    "category": "combat",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "At 15th level, you gain one of the following features of your choice.  \n***Evasion.*** When you are subjected to an effect, such as a red dragon's fie",
+      "Starting at 5th level, when an attacker that you can see hits you with an attack, you can use your reaction to halve the attack's damage against you.",
+      "The effects of traps can range from inconvenient to deadly, making use of elements such as arrows, spikes, blades, poison, toxic gas, blasts of fire, ",
+      "As an action, you present your holy symbol and speak a prayer censuring the undead. Each undead that can see or hear you within 30 feet of you must ma",
+      "When the trap is triggered, the net is released, covering a 10-foot-square area. Those in the area are trapped under the net and [restrained](#restrai"
+    ],
+    "precision": 0.6,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 0.9675,
+    "f1": 0.6316,
+    "hit": 1,
+    "ap": 0.9167,
+    "latency": 0.135
+  },
+  {
+    "id": 68,
+    "query": "does sharpshooter work with thrown weapons like daggers",
+    "category": "combat",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Reach.*** This weapon adds 5 feet to your reach when you attack with it, as well as when determining your reach for opportunity attacks with it.  \n",
+      "*Weapon (dagger), rare*  \nYou gain a +1 bonus to attack and damage rolls made with this magic weapon.  \nYou can use an action to cause thick, black po",
+      "Sometimes characters don't have their weapons and have to attack with whatever is at hand. An improvised weapon includes any object you can wield in o",
+      "When you take the Attack action and attack with a light melee weapon that you're holding in one hand, you can use a bonus action to attack with a diff",
+      "*Weapon (warhammer), very rare (requires [attunement](#section-attunement) by a dwarf)*  \nYou gain a +3 bonus to attack and damage rolls made with thi"
+    ],
+    "precision": 0.8,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 0.9047,
+    "f1": 0.4706,
+    "hit": 1,
+    "ap": 0.8042,
+    "latency": 0.115
+  },
+  {
+    "id": 69,
+    "query": "I use my Action Surge to cast two spells in one turn",
+    "category": "combat",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "A spell cast with a bonus action is especially swift. You must use a bonus action on your turn to cast the spell, provided that you haven't already ta",
+      "When you cast a spell that has a casting time of 1 action, you can spend 2 sorcery points to change the casting time to 1 bonus action for this castin",
+      "Beginning at 14th level, you can use your action to end one spell on yourself or on one willing creature that you touch.  \nYou can use this feature a ",
+      "As a bonus action on each of your turns before the spell ends, you can change the direction in which the line blasts from you.",
+      "Most spells require a single action to cast, but some spells require a bonus action, a reaction, or much more time to cast."
+    ],
+    "precision": 0.8,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 0.9558,
+    "f1": 0.4706,
+    "hit": 1,
+    "ap": 0.8875,
+    "latency": 0.142
+  },
+  {
+    "id": 70,
+    "query": "I rage as a bonus action then attack with my greataxe",
+    "category": "combat",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action.  \nWhile raging, you gain the following benefits if yo",
+      "**Challenge** 1/2 (100 XP)  \n***Aggressive.*** As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.  \n##### ",
+      "Starting when you choose this path at 3rd level, you can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a si",
+      "Immediately after you take the Attack action on your turn, you can spend 1 ki point to make two unarmed strikes as a bonus action.",
+      "##### Actions  \n***Greataxe.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 17 (2d12 + 4) slashing damage.  \n***Gore.*** *Melee "
+    ],
+    "precision": 0.8,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.8889,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.097
+  },
+  {
+    "id": 71,
+    "query": "I want to use my divine smite after I hit with my attack",
+    "category": "combat",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "By 11th level, you are so suffused with righteous might that all your melee weapon strikes carry divine power with them. Whenever you hit a creature w",
+      "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon ",
+      "Starting at 14th level, when you hit a creature with an attack, you can use this feature to instantly transport the target through the lower planes. T",
+      "*1st-level evocation*  \n**Classes:** [Paladin](#section-paladin)  \n**Casting Time:** 1 bonus action  \n**Range:** Self  \n**Components:** V, S  \n**Durat",
+      "*Staff, very rare (requires [attunement](#section-attunement))*  \nThis staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack a"
+    ],
+    "precision": 0.8,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9558,
+    "f1": 0.8889,
+    "hit": 1,
+    "ap": 0.8875,
+    "latency": 0.138
+  },
+  {
+    "id": 72,
+    "query": "I use my superiority die to trip the enemy with my attack",
+    "category": "combat",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Weapon (longbow), very rare (requires [attunement](#section-attunement))*  \nWhen you nock an arrow on this bow, it whispers in Elvish, \"Swift defeat ",
+      "At 20th level, you become an unparalleled hunter of your enemies. Once on each of your turns, you can add your Wisdom modifier to the attack roll or t",
+      "Starting at 5th level, when an attacker that you can see hits you with an attack, you can use your reaction to halve the attack's damage against you.",
+      "At 15th level, you gain one of the following features of your choice.  \n***Evasion.*** When you are subjected to an effect, such as a red dragon's fie",
+      "You add your Strength modifier to your attack roll and your damage roll when attacking with a melee weapon such as a mace, a battleaxe, or a javelin. "
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.104
+  },
+  {
+    "id": 73,
+    "query": "I want to use my battlemaster maneuver to disarm the knight",
+    "category": "combat",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "**Challenge** 3 (700 XP)  \n***Brave.*** The knight has advantage on saving throws against being [frightened](#frightened).  \n##### Actions  \n***Multia",
+      "##### Reactions  \n***Parry.*** The knight adds 2 to its AC against one melee attack that would hit it. To do so, the knight must see the attacker and ",
+      "If you take the Disengage action, your movement doesn't provoke opportunity attacks for the rest of the turn.",
+      "Starting at 2nd level, your quick thinking and agility allow you to move and act quickly. You can take a bonus action on each of your turns in combat.",
+      "***Key.*** A rare or rarer magic weapon with which you are proficient appears in your hands. The GM chooses the weapon.  \n***Knight.*** You gain the s"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.331
+  },
+  {
+    "id": 74,
+    "query": "I want to use my bardic inspiration on my ally's attack roll",
+    "category": "combat",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Also at 3rd level, you learn how to use your wit to distract, confuse, and otherwise sap the confidence and competence of others. When a creature that",
+      "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself withi",
+      "Starting at 14th level, when you make an ability check, you can expend one use of Bardic Inspiration. Roll a Bardic Inspiration die and add the number",
+      "If you have inspiration, you can expend it when you make an attack roll, saving throw, or ability check. Spending your inspiration gives you advantage",
+      "Charisma is your spellcasting ability for your bard spells. Your magic comes from the heart and soul you pour into the performance of your music or or"
+    ],
+    "precision": 0.8,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9829,
+    "f1": 0.8889,
+    "hit": 1,
+    "ap": 0.95,
+    "latency": 0.298
+  },
+  {
+    "id": 75,
+    "query": "I use patient defense to dodge as a bonus action",
+    "category": "combat",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "You can spend 1 ki point to take the Dodge action as a bonus action on your turn.",
+      "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points e",
+      "When you take the Dodge action, you focus entirely on avoiding attacks. Until the start of your next turn, any attack roll made against you has disadv",
+      "Starting at 2nd level, your quick thinking and agility allow you to move and act quickly. You can take a bonus action on each of your turns in combat.",
+      "At 7th level, you gain one of the following features of your choice.  \n***Escape the Horde.*** Opportunity attacks against you are made with disadvant"
+    ],
+    "precision": 0.2,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.25,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.103
+  },
+  {
+    "id": 76,
+    "query": "I use my second wind to recover hit points mid-combat",
+    "category": "combat",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points e",
+      "Beginning at 2nd level, you can use soothing music or oration to help revitalize your wounded allies during a short rest. If you or any friendly creat",
+      "At 6th level, you gain the ability to heal yourself. As an action, you can regain hit points equal to three times your monk level. You must finish a l",
+      "At 18th level, you attain the pinnacle of resilience in battle. At the start of each of your turns, you regain hit points equal to 5 + your Constituti",
+      "Starting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you're raging and don't die outrigh"
+    ],
+    "precision": 0.2,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.3077,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.236
+  },
+  {
+    "id": 77,
+    "query": "I want to disengage and move away without provoking attacks",
+    "category": "combat",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "In a fight, everyone is constantly watching for a chance to strike an enemy who is fleeing or passing by. Such a strike is called an opportunity attac",
+      "If you take the Disengage action, your movement doesn't provoke opportunity attacks for the rest of the turn.",
+      "***Panicked.*** The target is [frightened](#frightened) of you. On each of its turns, the frightened creature must take the Dash action and move away ",
+      "If you take an action that includes more than one weapon attack, you can break up your movement even further by moving between those attacks. For exam",
+      "</table>  \n**Damage Resistances** lightning, thunder; bludgeoning, piercing, and slashing from nonmagical attacks  \n**Damage Immunities** poison  \n**C"
+    ],
+    "precision": 0.8,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9829,
+    "f1": 0.8889,
+    "hit": 1,
+    "ap": 0.95,
+    "latency": 0.116
+  },
+  {
+    "id": 78,
+    "query": "I hold my attack until the wizard casts haste on me",
+    "category": "combat",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Staff, legendary (requires [attunement](#section-attunement) by a sorcerer, warlock, or wizard)*  \nThis staff can be wielded as a magic quarterstaff ",
+      "*3rd-level transmutation*  \n**Classes:** [Sorcerer](#section-sorcerer), [Wizard](#section-wizard)  \n**Casting Time:** 1 action  \n**Range:** 30 feet  \n",
+      "*Staff, very rare (requires [attunement](#section-attunement) by a druid, sorcerer, warlock, or wizard)*  \nYou have resistance to fire damage while yo",
+      "*Evocation cantrip*  \n**Classes:** [Sorcerer](#section-sorcerer), [Wizard](#section-wizard)  \n**Casting Time:** 1 action  \n**Range:** 60 feet  \n**Comp",
+      "*1st-level abjuration*  \n**Classes:** [Sorcerer](#section-sorcerer), [Wizard](#section-wizard)  \n**Casting Time:** 1 reaction, which you take when you"
+    ],
+    "precision": 0.4,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 0.8503,
+    "f1": 0.5,
+    "hit": 1,
+    "ap": 0.7,
+    "latency": 0.126
+  },
+  {
+    "id": 79,
+    "query": "I want to use my shield master feat to knock enemies prone",
+    "category": "combat",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Using the Attack action, you can make a special melee attack to shove a creature, either to knock it [prone](#prone) or push it away from you. If you'",
+      "**Senses** darkvision 60 ft., passive Perception 14  \n**Languages** \u2014  \n**Challenge** 5 (1,800 XP)  \n***Trampling Charge.*** If the gorgon moves at le",
+      "*Armor (shield), rare (requires [attunement](#section-attunement))*  \nYou gain a +2 bonus to AC against ranged attacks while you wield this shield. Th",
+      "When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the atta",
+      "When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the atta"
+    ],
+    "precision": 0.2,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.25,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.137
+  },
+  {
+    "id": 80,
+    "query": "I cast shield as a reaction when the arrow hits me",
+    "category": "magic",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Fist.*** *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 11 (2d6 + 4) bludgeoning damage.  \n##### Reactions  \n***Shield.*** When ",
+      "*1st-level abjuration*  \n**Classes:** [Sorcerer](#section-sorcerer), [Wizard](#section-wizard)  \n**Casting Time:** 1 reaction, which you take when you",
+      "*Armor (shield), rare (requires [attunement](#section-attunement))*  \nYou gain a +2 bonus to AC against ranged attacks while you wield this shield. Th",
+      "Some spells can be cast as reactions. These spells take a fraction of a second to bring about and are cast in response to some event. If a spell can b",
+      "When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the atta"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 1.0,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.149
+  },
+  {
+    "id": 81,
+    "query": "I use my sorcery points to convert into a spell slot",
+    "category": "magic",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "You can use your sorcery points to gain additional spell slots, or sacrifice spell slots to gain additional sorcery points. You learn other ways to us",
+      "When you cast a spell that has a range of 5 feet or greater, you can spend 1 sorcery point to double the range of the spell.  \nWhen you cast a spell t",
+      "<td align=\"center\">2</td>\n</tr>\n<tr class=\"even\">\n<td align=\"center\">2nd</td>\n<td align=\"center\">3</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"center\">3rd<",
+      "When you cast a spell that has a casting time of 1 action, you can spend 2 sorcery points to change the casting time to 1 bonus action for this castin",
+      "When you cast a spell, you can spend 1 sorcery point to cast it without any somatic or verbal components."
+    ],
+    "precision": 0.6,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 0.906,
+    "f1": 0.6316,
+    "hit": 1,
+    "ap": 0.8056,
+    "latency": 0.244
+  },
+  {
+    "id": 82,
+    "query": "I want to use my wild shape to turn into a bear",
+    "category": "magic",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "At 20th level, you can use your Wild Shape an unlimited number of times.  \nAdditionally, you can ignore the verbal and somatic components of your drui",
+      "Beginning at 18th level, you can cast many of your druid spells in any shape you assume using Wild Shape. You can perform the somatic and verbal compo",
+      "<td align=\"center\">11 (+0)</td>\n<td align=\"center\">12 (+1)</td>\n<td align=\"center\">12 (+1)</td>\n</tr>\n</tbody>\n</table>  \n**Skills** Perception +7  \n*",
+      "Starting at 2nd level, you can use your action to magically assume the shape of a beast that you have seen before. You can use this feature twice. You",
+      "*Medium humanoid (human, shapechanger), neutral good*  \n**Armor Class** 10 in humanoid form, 11 (natural armor) in bear and hybrid form  \n**Hit Points"
+    ],
+    "precision": 0.6,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 0.9675,
+    "f1": 0.6316,
+    "hit": 1,
+    "ap": 0.9167,
+    "latency": 0.209
+  },
+  {
+    "id": 83,
+    "query": "I use my Channel Divinity to Turn Undead on the zombies",
+    "category": "magic",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Turn the Unholy.*** As an action, you present your holy symbol and speak a prayer censuring fiends and undead, using your Channel Divinity. Each fi",
+      "At 2nd level, you gain the ability to channel divine energy directly from your deity, using that energy to fuel magical effects. You start with two su",
+      "Starting at 2nd level, you can use your Channel Divinity to heal the badly injured.  \nAs an action, you present your holy symbol and evoke healing ene",
+      "Your oath allows you to channel divine energy to fuel magical effects. Each Channel Divinity option provided by your oath explains how to use it.  \nWh",
+      "Starting at 5th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge ra"
+    ],
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9197,
+    "f1": 0.5714,
+    "hit": 1,
+    "ap": 0.8333,
+    "latency": 0.19
+  },
+  {
+    "id": 84,
+    "query": "I activate my hexblade's curse on the enemy champion",
+    "category": "magic",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "-   While the target is cursed, your attacks and spells deal an extra 1d8 necrotic damage to the target.  \nA [*remove curse*](#remove-curse) spell end",
+      "*Prerequisite: 5th level*  \nYou can cast [*bestow curse*](#bestow-curse) once using a warlock spell slot. You can't do so again until you finish a lon",
+      "*Armor (shield), rare (requires [attunement](#section-attunement))*  \nWhile holding this shield, you have resistance to damage from ranged weapon atta",
+      "*Armor (plate), very rare (requires [attunement](#section-attunement))*  \nWhile wearing this armor, you gain a +1 bonus to AC, and you can understand ",
+      "*Weapon (any axe), rare (requires [attunement](#section-attunement))*  \nYou gain a +1 bonus to attack and damage rolls made with this magic weapon. In"
+    ],
+    "precision": 0.0,
+    "recall": 0.3333,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.156
+  },
+  {
+    "id": 85,
+    "query": "I use my bladesong feature to increase my AC in combat",
+    "category": "magic",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Armor (plate), very rare*  \nWhile wearing this armor, you gain a +2 bonus to AC. In addition, if an effect moves you against your will along the grou",
+      "While you are wearing armor, you gain a +1 bonus to AC.",
+      "While you are wearing armor, you gain a +1 bonus to AC.",
+      "While you are wearing armor, you gain a +1 bonus to AC.",
+      "*Wondrous item, rare (requires [attunement](#section-attunement))*  \nWhile wearing these bracers, you gain a +2 bonus to AC if you are wearing no armo"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.223
+  },
+  {
+    "id": 86,
+    "query": "I try to calm the frightened child during the magical attack",
+    "category": "magic",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Fear.*** Each target must make a Wisdom saving throw and becomes [frightened](#frightened) for 1 minute on a failed save. While frightened, the tar",
+      "Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see",
+      "***Cone of Fear.*** While holding the wand, you can use an action to expend 2 charges, causing the wand's tip to emit a 60-foot cone of amber light. E",
+      "***Panicked.*** The target is [frightened](#frightened) of you. On each of its turns, the frightened creature must take the Dash action and move away ",
+      "*4th-level illusion*  \n**Classes:** [Wizard](#section-wizard)  \n**Casting Time:** 1 action  \n**Range:** 120 feet  \n**Components:** V, S  \n**Duration:*"
+    ],
+    "precision": 0.4,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 0.8503,
+    "f1": 0.3636,
+    "hit": 1,
+    "ap": 0.7,
+    "latency": 0.193
+  },
+  {
+    "id": 87,
+    "query": "can I counterspell the fireball coming at us",
+    "category": "magic",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "-   [*Animate Dead*](#animate-dead)\n-   [*Bestow Curse*](#bestow-curse)\n-   [*Blink*](#blink)\n-   [*Clairvoyance*](#clairvoyance)\n-   [*Counterspell*]",
+      "*Wand, rare (requires [attunement](#section-attunement) by a spellcaster)*  \nThis wand has 7 charges. While holding it, you can use an action to expen",
+      "*Staff, very rare (requires [attunement](#section-attunement) by a druid, sorcerer, warlock, or wizard)*  \nYou have resistance to fire damage while yo",
+      "The target of a spell must be within the spell's range. For a spell like [*magic missile*](#magic-missile), the target is a creature. For a spell like",
+      "***Spells.*** While holding the staff, you can use an action to expend some of its charges to cast one of the following spells from it, using your spe"
+    ],
+    "precision": 0.2,
+    "recall": 0.5,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.2857,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.196
+  },
+  {
+    "id": 88,
+    "query": "do I need line of sight to teleport with misty step",
+    "category": "magic",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "If you would arrive in a place already occupied by an object or a creature, you and any creature traveling with you each take 4d6 force damage, and th",
+      "*4th-level conjuration*  \n**Classes:** [Bard](#section-bard), [Sorcerer](#section-sorcerer), [Warlock](#section-warlock), [Wizard](#section-wizard)  \n",
+      "***Teleport.*** The solar magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.  ",
+      "Many major temples, guilds, and other important places have permanent teleportation circles inscribed somewhere within their confines. Each such circl",
+      "Alternatively, if you know the sigil sequence of a teleportation circle on another plane of existence, this spell can take you to that circle. If the "
+    ],
+    "precision": 0.4,
+    "recall": 0.3333,
+    "mrr": 0.25,
+    "ndcg": 0.5013,
+    "f1": 0.3636,
+    "hit": 1,
+    "ap": 0.325,
+    "latency": 0.112
+  },
+  {
+    "id": 89,
+    "query": "can I twin spell this charm person to affect two guards",
+    "category": "magic",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Staff, rare (requires [attunement](#section-attunement) by a bard, cleric, druid, sorcerer, warlock, or wizard)*  \nWhile holding this staff, you can ",
+      "*Wondrous item, uncommon (requires [attunement](#section-attunement))*  \nThese crystal lenses fit over the eyes. They have 3 charges. While wearing th",
+      "-   A charmed creature can't attack the charmer or target the charmer with harmful abilities or magical effects.\n-   The charmer has advantage on any ",
+      "Starting at 7th level, you can use your action to end one effect on yourself that is causing you to be [charmed](#charmed) or [frightened](#frightened",
+      "The effects of different spells add together while the durations of those spells overlap. The effects of the same spell cast multiple times don't comb"
+    ],
+    "precision": 0.2,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.25,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.145
+  },
+  {
+    "id": 90,
+    "query": "does my spiritual weapon move and attack on the same turn",
+    "category": "magic",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "When you take this oath at 3rd level, you gain the following two Channel Divinity options.  \n***Sacred Weapon.*** As an action, you can imbue one weap",
+      "Your turn can include a variety of flourishes that require neither your action nor your move.  \nYou can communicate however you are able, through brie",
+      "*2nd-level evocation*  \n**Classes:** [Cleric](#section-cleric)  \n**Casting Time:** 1 bonus action  \n**Range:** 60 feet  \n**Components:** V, S  \n**Dura",
+      "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
+      "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn."
+    ],
+    "precision": 0.2,
+    "recall": 0.3333,
+    "mrr": 0.3333,
+    "ndcg": 0.5,
+    "f1": 0.25,
+    "hit": 1,
+    "ap": 0.3333,
+    "latency": 0.124
+  },
+  {
+    "id": 91,
+    "query": "can my familiar deliver a touch spell for me",
+    "category": "magic",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "You can't have more than one familiar at a time. If you cast this spell while you already have a familiar you instead cause it to adopt a new form. Ch",
+      "Your familiar acts independently of you, but it always obeys your commands. In combat, it rolls its own initiative and acts on its own turn. A familia",
+      "You learn the [*find familiar*](#find-familiar) spell and can cast it as a ritual. The spell doesn't count against your number of spells known.  \nWhen",
+      "*Prerequisite: Pact of the Chain feature*  \nYou can communicate telepathically with your familiar and perceive through your familiar's senses as long ",
+      "*7th-level transmutation*  \n**Classes:** [Wizard](#section-wizard)  \n**Casting Time:** 1 action  \n**Range:** Touch  \n**Components:** V, S, M (a powder"
+    ],
+    "precision": 0.4,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 0.9197,
+    "f1": 0.3636,
+    "hit": 1,
+    "ap": 0.8333,
+    "latency": 0.168
+  },
+  {
+    "id": 92,
+    "query": "how long does my mage armor last after I cast it",
+    "category": "magic",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Armor (plate), legendary (requires [attunement](#section-attunement))*  \nWhile you're wearing this armor, you can speak its command word as an action",
+      "*Armor (plate), legendary (requires [attunement](#section-attunement))*  \nYou have resistance to nonmagical damage while you wear this armor. Addition",
+      "You can cast [*mage armor*](#mage-armor) on yourself at will, without expending a spell slot or material components.",
+      "When you cast a spell that has a duration of 1 minute or longer, you can spend 1 sorcery point to double its duration, to a maximum duration of 24 hou",
+      "*1st-level abjuration*  \n**Classes:** [Sorcerer](#section-sorcerer), [Wizard](#section-wizard)  \n**Casting Time:** 1 action  \n**Range:** Touch  \n**Com"
+    ],
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.8503,
+    "f1": 0.5714,
+    "hit": 1,
+    "ap": 0.7,
+    "latency": 0.168
+  },
+  {
+    "id": 93,
+    "query": "can I maintain concentration on two spells at once",
+    "category": "magic",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Some spells require you to maintain concentration in order to keep their magic active. If you lose concentration, such a spell ends.  \nIf a spell must",
+      "Certain spells (including spells cast as rituals) require more time to cast: minutes or even hours. When you cast a spell with a casting time longer t",
+      "-   **Taking damage.** Whenever you take damage while you are concentrating on a spell, you must make a Constitution saving throw to maintain your con",
+      "When you ready a spell, you cast it as normal but hold its energy, which you release with your reaction when the trigger occurs. To be readied, a spel",
+      "***At Higher Levels.*** When you cast this spell using a spell slot of 6th level or higher, the spell lasts until dispelled, without requiring your co"
+    ],
+    "precision": 0.6,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 0.9675,
+    "f1": 0.4286,
+    "hit": 1,
+    "ap": 0.9167,
+    "latency": 0.087
+  },
+  {
+    "id": 94,
+    "query": "does hex damage apply to each magic missile dart",
+    "category": "magic",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Each weapon, spell, and harmful monster ability specifies the damage it deals. You roll the damage die or dice, add any modifiers, and apply the damag",
+      "*Wondrous item, uncommon (requires [attunement](#section-attunement))*  \nWhile wearing this brooch, you have resistance to force damage, and you have ",
+      "*1st-level evocation*  \n**Classes:** [Sorcerer](#section-sorcerer), [Wizard](#section-wizard)  \n**Casting Time:** 1 action  \n**Range:** 120 feet  \n**C",
+      "*1st-level abjuration*  \n**Classes:** [Sorcerer](#section-sorcerer), [Wizard](#section-wizard)  \n**Casting Time:** 1 reaction, which you take when you",
+      "*Wand, uncommon*  \nThis wand has 7 charges. While holding it, you can use an action to expend 1 or more of its charges to cast the [*magic missile*](#"
+    ],
+    "precision": 0.8,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 0.9047,
+    "f1": 0.7273,
+    "hit": 1,
+    "ap": 0.8042,
+    "latency": 0.127
+  },
+  {
+    "id": 95,
+    "query": "can I use prestidigitation to create a distraction",
+    "category": "magic",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Prerequisite: 5th level*  \nWhen you are in an area of dim light or darkness, you can use your action to become [invisible](#invisible) until you move",
+      "You can use an arcane focus as a spellcasting focus for your sorcerer spells.",
+      "*Wondrous item, uncommon (requires [attunement](#section-attunement))*  \nWhile wearing this helm, you can use an action to cast the [*detect thoughts*",
+      "At 6th level, you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performan",
+      "You can use an arcane focus as a spellcasting focus for your wizard spells."
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.131
+  },
+  {
+    "id": 96,
+    "query": "does my hex stay active if I knock the target unconscious",
+    "category": "magic",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "The target assumes the hit points of its new form. When it reverts to its normal form, the creature returns to the number of hit points it had before ",
+      "The transformation lasts for the duration for each target, or until the target drops to 0 hit points or dies. You can choose a different form for each",
+      "***Creature into Creature.*** If you turn a creature into another kind of creature, the new form can be any kind you choose whose challenge rating is ",
+      "***Sleep.*** Each target must make a Wisdom saving throw and falls [unconscious](#unconscious) for 10 minutes on a failed save. A creature awakens if ",
+      "##### Actions  \n***Bite.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 4 (1d4 + 2) piercing damage.  \n***Sting.*** *Melee Weapo"
+    ],
+    "precision": 1.0,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.5,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.126
+  },
+  {
+    "id": 97,
+    "query": "does toll the dead do more damage if the target is wounded",
+    "category": "magic",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Glaive.*** *Melee Weapon Attack:* +5 to hit, reach 10 ft., one target. *Hit:* 8 (1d10 + 3) slashing damage. If the target is a creature other than ",
+      "***Fork.*** *Melee Weapon Attack:* +10 to hit, reach 10 ft., one target. *Hit:* 15 (2d8 + 6) piercing damage.  \n***Tail.*** *Melee Weapon Attack:* +10",
+      "*Weapon (any sword), rare (requires [attunement](#section-attunement))*  \nHit points lost to this weapon's damage can be regained only through a short",
+      "***Bite.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 4 (1d4 + 2) piercing damage. If the target is a creature, it must succee",
+      "This spell closes all mortal wounds, but it doesn't restore missing body parts. If the creature is lacking body parts or organs integral for its survi"
+    ],
+    "precision": 0.6,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.4286,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.176
+  },
+  {
+    "id": 98,
+    "query": "I want to cast healing word on my ally then attack with my sword",
+    "category": "magic",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Weapon (any sword), legendary (requires [attunement](#section-attunement))*  \nYou gain a +1 bonus to attack and damage rolls made with this magic wea",
+      "*Weapon (any sword that deals slashing damage), very rare (requires [attunement](#section-attunement))*  \nWhen you attack an object with this magic sw",
+      "*Weapon (any sword), legendary (requires [attunement](#section-attunement))*  \nYou gain a +3 bonus to attack and damage rolls made with this magic wea",
+      "*Weapon (any sword), rare (requires [attunement](#section-attunement))*  \nYou can use a bonus action to speak this magic sword's command word, causing",
+      "*7th-level evocation*  \n**Classes:** [Bard](#section-bard), [Wizard](#section-wizard)  \n**Casting Time:** 1 action  \n**Range:** 60 feet  \n**Components"
+    ],
+    "precision": 0.4,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 0.8503,
+    "f1": 0.5,
+    "hit": 1,
+    "ap": 0.7,
+    "latency": 0.285
+  },
+  {
+    "id": 99,
+    "query": "I ritual cast detect magic to save a spell slot",
+    "category": "magic",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "You can cast [*detect magic*](#detect-magic) at will, without expending a spell slot.",
+      "Certain spells have a special tag: ritual. Such a spell can be cast following the normal rules for spellcasting, or the spell can be cast as a ritual.",
+      "When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively \"filling\" a slot with the spell. You can think o",
+      "Certain spells (including spells cast as rituals) require more time to cast: minutes or even hours. When you cast a spell with a casting time longer t",
+      "At 20th level, you can draw on your inner reserve of mystical power while entreating your patron to regain expended spell slots. You can spend 1 minut"
+    ],
+    "precision": 0.4,
+    "recall": 0.6667,
+    "mrr": 0.5,
+    "ndcg": 0.6509,
+    "f1": 0.5,
+    "hit": 1,
+    "ap": 0.5,
+    "latency": 0.174
+  },
+  {
+    "id": 100,
+    "query": "I upcast magic missile using a 3rd level slot",
+    "category": "magic",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "When a spellcaster casts a spell using a slot that is of a higher level than the spell, the spell assumes the higher level for that casting. For insta",
+      "For example, if you're a 3rd-level wizard, you have four 1st-level and two 2nd-level spell slots. With an Intelligence of 16, your list of prepared sp",
+      "If you have more than one spellcasting class, this table might give you spell slots of a level that is higher than the spells you know or can prepare.",
+      "Cantrips (at will): [*sacred flame*](#sacred-flame), [*thaumaturgy*](#thaumaturgy)  \n1st level (4 slots): [*command*](#command), [*guiding bolt*](#gui",
+      "***Spellcasting.*** The lich is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 20, +12 to hit with spell attacks)."
+    ],
+    "precision": 0.4,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 0.9197,
+    "f1": 0.5,
+    "hit": 1,
+    "ap": 0.8333,
+    "latency": 0.178
+  },
+  {
+    "id": 101,
+    "query": "I want to cast a spell then use quickened spell to cast another",
+    "category": "magic",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "A spell cast with a bonus action is especially swift. You must use a bonus action on your turn to cast the spell, provided that you haven't already ta",
+      "At 18th level, you have achieved such mastery over certain spells that you can cast them at will. Choose a 1st-level wizard spell and a 2nd-level wiza",
+      "When you reach 20th level, you gain mastery over two powerful spells and can cast them with little effort. Choose two 3rd-level wizard spells in your ",
+      "Spellcasters such as wizards and clerics, as well as many monsters, have access to spells and can use them to great effect in combat. Each spell has a",
+      "Most spells require a single action to cast, but some spells require a bonus action, a reaction, or much more time to cast."
+    ],
+    "precision": 0.2,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.25,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.183
+  },
+  {
+    "id": 102,
+    "query": "I cast polymorph on myself to become a T-Rex",
+    "category": "magic",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Prerequisite: 7th level*  \nYou can cast [*polymorph*](#polymorph) once using a warlock spell slot. You can't do so again until you finish a long rest",
+      "*Wondrous item, rare (requires [attunement](#section-attunement))*  \nWhile wearing this cloak, you have advantage on Dexterity (Stealth) checks. In an",
+      "**Senses** darkvision 60 ft., passive Perception 11  \n**Languages** Common  \n**Challenge** 3 (700 XP)  \n***Shapechanger.*** The doppelganger can use i",
+      "-   [*Foresight*](#foresight)\n-   [*Power Word Kill*](#power-word-kill)\n-   [*True Polymorph*](#true-polymorph)",
+      "-   [*Astral Projection*](#astral-projection)\n-   [*Foresight*](#foresight)\n-   [*Imprisonment*](#imprisonment)\n-   [*Power Word Kill*](#power-word-ki"
+    ],
+    "precision": 0.0,
+    "recall": 0.6667,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.129
+  },
+  {
+    "id": 103,
+    "query": "I use my warlock spell slot then take a short rest to recover it",
+    "category": "magic",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Starting at 2nd level, you can regain some of your magical energy by sitting in meditation and communing with nature. During a short rest, you choose ",
+      "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended ",
+      "*Prerequisite: 5th level*  \nYou can cast [*slow*](#slow) once using a warlock spell slot. You can't do so again until you finish a long rest.",
+      "You can cast [*bane*](#bane) once using a warlock spell slot. You can't do so again until you finish a long rest.",
+      "*Prerequisite: 5th level*  \nYou can cast [*bestow curse*](#bestow-curse) once using a warlock spell slot. You can't do so again until you finish a lon"
+    ],
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.5714,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.104
+  },
+  {
+    "id": 104,
+    "query": "I want to identify the components needed for this ritual spell",
+    "category": "magic",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "A spell's components are the physical requirements you must meet in order to cast it. Each spell's description indicates whether it requires verbal (V",
+      "*1st-level divination (ritual)*  \n**Classes:** [Cleric](#section-cleric), [Druid](#section-druid), [Paladin](#section-paladin), [Ranger](#section-rang",
+      "*1st-level divination (ritual)*  \n**Classes:** [Bard](#section-bard), [Wizard](#section-wizard)  \n**Casting Time:** 1 minute  \n**Range:** Touch  \n**Co",
+      "*2nd-level divination (ritual)*  \n**Classes:** [Bard](#section-bard), [Druid](#section-druid), [Ranger](#section-ranger)  \n**Casting Time:** 1 action ",
+      "*1st-level transmutation (ritual)*  \n**Classes:** [Cleric](#section-cleric), [Druid](#section-druid), [Paladin](#section-paladin)  \n**Casting Time:** "
+    ],
+    "precision": 0.6,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.6316,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.199
+  },
+  {
+    "id": 105,
+    "query": "I cast darkness then activate my devil's sight to see through it",
+    "category": "magic",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "**Senses** darkvision 120 ft., passive Perception 10  \n**Languages** understands Infernal but can't speak  \n**Challenge** 0 (10 XP)  \n***Devil's Sight",
+      "**Damage Immunities** fire, poison  \n**Condition Immunities** [poisoned](#poisoned)  \n**Senses** darkvision 120 ft., passive Perception 10  \n**Languag",
+      "*2nd-level evocation*  \n**Classes:** [Sorcerer](#section-sorcerer), [Warlock](#section-warlock), [Wizard](#section-wizard)  \n**Casting Time:** 1 actio",
+      "**Damage Immunities** fire, poison  \n**Condition Immunities** [poisoned](#poisoned)  \n**Senses** darkvision 120 ft., passive Perception 13  \n**Languag",
+      "**Damage Immunities** fire, poison  \n**Condition Immunities** [poisoned](#poisoned)  \n**Senses** darkvision 120 ft., passive Perception 11  \n**Languag"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 1.0,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.146
+  },
+  {
+    "id": 106,
+    "query": "I want to dispel the magical effect on my cursed companion",
+    "category": "magic",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "The spell might also end early for you or one of your companions. A successful [*dispel magic*](#dispel-magic) spell used against an astral or physica",
+      "-   While the target is cursed, your attacks and spells deal an extra 1d8 necrotic damage to the target.  \nA [*remove curse*](#remove-curse) spell end",
+      "[*Dispel magic*](#dispel-magic) or a similar effect successfully applied to the sapphire ends this spell's effect.",
+      "A [*calm emotions*](#calm-emotions) spell can suppress the effects of madness, while a [*lesser restoration*](#lesser-restoration) spell can rid a cha",
+      "1/day each: [*dominate person*](#dominate-person), [*fly*](#fly), [*plane shift*](#plane-shift), [*true seeing*](#true-seeing)  \n##### Actions  \n***Mu"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 1.0,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.197
+  },
+  {
+    "id": 107,
+    "query": "I want to cast bless on my party before the big fight",
+    "category": "magic",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*1st-level enchantment*  \n**Classes:** [Cleric](#section-cleric), [Paladin](#section-paladin)  \n**Casting Time:** 1 action  \n**Range:** 30 feet  \n**Co",
+      "*Potion, rare*  \nFor 1 hour after drinking it, you gain 10 temporary hit points that last for 1 hour. For the same duration, you are under the effect ",
+      "-   [*Bless*](#bless)\n-   [*Command*](#command)\n-   [*Cure Wounds*](#cure-wounds)\n-   [*Detect Evil and Good*](#detect-evil-and-good)\n-   [*Detect Mag",
+      "*Prerequisite: 5th level*  \nYou can cast [*bestow curse*](#bestow-curse) once using a warlock spell slot. You can't do so again until you finish a lon",
+      "As a conduit for divine power, you can cast cleric spells."
+    ],
+    "precision": 0.4,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.5,
+    "hit": 1,
+    "ap": 1.0,
     "latency": 0.252
+  },
+  {
+    "id": 108,
+    "query": "I want to activate my rage then cast a concentration spell",
+    "category": "magic",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "When you ready a spell, you cast it as normal but hold its energy, which you release with your reaction when the trigger occurs. To be readied, a spel",
+      "Some spells require you to maintain concentration in order to keep their magic active. If you lose concentration, such a spell ends.  \nIf a spell must",
+      "In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action.  \nWhile raging, you gain the following benefits if yo",
+      "***At Higher Levels.*** When you cast this spell using a spell slot of 6th level or higher, the spell lasts until dispelled, without requiring your co",
+      "During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.  \nEach time the target ta"
+    ],
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "ndcg": 0.6934,
+    "f1": 0.5714,
+    "hit": 1,
+    "ap": 0.5833,
+    "latency": 0.095
+  },
+  {
+    "id": 109,
+    "query": "I use my arcane recovery to regain spell slots during short rest",
+    "category": "magic",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Starting at 2nd level, you can regain some of your magical energy by sitting in meditation and communing with nature. During a short rest, you choose ",
+      "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended ",
+      "At 20th level, you can draw on your inner reserve of mystical power while entreating your patron to regain expended spell slots. You can spend 1 minut",
+      "At 11th level, your patron bestows upon you a magical secret called an arcanum. Choose one 6th-level spell from the [warlock spell list](#section-warl",
+      "Beginning at 2nd level, you can use soothing music or oration to help revitalize your wounded allies during a short rest. If you or any friendly creat"
+    ],
+    "precision": 0.8,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.7273,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.163
+  },
+  {
+    "id": 110,
+    "query": "I want to use my Channel Divinity to maximize healing",
+    "category": "magic",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Starting at 2nd level, you can use your Channel Divinity to heal the badly injured.  \nAs an action, you present your holy symbol and evoke healing ene",
+      "Your oath allows you to channel divine energy to fuel magical effects. Each Channel Divinity option provided by your oath explains how to use it.  \nWh",
+      "At 2nd level, you gain the ability to channel divine energy directly from your deity, using that energy to fuel magical effects. You start with two su",
+      "If you already have the Channel Divinity feature and gain a level in a class that also grants the feature, you gain the Channel Divinity effects grant",
+      "Choose one [domain](#section-domains) related to your deity. Each domain provides examples of gods associated with it. Your choice grants you domain s"
+    ],
+    "precision": 0.8,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9829,
+    "f1": 0.8889,
+    "hit": 1,
+    "ap": 0.95,
+    "latency": 0.143
+  },
+  {
+    "id": 111,
+    "query": "I try to use eldritch blast to push the enemy off the cliff",
+    "category": "magic",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Prerequisite: [*eldritch blast*](#eldritch-blast) cantrip*  \nWhen you hit a creature with *eldritch blast*, you can push the creature up to 10 feet a",
+      "*Prerequisite: [*eldritch blast*](#eldritch-blast) cantrip*  \nWhen you cast *eldritch blast*, add your Charisma modifier to the damage it deals on a h",
+      "*Prerequisite: [*eldritch blast*](#eldritch-blast) cantrip*  \nWhen you cast *eldritch blast*, its range is 300 feet.",
+      "At 11th level, you gain one of the following features of your choice.  \n***Volley.*** You can use your action to make a ranged attack against any numb",
+      "As a bonus action on each of your turns before the spell ends, you can change the direction in which the line blasts from you."
+    ],
+    "precision": 0.6,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.6316,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.155
+  },
+  {
+    "id": 112,
+    "query": "I want to summon my spiritual weapon then move it and attack",
+    "category": "magic",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "When you take this oath at 3rd level, you gain the following two Channel Divinity options.  \n***Sacred Weapon.*** As an action, you can imbue one weap",
+      "1st level (4 slots): [*cure wounds*](#cure-wounds), [*guiding bolt*](#guiding-bolt), [*sanctuary*](#sanctuary)  \n2nd level (3 slots): [*lesser restora",
+      "*2nd-level evocation*  \n**Classes:** [Cleric](#section-cleric)  \n**Casting Time:** 1 bonus action  \n**Range:** 60 feet  \n**Components:** V, S  \n**Dura",
+      "Cantrips (at will): [*sacred flame*](#sacred-flame), [*thaumaturgy*](#thaumaturgy)  \n1st level (4 slots): [*command*](#command), [*guiding bolt*](#gui",
+      "*Weapon (any sword), legendary (requires [attunement](#section-attunement))*  \nYou gain a +1 bonus to attack and damage rolls made with this magic wea"
+    ],
+    "precision": 0.6,
+    "recall": 0.6667,
+    "mrr": 0.5,
+    "ndcg": 0.7328,
+    "f1": 0.6316,
+    "hit": 1,
+    "ap": 0.6389,
+    "latency": 0.128
+  },
+  {
+    "id": 113,
+    "query": "I cast cure wounds at 2nd level to heal more hit points",
+    "category": "magic",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Starting at 2nd level, you can use your Channel Divinity to heal the badly injured.  \nAs an action, you present your holy symbol and evoke healing ene",
+      "Beginning at 6th level, the healing spells you cast on others heal you as well. When you cast a spell of 1st level or higher that restores hit points ",
+      "Beginning at 2nd level, you can use soothing music or oration to help revitalize your wounded allies during a short rest. If you or any friendly creat",
+      "*2nd-level evocation*  \n**Classes:** [Cleric](#section-cleric)  \n**Casting Time:** 10 minutes  \n**Range:** 30 feet  \n**Components:** V  \n**Duration:**",
+      "Also starting at 1st level, your healing spells are more effective. Whenever you use a spell of 1st level or higher to restore hit points to a creatur"
+    ],
+    "precision": 0.2,
+    "recall": 0.3333,
+    "mrr": 0.25,
+    "ndcg": 0.4307,
+    "f1": 0.25,
+    "hit": 1,
+    "ap": 0.25,
+    "latency": 0.083
+  },
+  {
+    "id": 114,
+    "query": "I want to use metamagic to extend the duration of my spell",
+    "category": "magic",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "At 3rd level, you gain the ability to twist your spells to suit your needs. You gain two of the following Metamagic options of your choice. You gain a",
+      "When you roll damage for a spell, you can spend 1 sorcery point to reroll a number of the damage dice up to your Charisma modifier (minimum of one). Y",
+      "During this spell's duration, you can use your action to assume a different form following the same restrictions and rules for the original form, with",
+      "When you cast a spell that has a duration of 1 minute or longer, you can spend 1 sorcery point to double its duration, to a maximum duration of 24 hou",
+      "-   While the target is cursed, your attacks and spells deal an extra 1d8 necrotic damage to the target.  \nA [*remove curse*](#remove-curse) spell end"
+    ],
+    "precision": 0.4,
+    "recall": 0.6667,
+    "mrr": 0.25,
+    "ndcg": 0.5013,
+    "f1": 0.5,
+    "hit": 1,
+    "ap": 0.325,
+    "latency": 0.108
+  },
+  {
+    "id": 115,
+    "query": "I cast invisibility on myself then try to hide from the guards",
+    "category": "magic",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Combatants often try to escape their foes' notice by hiding, casting the [*invisibility*](#invisibility) spell, or lurking in darkness.  \nWhen you att",
+      "When you take the Hide action, you make a Dexterity (Stealth) check in an attempt to hide, following the rules for hiding. If you succeed, you gain ce",
+      "You can cast [*disguise self*](#disguise-self) at will, without expending a spell slot.",
+      "Starting at 10th level, you can spend 1 minute creating camouflage for yourself. You must have access to fresh mud, dirt, plants, soot, and other natu",
+      "At the beginning of every combat, you roll initiative by making a Dexterity check. Initiative determines the order of creatures' turns in combat.  \n> "
+    ],
+    "precision": 0.8,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9558,
+    "f1": 0.8889,
+    "hit": 1,
+    "ap": 0.8875,
+    "latency": 0.103
+  },
+  {
+    "id": 116,
+    "query": "I want to wild shape into a giant eagle to fly my allies over the chasm",
+    "category": "magic",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "At 20th level, you can use your Wild Shape an unlimited number of times.  \nAdditionally, you can ignore the verbal and somatic components of your drui",
+      "**Challenge** 1 (200 XP)  \n***Keen Sight.*** The eagle has advantage on Wisdom (Perception) checks that rely on sight.  \n##### Actions  \n***Multiattac",
+      "**Challenge** 1 (200 XP)  \n***Keen Sight and Smell.*** The vulture has advantage on Wisdom (Perception) checks that rely on sight or smell.  \n***Pack ",
+      "**Languages** Giant Owl, understands Common, Elvish, and Sylvan but can't speak them  \n**Challenge** 1/4 (50 XP)  \n***Flyby.*** The owl doesn't provok",
+      "**Challenge** 0 (10 XP)  \n***Keen Sight.*** The eagle has advantage on Wisdom (Perception) checks that rely on sight.  \n##### Actions  \n***Talons.*** "
+    ],
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.3333,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.197
+  },
+  {
+    "id": 117,
+    "query": "can I identify what school of magic this spell belongs to",
+    "category": "knowledge",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      ">\n> ***The Book's Appearance.*** Your spellbook is a unique compilation of spells, with its own decorative flourishes and margin notes. It might be a ",
+      "The study of wizardry is ancient, stretching back to the earliest mortal discoveries of magic. It is firmly established in fantasy gaming worlds, with",
+      ">\n> The schools of magic help describe spells; they have no rules of their own, although some rules refer to the schools.\n>\n> **Abjuration** spells ar",
+      ">\n> The schools of magic help describe spells; they have no rules of their own, although some rules refer to the schools.\n>\n> **Abjuration** spells ar",
+      "*1st-level divination (ritual)*  \n**Classes:** [Bard](#section-bard), [Cleric](#section-cleric), [Druid](#section-druid), [Paladin](#section-paladin),"
+    ],
+    "precision": 0.6,
+    "recall": 0.3333,
+    "mrr": 0.3333,
+    "ndcg": 0.6183,
+    "f1": 0.4286,
+    "hit": 1,
+    "ap": 0.4778,
+    "latency": 0.264
+  },
+  {
+    "id": 118,
+    "query": "do I know anything about the customs of this foreign culture",
+    "category": "knowledge",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet with",
+      "***Aristocratic.*** You live a life of plenty and comfort. You move in circles populated by the most powerful people in the community. You have excell",
+      "The study of wizardry is ancient, stretching back to the earliest mortal discoveries of magic. It is firmly established in fantasy gaming worlds, with",
+      "You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who pr",
+      "The Celtic, Egyptian, Greek, and Norse pantheons are fantasy interpretations of historical religions from our world's ancient times. They include deit"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.089
+  },
+  {
+    "id": 119,
+    "query": "can I tell what creature made these massive claw marks",
+    "category": "knowledge",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Siege Monster.*** The tarrasque deals double damage to objects and structures.  \n##### Actions  \n***Multiattack.*** The tarrasque can use its Frigh",
+      "***Claw (Oni Form Only).*** *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 8 (1d8 + 4) slashing damage.  \n***Glaive.*** *Melee Weap",
+      "***Keen Smell.*** The werebear has advantage on Wisdom (Perception) checks that rely on smell.  \n##### Actions  \n***Multiattack.*** In bear form, the ",
+      "##### Actions  \n***Multiattack (Humanoid or Hybrid Form Only).*** In humanoid form, the weretiger makes two scimitar attacks or two longbow attacks. I",
+      "***Hooves.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one [prone](#prone) creature. *Hit:* 22 (4d8 + 4) bludgeoning damage.  \nThe majestic gian"
+    ],
+    "precision": 0.2,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.25,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.184
+  },
+  {
+    "id": 120,
+    "query": "do I recognize the significance of this religious icon",
+    "category": "knowledge",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Holy Symbol.*** A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same sym",
+      "The Egyptian pantheon is unusual in having three gods responsible for death, each with different alignments. Anubis is the lawful neutral god of the a",
+      "The Celtic, Egyptian, Greek, and Norse pantheons are fantasy interpretations of historical religions from our world's ancient times. They include deit",
+      "Acolytes are shaped by their experience in temples or other religious communities. Their study of the history and tenets of their faith and their rela",
+      "*Wondrous item, legendary (requires [attunement](#section-attunement) by a creature of good alignment)*  \nThis talisman is a mighty symbol of goodness"
+    ],
+    "precision": 0.0,
+    "recall": 0.3333,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.228
+  },
+  {
+    "id": 121,
+    "query": "can I determine the age and origin of this architectural style",
+    "category": "knowledge",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "The age entry notes the age when a member of the race is considered an adult, as well as the race's expected lifespan. This information can help you d",
+      "Choose a [sorcerous origin](#section-sorcerous-origins), which describes the source of your innate magical power.  \nYour choice grants you features wh",
+      "At 3rd level, you choose an [archetype](#section-martial-archetypes) that you strive to emulate in your combat styles and techniques. The archetype yo",
+      "Starting at 18th level, the primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year.",
+      "The Celtic, Egyptian, Greek, and Norse pantheons are fantasy interpretations of historical religions from our world's ancient times. They include deit"
+    ],
+    "precision": 0.0,
+    "recall": 0.3333,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.118
+  },
+  {
+    "id": 122,
+    "query": "do I know which herbs can counteract this poison",
+    "category": "knowledge",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Poison, Basic.*** You can use the poison in this vial to coat one slashing or piercing weapon or up to three pieces of ammunition. Applying the poi",
+      "*Potion, uncommon*  \nThis concoction looks, smells, and tastes like a potion of healing or other beneficial potion. However, it is actually poison mas",
+      "Given their insidious and deadly nature, poisons are illegal in most societies but are a favorite tool among assassins, drow, and other evil creatures",
+      "***Inhaled.*** These poisons are powders or gases that take effect when inhaled. Blowing the powder or releasing the gas subjects creatures in a 5-foo",
+      "***Purple Worm Poison (Injury).*** This poison must be harvested from a dead or [incapacitated](#incapacitated) purple worm. A creature subjected to t"
+    ],
+    "precision": 0.4,
+    "recall": 0.3333,
+    "mrr": 0.5,
+    "ndcg": 0.6934,
+    "f1": 0.3636,
+    "hit": 1,
+    "ap": 0.5833,
+    "latency": 0.175
+  },
+  {
+    "id": 123,
+    "query": "can I tell if this gemstone is real or fake",
+    "category": "knowledge",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "An illusion of one or more creatures forms over the thrown card and remains until dispelled. An illusory creature appears real, of the appropriate siz",
+      "The special component for this version of the spell is a miniature representation of the prison made from jade.  \n***Minimus Containment.*** The targe",
+      "*Ring, rare (requires [attunement](#section-attunement))*  \nYou have resistance to one damage type while wearing this ring. The gem in the ring indica",
+      "Nothing created by the pigments can have a value greater than 25 gp. If you paint an object of greater value (such as a diamond or a pile of gold), th",
+      "*Wondrous item, uncommon*  \nThis gem contains a mote of elemental energy. When you use an action to break the gem, an elemental is summoned as if you "
+    ],
+    "precision": 0.2,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.3077,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.257
+  },
+  {
+    "id": 124,
+    "query": "do I know anything about the legendary hero mentioned in this tapestry",
+    "category": "knowledge",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "A legendary creature might have a section describing its lair and the special effects it can create while there, either by act of will or simply by be",
+      "A legendary creature can do things that ordinary creatures can't. It can take special actions outside its turn, and it might exert magical influence f",
+      "*Wondrous item, legendary (requires [attunement](#section-attunement) by a creature of evil alignment)*  \nThis item symbolizes unrepentant evil. A cre",
+      "*Wondrous item, legendary (requires [attunement](#section-attunement) by a creature of good alignment)*  \nThis talisman is a mighty symbol of goodness",
+      "The mere presence of a legendary creature can have strange and wondrous effects on its environment, as noted in this section. Regional effects end abr"
+    ],
+    "precision": 0.0,
+    "recall": 0.3333,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.154
+  },
+  {
+    "id": 125,
+    "query": "can I recognize the noble family crest on the shield",
+    "category": "knowledge",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Armor (shield), uncommon (+1), rare (+2), or very rare (+3)*  \nWhile holding this shield, you have a bonus to AC determined by the shield's rarity. T",
+      "**Senses** passive Perception 12  \n**Languages** any two languages  \n**Challenge** 1/8 (25 XP)  \n##### Actions  \n***Rapier.*** *Melee Weapon Attack:* ",
+      "*Armor (shield), very rare (requires [attunement](#section-attunement))*  \nWhile holding this shield, you have advantage on saving throws against spel",
+      "<td align=\"left\">Light armor, medium armor, shields (druids will not wear armor or use shields made of metal)</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"l",
+      "*Wondrous item, rare (requires [attunement](#section-attunement))*  \nWhile wearing these bracers, you gain a +2 bonus to AC if you are wearing no armo"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.295
+  },
+  {
+    "id": 126,
+    "query": "do I know the proper rituals for consecrating this temple",
+    "category": "knowledge",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventu",
+      "You have spent your life in the service of a temple to a specific god or pantheon of gods. You act as an intermediary between the realm of the holy an",
+      "The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet with",
+      "You can cast any bard spell you know as a ritual if that spell has the ritual tag.",
+      "Certain spells have a special tag: ritual. Such a spell can be cast following the normal rules for spellcasting, or the spell can be cast as a ritual."
+    ],
+    "precision": 0.2,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.25,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.172
+  },
+  {
+    "id": 127,
+    "query": "can I tell if this creature is a fey or a celestial",
+    "category": "knowledge",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "**Fey** are magical creatures closely tied to the forces of nature. They dwell in twilight groves and misty forests. In some worlds, they are closely ",
+      "***Dismissal.*** As your action, make a melee spell attack against a celestial, an elemental, a fey, a fiend, or an undead you can reach. On a hit, yo",
+      "If your concentration is broken, the fey creature doesn't disappear. Instead, you lose control of the fey creature, it becomes hostile toward you and ",
+      "**Celestials** are creatures native to the upper planes. Many of them are the servants of deities, employed as messengers or agents in the mortal real",
+      "Each beast is also considered fey, and it disappears when it drops to 0 hit points or when the spell ends.  \nThe summoned creatures are friendly to yo"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.121
+  },
+  {
+    "id": 128,
+    "query": "I examine the ancient runes carved into the doorway",
+    "category": "knowledge",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*7th-level conjuration*  \n**Classes:** [Bard](#section-bard), [Wizard](#section-wizard)  \n**Casting Time:** 1 minute  \n**Range:** 300 feet  \n**Compone",
+      "Many major temples, guilds, and other important places have permanent teleportation circles inscribed somewhere within their confines. Each such circl",
+      "*3rd-level abjuration*  \n**Classes:** [Cleric](#section-cleric), [Paladin](#section-paladin), [Warlock](#section-warlock), [Wizard](#section-wizard)  ",
+      "The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet with",
+      "[*Guards and wards*](#guards-and-wards) creates the following effects within the warded area.  \n***Corridors.*** Fog fills all the warded corridors, m"
+    ],
+    "precision": 0.4,
+    "recall": 0.6667,
+    "mrr": 0.5,
+    "ndcg": 0.6934,
+    "f1": 0.5,
+    "hit": 1,
+    "ap": 0.5833,
+    "latency": 0.183
+  },
+  {
+    "id": 129,
+    "query": "I try to recall legends about this cursed forest",
+    "category": "knowledge",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Donjon.*** You disappear and become entombed in a state of suspended animation in an extradimensional sphere. Everything you were wearing and carry",
+      "1/day each: [*dominate person*](#dominate-person), [*fly*](#fly), [*plane shift*](#plane-shift), [*true seeing*](#true-seeing)  \n##### Actions  \n***Mu",
+      "-   [*Commune*](#commune)\n-   [*Contagion*](#contagion)\n-   [*Dispel Evil and Good*](#dispel-evil-and-good)\n-   [*Flame Strike*](#flame-strike)\n-   [*",
+      "*Wondrous item, legendary (requires [attunement](#section-attunement))*  \nIf you hold this beetle-shaped medallion in your hand for 1 round, an inscri",
+      "##### Actions  \n***Multiattack.*** The mummy can use its Dreadful Glare and makes one attack with its rotting fist.  \n***Rotting Fist.*** *Melee Weapo"
+    ],
+    "precision": 0.0,
+    "recall": 0.3333,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.153
+  },
+  {
+    "id": 130,
+    "query": "I examine the corpse to determine the cause of death",
+    "category": "knowledge",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Until the spell ends, you can ask the corpse up to five questions. The corpse knows only what it knew in life, including the languages it knew. Answer",
+      "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh",
+      "*3rd-level necromancy*  \n**Classes:** [Bard](#section-bard), [Cleric](#section-cleric)  \n**Casting Time:** 1 action  \n**Range:** 10 feet  \n**Component",
+      "*2nd-level necromancy (ritual)*  \n**Classes:** [Cleric](#section-cleric), [Wizard](#section-wizard)  \n**Casting Time:** 1 action  \n**Range:** Touch  \n",
+      "*7th-level necromancy*  \n**Classes:** [Bard](#section-bard), [Cleric](#section-cleric)  \n**Casting Time:** 1 hour  \n**Range:** Touch  \n**Components:**"
+    ],
+    "precision": 0.2,
+    "recall": 0.3333,
+    "mrr": 0.5,
+    "ndcg": 0.6309,
+    "f1": 0.25,
+    "hit": 1,
+    "ap": 0.5,
+    "latency": 0.099
+  },
+  {
+    "id": 131,
+    "query": "I try to decipher the meaning of these coded symbols",
+    "category": "knowledge",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "-   [*Conjure Celestial*](#conjure-celestial)\n-   [*Divine Word*](#divine-word)\n-   [*Etherealness*](#etherealness)\n-   [*Fire Storm*](#fire-storm)\n- ",
+      "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language",
+      "-   [*Guidance*](#guidance)\n-   [*Light*](#light)\n-   [*Mending*](#mending)\n-   [*Resistance*](#resistance)\n-   [*Sacred Flame*](#sacred-flame)\n-   [*",
+      "<td align=\"center\">01-50</td>\n<td align=\"center\">51-100</td>\n<td align=\"center\">\u2014</td>\n<td align=\"center\">\u2014</td>\n</tr>\n</tbody>\n</table>  \n***Familiar",
+      "-   [*Charm Person*](#charm-person)\n-   [*Comprehend Languages*](#comprehend-languages)\n-   [*Expeditious Retreat*](#expeditious-retreat)\n-   [*Hellis"
+    ],
+    "precision": 0.2,
+    "recall": 0.3333,
+    "mrr": 0.5,
+    "ndcg": 0.6309,
+    "f1": 0.25,
+    "hit": 1,
+    "ap": 0.5,
+    "latency": 0.19
+  },
+  {
+    "id": 132,
+    "query": "I try to determine what plane of existence this portal leads to",
+    "category": "knowledge",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Portals.*** A portal is a general term for a stationary interplanar connection that links a specific location on one plane to a specific location o",
+      "*Wondrous item, legendary*  \nThis cube is 3 inches across and radiates palpable magical energy. The six sides of the cube are each keyed to a differen",
+      "*Wondrous item, legendary*  \nThis fine black cloth, soft as silk, is folded up to the dimensions of a handkerchief. It unfolds into a circular sheet 6",
+      "*9th-level conjuration*  \n**Classes:** [Cleric](#section-cleric), [Sorcerer](#section-sorcerer), [Wizard](#section-wizard)  \n**Casting Time:** 1 actio",
+      "If the sphere comes into contact with a planar portal, such as that created by the [*gate*](#gate) spell, or an extradimensional space, such as that w"
+    ],
+    "precision": 1.0,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.8,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.17
+  },
+  {
+    "id": 133,
+    "query": "I examine the battle tactics used in this historical painting",
+    "category": "knowledge",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "The most common action to take in combat is the Attack action, whether you are swinging a sword, firing an arrow from a bow, or brawling with your fis",
+      "Many weapons have special properties related to their use, as shown in the Weapons table.  \n***Ammunition.*** You can use a weapon that has the ammuni",
+      "A typical combat encounter is a clash between two sides, a flurry of weapon swings, feints, parries, footwork, and spellcasting. The game organizes th",
+      ">\n> 3.  **Roll initiative.** Everyone involved in the combat encounter rolls initiative, determining the order of combatants turns.\n>\n> 4.  **Take tur",
+      "When you make a ranged attack, you fire a bow or a crossbow, hurl a handaxe, or otherwise send projectiles to strike a foe at a distance. A monster mi"
+    ],
+    "precision": 0.0,
+    "recall": 0.3333,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.143
+  },
+  {
+    "id": 134,
+    "query": "I try to recall the properties of different metals and alloys",
+    "category": "knowledge",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "If the object touched is either metal armor or a metal shield being worn or carried, its takes a permanent and cumulative \u22121 penalty to the AC it offe",
+      "*4th-level transmutation*  \n**Classes:** [Wizard](#section-wizard)  \n**Casting Time:** 10 minutes  \n**Range:** 120 feet  \n**Components:** V, S  \n**Dur",
+      "One silver piece is worth ten copper pieces, which are common among laborers and beggars. A single copper piece buys a candle, a torch, or a piece of ",
+      "Starting at 10th level, you can choose one damage type when you finish a short or long rest. You gain resistance to that damage type until you choose ",
+      "**Armor:** Light armor, medium armor, shields (druids will not wear armor or use shields made of metal)  \n**Weapons:** Clubs, daggers, darts, javelins"
+    ],
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 0.3333,
+    "ndcg": 0.5438,
+    "f1": 0.5714,
+    "hit": 1,
+    "ap": 0.3667,
+    "latency": 0.137
+  },
+  {
+    "id": 135,
+    "query": "I want to determine if this water is safe to drink",
+    "category": "knowledge",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Potion, uncommon*  \nWhen you drink this potion, you gain resistance to one type of damage for 1 hour. The GM chooses the type or determines it random",
+      "*Potion, rarity varies*  \nWhen you drink this potion, your Strength score changes for 1 hour. The type of giant determines the score (see the table be",
+      "*Potion, rare*  \nWhen you drink this potion, you gain the effect of the [*detect thoughts*](#detect-thoughts) spell (save DC 13). The potion's dense, ",
+      "*Potion, rare*  \nWhen you drink this potion, you gain the effect of the [*gaseous form*](#gaseous-form) spell for 1 hour (no concentration required) o",
+      "*Potion, uncommon*  \nYou can breathe underwater for 1 hour after drinking this potion. Its cloudy green fluid smells of the sea and has a jellyfish-li"
+    ],
+    "precision": 0.0,
+    "recall": 0.3333,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.224
+  },
+  {
+    "id": 136,
+    "query": "I want to recall what I know about vampire weaknesses",
+    "category": "knowledge",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "**Damage Resistances** necrotic; bludgeoning, piercing, and slashing from nonmagical attacks  \n**Senses** darkvision 60 ft., passive Perception 13  \n*",
+      "While it has 0 hit points in mist form, it can't revert to its vampire form, and it must reach its resting place within 2 hours or be destroyed. Once ",
+      "**Harmed by Running Water.** The vampire takes 20 acid damage when it ends its turn in running water.  \n**Stake to the Heart.** The vampire is destroy",
+      "The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears. As an action, you ",
+      "**Forbiddance.** The vampire can't enter a residence without an invitation from one of the occupants.  \n**Harmed by Running Water.** The vampire takes"
+    ],
+    "precision": 1.0,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.8,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.158
+  },
+  {
+    "id": 137,
+    "query": "I want to identify what type of dragon scale this is",
+    "category": "knowledge",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Armor (scale mail), very rare (requires [attunement](#section-attunement))*  \nDragon scale mail is made of the scales of one kind of dragon. Sometime",
+      "*Weapon (any sword), rare*  \nYou gain a +1 bonus to attack and damage rolls made with this magic weapon.  \nWhen you hit a dragon with this weapon, the",
+      "**Damage Immunities** acid  \n**Senses** blindsight 60 ft., darkvision 120 ft., passive Perception 21  \n**Languages** Common, Draconic  \n**Challenge** ",
+      "**Skills** Perception +6, Stealth +3  \n**Damage Immunities** cold  \n**Senses** blindsight 30 ft., darkvision 120 ft., passive Perception 16  \n**Langua",
+      "**Damage Immunities** acid  \n**Senses** blindsight 60 ft., darkvision 120 ft., passive Perception 22  \n**Languages** Common, Draconic  \n**Challenge** "
+    ],
+    "precision": 0.4,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.3636,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.13
+  },
+  {
+    "id": 138,
+    "query": "I want to recall information about the Elemental Plane of Fire",
+    "category": "knowledge",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "At their innermost edges, where they are closest to the material plane (in a conceptual if not a literal geographical sense), the four elemental plane",
+      "The inner planes surround and enfold the material plane and its echoes, providing the raw elemental substance from which all the worlds were made. The",
+      "**Senses** darkvision 60 ft., passive Perception 10  \n**Languages** Ignan  \n**Challenge** 5 (1,800 XP)  \n***Fire Form.*** The elemental can move throu",
+      "*Ring, legendary (requires [attunement](#section-attunement))*  \nThis ring is linked to one of the four elemental planes. The GM chooses or randomly d",
+      "-   You have resistance to acid damage.\n-   You can move through solid earth or rock as if those areas were difficult terrain. If you end your turn th"
+    ],
+    "precision": 0.0,
+    "recall": 0.6667,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.114
+  },
+  {
+    "id": 139,
+    "query": "I want to know if this mushroom is edible or poisonous",
+    "category": "knowledge",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Given their insidious and deadly nature, poisons are illegal in most societies but are a favorite tool among assassins, drow, and other evil creatures",
+      "***Purple Worm Poison (Injury).*** This poison must be harvested from a dead or [incapacitated](#incapacitated) purple worm. A creature subjected to t",
+      "*Wondrous item, uncommon*  \nThis glass jar, 3 inches in diameter, contains 1d4 + 1 doses of a thick mixture that smells faintly of aloe.  \nThe jar and",
+      "*Potion, uncommon*  \nThis concoction looks, smells, and tastes like a potion of healing or other beneficial potion. However, it is actually poison mas",
+      "***Inhaled.*** These poisons are powders or gases that take effect when inhaled. Blowing the powder or releasing the gas subjects creatures in a 5-foo"
+    ],
+    "precision": 0.2,
+    "recall": 0.6667,
+    "mrr": 0.25,
+    "ndcg": 0.4307,
+    "f1": 0.3077,
+    "hit": 1,
+    "ap": 0.25,
+    "latency": 0.166
+  },
+  {
+    "id": 140,
+    "query": "I want to identify what type of construct this automaton is",
+    "category": "knowledge",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Weapon (mace), rare*  \nYou gain a +1 bonus to attack and damage rolls made with this magic weapon. The bonus increases to +3 when you use the mace to",
+      "-   [*Arcane Eye*](#arcane-eye)\n-   [*Banishment*](#banishment)\n-   [*Black Tentacles*](#black-tentacles)\n-   [*Blight*](#blight)\n-   [*Confusion*](#c",
+      "-   [*Animate Objects*](#animate-objects)\n-   [*Cloudkill*](#cloudkill)\n-   [*Cone of Cold*](#cone-of-cold)\n-   [*Creation*](#creation)\n-   [*Dominate",
+      "-   [*Astral Projection*](#astral-projection)\n-   [*Foresight*](#foresight)\n-   [*Gate*](#gate)\n-   [*Imprisonment*](#imprisonment)\n-   [*Meteor Swarm",
+      "-   [*Banishment*](#banishment)\n-   [*Blight*](#blight)\n-   [*Confusion*](#confusion)\n-   [*Dimension Door*](#dimension-door)\n-   [*Dominate Beast*](#"
+    ],
+    "precision": 0.2,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.25,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.174
+  },
+  {
+    "id": 141,
+    "query": "I try to recall the weaknesses of lycanthropes",
+    "category": "knowledge",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Maul (Humanoid or Hybrid Form Only).*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 10 (2d6 + 3) bludgeoning damage.  \n***Tus",
+      "***Multiattack (Humanoid or Hybrid Form Only).*** The werewolf makes two attacks: one with its bite and one with its claws or spear.  \n***Bite (Wolf o",
+      "##### Actions  \n***Multiattack (Humanoid or Hybrid Form Only).*** In humanoid form, the weretiger makes two scimitar attacks or two longbow attacks. I",
+      "***Keen Smell.*** The werebear has advantage on Wisdom (Perception) checks that rely on smell.  \n##### Actions  \n***Multiattack.*** In bear form, the ",
+      "**Skills** Arcana +18, History +12, Insight +9, Perception +9  \n**Damage Resistances** cold, lightning, necrotic  \n**Damage Immunities** poison; bludg"
+    ],
+    "precision": 0.0,
+    "recall": 0.3333,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.135
+  },
+  {
+    "id": 142,
+    "query": "I want to know if this relic is authentic or a forgery",
+    "category": "knowledge",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Holy Symbol.*** A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same sym",
+      "*Wondrous item, legendary (requires [attunement](#section-attunement))*  \nIf you hold this beetle-shaped medallion in your hand for 1 round, an inscri",
+      "***Star.*** Increase one of your ability scores by 2. The score can exceed 20 but can't exceed 24.  \n***Sun.*** You gain 50,000 XP, and a wondrous ite",
+      "*Wondrous item, uncommon (requires [attunement](#section-attunement))*  \nWhile wearing this amulet, you are hidden from divination magic. You can't be",
+      "</tr>\n<tr class=\"odd\">\n<td align=\"center\">7</td>\n<td align=\"left\"><em>Glory Seeker:</em> The item seeks renown as the greatest magic item in the world"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.146
+  },
+  {
+    "id": 143,
+    "query": "I want to decipher the ancient script on this magical tome",
+    "category": "knowledge",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      ">\n> ***The Book's Appearance.*** Your spellbook is a unique compilation of spells, with its own decorative flourishes and margin notes. It might be a ",
+      "*Prerequisite: Pact of the Tome feature*  \nYou can now inscribe magical rituals in your Book of Shadows. Choose two 1st-level spells that have the rit",
+      "*1st-level illusion (ritual)*  \n**Classes:** [Bard](#section-bard), [Warlock](#section-warlock), [Wizard](#section-wizard)  \n**Casting Time:** 1 minut",
+      ">\n> ***Copying a Spell into the Book.*** When you find a wizard spell of 1st level or higher, you can add it to your spellbook if it is of a spell lev",
+      ">\n> ***Pact of the Blade.*** If you serve the Fiend, your weapon could be an axe made of black metal and adorned with decorative flames.\n>\n> ***Pact o"
+    ],
+    "precision": 0.0,
+    "recall": 0.3333,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.234
+  },
+  {
+    "id": 144,
+    "query": "I try to identify the poison used based on the symptoms",
+    "category": "knowledge",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Potion, uncommon*  \nThis concoction looks, smells, and tastes like a potion of healing or other beneficial potion. However, it is actually poison mas",
+      "Given their insidious and deadly nature, poisons are illegal in most societies but are a favorite tool among assassins, drow, and other evil creatures",
+      "***Inhaled.*** These poisons are powders or gases that take effect when inhaled. Blowing the powder or releasing the gas subjects creatures in a 5-foo",
+      "*1st-level divination (ritual)*  \n**Classes:** [Cleric](#section-cleric), [Druid](#section-druid), [Paladin](#section-paladin), [Ranger](#section-rang",
+      "Each type of poison has its own debilitating effects.  \n***Assassin's Blood (Ingested).*** A creature subjected to this poison must make a DC 10 Const"
+    ],
+    "precision": 0.4,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 0.8772,
+    "f1": 0.5,
+    "hit": 1,
+    "ap": 0.75,
+    "latency": 0.153
+  },
+  {
+    "id": 145,
+    "query": "I want to recall the creation myths of this pantheon of gods",
+    "category": "knowledge",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "The Norse pantheon includes two main families, the Aesir (deities of war and destiny) and the Vanir (gods of fertility and prosperity). Once enemies, ",
+      "The Egyptian pantheon is unusual in having three gods responsible for death, each with different alignments. Anubis is the lawful neutral god of the a",
+      "The Celtic, Egyptian, Greek, and Norse pantheons are fantasy interpretations of historical religions from our world's ancient times. They include deit",
+      "You have spent your life in the service of a temple to a specific god or pantheon of gods. You act as an intermediary between the realm of the holy an",
+      "The Life domain focuses on the vibrant positive energy\u2014one of the fundamental forces of the universe\u2014that sustains all life. The [gods of life](#chapt"
+    ],
+    "precision": 0.2,
+    "recall": 0.3333,
+    "mrr": 0.3333,
+    "ndcg": 0.5,
+    "f1": 0.25,
+    "hit": 1,
+    "ap": 0.3333,
+    "latency": 0.209
+  },
+  {
+    "id": 146,
+    "query": "I examine the craftsmanship to determine which civilization made this artifact",
+    "category": "knowledge",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "One silver piece is worth ten copper pieces, which are common among laborers and beggars. A single copper piece buys a candle, a torch, or a piece of ",
+      "The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet with",
+      "You can craft nonmagical objects, including adventuring equipment and works of art. You must be proficient with tools related to the object you are tr",
+      "<td align=\"center\">CN</td>\n<td align=\"left\">Tempest</td>\n<td align=\"left\">Trident</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">Tyche, goddess of good ",
+      "</tr>\n<tr class=\"odd\">\n<td align=\"center\">7</td>\n<td align=\"left\"><em>Glory Seeker:</em> The item seeks renown as the greatest magic item in the world"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.208
+  },
+  {
+    "id": 147,
+    "query": "I want to analyze the spell residue to identify what magic was cast here",
+    "category": "knowledge",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "You can cast [*detect magic*](#detect-magic) at will, without expending a spell slot.",
+      "This spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If the target is a Huge or larger object o",
+      "**Senses** passive Perception 12  \n**Languages** any six languages  \n**Challenge** 12 (8,400 XP)  \n***Magic Resistance.*** The archmage has advantage ",
+      "*Potion, uncommon*  \nThis concoction looks, smells, and tastes like a potion of healing or other beneficial potion. However, it is actually poison mas",
+      "*Divination cantrip*  \n**Classes:** [Bard](#section-bard), [Sorcerer](#section-sorcerer), [Warlock](#section-warlock), [Wizard](#section-wizard)  \n**C"
+    ],
+    "precision": 1.0,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.5,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.206
+  },
+  {
+    "id": 148,
+    "query": "I try to remember the weaknesses and behaviors of mind flayers",
+    "category": "magic",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Blinding Sickness.*** Pain grips the creature's mind, and its eyes turn milky white. The creature has disadvantage on Wisdom checks and Wisdom savi",
+      "Six abilities provide a quick description of every creature's physical and mental characteristics:  \n-   **Strength,** measuring physical power\n-   **",
+      "You initially learn the surface thoughts of the creature\u2014what is most on its mind in that moment. As an action, you can either shift your attention to",
+      "At 6th level, you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performan",
+      "***Medicine.*** A Wisdom (Medicine) check lets you try to stabilize a dying companion or diagnose an illness.  \n***Perception.*** Your Wisdom (Percept"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.18
+  },
+  {
+    "id": 149,
+    "query": "can I hear guards approaching down the corridor",
+    "category": "exploration",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "[*Guards and wards*](#guards-and-wards) creates the following effects within the warded area.  \n***Corridors.*** Fog fills all the warded corridors, m",
+      "***Other Spell Effect.*** You can place your choice of one of the following magical effects within the warded area of the stronghold.  \n-   Place [*da",
+      "Starting at 14th level, if you are able to hear, you are aware of the location of any hidden or [invisible](#invisible) creature within 10 feet of you",
+      "***Silence.*** No sound can emanate from within the area, and no sound can reach into it.  \n***Tongues.*** Affected creatures can communicate with any",
+      "Combatants often try to escape their foes' notice by hiding, casting the [*invisibility*](#invisibility) spell, or lurking in darkness.  \nWhen you att"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.126
+  },
+  {
+    "id": 150,
+    "query": "do I notice the concealed door behind the bookshelf",
+    "category": "exploration",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      ">\n> ***Passive Perception.*** When you hide, there's a chance someone will notice you even if they aren't searching. To determine whether such a creat",
+      "Usually, some element of a trap is visible to careful inspection. Characters might notice an uneven flagstone that conceals a pressure plate, spot the",
+      "*8th-level conjuration*  \n**Classes:** [Warlock](#section-warlock), [Wizard](#section-wizard)  \n**Casting Time:** 1 action  \n**Range:** 60 feet  \n**Co",
+      "You should allow a character to discover a trap without making an ability check if an action would clearly reveal the trap's presence. For example, if",
+      "[*Guards and wards*](#guards-and-wards) creates the following effects within the warded area.  \n***Corridors.*** Fog fills all the warded corridors, m"
+    ],
+    "precision": 0.2,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.3077,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.123
+  },
+  {
+    "id": 151,
+    "query": "can I squeeze through the narrow gap in the wall",
+    "category": "exploration",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "A creature can squeeze through a space that is large enough for a creature one size smaller than it. Thus, a Large creature can squeeze through a pass",
+      "You can change the barrier's effect by pressing a different face of the cube and expending the requisite number of charges, resetting the duration.  \n",
+      "The wall can have any shape you desire, though it can't occupy the same space as a creature or object. The wall doesn't need to be vertical or rest on",
+      "A creature can move through the wall, albeit slowly and painfully. For every 1 foot a creature moves through the wall, it must spend 4 feet of movemen",
+      "The strong wind keeps fog, smoke, and other gases at bay. Small or smaller flying creatures or objects can't pass through the wall. Loose, lightweight"
+    ],
+    "precision": 0.2,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.25,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.154
+  },
+  {
+    "id": 152,
+    "query": "do I spot the tripwire before I step on it",
+    "category": "exploration",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Mechanical trap*  \nThis trap uses a trip wire to collapse the supports keeping an unstable section of a ceiling in place.  \nThe trip wire is 3 inches",
+      "*Mechanical trap*  \nThis trap uses a trip wire to release a net suspended from the ceiling.  \nThe trip wire is 3 inches off the ground and stretches b",
+      "Usually, some element of a trap is visible to careful inspection. Characters might notice an uneven flagstone that conceals a pressure plate, spot the",
+      "The ceiling above the trip wire is in bad repair, and anyone who can see it can tell that it's in danger of collapse.  \nWhen the trap is triggered, th",
+      "Sometimes you want to get the jump on a foe or wait for a particular circumstance before you act. To do so, you can take the Ready action on your turn"
+    ],
+    "precision": 1.0,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.5,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.106
+  },
+  {
+    "id": 153,
+    "query": "can I maintain my balance on the icy ledge",
+    "category": "exploration",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Wondrous item, uncommon (requires [attunement](#section-attunement))*  \nWhile you wear these light shoes, you can move up, down, and across vertical ",
+      "*Staff, very rare (requires [attunement](#section-attunement) by a druid, sorcerer, warlock, or wizard)*  \nYou have resistance to cold damage while yo",
+      "*Ring, uncommon (requires [attunement](#section-attunement))*  \nWhile wearing this ring, you have resistance to cold damage. In addition, you and ever",
+      "Once during your move, you can mount a creature that is within 5 feet of you or dismount. Doing so costs an amount of movement equal to half your spee",
+      "A monster that has a climbing speed can use all or part of its movement to move on vertical surfaces. The monster doesn't need to spend extra movement"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.113
+  },
+  {
+    "id": 154,
+    "query": "do I recognize any landmarks to orient myself",
+    "category": "exploration",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears. As an action, you ",
+      "*4th-level conjuration*  \n**Classes:** [Bard](#section-bard), [Sorcerer](#section-sorcerer), [Warlock](#section-warlock), [Wizard](#section-wizard)  \n",
+      "With sentience comes awareness. A sentient item can perceive its surroundings out to a limited range. You can choose its senses or roll on the followi",
+      "*2nd-level divination*  \n**Classes:** [Bard](#section-bard), [Cleric](#section-cleric), [Druid](#section-druid), [Paladin](#section-paladin), [Ranger]",
+      "*Wondrous item, rare (requires [attunement](#section-attunement))*  \nThis robe is adorned with eyelike patterns. While you wear the robe, you gain the"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.158
+  },
+  {
+    "id": 155,
+    "query": "can I land safely after jumping from the second floor",
+    "category": "exploration",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Your Strength determines how far you can jump.  \n***Long Jump.*** When you make a long jump, you cover a number of feet up to your Strength score if y",
+      "***High Jump.*** When you make a high jump, you leap into the air a number of feet equal to 3 + your Strength modifier if you move at least 10 feet on",
+      "The target can move only by pushing or pulling against a fixed object or surface within reach (such as a wall or a ceiling), which allows it to move a",
+      "You can spend 1 ki point to take the Disengage or Dash action as a bonus action on your turn, and your jump distance is doubled for the turn.",
+      "You can break up your movement on your turn, using some of your speed before and after your action. For example, if you have a speed of 30 feet, you c"
+    ],
+    "precision": 0.2,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.25,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.126
+  },
+  {
+    "id": 156,
+    "query": "do I find any useful items while searching the room thoroughly",
+    "category": "exploration",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "When you take the Search action, you devote your attention to finding something. Depending on the nature of your search, the GM might have you make a ",
+      "Opportunities abound to find treasure, equipment, weapons, armor, and more in the dungeons you explore. Normally, you can sell your treasures and trin",
+      "*Wondrous item, uncommon*  \nThese crystal lenses fit over the eyes. While wearing them, you can see much better than normal out to a range of 1 foot. ",
+      ">\n> ***Passive Perception.*** When you hide, there's a chance someone will notice you even if they aren't searching. To determine whether such a creat",
+      "The time between adventures is a great chance to perform research, gaining insight into mysteries that have unfurled over the course of the campaign. "
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 1.0,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.123
+  },
+  {
+    "id": 157,
+    "query": "can I tell how long ago this campfire was used",
+    "category": "exploration",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's",
+      "***Spyglass.*** Objects viewed through a spyglass are magnified to twice their size.  \n***Tent.*** A simple and portable canvas shelter, a tent sleeps",
+      "For each hour spent in the paradise, a visitor regains hit points as if it had spent 1 Hit Die. Also, creatures don't age while in the paradise, altho",
+      "*Weapon (any sword), very rare (requires [attunement](#section-attunement))*  \nWhen you hit with an attack using this magic sword, the target takes an",
+      "*Conjuration cantrip*  \n**Classes:** [Druid](#section-druid)  \n**Casting Time:** 1 action  \n**Range:** Self  \n**Components:** V, S  \n**Duration:** 10 "
+    ],
+    "precision": 0.4,
+    "recall": 0.3333,
+    "mrr": 0.3333,
+    "ndcg": 0.5438,
+    "f1": 0.3636,
+    "hit": 1,
+    "ap": 0.3667,
+    "latency": 0.18
+  },
+  {
+    "id": 158,
+    "query": "do I sense anything unusual about this area",
+    "category": "exploration",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*2nd-level divination*  \n**Classes:** [Cleric](#section-cleric), [Druid](#section-druid), [Ranger](#section-ranger)  \n**Casting Time:** 1 action  \n**R",
+      "The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears. As an action, you ",
+      "The most fundamental tasks of adventuring\u2014noticing danger, finding hidden objects, hitting an enemy in combat, and targeting a spell, to name just a f",
+      "***Similar Area.*** You and your group (or the target object) wind up in a different area that's visually or thematically similar to the target area. ",
+      "Second, you can bind an extra effect to the area. Choose the effect from the following list, or choose an effect offered by the GM. Some of these effe"
+    ],
+    "precision": 0.2,
+    "recall": 0.3333,
+    "mrr": 0.3333,
+    "ndcg": 0.5,
+    "f1": 0.25,
+    "hit": 1,
+    "ap": 0.3333,
+    "latency": 0.132
+  },
+  {
+    "id": 159,
+    "query": "I try to move silently across the creaky wooden floor",
+    "category": "exploration",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Wondrous item, uncommon*  \nWhile you wear these boots, your steps make no sound, regardless of the surface you are moving across. You also have advan",
+      "***Creature.*** You can try to move a Huge or smaller creature. Make an ability check with your spellcasting ability contested by the creature's Stren",
+      "***Turn the Unholy.*** As an action, you present your holy symbol and speak a prayer censuring fiends and undead, using your Channel Divinity. Each fi",
+      "As an action, you present your holy symbol and speak a prayer censuring the undead. Each undead that can see or hear you within 30 feet of you must ma",
+      "If you move more than 100 feet from the disk (typically because it can't move around an obstacle to follow you), the spell ends."
+    ],
+    "precision": 0.2,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.3077,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.18
+  },
+  {
+    "id": 160,
+    "query": "I try to identify which tracks are freshest",
+    "category": "exploration",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "<td align=\"center\">4</td>\n<td align=\"center\">15</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"center\">13th</td>\n<td align=\"center\">+5</td>\n<td align=\"left\">S",
+      "<tr class=\"even\">\n<td align=\"center\">8th</td>\n<td align=\"center\">+3</td>\n<td align=\"left\">Ability Score Improvement</td>\n<td align=\"center\">3</td>\n<td",
+      "<td align=\"left\">Curling musical horn</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">Hel, goddess of the underworld</td>\n<td align=\"center\">NE</td>\n<td ",
+      "<td align=\"center\">+6</td>\n<td align=\"left\">Song of Rest (d12)</td>\n<td align=\"center\">4</td>\n<td align=\"center\">20</td>\n</tr>\n<tr class=\"even\">\n<td a",
+      "-   If you are traveling alone, you can move stealthily at a normal pace.\n-   When you forage, you find twice as much food as you normally would.\n-   "
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.247
+  },
+  {
+    "id": 161,
+    "query": "I try to hold my breath while swimming underwater",
+    "category": "exploration",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "**Languages** \u2014  \n**Challenge** 1 (200 XP)  \n***Hold Breath.*** While out of water, the octopus can hold its breath for 1 hour.  \n***Underwater Camouf",
+      "**Languages** \u2014  \n**Challenge** 0 (10 XP)  \n***Hold Breath.*** While out of water, the octopus can hold its breath for 30 minutes.  \n***Underwater Cam",
+      "*Wondrous item, uncommon*  \nWhile wearing this cloak with its hood up, you can breathe underwater, and you have a swimming speed of 60 feet. Pulling t",
+      "-   You can breathe underwater and have a swimming speed equal to your walking speed.\n-   You can cast the following spells from the ring, expending t",
+      "*Potion, uncommon*  \nYou can breathe underwater for 1 hour after drinking this potion. Its cloudy green fluid smells of the sea and has a jellyfish-li"
+    ],
+    "precision": 1.0,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.8,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.116
+  },
+  {
+    "id": 162,
+    "query": "I try to notice if anyone is following us",
+    "category": "exploration",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      ">\n> ***Passive Perception.*** When you hide, there's a chance someone will notice you even if they aren't searching. To determine whether such a creat",
+      "A band of adventurers sneaks up on a bandit camp, springing from the trees to attack them. A gelatinous cube glides down a dungeon passage, unnoticed ",
+      ">\n> An [invisible](#invisible) creature can always try to hide. Signs of its passage might still be noticed, and it does have to stay quiet.\n>\n> In co",
+      "At the beginning of every combat, you roll initiative by making a Dexterity check. Initiative determines the order of creatures' turns in combat.  \n> ",
+      "The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass"
+    ],
+    "precision": 0.6,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 0.9675,
+    "f1": 0.4286,
+    "hit": 1,
+    "ap": 0.9167,
+    "latency": 0.19
+  },
+  {
+    "id": 163,
+    "query": "I try to walk across the tightrope without falling",
+    "category": "exploration",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Wondrous item, uncommon (requires [attunement](#section-attunement))*  \nWhile you wear these light shoes, you can move up, down, and across vertical ",
+      "*Ring, rare (requires [attunement](#section-attunement))*  \nWhen you fall while wearing this ring, you descend 60 feet per round and take no damage fr",
+      "Combatants often find themselves lying on the ground, either because they are knocked down or because they throw themselves down. In the game, they ar",
+      "*Potion, very rare*  \nWhen you drink this potion, you gain a flying speed equal to your walking speed for 1 hour and can hover. If you're in the air w",
+      "*Ring, uncommon*  \nWhile wearing this ring, you can stand on and move across any liquid surface as if it were solid ground."
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.124
+  },
+  {
+    "id": 164,
+    "query": "I sense if there are any aberrations or undead nearby",
+    "category": "exploration",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Beginning at 3rd level, you can use your action and expend one ranger spell slot to focus your awareness on the region around you. For 1 minute per le",
+      "The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears. As an action, you ",
+      "*1st-level divination*  \n**Classes:** [Cleric](#section-cleric), [Paladin](#section-paladin)  \n**Casting Time:** 1 action  \n**Range:** Self  \n**Compon",
+      "-   powerful celestials, fey, fiends, elementals, or undead\n-   influence from other planes of existence\n-   buildings  \nFor example, you could determ",
+      "As an action, you present your holy symbol and speak a prayer censuring the undead. Each undead that can see or hear you within 30 feet of you must ma"
+    ],
+    "precision": 0.8,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.4706,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.136
+  },
+  {
+    "id": 165,
+    "query": "I want to find the best path through the dense undergrowth",
+    "category": "exploration",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Starting at 8th level, moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without be",
+      "Starting at 6th level, moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without be",
+      "The travel speeds given in the Travel Pace table assume relatively simple terrain: roads, open plains, or clear dungeon corridors. But adventurers oft",
+      "For the duration, as long as you are on the same plane of existence as the destination, you know how far it is and in what direction it lies. While yo",
+      "At 3rd level, you choose a [path](#section-barbarian-paths) that shapes the nature of your rage. Your choice grants you features at 3rd level and agai"
+    ],
+    "precision": 0.2,
+    "recall": 0.3333,
+    "mrr": 0.25,
+    "ndcg": 0.4307,
+    "f1": 0.25,
+    "hit": 1,
+    "ap": 0.25,
+    "latency": 0.129
+  },
+  {
+    "id": 166,
+    "query": "I want to climb down the cliff face without falling",
+    "category": "exploration",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "A fall from a great height is one of the most common hazards facing an adventurer. At the end of a fall, a creature takes 1d6 bludgeoning damage for e",
+      "Combatants often find themselves lying on the ground, either because they are knocked down or because they throw themselves down. In the game, they ar",
+      "Once during your move, you can mount a creature that is within 5 feet of you or dismount. Doing so costs an amount of movement equal to half your spee",
+      "*Ring, rare (requires [attunement](#section-attunement))*  \nWhen you fall while wearing this ring, you descend 60 feet per round and take no damage fr",
+      "A monster that has a climbing speed can use all or part of its movement to move on vertical surfaces. The monster doesn't need to spend extra movement"
+    ],
+    "precision": 0.0,
+    "recall": 0.3333,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.223
+  },
+  {
+    "id": 167,
+    "query": "I want to forage for food and water in this area",
+    "category": "exploration",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "-   If you are traveling alone, you can move stealthily at a normal pace.\n-   When you forage, you find twice as much food as you normally would.\n-   ",
+      "*3rd-level conjuration*  \n**Classes:** [Cleric](#section-cleric), [Paladin](#section-paladin)  \n**Casting Time:** 1 action  \n**Range:** 30 feet  \n**Co",
+      "The Food, Drink, and Lodging table gives prices for individual food items and a single night's lodging. These prices are included in your total lifest",
+      "*4th-level transmutation*  \n**Classes:** [Cleric](#section-cleric), [Druid](#section-druid), [Wizard](#section-wizard)  \n**Casting Time:** 1 action  \n",
+      "*1st-level transmutation*  \n**Classes:** [Cleric](#section-cleric), [Druid](#section-druid)  \n**Casting Time:** 1 action  \n**Range:** 30 feet  \n**Comp"
+    ],
+    "precision": 0.2,
+    "recall": 0.6667,
+    "mrr": 0.5,
+    "ndcg": 0.6309,
+    "f1": 0.3077,
+    "hit": 1,
+    "ap": 0.5,
+    "latency": 0.328
+  },
+  {
+    "id": 168,
+    "query": "I want to predict the weather for our journey tomorrow",
+    "category": "exploration",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Transmutation cantrip*  \n**Classes:** [Druid](#section-druid)  \n**Casting Time:** 1 action  \n**Range:** 30 feet  \n**Components:** V, S  \n**Duration:*",
+      "When you change the weather conditions, find a current condition on the following tables and change its stage by one, up or down. When changing the wi",
+      "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favore",
+      "*8th-level transmutation*  \n**Classes:** [Cleric](#section-cleric), [Druid](#section-druid), [Wizard](#section-wizard)  \n**Casting Time:** 10 minutes ",
+      "-   [*Antimagic Field*](#antimagic-field)\n-   [*Control Weather*](#control-weather)\n-   [*Earthquake*](#earthquake)\n-   [*Holy Aura*](#holy-aura)"
+    ],
+    "precision": 0.4,
+    "recall": 0.6667,
+    "mrr": 0.5,
+    "ndcg": 0.6509,
+    "f1": 0.5,
+    "hit": 1,
+    "ap": 0.5,
+    "latency": 0.271
+  },
+  {
+    "id": 169,
+    "query": "I try to remain hidden while the patrol passes by",
+    "category": "exploration",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      ">\n> An [invisible](#invisible) creature can always try to hide. Signs of its passage might still be noticed, and it does have to stay quiet.\n>\n> In co",
+      "At the beginning of every combat, you roll initiative by making a Dexterity check. Initiative determines the order of creatures' turns in combat.  \n> ",
+      "When you take the Hide action, you make a Dexterity (Stealth) check in an attempt to hide, following the rules for hiding. If you succeed, you gain ce",
+      "Combatants often try to escape their foes' notice by hiding, casting the [*invisibility*](#invisibility) spell, or lurking in darkness.  \nWhen you att",
+      "Starting at 10th level, you can spend 1 minute creating camouflage for yourself. You must have access to fresh mud, dirt, plants, soot, and other natu"
+    ],
+    "precision": 0.8,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 0.9829,
+    "f1": 0.7273,
+    "hit": 1,
+    "ap": 0.95,
+    "latency": 0.21
+  },
+  {
+    "id": 170,
+    "query": "I want to rappel down the tower wall using rope",
+    "category": "exploration",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Each creature in the area where the fortress appears must make a DC 15 Dexterity saving throw, taking 10d10 bludgeoning damage on a failed save, or ha",
+      "*Wondrous item, rare*  \nThis rope is 30 feet long and weighs 3 pounds. If you hold one end of the rope and use an action to speak its command word, th",
+      "The wall can have any shape you desire, though it can't occupy the same space as a creature or object. The wall doesn't need to be vertical or rest on",
+      "*Wondrous item, uncommon*  \nThis 60-foot length of silk rope weighs 3 pounds and can hold up to 3,000 pounds. If you hold one end of the rope and use ",
+      "*Mechanical trap*  \nThis trap uses a trip wire to collapse the supports keeping an unstable section of a ceiling in place.  \nThe trip wire is 3 inches"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.109
+  },
+  {
+    "id": 171,
+    "query": "I want to set up a safe campsite in this dangerous wilderness",
+    "category": "exploration",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Movement through dangerous dungeons or wilderness areas often involves more than simply walking. Adventurers might have to climb, crawl, swim, or jump",
+      "***Squalid.*** You live in a leaky stable, a mud-floored hut just outside town, or a vermin-infested boarding house in the worst part of town. You hav",
+      "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favore",
+      "Combat rarely takes place in bare rooms or on featureless plains. Boulder-strewn caverns, briar-choked forests, treacherous staircases\u2014the setting of ",
+      "By its nature, adventuring involves delving into places that are dark, dangerous, and full of mysteries to be explored. The rules in this section cove"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.21
+  },
+  {
+    "id": 172,
+    "query": "I try to disarm the complex mechanical trap on the chest",
+    "category": "exploration",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Mechanical trap*  \nA poisoned needle is hidden within a treasure chest's lock, or in something else that a creature might open. Opening the chest wit",
+      "You should allow a character to discover a trap without making an ability check if an action would clearly reveal the trap's presence. For example, if",
+      "A trap's description specifies the checks and DCs needed to detect it, disable it, or both. A character actively looking for a trap can attempt a Wisd",
+      "Any character can attempt an Intelligence (Arcana) check to detect or disarm a magic trap, in addition to any other checks noted in the trap's descrip",
+      "Complex traps work like standard traps, except once activated they execute a series of actions each round. A complex trap turns the process of dealing"
+    ],
+    "precision": 0.8,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9829,
+    "f1": 0.8889,
+    "hit": 1,
+    "ap": 0.95,
+    "latency": 0.108
+  },
+  {
+    "id": 173,
+    "query": "can I tell if the innkeeper is hiding something from us",
+    "category": "social",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      ">\n> ***Passive Perception.*** When you hide, there's a chance someone will notice you even if they aren't searching. To determine whether such a creat",
+      "At the beginning of every combat, you roll initiative by making a Dexterity check. Initiative determines the order of creatures' turns in combat.  \n> ",
+      ">\n> An [invisible](#invisible) creature can always try to hide. Signs of its passage might still be noticed, and it does have to stay quiet.\n>\n> In co",
+      "You should allow a character to discover a trap without making an ability check if an action would clearly reveal the trap's presence. For example, if",
+      "-   An invisible creature is impossible to see without the aid of magic or a special sense. For the purpose of hiding, the creature is heavily obscure"
+    ],
+    "precision": 0.2,
+    "recall": 0.3333,
+    "mrr": 0.5,
+    "ndcg": 0.6309,
+    "f1": 0.25,
+    "hit": 1,
+    "ap": 0.5,
+    "latency": 0.111
+  },
+  {
+    "id": 174,
+    "query": "do I sense the noble's true feelings about our proposal",
+    "category": "social",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "**Senses** passive Perception 12  \n**Languages** any two languages  \n**Challenge** 1/8 (25 XP)  \n##### Actions  \n***Rapier.*** *Melee Weapon Attack:* ",
+      "Bards of the College of Lore know something about most things, collecting bits of knowledge from sources as diverse as scholarly tomes and peasant tal",
+      "</tr>\n<tr class=\"odd\">\n<td align=\"center\">5</td>\n<td align=\"left\">Faith. I trust that my deity will guide my actions. I have faith that if I work hard",
+      "</tr>\n<tr class=\"odd\">\n<td align=\"center\">3</td>\n<td align=\"left\">I see omens in every event and action. The gods try to speak to us, we just need to ",
+      "Inspiration is a rule the game master can use to reward you for playing your character in a way that's true to his or her personality traits, ideal, b"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.194
+  },
+  {
+    "id": 175,
+    "query": "can I charm my way past the bouncer at the exclusive club",
+    "category": "social",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "*Rod, rare (requires [attunement](#section-attunement))*  \nYou can use an action to present the rod and command obedience from each creature of your c",
+      "Starting at 7th level, you can use your action to end one effect on yourself that is causing you to be [charmed](#charmed) or [frightened](#frightened",
+      "***Tail.*** *Melee Weapon Attack:* +9 to hit, reach 10 ft. one target. *Hit:* 15 (3d6 + 5) bludgeoning damage.  \n***Enslave (3/Day).*** The aboleth ta",
+      "Starting at 7th level, you and friendly creatures within 10 feet of you can't be [charmed](#charmed) while you are conscious.  \nAt 18th level, the ran",
+      "-   A charmed creature can't attack the charmer or target the charmer with harmful abilities or magical effects.\n-   The charmer has advantage on any "
+    ],
+    "precision": 0.0,
+    "recall": 0.3333,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.118
+  },
+  {
+    "id": 176,
+    "query": "do I read the crowd's mood before making my speech",
+    "category": "social",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "You can read all writing.",
+      "***Persuasion.*** When you attempt to influence someone or a group of people with tact, social graces, or good nature, the GM might ask you to make a ",
+      "When that circumstance occurs, a magical mouth appears on the object and recites the message in your voice and at the same volume you spoke. If the ob",
+      "Your race indicates the languages your character can speak by default, and your background might give you access to one or more additional languages o",
+      "***Intimidation.*** When you attempt to influence someone through overt threats, hostile actions, and physical violence, the GM might ask you to make "
+    ],
+    "precision": 0.0,
+    "recall": 0.3333,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.168
+  },
+  {
+    "id": 177,
+    "query": "can I convince the guard that we're supposed to be here",
+    "category": "social",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "On each of your turns, you can use a bonus action to mentally command any creature you made with this spell if the creature is within 60 feet of you (",
+      "<td align=\"left\">&quot;I don't like the way people judge me all the time.&quot;</td>\n</tr>\n<tr class=\"even\">\n<td align=\"center\">56\u201370</td>\n<td align=\"",
+      "*Rod, rare (requires [attunement](#section-attunement))*  \nYou can use an action to present the rod and command obedience from each creature of your c",
+      "While the target is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepat",
+      "While the creature is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telep"
+    ],
+    "precision": 0.0,
+    "recall": 0.3333,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.19
+  },
+  {
+    "id": 178,
+    "query": "do I notice the subtle tells that reveal the spy among us",
+    "category": "social",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      ">\n> ***Passive Perception.*** When you hide, there's a chance someone will notice you even if they aren't searching. To determine whether such a creat",
+      "**Senses** passive Perception 16  \n**Languages** any two languages  \n**Challenge** 1 (200 XP)  \n***Cunning Action.*** On each of its turns, the spy ca",
+      "A band of adventurers sneaks up on a bandit camp, springing from the trees to attack them. A gelatinous cube glides down a dungeon passage, unnoticed ",
+      "***Hand Crossbow.*** *Ranged Weapon Attack:* +4 to hit, range 30/120 ft., one target. *Hit:* 5 (1d6 + 2) piercing damage.  \nRulers, nobles, merchants,",
+      "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh"
+    ],
+    "precision": 0.0,
+    "recall": 0.3333,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.11
+  },
+  {
+    "id": 179,
+    "query": "can I rally the frightened townsfolk to stand and fight",
+    "category": "social",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see",
+      "***Panicked.*** The target is [frightened](#frightened) of you. On each of its turns, the frightened creature must take the Dash action and move away ",
+      "-   A frightened creature has disadvantage on ability checks and attack rolls while the source of its fear is within line of sight.\n-   The creature c",
+      "Starting at 7th level, you can use your action to end one effect on yourself that is causing you to be [charmed](#charmed) or [frightened](#frightened",
+      "At 7th level, you gain one of the following features of your choice.  \n***Escape the Horde.*** Opportunity attacks against you are made with disadvant"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.166
+  },
+  {
+    "id": 180,
+    "query": "do I detect any nervousness when the suspect answers my questions",
+    "category": "social",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Medicine.*** A Wisdom (Medicine) check lets you try to stabilize a dying companion or diagnose an illness.  \n***Perception.*** Your Wisdom (Percept",
+      "You can also use this spell to detect the presence of thinking creatures you can't see. When you cast the spell or as your action during the duration,",
+      "A Wisdom check might reflect an effort to read body language, understand someone's feelings, notice things about the environment, or care for an injur",
+      "You initially learn the surface thoughts of the creature\u2014what is most on its mind in that moment. As an action, you can either shift your attention to",
+      "*5th-level divination (ritual)*  \n**Classes:** [Cleric](#section-cleric)  \n**Casting Time:** 1 minute  \n**Range:** Self  \n**Components:** V, S, M (inc"
+    ],
+    "precision": 0.6,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 0.906,
+    "f1": 0.6316,
+    "hit": 1,
+    "ap": 0.8056,
+    "latency": 0.152
+  },
+  {
+    "id": 181,
+    "query": "can I spread rumors to damage the rival's reputation",
+    "category": "social",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "You can make the messenger appear monstrous and terrifying to the target. If you do, the messenger can deliver a message of no more than ten words and",
+      "***Slam.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 7 (1d6 + 4) bludgeoning damage.  \n***Read Thoughts.*** The doppelganger ",
+      "The simulacrum is friendly to you and creatures you designate. It obeys your spoken commands, moving and acting in accordance with your wishes and act",
+      "***Persuasion.*** When you attempt to influence someone or a group of people with tact, social graces, or good nature, the GM might ask you to make a ",
+      "##### Actions  \n***Pseudopod.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 6 (1d6 + 3) bludgeoning damage plus 18 (4d8) acid d"
+    ],
+    "precision": 0.4,
+    "recall": 0.6667,
+    "mrr": 0.5,
+    "ndcg": 0.6509,
+    "f1": 0.5,
+    "hit": 1,
+    "ap": 0.5,
+    "latency": 0.082
+  },
+  {
+    "id": 182,
+    "query": "do I sense whether the prisoner is telling the whole truth",
+    "category": "social",
+    "query_type": "colloquial",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Until the spell ends, you can ask the corpse up to five questions. The corpse knows only what it knew in life, including the languages it knew. Answer",
+      "An extradimensional cell is an infinite expanse filled with thick fog that reduces visibility to 10 feet. Creatures trapped in the mirror's cells don'",
+      "***Truth Serum (Ingested).*** A creature subjected to this poison must succeed on a DC 11 Constitution saving throw or become poisoned for 1 hour. The",
+      "When you cast the spell, you choose one of the following forms of imprisonment.  \n***Burial.*** The target is entombed far beneath the earth in a sphe",
+      "The special component for this version of the spell is a miniature representation of the prison made from jade.  \n***Minimus Containment.*** The targe"
+    ],
+    "precision": 0.0,
+    "recall": 0.3333,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.11
+  },
+  {
+    "id": 183,
+    "query": "I try to blend in with the crowd at the festival",
+    "category": "social",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Persuasion.*** When you attempt to influence someone or a group of people with tact, social graces, or good nature, the GM might ask you to make a ",
+      "The college's members gather in libraries and sometimes in actual colleges, complete with classrooms and dormitories, to share their lore with one ano",
+      "</tr>\n<tr class=\"odd\">\n<td align=\"center\">3</td>\n<td align=\"left\">I see omens in every event and action. The gods try to speak to us, we just need to ",
+      "<td align=\"center\">16\u201325</td>\n<td align=\"left\">&quot;I keep whatever I find.&quot;</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"center\">26\u201330</td>\n<td align",
+      "*Rod, very rare*  \nWhile holding this rod, you can use an action to activate it. The rod then instantly transports you and up to 199 other willing cre"
+    ],
+    "precision": 0.2,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.25,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.224
+  },
+  {
+    "id": 184,
+    "query": "I try to impersonate a guard using their uniform and mannerisms",
+    "category": "social",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "<td align=\"center\">16\u201325</td>\n<td align=\"left\">&quot;I keep whatever I find.&quot;</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"center\">26\u201330</td>\n<td align",
+      "***Sleight of Hand.*** Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an obje",
+      "***Intimidation.*** When you attempt to influence someone through overt threats, hostile actions, and physical violence, the GM might ask you to make ",
+      "The Oath of Devotion binds a paladin to the loftiest ideals of justice, virtue, and order. Sometimes called cavaliers, white knights, or holy warriors",
+      "You gain proficiency in the Deception and Persuasion skills."
+    ],
+    "precision": 0.0,
+    "recall": 0.3333,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.211
+  },
+  {
+    "id": 185,
+    "query": "I try to calm the frightened animal so we can pass safely",
+    "category": "social",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Panicked.*** The target is [frightened](#frightened) of you. On each of its turns, the frightened creature must take the Dash action and move away ",
+      "Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see",
+      "***Cone of Fear.*** While holding the wand, you can use an action to expend 2 charges, causing the wand's tip to emit a 60-foot cone of amber light. E",
+      "***Antipathy.*** The enchantment causes creatures of the kind you designated to feel an intense urge to leave the area and avoid the target. When such",
+      "A Wisdom check might reflect an effort to read body language, understand someone's feelings, notice things about the environment, or care for an injur"
+    ],
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 0.2,
+    "ndcg": 0.3869,
+    "f1": 0.3333,
+    "hit": 1,
+    "ap": 0.2,
+    "latency": 0.183
+  },
+  {
+    "id": 186,
+    "query": "I try to keep the frightened child calm during the danger",
+    "category": "social",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see",
+      "***Fear.*** Each target must make a Wisdom saving throw and becomes [frightened](#frightened) for 1 minute on a failed save. While frightened, the tar",
+      "***Panicked.*** The target is [frightened](#frightened) of you. On each of its turns, the frightened creature must take the Dash action and move away ",
+      "***Cone of Fear.*** While holding the wand, you can use an action to expend 2 charges, causing the wand's tip to emit a 60-foot cone of amber light. E",
+      "At 6th level, you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performan"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.162
+  },
+  {
+    "id": 187,
+    "query": "I convince the merchant to give us a discount on supplies",
+    "category": "combat",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Quiver.*** A quiver can hold up to 20 arrows.  \n***Ram, Portable.*** You can use a portable ram to break down doors. When doing so, you gain a +4 b",
+      "Most wealth is not in coins. It is measured in livestock, grain, land, rights to collect taxes, or rights to resources (such as a mine or a forest).  ",
+      "Opportunities abound to find treasure, equipment, weapons, armor, and more in the dungeons you explore. Normally, you can sell your treasures and trin",
+      "When the creature appears, it is under no compulsion to behave in any particular way. You can ask the creature to perform a service in exchange for pa",
+      "Common coins come in several different denominations based on the relative worth of the metal from which they are made. The three most common coins ar"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.163
+  },
+  {
+    "id": 188,
+    "query": "I want to intimidate the bandit into revealing their hideout",
+    "category": "social",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "A band of adventurers sneaks up on a bandit camp, springing from the trees to attack them. A gelatinous cube glides down a dungeon passage, unnoticed ",
+      "You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who pr",
+      "During your rogue training you learned thieves' cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal c",
+      "</tbody>\n</table>  \n**Senses** passive Perception 10  \n**Languages** any one language (usually Common)  \n**Challenge** 1/8 (25 XP)  \n##### Actions  \n*",
+      "A trap's description specifies the checks and DCs needed to detect it, disable it, or both. A character actively looking for a trap can attempt a Wisd"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.196
+  },
+  {
+    "id": 189,
+    "query": "I want to entertain the tavern guests with a dramatic performance",
+    "category": "social",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Bards of the College of Lore know something about most things, collecting bits of knowledge from sources as diverse as scholarly tomes and peasant tal",
+      "At 6th level, you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performan",
+      "<tr class=\"even\">\n<td align=\"center\">8th</td>\n<td align=\"center\">+3</td>\n<td align=\"left\">Ability Score Improvement</td>\n<td align=\"center\">3</td>\n<td",
+      "<td align=\"center\">4</td>\n<td align=\"center\">15</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"center\">13th</td>\n<td align=\"center\">+5</td>\n<td align=\"left\">S",
+      "<td align=\"left\">Indomitable Might</td>\n<td align=\"center\">6</td>\n<td align=\"center\">+4</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"center\">19th</td>\n<td a"
+    ],
+    "precision": 0.2,
+    "recall": 0.3333,
+    "mrr": 0.5,
+    "ndcg": 0.6309,
+    "f1": 0.25,
+    "hit": 1,
+    "ap": 0.5,
+    "latency": 0.294
+  },
+  {
+    "id": 190,
+    "query": "I want to plant false information to mislead our enemies",
+    "category": "social",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "The information you learn is accurate but might be couched in figurative language. For example, if you have a mysterious magic axe on hand, the spell ",
+      "You gain proficiency in the Deception and Persuasion skills.",
+      "***Investigation.*** When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You migh",
+      "</tr>\n<tr class=\"odd\">\n<td align=\"center\">3</td>\n<td align=\"left\">I owe my life to the priest who took me in when my parents died.</td>\n</tr>\n<tr clas",
+      "<td align=\"left\">&quot;I don't like the way people judge me all the time.&quot;</td>\n</tr>\n<tr class=\"even\">\n<td align=\"center\">56\u201370</td>\n<td align=\""
+    ],
+    "precision": 0.0,
+    "recall": 0.3333,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.196
+  },
+  {
+    "id": 191,
+    "query": "I try to train the wolf pup to follow basic commands",
+    "category": "social",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "As a bonus action, you can mentally command any creature you made with this spell if the creature is within 500 feet of you (if you control multiple c",
+      "On each of your turns, you can use a bonus action to mentally command any creature you made with this spell if the creature is within 60 feet of you (",
+      "As a bonus action on each of your turns, you can mentally command any creature you animated with this spell if the creature is within 120 feet of you ",
+      "**Challenge** 1/4 (50 XP)  \n***Keen Hearing and Smell.*** The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.  \n***Pac",
+      "While the beast is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepath"
+    ],
+    "precision": 0.0,
+    "recall": 0.3333,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.133
+  },
+  {
+    "id": 192,
+    "query": "I want to negotiate a peace treaty between the warring factions",
+    "category": "combat",
+    "query_type": "precise",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "You have made a pact with a fiend from the lower planes of existence, a being whose aims are evil, even if you strive against those aims. Such beings ",
+      "***Key.*** A rare or rarer magic weapon with which you are proficient appears in your hands. The GM chooses the weapon.  \n***Knight.*** You gain the s",
+      "A typical combat encounter is a clash between two sides, a flurry of weapon swings, feints, parries, footwork, and spellcasting. The game organizes th",
+      "-   [*Aid*](#aid)\n-   [*Augury*](#augury)\n-   [*Blindness/Deafness*](#blindnessdeafness)\n-   [*Calm Emotions*](#calm-emotions)\n-   [*Continual Flame*]",
+      "</tr>\n<tr class=\"odd\">\n<td align=\"center\">5</td>\n<td align=\"left\">Faith. I trust that my deity will guide my actions. I have faith that if I work hard"
+    ],
+    "precision": 0.0,
+    "recall": 0.3333,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.241
+  },
+  {
+    "id": 193,
+    "query": "I want to make the dragon think we're not a threat",
+    "category": "social",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "**Damage Immunities** acid  \n**Senses** blindsight 60 ft., darkvision 120 ft., passive Perception 22  \n**Languages** Common, Draconic  \n**Challenge** ",
+      "**Damage Immunities** cold  \n**Senses** blindsight 60 ft., darkvision 120 ft., passive Perception 21  \n**Languages** Common, Draconic  \n**Challenge** ",
+      "**Damage Immunities** acid  \n**Senses** blindsight 60 ft., darkvision 120 ft., passive Perception 27  \n**Languages** Common, Draconic  \n**Challenge** ",
+      "**Damage Immunities** cold  \n**Senses** blindsight 60 ft., darkvision 120 ft., passive Perception 26  \n**Languages** Common, Draconic  \n**Challenge** ",
+      "**Damage Immunities** fire  \n**Senses** blindsight 60 ft., darkvision 120 ft., passive Perception 21  \n**Languages** Common, Draconic  \n**Challenge** "
+    ],
+    "precision": 0.0,
+    "recall": 0.3333,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.153
+  },
+  {
+    "id": 194,
+    "query": "I try to forge the official seal on this document",
+    "category": "social",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***Disguise Kit.*** This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance. Proficiency wit",
+      "</tr>\n</tbody>\n</table>  \n<table>\n<colgroup>\n<col width=\"5%\" />\n<col width=\"94%\" />\n</colgroup>\n<thead>\n<tr class=\"header\">\n<th align=\"center\">d6</th>",
+      "</tr>\n<tr class=\"odd\">\n<td align=\"center\">5</td>\n<td align=\"left\">Faith. I trust that my deity will guide my actions. I have faith that if I work hard",
+      "</tr>\n<tr class=\"odd\">\n<td align=\"center\">3</td>\n<td align=\"left\">I owe my life to the priest who took me in when my parents died.</td>\n</tr>\n<tr clas",
+      "When you reach 3rd level, you swear the [sacred oath](#section-sacred-oaths) that binds you as a paladin forever. Up to this time you have been in a p"
+    ],
+    "precision": 0.2,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "f1": 0.25,
+    "hit": 1,
+    "ap": 1.0,
+    "latency": 0.175
+  },
+  {
+    "id": 195,
+    "query": "I want to pose as a wealthy noble to gain entry to the gala",
+    "category": "social",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "**Senses** passive Perception 12  \n**Languages** any two languages  \n**Challenge** 1/8 (25 XP)  \n##### Actions  \n***Rapier.*** *Melee Weapon Attack:* ",
+      "***Comfortable.*** Choosing a comfortable lifestyle means that you can afford nicer clothing and can easily maintain your equipment. You live in a sma",
+      "***Aristocratic.*** You live a life of plenty and comfort. You move in circles populated by the most powerful people in the community. You have excell",
+      "At 3rd level, your otherworldly patron bestows a gift upon you for your loyal service. You gain one of the following features of your choice.",
+      "Your lifestyle choice can have consequences. Maintaining a wealthy lifestyle might help you make contacts with the rich and powerful, though you run t"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.207
+  },
+  {
+    "id": 196,
+    "query": "I want to use my status as a cleric to gain the trust of the temple guards",
+    "category": "social",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "You have spent your life in the service of a temple to a specific god or pantheon of gods. You act as an intermediary between the realm of the holy an",
+      "As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventu",
+      "<td align=\"left\">I judge others harshly, and myself even more severely.</td>\n</tr>\n<tr class=\"even\">\n<td align=\"center\">2</td>\n<td align=\"left\">I put ",
+      "You can use a [holy symbol](#section-adventuring-gear) as a spellcasting focus for your cleric spells.",
+      "Wisdom is your spellcasting ability for your cleric spells. The power of your spells comes from your devotion to your deity. You use your Wisdom whene"
+    ],
+    "precision": 0.4,
+    "recall": 0.6667,
+    "mrr": 1.0,
+    "ndcg": 0.9197,
+    "f1": 0.5,
+    "hit": 1,
+    "ap": 0.8333,
+    "latency": 0.182
+  },
+  {
+    "id": 197,
+    "query": "I try to calm the angry mob before they turn violent",
+    "category": "social",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "Starting when you choose this path at 3rd level, you can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a si",
+      "By 7th level, your instincts are so honed that you have advantage on initiative rolls.  \nAdditionally, if you are surprised at the beginning of combat",
+      "In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action.  \nWhile raging, you gain the following benefits if yo",
+      "For some barbarians, rage is a means to an end\u2014that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood. As ",
+      "Once you have raged the number of times shown for your barbarian level in the Rages column of the Barbarian table, you must finish a long rest before "
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.167
+  },
+  {
+    "id": 198,
+    "query": "I want to befriend the lonely guard to learn their patrol schedule",
+    "category": "social",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "<th align=\"center\">Berserkers Summoned</th>\n<th align=\"left\">Requirement</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td align=\"center\">01\u201340</td>\n<t",
+      "-   If you are traveling alone, you can move stealthily at a normal pace.\n-   When you forage, you find twice as much food as you normally would.\n-   ",
+      "As a bonus action, you can mentally command any creature you made with this spell if the creature is within 500 feet of you (if you control multiple c",
+      "*2nd-level enchantment (ritual)*  \n**Classes:** [Bard](#section-bard), [Druid](#section-druid), [Ranger](#section-ranger)  \n**Casting Time:** 1 action",
+      "*Rod, rare (requires [attunement](#section-attunement))*  \nYou can use an action to present the rod and command obedience from each creature of your c"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "f1": 0.0,
+    "hit": 0,
+    "ap": 0.0,
+    "latency": 0.249
+  },
+  {
+    "id": 199,
+    "query": "I try to use my bardic performance to distract the guards while my allies sneak past",
+    "category": "social",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "You can use a [musical instrument](#section-tools) as a spellcasting focus for your bard spells.",
+      "At 20th level, when you roll initiative and have no uses of Bardic Inspiration left, you regain one use.",
+      "Charisma is your spellcasting ability for your bard spells. Your magic comes from the heart and soul you pour into the performance of your music or or",
+      "Beginning when you reach 5th level, you regain all of your expended uses of Bardic Inspiration when you finish a short or long rest.",
+      "You can lend your aid to another creature in the completion of a task. When you take the Help action, the creature you aid gains advantage on the next"
+    ],
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 0.3333,
+    "ndcg": 0.5,
+    "f1": 0.3333,
+    "hit": 1,
+    "ap": 0.3333,
+    "latency": 0.144
+  },
+  {
+    "id": 200,
+    "query": "I try to identify the magical aura surrounding this ancient artifact",
+    "category": "knowledge",
+    "query_type": "multi_part",
+    "num_chunks_retrieved": 5,
+    "chunks_preview": [
+      "***False Aura.*** You change the way the target appears to spells and magical effects, such as [*detect magic*](#detect-magic), that detect magical au",
+      "*1st-level divination (ritual)*  \n**Classes:** [Bard](#section-bard), [Cleric](#section-cleric), [Druid](#section-druid), [Paladin](#section-paladin),",
+      "The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet with",
+      "*Weapon (any sword), legendary (requires [attunement](#section-attunement) by a paladin)*  \nYou gain a +3 bonus to attack and damage rolls made with t",
+      "You can also use an action to cast the [*detect magic*](#detect-magic) spell from the orb without using any charges.  \n***Call Dragons.*** While you c"
+    ],
+    "precision": 0.4,
+    "recall": 0.3333,
+    "mrr": 1.0,
+    "ndcg": 0.8503,
+    "f1": 0.3636,
+    "hit": 1,
+    "ap": 0.7,
+    "latency": 0.195
   }
 ]

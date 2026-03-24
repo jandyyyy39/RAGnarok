@@ -10,6 +10,7 @@ from typing import Any
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 from config import Config
+from openai import OpenAI
 from groq import Groq
 
 from agents.rules_arbiter_hyde import RulesArbiterHyDE
@@ -28,9 +29,10 @@ EVAL_SET_PATH = "./data/eval_set.json"
 DB_PATH = "data/chroma_db"
 WORLD_CTX = "Location: The Black Boar Tavern. Active NPCs: Thrain Blackbeard."
 K = 5
+RESULTS_DIR = "evaluation/results_v2/header_eval"
 
-# ── Normalisation helpers ─────────────────────────────────────────────────────
-def strip_anchor(text: str | None) -> str:
+# -------------- Normalisation helpers --------------
+def strip_anchor(text):
     """Remove {#section-anchor} style fragments from header strings."""
     if text is None:
         return ""
@@ -40,8 +42,8 @@ def normalise(text: str | None) -> str:
     """Lowercase, strip anchors and surrounding whitespace."""
     return strip_anchor(text).lower().strip()
 
-# ── Metadata extraction ────────────────────────────────────────────────────────
-def extract_metadata(result: Any) -> dict:
+# -------------- Metadata extraction --------------
+def extract_metadata(result):
     """
     Handle multiple return shapes:
       - LangChain Document
@@ -68,7 +70,7 @@ def extract_metadata(result: Any) -> dict:
 
     return {}
 
-def get_deepest_header(metadata: dict) -> str:
+def get_deepest_header(metadata):
     """Return the most specific non-empty header from a chunk metadata dict."""
     for level in ("Header 4", "Header 3", "Header 2", "Header 1"):
         value = metadata.get(level)
@@ -76,7 +78,7 @@ def get_deepest_header(metadata: dict) -> str:
             return str(value)
     return ""
 
-def get_all_headers(metadata: dict) -> list[str]:
+def get_all_headers(metadata):
     """
     Return all header values in the chain normalised.
     A retrieved chunk is relevant if ANY level matches a gold section.
@@ -88,7 +90,7 @@ def get_all_headers(metadata: dict) -> list[str]:
             headers.append(normalise(value))
     return headers
 
-def get_retrieved_headers(results: list) -> list[str]:
+def get_retrieved_headers(results):
     """
     Extract deepest header from each result for logging/output.
     """
@@ -99,8 +101,7 @@ def get_retrieved_headers(results: list) -> list[str]:
         headers.append(normalise(raw_header))
     return headers
 
-
-def get_header_chain_for_logging(metadata: dict) -> str:
+def get_header_chain_for_logging(metadata):
     parts = []
     for level in ("Header 1", "Header 2", "Header 3", "Header 4"):
         value = metadata.get(level)
@@ -108,8 +109,8 @@ def get_header_chain_for_logging(metadata: dict) -> str:
             parts.append(normalise(value))
     return " > ".join(parts)
 
-# ── Relevance helpers ─────────────────────────────────────────────────────────
-def build_relevance_list(results: list, gold_sections: list[str]) -> list[int]:
+# -------------- Relevance helpers --------------
+def build_relevance_list(results, gold_sections):
     """
     Binary relevance list in rank order.
     A result is relevant if ANY header in its full chain matches a gold section.
@@ -136,8 +137,8 @@ def build_relevance_list(results: list, gold_sections: list[str]) -> list[int]:
 
     return relevance
 
-# ── Metric calculations ───────────────────────────────────────────────────────
-def precision_at_k(relevance: list[int], k: int, total_relevant: int) -> float:
+# -------------- Metric calculations --------------
+def precision_at_k(relevance, k, total_relevant):
     """
     Precision@min(k, r), where r is total relevant.
     """
@@ -146,18 +147,18 @@ def precision_at_k(relevance: list[int], k: int, total_relevant: int) -> float:
         return 0.0
     return sum(relevance[:cutoff]) / cutoff
 
-def recall_at_k(relevance: list[int], k: int, total_relevant: int) -> float:
+def recall_at_k(relevance, k, total_relevant):
     if total_relevant == 0:
         return 0.0
     return sum(relevance[:k]) / total_relevant
 
-def reciprocal_rank(relevance: list[int]) -> float:
+def reciprocal_rank(relevance):
     for i, rel in enumerate(relevance):
         if rel == 1:
             return 1.0 / (i + 1)
     return 0.0
 
-def ndcg_at_k(relevance: list[int], k: int, total_relevant: int) -> float:
+def ndcg_at_k(relevance, k, total_relevant):
     import math
 
     def dcg(rels):
@@ -171,7 +172,7 @@ def ndcg_at_k(relevance: list[int], k: int, total_relevant: int) -> float:
         return 0.0
     return actual_dcg / ideal_dcg
 
-def average_precision(relevance: list[int], total_relevant: int, k: int) -> float:
+def average_precision(relevance, total_relevant, k):
     if total_relevant == 0:
         return 0.0
 
@@ -185,15 +186,15 @@ def average_precision(relevance: list[int], total_relevant: int, k: int) -> floa
 
     return precision_sum / total_relevant
 
-def f1_at_k(precision: float, recall: float) -> float:
+def f1_at_k(precision, recall):
     if precision + recall == 0:
         return 0.0
     return 2 * precision * recall / (precision + recall)
 
-def hit_at_k(relevance: list[int]) -> float:
+def hit_at_k(relevance):
     return 1.0 if any(relevance) else 0.0
 
-def compute_metrics(relevance: list[int], total_relevant: int, k: int) -> dict:
+def compute_metrics(relevance, total_relevant, k):
     precision = precision_at_k(relevance, k, total_relevant)
     recall = recall_at_k(relevance, k, total_relevant)
 
@@ -207,7 +208,7 @@ def compute_metrics(relevance: list[int], total_relevant: int, k: int) -> dict:
         "ap": average_precision(relevance, total_relevant, k),
     }
 
-# ── Retrieval wrappers ────────────────────────────────────────────────────────
+# -------------- Retrieval wrappers --------------
 def retrieve_cosine_eval(query):
     return test_retrieval_cosine_sim(query)
 
@@ -221,12 +222,9 @@ def retrieve_bm25_rerank_eval(bm25, final_splits, query):
     return retrieve_bm25_with_rerank(bm25, final_splits, query=query)
 
 def retrieve_arbiter_method_eval(arbiter, query, world_ctx):
-    """
-    Return raw docs/results so header metadata remains available.
-    """
     return arbiter.retrieve(query, world_ctx)
 
-# ── Debug helper ──────────────────────────────────────────────────────────────
+# -------------- Debug helper --------------
 def print_canonical_headers(final_splits, output_path="canonical_headers.txt"):
     from collections import Counter
 
@@ -243,18 +241,107 @@ def print_canonical_headers(final_splits, output_path="canonical_headers.txt"):
 
     print(f"Canonical headers written to {output_path} ({len(headers)} unique headers)")
 
-# ── Main ──────────────────────────────────────────────────────────────────────
+# -------------- Summary rebuild helpers --------------
+def safe_avg(values):
+    vals = [v for v in values if isinstance(v, (int, float))]
+    return round(sum(vals) / len(vals), 4) if vals else 0.0
+
+def summarise_group(rows):
+    return {
+        "precision": safe_avg([r.get("precision", 0.0) for r in rows]),
+        "recall": safe_avg([r.get("recall", 0.0) for r in rows]),
+        "mrr": safe_avg([r.get("mrr", 0.0) for r in rows]),
+        "ndcg": safe_avg([r.get("ndcg", 0.0) for r in rows]),
+        "f1": safe_avg([r.get("f1", 0.0) for r in rows]),
+        "hit": safe_avg([r.get("hit", 0.0) for r in rows]),
+        "ap": safe_avg([r.get("ap", 0.0) for r in rows]),
+        "n": len(rows),
+    }
+
+def group_rows(rows, key_name):
+    grouped = defaultdict(list)
+
+    for row in rows:
+        key = row.get(key_name)
+        if key is not None and str(key).strip():
+            grouped[str(key)].append(row)
+
+    return {
+        group_name: summarise_group(group)
+        for group_name, group in grouped.items()
+    }
+
+def rebuild_summary_from_individual_results(results_dir):
+    summaries = []
+
+    for filename in sorted(os.listdir(results_dir)):
+        if not filename.startswith("retrieval_") or not filename.endswith(".json"):
+            continue
+        if filename == "retrieval_summary.json":
+            continue
+
+        path = os.path.join(results_dir, filename)
+
+        with open(path, "r", encoding="utf-8") as f:
+            rows = json.load(f)
+
+        if not rows:
+            continue
+
+        method_name = filename[len("retrieval_"):-len(".json")]
+
+        summary = {
+            "method": method_name,
+            "n_queries": len(rows),
+            "avg_precision_at_k": safe_avg([r.get("precision", 0.0) for r in rows]),
+            "avg_recall_at_k": safe_avg([r.get("recall", 0.0) for r in rows]),
+            "avg_mrr": safe_avg([r.get("mrr", 0.0) for r in rows]),
+            "avg_ndcg": safe_avg([r.get("ndcg", 0.0) for r in rows]),
+            "avg_f1": safe_avg([r.get("f1", 0.0) for r in rows]),
+            "avg_hit_at_k": safe_avg([r.get("hit", 0.0) for r in rows]),
+            "map": safe_avg([r.get("ap", 0.0) for r in rows]),
+            "by_category": group_rows(rows, "category"),
+            "by_query_type": group_rows(rows, "query_type"),
+        }
+
+        summaries.append(summary)
+
+    return summaries
+
+def write_summary_csv(summaries, output_csv_path):
+    fields = [
+        "method",
+        "n_queries",
+        "avg_precision_at_k",
+        "avg_recall_at_k",
+        "avg_mrr",
+        "avg_ndcg",
+        "avg_f1",
+        "avg_hit_at_k",
+        "map",
+    ]
+
+    with open(output_csv_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fields)
+        writer.writeheader()
+        for row in summaries:
+            writer.writerow({k: row.get(k) for k in fields})
+
+# -------------- Main --------------
 def main():
     with open(EVAL_SET_PATH, "r", encoding="utf-8") as f:
         eval_set = json.load(f)
 
-    os.makedirs("evaluation/results_v2/header_eval", exist_ok=True)
+    os.makedirs(RESULTS_DIR, exist_ok=True)
 
     print("Building BM25 index...")
     bm25, final_splits = build_bm25_index()
 
-    client = Groq(api_key=Config.GROQ_API_KEY)
-    model_profile = "GROQ"
+    # client = Groq(api_key=Config.GROQ_API_KEY)
+    # model_profile = "GROQ"
+
+    client = OpenAI(base_url=Config.OLLAMA_BASE_URL, api_key="ollama")
+    model_profile = "LOCAL"
 
     hyde_arbiter = RulesArbiterHyDE(client, model_profile, db_path=DB_PATH)
     hybrid_arbiter = RulesArbiterHybrid(client, model_profile, db_path=DB_PATH)
@@ -270,18 +357,12 @@ def main():
         "crag": lambda q: retrieve_arbiter_method_eval(crag_arbiter, q, WORLD_CTX),
     }
 
-    all_summaries = []
-    metric_keys = ["precision", "recall", "mrr", "ndcg", "f1", "hit", "ap"]
-
-    crag_debug_printed = False
-
     for method_name, retrieve_fn in methods.items():
         print(f"\n{'=' * 60}")
         print(f"Evaluating {method_name.upper()}")
         print(f"{'=' * 60}")
 
         results = []
-        scores = defaultdict(list)
 
         for entry in eval_set:
             query_id = entry["id"]
@@ -299,39 +380,15 @@ def main():
 
             latency = time.time() - start
 
-            # if method_name == "crag" and retrieved and not crag_debug_printed:
-            #     print("\n--- CRAG DEBUG ---")
-            #     print("Query ID:", query_id)
-            #     print("Query:", query)
-            #     print("Gold sections:", gold_sections)
-            #     print("Normalised gold:", [normalise(s) for s in gold_sections])
-            #     print()
-
-            #     for i, r in enumerate(retrieved[:3], start=1):
-            #         md = extract_metadata(r)
-            #         print(f"Result {i}")
-            #         print("Type:", type(r))
-            #         print("Metadata keys:", list(md.keys()))
-            #         print("Metadata:", md)
-            #         print("Deepest header:", get_deepest_header(md))
-            #         print("Header chain:", get_header_chain_for_logging(md))
-            #         print("Preview:", getattr(r, "page_content", "")[:200])
-            #         print()
-
-            #     print("Computed relevance:", build_relevance_list(retrieved, gold_sections))
-            #     print("------------------\n")
-            #     crag_debug_printed = True
-
             retrieved_headers = get_retrieved_headers(retrieved)
             relevance = build_relevance_list(retrieved, gold_sections)
             metrics = compute_metrics(relevance, total_relevant, K)
 
-            for key in metric_keys:
-                scores[key].append(metrics[key])
-
             results.append({
                 "id": query_id,
                 "query": query,
+                "category": entry.get("category"),
+                "query_type": entry.get("query_type"),
                 "gold_sections": gold_sections,
                 "normalised_gold_sections": [normalise(s) for s in gold_sections],
                 "num_chunks_retrieved": len(retrieved),
@@ -358,51 +415,23 @@ def main():
                 f"F1={metrics['f1']:.2f} AP={metrics['ap']:.2f}"
             )
 
-        with open(f"evaluation/results_v2/header_eval/retrieval_{method_name}.json", "w", encoding="utf-8") as f:
+        with open(os.path.join(RESULTS_DIR, f"retrieval_{method_name}.json"), "w", encoding="utf-8") as f:
             json.dump(results, f, indent=2)
 
-        avg = lambda lst: round(sum(lst) / len(lst), 4) if lst else 0.0
+    summaries = rebuild_summary_from_individual_results(RESULTS_DIR)
 
-        summary = {
-            "method": method_name,
-            "n_queries": len(eval_set),
-            "avg_precision_at_k": avg(scores["precision"]),
-            "avg_recall_at_k": avg(scores["recall"]),
-            "avg_mrr": avg(scores["mrr"]),
-            "avg_ndcg": avg(scores["ndcg"]),
-            "avg_f1": avg(scores["f1"]),
-            "avg_hit_at_k": avg(scores["hit"]),
-            "map": avg(scores["ap"]),
-        }
+    with open(os.path.join(RESULTS_DIR, "retrieval_summary.json"), "w", encoding="utf-8") as f:
+        json.dump(summaries, f, indent=2)
 
-        all_summaries.append(summary)
-
-    with open("evaluation/results_v2/header_eval/retrieval_summary.json", "w", encoding="utf-8") as f:
-        json.dump(all_summaries, f, indent=2)
-
-    fields = [
-        "method",
-        "avg_precision_at_k",
-        "avg_recall_at_k",
-        "avg_mrr",
-        "avg_ndcg",
-        "avg_f1",
-        "avg_hit_at_k",
-        "map",
-        "n_queries",
-    ]
-
-    with open("evaluation/results_v2/header_eval/retrieval_summary.csv", "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fields)
-        writer.writeheader()
-        for row in all_summaries:
-            writer.writerow({k: row[k] for k in fields})
+    write_summary_csv(
+        summaries,
+        os.path.join(RESULTS_DIR, "retrieval_summary.csv"),
+    )
 
     print_canonical_headers(
         final_splits,
-        output_path="evaluation/results_v2/header_eval/canonical_headers.txt",
+        output_path=os.path.join(RESULTS_DIR, "canonical_headers.txt"),
     )
-
 
 if __name__ == "__main__":
     main()

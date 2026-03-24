@@ -10,6 +10,7 @@ sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 from config import Config
 from groq import Groq
+from openai import OpenAI
 from agents.rules_arbiter import RulesArbiter
 from agents.rules_arbiter_hyde import RulesArbiterHyDE
 from agents.rules_arbiter_hybrid import RulesArbiterHybrid
@@ -25,6 +26,9 @@ from scripts.test_rag import (
 
 DB_PATH = "data/chroma_db"
 WORLD_CTX = "Location: The Black Boar Tavern. Active NPCs: Thrain Blackbeard."
+RESULTS_DIR = "evaluation/results_v2"
+
+MODEL_PROFILE_FOR_SUMMARY = "LOCAL"
 
 # -------------- Helper functions (General) --------------
 def normalize_chunks(results):
@@ -72,14 +76,11 @@ def normalize_chunks(results):
 
     return normalized
 
-def retrieve_naive_arbiter_eval(arbiter, query):
-    docs = arbiter.vectorstore.similarity_search(query, k=5)
-    return normalize_chunks(docs)
-
 def retrieve_arbiter_method_eval(arbiter, query, world_ctx):
     docs = arbiter.retrieve(query, world_ctx)
     return normalize_chunks(docs)
 
+# -------------- Relevance / Metric functions --------------
 def chunk_is_relevant(chunk_text, test_case):
     chunk_lower = chunk_text.lower()
     primary = test_case.get("primary_keywords", [])
@@ -94,7 +95,6 @@ def chunk_is_relevant(chunk_text, test_case):
 
     return primary_match and supporting_match
 
-# -------------- Metrics Functions --------------
 def precision_at_k(chunks, test_case):
     if not chunks:
         return 0.0
@@ -105,6 +105,7 @@ def recall_at_k(chunks, test_case):
     primary = test_case.get("primary_keywords", [])
     if not primary:
         return 0.0
+
     all_text = " ".join(chunks).lower()
     found = sum(1 for kw in primary if kw.lower() in all_text)
     return found / len(primary)
@@ -136,15 +137,17 @@ def hit_at_k(chunks, test_case):
 def average_precision(chunks, test_case):
     hits = 0
     precision_sum = 0.0
+
     for rank, chunk in enumerate(chunks, start=1):
         if chunk_is_relevant(chunk, test_case):
             hits += 1
             precision_sum += hits / rank
+
     if hits == 0:
         return 0.0
     return precision_sum / hits
 
-# -------------- Helper Functions (RAG Systems) --------------
+# -------------- Retrieval wrappers --------------
 def retrieve_cosine_eval(query):
     return normalize_chunks(test_retrieval_cosine_sim(query))
 
@@ -157,35 +160,123 @@ def retrieve_cosine_rerank_eval(query):
 def retrieve_bm25_rerank_eval(bm25, final_splits, query):
     return normalize_chunks(retrieve_bm25_with_rerank(bm25, final_splits, query))
 
+# -------------- Summary rebuild helpers --------------
+def safe_avg(values):
+    vals = [v for v in values if isinstance(v, (int, float))]
+    return round(sum(vals) / len(vals), 4) if vals else 0.0
+
+def summarise_group(rows):
+    return {
+        "precision": safe_avg([r.get("precision", 0.0) for r in rows]),
+        "recall": safe_avg([r.get("recall", 0.0) for r in rows]),
+        "mrr": safe_avg([r.get("mrr", 0.0) for r in rows]),
+        "ndcg": safe_avg([r.get("ndcg", 0.0) for r in rows]),
+        "f1": safe_avg([r.get("f1", 0.0) for r in rows]),
+        "hit": safe_avg([r.get("hit", 0.0) for r in rows]),
+        "ap": safe_avg([r.get("ap", 0.0) for r in rows]),
+        "n": len(rows),
+    }
+
+def group_rows(rows, key_name):
+    grouped = defaultdict(list)
+
+    for row in rows:
+        key = row.get(key_name)
+        if key is not None and str(key).strip():
+            grouped[str(key)].append(row)
+
+    return {
+        group_name: summarise_group(group)
+        for group_name, group in grouped.items()
+    }
+
+def rebuild_summary_from_individual_results(results_dir, model_profile):
+    summaries = []
+
+    for filename in sorted(os.listdir(results_dir)):
+        if not filename.startswith("retrieval_") or not filename.endswith(".json"):
+            continue
+        if filename == "retrieval_summary.json":
+            continue
+
+        path = os.path.join(results_dir, filename)
+
+        with open(path, "r", encoding="utf-8") as f:
+            rows = json.load(f)
+
+        if not rows:
+            continue
+
+        raw_method_name = filename[len("retrieval_"):-len(".json")]
+
+        summary = {
+            "method": raw_method_name,
+            "model_profile": model_profile,
+            "n_queries": len(rows),
+            "avg_precision_at_k": safe_avg([r.get("precision", 0.0) for r in rows]),
+            "avg_recall_at_k": safe_avg([r.get("recall", 0.0) for r in rows]),
+            "avg_mrr": safe_avg([r.get("mrr", 0.0) for r in rows]),
+            "avg_ndcg": safe_avg([r.get("ndcg", 0.0) for r in rows]),
+            "avg_f1": safe_avg([r.get("f1", 0.0) for r in rows]),
+            "avg_hit_at_k": safe_avg([r.get("hit", 0.0) for r in rows]),
+            "map": safe_avg([r.get("ap", 0.0) for r in rows]),
+            "by_category": group_rows(rows, "category"),
+            "by_query_type": group_rows(rows, "query_type"),
+        }
+
+        summaries.append(summary)
+
+    return summaries
+
+def write_summary_csv(summaries, output_csv_path):
+    fields = [
+        "method",
+        "model_profile",
+        "n_queries",
+        "avg_precision_at_k",
+        "avg_recall_at_k",
+        "avg_mrr",
+        "avg_ndcg",
+        "avg_f1",
+        "avg_hit_at_k",
+        "map",
+    ]
+
+    with open(output_csv_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fields)
+        writer.writeheader()
+
+        for row in summaries:
+            writer.writerow({k: row.get(k) for k in fields})
+
 def main():
     with open("evaluation/test_cases.json", "r", encoding="utf-8") as f:
         test_cases = json.load(f)
 
-    os.makedirs("evaluation/results_v2", exist_ok=True)
+    os.makedirs(RESULTS_DIR, exist_ok=True)
 
+    print("Building BM25 index...")
     bm25, final_splits = build_bm25_index()
 
-    client = Groq(api_key=Config.GROQ_API_KEY)
-    model_profile = "GROQ"
+    # client = Groq(api_key=Config.GROQ_API_KEY)
+    # runtime_model_profile = "GROQ"
 
-    naive_arbiter = RulesArbiter(client, model_profile, db_path=DB_PATH)
-    hyde_arbiter = RulesArbiterHyDE(client, model_profile, db_path=DB_PATH)
-    hybrid_arbiter = RulesArbiterHybrid(client, model_profile, db_path=DB_PATH)
-    crag_arbiter = RulesArbiterCRAG(client, model_profile, db_path=DB_PATH)
+    client = OpenAI(base_url=Config.OLLAMA_BASE_URL, api_key="ollama")
+    runtime_model_profile = "LOCAL"
+
+    hyde_arbiter = RulesArbiterHyDE(client, runtime_model_profile, db_path=DB_PATH)
+    hybrid_arbiter = RulesArbiterHybrid(client, runtime_model_profile, db_path=DB_PATH)
+    crag_arbiter = RulesArbiterCRAG(client, runtime_model_profile, db_path=DB_PATH)
 
     methods = {
         "cosine": lambda q: retrieve_cosine_eval(q),
         "bm25": lambda q: retrieve_bm25_eval(bm25, final_splits, q),
         "cosine_rerank": lambda q: retrieve_cosine_rerank_eval(q),
         "bm25_rerank": lambda q: retrieve_bm25_rerank_eval(bm25, final_splits, q),
-        "naive_old": lambda q: retrieve_naive_arbiter_eval(naive_arbiter, q),
         "hyde": lambda q: retrieve_arbiter_method_eval(hyde_arbiter, q, WORLD_CTX),
         "hybrid": lambda q: retrieve_arbiter_method_eval(hybrid_arbiter, q, WORLD_CTX),
         "crag": lambda q: retrieve_arbiter_method_eval(crag_arbiter, q, WORLD_CTX),
     }
-
-    all_summaries = []
-    metric_keys = ["precision", "recall", "mrr", "ndcg", "f1", "hit", "ap"]
 
     for method_name, retrieve_fn in methods.items():
         print(f"\n{'=' * 60}")
@@ -193,7 +284,6 @@ def main():
         print(f"{'=' * 60}")
 
         results = []
-        scores = defaultdict(list)
 
         for tc in test_cases:
             start = time.time()
@@ -212,9 +302,6 @@ def main():
             f1 = f1_at_k(p, r)
             h = hit_at_k(chunks, tc)
             ap = average_precision(chunks, tc)
-
-            for key, val in zip(metric_keys, [p, r, m, n, f1, h, ap]):
-                scores[key].append(val)
 
             results.append({
                 "id": tc["id"],
@@ -239,46 +326,25 @@ def main():
                 f"NDCG={n:.2f} F1={f1:.2f} AP={ap:.2f}"
             )
 
-        with open(f"evaluation/results_v2/retrieval_{method_name}.json", "w", encoding="utf-8") as f:
+        output_path = os.path.join(RESULTS_DIR, f"retrieval_{method_name}.json")
+        with open(output_path, "w", encoding="utf-8") as f:
             json.dump(results, f, indent=2)
 
-        avg = lambda lst: round(sum(lst) / len(lst), 4) if lst else 0.0
+    # Rebuild summary from saved per-query files so schema stays consistent
+    summaries = rebuild_summary_from_individual_results(
+        results_dir=RESULTS_DIR,
+        model_profile=MODEL_PROFILE_FOR_SUMMARY,
+    )
 
-        summary = {
-            "method": method_name,
-            "n_queries": len(test_cases),
-            "avg_precision_at_k": avg(scores["precision"]),
-            "avg_recall_at_k": avg(scores["recall"]),
-            "avg_mrr": avg(scores["mrr"]),
-            "avg_ndcg": avg(scores["ndcg"]),
-            "avg_f1": avg(scores["f1"]),
-            "avg_hit_at_k": avg(scores["hit"]),
-            "map": avg(scores["ap"]),
-        }
+    with open(os.path.join(RESULTS_DIR, "retrieval_summary.json"), "w", encoding="utf-8") as f:
+        json.dump(summaries, f, indent=2)
 
-        all_summaries.append(summary)
+    write_summary_csv(
+        summaries,
+        os.path.join(RESULTS_DIR, "retrieval_summary.csv"),
+    )
 
-    with open("evaluation/results_v2/retrieval_summary.json", "w", encoding="utf-8") as f:
-        json.dump(all_summaries, f, indent=2)
-
-    fields = [
-        "method",
-        "avg_precision_at_k",
-        "avg_recall_at_k",
-        "avg_mrr",
-        "avg_ndcg",
-        "avg_f1",
-        "avg_hit_at_k",
-        "map",
-        "n_queries",
-    ]
-
-    with open("evaluation/results_v2/retrieval_summary.csv", "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fields)
-        writer.writeheader()
-        for row in all_summaries:
-            writer.writerow({k: row[k] for k in fields})
-
+    print(f"\nSaved detailed results and rebuilt summary in: {RESULTS_DIR}")
 
 if __name__ == "__main__":
     main()

@@ -1,2 +1,8 @@
-method,avg_precision_at_k,avg_recall_at_k,avg_mrr,avg_ndcg,avg_f1,avg_hit_at_k,map,n_queries
-crag,0.116,0.47,0.2633,0.2944,0.1629,0.38,0.2634,50
+method,model_profile,n_queries,avg_precision_at_k,avg_recall_at_k,avg_mrr,avg_ndcg,avg_f1,avg_hit_at_k,map
+bm25,LOCAL,200,0.141,0.3225,0.2523,0.2832,0.1634,0.4,0.2375
+bm25_rerank,LOCAL,200,0.291,0.5158,0.5507,0.5739,0.3167,0.685,0.5268
+cosine,LOCAL,200,0.239,0.4433,0.4135,0.4417,0.2652,0.55,0.3954
+cosine_rerank,LOCAL,200,0.279,0.4783,0.5022,0.522,0.3037,0.62,0.4763
+crag,LOCAL,200,0.244,0.4517,0.4357,0.4614,0.2703,0.57,0.4143
+hybrid,LOCAL,200,0.316,0.5175,0.5644,0.5855,0.3452,0.69,0.537
+hyde,LOCAL,200,0.365,0.6092,0.6797,0.6883,0.4033,0.79,0.6376
