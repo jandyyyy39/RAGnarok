@@ -17,12 +17,12 @@ We use this environment variable to disable ChromaDB's built-in usage tracking.
 * The Problem: By default, ChromaDB tries to send anonymous usage data to its servers. However, a version mismatch in its telemetry dependency (posthog) causes a "capture() error" that spams the console every time the Rules Arbiter queries the database.  
 * The Fix: Setting this to False tells the database to skip the tracking attempt entirely. This stops the error messages and keeps our game logs clean and readable.
 
-### Quick Start for Contributors
+### Quick Start
 
 If you just cloned this repo, follow these steps to get the system running:
 * Setup Conda: `conda env create -f environment.yaml` followed by `conda activate ragnarok`
-* Initialize Database: Run `python scripts/build_rules_rag.py` to build your local ChromaDB vector store from the SRD.
-  - The script automatically uses `data/5esrd.md` (already included in the repo).
+* Initialize Database: Run `python scripts/build_rules_rag.py` to build your local ChromaDB vector store and the bm25 index from the SRD ruleset (`srd_rules.md`).
+  - The script automatically uses an APEX format markdown version of `data/5esrd.md` (already included in the repo).
   - No internet connection or HuggingFace token required for this step.
 
 #### Running the Application
